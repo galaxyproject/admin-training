@@ -17,7 +17,7 @@ This repo aims to collect resources and prepare materials for the [Galaxy Admin 
 1. Identifying and installing well-defined tools from the Galaxy Tool Shed
   * [resources](intro/05-tool-shed/resources.md)
 1. Importing and defining reference genomes
-  * [resources](intro/06-referense-genomes/resources.md)
+  * [resources](intro/06-reference-genomes/resources.md)
 1. Defining users, groups, and quotas
   * [resources](intro/07-users-groups-quotas/resources.md)
 1. Basics of Tool Definition
