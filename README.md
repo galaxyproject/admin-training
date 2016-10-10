@@ -18,6 +18,7 @@ This repo aims to collect resources and prepare materials for the [Galaxy Admin 
   * [resources](intro/05-tool-shed/resources.md)
   * Tool Shed intro slides {[src](intro/05-tool-shed/shed_intro.md)}{[build](https://remarkjs.com/remarkise?url=https://github.com/martenson/dagobah-training/blob/master/intro/05-tool-shed/shed_intro.md)}
   * Tool Installation slides {[src](intro/05-tool-shed/tool_installation.md)}{[build](https://remarkjs.com/remarkise?url=https://github.com/martenson/dagobah-training/blob/master/intro/05-tool-shed/tool_installation.md)}
+  * exercise - Tool Management {[src](intro/05-tool-shed/ex-01-basic-interaction.md)}{[build](https://remarkjs.com/remarkise?url=https://github.com/martenson/dagobah-training/blob/master/intro/05-tool-shed/ex-01-basic-interaction.md)}
 1. Importing and defining reference genomes
   * [resources](intro/06-reference-genomes/resources.md)
 1. Defining users, groups, and quotas
