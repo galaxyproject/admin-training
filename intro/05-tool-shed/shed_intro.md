@@ -22,20 +22,20 @@ MTS runs at http://toolshed.g2.bx.psu.edu and serves all Galaxies worldwide.
 Every repository is public including the whole history.
 
 Local sheds can be run e.g. for private or custom-licensed tools.
---
+---
 
 ## Vocabulary
 
-`wrapper` or `tool definition file` - The XML file that describes to Galaxy how the underlying software works, thus allowing Galaxy to render UI and execute the software in the right way.
+* `wrapper` or `tool definition file` - The XML file that describes to Galaxy how the underlying software works, thus allowing Galaxy to render UI and execute the software in the right way.
 --
 
-`repository` - A versioned code archive with tool(s) in Tool Shed. Mercurial is used for this purpose.
+* `repository` - A versioned code archive with tool(s) in Tool Shed. Mercurial is used for this purpose.
 --
 
-`revision` vs `installable revision`
+* `revision` vs `installable revision`
 --
 
-`metadata`
+* `metadata`
 
 ---
 
