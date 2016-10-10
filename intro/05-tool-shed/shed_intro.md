@@ -15,23 +15,22 @@ Tool Shed is to Galaxy as App Store is to iPhone (plus some more).
 
 It is a free service that hosts repositories containing Galaxy Tools.
 
- --
+--
 
 MTS runs at http://toolshed.g2.bx.psu.edu and serves all Galaxies worldwide.
 
 Every repository is public including the whole history.
 
 Local sheds can be run e.g. for private or custom-licensed tools.
-
- --
+--
 
 ## Vocabulary
 
 `wrapper` or `tool definition file` - The XML file that describes to Galaxy how the underlying software works, thus allowing Galaxy to render UI and execute the software in the right way.
- --
+--
 
 `repository` - A versioned code archive with tool(s) in Tool Shed. Mercurial is used for this purpose.
- --
+--
 
 `revision` vs `installable revision`
 --
@@ -57,7 +56,7 @@ List of available sheds is defined in `tool_sheds_conf.xml` and Galaxy comes wit
 * Tool Shed is a host - not a development platform.
   * Tool Development repository should be linked from the TS repository.
 
- --
+--
 
 * Tool Shed allows administrators to pick any installable revision
 
