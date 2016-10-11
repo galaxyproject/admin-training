@@ -7,7 +7,8 @@
 
 ### Indicators of good tool wrappers
   - published on the Main Tool Shed
-  - published under a trusted owner (e.g. members of public groups https://toolshed.g2.bx.psu.edu/groups)
+  - published under a trusted owner (e.g. members of public groups
+    https://toolshed.g2.bx.psu.edu/groups)
   - has a public development repository linked
 
 ### Dependencies for Galaxy Tools
