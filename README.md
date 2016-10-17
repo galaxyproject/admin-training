@@ -2,7 +2,7 @@
 
 > "The planet shown in Dagobah, in the Sluis sector, is a world of murky swamps, steaming bayous, and petrified forests."
 
-This repo aims to collect resources and prepare materials for the [Galaxy Admin SLC training](https://wiki.galaxyproject.org/Events/AdminTraining2016)
+Collection of resources and materials for the [Galaxy Admin SLC training](https://wiki.galaxyproject.org/Events/AdminTraining2016) with the aim to be later merged in the Galaxy's codebase.
 
 ### Introductory
 
@@ -24,9 +24,9 @@ This repo aims to collect resources and prepare materials for the [Galaxy Admin 
   * [resources](intro/06-reference-genomes/resources.md)
 1. Extending the installation
   * [resources](intro/07-extending-installation/resources.md)
-1. Defining users, groups, and quotas
+1. Users, groups, and quotas
   * [resources](intro/08-users-groups-quotas/resources.md)
-1. Basics of Tool Definition
+1. Basics of Tool Definition & Planemo
   * [resources](intro/09-tool-basics/resources.md)
 1. Upgrading Release
   * [resources](intro/10-upgrading-release/resources.md)
@@ -36,3 +36,22 @@ This repo aims to collect resources and prepare materials for the [Galaxy Admin 
   * [resources](intro/12-architecture/resources.md)
 
 ### Advanced
+
+1. Galaxy with Ansible
+  * [resources](advanced/001-ansible/resources.md)
+1. Monitoring & Maintenance
+  * [resources](advanced/002-monitoring-maintenance/resources.md)
+1. Advanced tool definition and tool troubleshooting
+  * [resources](advanced/003-tools-advanced/resources.md)
+1. External authentication
+  * [resources](advanced/004-external-authentication/resources.md)
+1. Galaxy on compute cluster
+  * [resources](advanced/005-compute-cluster/resources.md)
+1. Cloud
+  * [resources](advanced/006-cloud/resources.md)
+1. Storage management
+  * [resources](advanced/007-storage-management/resources.md)
+1. Complex Galaxy deployments
+  * [resources](advanced/008-main-galaxy/resources.md)
+1. Advanced troubleshooting
+  * [resources](advanced/009-advanced-troubleshooting/resources.md)

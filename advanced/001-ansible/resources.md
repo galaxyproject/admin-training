@@ -2,7 +2,7 @@
 
 ## Scope
 
-- WHat is Ansible
+- What is Ansible
 - Galaxy with Ansible.
 - Available playbooks.
 - Managing tools with Ansible
