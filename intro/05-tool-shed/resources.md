@@ -1,5 +1,22 @@
 # Identifying and Installing well-defined Tools
 
+## Scope
+
+- Installing well-packaged tools from the tool shed.
+  - How to identify “well-packaged” tools.
+- Config files:
+  - shed_tool_conf.xml
+  - Integrated_tool_panel.xml
+- Operations
+  - Hiding
+  - Labeling
+- Conda basics
+- Fixing tool dependency installation errors
+- Fixing tool installation errors
+
+---
+
+
 - IUC overwatch
   - https://wiki.galaxyproject.org/IUC
   - https://github.com/galaxyproject/tools-iuc

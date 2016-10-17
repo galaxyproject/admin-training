@@ -1,8 +1,10 @@
-# Deployment Platforms
+# Deployment and Platform Options
+
+## Scope
+
 Big picture options for installing Galaxy, and which options we are going to cover this week, when, and how deeply.
 
 Options to cover:
-- Laptop/Personal (as intro)
 - Single server install
 - Public Cloud (AWS or other)
 - Private Cloud

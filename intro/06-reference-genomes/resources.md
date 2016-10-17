@@ -1,6 +1,6 @@
 # Reference Genomes
 
-\+ Data managers
+Defining and importing genomes, Data Managers
 
 
 ### GCC2015

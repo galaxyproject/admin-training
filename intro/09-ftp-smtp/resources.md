@@ -1,1 +1,0 @@
-# FTP and SMTP setup

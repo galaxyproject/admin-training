@@ -16,7 +16,7 @@ The following exercise will flex the basics of tool installation and management.
 ## Task 3
 *New revision has been released.*
 
-* Install [`devteam/freebayes`](https://toolshed.g2.bx.psu.edu/view/devteam/freebayes/) revision `24:da6e10dee68b` into section 'New Freebayes'.
+* Install [`devteam/freebayes`](https://toolshed.g2.bx.psu.edu/view/devteam/freebayes/) from MTS in revision `24:da6e10dee68b` into section 'New Freebayes'.
 
 ---
 ## Task 4
@@ -30,12 +30,13 @@ Move freebayes revision `24:da6e10dee68b` into 'New Freebayes' section and displ
 
 ---
 ## Task 6
-Make freebayes in toolpanel to appear only in the 'Freebayes' section and offer
-version switching.
+Make freebayes to appear only in the 'Freebayes' section of the toolpanel
+and offer version switching.
 
-??
-hint: you can rename sections in the configuration file
+> *you can rename sections using configuration file(s)*
 
 ---
 ## Task 7
-Uninstall the revision XXX of freebayes.
+*The old freebayes version is no longer useful*
+
+Uninstall the revision `22:99684adf84de` of freebayes.

@@ -1,25 +1,27 @@
-# Basic server
+# Get a basic Galaxy server up and running
 
+## Scope
+
+- Clone and run (auto setup)
+- Stop and configure
+
+- Basic explanation of what is happening on
+  - First startup (venv, etc.)
+  -  Other startups
 - Out of the box install
   - Update the welcome page
-- Basic hardening
-  - Postgres, etc.
-  - Should this include HTTPS?
-  - Webserver choices, tradeoffs and config (Apache & NGINX)
 - Basic configuration options
   - What are those?
     - SMTP, activation
   - Default Quotas
   - Require login or not
   - Enable FTP (is this a reasonable first stretch?)
-- Installing well-packaged tools from the tool shed.
-  - How to identify “well-packaged” tools.
 - Defining genomes to Galaxy
   - Genome sources
   - Data managers
   - Indexes and creating them
 
-
+---
 
 
 ### GCC2016 Setting up a Galaxy instance as a service
