@@ -4,6 +4,8 @@
 
 Collection of resources and materials for the [Galaxy Admin SLC training](https://wiki.galaxyproject.org/Events/AdminTraining2016) with the aim to be later merged in the Galaxy's codebase.
 
+(S)imon (N)ate (M)artin
+
 ### Introductory
 
 1. Deployment platform options
@@ -14,7 +16,7 @@ Collection of resources and materials for the [Galaxy Admin SLC training](https:
   * [resources](intro/03-databases/resources.md)
 1. Web server choices and configuration (NGINX & Apache)
   * [resources](intro/04-web-servers/resources.md)
-1. Galaxy Tool Shed and Tool Installation
+1. Galaxy Tool Shed and Tool Installation (M)
   * [resources](intro/05-tool-shed/resources.md)
   * Tool Shed intro slides {[src](intro/05-tool-shed/shed_intro.md)}{[build](https://remarkjs.com/remarkise?url=https://github.com/martenson/dagobah-training/blob/master/intro/05-tool-shed/shed_intro.md)}
   * Tool Installation slides {[src](intro/05-tool-shed/tool_installation.md)}{[build](https://remarkjs.com/remarkise?url=https://github.com/martenson/dagobah-training/blob/master/intro/05-tool-shed/tool_installation.md)}
@@ -41,7 +43,7 @@ Collection of resources and materials for the [Galaxy Admin SLC training](https:
   * [resources](advanced/001-ansible/resources.md)
 1. Monitoring & Maintenance
   * [resources](advanced/002-monitoring-maintenance/resources.md)
-1. Advanced tool definition and tool troubleshooting
+1. Advanced tool definition and tool troubleshooting (M)
   * [resources](advanced/003-tools-advanced/resources.md)
 1. External authentication
   * [resources](advanced/004-external-authentication/resources.md)
