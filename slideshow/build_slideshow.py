@@ -15,6 +15,7 @@ def main(argv=None):
     build_dir = argv[3]
     head, tail = os.path.split(markdown_source)
     output = os.path.join(build_dir, os.path.splitext(tail)[0] + '.html')
+    print output
     with open(markdown_source, "r") as s:
         content = s.read()
     html = TEMPLATE.safe_substitute(**{
