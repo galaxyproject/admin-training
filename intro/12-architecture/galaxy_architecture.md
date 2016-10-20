@@ -5,7 +5,7 @@ class: inverse, middle, large
 class: special
 # Galaxy Architecture
 
-Nate, James, John, Rémi
+.footnote[slides by Nate, James, John, Rémi]
 
 .footnote[\#usegalaxy / @galaxyproject]
 
@@ -109,7 +109,7 @@ Build Galaxy framework dependencies as Python wheels
 
 github.com/galaxyproject/**planemo**
 
-Commande line utilities to assist in the development of Galaxy tools.
+Command line utilities to assist in the development of Galaxy tools.
 Linting, testing, deploying to ToolSheds... *The best practice approach
 for Galaxy tool development!*
 
@@ -222,8 +222,8 @@ can be adapted to many different technologies.
 
 ???
 
-If the chief architectual principle guiding the frontend is a fast and accessible
-experience for the bench scientist, perhaps for the backend it is allowing 
+If the chief architectural principle guiding the frontend is a fast and accessible
+experience for the bench scientist, perhaps for the backend it is allowing
 deployment on many different platforms and a different scales.
 
 ---
@@ -603,7 +603,7 @@ High-level business logic that tie all of these components together.
 
 Controllers should ideally be thin wrappers around actions defined in managers.
 
-Whenever model require more than just the database, the operation should be defined 
+Whenever model require more than just the database, the operation should be defined
 in a manager instead of in the model.
 
 ---
@@ -882,21 +882,21 @@ migrate.versioning.script.base DEBUG 2016-06-23 19:11:51,994 Script lib/galaxy/m
 migrate.versioning.script.base DEBUG 2016-06-23 19:11:51,994 Loading script lib/galaxy/model/migrate/versions/0002_metadata_file_table.py...
 migrate.versioning.script.base DEBUG 2016-06-23 19:11:52,009 Loading script lib/galaxy/model/migrate/versions/0131_subworkflow_and_input_parameter_modules.py...
 ...
-galaxy.model.migrate.check INFO 2016-06-23 19:13:32,812 Migrating 128 -> 129... 
-galaxy.model.migrate.check INFO 2016-06-23 19:13:33,436 
+galaxy.model.migrate.check INFO 2016-06-23 19:13:32,812 Migrating 128 -> 129...
+galaxy.model.migrate.check INFO 2016-06-23 19:13:33,436
 galaxy.model.migrate.check INFO 2016-06-23 19:13:33,437 Migration script to allow invalidation of job external output metadata temp files
-galaxy.model.migrate.check INFO 2016-06-23 19:13:33,437 
-galaxy.model.migrate.check INFO 2016-06-23 19:13:33,437 
-galaxy.model.migrate.check INFO 2016-06-23 19:13:33,437 Migrating 129 -> 130... 
-galaxy.model.migrate.check INFO 2016-06-23 19:13:34,325 
+galaxy.model.migrate.check INFO 2016-06-23 19:13:33,437
+galaxy.model.migrate.check INFO 2016-06-23 19:13:33,437
+galaxy.model.migrate.check INFO 2016-06-23 19:13:33,437 Migrating 129 -> 130...
+galaxy.model.migrate.check INFO 2016-06-23 19:13:34,325
 galaxy.model.migrate.check INFO 2016-06-23 19:13:34,325 Migration script to change the value column of user_preference from varchar to text.
-galaxy.model.migrate.check INFO 2016-06-23 19:13:34,325 
-galaxy.model.migrate.check INFO 2016-06-23 19:13:34,325 
-galaxy.model.migrate.check INFO 2016-06-23 19:13:34,326 Migrating 130 -> 131... 
-galaxy.model.migrate.check INFO 2016-06-23 19:13:35,633 
+galaxy.model.migrate.check INFO 2016-06-23 19:13:34,325
+galaxy.model.migrate.check INFO 2016-06-23 19:13:34,325
+galaxy.model.migrate.check INFO 2016-06-23 19:13:34,326 Migrating 130 -> 131...
+galaxy.model.migrate.check INFO 2016-06-23 19:13:35,633
 galaxy.model.migrate.check INFO 2016-06-23 19:13:35,633 Migration script to support subworkflows and workflow request input parameters
-galaxy.model.migrate.check INFO 2016-06-23 19:13:35,633 
-galaxy.model.migrate.check INFO 2016-06-23 19:13:35,633 
+galaxy.model.migrate.check INFO 2016-06-23 19:13:35,633
+galaxy.model.migrate.check INFO 2016-06-23 19:13:35,633
 ```]
 
 ---
@@ -1064,7 +1064,7 @@ galaxy.tools.toolbox.base INFO 2016-06-23 19:13:36,497 Parsing the tool configur
 
 class: smaller
 
-### Tool Dependency Resolution and Indexing 
+### Tool Dependency Resolution and Indexing
 
 .code[```
 galaxy.tools.deps WARNING 2016-06-23 19:13:36,498 Path './database/dependencies' does not exist, ignoring

@@ -30,9 +30,6 @@ The workshop will include the following specific content:
 * A brief description of other projects in the Galaxy ecosystem (CloudMan, the Tool Shed, bioblend, docker-galaxy-stable, Pulsar, and Planemo).
 Prerequisites:
 
-A general knowledge of Galaxy (for example, you should be familiar with the material in Galaxy 101 or have attended Introduction to Galaxy).
-Comfort with scripting programming languages (Python and JavaScript will be the most helpful).
-
 ### GCC2015
 
 - http://gcc2015.tsl.ac.uk/Training-Day/#Galaxy_Architecture
