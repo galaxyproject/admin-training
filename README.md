@@ -2,6 +2,8 @@
 
 > "The planet shown in Dagobah, in the Sluis sector, is a world of murky swamps, steaming bayous, and petrified forests."
 
+Built slides are served at https://martenson.github.io/dagobah-training/.
+
 Collection of resources and materials for the [Galaxy Admin SLC training](https://wiki.galaxyproject.org/Events/AdminTraining2016) with the aim to be later merged in the Galaxy's codebase.
 
 (S)imon (N)ate (M)artin
