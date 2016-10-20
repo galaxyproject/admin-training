@@ -1,13 +1,21 @@
-# Installing Tools and Repositories
+layout: true
+class: inverse, middle, large
 
+---
+class: special
+# Installing Tools and Repositories
+intro to 'shed'
+
+slides by @martenson
 
 .footnote[\#usegalaxy / @galaxyproject]
 
 ---
+class: larger
 
 ## Please Interrupt!
 
-We are here to answer your questions!
+We are here to answer your questions.
 
 ---
 
@@ -18,5 +26,6 @@ We are here to answer your questions!
  --
 
 ---
-
 Installation automation using [Ephemeris](https://github.com/galaxyproject/ephemeris)
+
+---

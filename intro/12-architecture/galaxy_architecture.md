@@ -5,7 +5,7 @@ class: inverse, middle, large
 class: special
 # Galaxy Architecture
 
-.footnote[slides by Nate, James, John, Rémi]
+slides by Nate, James, John, Rémi
 
 .footnote[\#usegalaxy / @galaxyproject]
 

@@ -6,7 +6,7 @@ class: special
 # The Galaxy Tool Shed
 intro to 'shed'
 
-.footnote[slides by @martenson]
+slides by @martenson
 
 .footnote[\#usegalaxy / @galaxyproject]
 
@@ -15,7 +15,7 @@ class: larger
 
 ## Please Interrupt!
 
-We are here to answer your questions!
+We are here to answer your questions.
 
 ---
 
@@ -23,15 +23,16 @@ Tool Shed is to Galaxy as App Store is to iPhone (plus some more).
 
 It is a free service that hosts repositories containing Galaxy Tools.
 
+---
 Main Tool Shed (MTS) runs at http://toolshed.g2.bx.psu.edu and serves all Galaxies worldwide.
 
----
+Everybody can create a repository.
 
 Every repository is public including the whole history.
 
 Local sheds can be run e.g. for private or custom-licensed tools.
 
-??
+???
 Running local TS is discouraged.
 
 ---
@@ -48,22 +49,9 @@ Running local TS is discouraged.
 
 * `metadata` - TS generates and stores a set of data for every installable revision of the repo.
 
-??
+???
 Every TS repo update can be propagated to the Galaxy though.
 
----
-## Galaxy's Configuration
-
-List of available sheds is defined in `tool_sheds_conf.xml` and Galaxy comes with the Main Tool Shed enabled and the TTS disabled.
-```
-<?xml version="1.0"?>
-<tool_sheds>
-    <tool_shed name="Galaxy Main Tool Shed" url="https://toolshed.g2.bx.psu.edu/"/>
-<!-- Test Tool Shed should be used only for testing purposes.
-    <tool_shed name="Galaxy Test Tool Shed" url="https://testtoolshed.g2.bx.psu.edu/"/>
--->
-</tool_sheds>
-```
 ---
 ## Overview
 
@@ -79,8 +67,21 @@ List of available sheds is defined in `tool_sheds_conf.xml` and Galaxy comes wit
 * Multiple installable revisions of any repository can be present in Galaxy
 
 ---
+## Galaxy's Configuration
 
-## Simple repository (and tool)
+List of available sheds is defined in `tool_sheds_conf.xml` and Galaxy comes with the Main Tool Shed enabled and the TTS disabled.
+```
+<?xml version="1.0"?>
+<tool_sheds>
+    <tool_shed name="Galaxy Main Tool Shed" url="https://toolshed.g2.bx.psu.edu/"/>
+<!-- Test Tool Shed should be used only for testing purposes.
+    <tool_shed name="Galaxy Test Tool Shed" url="https://testtoolshed.g2.bx.psu.edu/"/>
+-->
+</tool_sheds>
+```
+
+---
+## Simple repository (remove_beginning tool)
 
 repository = script + wrapper + test data + metadata file
 
@@ -97,6 +98,8 @@ repository = script + wrapper + test data + metadata file
 
 ---
 ### .shed.yml file
+
+a file with metadata
 
 ```
 categories:
@@ -120,22 +123,12 @@ seqtk repository with multiple tools
 ├── .shed.yml
 ├── macros.xml
 ├── seqtk_comp.xml
-├── seqtk_cutN.xml
-├── seqtk_dropse.xml
-├── seqtk_fqchk.xml
-├── seqtk_hety.xml
-├── seqtk_listhet.xml
-├── seqtk_mergefa.xml
-├── seqtk_mergepe.xml
-├── seqtk_mutfa.xml
-├── seqtk_randbase.xml
 ├── seqtk_sample.xml
 ├── seqtk_seq.xml
-├── seqtk_subseq.xml
 ├── seqtk_trimfq.xml
 ├── test-data
-...
 │   ├── seqtk_trimfq.fq
+...
 │   ├── seqtk_trimfq_be.fq
 │   └── seqtk_trimfq_default.fq
 └── tool_dependencies.xml
@@ -143,6 +136,7 @@ seqtk repository with multiple tools
 
 ---
 ### seqtk requirements
+Requirements of the wrapper.
 
 ```
 <requirements>
@@ -150,9 +144,11 @@ seqtk repository with multiple tools
 </requirements>
 ```
 
+Galaxy is aiming to be resolution-agnostic.
 ---
 
 ### seqtk tool_dependencies.xml file
+A TS way to fulfill requirements.
 
 ```
 <?xml version="1.0"?>
@@ -166,7 +162,7 @@ seqtk repository with multiple tools
 ---
 
 ### seqtk TS package
-
+A TS recipe how to install the dependency.
 ```
 <?xml version="1.0"?>
 <tool_dependency>
@@ -191,6 +187,7 @@ seqtk repository with multiple tools
 
 ---
 ### seqtk Conda package
+Conda recipe how to install the dependency.
 
 ```
 package:
@@ -224,3 +221,5 @@ test:
 ```
 
 ---
+
+###
