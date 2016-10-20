@@ -3,7 +3,7 @@ The following exercise will flex the basics of tool installation and management.
 
 --
 ## Task 1
-*Your users want to use freebayes on the instance you administer.*
+*Your users want to use freebayes software on the instance you administer.*
 * Find what Tool Shed repository has freebayes tools in it.
 
 > *you can use search in https://toolshed.g2.bx.psu.edu/ or http://toolshed.tools*
