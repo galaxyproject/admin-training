@@ -81,8 +81,8 @@ List of available sheds is defined in `tool_sheds_conf.xml` and Galaxy comes wit
 ```
 
 ---
-## Simple repository (remove_beginning tool)
-
+## Simple repository
+tool remove_beginning
 repository = script + wrapper + test data + metadata file
 
 ```
@@ -97,6 +97,8 @@ repository = script + wrapper + test data + metadata file
 ```
 
 ---
+class: normal
+
 ### .shed.yml file
 
 a file with metadata
@@ -115,6 +117,8 @@ type: unrestricted
 ```
 
 ---
+class: normal
+
 ## Repository & tool with requirements
 seqtk repository with multiple tools
 
@@ -160,6 +164,7 @@ A TS way to fulfill requirements.
 ```
 
 ---
+class: normal
 
 ### seqtk TS package
 A TS recipe how to install the dependency.
@@ -186,6 +191,8 @@ A TS recipe how to install the dependency.
 ```
 
 ---
+class: normal
+
 ### seqtk Conda package
 Conda recipe how to install the dependency.
 
@@ -221,5 +228,4 @@ test:
 ```
 
 ---
-
 ###
