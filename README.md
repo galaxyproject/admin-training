@@ -1,5 +1,7 @@
 # dagobah - The Solar System for Galaxy Training
 
+[![Join the chat at https://gitter.im/dagobah-training/Lobby](https://badges.gitter.im/dagobah-training/Lobby.svg)](https://gitter.im/dagobah-training/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 > "The planet shown in Dagobah, in the Sluis sector, is a world of murky swamps, steaming bayous, and petrified forests."
 
 Built slides are served at https://martenson.github.io/dagobah-training/.
