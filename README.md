@@ -24,6 +24,8 @@ Collection of resources and materials for the [Galaxy Admin SLC training](https:
   * exercise 2 - Advanced Tool Management {[src](intro/05-tool-shed/ex-02-tool-management-advanced.md)}{[build](https://remarkjs.com/remarkise?url=https://github.com/martenson/dagobah-training/blob/master/intro/05-tool-shed/ex-02-tool-management-advanced.md)}
 1. Importing and defining reference genomes (S)
   * [resources](intro/06-reference-genomes/resources.md)
+  * Reference Genome Slides
+  {[src](intro/06-reference-genomes/reference_genomes.md)}{[build](https://remarkjs.com/remarkise?url=https://github.com/martenson/dagobah-training/blob/master/intro/06-reference-genomes/reference_genomes.md)}
 1. Extending the installation
   * [resources](intro/07-extending-installation/resources.md)
 1. Users, groups, and quotas
