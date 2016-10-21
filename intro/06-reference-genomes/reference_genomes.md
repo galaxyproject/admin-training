@@ -17,7 +17,7 @@
 ### Please interrupt!
 We are here to answer questions!
 
-.footnote[#GATC2016 / @galaxyproject]
+.footnote[\#GATC2016 / @galaxyproject]
 ---
 
 ## ![GATC Logo](images/AdminTraining2016-100.png)  Reference Genomes in Galaxy Overview
@@ -27,7 +27,7 @@ We are here to answer questions!
 * Some problems
 * Data Managers
 
-.footnote[#GATC2016 / @galaxyproject]
+.footnote[\#GATC2016 / @galaxyproject]
 ---
 ## ![GATC Logo](images/AdminTraining2016-100.png)  Built in Data
 
@@ -35,35 +35,35 @@ We are here to answer questions!
 
 
 
-.footnote[#GATC2016 / @galaxyproject]
+.footnote[\#GATC2016 / @galaxyproject]
 ---
 ## ![GATC Logo](images/AdminTraining2016-100.png)  Overview
 
 
 
-.footnote[#GATC2016 / @galaxyproject]
+.footnote[\#GATC2016 / @galaxyproject]
 ---
 ## ![GATC Logo](images/AdminTraining2016-100.png)  Overview
 
 
 
-.footnote[#GATC2016 / @galaxyproject]
+.footnote[\#GATC2016 / @galaxyproject]
 ---
 ## ![GATC Logo](images/AdminTraining2016-100.png)  Overview
 
 
 
-.footnote[#GATC2016 / @galaxyproject]
+.footnote[\#GATC2016 / @galaxyproject]
 ---
 ## ![GATC Logo](images/AdminTraining2016-100.png)  Overview
 
 
 
-.footnote[#GATC2016 / @galaxyproject]
+.footnote[\#GATC2016 / @galaxyproject]
 ---
 ## ![GATC Logo](images/AdminTraining2016-100.png)  Overview
 
 
 
-.footnote[#GATC2016 / @galaxyproject]
+.footnote[\#GATC2016 / @galaxyproject]
 ---
