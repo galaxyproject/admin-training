@@ -4,7 +4,7 @@ class: inverse, middle, large
 ---
 class: special
 # Installing Tools and Repositories
-intro to 'shed'
+how to get tools into Galaxy
 
 slides by @martenson
 
