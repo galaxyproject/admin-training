@@ -15,7 +15,7 @@ class: larger
 
 ## Please Interrupt!
 
-We are here to answer your questions.
+We like to answer your questions.
 
 ---
 
