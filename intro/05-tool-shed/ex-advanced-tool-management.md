@@ -12,16 +12,25 @@ by @martenson
 
 ---
 ## Task 1
-Enable Conda in your Galaxy instance.
 
-> *one way is to enable conda_auto_init in config and restart Galaxy*
+* Enable Conda in your Galaxy instance.
+
+.hint[one way is to enable conda_auto_init in config and restart Galaxy]
 
 ---
 ## Task 2
-Install freebayes revision YYY and include _only_ Conda dependencies.
+
+* Install freebayes revision YYY and include _only_ Conda dependencies.
 
 ---
 ## Task 3
+
+* Find where are the dependencies present on filesystem.
+
+---
+## Task 4
 Move the installed dependencies to a different folder.
 
-> *hint: you have to also change the configuration of Galaxy*
+.hint[you have to also change the configuration of Galaxy]
+
+---
