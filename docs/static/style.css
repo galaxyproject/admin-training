@@ -19,7 +19,7 @@ h2 { font-size: 2em; }
 .title h1, h2 {
     margin-bottom: 0px;
     margin-top: 0px;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .title p {
@@ -53,6 +53,7 @@ h3 {
 .footnote {
     position: absolute;
     bottom: 3em;
+    /*font-size: 1em;*/
 }
 
 .large {
