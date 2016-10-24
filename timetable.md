@@ -5,9 +5,11 @@
 ### Instructors
 
 * (N)ate Coraor - Galaxy Project, Department of Biochemistry and Molecular Biology, Penn State University, USA
-* (M)artin Čech - Galaxy Project, Department of Biochemistry and Molecular Biology, Penn State University, USA
-* (D)ave Clements - Galaxy Project, Department of Biology, Johns Hopkins University, USA
 * (S)imon Gladman - VLSCI, University of Melbourne, Australia
+* (D)an Blankenberg - Galaxy Project, Department of Biochemistry and Molecular Biology, Penn State University, USA
+* (M)artin Čech - Galaxy Project, Department of Biochemistry and Molecular Biology, Penn State University, USA
+* Dave (C)lements - Galaxy Project, Department of Biology, Johns Hopkins University, USA
+
 
 ## Timetable
 ### Basic Session

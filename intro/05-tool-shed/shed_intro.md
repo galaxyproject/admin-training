@@ -15,7 +15,7 @@ class: larger
 
 ## Please Interrupt!
 
-We are here to answer your questions.
+We like to answer your questions.
 
 ---
 
@@ -68,9 +68,8 @@ Every TS repo update can be propagated to the Galaxy though.
 
 ---
 ## Galaxy's Configuration
-
 List of available sheds is defined in `tool_sheds_conf.xml` and Galaxy comes with the Main Tool Shed enabled and the TTS disabled.
-```
+```xml
 <?xml version="1.0"?>
 <tool_sheds>
     <tool_shed name="Galaxy Main Tool Shed" url="https://toolshed.g2.bx.psu.edu/"/>
@@ -84,7 +83,6 @@ List of available sheds is defined in `tool_sheds_conf.xml` and Galaxy comes wit
 ## Simple repository
 tool remove_beginning
 repository = script + wrapper + test data + metadata file
-
 ```
 .
 ├── .shed.yml
@@ -98,12 +96,9 @@ repository = script + wrapper + test data + metadata file
 
 ---
 class: normal
-
 ### .shed.yml file
-
 a file with metadata
-
-```
+```yml
 categories:
 - Text Manipulation
 description: Remove lines from the beginning of a file.
@@ -118,10 +113,8 @@ type: unrestricted
 
 ---
 class: normal
-
 ## Repository & tool with requirements
 seqtk repository with multiple tools
-
 ```
 .
 ├── .shed.yml
@@ -131,30 +124,29 @@ seqtk repository with multiple tools
 ├── seqtk_seq.xml
 ├── seqtk_trimfq.xml
 ├── test-data
-│   ├── seqtk_trimfq.fq
+│   ├── seqtk_trimfq.fq
 ...
-│   ├── seqtk_trimfq_be.fq
-│   └── seqtk_trimfq_default.fq
+│   ├── seqtk_trimfq_be.fq
+│   └── seqtk_trimfq_default.fq
 └── tool_dependencies.xml
 ```
 
 ---
 ### seqtk requirements
 Requirements of the wrapper.
-
-```
+```xml
 <requirements>
     <requirement type="package" version="1.2">seqtk</requirement>
 </requirements>
 ```
 
 Galaxy is aiming to be resolution-agnostic.
----
 
+---
 ### seqtk tool_dependencies.xml file
 A TS way to fulfill requirements.
 
-```
+```xml
 <?xml version="1.0"?>
 <tool_dependency>
   <package name="seqtk" version="1.2">
@@ -165,10 +157,9 @@ A TS way to fulfill requirements.
 
 ---
 class: normal
-
 ### seqtk TS package
 A TS recipe how to install the dependency.
-```
+```xml
 <?xml version="1.0"?>
 <tool_dependency>
     <package name="seqtk" version="1.0-r75-dirty">
@@ -191,12 +182,10 @@ A TS recipe how to install the dependency.
 ```
 
 ---
-class: normal
-
+class: smaller
 ### seqtk Conda package
 Conda recipe how to install the dependency.
-
-```
+```yml
 package:
   name: seqtk
   version: 1.2

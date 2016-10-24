@@ -1,12 +1,21 @@
+layout: true
+class: inverse, middle, large
+
+---
+class: special
 # Tool Management Exercise
 The following exercise will flex the basics of tool installation and management.
 
---
+by @martenson
+
+.footnote[\#usegalaxy / @galaxyproject]
+
+---
 ## Task 1
 *Your users want to use freebayes software on the instance you administer.*
 * Find what Tool Shed repository has freebayes tools in it.
 
-> *you can use search in https://toolshed.g2.bx.psu.edu/ or http://toolshed.tools*
+.hint[you can use search in https://toolshed.g2.bx.psu.edu/ or http://toolshed.tools]
 
 ---
 ## Task 2
@@ -14,7 +23,7 @@ The following exercise will flex the basics of tool installation and management.
 
 ---
 ## Task 3
-*New revision has been released.*
+*New freebayes revision has been uploaded to the MTS.*
 
 * Install [`devteam/freebayes`](https://toolshed.g2.bx.psu.edu/view/devteam/freebayes/) from MTS in revision `24:da6e10dee68b` into section 'New Freebayes'.
 
@@ -22,18 +31,27 @@ The following exercise will flex the basics of tool installation and management.
 ## Task 4
 *Now you have two sections with two versions of freebayes. Confusing. You still want users to be able to re-run jobs with old freebayes though.*
 
-* Hide the Freebayes section from the tool panel without uninstalling it.
+* Hide the Freebayes section (with the older tool) from the tool panel without uninstalling it.
+
+.hint[you need to modify shed_tool_conf.xml in order to do this]
 
 ---
 ## Task 5
+*You want to show both versions of freebayes and allow users to switch versions on the tool form*
 Move freebayes revision `24:da6e10dee68b` into 'New Freebayes' section and display it.
+
+.hint[tools with the same ID and different version in the same section will 'collapse' into one and offer the switch button]
 
 ---
 ## Task 6
-Make freebayes to appear only in the 'Freebayes' section of the toolpanel
-and offer version switching.
+*Now there is only one section we might not want to call it 'New'.*
 
-> *you can rename sections using configuration file(s)*
+* Rename the 'New Freebayes' section to just 'Freebayes'.
+
+.hint[you can rename sections using configuration file(s)]
+
+???
+When renaming you need to be consistent across the configs.
 
 ---
 ## Task 7
