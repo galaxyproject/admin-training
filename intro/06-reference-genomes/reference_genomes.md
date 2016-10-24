@@ -7,7 +7,7 @@ class: special, center
 # Reference Genomes in Galaxy
 
 
-**Slides: @blankenburg, @Slugger70**
+**Slides: @blankenberg, @Slugger70**
 
 
 .footnote[\#usegalaxy \#GATC2016 / @galaxyproject]
