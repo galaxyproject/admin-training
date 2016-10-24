@@ -16,6 +16,7 @@ class: larger
 Your questions will be answered.
 
 ---
+class: normal
 # Reasons to Install Your Own Galaxy
 
 You only need to download Galaxy if you plan to:
