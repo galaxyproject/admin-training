@@ -11,5 +11,6 @@ generate-slides:
 	$(IN_VENV) python slideshow/build_slideshow.py 'Exercise Tool Management' intro/05-tool-shed/ex-tool-management.md 05-tool-shed
 	$(IN_VENV) python slideshow/build_slideshow.py 'Exercise Advanced Tool Management' intro/05-tool-shed/ex-advanced-tool-management.md 05-tool-shed
 	$(IN_VENV) python slideshow/build_slideshow.py 'Reference Genomes' intro/06-reference-genomes/reference_genomes.md 06-reference-genomes
+	$(IN_VENV) python slideshow/build_slideshow.py 'Galaxy Tool Basics' intro/09-tool-basics/tool-basics.md 09-tool-basics
 	$(IN_VENV) python slideshow/build_slideshow.py 'Galaxy Architecture' intro/12-architecture/galaxy_architecture.md 12-architecture
 	echo "</body></html>" >> docs/index.html

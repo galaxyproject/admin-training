@@ -44,9 +44,10 @@ You only need to download Galaxy if you plan to:
 - Python 2.7
 
 Optional
-  - Git (optional)
-  - GNU Make, gcc to compile and install tool dependencies
-  - Additional tool requirements as detailed in Tool Dependencies
+  - samtools
+  - Git code versioning system
+  - GNU Make + gcc to compile and install tool dependencies
+  - Additional requirements for shipped tools
 
 ---
 # Clone the repository
@@ -62,13 +63,14 @@ Optional
 
 You now have default Galaxy running.
 
-.footnote[Note that first startup needs internet connection and takes longer than subsequent ones.]
+.footnote[Note that first startup needs internet connection and takes longer than the subsequent ones.]
 
 ---
 # What happened?
 
-* Galaxy created a Python virtual environment.
-* Galaxy fetched and added needed Python binaries ('wheels') into this environment
+* Galaxy started logging into the terminal from which it is run.
+* Galaxy created a Python virtual environment (venv).
+* Galaxy fetched needed Python binaries ('wheels') into this environment.
 * Galaxy created the default SQLite database and migrated it to the latest version.
 
 ---
@@ -76,14 +78,37 @@ You now have default Galaxy running.
 
 1. Run a basic job (e.g. upload a file).
 1. Check `http://localhost:8080/api/version` to see Galaxy's version.
-1. Kill the server by terminating the console process.
+1. Stop Galaxy by terminating the console process.
 
 ---
 # Basic configuration
 
+- Galaxy works out of the box with default configuration.
+- Important config files are in `config/`.
+- Galaxy often uses the files with suffix `*.sample` as declared defaults.
+
+---
+# Example of configuration change
+
+- By default Galaxy loads all tools in `tool_conf.xml.sample` into toolpanel.
+- To add tools you should:
+  - Make a copy `$ cp tool_conf.xml.sample tool_conf.xml`.
+  - Add your tool entries to the `tool_conf.xml`.
+  - Restart Galaxy.
+
+???
+Use `<toolbox monitor="true">` to trigger hot reload of tools.
 
 ---
 # Update the welcome page
+
+Welcome page is `$GALAXY_ROOT/static/welcome.html` and is the first thing that
+users see. It is a good idea to extend it with things like:
+- Downtimes/Maintenance periods
+- New tools
+- Publications relating to your Galaxy
+
+No restarting is necessary.
 
 ---
 # What to do next?
