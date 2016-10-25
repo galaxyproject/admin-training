@@ -6,7 +6,7 @@ dagobah - The Solar System for Galaxy Training
 ---
 Salt Lake City - 7th to 11th November 2016
 
-jump to [Monday](#Monday) | [Tuesday](#Tuesday) | [Wednesday](#Wednesday) | [Thursday](#Thursday) | [Friday](#Friday)
+jump to [Monday](#monday) | [Tuesday](#tuesday) | [Wednesday](#wednesday) | [Thursday](#thursday) | [Friday](#friday)
 
 Built slides have index at https://martenson.github.io/dagobah-training/.
 
