@@ -28,13 +28,13 @@ We will be using two different methods.
 
 ![schematic](images/data_managers_schematic_overview.png)
 
-## Section 1 - \*.loc files, doing it manually!
+## Section 1 - \*.loc files 101: Doing it manually!
 
 *Loc* or *location* files are used as a way to provide additional configuration details to a tool without having to manually edit the actual tool XML file. They are often used to store the path (location on disk) of reference data and indices, along with appropriate metadata (display names, dbkeys/genome builds). They need not end in the suffix of ".loc", although they commonly do by convention. 
 
 Most importantly they are **Tab delimited** (not *space* delimited) flat files, where each row is an entry in the table. They also should not be accessed directly in a tool. Instead, the Tool Data Tables abstraction layer should be used. 
 
-**Exercise 1: Example of typical use of reference data in a Galaxy tool**
+### Exercise 1: Example of typical use of reference data in a Galaxy tool
 
 * Search toolshed for a tool that uses reference data, say the **BWA** tool
   * http://toolshed.g2.bx.psu.edu/view/devteam/bwa_wrappers
@@ -95,61 +95,139 @@ Most importantly they are **Tab delimited** (not *space* delimited) flat files, 
 **NOTE:** When editing .loc files, your editor **MUST** use **TABS** and not expand them into spaces. 
 * In **vim** use the command *:set noexpandtab*
 
+### Excercise 2: Manually add a genome to the BWA tool list.
+
+In this exercise we will be adding a reference genome to our galaxy server by manually editing all of the required files. (Use your favourite editor, but remember to make sure it uses real tabs not tabs expanded into spaces..)
+
+We will:
+1. Add ourselves as admin users to our Galaxy servers(if we haven't already)
+2. Install the BWA toolsuite
+3. Add a reference genome to our server
+4. Index the reference genome for BWA.
+5. Test it all out!
+
+If you are already an Admin user on your Galaxy server and it already has BWA installed, start at *Part 3*.
+
+**Part 1: Add admin user**
+
+Skip this part if you are already an admin user of your Galaxy server!
+
+* Login to your Galaxy server
+* Check if your username is an admin user:
+``` bash
+  cd galaxy/config
+  grep admin_users galaxy.ini
+```
+* It should return `admin_users = ` followed by a comma delimited list of user emails. If yours is not there, it needs to be added. Use only commas to delimit different admin users - no spaces!
+* If you make any changes to the galaxy.ini file, you need to restart Galaxy before they will take effect.
+* For Galaxy running in daemon mode:
+``` bash
+  cd galaxy
+  sh run.sh --stop-daemon
+  sh run.sh --daemon
+```
+* Watch the Galaxy log file with `tail -f paster.log`.
+* Test you are an Admin user by logging into your Galaxy server as the username you added to galaxy.ini
+* You should see an "Admin" menu item at the top of the Galaxy interface.
+
+**Part 2: Install the BWA tool**
+
+Skip this part if BWA is already installed on your Galaxy server!
+
+* From the Galaxy admin page:
+  * Click **Search tool shed**
+  * Click *Galaxy Main Tool Shed*
+  * Searh for *bwa*
+  * Select *bwa_wrappers* owned by devteam
+  * Click **Install to Galaxy**
+  * Click **Install**
+  * Watch the interface and wait until BWA is installed.
 
 
-start galaxy 
-open a terminal/shell and go to galaxy dir
-cd /home/galaxy/Desktop/Data_Managers/galaxy/galaxy-central 
-start a virtual env
-. galaxy_env/bin/activate
-Stop Galaxy if it's running
- sh run.sh --stop-daemon
-Restart Galaxy
- sh run.sh --daemon
-Watch the Galaxy log
- tail -f paster.log
-Check that your galaxy instance is running. In your VM web browser, visit http://localhost:8080. Register your admin email address if you haven't already done so and log in.
-You can also use the preconfigured username: admin@galaxyproject.org password: galaxy
-If you don't have an admin menu item on your tool bar, refresh your browser. If the issue persists: adjust universe_wsgi.ini by adding an admin_user email you will register with when you first log in - use commas ONLY - no spaces - to separate admin email addresses. Then restart galaxy. 
-$ grep admin_users universe_wsgi.ini
-admin_users = jj@msi.umn.edu
-Install the BWA Galaxy tool
-From the Galaxy admin page: Click "Search and browse tool sheds"
-Click "Galaxy main tool shed" 
-Searh for "bwa"
-Select "bwa_wrappers" owned by devteam
-Click "Install to Galaxy" 
-Click "Install" 
-In your terminal window: 
-View shed_tool_conf.xml it should now contain a bwa_wrapper entry 
-View shed_tool_data_table_conf.xml should have the bwa tool_data_table_conf.xml.sample table entries added. 
-There should be a tool-data/bwa_index.loc file (copied from "bwa_index.loc.sample" if not already created)
-Upload some sample FASTQ datasets: 
+* Check it worked
+  * In your terminal window view *shed_tool_conf.xml*, it should now contain a bwa_wrapper entry.
+  * View *shed_tool_data_table_conf.xml* should have the bwa *tool_data_table_conf.xml.sample* table entries added. 
+  * There should be a *tool-data/bwa_index.loc* file (copied from "bwa_index.loc.sample" if not already created)
+  * Upload some sample FASTQ datasets:
+  ``` 
 http://www.bx.psu.edu/~dan/examples/gcc2014/data_manager_workshop/fastq/SRR507778-10k_1.fastqsanger
 http://www.bx.psu.edu/~dan/examples/gcc2014/data_manager_workshop/fastq/SRR507778-10k_2.fastqsanger
-These are paired end datasets created using Illumina technology, obtained from EBI SRA, and decreased to ~10,000 reads. 
-When uploading these datasets set the datatype to "fastqsanger". 
-When the BWA tool is installed, Click "Analyze Data" menu item and select the BWA tool 
-Note the choices available under "Select a reference genome:" hint: this list is empty
-Add a new built-in reference dataset, we will be using the sacCer1 genome build. 
-Get the reference genome in the FASTA format. From your Galaxy root (galaxy@gcc2014:~/Desktop/Data_Managers/galaxy/galaxy-central$): 
-cd tool-data/
-mkdir sacCer1
-mkdir sacCer1/seq
-cd sacCer1/seq
-wget http://www.bx.psu.edu/~dan/examples/gcc2014/data_manager_workshop/sacCer1/sacCer1.fa
-Create BWA indexes for the reference genome. 
-Download and compile BWA (http://bio-bwa.sourceforge.net/) 
-or you can download and use a precompiled version: 
-cd ~/Desktop/Data_Managers/galaxy/galaxy-central/tool-data/sacCer1
-mkdir bwa_index
-mkdir bwa_index/sacCer1
-cd bwa_index/sacCer1
-wget http://www.bx.psu.edu/~dan/examples/gcc2014/data_manager_workshop/bwa/bwa
-chmod +x bwa
-ln -s ../../seq/sacCer1.fa sacCer1.fa
-./bwa index sacCer1.fa
-ls -lah
+  ```
+  * These are paired end datasets created using Illumina technology, obtained from EBI SRA, and decreased to ~10,000 reads. 
+  * When uploading these datasets set the datatype to "fastqsanger". 
+  * Click the "Analyze Data" menu item and select the **BWA** tool.
+  * Note the choices available under **Select a reference genome:** hint: this list should be empty (or at least not contain SacCer1 )
+  
+**Part 3: Add a new reference genome**
+
+We will be adding a new built-in reference dataset, the sacCer1 genome build (good old Saccharomyces cerevisiae - beer yeast). We will download the fasta sequence file for it, index it for bwa and edit all of the appropriate Galaxy .loc file.
+
+* Get the reference genome in the FASTA format.
+  * From your Galaxy root:
+  ``` bash 
+  cd tool-data/
+  mkdir -p sacCer1/seq
+  cd sacCer1/seq
+  wget http://www.bx.psu.edu/~dan/examples/gcc2014/data_manager_workshop/sacCer1/sacCer1.fa
+  ```
+
+
+* Create BWA indexes for the reference genome.
+
+**NOTE:** This is kind of the hard part.. We need to have BWA available on the command line and in the PATH environment variable. We can either install a separate commandline BWA or use the one installed in Galaxy. It's probably better to use the Galaxy one as sometimes tool developers change the format of their index tables.. :( 
+
+* Put BWA into the PATH.
+  * Use the env.sh file in the Galaxy BWA tool! Then test it works! 
+  * From your Galaxy root: (Where the "x"s in the semantic version numbers and repo version are replaced with what's actually there!)
+  
+  ```
+   
+  source ./tools/bwa/x.x.xx/iuc/package_bwa_x_x_xx/xxxxxxxxxx/env.sh
+  bwa
+  
+  Program: bwa (alignment via Burrows-Wheeler transformation)
+  Version: 0.7.12-r1039
+  Contact: Heng Li <lh3@sanger.ac.uk>
+
+  Usage:   bwa <command> [options]
+
+  Command: index         index sequences in the FASTA format
+           mem           BWA-MEM algorithm
+           fastmap       identify super-maximal exact matches
+           pemerge       merge overlapping paired ends (EXPERIMENTAL)
+           aln           gapped/ungapped alignment
+           samse         generate alignment (single ended)
+           sampe         generate alignment (paired ended)
+           bwasw         BWA-SW for long queries
+
+           shm           manage indices in shared memory
+           fa2pac        convert FASTA to PAC format
+           pac2bwt       generate BWT from PAC
+           pac2bwtgen    alternative algorithm for generating BWT
+           bwtupdate     update .bwt to the new format
+           bwt2sa        generate SA from BWT and Occ
+
+  Note: To use BWA, you need to first index the genome with 'bwa index'.
+        There are three alignment algorithms in BWA: 'mem', 'bwasw', and
+        'aln/samse/sampe'. If you are not sure which to use, try 'bwa mem'
+        first. Please 'man ./bwa.1' for the manual.
+  
+  ```
+  
+  
+* Now we can use bwa to build the index! Go back to the sacCer1 directory in tool-data. From Galaxy root:
+
+  ``` bash
+  cd tool-data/sacCer1
+  mkdir -p bwa_index/sacCer1
+  cd bwa_index/sacCer1
+  ln -s ../../seq/sacCer1.fa sacCer1.fa
+  bwa index sacCer1.fa
+  ls -lah
+
+  ```  
+  
+
 edit the tool-data/bwa_index.loc file adding a new entry 
 cd ~/Desktop/Data_Managers/galaxy/galaxy-central/tool-data/
 nano bwa_index.loc
