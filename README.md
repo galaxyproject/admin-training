@@ -1,26 +1,27 @@
-#Galaxy Administrators Course
-dagobah - The Solar System for Galaxy Training
+# Galaxy Administrators Course
 
+dagobah - The Solar System for Galaxy Training
 > "The planet shown in Dagobah, in the Sluis sector, is a world of murky swamps, steaming bayous, and petrified forests."
 
-Built slides are served at https://martenson.github.io/dagobah-training/.
+---
+Salt Lake City - 7th to 11th November 2016
 
-Collection of resources and materials for the [Galaxy Admin SLC training](https://wiki.galaxyproject.org/Events/AdminTraining2016) with the aim to be later merged in the Galaxy's codebase.
+jump to [Monday](#Monday) | [Tuesday](#Tuesday) | [Wednesday](#Wednesday) | [Thursday](#Thursday) | [Friday](#Friday)
 
-**Salt Lake City - 7th to 11th November 2016**
+Built slides have index at https://martenson.github.io/dagobah-training/.
 
 ### Instructors
 
-* (N)ate Coraor - Galaxy Project, Department of Biochemistry and Molecular Biology, Penn State University, USA
+* (N)ate Coraor - Galaxy Project, BMB, Penn State University, USA
 * (S)imon Gladman - VLSCI, University of Melbourne, Australia
-* (D)an Blankenberg - Galaxy Project, Department of Biochemistry and Molecular Biology, Penn State University, USA
-* (M)artin Čech - Galaxy Project, Department of Biochemistry and Molecular Biology, Penn State University, USA
+* (D)an Blankenberg - Galaxy Project, BMB, Penn State University, USA
+* (M)artin Čech - Galaxy Project, BMB, Penn State University, USA
 * Dave (C)lements - Galaxy Project, Department of Biology, Johns Hopkins University, USA
 
 ## Timetable
 ### Basic Sessions
-
-**Day 1 - Monday 7th November** - Salt Lake City Library - Room #
+#### Monday
+**7th November** - Salt Lake City Library - Room #
 
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
@@ -39,7 +40,8 @@ Collection of resources and materials for the [Galaxy Admin SLC training](https:
 | 19:00 | Discussion, troubleshooting, ad hoc support |  | All |
 | 20:30 | Close Day 1 | | All |
 
-**Day 2 - Tuesday 8th November** - Salt Lake City Library - Room #
+#### Tuesday
+**8th November** - Salt Lake City Library - Room #
 
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
@@ -55,12 +57,13 @@ Collection of resources and materials for the [Galaxy Admin SLC training](https:
 | 15:40 | Upgrading to a new Galaxy release |  |  |
 | 16:50 | When things go wrong: Basic Galaxy server troubleshooting |  |  |
 | 17:40 | **Dinner** |  |  |
-| 19:00 | Introduction to Galaxy Architecture (Joint session with the Advanced Topics session) |  |  |
+| 19:00 | Introduction to Galaxy Architecture (Joint session with the Advanced Topics session) | [slides](https://martenson.github.io/dagobah-training/12-architecture/galaxy_architecture.html) |  |
 | 20:20 | Wrap up and close | | All |
 
 ### Advanced Sessions
 
-**Day 1 - Wednesday 9th November** - Commanders house - Room #
+#### Wednesday
+**9th November** - Commanders house - Room #
 
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
@@ -79,7 +82,8 @@ Collection of resources and materials for the [Galaxy Admin SLC training](https:
 | 19:00 | Discussion, troubleshooting, ad hoc support |  |  |
 | 20:30 | Close day 1 | | All |
 
-**Day 2 - Thursday 10th November** - Commanders House - Room #
+#### Thursday
+**10th November** - Commanders House - Room #
 
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
@@ -96,7 +100,8 @@ Collection of resources and materials for the [Galaxy Admin SLC training](https:
 | 19:00 | Using public and private cloud compute resources |  | (S) |
 | 20:30 | Close day 2 | | All |
 
-**Day 3 - Friday 11th November** - Commanders House - Room #
+#### Friday
+**11th November** - Commanders House - Room #
 
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
