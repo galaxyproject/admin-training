@@ -1,4 +1,5 @@
-# dagobah - The Solar System for Galaxy Training
+#Galaxy Administrators Course
+dagobah - The Solar System for Galaxy Training
 
 > "The planet shown in Dagobah, in the Sluis sector, is a world of murky swamps, steaming bayous, and petrified forests."
 
@@ -6,58 +7,108 @@ Built slides are served at https://martenson.github.io/dagobah-training/.
 
 Collection of resources and materials for the [Galaxy Admin SLC training](https://wiki.galaxyproject.org/Events/AdminTraining2016) with the aim to be later merged in the Galaxy's codebase.
 
-(S)imon (N)ate (M)artin
+**Salt Lake City - 7th to 11th November 2016**
 
-### Introductory
+### Instructors
 
-1. Deployment platform options
-  * [resources](intro/01-deployment-platforms/resources.md)
-1. Installing a basic Galaxy server
-  * [resources](intro/02-basic-server/resources.md)
-1. Database choices and configuration (SQLite & PostgreSQL)
-  * [resources](intro/03-databases/resources.md)
-1. Web server choices and configuration (NGINX & Apache)
-  * [resources](intro/04-web-servers/resources.md)
-1. Galaxy Tool Shed and Tool Installation (M)
-  * [resources](intro/05-tool-shed/resources.md)
-  * Tool Shed intro slides {[src](intro/05-tool-shed/shed_intro.md)}{[build](https://remarkjs.com/remarkise?url=https://github.com/martenson/dagobah-training/blob/master/intro/05-tool-shed/shed_intro.md)}
-  * Tool Installation slides {[src](intro/05-tool-shed/tool_installation.md)}{[build](https://remarkjs.com/remarkise?url=https://github.com/martenson/dagobah-training/blob/master/intro/05-tool-shed/tool_installation.md)}
-  * exercise 1 - Tool Management {[src](intro/05-tool-shed/ex-01-tool-management.md)}{[build](https://remarkjs.com/remarkise?url=https://github.com/martenson/dagobah-training/blob/master/intro/05-tool-shed/ex-01-tool-management.md)}
-  * exercise 2 - Advanced Tool Management {[src](intro/05-tool-shed/ex-02-tool-management-advanced.md)}{[build](https://remarkjs.com/remarkise?url=https://github.com/martenson/dagobah-training/blob/master/intro/05-tool-shed/ex-02-tool-management-advanced.md)}
-1. Importing and defining reference genomes (S)
-  * [resources](intro/06-reference-genomes/resources.md)
-  * Reference Genome Slides
-  {[src](intro/06-reference-genomes/reference_genomes.md)}{[build](https://remarkjs.com/remarkise?url=https://github.com/martenson/dagobah-training/blob/master/intro/06-reference-genomes/reference_genomes.md)}
-1. Extending the installation
-  * [resources](intro/07-extending-installation/resources.md)
-1. Users, groups, and quotas
-  * [resources](intro/08-users-groups-quotas/resources.md)
-1. Basics of Tool Definition & Planemo (S)
-  * [resources](intro/09-tool-basics/resources.md)
-1. Upgrading Release
-  * [resources](intro/10-upgrading-release/resources.md)
-1. Basic Troubleshooting
-  * [resources](intro/11-basic-troubleshooting/resources.md)
-1. Introduction to Galaxy Architecture
-  * [resources](intro/12-architecture/resources.md)
+* (N)ate Coraor - Galaxy Project, Department of Biochemistry and Molecular Biology, Penn State University, USA
+* (S)imon Gladman - VLSCI, University of Melbourne, Australia
+* (D)an Blankenberg - Galaxy Project, Department of Biochemistry and Molecular Biology, Penn State University, USA
+* (M)artin Čech - Galaxy Project, Department of Biochemistry and Molecular Biology, Penn State University, USA
+* Dave (C)lements - Galaxy Project, Department of Biology, Johns Hopkins University, USA
 
-### Advanced
+## Timetable
+### Basic Sessions
 
-1. Galaxy with Ansible (S)
-  * [resources](advanced/001-ansible/resources.md)
-1. Monitoring & Maintenance
-  * [resources](advanced/002-monitoring-maintenance/resources.md)
-1. Advanced tool definition and tool troubleshooting (M,S)
-  * [resources](advanced/003-tools-advanced/resources.md)
-1. External authentication
-  * [resources](advanced/004-external-authentication/resources.md)
-1. Galaxy on compute cluster
-  * [resources](advanced/005-compute-cluster/resources.md)
-1. Cloud (S)
-  * [resources](advanced/006-cloud/resources.md)
-1. Storage management
-  * [resources](advanced/007-storage-management/resources.md)
-1. Complex Galaxy deployments - (N,S)
-  * [resources](advanced/008-main-galaxy/resources.md)
-1. Advanced troubleshooting
-  * [resources](advanced/009-advanced-troubleshooting/resources.md)
+**Day 1 - Monday 7th November** - Salt Lake City Library - Room #
+
+| **Time** | **Topic** | **Links** | **Instructor** |
+| -------- | --------- | --------- | ----------- |
+| 09:15 | Check-in and Coffee |  |  |
+| 09:30 | Welcome and Introduction |  | All |
+| 09:45 | Deployment and Platform Options |  | (N) |
+| 10:15 | Get a Basic Galaxy Server Up and Running | [slides](https://martenson.github.io/dagobah-training/02-basic-server/get-galaxy.html) | (N + M) |
+| 11:00 | **Morning Break** | | |
+| 11:20 | Database choices and configuration. Introduction to PostgreSQL |  | (N + M) |
+| 12:20 | **Lunch** | | |
+| 13:20 | Web server choices and configuration. Introduction to Apache and NGINX. |  |  |
+| 14:20 | Introduction to the Galaxy Tool Shed: Identifying and installing well-defined tools | [shed slides](https://martenson.github.io/dagobah-training/05-tool-shed/shed_intro.html), [tool slides](https://martenson.github.io/dagobah-training/05-tool-shed/tool_installation.html) & [exercise](https://martenson.github.io/dagobah-training/05-tool-shed/ex-tool-management.html)| (M) |
+| 15:30 | **Afternoon Break** | | |
+| 15:50 | Defining and importing genomes, Data Managers | [slides](https://martenson.github.io/dagobah-training/06-reference-genomes/reference_genomes.html) & [exercise](intro/06-reference-genomes/ex06_reference_genomes.md) | (S) |
+| 17:40 | **Dinner** |  |  |
+| 19:00 | Discussion, troubleshooting, ad hoc support |  | All |
+| 20:30 | Close Day 1 | | All |
+
+**Day 2 - Tuesday 8th November** - Salt Lake City Library - Room #
+
+| **Time** | **Topic** | **Links** | **Instructor** |
+| -------- | --------- | --------- | ----------- |
+| 09:15 | Check-in and Coffee |  |  |
+| 09:30 | Welcome and Questions |  | All |
+| 09:45 | Extending your installation: FTP, SMTP, and more|  |  |
+| 11:00 | **Morning Break** | | |
+| 11:20 | Users, Groups, and Quotas |  |  |
+| 12:20 | **Lunch** | | |
+| 13:20 | Anatomy of a Tool Definition, Planemo, Publishing |  | (S) |
+| 14:50 | Updating tools and supporting multiple versions of tools | | (S) |
+| 15:20 | **Afternoon Break** | | |
+| 15:40 | Upgrading to a new Galaxy release |  |  |
+| 16:50 | When things go wrong: Basic Galaxy server troubleshooting |  |  |
+| 17:40 | **Dinner** |  |  |
+| 19:00 | Introduction to Galaxy Architecture (Joint session with the Advanced Topics session) |  |  |
+| 20:20 | Wrap up and close | | All |
+
+### Advanced Sessions
+
+**Day 1 - Wednesday 9th November** - Commanders house - Room #
+
+| **Time** | **Topic** | **Links** | **Instructor** |
+| -------- | --------- | --------- | ----------- |
+| 08:30 | Check-in and Coffee |  |  |
+| 09:00 | Welcome and Introduction/Questions |  | All |
+| 09:20 | Configuration management choices: Introduction to Ansible |  | (S) |
+| 09:50 | Using Ansible to deploy Galaxy I |  | (S) |
+| 10:30 | **Morning Break** | | |
+| 10:50 | Using Ansible to deploy Galaxy II |  | (S + N) |
+| 12:20 | **Lunch** | | |
+| 13:20 | Server monitoring and maintenance: Admin UI, Log files, Direct database queries, Command line & scripts, What to backup and how |  | (S) |
+| 15:20 | **Afternoon Break** | | |
+| 15:40 | Controlling Galaxy with systemd and supervisor |  |  |
+| 16:10 | Advanced tool definition, tool failures, tool debugging |  |  |
+| 17:40 | **Dinner** |  |  |
+| 19:00 | Discussion, troubleshooting, ad hoc support |  |  |
+| 20:30 | Close day 1 | | All |
+
+**Day 2 - Thursday 10th November** - Commanders House - Room #
+
+| **Time** | **Topic** | **Links** | **Instructor** |
+| -------- | --------- | --------- | ----------- |
+| 08:30 | Check-in and Coffee |  |  |
+| 09:00 | Welcome and Introduction/Questions |  | All |
+| 09:20 | Using and configuring external authentication services |  |  |
+| 10:30 | **Morning Break** | | |
+| 10:50 | Connecting Galaxy to a compute cluster I |  |  |
+| 12:20 | **Lunch** | | |
+| 13:20 | Connecting Galaxy to a compute cluster II |  |  |
+| 15:20 | **Afternoon Break** | | |
+| 15:40 | Using Heterogeneous compute resources |  |  |
+| 17:40 | **Dinner** |  |  |
+| 19:00 | Using public and private cloud compute resources |  | (S) |
+| 20:30 | Close day 2 | | All |
+
+**Day 3 - Friday 11th November** - Commanders House - Room #
+
+| **Time** | **Topic** | **Links** | **Instructor** |
+| -------- | --------- | --------- | ----------- |
+| 08:30 | Check-in and Coffee |  |  |
+| 09:00 | Welcome and Introduction/Questions |  | All |
+| 09:20 | Storage management and using heterogeneous storage services |  |  |
+| 10:30 | **Morning Break** | | |
+| 10:50 | Complex Galaxy servers examples: usegalaxy.org, GVL |  | (N + S) |
+| 12:20 | **Lunch** | | |
+| 13:20 | When things go REALLY wrong: Advanced Galaxy server troubleshooting |  |  |
+| 15:20 | **Afternoon Break** | | |
+| 15:50 | Participant selected topics |  | All |
+| 17:30 | **Dinner** |  |  |
+| 18:50 | Discussion and open questions |  | All |
+| 20:30 | Wrap up and close | | All |
