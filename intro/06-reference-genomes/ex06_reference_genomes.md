@@ -1,4 +1,4 @@
-![GATC Logo](../shared-images/AdminTraining2016-100.png) ![galaxy logo](../shared-images/galaxy_project_logo_white.png)
+![GATC Logo](../../docs/shared-images/AdminTraining2016-100.png) ![galaxy logo](../../docs/shared-images/galaxy_logo_25percent_transparent.png)
 
 ### GATC - 2016 - Salt Lake City
 
@@ -28,7 +28,7 @@ We will be using two different methods.
 
 *fig 1. A schematic layout of the of Interplay between Built-in Data and Galaxy Tools*
 
-![schematic](images/data_managers_schematic_overview.png)
+![schematic](../../docs/06-reference-genomes/images/data_managers_schematic_overview.png)
 
 ## Section 1 - \*.loc files 101: Doing it manually!
 
@@ -376,7 +376,7 @@ From the Galaxy Admin page:
 
 You should see something like this:
 
-![nearly empty data manager tool list](images/nearly_empty_data_manager_tool_list.png)
+![nearly empty data manager tool list](../../docs/06-reference-genomes/images/nearly_empty_data_manager_tool_list.png)
 
 * Click on **all_fasta** under *View Tool Data Table Entries*
 
@@ -392,7 +392,7 @@ If you look at your "Saved Histories" now, you will see a new history called "Da
 
 You should see that sacCer2 has been added to all_fasta.
 
-![all_fasta.png](images/all_fasta.png)
+![all_fasta.png](../../docs/06-reference-genomes/images/all_fasta.png)
 
 **Part 3: Download and install the BWA data manager**
 
