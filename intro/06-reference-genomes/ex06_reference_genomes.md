@@ -172,7 +172,7 @@ We will be adding a new built-in reference dataset, the sacCer1 genome build (go
   ```
 
 
-* Create BWA indexes for the reference genome.
+**Part 4: Create BWA indexes for the reference genome.**
 
 **NOTE:** This is kind of the hard part.. We need to have BWA available on the command line and in the PATH environment variable. We can either install a separate commandline BWA or use the one installed in Galaxy. It's probably better to use the Galaxy one as sometimes tool developers change the format of their index tables.. :( 
 
@@ -224,20 +224,35 @@ We will be adding a new built-in reference dataset, the sacCer1 genome build (go
   ln -s ../../seq/sacCer1.fa sacCer1.fa
   bwa index sacCer1.fa
   ls -lah
-
+  total 21M
+  drwxr-xr-x 2 galaxy users 4.0K Oct  6  2015 .
+  drwxr-xr-x 3 galaxy users 4.0K Oct  6  2015 ..
+  lrwxrwxrwx 1 galaxy users   20 Oct  6  2015 sacCer1.fa -> ../../seq/sacCer1.fa
+  -rw-r--r-- 1 galaxy users   14 Oct  6  2015 sacCer1.fa.amb
+  -rw-r--r-- 1 galaxy users  596 Oct  6  2015 sacCer1.fa.ann
+  -rw-r--r-- 1 galaxy users  12M Oct  6  2015 sacCer1.fa.bwt
+  -rw-r--r-- 1 galaxy users 2.9M Oct  6  2015 sacCer1.fa.pac
+  -rw-r--r-- 1 galaxy users 5.8M Oct  6  2015 sacCer1.fa.sa
   ```  
-  
+* All that's left is to now add it to the .loc file. Add the following line to the end of the *tool-data/bwa_index.loc* file.
+```
+  sacCer1     sacCer1 S. cerevisiae Oct. 2003 (SGD/sacCer1) (sacCer1) /home/galaxy/Desktop/Data_Managers/galaxy/galaxy-central/tool-data/sacCer1/bwa_index/sacCer1/sacCer1.fa
+```
 
-edit the tool-data/bwa_index.loc file adding a new entry 
-cd ~/Desktop/Data_Managers/galaxy/galaxy-central/tool-data/
-nano bwa_index.loc
-add this entry to the end of the file: 
-sacCer1     sacCer1 S. cerevisiae Oct. 2003 (SGD/sacCer1) (sacCer1) /home/galaxy/Desktop/Data_Managers/galaxy/galaxy-central/tool-data/sacCer1/bwa_index/sacCer1/sacCer1.fa
-Check the BWA tool for the new entry in your web browser 
-Restart your galaxy server 
-Again check the BWA tool for the new entry in your web browser 
-If the your new entry does not appear, did you remember to separate the fields with TAB characters 
-Align your FASTQ reads using the BWA tool to the newly added built-in reference genome data. 
+**Part 5: Test it all out**
+
+Now we'll check the BWA tool for the new reference entry. 
+
+* Restart your galaxy server.
+* Check the BWA tool for the new entry in your web browser
+
+**NOTE:** If the your new entry does not appear, did you remember to separate the fields with TAB characters.
+
+* Align your FASTQ reads using the BWA tool to the newly added built-in reference genome data.
+
+Phew, that was a lot of work. Imagine doing that for ~10 genomes and for ~10-20 tools! There has to be a better way. Luckily, there is!
+
+
 16:00-16:10 Introduction to DataManagers
 
 The problem 
