@@ -16,6 +16,8 @@ By the end of this tutorial, you should:
 
 ## Introduction
 
+A slideshow presentation on this subject can be found [here](https://martenson.github.io/dagobah-training/06-reference-genomes/reference_genomes.html#1)
+
 Reference genomes such as the **human, mouse, arabidopsis** etc are all quite large. They are used extensively in bioinformatic analyses and therefore need to be widely available in analysis systems. These genomes can take up quite a bit of disk space to store especially if every user has their own copy. A lot of bioinformatic tools need to index these large genomes before they can use them. Tools such as short read mappers like **BWA** or **Bowtie** calculate indices of the genomes sequences to significantly speed up their processing of short reads. However, these indices take a long time to build and it would be impractical to build them every time you want to do a read mapping.
 
 Therefore, Galaxy has a system for storing reference sequences and pre-calculating the indices for each tool. They are all only stored once per Galaxy server and shared for every user. They are available for direct use in tools to save time. In this tutorial, we will be adding a new genome sequence to our Galaxy server, building it's indices for various tools and making them available for tool wrappers via the abstraction layer.
@@ -235,9 +237,9 @@ We will be adding a new built-in reference dataset, the sacCer1 genome build (go
   -rw-r--r-- 1 galaxy users 5.8M Oct  6  2015 sacCer1.fa.sa
   ```  
 * All that's left is to now add it to the .loc file. Add the following line to the end of the *tool-data/bwa_index.loc* file.
-```
+  ```
   sacCer1     sacCer1 S. cerevisiae Oct. 2003 (SGD/sacCer1) (sacCer1) /home/galaxy/Desktop/Data_Managers/galaxy/galaxy-central/tool-data/sacCer1/bwa_index/sacCer1/sacCer1.fa
-```
+  ```
 
 **Part 5: Test it all out**
 
@@ -252,45 +254,59 @@ Now we'll check the BWA tool for the new reference entry.
 
 Phew, that was a lot of work. Imagine doing that for ~10 genomes and for ~10-20 tools! There has to be a better way. Luckily, there is!
 
+----
 
-16:00-16:10 Introduction to DataManagers
+## Section 2: Data managers 101: Fully Auto
 
-The problem 
-Administrator needed to know how to update each type of reference data 
-Data Managers to the rescue 
-Allows for the creation of built-in (reference) data 
-underlying data 
-*.loc files 
-data tables 
-Specialized Galaxy tools that can only be accessed by an admin 
-Defined locally or installed from the Tool Shed 
-Flexible Framework 
-not just Genomic data 
-Interactively Run Data Managers through UI 
-Workflow compatible 
-Can Run via Galaxy API 
-How this operates within galaxy 
-https://wiki.galaxyproject.org/Admin/Tools/DataManagers/HowTo/Define
-configuration
-universe_wsgi.ini 
-data_manager_conf.xml 
-shed_data_manager_conf.xml 
-16:10-16:30 Install a DataManager from the ToolShed
+**The problem** 
+
+The Galaxy server administrator needed to know how to update each type of reference data. Know how to run the index builds. Know where to get the data from!
+
+**Data managers to the rescue**
+
+Data Managers are a special class of Galaxy tool which allows for the download and/or creation of data that is stored within Tool Data Tables and their underlying flat (e.g. .loc) files. These tools handle the creation of indices and the addition of entries/lines to the data table / .loc file via the Galaxy admin interface.
+
+Data Managers can be defined locally or installed through the Tool Shed. 
+
+They are a flexible framework for adding reference data to Galaxy (not just genomic data). They are workflow compatible and can run via the Galaxy API.
+
+More detailed background information on data managers can be found at: [https://wiki.galaxyproject.org/Admin/Tools/DataManagers/](https://wiki.galaxyproject.org/Admin/Tools/DataManagers/) (A summary of which appears below.)
+
+Details on how to define a data manager for a tool can be found here: [https://wiki.galaxyproject.org/Admin/Tools/DataManagers/HowTo/Define](https://wiki.galaxyproject.org/Admin/Tools/DataManagers/HowTo/Define)
+
+**Using Data Managers**
+
+Data Managers are composed of two components: 
+
+* Data Manager configuration (e.g. data_manager_conf.xml) 
+* Data Manager Tool
+
+**Data Manager Configuration**
+
+We need to tell Galaxy where to find the Data Managers and their configuration. 
+
+In your *galaxy.ini* file the following settings exist in the [app:main] section: 
+
+```
+# Data manager configuration options
+enable_data_manager_user_view = True
+data_manager_config_file = data_manager_conf.xml 
+shed_data_manager_config_file = shed_data_manager_conf.xml 
+galaxy_data_manager_data_path = tool-data
+```
+
+Where:
+  * *enable_data_manager_user_view* allows non-admin users to view the available data that has been managed.
+  * *data_manager_config_file* defines the local xml file to use for loading the configurations of locally defined data managers.
+  * *shed_data_manager_config_file* defines the local xml file to use for saving and loading the configurations of locally defined data managers. 
+  * *galaxy_data_manager_data_path* defines the location to use for storing the files created by Data Managers. When not configured it defaults to the value of tool_data_path.
+
+
+### Exercise 3: Install a DataManager from the ToolShed
 
 https://wiki.galaxyproject.org/Admin/Tools/DataManagers/HowTo/Define
 configure your galaxy server to use Data Managers 
-In your "universe_wsgi.ini" file these settings exist in the [app:main] section: 
-
-Toggle line numbers
-   1 # Data manager configuration options
-   2 enable_data_manager_user_view = True
-   3 data_manager_config_file = data_manager_conf.xml 
-   4 shed_data_manager_config_file = shed_data_manager_conf.xml 
-   5 galaxy_data_manager_data_path = tool-data
-Where enable_data_manager_user_view allows non-admin users to view the available data that has been managed.
-Where data_manager_config_file defines the local xml file to use for loading the configurations of locally defined data managers.
-Where shed_data_manager_config_file defines the local xml file to use for saving and loading the configurations of locally defined data managers. 
-Where galaxy_data_manager_data_path defines the location to use for storing the files created by Data Managers. When not configured it defaults to the value of tool_data_path. 
+ 
 From the Galaxy admin page: 
 install data_manager_fetch_genome_all_fasta from Galaxy main tool shed 
 view in galaxy file system where the various elements land 
