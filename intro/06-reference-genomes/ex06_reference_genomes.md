@@ -1,8 +1,10 @@
+![GATC Logo](images/AdminTraining2016-100.png) ![galaxy logo](images/GalaxyLogoHighRes.png)
+
 ### GATC - 2016 - Salt Lake City
 
 # Reference Genomes - Exercise.
 
-#### Authors: Dan Blankenberg, Jim Johnson and Simon Gladman
+#### Authors: Dan Blankenberg, Jim Johnson and Simon Gladman. 2014 - 2016
 
 ## Learning Outcomes
 
