@@ -38,8 +38,8 @@ Most importantly they are **Tab delimited** (not *space* delimited) flat files, 
 
 ### Exercise 1: Example of typical use of reference data in a Galaxy tool
 
-* Search toolshed for a tool that uses reference data, say the **BWA** tool
-  * http://toolshed.g2.bx.psu.edu/view/devteam/bwa_wrappers
+* Search toolshed for a tool that uses reference data, say the **bwa** tool
+  * http://toolshed.g2.bx.psu.edu/view/devteam/bwa
 * Click **Repository Actions** button and select **Browse repository tip files** 
 * Find and click on *bwa_wrapper.xml* and note the section that uses indexed data, in particular note lines 7 - 11. These lines in the tool wrapper refer to the "bwa_indexes" section of the *tool_data_table_conf.xml* file.
 
@@ -96,6 +96,8 @@ Most importantly they are **Tab delimited** (not *space* delimited) flat files, 
   
 **NOTE:** When editing .loc files, your editor **MUST** use **TABS** and not expand them into spaces. 
 * In **vim** use the command *:set noexpandtab*
+
+If you haven't already, install this tool to your Galaxy server as we'll need it later on! Use the tutorial on installing tool shed tools if you need a guide on how to do this.
 
 ### Excercise 2: Manually add a genome to the BWA tool list.
 
@@ -256,7 +258,7 @@ Phew, that was a lot of work. Imagine doing that for ~10 genomes and for ~10-20 
 
 ----
 
-## Section 2: Data managers 101: Fully Auto
+## Section 2 - Data managers 101: Fully Auto
 
 **The problem** 
 
@@ -301,436 +303,139 @@ Where:
   * *shed_data_manager_config_file* defines the local xml file to use for saving and loading the configurations of locally defined data managers. 
   * *galaxy_data_manager_data_path* defines the location to use for storing the files created by Data Managers. When not configured it defaults to the value of tool_data_path.
 
+Details on Data Manager Tools and their definition can be found at: [https://wiki.galaxyproject.org/Admin/Tools/DataManagers/HowTo/Define](https://wiki.galaxyproject.org/Admin/Tools/DataManagers/HowTo/Define)
 
 ### Exercise 3: Install a DataManager from the ToolShed
 
-https://wiki.galaxyproject.org/Admin/Tools/DataManagers/HowTo/Define
-configure your galaxy server to use Data Managers 
- 
-From the Galaxy admin page: 
-install data_manager_fetch_genome_all_fasta from Galaxy main tool shed 
-view in galaxy file system where the various elements land 
-shed_data_manager_conf.xml 
-shed_tool_data_table_conf.xml 
-from galaxy admin panel use data_manager_fetch_genome_all_fasta to install data
-Click on "Manage local data" 
-Run Data Manager Tools
-Reference Genome - fetching
-View Data Manager Jobs
-Reference Genome - fetching
-View Tool Data Table Entries
-all_fasta 
-Click on "all_fasta" under "View Tool Data Table Entries"
-You should see the current contents of tool-data/all_fasta.loc 
-Click on "Reference Genome" under "Run Data Manager Tools" 
-The Reference Genome tool form from data_manager_fetch_genome_all_fasta is displayed 
-From the DBKEY to assign to data: list choose: sacCer2
-Click Execute
-Under the "User" menu select "Saved Histories"
-Select history: "Data Manager History (automatically created)" 
-You should see your "Reference Genome" job in the history 
-Go back to the Data Manager view by click on "Manage local data" 
-Click on "all_fasta" under "View Tool Data Table Entries"
-You should see sacCer2 added to all_fasta 
-16:30-17:10 Create a DataManager
+In this exercise we will install a data manager that can fetch the various genome sequences from multiple sources, as well as the bwa index data manager from the Galaxy toolshed.
 
-Create a local data manager to generate BWA indexes
-https://wiki.galaxyproject.org/Admin/Tools/DataManagers/HowTo/Define
-We will need to: 
-Create the Data Manager Galaxy tool 
-Configure Galaxy to use this Data Manager tool 
-Create the Data Manager Galaxy tool 
-hint1: The Bowtie2 data manager is almost identical 
-https://testtoolshed.g2.bx.psu.edu/view/jjohnson/data_manager_bowtie2_index_builder
-hint2: Dan has already done a bwa data manger 
-http://toolshed.g2.bx.psu.edu/view/devteam/data_manager_bwa_index_builder
-highlight extra requirements/tags/attributes vs regular galaxy tool 
-== Data Manager Tool == 
-A Data Manager Tool is a special class of Galaxy Tool. Data Manager Tools do not appear in the standard Tool Panel and can only be accessed by a Galaxy Administrator. Additionally, the initial content of a Data Manager's output file contains a JSON dictionary with a listing of the Tool parameters and Job settings (i.e. they are a type of OutputParameterJSONTool, this is also available for DataSourceTools). There is no requirement for the underlying Data Manager tool to make use of these contents, but they are provided as a handy way to transfer all of the tool and job parameters without requiring a different command-line argument for each necessary piece of information. The primary difference between a standard Galaxy Tool and a Data Manager Tool is that the primary output dataset of a Data Manager Tool must be a file containing a JSON description of the new entries to add to a Tool Data Table. The on-disk content to be referenced by the Data Manager Tool, if any, is stored within the extra_files_path of the output dataset created by the tool. 
-The tool tag must have the attribute: tool_type="manage_data"
-Toggle line numbers
-   1 <tool id="data_manager_fetch_genome_all_fasta" name="Reference Genome" version="0.0.1" tool_type="manage_data">
-The tool output must have format="data_manager_json"
-Toggle line numbers
-   1     <outputs>
-   2         <data name="out_file" format="data_manager_json"/>
-   3     </outputs>
-create tools/data_manager/bwa_index_builder.xml
-http://toolshed.g2.bx.psu.edu/repos/devteam/data_manager_bwa_index_builder/file/367878cb3698/data_manager/bwa_index_builder.xml
-Needs requirements tag for bwa application 
-input params: 
-a select param with options from_data_table="all_fasta" 
-a sequence_name text param
-a sequence_id text param
-outputs data param must be format 
-transcribe the xml manually 
-or you can download the file from: http://toolshed.g2.bx.psu.edu/repos/devteam/data_manager_bwa_index_builder/raw-file/367878cb3698/data_manager/bwa_index_builder.xml
-create tools/data_manager/bwa_index_builder.py
-http://toolshed.g2.bx.psu.edu/repos/devteam/data_manager_bwa_index_builder/file/367878cb3698/data_manager/bwa_index_builder.py
-Configure Galaxy to use this Data Manager tool 
-add a data_manager entry inside data_managers tag in data_mananger_conf.xml
-Toggle line numbers
-   1     <data_manager tool_file="data_manager/bwa_index_builder.xml" id="bwa_index_builder" version="0.0.1">
-   2         <data_table name="bwa_indexes">
-   3             <output>
-   4                 <column name="value" />
-   5                 <column name="dbkey" />
-   6                 <column name="name" />
-   7                 <column name="path" output_ref="out_file" >
-   8                     <move type="directory" relativize_symlinks="True">
-   9                         <!-- <source>${path}</source>--> <!-- out_file.extra_files_path is used as base by default --> <!-- if no source, eg for type=directory, then refers to base -->
-  10                         <target base="${GALAXY_DATA_MANAGER_DATA_PATH}">${dbkey}/bwa_index/${value}</target>
-  11                     </move>
-  12                     <value_translation>${GALAXY_DATA_MANAGER_DATA_PATH}/${dbkey}/bwa_index/${value}/${path}</value_translation>
-  13                     <value_translation type="function">abspath</value_translation>
-  14                 </column>
-  15             </output>
-  16         </data_table>
-  17     </data_manager>
-run installer data_manager to build bwa indexes for sacCer2 
-did it work?
-why not?
-add the missing bwa dependency 
-see Admin/Config/ToolDependencies
-mkdir /home/galaxy/Desktop/Data_Managers/galaxy/tool_dependencies/bwa/0.5.9/bin
-mv /home/galaxy/Desktop/Data_Managers/galaxy/galaxy-central/tool-data/sacCer1/bwa_index/sacCer1/bwa /home/galaxy/Desktop/Data_Managers/galaxy/tool_dependencies/bwa/0.5.9/bin/
-rerun the Data Manager and confirm that it is working 
-17:10-17:30 Put the DataManager in the Toolshed
+**Part 1: Install a data manager to download reference genome sequences**
 
-review toolshed best practices 
-separate repository for required applications ( tool_dependencies.xml ) 
-separate repository for required custom datatypes ( repository_dependencies.xml )
-Run your own ToolShed. 
-Add an administrator to tool_shed_wsgi.ini using the same process as before. 
-For your public username, use devteam. 
-Open a new terminal 
-type sh run_tool_shed.sh
-Access the ToolShed at http://localhost:9009
-Using the Admin interface, create 2 new categories: "Data Managers" and "Tool Dependency Packages" 
-BWA Dependency from Main toolshed: 
-Cross ToolShed dependencies are not currently supported, so we will use the import/export feature. 
-Export the 'package_bwa_0_5_9' package from http://toolshed.g2.bx.psu.edu. 
-This will create a 'capsule_toolshed.g2.bx.psu.edu_package_bwa_0_5_9_devteam_ec2595e4d313.tar.gz' file that can be imported into another ToolShed. 
-In your local ToolShed, import your freshly exported ToolShed capsule. 
-Prepare your Data Manager Toolshed Package.
-There are several ways to populate ToolShed repositories. We will be using mercurial to add files. Uploading tarballs is also possible and a very common way to do this. 
-Login in to the toolshed 
-"Click Create new repository" 
-Add Create Repository fields: 
-Name: data_manager_bwa_index_builder 
-Synopsis: Data Manager that builds BWA indexes
-Detailed description: Index a FASTA file using the Burrows-Wheeler algorithm and populate the bwa_index.loc file. 
-Categories: "Data Managers" 
-Click "Save" 
-Copy the clone link: "http://devteam@tool_shed/repos/devteam/data_manager_bwa_index_builder" 
-In Eclipse: 
-File --> New --> Project 
-Clone Existing Mercurial Repository 
-Click Next 
-Paste the clone link 
-Enter your password 
-Click Next 
-Click Next 
-Click Finish 
-Populate the repository 
-Required files: 
-data_manager/bwa_index_builder.py 
-data_manager/bwa_index_builder.xml 
-data_manager_conf.xml 
-tool_data_table_conf.xml.sample 
-tool-data/all_fasta.loc.sample 
-tool-data/bwa_index.loc.sample 
-tool_dependencies.xml 
-Toggle line numbers
-   1 <?xml version="1.0"?>
-   2 <tool_dependency>
-   3     <package name="bwa" version="0.5.9">
-   4         <repository name="package_bwa_0_5_9" owner="devteam" changeset_revision="f8687dc2392c" toolshed="http://localhost:9009"/>
-   5     </package>
-   6 </tool_dependency>
-Be sure to change the changeset_revision to the proper value.
-Use mercurial 
-hg add 
-hg ci -m "Populate data manager tool" 
-hg push 
-Remove your locally installed Data Manager from "data_manager_conf.xml". 
-Install new data_manager into your galaxy from the toolshed 
-Build a bwa index for C. brenneri Feb. 2008 (WUGSC 6.0.1/caePb2) 
-17:30-18:00 Other Example data managers
+Make sure you are logged in as an Admin user on your Galaxy server. Then, from the Galaxy Admin page:
 
-SnpEff - http://snpeff.sourceforge.net/SnpEff.html
+* Install data_manager_fetch_genome_all_fasta from Galaxy main tool shed 
+  * Click **Search Tool Shed**
+  * Search for "fetch"
+  * Install the fetch genome all fasta data manager.
 
-SnpEff is a variant annotation and effect prediction tool. It annotates and predicts the effects of variants on genes (such as amino acid changes). 
-Key Points
-A Galaxy tool should guide the user to make valid parameter choices 
-The reference data can either be in a history dataset or as reference data from tool-data 
-The Galaxy Data Manager framework is flexible 
-The SnpEff data manager populates multiple .loc files 
-The data_manager_snpEff_databases.xml populates data_table "snpeff_databases" which provides the options for data_manager_snpEff_download.xml 
-Initial Challenges
-SnpEff used a config file to specify the path to genome references, defaulted to user home directory
-Not compatible with galaxy structure for toolshed install and data manager operation 
-Need downloaded genome version for SnpEff tool tests 
-The available genome versions are dynamic, so the options shouldn't be hardcoded into a Galaxy Select Parameter 
-SnpEff galaxy tool has extra params that depend upon the reference data 
-Every genome reference has file: snpEffectPredictor.bin
-Some genome references may include regulation, motif, and nextProt annotations 
-# Prevotella bryantii B14 has only the genome reference
-$ ls tool-data/snpEff/data/ADWO01
-snpEffectPredictor.bin
-# Mouse build also has some regulation annotations
-$ ls tool-data/snpEff/data/GRCm38.75/
-regulation_ES.bin       regulation_MEF.bin      regulation_NPC.bin
-regulation_ESHyb.bin    regulation_MEL.bin      snpEffectPredictor.bin
-# Human build also has more regulation annotations and motif and nextProt annotations
-$ ls tool-data/snpEff/data/GRCh37.75
-motif.bin               regulation_GM06990.bin  regulation_HSMM.bin     regulation_IMR90.bin    regulation_NHEK.bin
-nextProt.bin            regulation_GM12878.bin  regulation_HUVEC.bin    regulation_K562.bin     snpEffectPredictor.bin
-pwms.bin                regulation_H1ESC.bin    regulation_HeLa-S3.bin  regulation_K562b.bin
-regulation_CD4.bin      regulation_HMEC.bin     regulation_HepG2.bin    regulation_NH-A.bin
-Solutions
-Discussed Galaxy requirements with application developer Pablo Cingolani who graciously added:
-command line option "-dataDir path" to specify the path to genome reference data 
-download genome on demand functionality in SnpEff application, which allowed test cases to run without a preinstalled genome reference 
-Developed 3 options in the SnpEff tool for getting the genome reference data 
-Download on demand 
-great for tests, but a lot of overhead for large genomes, and no way to capture genome specific annotations 
-Toggle line numbers
-   1 <tool id="snpEff" name="SnpEff" version="3.6">
-   2     <description>Variant effect and annotation</description>
-   3     <inputs>
-   4         <conditional name="snpDb">
-   5             <param name="genomeSrc" type="select" label="Genome source">
-   6                 <option value="named">Named on demand</option>
-   7             </param>
-   8             <when value="named">
-   9                 <param name="genome_version" type="text" value="GRCh37.68" label="Snpff Version Name"/>
-  10             </when>
-  11         </conditional>
-  12     </inputs>
-  13 </tool> 
-Data manager 
-most efficient for multiuser or multi history use 
-data_manager_snpEff_download.py inspects the downloaded genome files searching for added regulation and annotation files: 
-def download_database(data_manager_dict, target_directory, jar_path,config,genome_version,organism):
-    data_dir = target_directory
-    (snpEff_dir,snpEff_jar) = os.path.split(jar_path)
-    args = [ 'java','-jar' ]
-    args.append( jar_path )
-    args.append( 'download' )
-    args.append( '-c' )
-    args.append( config )
-    args.append( '-dataDir' )
-    args.append( data_dir )
-    args.append( '-v' )
-    args.append( genome_version )
-    proc = subprocess.Popen( args=args, shell=False, cwd=snpEff_dir )
-    return_code = proc.wait()
-    if return_code:
-        sys.exit( return_code )
-    ## search data_dir/genome_version for files
-    regulation_pattern = 'regulation_(.+).bin'
-    #  annotation files that are included in snpEff by a flag
-    annotations_dict = {'nextProt.bin' : '-nextprot','motif.bin': '-motif'}
-    genome_path = os.path.join(data_dir,genome_version)
-    if os.path.isdir(genome_path):
-        for root, dirs, files in os.walk(genome_path):
-            for fname in files:
-                if fname.startswith('snpEffectPredictor'):
-                    # if snpEffectPredictor.bin download succeeded
-                    name = genome_version + (' : ' + organism if organism else '')
-                    data_table_entry = dict(value=genome_version, name=name, path=data_dir)
-                    _add_data_table_entry( data_manager_dict, 'snpeff_genomedb', data_table_entry )
-                else:
-                    m = re.match(regulation_pattern,fname)
-                    if m:
-                        name = m.groups()[0]
-                        data_table_entry = dict(genome=genome_version,value=name, name=name)
-                        _add_data_table_entry( data_manager_dict, 'snpeff_regulationdb', data_table_entry )
-                    elif fname in annotations_dict:
-                        value = annotations_dict[fname]
-                        name = value.lstrip('-')
-                        data_table_entry = dict(genome=genome_version,value=value, name=name)
-                        _add_data_table_entry( data_manager_dict, 'snpeff_annotations', data_table_entry )
-    return data_manager_dict
 
-def _add_data_table_entry( data_manager_dict, data_table, data_table_entry ):
-    data_manager_dict['data_tables'] = data_manager_dict.get( 'data_tables', {} )
-    data_manager_dict['data_tables'][data_table] = data_manager_dict['data_tables'].get( data_table, [] )
-    data_manager_dict['data_tables'][data_table].append( data_table_entry )
-    return data_manager_dict
-SnpEff uses from_data_table to get options for params: regulation and extra_annotations 
-Toggle line numbers
-   1 <tool id="snpEff" name="SnpEff" version="3.6">
-   2     <description>Variant effect and annotation</description>
-   3     <inputs>
-   4         <conditional name="snpDb">
-   5             <param name="genomeSrc" type="select" label="Genome source">
-   6                 <option value="cached">Locally installed reference genome</option>
-   7             </param>
-   8             <when value="cached">
-   9                 <param name="genomeVersion" type="select" label="Genome">
-  10                     <!--GENOME    DESCRIPTION-->
-  11                     <options from_data_table="snpeff_genomedb">
-  12                            <filter type="unique_value" column="0" />
-  13                     </options>
-  14                 </param>
-  15                 <param name="extra_annotations" type="select" display="checkboxes" multiple="true" label="Additional Annotations">
-  16                        <help>These are available for only a few genomes</help>
-  17                        <options from_data_table="snpeff_annotations">
-  18                            <filter type="param_value" ref="genomeVersion" key="genome" column="0" />
-  19                            <filter type="unique_value" column="1" />
-  20                        </options>
-  21                 </param>
-  22                 <param name="regulation" type="select" display="checkboxes" multiple="true" label="Non-coding and regulatory Annotation">
-  23                        <help>These are available for only a few genomes</help>
-  24                        <options from_data_table="snpeff_regulationdb">
-  25                            <filter type="param_value" ref="genomeVersion" key="genome" column="0" />
-  26                            <filter type="unique_value" column="1" />
-  27                        </options>
-  28                 </param>
-  29             </when>
-  30         </conditional>
-  31     </inputs>
-  32 </tool> 
-From history 
-SnpEff Download tool allows users to proceed without the Galaxy admin 
-The genome specific options are captured in metadata of the custom dataytpe: "snpeffdb" 
-Toggle line numbers
-   1 $ cat snpeff_datatypes/datatypes_conf.xml 
-   2 <?xml version="1.0"?>
-   3 <datatypes>
-   4     <datatype_files>
-   5         <datatype_file name="snpeff.py"/>
-   6     </datatype_files>
-   7     <registration>
-   8         <datatype extension="snpeffdb" type="galaxy.datatypes.snpeff:SnpEffDb" display_in_upload="True"/>
-   9     </registration>
-  10 </datatypes>
-Toggle line numbers
-   1 $ cat snpeff_datatypes/lib/galaxy/datatypes/snpeff.py 
-   2 """
-   3 SnpEff datatypes
-   4 """
-   5 import os,os.path,re,sys,gzip,logging
-   6 import galaxy.datatypes.data
-   7 from galaxy.datatypes.data import Text
-   8 from galaxy.datatypes.metadata import MetadataElement
-   9 
-  10 log = logging.getLogger(__name__)
-  11 
-  12 class SnpEffDb( Text ):
-  13     """Class describing a SnpEff genome build"""
-  14     file_ext = "snpeffdb"
-  15     MetadataElement( name="genome_version", default=None, desc="Genome Version", readonly=True, visible=True, no_value=None )
-  16     MetadataElement( name="regulation", default=[], desc="Regulation Names", readonly=True, visible=True, no_value=[], optional=True)
-  17     MetadataElement( name="annotation", default=[], desc="Annotation Names", readonly=True, visible=True, no_value=[], optional=True)
-  18 
-  19     def __init__( self, **kwd ):
-  20         Text.__init__( self, **kwd )
-  21 
-  22     def set_meta( self, dataset, **kwd ):
-  23         Text.set_meta(self, dataset, **kwd )
-  24         data_dir = dataset.extra_files_path
-  25         ## search data_dir/genome_version for files
-  26         regulation_pattern = 'regulation_(.+).bin'
-  27         #  annotation files that are included in snpEff by a flag
-  28         annotations_dict = {'nextProt.bin' : '-nextprot','motif.bin': '-motif'}
-  29         regulations = []
-  30         annotations = []
-  31         if data_dir and os.path.isdir(data_dir):
-  32             for root, dirs, files in os.walk(data_dir):
-  33                 for fname in files:
-  34                     if fname.startswith('snpEffectPredictor'):
-  35                         # if snpEffectPredictor.bin download succeeded
-  36                         genome_version = os.path.basename(root)
-  37                         dataset.metadata.genome_version = genome_version
-  38                     else:
-  39                         m = re.match(regulation_pattern,fname)
-  40                         if m:
-  41                             name = m.groups()[0]
-  42                             regulations.append(name)
-  43                         elif fname in annotations_dict:
-  44                             value = annotations_dict[fname]
-  45                             name = value.lstrip('-')
-  46                             annotations.append(name)
-  47             dataset.metadata.regulation = regulations
-  48             dataset.metadata.annotation = annotations
-  49             try:
-  50                 fh = file(dataset.file_name,'w')
-  51                 fh.write("%s\n" % genome_version)
-  52                 if annotations:
-  53                     fh.write("annotations: %s\n" % ','.join(annotations))
-  54                 if regulations:
-  55                     fh.write("regulations: %s\n" % ','.join(regulations))
-  56                 fh.close()
-  57             except:
-  58                 pass
-SnpEff tool gets options for params: regulation and extra_annotations from the "snpeffdb" metadata:
-Toggle line numbers
-   1 <tool id="snpEff" name="SnpEff" version="3.6">
-   2     <description>Variant effect and annotation</description>
-   3     <inputs>
-   4         <conditional name="snpDb">
-   5             <param name="genomeSrc" type="select" label="Genome source">
-   6                 <option value="history">Reference genome from your history</option>
-   7             </param>
-   8             <when value="history">
-   9                 <param format="snpeffdb" name="snpeff_db" type="data" label="SnpEff Genome Version Data"/>
-  10                 <!-- From metadata -->
-  11                 <param name="extra_annotations" type="select" display="checkboxes" multiple="true" label="Additional Annotations">
-  12                     <help>These are available for only a few genomes</help>
-  13                     <options>
-  14                         <filter type="data_meta" ref="snpeff_db" key="annotation" />
-  15                     </options>
-  16                 </param>
-  17                 <param name="regulation" type="select" display="checkboxes" multiple="true" label="Non-coding and regulatory Annotation">
-  18                     <help>These are available for only a few genomes</help>
-  19                     <options>
-  20                         <filter type="data_meta" ref="snpeff_db" key="regulation" />
-  21                     </options>
-  22                 </param>
-  23             </when>
-  24         </conditional>
-  25     </inputs>
-  26 </tool> 
-Toolshed repositories
-package_snpeff_3_6 - Installs the SnpEff application as a tool_dependency 
-https://testtoolshed.g2.bx.psu.edu/view/jjohnson/package_snpeff_3_6
-$ find package_snpeff_3_6/* -type f
-package_snpeff_3_6/tool_dependencies.xml
-snpeff_datatypes - defines custom datatypes 
-https://testtoolshed.g2.bx.psu.edu/view/jjohnson/snpeff_datatypes
-$ find snpeff_datatypes/* -type f
-snpeff_datatypes/datatypes_conf.xml
-snpeff_datatypes/lib/galaxy/datatypes/snpeff.py
-snpeff - Galaxy user tools 
-https://testtoolshed.g2.bx.psu.edu/view/jjohnson/snpeff
-$ find snpeff/* -type f
-snpeff/readme.rst
-snpeff/repository_dependencies.xml
-snpeff/snpEff.xml
-snpeff/snpEff_download.xml
-snpeff/snpEff_macros.xml
-snpeff/test-data/vcf_homhet.vcf
-snpeff/tool-data/snpeff_annotations.loc.sample
-snpeff/tool-data/snpeff_databases.loc.sample
-snpeff/tool-data/snpeff_genomedb.loc.sample
-snpeff/tool-data/snpeff_regulationdb.loc.sample
-snpeff/tool_data_table_conf.xml.sample
-snpeff/tool_dependencies.xml
-data_manager_snpeff - manages SnpEff reference data 
-https://testtoolshed.g2.bx.psu.edu/view/jjohnson/data_manager_snpeff
-$ find data_manager_snpeff/* -type f
-data_manager_snpeff/data_manager/data_manager_snpEff_databases.py
-data_manager_snpeff/data_manager/data_manager_snpEff_databases.xml
-data_manager_snpeff/data_manager/data_manager_snpEff_download.py
-data_manager_snpeff/data_manager/data_manager_snpEff_download.xml
-data_manager_snpeff/data_manager_conf.xml
-data_manager_snpeff/repository_dependencies.xml
-data_manager_snpeff/tool-data/snpeff_annotations.loc.sample
-data_manager_snpeff/tool-data/snpeff_databases.loc.sample
-data_manager_snpeff/tool-data/snpeff_genomedb.loc.sample
-data_manager_snpeff/tool-data/snpeff_regulationdb.loc.sample
-data_manager_snpeff/tool_data_table_conf.xml.sample
-data_manager_snpeff/tool_dependencies.xml
+* View in the file system where the various elements land. Have a look in the configuration files located in config directory under Galaxy root.
+
+*shed_data_manager_conf.xml*
+
+``` xml
+<?xml version="1.0"?>
+<data_managers>
+<data_manager guid="toolshed.g2.bx.psu.edu/repos/devteam/data_manager_fetch_genome_all_fasta/data_manager/fetch_genome_all_fasta/0.0.1" id="fetch_genome_all_fasta" shed_conf_file="./config/shed_tool_conf.xml">
+        <tool file="toolshed.g2.bx.psu.edu/repos/devteam/data_manager_fetch_genome_all_fasta/fb744a070bee/data_manager_fetch_genome_all_fasta/data_manager/data_manager_fetch_genome_all_fasta.xml" guid="toolshed.g2.bx.psu.edu/repos/devteam/data_manager_fetch_genome_all_fasta/data_manager_fetch_genome_all_fasta/0.0.1"><tool_shed>toolshed.g2.bx.psu.edu</tool_shed><repository_name>data_manager_fetch_genome_all_fasta</repository_name><repository_owner>devteam</repository_owner><installed_changeset_revision>fb744a070bee</installed_changeset_revision><id>toolshed.g2.bx.psu.edu/repos/devteam/data_manager_fetch_genome_all_fasta/data_manager_fetch_genome_all_fasta/0.0.1</id><version>0.0.1</version></tool><data_table name="all_fasta">
+            <output>
+                <column name="value" />
+                <column name="dbkey" />
+                <column name="name" />
+                <column name="path" output_ref="out_file">
+                    <move type="file">
+                        <source>${path}</source>
+                        <target base="${GALAXY_DATA_MANAGER_DATA_PATH}">${dbkey}/seq/${path}</target>
+                    </move>
+                    <value_translation>${GALAXY_DATA_MANAGER_DATA_PATH}/${dbkey}/seq/${path}</value_translation>
+                    <value_translation type="function">abspath</value_translation>
+                </column>
+            </output>
+        </data_table>
+    </data_manager>
+
+
+</data_managers>
+```
+
+*shed_tool_data_table_conf.xml*
+
+``` xml
+<?xml version="1.0"?>
+<tables>
+<table comment_char="#" name="all_fasta">
+        <columns>value, dbkey, name, path</columns>
+        <file path="/Users/Simon/code/galaxy_admin_course/galaxy/tool-data/toolshed.g2.bx.psu.edu/repos/devteam/data_manager_fetch_genome_all_fasta/fb744a070bee/all_fasta.loc" />
+        <tool_shed_repository>
+            <tool_shed>toolshed.g2.bx.psu.edu</tool_shed>
+            <repository_name>data_manager_fetch_genome_all_fasta</repository_name>
+            <repository_owner>devteam</repository_owner>
+            <installed_changeset_revision>fb744a070bee</installed_changeset_revision>
+            </tool_shed_repository>
+    </table>
+</tables>
+```
+
+**Part 2: Download and install a reference genome sequence**
+
+Use the Galaxy Admin page and the data_manager_fetch_genome_all_fasta to install some reference data. We will grab sacCer2 (version 2 of the Saccharomyces cerevisiae genome.)
+
+From the Galaxy Admin page:
+
+* Click on **Local data**
+
+You should see something like this:
+
+![nearly empty data manager tool list](images/nearly_empty_data_manager_tool_list.png)
+
+* Click on **all_fasta** under *View Tool Data Table Entries*
+
+You should see the current contents of tool-data/all_fasta.loc
+
+* Under **Run Data Manager Tools**, click **Reference Genome - fetching**. The Reference Genome tool form from data_manager_fetch_genome_all_fasta is displayed.
+  * From the **DBKEY to assign to data:** list choose: *sacCer2*
+  * Click **Execute**
+  
+If you look at your "Saved Histories" now, you will see a new history called "Data Manager History (automatically created)." There will be a "Reference Genome" job in the history. When the job has finished, go back to the Data Manager view on the Galaxy Admin page. (Click **Local Data**)
+
+* Click on **all_fasta** under *View Tool Data Table Entries*
+
+You should see that sacCer2 has been added to all_fasta.
+
+![all_fasta.png](images/all_fasta.png)
+
+**Part 3: Download and install the BWA data manager**
+
+In this part we will repeat the process from part 1 except that we will install the bwa data manager this time.
+
+* Install the bwa data manager from the toolshed.
+  * From the Admin page, click **Search Toolsheds** and then search for bwa.
+  * Install the *data_manager_bwa_mem_index_builder* by the devteam. (This is the newer version of the BWA index builder.)
+  
+**Part 4: Build the BWA index for sacCer2**
+
+In this part we will actually build the BWA index for sacCer2. It will automatically be added to our list of available reference genomes in the BWA tool.
+
+* From the Galaxy Admin page, click **Local data**
+* Click on **BWA-MEM index builder** under *Run Data Manager Tools*
+  * Select *S. cerevisiae sacCer2* for Source Fasta Sequence
+  * Put sacCer2 into the other two blank fields.
+  * Click **Execute**
+  
+The new BWA index for sacCer2 will now be built and the .loc file will be filled in.
+
+To check:
+* From the Galaxy Admin page -> Local data, click on the **bwa mem indexes** under *View Tool Data Table Entries* 
+
+S. cerevisiae sacCer2 should now appear in the list!
+
+**Part 5: Run BWA with the new reference data!**
+
+Now we will run the BWA tool and check to see if the reference data is listed and the tool works with it!
+
+* Run the BWA tool on the 2 fast files we loaded earlier, using sacCer2 as the reference.
+
+How cool is that? No editing .loc files, no making sure you've got TABS instead of spaces.. Fully auto! 
+
+## So, what did we learn?
+
+Hopefully, you now understand:
+* how Galaxy stores and uses its reference data, 
+* how to manually add a reference genome and tool indices if required, 
+* and how to use data managers to make all of this much much easier.
+
+## Further reading
+
+If you want to know more about data managers including how to write a data manager tool, details can be found at: [https://wiki.galaxyproject.org/Admin/Tools/DataManagers/](https://wiki.galaxyproject.org/Admin/Tools/DataManagers/)
+
+Suggestions and comments are welcome. Please contact: 
