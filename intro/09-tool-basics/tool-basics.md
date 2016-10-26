@@ -16,10 +16,27 @@ class: larger
 We want and will answer your questions.
 
 ---
+# The Problem
+
+> You have written a Python script to analyze data and you want to share it with command-line averse colleagues
+
+# The Solution
+
+Integrate the script as a tool into (your) Galaxy server.
+
+---
+# Requirements
+
+* Have or write command line executable.
+* Determine inputs and outputs of the tool.
+* Describe the tool to Galaxy.
+* Instruct Galaxy to load the tool.
+
+---
 class: normal
 # What is a Galaxy tool?
 
-- Set of resources that describes to Galaxy how to display and execute software.
+- Set of resources that describes how to display and execute software.
 - Cornerstone of Galaxy tool is a `tool wrapper` written in XML.
 - Galaxy loads tools from configuration files (also XML).
   - The basic one is `tool_conf.xml`.
@@ -27,6 +44,20 @@ class: normal
 
 ???
 Wrapper can be written in .yml also.
+
+---
+# Tool Syntax
+
+The XML wrapper follows a [schema](https://docs.galaxyproject.org/en/latest/dev/schema.html).
+
+simplified:
+  * requirements
+  * command
+  * inputs
+  * outputs
+  * test
+  * help
+  * citation
 
 ---
 class: smaller

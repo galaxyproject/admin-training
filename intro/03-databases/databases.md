@@ -34,6 +34,7 @@ Your questions are bound to be answered.
 
 
 ---
+class: normal
 # Configuration
 
 * `database_connection` is specified as a connection string in `galaxy.ini` file.
@@ -74,7 +75,7 @@ The changes in DB model are captured incrementally in form of [atomic scripts](h
 Each script can both upgrade and downgrade a DB.
 
 ```shell
- $ bash manage_db.sh upgrade
+$ bash manage_db.sh upgrade
 $ bash manage_db.sh downgrade --version=132
 ```
 
