@@ -11,14 +11,14 @@
 By the end of this tutorial, you should:
 
 1. Have an understanding of the way in which Galaxy stores and uses reference data
-2. Be able to add a reference genome and it's pre-calculated indices into the Galaxy reference data system
+2. Be able to add a reference genome and its pre-calculated indices into the Galaxy reference data system
 3. Be able to download and use data managers to automate the process described in 2.
 
 ## Introduction
 
 A slideshow presentation on this subject can be found [here](https://martenson.github.io/dagobah-training/06-reference-genomes/reference_genomes.html#1)
 
-Reference genomes such as the **human, mouse, arabidopsis** etc are all quite large. They are used extensively in bioinformatic analyses and therefore need to be widely available in analysis systems. These genomes can take up quite a bit of disk space to store especially if every user has their own copy. A lot of bioinformatic tools need to index these large genomes before they can use them. Tools such as short read mappers like **BWA** or **Bowtie** calculate indices of the genomes sequences to significantly speed up their processing of short reads. However, these indices take a long time to build and it would be impractical to build them every time you want to do a read mapping.
+Reference genomes such as the **human, mouse, arabidopsis** etc. are all quite large. They are used extensively in bioinformatic analyses and therefore need to be widely available in analysis systems. These genomes can take up quite a bit of disk space to store especially if every user has their own copy. A lot of bioinformatic tools need to index these large genomes before they can use them. Tools such as short read mappers like **BWA** or **Bowtie** calculate indices of the genome sequences to significantly speed up their processing of short reads. However, these indices take a long time to build and it would be impractical to build them every time you want to do a read mapping.
 
 Therefore, Galaxy has a system for storing reference sequences and pre-calculating the indices for each tool. They are all only stored once per Galaxy server and shared for every user. They are available for direct use in tools to save time. In this tutorial, we will be adding a new genome sequence to our Galaxy server, building it's indices for various tools and making them available for tool wrappers via the abstraction layer.
 
@@ -97,13 +97,12 @@ Most importantly they are **Tab delimited** (not *space* delimited) flat files, 
 **NOTE:** When editing .loc files, your editor **MUST** use **TABS** and not expand them into spaces.
 * In **vim** use the command *:set noexpandtab*
 
-If you haven't already, install this tool to your Galaxy server as we'll need it later on! Use the tutorial on installing tool shed tools if you need a guide on how to do this.
-
 ### Excercise 2: Manually add a genome to the BWA tool list.
 
 In this exercise we will be adding a reference genome to our galaxy server by manually editing all of the required files. (Use your favourite editor, but remember to make sure it uses real tabs not tabs expanded into spaces..)
 
 We will:
+
 1. Add ourselves as admin users to our Galaxy servers(if we haven't already)
 2. Install the BWA toolsuite
 3. Add a reference genome to our server
