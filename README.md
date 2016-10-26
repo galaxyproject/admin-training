@@ -4,11 +4,11 @@ dagobah - The Solar System for Galaxy Training
 > "The planet shown in Dagobah, in the Sluis sector, is a world of murky swamps, steaming bayous, and petrified forests."
 
 ---
-Salt Lake City - 7th to 11th November 2016
+**Salt Lake City - 7th to 11th November 2016**
 
 jump to [Monday](#monday) | [Tuesday](#tuesday) | [Wednesday](#wednesday) | [Thursday](#thursday) | [Friday](#friday)
 
-Built slides have index at https://martenson.github.io/dagobah-training/.
+Built slides have [an index](https://martenson.github.io/dagobah-training/).
 
 ### Instructors
 
@@ -30,7 +30,7 @@ Built slides have index at https://martenson.github.io/dagobah-training/.
 | 09:45 | Deployment and Platform Options |  | (N) |
 | 10:15 | Get a Basic Galaxy Server Up and Running | [slides](https://martenson.github.io/dagobah-training/02-basic-server/get-galaxy.html) | (N + M) |
 | 11:00 | **Morning Break** | | |
-| 11:20 | Database choices and configuration. Introduction to PostgreSQL |  | (N + M) |
+| 11:20 | Database choices and configuration. Introduction to PostgreSQL | [slides](https://martenson.github.io/dagobah-training/03-databases/databases.html) | (N + M) |
 | 12:20 | **Lunch** | | |
 | 13:20 | Web server choices and configuration. Introduction to Apache and NGINX. |  |  |
 | 14:20 | Introduction to the Galaxy Tool Shed: Identifying and installing well-defined tools | [shed slides](https://martenson.github.io/dagobah-training/05-tool-shed/shed_intro.html), [tool slides](https://martenson.github.io/dagobah-training/05-tool-shed/tool_installation.html) & [exercise](https://martenson.github.io/dagobah-training/05-tool-shed/ex-tool-management.html)| (M) |
