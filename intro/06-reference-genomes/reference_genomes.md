@@ -233,18 +233,16 @@ class: left
 
 ## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Data Managers
 .large[
-* **Flexible** framework]
+* **Flexible** framework
   * Not just genomic data
   * Run Data Managers through UI
   * Workflow compatible
   * API
-
-.large[  
-* Examples]
+* Examples
   * Adding new genome builds (dbkeys)
   * Fetching genome (fasta) sequences
   * Building short read mapper indices for genomes
-
+]
 .footnote[\#usegalaxy \#GATC2016 / @galaxyproject]
 
 ---
