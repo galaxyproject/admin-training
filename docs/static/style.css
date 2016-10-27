@@ -197,6 +197,21 @@ i, em, b, strong {
     padding-top: 1em;
 }
 
+/* Two-column equal layout */
+.left-column-equal {
+    color: #777;
+    width: 40%;
+    height: 80%;
+    float: left;
+}
+
+.right-column-equal {
+    color: #777;
+    width: 40%;
+    float: right;
+    height: 80%;
+}
+
 /*First slide h1 orange, h2 white*/
 .special h1 {
     color: #ff8800;
