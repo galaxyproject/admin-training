@@ -65,7 +65,13 @@ h3 {
 }
 
 
-li p { line-height: 1.25em; }
+li p {
+  line-height: 1.25em;
+  font-size: 100%
+}
+li li {
+  font-size: 80%
+}
 
 .normal {
     font-size: 1em;
@@ -189,6 +195,21 @@ i, em, b, strong {
     width: 75%;
     float: right;
     padding-top: 1em;
+}
+
+/* Two-column equal layout */
+.left-column-equal {
+    color: #777;
+    width: 40%;
+    height: 80%;
+    float: left;
+}
+
+.right-column-equal {
+    color: #777;
+    width: 40%;
+    float: right;
+    height: 80%;
 }
 
 /*First slide h1 orange, h2 white*/
