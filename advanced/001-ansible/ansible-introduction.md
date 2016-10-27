@@ -206,6 +206,7 @@ galaxy_config_dir: /srv/galaxy/config
 galaxy_env:
     TEMPDIR: /tmp
     LANG: en_AU.UTF-8
+deploy_env: production
 ```
 ]
 .right-column-equal[
@@ -266,32 +267,138 @@ class: left
 .footnote[\#usegalaxy \#GATC2016 / @galaxyproject]
 ---
 class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  What is Ansible
+## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Ansible Handlers
+* Syntax is the same as tasks, but these are only run when triggered by a notify.
+
+* Task:
+
+```
+- name: Install pg_hba.conf
+  template:
+    src: pg_hba.conf.j2
+    dest: ”{{ postgresql_data_dir }}/pg_hba.conf”
+  notify: restart postgresql
+```
+
+* Handler:
+
+```
+- name: restart postgresql
+  service:
+    name: ”postgresql-{{ postgresql_version }}”
+    state: restarted
+```
+.footnote[\#usegalaxy \#GATC2016 / @galaxyproject]
+---
+class: left
+## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Roles contain tasks
+
+![ansible-roles-tasks.png](images/ansible-roles-tasks.png)
 
 .footnote[\#usegalaxy \#GATC2016 / @galaxyproject]
 ---
 class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  What is Ansible
+## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Plays
+.large[
+* Contain:
+  * What hosts you want to run on
+  * What roles you want to run
+  * Optional extras: extra variables, remote user etc.
+]
+
+```
+- name: Manage PostgreSQL users, groups, databases, and permissions
+  hosts: galaxydbservers
+  remote_user: root
+  become: yes
+  become_user: postgres
+  vars_files:
+    - "{{ deploy_env }}/secret_vars/galaxydbservers.yml"
+  roles:
+    - natefoo.postgresql_objects
+```
+.footnote[\#usegalaxy \#GATC2016 / @galaxyproject]
+---
+class: left
+## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Plays and Tags
+
+* Plays can have tags associated with them
+
+```
+- name: Manage PostgreSQL users, groups, databases, and permissions
+  hosts: galaxydbservers
+  roles:
+    - natefoo.postgresql_objects
+  tags: database_setup
+
+- name: Manage supervisor and nginx
+  hosts: galaxyservers
+  roles:
+    - galaxyprojectdotorg.nginx
+    - supervisor
+  tags: galaxy_setup
+```
+
+* These can then be run separately
+
+`ansible-playbook -i inv_file playbook.yml --tags galaxy_setup`
+
 
 .footnote[\#usegalaxy \#GATC2016 / @galaxyproject]
 ---
 class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  What is Ansible
+## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  How Ansible works
+
+![how-ansible-works.png](images/how-ansible-works.png)
 
 .footnote[\#usegalaxy \#GATC2016 / @galaxyproject]
 ---
 class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  What is Ansible
-
+## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  What's available
+.large[
+.left-column-equal[
+* Roles:
+  * galaxy-os
+  * nginx
+  * postgresql
+  * postgresql_objects
+  * galaxy
+  * interactive-environments
+  * trackster
+  * pulsar
+  * galaxy-tools
+  * galaxy-extras
+]
+.right-column-equal[
+* Playbooks:
+  * usegalaxy-playbook
+  * infrastructure-playbook
+  * galaxy-cloudman-playbook
+  * ansible-artimed
+]
+]
 .footnote[\#usegalaxy \#GATC2016 / @galaxyproject]
 ---
 class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  What is Ansible
+## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Example role
+.large[
+* Galaxy project's role to install a Galaxy server.
+* Can be used in a playbook
+* Has nice documentation!
 
+[https://github.com/galaxyproject/ansible-galaxy](https://github.com/galaxyproject/ansible-galaxy)
+]
 .footnote[\#usegalaxy \#GATC2016 / @galaxyproject]
 ---
 class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  What is Ansible
+## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Exercise Time!
+.large[
+In this exercise, we will:
+* Write an ansible script/role
+* Task will be to install tools into Galaxy
+* Will use existing scripts (bioblend)
 
+[http://martenson.github.io/dagobah-training](http://martenson.github.io/dagobah-training)
+]
 .footnote[\#usegalaxy \#GATC2016 / @galaxyproject]
 ---
