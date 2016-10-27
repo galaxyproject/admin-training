@@ -65,7 +65,13 @@ h3 {
 }
 
 
-li p { line-height: 1.25em; }
+li p {
+  line-height: 1.25em;
+  font-size: 100%
+}
+li li {
+  font-size: 80%
+}
 
 .normal {
     font-size: 1em;
