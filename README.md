@@ -52,7 +52,7 @@ Built slides have [an index](https://martenson.github.io/dagobah-training/).
 | 11:20 | Users, Groups, and Quotas |  |  |
 | 12:20 | **Lunch** | | |
 | 13:20 | Anatomy of a Tool Definition, Planemo, Publishing | [slides](https://martenson.github.io/dagobah-training/09-tool-basics/tool-basics.html) | (S + M) |
-| 14:50 | Updating tools and supporting multiple versions of tools | | (S) |
+| 14:50 | Updating tools and supporting multiple versions of tools | [exercise](https://martenson.github.io/dagobah-training/05-tool-shed/ex-advanced-tool-management.html) | (S + M) |
 | 15:20 | **Afternoon Break** | | |
 | 15:40 | Upgrading to a new Galaxy release |  |  |
 | 16:50 | When things go wrong: Basic Galaxy server troubleshooting |  |  |
