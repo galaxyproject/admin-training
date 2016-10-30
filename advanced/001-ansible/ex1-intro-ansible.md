@@ -168,7 +168,7 @@ Add the following to your tasks *main.yml*
   register: api_key
   become: yes
   become_user: "{{ galaxy_user }}"
-  
+
 - debug: var=api_key
 
 #set the api key for irida to the one that was returned
@@ -186,14 +186,14 @@ Add the following to your tasks *main.yml*
   when: admin_users_found.msg == ""
   become: yes
   become_user: "{{ galaxy_user }}"
-  
+
 #Copy the tool list to galaxy_server_dir
 - name: Copy the tool list to galaxy_server_dir
-  copy: src="tool_list.yml" dest="{{ galaxy_server_dir }}/tool_list.yml" owner=galaxy group=galaxy
+  copy: src="tool_list.yaml" dest="{{ galaxy_server_dir }}/tool_list.yaml"
   become: yes
   become_user: "{{ galaxy_user }}"
 
-# Add some required sections to the shed_tool_conf.xml file  
+# Add some required sections to the shed_tool_conf.xml file
 - name: Insert some sections into the tool panel file
   lineinfile: dest="{{ tool_conf }}" insertbefore="^</toolbox>" line="{{ item }}" state=present
   with_items:
@@ -202,52 +202,52 @@ Add the following to your tasks *main.yml*
     - "<section id='cshl_library_information' name='CSHL Library Information'>"
     - "</section>"
   become: yes
-  become_user: galaxy 
-  
+  become_user: "{{ galaxy_user }}"
+
 #restart Galaxy
 - name: stop Galaxy
-  shell: "{{ galaxy_server_dir }}"/run.sh --pid-file="{{ galaxy_pid_file }}" --log-file="{{ galaxy_log_file }}" --stop-daemon
+  command: sh "{{ galaxy_server_dir }}"/run.sh --pid-file "{{ galaxy_pid_file }}" --log-file "{{ galaxy_log_file }}" --stop-daemon
   become: yes
   become_user: "{{ galaxy_user }}"
-  
+
 - name: Wait for Galaxy to stop
   wait_for: port=8080 delay=5 state=stopped timeout=300
 
 - name: Start Galaxy
-shell: "{{ galaxy_server_dir }}/run.sh" --pid-file="{{ galaxy_pid_file }}" --log-file="{{ galaxy_log_file }}" --daemon
-become: yes
-become_user: "{{ galaxy_user }}"
-  
+  command: sh "{{ galaxy_server_dir }}/run.sh" --pid-file "{{ galaxy_pid_file }}" --log-file "{{ galaxy_log_file }}" --daemon
+  become: yes
+  become_user: "{{ galaxy_user }}"
+
 - name: Wait for Galaxy to start
   wait_for: port=8080 delay=5 state=started timeout=600
-  
+
 #Install the tools!
 - name: Install the toolshed tools!
-  command: chdir="{{ galaxy_server_dir }}" "{{ galaxy_venv_dir }}/bin/python" install_tool_shed_tools.py -g "{{ galaxy_tools_galaxy_instance_url }}" -a "{{ galaxy_tools_api_key }}" -t tool_list.yml
+  command: chdir="{{ galaxy_server_dir }}" "{{ galaxy_venv_dir }}/bin/python" "{{ galaxy_server_dir }}"/scripts/install_tool_shed_tools.py -g "{{ galaxy_server_url }}" -a "{{ galaxy_tools_api_key }}" -t tool_list.yaml
   become: yes
-  become_user: galaxy
+  become_user: "{{ galaxy_user }}"
   ignore_errors: true
-  
+
 #Now de admin the bootstrap user..
 - name: De-admin the bootstrap user
   replace: dest="{{ galaxy_config_file }}" regexp="{{ tools_admin_email}}[,]?" replace=""
   become: yes
   become_user: "{{ galaxy_user }}"
-  
+
 #Finally, restart Galaxy for good measure..
 - name: stop Galaxy
-  shell: "{{ galaxy_server_dir }}/run.sh" --pid-file="{{ galaxy_pid_file }}" --log-file="{{ galaxy_log_file }}" --stop-daemon
+  command: sh "{{ galaxy_server_dir }}/run.sh" --pid-file "{{ galaxy_pid_file }}" --log-file "{{ galaxy_log_file }}" --stop-daemon
   become: yes
   become_user: "{{ galaxy_user }}"
-  
+
 - name: Wait for Galaxy to stop
   wait_for: port=8080 delay=5 state=stopped timeout=300
 
 - name: Start Galaxy
-shell: "{{ galaxy_server_dir }}/run.sh" --pid-file="{{ galaxy_pid_file }}" --log-file="{{ galaxy_log_file }}" --daemon
-become: yes
-become_user: "{{ galaxy_user }}"
-  
+  command: sh "{{ galaxy_server_dir }}/run.sh" --pid-file "{{ galaxy_pid_file }}" --log-file "{{ galaxy_log_file }}" --daemon
+  become: yes
+  become_user: "{{ galaxy_user }}"
+
 - name: Wait for Galaxy to start
   wait_for: port=8080 delay=5 state=started timeout=600
 ```
@@ -278,8 +278,28 @@ Now we need to write the playbook to call the role we've created. The playbook c
     - role: galaxy-tool-install
 ```
 
+This playbook runs on the localhost and so the script needs to actually be on the target machine. By adding some private/public key information and an ip address here, we can also run this role on a remote machine.
+
+
 ## Section 4 - Run the playbook!
 
-Now we can run the playbook on our Galaxy instance!
+Now we can run the playbook on our Galaxy instance! (The entire script directory tree needs to be present on the target machine as we are running it using localhost...)
 
 * From the root of the script directory: `ansible-playbook -vv playbook.yml`
+
+The -vv here just means two levels of verbosity.. It shows us what is going on. There are 4 levels of verbosity from none to extremely verbose...
+
+## So, what did we learn?
+
+Hopefully, you now:
+* Understand how Ansible roles are structured
+* Are able to to write a simple role in Ansible to install a list of tool into Galaxy
+* Understand how to use a role in a playbook.
+
+## Further reading
+
+If you want to know more about Ansible, details can be found at [www.ansible.com](https://www.ansible.com)
+
+More information on the galaxy ansible scripts can be found at [github.com/galaxyproject](http://github.com/galaxyproject) and searching for key word: ansible
+
+Suggestions and comments are welcome. Please contact:
