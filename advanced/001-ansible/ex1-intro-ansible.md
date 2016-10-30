@@ -289,6 +289,24 @@ Now we can run the playbook on our Galaxy instance! (The entire script directory
 
 The -vv here just means two levels of verbosity.. It shows us what is going on. There are 4 levels of verbosity from none to extremely verbose...
 
+**Remote running** 
+
+To run this playbook on a remote machine, you'll need to have a public/private ssh key setup on the remote. You then need to make an inventory or hosts file. This is quite simple and looks something like this:
+
+``` ini
+[hosts]
+<instance_ip>
+<instance_ip>
+
+[vars]
+ansible_ssh_user=ubuntu
+ansible_ssh_private_key_file=<path_to_your_private_ssh_key>
+
+```
+This gets called on the command line with the *-i hosts_file* switch. `ansible-playbook -i hosts_file playbook.yml`
+
+As mentioned in the slides, you can have groups of different machine types etc. You can operate on more than one remote machine at once. For example, if you're running a course for students and have 40 machines to add tools and/or data to, just list all the ip addresses in the hosts file and you're set to go!
+
 ## So, what did we learn?
 
 Hopefully, you now:
