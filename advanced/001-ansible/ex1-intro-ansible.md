@@ -2,7 +2,7 @@
 
 ### GATC - 2016 - Salt Lake City
 
-# Reference Genomes - Exercise.
+# Introduction to Ansible - Exercise.
 
 #### Authors: Simon Gladman. 2016
 
