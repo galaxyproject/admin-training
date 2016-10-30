@@ -198,9 +198,9 @@ Add the following to your tasks *main.yml*
   lineinfile: dest="{{ tool_conf }}" insertbefore="^</toolbox>" line="{{ item }}" state=present
   with_items:
     - "<section id='peak_calling' name='Peak Calling'>"
-    - "</section>"
+    - "</section> #peak_calling"
     - "<section id='cshl_library_information' name='CSHL Library Information'>"
-    - "</section>"
+    - "</section> #cshl_library_information"
   become: yes
   become_user: "{{ galaxy_user }}"
 
