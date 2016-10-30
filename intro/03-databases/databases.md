@@ -3,7 +3,7 @@ class: inverse, middle, large
 
 ---
 class: special
-# Galaxy's Database
+# Galactic Database
 
 slides by @martenson
 
@@ -98,5 +98,3 @@ $ python -i scripts/db_shell.py
 
 * Reports app is hooked to the Galaxy DB to present data in useful format.
 * Tool Shed app has its own database.
-
----

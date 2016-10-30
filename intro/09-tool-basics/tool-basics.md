@@ -13,6 +13,7 @@ slides by @martenson
 class: larger
 
 ## Please Interrupt!
+
 We want and will answer your questions.
 
 ---
@@ -40,7 +41,7 @@ class: normal
 - Cornerstone of Galaxy tool is a `tool wrapper` written in XML.
 - Galaxy loads tools from configuration files (also XML).
   - The basic one is `tool_conf.xml`.
-- The `tool_path` in `galaxy.ini` specifies filepath to the tool (defaults to `tools/`).
+- The `tool_path` in `galaxy.ini` specifies filesystem path where to search for tools (defaults to `tools/`).
 
 ???
 Wrapper can be written in .yml also.
@@ -105,3 +106,19 @@ You need few more things:
 If you use `<toolbox monitor="true">` you do not have to restart Galaxy for the tool to load.
 
 ---
+
+# Planemo
+
+[Command-line utilities](http://planemo.readthedocs.io/) to ease the development of tools.
+
+```shell
+$ planemo lint
+$ planemo test
+$ planemo serve
+```
+[Full list of commands](http://planemo.readthedocs.io/en/latest/commands.html)
+
+---
+# Building a tool using Planemo
+
+Please follow the exercise at [Planemo documentation](http://planemo.readthedocs.io/en/latest/writing_standalone.html).

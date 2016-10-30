@@ -64,6 +64,9 @@ You now have default Galaxy running.
 * Galaxy fetched needed Python binaries ('wheels') into this environment.
 * Galaxy created the default SQLite database and migrated it to the latest version.
 
+???
+You can log to a file instead.
+
 ---
 # Look around
 
@@ -100,6 +103,9 @@ users see. It is a good idea to extend it with things like:
 - Publications relating to your Galaxy
 
 No restarting is necessary.
+
+???
+You can load remote content to this iframe (blog, existing presentation, etc.).
 
 ---
 # What to do next?

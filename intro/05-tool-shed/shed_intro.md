@@ -44,7 +44,7 @@ Running local TS is discouraged.
 * `repository` - A versioned code archive with tool(s) in Tool Shed. Mercurial is used.
 --
 
-* `revision` vs `installable revision` - Every TS repo update generates a new revision but only certain (reproducibility-affecting) changes generate a new revision installable to Galaxy.
+* `revision` vs `installable revision` - Every TS repo update generates a new revision but only certain (reproducibility-affecting) changes generate a new revision installable to Galaxy as a new version.
 --
 
 * `metadata` - TS generates and stores a set of data for every installable revision of the repo.
@@ -61,17 +61,19 @@ Every TS repo update can be propagated to the Galaxy though.
 * Tool Development repository should be linked from the TS repository.
 --
 
-* Tool Shed allows administrators to pick any installable revision
+* Tool Shed allows administrators to pick any installable revision.
 --
 
-* Multiple installable revisions of any repository can be present in Galaxy
+* Multiple installable revisions of any repository can be present in Galaxy.
 
 ---
 ![TS_big_picture.png](images/TS_big_picture.png)
 
 ---
+class: normal
 ## Galaxy's Configuration
-List of available sheds is defined in `tool_sheds_conf.xml` and Galaxy comes with the Main Tool Shed enabled and the TTS disabled.
+
+List of available sheds is defined in `tool_sheds_conf.xml` and Galaxy comes with the MTS enabled and the TTS disabled.
 ```xml
 <?xml version="1.0"?>
 <tool_sheds>
@@ -83,9 +85,9 @@ List of available sheds is defined in `tool_sheds_conf.xml` and Galaxy comes wit
 ```
 
 ---
-## Simple repository
-tool remove_beginning
-repository = script + wrapper + test data + metadata file
+## Simple TS repository (remove_beginning)
+
+Repository = script + wrapper + test data + metadata file
 ```
 .
 ├── .shed.yml
@@ -94,13 +96,13 @@ repository = script + wrapper + test data + metadata file
 └── test-data
     ├── 1.bed
     └── eq-removebeginning.dat
-
 ```
 
 ---
 class: normal
 ### .shed.yml file
-a file with metadata
+
+Contains tool's metadata.
 ```yml
 categories:
 - Text Manipulation
@@ -117,6 +119,7 @@ type: unrestricted
 ---
 class: normal
 ## Repository & tool with requirements
+
 seqtk repository with multiple tools
 ```
 .
@@ -136,6 +139,7 @@ seqtk repository with multiple tools
 
 ---
 ### seqtk requirements
+
 Requirements of the wrapper.
 ```xml
 <requirements>
@@ -143,10 +147,11 @@ Requirements of the wrapper.
 </requirements>
 ```
 
-Galaxy is aiming to be resolution-agnostic.
+Galaxy is aiming to be dependency resolution-agnostic.
 
 ---
 ### seqtk tool_dependencies.xml file
+
 A TS way to fulfill requirements.
 
 ```xml
@@ -161,6 +166,7 @@ A TS way to fulfill requirements.
 ---
 class: normal
 ### seqtk TS package
+
 A TS recipe how to install the dependency.
 ```xml
 <?xml version="1.0"?>
@@ -187,6 +193,7 @@ A TS recipe how to install the dependency.
 ---
 class: smaller
 ### seqtk Conda package
+
 Conda recipe how to install the dependency.
 ```yml
 package:
