@@ -303,7 +303,10 @@ ansible_ssh_user=ubuntu
 ansible_ssh_private_key_file=<path_to_your_private_ssh_key>
 
 ```
-This gets called on the command line with the *-i hosts_file* switch. `ansible-playbook -i hosts_file playbook.yml`
+
+You then need to modify your playbook slightly to use *[hosts]*. Change the `- hosts: localhost` line to `- hosts: hosts` and remove the `connection: local` line. 
+
+Then you can run the playbook on the hosts with the *-i hosts_file* switch. `ansible-playbook -i hosts_file playbook.yml`
 
 As mentioned in the slides, you can have groups of different machine types etc. You can operate on more than one remote machine at once. For example, if you're running a course for students and have 40 machines to add tools and/or data to, just list all the ip addresses in the hosts file and you're set to go!
 
