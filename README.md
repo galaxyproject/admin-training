@@ -70,7 +70,7 @@ Built slides have [an index](https://martenson.github.io/dagobah-training/).
 | 08:30 | Check-in and Coffee |  |  |
 | 09:00 | Welcome and Introduction/Questions |  | All |
 | 09:20 | Configuration management choices: Introduction to Ansible | [Slides](https://martenson.github.io/dagobah-training/001-ansible/ansible-introduction.html), [Exercise](https://github.com/martenson/dagobah-training/blob/master/advanced/001-ansible/ex1-intro-ansible.md) | (S) |
-| 09:50 | Using Ansible to deploy Galaxy I |  | (S) |
+| 09:50 | Using Ansible to deploy Galaxy I |  [Exercise](https://github.com/martenson/dagobah-training/blob/master/advanced/001-ansible/ex2-galaxy-ansible.md)| (S) |
 | 10:30 | **Morning Break** | | |
 | 10:50 | Using Ansible to deploy Galaxy II |  | (S + N) |
 | 12:20 | **Lunch** | | |
