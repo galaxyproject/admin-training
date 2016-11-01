@@ -54,8 +54,8 @@ Built slides have [an index](https://martenson.github.io/dagobah-training/).
 | 13:20 | Anatomy of a Tool Definition, Planemo, Publishing | [slides](https://martenson.github.io/dagobah-training/09-tool-basics/tool-basics.html) | (S + M) |
 | 14:50 | Updating tools and supporting multiple versions of tools | [exercise](https://martenson.github.io/dagobah-training/05-tool-shed/ex-advanced-tool-management.html) | (S + M) |
 | 15:20 | **Afternoon Break** | | |
-| 15:40 | Upgrading to a new Galaxy release |  | (N + M) |
-| 16:50 | When things go wrong: Basic Galaxy server troubleshooting |  | (N + M) |
+| 15:40 | Upgrading to a new Galaxy release | [slides](https://martenson.github.io/dagobah-training/10-upgrading-release/upgrading.html) | (N + M) |
+| 16:50 | When things go wrong: Basic Galaxy server troubleshooting | [slides](https://martenson.github.io/dagobah-training/11-basic-troubleshooting/basic-troubleshooting.html) | (N + M) |
 | 17:40 | **Dinner** |  |  |
 | 19:00 | Introduction to Galaxy Architecture (Joint session with the Advanced Topics session) | [slides](https://martenson.github.io/dagobah-training/12-architecture/galaxy_architecture.html) |  |
 | 20:20 | Wrap up and close | | All |
