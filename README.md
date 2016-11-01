@@ -21,7 +21,7 @@ Built slides have [an index](https://martenson.github.io/dagobah-training/).
 ## Timetable
 ### Basic Sessions
 #### Monday
-**7th November** - Salt Lake City Library - Room #
+**7th November** - [Salt Lake City Library - Conference Room Level 4](http://www.slcpl.org/rooms/)
 
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
@@ -41,7 +41,7 @@ Built slides have [an index](https://martenson.github.io/dagobah-training/).
 | 20:30 | Close Day 1 | | All |
 
 #### Tuesday
-**8th November** - Salt Lake City Library - Room #
+**8th November** - [Salt Lake City Library - Conference Room Level 4](http://www.slcpl.org/rooms/)
 
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
@@ -63,7 +63,7 @@ Built slides have [an index](https://martenson.github.io/dagobah-training/).
 ### Advanced Sessions
 
 #### Wednesday
-**9th November** - Commanders house - Room #
+**9th November** - [Commander's house - North & South Parlor and Sun Room](http://www.universityguesthouse.com/Commanders-House/map#tab_2)
 
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
@@ -83,7 +83,7 @@ Built slides have [an index](https://martenson.github.io/dagobah-training/).
 | 20:30 | Close day 1 | | All |
 
 #### Thursday
-**10th November** - Commanders House - Room #
+**10th November** - [Commander's house - North & South Parlor and Sun Room](http://www.universityguesthouse.com/Commanders-House/map#tab_2)
 
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
@@ -101,7 +101,7 @@ Built slides have [an index](https://martenson.github.io/dagobah-training/).
 | 20:30 | Close day 2 | | All |
 
 #### Friday
-**11th November** - Commanders House - Room #
+**11th November** - [Commander's house - North & South Parlor and Sun Room](http://www.universityguesthouse.com/Commanders-House/map#tab_2)
 
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
