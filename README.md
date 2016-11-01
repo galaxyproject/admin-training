@@ -57,7 +57,7 @@ Built slides have [an index](https://martenson.github.io/dagobah-training/).
 | 15:40 | Upgrading to a new Galaxy release | [slides](https://martenson.github.io/dagobah-training/10-upgrading-release/upgrading.html) | (N + M) |
 | 16:50 | When things go wrong: Basic Galaxy server troubleshooting | [slides](https://martenson.github.io/dagobah-training/11-basic-troubleshooting/basic-troubleshooting.html) | (N + M) |
 | 17:40 | **Dinner** |  |  |
-| 19:00 | Introduction to Galaxy Architecture (Joint session with the Advanced Topics session) | [slides](https://martenson.github.io/dagobah-training/12-architecture/galaxy_architecture.html) |  |
+| 19:00 | Introduction to Galaxy Architecture (Joint session with the Advanced Topics session) | [slides](https://martenson.github.io/dagobah-training/12-architecture/galaxy_architecture.html) | All |
 | 20:20 | Wrap up and close | | All |
 
 ### Advanced Sessions
@@ -74,7 +74,7 @@ Built slides have [an index](https://martenson.github.io/dagobah-training/).
 | 10:30 | **Morning Break** | | |
 | 10:50 | Using Ansible to deploy Galaxy II |  | (S + N) |
 | 12:20 | **Lunch** | | |
-| 13:20 | Server monitoring and maintenance: Admin UI, Log files, Direct database queries, Command line & scripts, What to backup and how |  | (S) |
+| 13:20 | Server monitoring and maintenance: Admin UI, Log files, Direct database queries, Command line & scripts, What to backup and how |  | (S + N) |
 | 15:20 | **Afternoon Break** | | |
 | 15:40 | Controlling Galaxy with systemd and supervisor |  | (N) |
 | 16:10 | Advanced tool definition, tool failures, tool debugging |  | (M) |
@@ -89,7 +89,7 @@ Built slides have [an index](https://martenson.github.io/dagobah-training/).
 | -------- | --------- | --------- | ----------- |
 | 08:30 | Check-in and Coffee |  |  |
 | 09:00 | Welcome and Introduction/Questions |  | All |
-| 09:20 | Using and configuring external authentication services | [Slides](https://martenson.github.io/dagobah-training/004-external-auth/external_auth.html) | M |
+| 09:20 | Using and configuring external authentication services | [Slides](https://martenson.github.io/dagobah-training/004-external-auth/external-auth.html) | (M) |
 | 10:30 | **Morning Break** | | |
 | 10:50 | Connecting Galaxy to a compute cluster I |  | (N) |
 | 12:20 | **Lunch** | | |
