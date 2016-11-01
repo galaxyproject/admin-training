@@ -25,7 +25,7 @@ Built slides have [an index](https://martenson.github.io/dagobah-training/).
 
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
-| 09:15 | Check-in and Coffee |  |  |
+| 09:15 | Check-in |  |  |
 | 09:30 | Welcome and Introduction |  | All |
 | 09:45 | Deployment and Platform Options |  | (N) |
 | 10:15 | Get a Basic Galaxy Server Up and Running | [slides](https://martenson.github.io/dagobah-training/02-basic-server/get-galaxy.html) | (N + M) |
@@ -45,7 +45,7 @@ Built slides have [an index](https://martenson.github.io/dagobah-training/).
 
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
-| 09:15 | Check-in and Coffee |  |  |
+| 09:15 | Check-in |  |  |
 | 09:30 | Welcome and Questions |  | All |
 | 09:45 | Extending your installation: FTP, SMTP, and more|  |  |
 | 11:00 | **Morning Break** | | |
@@ -67,7 +67,7 @@ Built slides have [an index](https://martenson.github.io/dagobah-training/).
 
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
-| 08:30 | Check-in and Coffee |  |  |
+| 08:30 | Check-in  |  |  |
 | 09:00 | Welcome and Introduction/Questions |  | All |
 | 09:20 | Configuration management choices: Introduction to Ansible | [Slides](https://martenson.github.io/dagobah-training/001-ansible/ansible-introduction.html), [Exercise](https://github.com/martenson/dagobah-training/blob/master/advanced/001-ansible/ex1-intro-ansible.md) | (S) |
 | 09:50 | Using Ansible to deploy Galaxy I |  [Exercise](https://github.com/martenson/dagobah-training/blob/master/advanced/001-ansible/ex2-galaxy-ansible.md)| (S) |
@@ -87,7 +87,7 @@ Built slides have [an index](https://martenson.github.io/dagobah-training/).
 
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
-| 08:30 | Check-in and Coffee |  |  |
+| 08:30 | Check-in |  |  |
 | 09:00 | Welcome and Introduction/Questions |  | All |
 | 09:20 | Using and configuring external authentication services |  |  |
 | 10:30 | **Morning Break** | | |
@@ -105,7 +105,7 @@ Built slides have [an index](https://martenson.github.io/dagobah-training/).
 
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
-| 08:30 | Check-in and Coffee |  |  |
+| 08:30 | Check-in |  |  |
 | 09:00 | Welcome and Introduction/Questions |  | All |
 | 09:20 | Storage management and using heterogeneous storage services |  | (N + M) |
 | 10:30 | **Morning Break** | | |
