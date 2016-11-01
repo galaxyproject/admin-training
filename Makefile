@@ -17,4 +17,5 @@ generate-slides:
 	$(IN_VENV) python slideshow/build_slideshow.py 'Galaxy Architecture' intro/11-basic-troubleshooting/basic-troubleshooting.md 11-basic-troubleshooting
 	$(IN_VENV) python slideshow/build_slideshow.py 'Galaxy Architecture' intro/12-architecture/galaxy_architecture.md 12-architecture
 	$(IN_VENV) python slideshow/build_slideshow.py 'Ansible and Galaxy - Part 1' advanced/001-ansible/ansible-introduction.md 001-ansible
+	$(IN_VENV) python slideshow/build_slideshow.py 'External Authentication' advanced/004-external-authentication/external-auth.md 004-external-auth
 	echo "</body></html>" >> docs/index.html

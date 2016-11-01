@@ -89,7 +89,7 @@ Built slides have [an index](https://martenson.github.io/dagobah-training/).
 | -------- | --------- | --------- | ----------- |
 | 08:30 | Check-in and Coffee |  |  |
 | 09:00 | Welcome and Introduction/Questions |  | All |
-| 09:20 | Using and configuring external authentication services |  |  |
+| 09:20 | Using and configuring external authentication services | [Slides](https://martenson.github.io/dagobah-training/004-external-auth/external_auth.html) | M |
 | 10:30 | **Morning Break** | | |
 | 10:50 | Connecting Galaxy to a compute cluster I |  | (N) |
 | 12:20 | **Lunch** | | |
