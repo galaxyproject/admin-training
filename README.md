@@ -54,8 +54,8 @@ Built slides have [an index](https://martenson.github.io/dagobah-training/).
 | 13:20 | Anatomy of a Tool Definition, Planemo, Publishing | [slides](https://martenson.github.io/dagobah-training/09-tool-basics/tool-basics.html) | (S + M) |
 | 14:50 | Updating tools and supporting multiple versions of tools | [exercise](https://martenson.github.io/dagobah-training/05-tool-shed/ex-advanced-tool-management.html) | (S + M) |
 | 15:20 | **Afternoon Break** | | |
-| 15:40 | Upgrading to a new Galaxy release |  | (N) |
-| 16:50 | When things go wrong: Basic Galaxy server troubleshooting |  | (N) |
+| 15:40 | Upgrading to a new Galaxy release |  | (N + M) |
+| 16:50 | When things go wrong: Basic Galaxy server troubleshooting |  | (N + M) |
 | 17:40 | **Dinner** |  |  |
 | 19:00 | Introduction to Galaxy Architecture (Joint session with the Advanced Topics session) | [slides](https://martenson.github.io/dagobah-training/12-architecture/galaxy_architecture.html) |  |
 | 20:20 | Wrap up and close | | All |
@@ -77,7 +77,7 @@ Built slides have [an index](https://martenson.github.io/dagobah-training/).
 | 13:20 | Server monitoring and maintenance: Admin UI, Log files, Direct database queries, Command line & scripts, What to backup and how |  | (S) |
 | 15:20 | **Afternoon Break** | | |
 | 15:40 | Controlling Galaxy with systemd and supervisor |  | (N) |
-| 16:10 | Advanced tool definition, tool failures, tool debugging |  |  |
+| 16:10 | Advanced tool definition, tool failures, tool debugging |  | (M) |
 | 17:40 | **Dinner** |  |  |
 | 19:00 | Discussion, troubleshooting, ad hoc support |  | All |
 | 20:30 | Close day 1 | | All |
@@ -107,7 +107,7 @@ Built slides have [an index](https://martenson.github.io/dagobah-training/).
 | -------- | --------- | --------- | ----------- |
 | 08:30 | Check-in and Coffee |  |  |
 | 09:00 | Welcome and Introduction/Questions |  | All |
-| 09:20 | Storage management and using heterogeneous storage services |  | (N) |
+| 09:20 | Storage management and using heterogeneous storage services |  | (N + M) |
 | 10:30 | **Morning Break** | | |
 | 10:50 | Complex Galaxy servers examples: usegalaxy.org, GVL |  | (N + S) |
 | 12:20 | **Lunch** | | |
