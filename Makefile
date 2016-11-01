@@ -5,6 +5,7 @@ IN_VENV=if [ -f $(VENV)/bin/activate ]; then . $(VENV)/bin/activate; fi;
 generate-slides:
 	rm docs/index.html
 	echo "<html><head></head><body>" > docs/index.html
+	$(IN_VENV) python slideshow/build_slideshow.py 'Deployment and Platform Options' intro/01-deployment-platforms/choices.md 01-deployment-platforms
 	$(IN_VENV) python slideshow/build_slideshow.py 'Get Galaxy' intro/02-basic-server/get-galaxy.md 02-basic-server
 	$(IN_VENV) python slideshow/build_slideshow.py 'Galactic Database' intro/03-databases/databases.md 03-databases
 	$(IN_VENV) python slideshow/build_slideshow.py 'Tool Shed' intro/05-tool-shed/shed_intro.md 05-tool-shed
