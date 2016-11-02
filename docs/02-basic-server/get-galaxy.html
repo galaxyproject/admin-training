@@ -38,9 +38,14 @@ You only need to download Galaxy if you plan to:
 - Develop Galaxy tools
 - Develop Galaxy itself
 
+Even when you plan any of the above sometimes you can leverage pre-configured
+[Docker image](https://github.com/bgruening/docker-galaxy-stable)
+or use [Cloudlaunch](https://launch.usegalaxy.org).
+
 ---
 # Requirements
-- UNIX/Linux or Mac OS
+
+- Any Linux or Mac OS
 - Python 2.7
 
 Optional
@@ -51,17 +56,24 @@ Optional
 
 ---
 # Clone the repository
+
 1. check what is the latest [release](https://docs.galaxyproject.org/en/master/releases/index.html)
 1. run `$ git clone -b release_16.07 https://github.com/galaxyproject/galaxy.git`
-  - you can change `release_16.07` to any release you want
+  - release is defined by the branch name: `release_16.07` see the [branch list](https://github.com/galaxyproject/galaxy/branches/all))
+
+Without specifying branch during clone you are running the *development* version of Galaxy.
+- For the rolling stable release: `git checkout master`<sup>[1]</sup>.
+
+.footnote[<sup>[1]</sup> This is currently not updated as often as it should be.]
 
 ---
 # Start Galaxy
+
 1. `$ cd galaxy`
 1. `$ ./run.sh`
 1. visit `http://localhost:8080`
 
-You now have default Galaxy running.
+You now see default Galaxy running.
 
 .footnote[Note that first startup needs internet connection and takes longer than the subsequent ones.]
 
@@ -72,9 +84,9 @@ You now have default Galaxy running.
 * Galaxy created a Python virtual environment (venv) in `.venv/`.
 * Galaxy fetched needed Python binaries ('wheels') into this environment.
 * Galaxy created the default SQLite database and migrated it to the latest version.
+* Galaxy binded to the default port `8080` on `localhost`.
 
-???
-You can log to a file instead.
+.footnote[All of the above can be configured.]
 
 ---
 # Look around
@@ -87,13 +99,13 @@ You can log to a file instead.
 # Basic configuration
 
 - Galaxy works out of the box with default configuration.
-- Important config files are in `config/`.
+- Most important config files are in `config/`.
 - Galaxy often uses the files with suffix `*.sample` as declared defaults.
 
 ---
 # Example of configuration change
 
-- By default Galaxy loads all tools in `tool_conf.xml.sample` into toolpanel.
+- By default Galaxy loads all tools in `tool_conf.xml.sample` into tool panel.
 - To add tools you should:
   - Make a copy `$ cp tool_conf.xml.sample tool_conf.xml`.
   - Add your tool entries to the `tool_conf.xml`.
@@ -116,14 +128,6 @@ No restarting is necessary.
 ???
 You can load remote content to this iframe (blog, existing presentation, etc.).
 
----
-# Galaxy version
-
-By default you are running the *development* version of Galaxy.
-- For the rolling stable release: `git checkout master`<sup>[1]</sup>
-- For a specific stable release: `git checkout release_YY.MM`
-
-.footnote[<sup>[1]</sup> This is currently not updated as often as it should be]
 
 ---
 # What to do next?
