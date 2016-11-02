@@ -21,11 +21,11 @@ Built slides have [an index](https://martenson.github.io/dagobah-training/).
 ## Timetable
 ### Basic Sessions
 #### Monday
-**7th November** - Salt Lake City Library - Room #
+**7th November** - [Salt Lake City Library - Conference Room Level 4](http://www.slcpl.org/rooms/)
 
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
-| 09:15 | Check-in and Coffee |  |  |
+| 09:15 | Check-in |  |  |
 | 09:30 | Welcome and Introduction |  | All |
 | 09:45 | Deployment and Platform Options | [slides](https://martenson.github.io/dagobah-training/01-deployment-platforms/choices.html) | (N) |
 | 10:15 | Get a Basic Galaxy Server Up and Running | [slides](https://martenson.github.io/dagobah-training/02-basic-server/get-galaxy.html) | (N + M) |
@@ -41,11 +41,11 @@ Built slides have [an index](https://martenson.github.io/dagobah-training/).
 | 20:30 | Close Day 1 | | All |
 
 #### Tuesday
-**8th November** - Salt Lake City Library - Room #
+**8th November** - [Salt Lake City Library - Conference Room Level 4](http://www.slcpl.org/rooms/)
 
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
-| 09:15 | Check-in and Coffee |  |  |
+| 09:15 | Check-in |  |  |
 | 09:30 | Welcome and Questions |  | All |
 | 09:45 | Extending your installation: FTP, SMTP, and more|  | (D) |
 | 11:00 | **Morning Break** | | |
@@ -63,11 +63,11 @@ Built slides have [an index](https://martenson.github.io/dagobah-training/).
 ### Advanced Sessions
 
 #### Wednesday
-**9th November** - Commanders house - Room #
+**9th November** - [Commander's house - North & South Parlor and Sun Room](http://www.universityguesthouse.com/Commanders-House/map#tab_2)
 
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
-| 08:30 | Check-in and Coffee |  |  |
+| 08:30 | Check-in  |  |  |
 | 09:00 | Welcome and Introduction/Questions |  | All |
 | 09:20 | Configuration management choices: Introduction to Ansible | [Slides](https://martenson.github.io/dagobah-training/001-ansible/ansible-introduction.html), [Exercise](https://github.com/martenson/dagobah-training/blob/master/advanced/001-ansible/ex1-intro-ansible.md) | (S) |
 | 09:50 | Using Ansible to deploy Galaxy I |  [Exercise](https://github.com/martenson/dagobah-training/blob/master/advanced/001-ansible/ex2-galaxy-ansible.md)| (S) |
@@ -83,11 +83,11 @@ Built slides have [an index](https://martenson.github.io/dagobah-training/).
 | 20:30 | Close day 1 | | All |
 
 #### Thursday
-**10th November** - Commanders House - Room #
+**10th November** - [Commander's house - North & South Parlor and Sun Room](http://www.universityguesthouse.com/Commanders-House/map#tab_2)
 
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
-| 08:30 | Check-in and Coffee |  |  |
+| 08:30 | Check-in |  |  |
 | 09:00 | Welcome and Introduction/Questions |  | All |
 | 09:20 | Using and configuring external authentication services | [Slides](https://martenson.github.io/dagobah-training/004-external-auth/external-auth.html) | (M) |
 | 10:30 | **Morning Break** | | |
@@ -101,11 +101,11 @@ Built slides have [an index](https://martenson.github.io/dagobah-training/).
 | 20:30 | Close day 2 | | All |
 
 #### Friday
-**11th November** - Commanders House - Room #
+**11th November** - [Commander's house - North & South Parlor and Sun Room](http://www.universityguesthouse.com/Commanders-House/map#tab_2)
 
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
-| 08:30 | Check-in and Coffee |  |  |
+| 08:30 | Check-in |  |  |
 | 09:00 | Welcome and Introduction/Questions |  | All |
 | 09:20 | Storage management and using heterogeneous storage services |  | (N + M) |
 | 10:30 | **Morning Break** | | |
