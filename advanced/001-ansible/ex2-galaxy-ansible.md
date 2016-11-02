@@ -147,3 +147,19 @@ To do this, use the following command:
 Use `less -R` to view the file with the colours set.
 
 The Ansible script will run and display what it's doing as it does. (Always a good idea to run it in a screen or something since networks are sometimes flaky!)
+
+
+## So, what did we learn?
+
+Hopefully, you now understand:
+* How Ansible combines roles with a playbook
+* Where to go to get more roles to add to a playbook
+* How to install Galaxy on a machine using Ansible.
+
+## Further reading
+
+If you want to know more about Ansible and Galaxy, see the Galaxy Project Github page:  [https://github.com/galaxyproject](https://github.com/galaxyproject) and search for "ansible".
+
+If you want to know more about Ansible, details can be found at [www.ansible.com](https://www.ansible.com)
+
+Suggestions and comments are welcome. Please contact:
