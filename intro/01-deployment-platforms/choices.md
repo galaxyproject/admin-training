@@ -23,17 +23,55 @@ Cloud (SaaS)
 - [usegalaxy.org](https://usegalaxy.org)
 - [Public Galaxy Servers](https://wiki.galaxyproject.org/PublicGalaxyServers)
 - [Amazon EC2](https://wiki.galaxyproject.org/CloudMan)
-- Semi-private cloud (e.g.: [Genomics Virtual Lab](https://www.genome.edu.au/))
+- Semi-private cloud (e.g.: [Genomics Virtual Lab](https://www.genome.edu.au/), [Jetstream](http://jetstream-cloud.org/))
 - Private cloud (build your own Galaxy SaaS)
 
 Cloud (IaaS)
 - Any cloud
 
-Compute Cluster
-- Shared
-- Dedicated
+Scalable Local Server
+- Dedicated or shared compute cluster(s)
+- Cloud compute resources
 
-Standalone Server
+Standalone Local Server
+
+---
+# Choosing where to run
+
+Public Prebuilt SaaS (usegalaxy.org, public servers)
+- Quickest to use today, but probably not why you're here...
+- Institutional/Protected data a concern
+- Not covered in this training
+
+Private Prebuilt SaaS (EC2, GVL, Jetstream) or build your own
+- Great choices for people needing access to compute for a fixed time analysis
+- Not as conducive to collaboration, publishing
+- Covered in:
+  - Thurday, 19:00: Using public and private cloud compute resources
+  - Friday: 10:50: Complex Galaxy servers examples: usegalaxy.org, GVL
+
+Build your own Galaxy SaaS
+- Personalized Galaxy instances for beginner-to-intermediate users
+- Requires a lot of infrastructure building
+- Covered in:
+  - Thurday, 19:00: Using public and private cloud compute resources
+  - Friday: 10:50: Complex Galaxy servers examples: usegalaxy.org, GVL
+
+---
+# Choosing where to run
+
+Scalable Local Server
+- Permanent Galaxy server
+- Flexible compute scalability
+- Full privacy control
+- Covered on: Thursday
+
+Standalone Local Server
+- Permanent Galaxy server
+- Full privacy control
+- Should only consider this in cases of expected light usage
+- Get a beefy server
+- Covered on: Today
 
 ---
 # Software Requirements

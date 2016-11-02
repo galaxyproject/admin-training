@@ -27,7 +27,7 @@ Built slides have [an index](https://martenson.github.io/dagobah-training/).
 | -------- | --------- | --------- | ----------- |
 | 09:15 | Check-in and Coffee |  |  |
 | 09:30 | Welcome and Introduction |  | All |
-| 09:45 | Deployment and Platform Options |  | (N) |
+| 09:45 | Deployment and Platform Options | [slides](https://martenson.github.io/dagobah-training/01-deployment-platforms/choices.html) | (N) |
 | 10:15 | Get a Basic Galaxy Server Up and Running | [slides](https://martenson.github.io/dagobah-training/02-basic-server/get-galaxy.html) | (N + M) |
 | 11:00 | **Morning Break** | | |
 | 11:20 | Database choices and configuration. Introduction to PostgreSQL | [slides](https://martenson.github.io/dagobah-training/03-databases/databases.html) | (N + M) |
