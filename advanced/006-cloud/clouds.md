@@ -122,7 +122,7 @@ class: left
 
 .footnote[\#usegalaxy \#GATC2016 / @galaxyproject]
 
-
+ 
 ---
 class: left
 ## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Overview
