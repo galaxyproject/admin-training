@@ -66,13 +66,13 @@ The demonstrator will now work through a couple of the roles and will run the pl
 The roles that this playbook use are:
 
 | Order run | Role name | Purpose | Variables to consider |
------------------------------------------------------------
+| --------- | --------- | ------- | --------------------- |
 | 0 | global_vars | Set some variables for the entire playbook | galaxy_server_dir, galaxy_changeset_id |
 | 1 | galaxyprojectdotorg.postgresql | Installs postgreSQL database server.| postgresql_backup_local_dir |
 | 2 | galaxyprojectdotorg.nginx | Installs and configures nginx (web server) |  |
 | 3 | natefoo.postgresql_objects | Installs postgreSQL scripts to work with privileges etc. |  |
 | 4 | galaxyprojectdotorg.galaxy | Installs and configures Galaxy | galaxy_server_dir, galaxy_vcs (git or hg) |
-| 5 | supervisor | Installs supervisor configs for Galaxy | |
+| 5 | supervisor | Installs supervisor configs for Galaxy | . |
 
 You'll note that these roles all have pretty good documentation on how to use them, which variables to set and how, and when they should be used. This makes it all much easier to understand.
 
