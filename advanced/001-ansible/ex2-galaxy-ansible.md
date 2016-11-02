@@ -59,6 +59,21 @@ There are many roles available for download. They all have some meta data associ
 
 The Ansible Galaxy can be browsed at: [http://galaxy.ansible.com/](http://galaxy.ansible.com/)
 
-** Part 3 - Browse the roles**
+**Part 3 - Browse the roles**
 
+The demonstrator will now work through a couple of the roles and will run the playbook on a machine for us.
 
+The roles that this playbook use are:
+
+| Order run | Role name | Purpose | Variables to consider |
+-----------------------------------------------------------
+| 0 | global_vars | Set some variables for the entire playbook | galaxy_server_dir, galaxy_changeset_id |
+| 1 | galaxyprojectdotorg.postgresql | Installs postgreSQL database server.| postgresql_backup_local_dir |
+| 2 | galaxyprojectdotorg.nginx | Installs and configures nginx (web server) |  |
+| 3 | natefoo.postgresql_objects | Installs postgreSQL scripts to work with privileges etc. |  |
+| 4 | galaxyprojectdotorg.galaxy | Installs and configures Galaxy | galaxy_server_dir, galaxy_vcs (git or hg) |
+| 5 | supervisor | Installs supervisor configs for Galaxy | |
+
+You'll note that these roles all have pretty good documentation on how to use them, which variables to set and how, and when they should be used. This makes it all much easier to understand.
+
+Have a look at each of the roles in turn, concentrating mainly on the variables (in the defaults/main.yml files and the vars directory if present.) By modifying these variables, you can customise things like, where postgrSQL keeps it's backups, where Galaxy is installed and many others.
