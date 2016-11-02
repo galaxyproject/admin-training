@@ -49,6 +49,8 @@ Have a look at the *playbook.yml* file. You'll notice that it contains quite a n
 
 You'll notice another play there called *Install Galaxy tools*. This has "tags" set. You'll also notice that it's host is set to localhost. This play won't get run unless you give the `--tags tools` switch to the `ansible-playbook` command line.
 
+Take note of the fact that the playbook combines the individual roles to give us the desired outcome.
+
 **Part 2 - Ansible galaxy**
 
 Where do the roles come from? Ansible has a "toolshed" like system called **Ansible Galaxy** - d'oh.
@@ -77,3 +79,71 @@ The roles that this playbook use are:
 You'll note that these roles all have pretty good documentation on how to use them, which variables to set and how, and when they should be used. This makes it all much easier to understand.
 
 Have a look at each of the roles in turn, concentrating mainly on the variables (in the defaults/main.yml files and the vars directory if present.) By modifying these variables, you can customise things like, where postgrSQL keeps it's backups, where Galaxy is installed and many others.
+
+**Part 4 - Run the playbook**
+
+To save everyone doing this, the demonstrator will run the role in the class. Ofcourse, you can run this role anytime you like later on.
+
+To run the role we will need a Linux instance (we will use ubuntu 16.04) with a set public/private keypair. We will also need to know it's ip address.
+
+* Set all the variables in *group_vars/galaxy_servers.yml* as follows:
+
+``` yaml
+galaxy_user: galaxy
+
+postgresql_objects_users:
+  - name: galaxy
+
+postgresql_objects_databases:
+  - name: galaxy
+    owner: galaxy
+
+galaxy_server_dir: /srv/galaxy/server
+galaxy_vcs: git
+galaxy_changeset_id: release_16.04
+
+galaxy_config:
+  "app:main":
+    database_connection: postgresql:///galaxy
+    admin_users: nate@bx.psu.edu     # <---- Put your user email here
+    tool_dependency_dir: /srv/galaxy/deps
+  "uwsgi":
+    processes: 1
+    socket: 127.0.0.1:4001
+    pythonpath: "{{ galaxy_server_dir }}/lib"
+    threads: 4
+    master: True
+
+nginx_configs:
+  - galaxy
+
+supervisor_configs:
+  - galaxy
+
+```
+
+* Set the contents of the *inventory* file appropriately.
+
+``` ini
+[galaxyservers]
+<instance_ip> # <---- The ip address of your machine
+
+[vars]
+ansible_user=ubuntu
+ansible_ssh_private_key_file=<path_to_your_private_ssh_key>
+
+```
+
+Now it's just a matter of making sure the public key is in the ssh authorised keys list on the target instance and then running:
+
+`ansible-playbook -i inventory -vv playbook.yml`
+
+Once again, the `-vv` switch indicates that we want the 2nd level of verbosity.. It is a handy one to have if you want to see what is going on. Another thing I regularly do is tee the screen output to a log file so I can keep a record of how the Ansible ran.
+
+To do this, use the following command:
+
+`script -q -c "ansible-playbook -i inventory -vv playbook.yml" /dev/null | tee ansible-build.log`
+
+Use `less -R` to view the file with the colours set.
+
+The Ansible script will run and display what it's doing as it does. (Always a good idea to run it in a screen or something since networks are sometimes flaky!)
