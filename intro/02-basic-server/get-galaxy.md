@@ -108,6 +108,15 @@ No restarting is necessary.
 You can load remote content to this iframe (blog, existing presentation, etc.).
 
 ---
+# Galaxy version
+
+By default you are running the *development* version of Galaxy.
+- For the rolling stable release: `git checkout master`<sup>[1]</sup>
+- For a specific stable release: `git checkout release_YY.MM`
+
+.footnote[<sup>[1]</sup> This is currently not updated as often as it should be]
+
+---
 # What to do next?
 - Keep your code up to date
 - Make yourself an administrator
