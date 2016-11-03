@@ -9,7 +9,7 @@ generate-slides:
 	$(IN_VENV) python slideshow/build_slideshow.py 'Deployment and Platform Options' intro/01-deployment-platforms/choices.md 01-deployment-platforms
 	$(IN_VENV) python slideshow/build_slideshow.py 'Get Galaxy' intro/02-basic-server/get-galaxy.md 02-basic-server
 	$(IN_VENV) python slideshow/build_slideshow.py 'Galactic Database' intro/03-databases/databases.md 03-databases
-	$(IN_VENV) python slideshow/build_slideshow.py 'Galactic Database' intro/04-web-servers/webservers.md 04-webservers
+	$(IN_VENV) python slideshow/build_slideshow.py 'Galactic Database' intro/04-web-servers/webservers.md 04-web-servers
 	$(IN_VENV) python slideshow/build_slideshow.py 'Tool Shed' intro/05-tool-shed/shed_intro.md 05-tool-shed
 	$(IN_VENV) python slideshow/build_slideshow.py 'Tool Installation' intro/05-tool-shed/tool_installation.md 05-tool-shed
 	$(IN_VENV) python slideshow/build_slideshow.py 'Exercise Tool Management' intro/05-tool-shed/ex-tool-management.md 05-tool-shed
