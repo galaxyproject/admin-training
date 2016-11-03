@@ -97,7 +97,7 @@ Built slides have [an index](https://martenson.github.io/dagobah-training/).
 | 15:20 | **Afternoon Break** | | |
 | 15:40 | Using Heterogeneous compute resources |  | (N) |
 | 17:40 | **Dinner** |  |  |
-| 19:00 | Using public and private cloud compute resources | [Slides](https://github.com/martenson/dagobah-training/blob/master/docs/006-clouds/clouds.html) | (S) |
+| 19:00 | Using public and private cloud compute resources | [Slides](https://martenson.github.io/dagobah-training/006-clouds/clouds.html) | (S) |
 | 20:30 | Close day 2 | | All |
 
 #### Friday
