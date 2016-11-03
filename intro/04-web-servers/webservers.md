@@ -23,7 +23,7 @@ What is a reverse proxy?
 
 Extra features:
 - Serve static content
-- Compress content
+- Compress selected content
 - Serve over HTTPS
 - Serve byte range requests
 - Serve other sites from the same server

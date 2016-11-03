@@ -47,7 +47,7 @@ The following NEW packages will be installed:
 0 upgraded, 57 newly installed, 0 to remove and 11 not upgraded.
 Need to get 22.6 MB of archives.
 After this operation, 102 MB of additional disk space will be used.
-Do you want to continue? [Y/n] 
+Do you want to continue? [Y/n]
 Get:1 http://archive.ubuntu.com/ubuntu xenial/main amd64 libatm1 amd64 1:2.5.1-1.5 [24.2 kB]
   ...
 Get:57 http://archive.ubuntu.com/ubuntu xenial/main amd64 ssl-cert all 1.0.37 [16.9 kB]
@@ -65,7 +65,7 @@ debconf: falling back to frontend: Readline
 Processing triggers for libc-bin (2.23-0ubuntu3) ...
 Processing triggers for systemd (229-4ubuntu10) ...
 Processing triggers for sgml-base (1.26+nmu4ubuntu1) ...
-$ 
+$
 ```
 
 Visit http://yourhost/ and you should see the Ubuntu Apache default page.
