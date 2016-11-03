@@ -76,3 +76,5 @@ Loaded tool id: toolshed.g2.bx.psu.edu/repos/iuc/sickle/sickle/1.33, version: 1.
 In the Admin/Users menu you can run `Recalculate Disk Usage` on a certain user.
 
 ![Recalculate Disk Usage Option](images/admin_recalc_usage.png)
+
+---
