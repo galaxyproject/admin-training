@@ -24,7 +24,7 @@ In case you see database migration errors during startup you can:
 * Check DB table `migrate_version` column `version`.
 * Check folder `lib/galaxy/model/migrate/versions/` - the latest migration should match the DB.
 * Clean the `*.pyc` files to make sure there is no remnant from other code revisions.
-  * Something like `$ find . -name "*.pyc" -delete` should work.
+  * Something like `$ find lib -name "*.pyc" -delete` should work.
 
 ---
 # Mako templates
@@ -32,7 +32,7 @@ In case you see database migration errors during startup you can:
 In case you see page inconsistencies or template errors in logs.
 
 * Clean the `*.pyc` files to make sure there is no remnant from other code revisions.
-  * Something like `$ find . -name "*.pyc" -delete`.
+  * Something like `$ find database/compiled_templates name "*.pyc" -delete`.
 
 ---
 # Client build
@@ -74,6 +74,8 @@ Loaded tool id: toolshed.g2.bx.psu.edu/repos/iuc/sickle/sickle/1.33, version: 1.
 # Quota not being updated for a certain user
 
 In the Admin/Users menu you can run `Recalculate Disk Usage` on a certain user.
+
+There is also a command line version: `scripts/set_user_disk_usage.py`
 
 ![Recalculate Disk Usage Option](images/admin_recalc_usage.png)
 
