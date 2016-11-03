@@ -107,12 +107,17 @@ galaxy_config:
     database_connection: postgresql:///galaxy
     admin_users: nate@bx.psu.edu     # <---- Put your user email here
     tool_dependency_dir: /srv/galaxy/deps
+    job_config_file: {{ galaxy_config_dir }}/job_conf.xml
   "uwsgi":
     processes: 1
     socket: 127.0.0.1:4001
     pythonpath: "{{ galaxy_server_dir }}/lib"
     threads: 4
     master: True
+
+galaxy_config_files:
+  - src: files/galaxy/job_conf.xml
+    dest: "{{ galaxy_config_dir }}/job_conf.xml"
 
 nginx_configs:
   - galaxy
@@ -133,6 +138,28 @@ ansible_user=ubuntu
 ansible_ssh_private_key_file=<path_to_your_private_ssh_key>
 
 ```
+
+* There's an addition to the files we've downloaded: `job_conf.xml`
+
+Our Ansible-driven configuration replaces Galaxy's built-in Paste webserver with uWSGI. However, uWSGI Galaxy processes aren't suitable for running jobs. `job_conf.xml` controls Galaxy's job running system, we need to create a version that will prevent the uWSGI process from handling jobs:
+
+``` xml
+<?xml version="1.0"?>
+<job_conf>
+    <plugins>
+        <plugin id="local" type="runner" load="galaxy.jobs.runners.local:LocalJobRunner" workers="4"/>
+    </plugins>
+    <handlers default="handlers">
+        <handler id="handler0" tags="handlers"/>
+        <handler id="handler1" tags="handlers"/>
+    </handlers>
+    <destinations>
+        <destination id="local" runner="local"/>
+    </destinations>
+</job_conf>
+```
+
+If you scroll up a bit you'll see that this file is referenced in `group_vars/galaxyservers.yml` (also additions from the version of `galaxyservers.yml` in the tarball).
 
 Now it's just a matter of making sure the public key is in the ssh authorised keys list on the target instance and then running:
 
