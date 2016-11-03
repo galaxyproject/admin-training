@@ -32,7 +32,7 @@ Built slides have [an index](https://martenson.github.io/dagobah-training/).
 | 11:00 | **Morning Break** | | |
 | 11:20 | Database choices and configuration. Introduction to PostgreSQL | [slides](https://martenson.github.io/dagobah-training/03-databases/databases.html) | (N + M) |
 | 12:20 | **Lunch** | | |
-| 13:20 | Web server choices and configuration. Introduction to Apache and NGINX. |  | (N) |
+| 13:20 | Web server choices and configuration. Introduction to Apache and NGINX. | [slides](https://martenson.github.io/dagobah-training/04-web-servers/webservers.html), [exercise 1](https://github.com/martenson/dagobah-training/blob/master/intro/04-web-servers/ex1-apache.md), [exercise 2](https://github.com/martenson/dagobah-training/blob/master/intro/04-web-servers/ex2-nginx.md) | (N) |
 | 14:20 | Introduction to the Galaxy Tool Shed: Identifying and installing well-defined tools | [shed slides](https://martenson.github.io/dagobah-training/05-tool-shed/shed_intro.html), [tool slides](https://martenson.github.io/dagobah-training/05-tool-shed/tool_installation.html) & [exercise](https://martenson.github.io/dagobah-training/05-tool-shed/ex-tool-management.html)| (M) |
 | 15:30 | **Afternoon Break** | | |
 | 15:50 | Defining and importing genomes, Data Managers | [slides](https://martenson.github.io/dagobah-training/06-reference-genomes/reference_genomes.html) & [exercise](intro/06-reference-genomes/ex06_reference_genomes.md) | (S) |

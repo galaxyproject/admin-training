@@ -138,31 +138,31 @@ Next, we modify the previously created `sites-available/galaxy` to include direc
 
 ```nginx
     location /static {
-        alias /home/user/galaxy/static;
+        alias /home/galaxyguest/galaxy/static;
         expires 24h;
     }
 
     location /static/style {
-        alias /home/user/galaxy/static/style/blue;
+        alias /home/galaxyguest/galaxy/static/style/blue;
         expires 24h;
     }
 
     location /static/scripts {
-        alias /home/user/galaxy/static/scripts;
+        alias /home/galaxyguest/galaxy/static/scripts;
         expires 24h;
     }
 
     # serve vis/IE plugin static content
     location ~ ^/plugins/(?<plug_type>.+?)/(?<vis_name>.+?)/static/(?<static_file>.*?)$ {
-        alias /home/user/galaxy/config/plugins/$plug_type/$vis_name/static/$static_file;
+        alias /home/galaxyguest/galaxy/config/plugins/$plug_type/$vis_name/static/$static_file;
     }
 
     location /robots.txt {
-        alias /home/user/galaxy/static/robots.txt;
+        alias /home/galaxyguest/galaxy/static/robots.txt;
     }
 
     location /favicon.ico {
-        alias /home/user/galaxy/static/favicon.ico;
+        alias /home/galaxyguest/galaxy/static/favicon.ico;
     }
 ```
 
@@ -181,7 +181,7 @@ To begin, modify `sites-available/galaxy` to include this additional block at th
     }
 ```
 
-In `/home/user/galaxy/config/galaxy.ini` (copy `galaxy.ini.sample` to `galaxy.ini` if you have not already done so), uncomment `#nginx_x_accel_redirect_base = False` and change it to `nginx_x_accel_redirect_base = /_x_accel_redirect`.
+In `/home/galaxyguest/galaxy/config/galaxy.ini` (copy `galaxy.ini.sample` to `galaxy.ini` if you have not already done so), uncomment `#nginx_x_accel_redirect_base = False` and change it to `nginx_x_accel_redirect_base = /_x_accel_redirect`.
 
 Finally, (re)start your Galaxy server and nginx using `sudo systemctl restart nginx`
 
@@ -235,7 +235,7 @@ x-content-type-options: nosniff
 content-disposition: attachment; filename="Galaxy1-[Pasted_Entry].txt"
 x-frame-options: SAMEORIGIN
 content-type: application/octet-stream
-x-sendfile: /home/user/galaxy/database/files/000/dataset_1.dat
+x-sendfile: /home/galaxyguest/galaxy/database/files/000/dataset_1.dat
 Set-Cookie: galaxysession=c6ca0ddb55be603a151b0873219c10c7d08bb7dcedfebab34f379912ee51df3ae4688ac00316f62b; expires=Wed, 01-Feb-2017 15:13:17 GMT; httponly; Max-Age=7776000; Path=/; Version=1
 
 curl: (18) transfer closed with 13 bytes remaining to read

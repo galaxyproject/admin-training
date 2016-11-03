@@ -33,7 +33,7 @@ Creating a reverse proxy from Apache to Galaxy provides a number of features not
 
 Install Apache from apt:
 
-```bash
+```console
 $ sudo apt-get install apache2
 Reading package lists... Done
 Building dependency tree       
@@ -90,7 +90,7 @@ To make Apache serve as a reverse proxy, we will need to enable the modules:
 
 These are enabled using the `a2enmod` command:
 
-```bash
+```console
 $ sudo a2enmod rewrite
 Enabling module rewrite.
 To activate the new configuration, you need to run:
@@ -100,14 +100,14 @@ $
 
 All this has really done is created a symbolic link (symlink) in `mods-enabled/`:
 
-```bash
+```console
 $ ls -lrt mods-enabled/ | tail -1
 lrwxrwxrwx 1 root root 30 Nov  3 03:50 rewrite.load -> ../mods-available/rewrite.load
 ```
 
 `a2enmod` ensure that module dependencies are enabled. We can enable both `mod_proxy` and `mod_proxy_http` like so:
 
-```bash
+```console
 $ sudo a2enmod proxy_http
 Considering dependency proxy for proxy_http:
 Enabling module proxy.
@@ -117,7 +117,7 @@ To activate the new configuration, you need to run:
 $
 ```
 
-Next, we need to create a config for the Galaxy "site". Create the file `sites-available/000-galaxy.conf`. This should contain `RewriteRule`s to proxy Galaxy and serve its static content:
+Next, we need to create a config for the Galaxy "site". Create the file `sites-available/000-galaxy.conf`. This should contain `RewriteRule` to proxy Galaxy:
 
 ```apache
 RewriteEngine on
@@ -126,7 +126,7 @@ RewriteRule ^(.*) http://localhost:8080$1 [P]
 
 Before we can enable the new "Galaxy" site we need to disable the default site with `a2dissite`. Then we can enable the Galaxy site with `a2ensite`:
 
-```bash
+```console
 $ sudo a2dissite 000-default
 Site 000-default disabled.
 To activate the new configuration, you need to run:
@@ -140,7 +140,7 @@ $
 
 As with the module directories, this has removed and created symlinks in `sites-enabled/`. Before `a2dissite`, it looks like this:
 
-```bash
+```console
 $ ls -l sites-enabled/
 total 4
 lrwxrwxrwx 1 root root 35 Nov  3 14:07 000-default.conf -> ../sites-available/000-default.conf
@@ -150,7 +150,7 @@ And afterward it should look like this:
 
 Finally, after these config changes, Apache must be restarted using `apache2ctl` (alternative methods include the `service` or `systemctl` commands):
 
-```bash
+```console
 $ sudo apache2ctl restart
 $
 ```
@@ -167,10 +167,10 @@ Compression is enabled with `mod_deflate`, this can be loaded with `a2enmod defl
 
 Caching is enabled with `mod_expires`. As you can probably guess, this can be loaded with `a2enmod expires`. It is not enabled by default in Ubuntu 16.04.
 
-Galaxy is located in `/home/user/galaxy`, but by default, Apache is configured to only allow access to `/var/www`, `/usr/share`, and `~/public_html`. To allow Apache to serve static content from `/home/user/galaxy/static` we need to create `conf-available/galaxy.conf`. Additionally, Galaxy serves some content with the `application/json` content type, which is not compressed by `mod_deflate`'s default configuration, so we add that type:
+Galaxy is located in `/home/galaxyguest/galaxy`, but by default, Apache is configured to only allow access to `/var/www`, `/usr/share`, and `~/public_html`. To allow Apache to serve static content from `/home/galaxyguest/galaxy/static` we need to create `conf-available/galaxy.conf`. Additionally, Galaxy serves some content with the `application/json` content type, which is not compressed by `mod_deflate`'s default configuration, so we add that type:
 
 ```apache
-<Directory "/home/user/galaxy/static">
+<Directory "/home/galaxyguest/galaxy/static">
     AllowOverride None
     Require all granted
 </Directory>
@@ -180,7 +180,7 @@ AddOutputFilterByType DEFLATE application/json
 
 And enable it with `a2enconf`:
 
-```bash
+```console
 $ sudo a2enconf galaxy
 Enabling conf galaxy.
 To activate the new configuration, you need to run:
@@ -194,11 +194,11 @@ Next, we modify the previously created `sites-available/000-galaxy.conf` to incl
 
 ```apache
 RewriteEngine on
-RewriteRule ^/static/style/(.*) /home/user/galaxy/static/style/blue/$1 [L]
-RewriteRule ^/static/scripts/(.*) /home/user/galaxy/static/scripts/$1 [L]
-RewriteRule ^/static/(.*) /home/user/galaxy/static/$1 [L]
-RewriteRule ^/favicon.ico /home/user/galaxy/static/favicon.ico [L]
-RewriteRule ^/robots.txt /home/user/galaxy/static/robots.txt [L]
+RewriteRule ^/static/style/(.*) /home/galaxyguest/galaxy/static/style/blue/$1 [L]
+RewriteRule ^/static/scripts/(.*) /home/galaxyguest/galaxy/static/scripts/$1 [L]
+RewriteRule ^/static/(.*) /home/galaxyguest/galaxy/static/$1 [L]
+RewriteRule ^/favicon.ico /home/galaxyguest/galaxy/static/favicon.ico [L]
+RewriteRule ^/robots.txt /home/galaxyguest/galaxy/static/robots.txt [L]
 RewriteRule ^(.*) http://localhost:8080$1 [P]
 
 <Location "/static">
@@ -215,7 +215,7 @@ The performance of your Galaxy server can be improved by configuring Apache to h
 
 `mod_xsendfile` is available in Ubuntu as the package `libapache2-mod-xsendfile`. Installing it automatically enables it:
 
-```bash
+```console
 $ sudo apt-get install libapache2-mod-xsendfile
 Reading package lists... Done
 Building dependency tree       
@@ -237,7 +237,7 @@ apache2_invoke: Enable module xsendfile
 $
 ```
 
-Next, modify `sites-available/000-galaxy.conf` to include the following *new* directive block at the top **top**:
+Next, modify `sites-available/000-galaxy.conf` to include the following *new* directive block at the **top**:
 
 ```apache
 <Location "/">
@@ -246,14 +246,53 @@ Next, modify `sites-available/000-galaxy.conf` to include the following *new* di
 </Location>
 ```
 
-In `/home/user/galaxy/config/galaxy.ini` (copy `galaxy.ini.sample` to `galaxy.ini` if you have not already done so), uncomment `#apache_xsendfile = False` and change it to `apache_xsendfile = True`.
+In `/home/galaxyguest/galaxy/config/galaxy.ini` (copy `galaxy.ini.sample` to `galaxy.ini` if you have not already done so), uncomment `#apache_xsendfile = False` and change it to `apache_xsendfile = True`.
 
 Finally, (re)start your Galaxy server and Apache using `sudo apache2ctl restart`
 
-You can verify that Galaxy is setting `X-Sendfile` and suppressing the dataset contents in the body of the request using `curl` directly on the Galaxy server, bypassing Apache:
+**Part 3 - Verify**
 
-```bash
+We can verify that our settings have taken effect, beginning with the compression and caching options:
+
+```console
+$ curl -D- -o null -s 'http://localhost/static/style/base.css' -H 'Accept-Encoding: gzip, deflate, sdch' -H 'Cache-Control: max-age=0' --compressed
+```
+```http
+HTTP/1.1 200 OK
+Date: Thu, 03 Nov 2016 18:57:22 GMT
+Server: Apache/2.4.18 (Ubuntu)
+Last-Modified: Thu, 03 Nov 2016 14:09:06 GMT
+ETag: "47010-5406619bfda53-gzip"
+Accept-Ranges: bytes
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Cache-Control: max-age=86400
+Expires: Fri, 04 Nov 2016 18:57:22 GMT
+Content-Length: 48600
+Content-Type: text/css
+
+```
+
+Note that:
+- The `Cache-Control` header is set to `86400` (seconds)
+- The `Content-Encoding` header is set to `gzip`
+
+We can also verify that `X-Sendfile` is working properly. Begin by uploading a simple 1-line text dataset to Galaxy:
+
+1. Click the upload button at the top of the tool panel (on the left side of the Galaxy UI).
+2. In the resulting modal dialog, click the "Paste/Fetch data" button.
+3. Type some random characters into the text field that has just appeared.
+4. Click "Start" and then "Close"
+
+The path portion of the URL to the first dataset should be `/datasets/f2db41e1fa331b3e/display?to_ext=txt`. If you've already created another dataset, you can get the correct path by inspecting the link target of the history item's "floppy" icon. (For the curious, the constant string `f2db41e1fa331b3e` comes from hashing the number `1` using the default value of `id_secret` in `galaxy.ini` - this is why changing `id_secret` is important).
+
+The Galaxy server can be contacted directly at `http://localhost:8080`. Combine this with the path to the dataset and provide it to `curl`:
+
+
+```console
 $ curl -D- 'http://localhost:8080/datasets/f2db41e1fa331b3e/display?to_ext=txt'
+```
+```http
 HTTP/1.0 200 OK
 Server: PasteWSGIServer/0.5 Python/2.7.12
 Date: Thu, 03 Nov 2016 15:13:18 GMT
@@ -262,11 +301,40 @@ x-content-type-options: nosniff
 content-disposition: attachment; filename="Galaxy1-[Pasted_Entry].txt"
 x-frame-options: SAMEORIGIN
 content-type: application/octet-stream
-x-sendfile: /home/user/galaxy/database/files/000/dataset_1.dat
+x-sendfile: /home/galaxyguest/galaxy/database/files/000/dataset_1.dat
 Set-Cookie: galaxysession=c6ca0ddb55be603a151b0873219c10c7d08bb7dcedfebab34f379912ee51df3ae4688ac00316f62b; expires=Wed, 01-Feb-2017 15:13:17 GMT; httponly; Max-Age=7776000; Path=/; Version=1
 
 curl: (18) transfer closed with 13 bytes remaining to read
 ```
+
+Note that:
+- The `x-sendfile` header is set in the response headers
+- The connection terminates prematurely because Galaxy itself does not send the file contents in the body
+
+We can now verify that Apache is serving the file by sending the same request to `http://localhost` (with the default port `80`):
+
+```console
+$ curl -D- 'http://localhost/datasets/f2db41e1fa331b3e/display?to_ext=txt'
+```
+```http
+HTTP/1.1 200 OK
+Date: Thu, 03 Nov 2016 19:05:26 GMT
+Server: PasteWSGIServer/0.5 Python/2.7.12
+x-content-type-options: nosniff
+content-disposition: attachment; filename="Galaxy1-[Pasted_Entry].txt"
+x-frame-options: SAMEORIGIN
+content-type: application/octet-stream
+Set-Cookie: galaxysession=c6ca0ddb55be603a51fadea289675f235ed06d9609aeaa96c8a60a7d1f608d5c1f44d5fa14e4125f; expires=Wed, 01-Feb-2017 19:05:26 GMT; httponly; Max-Age=7776000; Path=/; Version=1
+Last-Modified: Thu, 03 Nov 2016 15:07:12 GMT
+ETag: "54066e984bd41"
+Content-Length: 13
+
+asdfasdfasdf
+```
+
+Note that:
+- Apache has stripped out the `x-sendfile` header.
+- Apache returns the file contents
 
 ## So, what did we learn?
 

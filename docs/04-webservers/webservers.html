@@ -65,7 +65,7 @@ I recommend nginx unless you have a specific need for Apache
 ---
 # nginx "flavors"
 
-nginx plugins must be compiled in (no dynamic shared objects)
+nginx plugins must be compiled in<sup>[1]</sup>
 
 Debian/Ubuntu provide multiple nginx "flavors":
 - `nginx-light`: minimal set of core modules
@@ -76,7 +76,14 @@ There is also a "Galaxy" flavor<sup>[1]</sup> (includes [upload module](https://
 - [RHEL](https://depot.galaxyproject.org/yum/) (derived from EPEL nginx)
 - [Ubuntu PPA](https://launchpad.net/~galaxyproject/+archive/ubuntu/nginx)
 
-.footnote[<sup>[1]</sup> Still working on the automation to keep this up to date, though]
+.footnote[<sup>[2]</sup> Dynamic shared objects were [introduced in 1.9.11](https://www.nginx.com/blog/dynamic-modules-nginx-1-9-11/)
+
+<sup>[2]</sup> Still working on the automation to keep this up to date, though]
+
+---
+# Exercise: nginx
+
+[nginx as a Reverse Proxy for Galaxy - Exercise](https://github.com/martenson/dagobah-training/blob/master/intro/04-web-servers/ex2-nginx.md)
 
 ---
 # Additional Tips and Resources
