@@ -55,6 +55,22 @@ Optional
   - Additional requirements for shipped tools
 
 ---
+# Get logged in to your VM
+
+For OS X/Linux/Windows w/ Linux Subsystem or OpenSSH:
+```console
+$ ssh -L 8080:localhost:8080 galaxyguest@gsNN.chpc.utah.edu
+```
+
+For PuTTY on Windows:
+- Create a session
+- See [instructions here](http://realprogrammers.com/how_to/set_up_an_ssh_tunnel_with_putty.html).
+- User: galaxyguest
+- Host Name: gsNN.chpc.utah.edu
+- (Tunnel) Source port: 8080
+- (Tunnel) Destination: 127.0.0.1:8080
+
+---
 # Clone the repository
 
 1. check what is the latest [release](https://docs.galaxyproject.org/en/master/releases/index.html)
