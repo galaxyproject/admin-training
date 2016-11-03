@@ -31,6 +31,8 @@ Creating a reverse proxy from Apache to Galaxy provides a number of features not
 
 **Part 1 - Install Apache**
 
+Install Apache from apt:
+
 ```bash
 $ sudo apt-get install apache2
 Reading package lists... Done
@@ -64,4 +66,53 @@ Processing triggers for libc-bin (2.23-0ubuntu3) ...
 Processing triggers for systemd (229-4ubuntu10) ...
 Processing triggers for sgml-base (1.26+nmu4ubuntu1) ...
 $ 
+```
+
+Visit http://yourhost/ and you should see the Ubuntu Apache default page.
+
+**Part 2 - Baseic configuration**
+
+Now have a look at the configuration files in `/etc/apache2`. Debian (and Ubuntu) lay out Apache and nginx's configuration directories in consistent ways:
+
+- `apache2.conf`: Main Apache config file. Note the `IncludeOptional` directories
+- `conf-available/*`: Repository of available config includes
+- `mods-available/*`: Repository of available module load and config directives
+- `sites-available/*`: Repository of available virtualhosts
+- `conf-enabled/*.conf`: Symlinks to `conf-available/` files
+- `mods-enabled/*.{load,conf}`: Symlinks to `mods-available/` files
+- `sites-enabled/*.conf`: Symlinks to `sites-available/` files
+
+To make Apache serve as a reverse proxy, we will need to enable the modules:
+
+- `mod_rewrite`
+- `mod_proxy`
+- `mod_proxy_http`
+
+These are enabled using the `a2enmod` command:
+
+```bash
+$ sudo a2enmod rewrite
+Enabling module rewrite.
+To activate the new configuration, you need to run:
+  service apache2 restart
+$
+```
+
+All this has really done is created a symbolic link (symlink) in `mods-enabled/`:
+
+```bash
+$ ls -lrt /etc/apache2/mods-enabled/ | tail -1
+lrwxrwxrwx 1 root root 30 Nov  3 03:50 rewrite.load -> ../mods-available/rewrite.load
+```
+
+`a2enmod` ensure that module dependencies are enabled. We can enable both `mod_proxy` and `mod_proxy_http` like so:
+
+```bash
+$ sudo a2enmod proxy_http
+Considering dependency proxy for proxy_http:
+Enabling module proxy.
+Enabling module proxy_http.
+To activate the new configuration, you need to run:
+  service apache2 restart
+$
 ```
