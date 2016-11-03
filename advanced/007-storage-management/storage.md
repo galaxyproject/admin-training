@@ -43,6 +43,7 @@ class: normal
   * Entries in `LibraryDatasetDatasetAssociation` table.
     * Among others it has:  `| id	| library_dataset_id | deleted	| dataset_id |`
 
+--
 Any number of 'Association' records can point to a base Dataset -- this is how copying histories, history items, and libraries work without needing to copy actual file contents.
 
 ---
@@ -63,10 +64,14 @@ Solutions:
 
 * Can only delete (or purge) dataset when all 'associations' pointing at it have been marked `deleted`.
 * Cleaning scripts are part of the codebase at `scripts/cleanup_datasets/`.
-  * The main script is `cleanup_datasets.py` .
+* The main script is `cleanup_datasets.py` .
 
 ---
 class: normal
+
+```shell
+python ./scripts/cleanup_datasets/cleanup_datasets.py ./config/galaxy.ini -d 10 -5 -r ${GALAXY_ROOT} >> ./scripts/cleanup_datasets/purge_folders.log
+```
 
 flag	| short |	description
 ---|---|---
@@ -84,7 +89,7 @@ flag	| short |	description
 ---
 # Bash wrappers
 
-To make it easy CRONing things, some usecases of `cleanup_datasets.py` come pre-wrapped.
+To make it easy CRONing things some usecases of `cleanup_datasets.py` come pre-wrapped.
 
 *The ordering is of significance.*
 
@@ -92,8 +97,9 @@ To make it easy CRONing things, some usecases of `cleanup_datasets.py` come pre-
 1. `purge_histories.sh`
 1. `purge_libraries.sh`
 1. `purge_folders.sh`
-1. (`delete_datasets.sh`) - If datasets should be removed before their outer container has been deleted.
 1. `purge_datasets.sh`
+
+* `delete_datasets.sh` - If datasets should be removed before their outer container has been deleted.
 
 ---
 # Additional cleaning scripts
@@ -110,7 +116,7 @@ To make it easy CRONing things, some usecases of `cleanup_datasets.py` come pre-
   * Remove the renamed datasets.
 
 ---
-# Other maintenance scripts
+# Other maintenance
 
 * `update_dataset_size.py`
   * Update `dataset.size` column in the DB.
