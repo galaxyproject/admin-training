@@ -53,7 +53,7 @@ h3 {
 .footnote {
     position: absolute;
     bottom: 3em;
-    /*font-size: 1em;*/
+    font-size: 0.6em;
 }
 
 .large {
@@ -81,8 +81,12 @@ li li {
     font-size: .8em;
 }
 
-a, a > code {
-    color: #ff9300;
+a {
+  color: #00ffd0;
+}
+
+a > code {
+    color: #00ffd0;
     text-decoration: none;
 }
 
@@ -234,4 +238,18 @@ i, em, b, strong {
   color: grey;
   position: absolute;
   bottom: 3em;
+}
+
+/* Table stuff */
+
+table {
+    border-collapse: collapse;
+}
+
+.inverse th {
+    color: #ff8800;
+}
+
+.inverse table, th, td {
+   border: 1px solid white;
 }
