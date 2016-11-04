@@ -16,24 +16,20 @@ class: special
 .footnote[\#usegalaxy / @galaxyproject]
 
 ---
-class: smaller
+class: left
 # Where can Galaxy run?
-
-Cloud (SaaS)
-- [usegalaxy.org](https://usegalaxy.org)
-- [Public Galaxy Servers](https://wiki.galaxyproject.org/PublicGalaxyServers)
-- [Amazon EC2](https://wiki.galaxyproject.org/CloudMan)
-- Semi-private cloud (e.g.: [Genomics Virtual Lab](https://www.genome.edu.au/), [Jetstream](http://jetstream-cloud.org/))
-- Private cloud (build your own Galaxy SaaS)
-
-Cloud (IaaS)
-- Any cloud
-
-Scalable Local Server
-- Dedicated or shared compute cluster(s)
-- Cloud compute resources
-
-Standalone Local Server
+* Cloud (SaaS)
+  - [usegalaxy.org](https://usegalaxy.org)
+  - [Public Galaxy Servers](https://wiki.galaxyproject.org/PublicGalaxyServers)
+  - [Amazon EC2](https://wiki.galaxyproject.org/CloudMan)
+  - Semi-private cloud (e.g.: [Genomics Virtual Lab](https://www.genome.edu.au/), [Jetstream](http://jetstream-cloud.org/))
+* Private cloud (build your own Galaxy SaaS)
+* Cloud (IaaS)
+  - Any cloud
+* Scalable Local Server
+  - Dedicated or shared compute cluster(s)
+  - Cloud compute resources
+* Standalone Local Server
 
 ---
 # Choosing where to run
@@ -76,20 +72,18 @@ Standalone Local Server
 ---
 # Software Requirements
 
-Required:
+* Required:
+  - Galaxy is written in Python and depends on **Python 2.7**
+  - All major distros in wide circulation have 2.7, *except* RHEL<sup>[1]</sup> 6
+    - See: Software Collections for [RHEL](https://access.redhat.com/solutions/472793), [CentOS](https://wiki.centos.org/AdditionalResources/Repositories/SCL), [Scientific Linux](http://linux.web.cern.ch/linux/scl/)
 
-- Galaxy is written in Python and depends on **Python 2.7**
-- All major distros in wide circulation have 2.7, *except* RHEL<sup>[1]</sup> 6
-  - See: Software Collections for [RHEL](https://access.redhat.com/solutions/472793), [CentOS](https://wiki.centos.org/AdditionalResources/Repositories/SCL), [Scientific Linux](http://linux.web.cern.ch/linux/scl/)
-
-Optional (but not really):
-
-- PostgreSQL
-  - Covered in: Today, 11:20: Database choices and configuration. Introduction to PostgreSQL
-- uWSGI (will soon come with Galaxy)
-  - Covered in: Wednesday, 9:50: Using Ansible to deploy Galaxy I
-- Reverse proxy server (nginx, Apache)
-  - Covered in: Today, 13:20: Web server choices and configuration. Introduction to Apache and NGINX.
+* Optional (but not really):
+  - PostgreSQL
+    - Covered in: Today, 11:20: Database choices and configuration. Introduction to PostgreSQL
+  - uWSGI (will soon come with Galaxy)
+    - Covered in: Wednesday, 9:50: Using Ansible to deploy Galaxy I
+  - Reverse proxy server (nginx, Apache)
+    - Covered in: Today, 13:20: Web server choices and configuration. Introduction to Apache and NGINX.
 
 .footnote[<sup>[1]</sup> Point of order: Unless stated otherwise, "RHEL" refers to RHEL and derivatives (CentOS, Scientific Linux, etc.)]
 
