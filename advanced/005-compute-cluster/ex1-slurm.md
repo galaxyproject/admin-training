@@ -10,7 +10,7 @@
 
 By the end of this tutorial, you should:
 
-1. 
+1. Be familiar with the basics of installing and configuring Slurm
 2. 
 3. 
 
@@ -175,8 +175,123 @@ Slurm provides a tool to create a configuration file. This is [available online]
 
 [Slurm Version 15.08 Configuration Tool](https://martenson.github.io/dagobah-training/005-compute-cluster/slurm-wlm-configurator.html)
 
-<sup>1. The package and config directory name oddities are due to an unrelated `slurm` package existing in Debian before Slurm was added to Debian. `slurm-llnl` refers to Lawrence Livermore National Laboratory, where Slurm was originally developed, but the package was later renamed to `slurm-wlm` (for **W**ork**L**oad **M**anager) when the Slurm authors quit LLNL and </sup>
+Enter the following values into the configuration tool (leaving others at their defaults):
+- ControlMachine: `localhost`
+- NodeName: `localhost`
 
+Then click **Submit** at the bottom of the form. You should now see the contents of a `slurm.conf` which you can copy and paste into `/etc/slurm-llnl/slurm.conf`.
+
+**Part 3 - Start Slurm daemons**
+
+It should now be possible to start Slurm's daemons. Begin by starting `slurmctld`, The Slurm controller daemon (only one host runs the controller, this orchestrates job scheduling, dispatching, and completion):
+
+```console
+$ sudo systemctl start slurmctld
+$ systemctl status slurmctld
+● slurmctld.service - Slurm controller daemon
+   Loaded: loaded (/lib/systemd/system/slurmctld.service; enabled; vendor preset: enabled)
+   Active: active (running) since Fri 2016-11-04 16:46:08 EDT; 4s ago
+  Process: 5134 ExecStart=/usr/sbin/slurmctld $SLURMCTLD_OPTIONS (code=exited, status=0/SUCCESS)
+ Main PID: 5138 (slurmctld)
+    Tasks: 10
+   Memory: 884.0K
+      CPU: 11ms
+   CGroup: /system.slice/slurmctld.service
+           └─5138 /usr/sbin/slurmctld
+
+Nov 04 16:46:08 gat2016 systemd[1]: Starting Slurm controller daemon...
+Nov 04 16:46:08 gat2016 systemd[1]: Started Slurm controller daemon.
+```
+
+Next, start up `slurmd`, the Slurm execution daemon. Every host that will execute jobs runs slurmd, which manages the processes that the slurm controller dispatches to it:
+
+```console
+$ sudo systemctl start slurmd
+$ systemctl status slurmd
+● slurmd.service - Slurm node daemon
+   Loaded: loaded (/lib/systemd/system/slurmd.service; enabled; vendor preset: enabled)
+   Active: active (running) since Fri 2016-11-04 16:50:35 EDT; 2s ago
+  Process: 5169 ExecStart=/usr/sbin/slurmd $SLURMD_OPTIONS (code=exited, status=0/SUCCESS)
+ Main PID: 5173 (slurmd)
+    Tasks: 1
+   Memory: 2.0M
+      CPU: 10ms
+   CGroup: /system.slice/slurmd.service
+           └─5173 /usr/sbin/slurmd
+
+Nov 04 16:50:35 gat2016 systemd[1]: Starting Slurm node daemon...
+Nov 04 16:50:35 gat2016 systemd[1]: slurmd.service: PID file /var/run/slurm-llnl/slurmd.pid not readable (yet?) after start: No such
+Nov 04 16:50:35 gat2016 systemd[1]: Started Slurm node daemon.
+```
+
+You should now be able to see that your slurm cluster is operational with the `sinfo` command. This shows the state of nodes and partitions (synonymous with queues in other DRMs). The "node-oriented view" provided with the `-N` flag is particularly useful:
+
+```console
+$ sinfo
+PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST
+debug*       up   infinite      1   idle localhost
+$ sinfo -Nel
+Fri Nov  4 16:51:24 2016
+NODELIST   NODES PARTITION       STATE CPUS    S:C:T MEMORY TMP_DISK WEIGHT FEATURES REASON
+localhost      1    debug*        idle    1    1:1:1      1        0      1   (null) none
+```
+
+If your node state is not `idle`, something has gone wrong. If your node state ends with an asterisk `*`, the slurm controller is attempting to contact the slurm execution daemon but has not yet been successful.
+
+## Section 2 - Get Slurm ready for Galaxy
+
+**Part 1 - Test Slurm**
+
+We want to ensure that Slurm is actually able to run jobs. There are two ways this can be done:o
+
+- `srun`: Run an interactive job (e.g. a shell, or a specific program with its stdin, stdout, and stderr all connected to your terminal.
+- `sbatch`: Run a batch job, with stdin closed and stdout/stderr redirected to a file.
+
+Galaxy runs `sbatch` jobs but we can use both `srun` and `sbatch` to test:
+
+```console
+$ srun uname -a
+Linux gat2016 4.4.0-31-generic #50-Ubuntu SMP Wed Jul 13 00:07:12 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux
+```
+
+Although it looks like this command ran as if I had not used `srun`, it was in fact routed through Slurm.
+
+Next, createa a test job script somewhere, such as in `~/sbatch-test.sh`. This should be a shell script and must include the shell "shebang" line:
+
+```bash
+#!/bin/sh
+
+uname -a
+uptime
+cat /etc/issue
+sleep 30
+```
+
+Submit it with `sbatch` and monitor it with `squeue`:
+
+```console
+$ sbatch sbatch-test.sh
+Submitted batch job 3
+$ squeue
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+                 3     debug sbatch-t galaxygu  R       0:03      1 localhost
+$ cat slurm-4.out
+Linux gat2016 4.4.0-31-generic #50-Ubuntu SMP Wed Jul 13 00:07:12 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux
+ 17:09:18 up  1:28,  2 users,  load average: 0.00, 0.00, 0.00
+Ubuntu 16.04.1 LTS \n \l
+
+$
+```
+
+If you've made it this far, your Slurm installation is working!
+
+**Part 2 - Install slurm-drmaa**
+
+## Section 3 - Run Galaxy jobs through Slurm
+
+**Part 1 - Install python-drmaa and configure Galaxy**
+
+**Part 2 - Go!**
 
 ## So, what did we learn?
 
@@ -185,3 +300,7 @@ Hopefully, you now understand:
 -
 
 ## Further Reading
+
+## Notes
+
+<sup>1. The package and config directory name oddities are due to an unrelated `slurm` package existing in Debian before Slurm was added to Debian. `slurm-llnl` refers to Lawrence Livermore National Laboratory, where Slurm was originally developed, but the package was later renamed to `slurm-wlm` (for **W**ork**L**oad **M**anager) when the Slurm authors quit LLNL and </sup>
