@@ -173,7 +173,7 @@ Under Ubuntu, Slurm configs are stored in `/etc/slurm-llnl`<sup>[1]</sup>. No co
 
 Slurm provides a tool to create a configuration file. This is [available online](https://slurm.schedmd.com/configurator.html) for the latest version, but Ubuntu 16.04 ships with Slurm 15.08. There's a copy of the configurator in `/usr/share/doc/slurmctld/slurm-wlm-configurator.html`. I've copied that to the training repository:
 
-[Slurm Version 15.08 Configuration Tool]()
+[Slurm Version 15.08 Configuration Tool](https://martenson.github.io/dagobah-training/005-compute-cluster/slurm-wlm-configurator.html)
 
 <sup>1. The package and config directory name oddities are due to an unrelated `slurm` package existing in Debian before Slurm was added to Debian. `slurm-llnl` refers to Lawrence Livermore National Laboratory, where Slurm was originally developed, but the package was later renamed to `slurm-wlm` (for **W**ork**L**oad **M**anager) when the Slurm authors quit LLNL and </sup>
 
