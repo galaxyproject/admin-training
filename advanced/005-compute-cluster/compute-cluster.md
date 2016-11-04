@@ -73,4 +73,4 @@ class: center
 ---
 # Exercise
 
-[Running Galaxy jobs with Slurm](https://)
+[Running Galaxy jobs with Slurm](https://github.com/martenson/dagobah-training/blob/master/advanced/005-compute-cluster/ex1-slurm.md)
