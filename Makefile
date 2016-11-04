@@ -20,6 +20,7 @@ generate-slides:
 	$(IN_VENV) python slideshow/build_slideshow.py 'Galaxy Architecture' intro/11-basic-troubleshooting/basic-troubleshooting.md 11-basic-troubleshooting
 	$(IN_VENV) python slideshow/build_slideshow.py 'Galaxy Architecture' intro/12-architecture/galaxy_architecture.md 12-architecture
 	$(IN_VENV) python slideshow/build_slideshow.py 'Ansible and Galaxy - Part 1' advanced/001-ansible/ansible-introduction.md 001-ansible
+	$(IN_VENV) python slideshow/build_slideshow.py 'Systetmd and Supervisor' advanced/002a-systemd-supervisor/systemd-supervisor.md 002a-systemd-supervisor
 	$(IN_VENV) python slideshow/build_slideshow.py 'External Authentication' advanced/004-external-authentication/external-auth.md 004-external-auth
 	$(IN_VENV) python slideshow/build_slideshow.py 'Clouds' advanced/006-cloud/clouds.md 006-clouds
 	$(IN_VENV) python slideshow/build_slideshow.py 'Storage Management' advanced/007-storage-management/storage.md 007-storage
