@@ -14,11 +14,11 @@ United States
 ---
 # Your Instructors
 
-- Nate Coraor - Penn State University @natefoo
-- Simon Gladman - VLSCI, University of Melbourne, Australia  
-- Dan Blankenberg - Penn State University
-- Martin Čech - Penn State University @martenson
-- Dave Clements - Johns Hopkins University @tnabtaf
+- Nate Coraor - Penn State University [@natefoo](https://twitter.com/natefoo)
+- Simon Gladman - VLSCI, University of Melbourne, Australia [@Slugger70](https://twitter.com/Slugger70)
+- Dan Blankenberg - Penn State University [@dblankenberg](https://twitter.com/dblankenberg)
+- Martin Čech - Penn State University [@martenson](https://twitter.com/martenson)
+- Dave Clements - Johns Hopkins University [@tnabtaf](https://twitter.com/tnabtaf)
 
 .footnote[\#usegalaxy \#GATC2016 / @galaxyproject]
 
