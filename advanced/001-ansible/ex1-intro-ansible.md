@@ -54,7 +54,7 @@ Once, that is complete you can start your Galaxy server to test it.
 
 If you want you can tail the log file and watch everything unfold. Once the server has finished configuring itself, try and connect to it in a web browser on port 8080. (ip_address:8080)
 
-If you see a Galaxy interface, everything worked!
+If you see a Galaxy interface, everything worked! Now you can move on with learning about Ansible.
 
 ## Section 1 - Build the structure, copy some files, set some variables.
 
