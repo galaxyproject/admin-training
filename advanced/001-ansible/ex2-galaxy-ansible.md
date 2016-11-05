@@ -107,7 +107,7 @@ galaxy_config:
     database_connection: postgresql:///galaxy
     admin_users: nate@bx.psu.edu     # <---- Put your user email here
     tool_dependency_dir: /srv/galaxy/deps
-    job_config_file: {{ galaxy_config_dir }}/job_conf.xml
+    job_config_file: "{{ galaxy_config_dir }}/job_conf.xml"
   "uwsgi":
     processes: 1
     socket: 127.0.0.1:4001
