@@ -34,6 +34,28 @@ We will use a number of Ansible structures and modules including:
 * tasks
 * files
 
+## Preparation - Setup simple Galaxy.
+
+If you haven't participated in the Introduction days of this course (i.e. You're just doing the advanced sessions), you won't have a working Galaxy installation on your Virtual Machine yet. So, we will be doing a minimal quick install of Galaxy to get you up and running with the rest of this section of the exercise.
+
+We will be cloning the Galaxy github repo into you home directory and then starting it up so it automatically downloads all of it its extra requirements.
+
+* Login to your VM as the *ubuntu* user. This user has sudo rights but we will not be needing them.
+
+Once you've logged in, from your home directory, clone the Galaxy git repo.
+
+`git clone https://github.com/galaxyproject/galaxy.git`
+
+You'll need to change the name of the **galaxy.ini.sample** file in *galaxy/config* to **galaxy.ini**. Then edit the file using an editor. We need to uncomment the line `#host = 127.0.0.1` and set the ip to `0.0.0.0` so that the Galaxy server is available over the internet.
+
+Once, that is complete you can start your Galaxy server to test it.
+
+* Start the server with `sh ./run.sh --pid-file=main.pid --log-file=main.log --daemon`
+
+If you want you can tail the log file and watch everything unfold. Once the server has finished configuring itself, try and connect to it in a web browser on port 8080. (ip_address:8080)
+
+If you see a Galaxy interface, everything worked!
+
 ## Section 1 - Build the structure, copy some files, set some variables.
 
 **Part 1 - Create the ansible script directory tree**
