@@ -287,9 +287,68 @@ If you've made it this far, your Slurm installation is working!
 
 **Part 2 - Install slurm-drmaa**
 
+Above Slurm in the stack sits slurm-drmaa, a library that provides a translational interface from the Slurm API to the generalized DRMAA API in C. Thankfully, Ubuntu has a package for it as well:
+
+```console
+$ sudo apt-get install slurm-drmaa1
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+  libslurm29
+The following NEW packages will be installed:
+  libslurm29 slurm-drmaa1
+0 upgraded, 2 newly installed, 0 to remove and 91 not upgraded.
+Need to get 574 kB of archives.
+After this operation, 1,676 kB of additional disk space will be used.
+Do you want to continue? [Y/n]
+Get:1 http://us.archive.ubuntu.com/ubuntu xenial/universe amd64 libslurm29 amd64 15.08.7-1build1 [522 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu xenial/universe amd64 slurm-drmaa1 amd64 1.0.7-1build3 [52.3 kB]
+Fetched 574 kB in 0s (1,102 kB/s)
+Selecting previously unselected package libslurm29.
+(Reading database ... 60829 files and directories currently installed.)
+Preparing to unpack .../libslurm29_15.08.7-1build1_amd64.deb ...
+Unpacking libslurm29 (15.08.7-1build1) ...
+Selecting previously unselected package slurm-drmaa1.
+Preparing to unpack .../slurm-drmaa1_1.0.7-1build3_amd64.deb ...
+Unpacking slurm-drmaa1 (1.0.7-1build3) ...
+Processing triggers for libc-bin (2.23-0ubuntu3) ...
+Setting up libslurm29 (15.08.7-1build1) ...
+Setting up slurm-drmaa1 (1.0.7-1build3) ...
+Processing triggers for libc-bin (2.23-0ubuntu3) ...
+$
+```
+
 ## Section 3 - Run Galaxy jobs through Slurm
 
-**Part 1 - Install python-drmaa and configure Galaxy**
+**Part 1 - Install DRMAA Python**
+
+Moving one level further up the stack, we find DRMAA Python. This is a Galaxy framework *conditional dependency*. Conditional dependencies are only installed if, during startup, a configuration option is set that requires that dependency. Galaxy will automatically install it into the virtualenv if we're using the `run.sh` (which calls `scripts/common_startup.sh`) method of starting. Since our Galaxy now starts the application directly with uWSGI or the "headless" `galaxy-main`, we need to install it into Galaxy's virtualenv directly.
+
+The `galaxyprojectdotorg.galaxy` Ansible role *does* install conditional dependencies. An alternative option would be to modify `job_conf.xml` as described in the next part and then rerun the Ansible playbook from the second exercise in the Ansible section.
+
+Assuming we will install DRMAA Python ourselves, we must:
+
+1. Become the `galaxy` user.
+2. Run `pip` from Galaxy's virtualenv in `/srv/galaxy/server/.venv`
+3. Install the `drmaa` package from PyPI.
+
+We can do this with a single command: `sudo -H -u galaxy /srv/galaxy/server/.venv/bin/pip install drmaa`:
+
+```console
+$ sudo -H -u galaxy /srv/galaxy/server/.venv/bin/pip install drmaa
+Collecting drmaa
+  Downloading drmaa-0.7.6-py2.py3-none-any.whl
+Installing collected packages: drmaa
+Successfully installed drmaa-0.7.6
+You are using pip version 8.1.2, however version 9.0.0 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+$
+```
+
+**Part 2 - Configure Galaxy**
+
+At the top of the stack sits Galaxy. Galaxy must now be configured to use the cluster we've just set up. The DRMAA Python documentation (and Galaxy's own documentation) instruct that you should set the `$DRMAA_LIBRARY_PATH` environment variable so that DRMAA Python can find `libdrmaa.so` (aka slurm-drmaa). However, because we used system packages, slurm-drmaa is installed at a standard system path: `/usr/lib/slurm-drmaa/lib/libdrmaa.so.1`. DRMAA Python will look in this expected location automatically, so it's not necessary to set `$DRMAA_LIBRARY_PATH`. But if you were using a hand-built DRMAA library, or one provided with your DRM, you would need to set this.
 
 **Part 2 - Go!**
 
@@ -300,6 +359,13 @@ Hopefully, you now understand:
 -
 
 ## Further Reading
+
+- [Galaxy's cluster documentation](https://wiki.galaxyproject.org/Admin/Config/Performance/Cluster) describes in detail alternative cluster configurations
+- [The job_conf.xml documentation](https://wiki.galaxyproject.org/Admin/Config/Jobs) fully describes the syntax of the job configuration file.
+- The [Distributed Resource Management Application API (DRMAA)](https://www.drmaa.org/) page contains the DRMAA specification as well as documentation for various implementations. It also includes a list of DRMs supporting DRMAA.
+- The [Slurm documentation](http://slurm.schedmd.com/) is extensive and covers all the features and myriad of ways in which you can configure slurm.
+- [PSNC slurm-drmaa](http://apps.man.poznan.pl/trac/slurm-drmaa)'s page includes documentation and the SVN repository, which has a few minor fixes since the last released version. PSNC also wrote the initial implementations of the DRMAA libraries for PBSPro and LSF, so all three are similar.
+- [My own fork of slurm-drmaa](http://github.com/natefoo/slurm-drmaa) includes support for Slurms `-M`/`--clusters` multi-cluster functionality.
 
 ## Notes
 
