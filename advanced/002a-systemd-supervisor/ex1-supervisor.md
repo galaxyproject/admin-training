@@ -45,8 +45,8 @@ autostart       = true
 autorestart     = true
 startsecs       = 10
 user            = galaxy
-environment     = VIRTUAL_ENV="/home/user/galaxy/.venv",PATH="/home/user/galaxy/.venv/bin:%(ENV_PATH)s"
-stdout_logfile  = /home/user/galaxy/handler%(process_num)s.log
+environment     = VIRTUAL_ENV="/srv/galaxy/server/.venv",PATH="/srv/galaxy/server/.venv/bin:%(ENV_PATH)s"
+stdout_logfile  = /srv/galaxy/server/handler%(process_num)s.log
 redirect_stderr = true
 ```
 
