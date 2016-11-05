@@ -131,12 +131,11 @@ supervisor_configs:
 
 ``` ini
 [galaxyservers]
-<instance_ip> # <---- The ip address of your machine
+localhost
 
-[vars]
-ansible_user=ubuntu
-ansible_ssh_private_key_file=<path_to_your_private_ssh_key>
-
+[galaxyservers:vars]
+ansible_connection=local
+ansible_become=yes
 ```
 
 * There's an addition to the files we've downloaded: `job_conf.xml`
