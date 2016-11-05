@@ -444,4 +444,4 @@ Programmable mappings:
 ---
 # Exercise
 
-[Advanced Galaxy Job Configurations](https://github.com/martenson/dagobah-training/blob/master/advanced/005-compute-cluster/ex2-job-configs.md)
+[Advanced Galaxy Job Configurations](https://github.com/martenson/dagobah-training/blob/master/advanced/005-compute-cluster/ex2-advanced-job-configs.md)

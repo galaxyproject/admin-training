@@ -2,7 +2,7 @@
 
 ### GATC - 2016 - Salt Lake City
 
-# Running Galaxy Jobs with Slurm - Example
+# Running Galaxy Jobs with Slurm - Exercise
 
 #### Authors: Nate Coraor. 2016
 
@@ -178,8 +178,14 @@ Slurm provides a tool to create a configuration file. This is [available online]
 Enter the following values into the configuration tool (leaving others at their defaults):
 - ControlMachine: `localhost`
 - NodeName: `localhost`
+- CPUs: 2
+- SelectType: Cons_res
 
 Then click **Submit** at the bottom of the form. You should now see the contents of a `slurm.conf` which you can copy and paste into `/etc/slurm-llnl/slurm.conf`.
+
+We need to make one change to the configuration that was generated: Uncomment `SelectTypeParameters` and set its value to `CR_CPU`.
+
+Your VM should have 2 CPUs allocated to it, but if you're running this exercise on a different VM that only has one core, set `FastSchedule` to `2` or else Slurm will set the node state to `DRAINING` because it does not match the configuration.
 
 **Part 3 - Start Slurm daemons**
 
@@ -233,7 +239,7 @@ debug*       up   infinite      1   idle localhost
 $ sinfo -Nel
 Fri Nov  4 16:51:24 2016
 NODELIST   NODES PARTITION       STATE CPUS    S:C:T MEMORY TMP_DISK WEIGHT FEATURES REASON
-localhost      1    debug*        idle    1    1:1:1      1        0      1   (null) none
+localhost      1    debug*        idle    1    2:1:1      1        0      1   (null) none
 ```
 
 If your node state is not `idle`, something has gone wrong. If your node state ends with an asterisk `*`, the slurm controller is attempting to contact the slurm execution daemon but has not yet been successful.
