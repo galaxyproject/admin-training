@@ -10,9 +10,9 @@
 
 By the end of this tutorial, you should:
 
-1. Be familiar with the basics of installing and configuring Slurm
-2. 
-3. 
+1. Be familiar with the basics of installing, configuring, and using Slurm
+2. Understand all components of the Galaxy job running stack
+3. Understand how the `job_conf.xml` file controls Galaxy's jobs subsystem
 
 ## Introduction
 
@@ -348,15 +348,161 @@ $
 
 **Part 2 - Configure Galaxy**
 
-At the top of the stack sits Galaxy. Galaxy must now be configured to use the cluster we've just set up. The DRMAA Python documentation (and Galaxy's own documentation) instruct that you should set the `$DRMAA_LIBRARY_PATH` environment variable so that DRMAA Python can find `libdrmaa.so` (aka slurm-drmaa). However, because we used system packages, slurm-drmaa is installed at a standard system path: `/usr/lib/slurm-drmaa/lib/libdrmaa.so.1`. DRMAA Python will look in this expected location automatically, so it's not necessary to set `$DRMAA_LIBRARY_PATH`. But if you were using a hand-built DRMAA library, or one provided with your DRM, you would need to set this.
+At the top of the stack sits Galaxy. Galaxy must now be configured to use the cluster we've just set up. The DRMAA Python documentation (and Galaxy's own documentation) instruct that you should set the `$DRMAA_LIBRARY_PATH` environment variable so that DRMAA Python can find `libdrmaa.so` (aka slurm-drmaa). Because Galaxy is now being started under supervisor, the environment that Galaxy starts under is controlled by the `environment` option in `/etc/supervisor/conf.d/galaxy.conf`. The `[program:handler]` should thus be updated to refer to the path to slurm-drmaa, which is `/usr/lib/slurm-drmaa/lib/libdrmaa.so.1`:
+
+```ini
+environment     = VIRTUAL_ENV="/srv/galaxy/server/.venv",PATH="/srv/galaxy/server/.venv/bin:%(ENV_PATH)s",DRMAA_LIBRARY_PATH="/usr/lib/slurm-drmaa/lib/libdrmaa.so.1"
+```
+
+This change is not read until `supervisord` is notified with `sudo supervisorctl update`, but we'll wait to do that until after we've updated Galaxy's job configuration.
+
+We need to modify `job_conf.xml` to instruct Galaxy's job handlers to load the Slurm job runner plugin, and set the Slurm job submission parameters. This file was installed by Ansible and can be found in `/srv/galaxy/server` (remember, it's owned by the `galaxy` user so you'll need to use `sudo` to edit it). A job runner plugin definition must have the `id`, `type`, and `load` attributes. The entire `<plugins>` tag group should look like:
+
+```xml
+    <plugins workers="4">
+        <plugin id="local" type="runner" load="galaxy.jobs.runners.local:LocalJobRunner"/>
+        <plugin id="slurm" type="runner" load="galaxy.jobs.runners.slurm:SlurmJobRunner"/>
+    </plugins>
+```
+
+Next, we need to add a new destination for the Slurm job runner. This is a basic destination with no parameters, Galaxy will do the equivalent of submitting a job as `sbatch /path/to/job_script.sh`. Note that we also need to set a default destination now that more than one destination is defined. In a `<destination>` tag, the `id` attribute is a unique identifier for that destination and the `runner` attribute must match the `id` of defined plugin:
+
+```xml
+    <destinations default="slurm">
+        <destination id="slurm" runner="slurm"/>
+        <destination id="local" runner="local"/>
+    </destinations>
+```
+
+To reread the job config, Galaxy must be restarted. You can do this with `sudo supervisorctl restart all`. Technically these changes only require restarting the handlers (if we were changing a tool-to-handler mapping it'd require restarting the web server as well) so `sudo supervisorctl restart gx:handler0 gx:handler1` would suffice.
+
+Before you restart, you can follow the handler log files using `tail`: `tail -f /srv/galaxy/server/handler?.log`.
+
+```xml
+$ sudo supervisorctl restart all
+gx:handler0: stopped
+gx:handler1: stopped
+gx:galaxy: stopped
+gx:handler0: started
+gx:handler1: started
+gx:galaxy: started
+```
+
+Two sections of the log output are of interest. First, when Galaxy parses `job_conf.xml`:
+
+```
+galaxy.jobs DEBUG 2016-11-05 14:07:12,649 Loading job configuration from /srv/galaxy/server/job_conf.xml
+galaxy.jobs DEBUG 2016-11-05 14:07:12,650 Read definition for handler 'handler0'
+galaxy.jobs DEBUG 2016-11-05 14:07:12,651 Read definition for handler 'handler1'
+galaxy.jobs DEBUG 2016-11-05 14:07:12,652 <handlers> default set to child with id or tag 'handlers'
+galaxy.jobs DEBUG 2016-11-05 14:07:12,652 <destinations> default set to child with id or tag 'slurm'
+galaxy.jobs DEBUG 2016-11-05 14:07:12,653 Done loading job configuration
+```
+
+Second, when Galaxy loads job runner plugins:
+
+```
+galaxy.jobs.manager DEBUG 2016-11-05 14:07:22,341 Starting job handler
+galaxy.jobs INFO 2016-11-05 14:07:22,347 Handler 'handler0' will load all configured runner plugins
+galaxy.jobs.runners DEBUG 2016-11-05 14:07:22,355 Starting 4 LocalRunner workers
+galaxy.jobs DEBUG 2016-11-05 14:07:22,367 Loaded job runner 'galaxy.jobs.runners.local:LocalJobRunner' as 'local'
+pulsar.managers.util.drmaa DEBUG 2016-11-05 14:07:22,434 Initializing DRMAA session from thread MainThread
+galaxy.jobs.runners DEBUG 2016-11-05 14:07:22,443 Starting 4 SlurmRunner workers
+galaxy.jobs DEBUG 2016-11-05 14:07:22,455 Loaded job runner 'galaxy.jobs.runners.slurm:SlurmJobRunner' as 'slurm'
+galaxy.jobs.handler DEBUG 2016-11-05 14:07:22,455 Loaded job runners plugins: slurm:local
+```
 
 **Part 2 - Go!**
+
+You should now be able to run a Galaxy job through Slurm. The simplest way to test is using the upload tool to upload some text. If you're not still following the log files with `tail`, do so now.
+
+Then, upload to Galaxy to create a new job:
+
+1. Click the upload button at the top of the tool panel (on the left side of the Galaxy UI).
+2. In the resulting modal dialog, click the "Paste/Fetch data" button.
+3. Type some random characters into the text field that has just appeared.
+4. Click "Start" and then "Close"
+
+In your `tail` terminal window you should see the following messages:
+
+```
+galaxy.jobs DEBUG 2016-11-05 14:07:22,862 (2) Persisting job destination (destination id: slurm)
+galaxy.jobs.runners DEBUG 2016-11-05 14:07:22,958 Job [2] queued (328.180 ms)
+galaxy.jobs.handler INFO 2016-11-05 14:07:22,996 (2) Job dispatched
+galaxy.tools.deps DEBUG 2016-11-05 14:07:23,621 Building dependency shell command for dependency 'samtools'
+  ...
+galaxy.tools.deps WARNING 2016-11-05 14:07:23,631 Failed to resolve dependency on 'samtools', ignoring
+galaxy.jobs.command_factory INFO 2016-11-05 14:07:23,674 Built script [/srv/galaxy/server/database/jobs/000/2/tool_script.sh] for tool command[python /srv/galaxy/server/tools/data_source/upload.py /srv/galaxy/server /srv/galaxy/server/database/tmp/tmpkiMZKd /srv/galaxy/server/database/tmp/tmpJuSMo5 2:/srv/galaxy/server/database/jobs/000/2/dataset_2_files:/srv/galaxy/server/database/datasets/000/dataset_2.dat]
+galaxy.tools.deps DEBUG 2016-11-05 14:07:24,033 Building dependency shell command for dependency 'samtools'
+  ...
+galaxy.tools.deps WARNING 2016-11-05 14:07:24,038 Failed to resolve dependency on 'samtools', ignoring
+galaxy.jobs.runners DEBUG 2016-11-05 14:07:24,052 (2) command is: mkdir -p working; cd working; /srv/galaxy/server/database/jobs/000/2/tool_script.sh; return_code=$?; cd '/srv/galaxy/server/database/jobs/000/2'; python "/srv/galaxy/server/database/jobs/000/2/set_metadata_CALKH0.py" "/srv/galaxy/server/database/tmp/tmpkiMZKd" "/srv/galaxy/server/database/jobs/000/2/working/galaxy.json" "/srv/galaxy/server/database/jobs/000/2/metadata_in_HistoryDatasetAssociation_2_nnti4M,/srv/galaxy/server/database/jobs/000/2/metadata_kwds_HistoryDatasetAssociation_2_sN3gVP,/srv/galaxy/server/database/jobs/000/2/metadata_out_HistoryDatasetAssociation_2_jIhXJJ,/srv/galaxy/server/database/jobs/000/2/metadata_results_HistoryDatasetAssociation_2_v4v_dv,/srv/galaxy/server/database/datasets/000/dataset_2.dat,/srv/galaxy/server/database/jobs/000/2/metadata_override_HistoryDatasetAssociation_2_OQwwTH" 5242880; sh -c "exit $return_code"
+galaxy.jobs.runners.drmaa DEBUG 2016-11-05 14:07:24,125 (2) submitting file /srv/galaxy/server/database/jobs/000/2/galaxy_2.sh
+galaxy.jobs.runners.drmaa INFO 2016-11-05 14:07:24,172 (2) queued as 7
+galaxy.jobs DEBUG 2016-11-05 14:07:24,172 (2) Persisting job destination (destination id: slurm)
+galaxy.jobs.runners.drmaa DEBUG 2016-11-05 14:07:24,539 (2/7) state change: job is queued and active
+```
+
+At this point the job has been accepted by Slurm and is awaiting scheduling on a node. Once it's been sent to a node and starts running, Galaxy logs this event:
+
+```
+galaxy.jobs.runners.drmaa DEBUG 2016-11-05 14:07:25,559 (2/7) state change: job is running
+```
+
+Finally, when the job is complete, Galaxy performs its job finalization process:
+
+```
+galaxy.jobs.runners.drmaa DEBUG 2016-11-05 14:07:30,883 (2/7) state change: job finished normally
+galaxy.model.metadata DEBUG 2016-11-05 14:07:31,132 loading metadata from file for: HistoryDatasetAssociation 2
+galaxy.jobs INFO 2016-11-05 14:07:31,336 Collecting metrics for Job 2
+galaxy.jobs DEBUG 2016-11-05 14:07:31,370 job 2 ended (finish() executed in (411.821 ms))
+galaxy.model.metadata DEBUG 2016-11-05 14:07:31,375 Cleaning up external metadata files
+```
+
+Note a few useful bits in the output:
+- `Persisting job destination (destination id: slurm)`: Galaxy has selected the `slurm` destination we defined
+- `submitting file /srv/galaxy/server/database/jobs/000/2/galaxy_2.sh`: This is the path to the script that is submitted to Slurm as it would be with `sbatch`
+- `(2) queued as 7`: Galaxy job id "2" is Slurm job id "7".
+- If `job <id> ended` is reached, the job should show as done in the UI
+
+Slurm allows us to query the exit state of jobs for a time period of the value of Slurm's `MinJobAge` option, which defaults to 300 (seconds, == 5 minutes):
+
+```console
+$ scontrol show job 7
+JobId=7 JobName=g2_upload1_anonymous_10_0_2_2
+   UserId=galaxy(999) GroupId=galaxy(999)
+   Priority=4294901754 Nice=0 Account=(null) QOS=(null)
+   JobState=COMPLETED Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:00:06 TimeLimit=UNLIMITED TimeMin=N/A
+   SubmitTime=2016-11-05T14:07:24 EligibleTime=2016-11-05T14:07:24
+   StartTime=2016-11-05T14:07:24 EndTime=2016-11-05T14:07:30
+   PreemptTime=None SuspendTime=None SecsPreSuspend=0
+   Partition=debug AllocNode:Sid=gat2016:16025
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=localhost
+   BatchHost=localhost
+   NumNodes=1 NumCPUs=1 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=1,node=1
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=1 MinMemoryNode=0 MinTmpDiskNode=0
+   Features=(null) Gres=(null) Reservation=(null)
+   Shared=0 Contiguous=0 Licenses=(null) Network=(null)
+   Command=(null)
+   WorkDir=/srv/galaxy/server/database/jobs/000/2
+   StdErr=/srv/galaxy/server/database/jobs/000/2/galaxy_2.e
+   StdIn=StdIn=/dev/null
+   StdOut=/srv/galaxy/server/database/jobs/000/2/galaxy_2.o
+   Power= SICP=0
+```
+
+After the job has been purged from the active jobs database, a bit of information (but not as much as `scontrol` provides) can be retrieved from Slurm's logs. However, it's a good idea to set up Slurm's accounting database to keep old job information in a queryable format.
 
 ## So, what did we learn?
 
 Hopefully, you now understand:
--
--
+- How the various DRM and DRMAA pieces fit together to allow Galaxy to interface with a cluster
+- Some basic Slurm inspection and usage: commands for other DRMs are different but the process is similar
 
 ## Further Reading
 
@@ -366,6 +512,7 @@ Hopefully, you now understand:
 - The [Slurm documentation](http://slurm.schedmd.com/) is extensive and covers all the features and myriad of ways in which you can configure slurm.
 - [PSNC slurm-drmaa](http://apps.man.poznan.pl/trac/slurm-drmaa)'s page includes documentation and the SVN repository, which has a few minor fixes since the last released version. PSNC also wrote the initial implementations of the DRMAA libraries for PBSPro and LSF, so all three are similar.
 - [My own fork of slurm-drmaa](http://github.com/natefoo/slurm-drmaa) includes support for Slurms `-M`/`--clusters` multi-cluster functionality.
+- [Slurm Accounting documentation](http://slurm.schedmd.com/accounting.html) explains how to set up SlurmDBD.
 
 ## Notes
 
