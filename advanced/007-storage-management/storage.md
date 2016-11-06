@@ -58,13 +58,66 @@ Solutions:
 - Quotas
 - Clean up deleted data (aggressively)
 - Forced removal based on age available
+- Data libraries for common data
+
+---
+# Data Libraries
+
+Provide a way to conveniently share Galaxy datasets within a group of Galaxy users or with everybody that has access to a specific instance of Galaxy.
+
+* Can import data from filesystem without duplicating it.
+
+--
+* Can import whole directories preserving the folder structure.
+
+--
+* The dataset's size does not count towards user's quota.
+  * Every dataset in the library is stored only once no matter how many users are using it in their histories.
+
+--
+* Uses roles and groups to control permissions on library/dataset level.
+  * Only admins can _create_ libraries.
+
+---
+# Libraries configuration
+
+In `galaxy.ini`:
+
+* `user_library_import_dir`
+  * Directory must contain sub-directories named the same as user's email.
+  * Allows users to browse and import from the given folder.
+  * Works well in combination with `ftp_upload_dir`.
+* `allow_library_path_paste`
+  * Admin-only, allows importing from any path that the Galaxy's user has access to.
+
+???
+If you use old library interface you can also set `library_import_dir`.
+It specifies which folder admins may browse and import from.
+
+---
+# Libraries Exercise
+
+* Create a data library
+
+--
+* Clone `https://github.com/galaxyproject/galaxy-test-data` to your home folder.
+
+--
+* Configure your instance to allow importing data from your home folder.
+
+--
+* Import to your library a subset of datasets from the newly created `~/galaxy-test-data/`.
+  * Use `Link files instead of copying` for some.
+
+--
+* Import some files from the library to a new history.
 
 ---
 # Data cleanup
 
 * Can only delete (or purge) dataset when all 'associations' pointing at it have been marked `deleted`.
 * Cleaning scripts are part of the codebase at `scripts/cleanup_datasets/`.
-* The main script is `cleanup_datasets.py` .
+* The main script is `cleanup_datasets.py`.
 
 ---
 class: normal
@@ -102,6 +155,13 @@ To make it easy CRONing things some usecases of `cleanup_datasets.py` come pre-w
 * `delete_datasets.sh` - If datasets should be removed before their outer container has been deleted.
 
 ---
+# Exercise - Data cleanup
+
+* Delete and purge the new history.
+* Delete and purge the new library.
+* Purge all deleted datasets in your data library.
+
+---
 # Additional cleaning scripts
 
 * `admin_cleanup_datasets.py`
@@ -112,7 +172,7 @@ To make it easy CRONing things some usecases of `cleanup_datasets.py` come pre-w
   * Cleans up datasets in Galaxy quickly.
   * Operates directly on DB (PostgreSQL >= 9.1).
 * `rename_purged_datasets.py` and `remove_renamed_datasets_from_disk`
-  * Rename a dataset file by appending `_purged`.
+  * Rename a dataset file by appending `_purged` to the filename.
   * Remove the renamed datasets.
 
 ---

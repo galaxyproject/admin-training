@@ -107,7 +107,7 @@ galaxy_config:
     database_connection: postgresql:///galaxy
     admin_users: nate@bx.psu.edu     # <---- Put your user email here
     tool_dependency_dir: /srv/galaxy/deps
-    job_config_file: {{ galaxy_config_dir }}/job_conf.xml
+    job_config_file: "{{ galaxy_config_dir }}/job_conf.xml"
   "uwsgi":
     processes: 1
     socket: 127.0.0.1:4001
@@ -131,12 +131,11 @@ supervisor_configs:
 
 ``` ini
 [galaxyservers]
-<instance_ip> # <---- The ip address of your machine
+localhost
 
-[vars]
-ansible_user=ubuntu
-ansible_ssh_private_key_file=<path_to_your_private_ssh_key>
-
+[galaxyservers:vars]
+ansible_connection=local
+ansible_become=yes
 ```
 
 * There's an addition to the files we've downloaded: `job_conf.xml`

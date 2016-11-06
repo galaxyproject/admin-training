@@ -32,6 +32,7 @@ class: left
 * Standalone Local Server
 
 ---
+class: normal
 # Choosing where to run
 
 Public Prebuilt SaaS (usegalaxy.org, public servers)
@@ -72,12 +73,12 @@ Standalone Local Server
 ---
 # Software Requirements
 
-* Required:
+Required:
   - Galaxy is written in Python and depends on **Python 2.7**
   - All major distros in wide circulation have 2.7, *except* RHEL<sup>[1]</sup> 6
     - See: Software Collections for [RHEL](https://access.redhat.com/solutions/472793), [CentOS](https://wiki.centos.org/AdditionalResources/Repositories/SCL), [Scientific Linux](http://linux.web.cern.ch/linux/scl/)
 
-* Optional (but not really):
+Optional (but not really):
   - PostgreSQL
     - Covered in: Today, 11:20: Database choices and configuration. Introduction to PostgreSQL
   - uWSGI (will soon come with Galaxy)
@@ -198,13 +199,11 @@ Future:
 
 **Before** deploying your first Galaxy server:
 
-Get PostgreSQL (you do not want to switch later)
-
-Figure out where Galaxy will be stored
-- Make sure it will be accessible to any eventual compute
-
-Figure out where data will be stored
-- Make sure it will be accessible to any eventual compute
+- Get PostgreSQL (you do not want to switch later)
+- Figure out where Galaxy will be stored
+  - Make sure it will be accessible to any eventual compute
+- Figure out where data will be stored
+  - Make sure it will be accessible to any eventual compute
 
 ---
 # Deployment Best Practices
