@@ -103,7 +103,20 @@ galaxy.model.metadata DEBUG 2016-11-03 20:12:00,891 Cleaning up external metadat
 ```
 
 ---
-# Jobs aren't running (always gray)
+# Jobs aren't running -  gray (!)
+
+Not yet picked up by the Galaxy job handler subsystem
+
+Solutions:
+- If single or multiprocess
+  - Ensure that handler ID(s) in `job_conf.xml` match `--server-name`(s)
+- If multiprocess, check to ensure that your job handler(s) are running
+  - If yes, restart handler(s)
+
+---
+# Jobs aren't running - gray clock
+
+A handler has seen this job
 
 Verify concurrency limits unmet in `job_conf.xml`:
 - Local jobs: value of plugin `workers` attribute (default: 4)
@@ -112,12 +125,23 @@ Verify concurrency limits unmet in `job_conf.xml`:
 Exceeding disk quota also pauses jobs, but users are notified of this.
 
 ---
-# Jobs aren't running (always gray)
+# Jobs aren't running - gray clock
 
 Check database for:
 - State
-- Handler (advanced)
+- Destination id assigned?
 - Jobs owned by user in non-terminal state if limits in use
+
+---
+# Jobs aren't finishing - yellow
+
+The tool/dependency is no longer executing but the job is still "running"
+
+Solutions:
+- Check cluster (advanced) for job
+- Check last log message for job
+- Setting/collecting metadata can be slow: wait
+- Check handlers as with gray (!)
 
 ---
 # Quota not being updated for a certain user
