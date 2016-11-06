@@ -11,6 +11,7 @@ generate-slides:
 	$(IN_VENV) python slideshow/build_slideshow.py 'Galactic Database' intro/03-databases/databases.md 03-databases
 	$(IN_VENV) python slideshow/build_slideshow.py 'Galactic Database' intro/04-web-servers/webservers.md 04-web-servers
 	$(IN_VENV) python slideshow/build_slideshow.py 'Tool Shed' intro/05-tool-shed/shed_intro.md 05-tool-shed
+	$(IN_VENV) python slideshow/build_slideshow.py 'Tool Dependencies' intro/05-tool-shed/tool-dependencies.md 05-tool-shed
 	$(IN_VENV) python slideshow/build_slideshow.py 'Tool Installation' intro/05-tool-shed/tool_installation.md 05-tool-shed
 	$(IN_VENV) python slideshow/build_slideshow.py 'Exercise Tool Management' intro/05-tool-shed/ex-tool-management.md 05-tool-shed
 	$(IN_VENV) python slideshow/build_slideshow.py 'Exercise Advanced Tool Management' intro/05-tool-shed/ex-advanced-tool-management.md 05-tool-shed

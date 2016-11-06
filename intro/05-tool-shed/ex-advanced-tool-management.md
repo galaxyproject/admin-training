@@ -20,7 +20,7 @@ by @martenson
 ---
 ## Task 2
 
-* Install freebayes revision YYY and include _only_ Conda dependencies.
+* Install freebayes revision YYY and include _only_ Conda dependencies installation.
 
 ---
 ## Task 3

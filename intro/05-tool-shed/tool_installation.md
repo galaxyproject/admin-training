@@ -18,21 +18,31 @@ class: larger
 We should be able to answer your questions.
 
 ---
+# Galaxy Vocabulary
+
+* `tool` - XML file that describes to Galaxy how the underlying software works.
+* `repository` - Versioned code archive in Tool Shed containing Galaxy tool(s).
+
+---
 # Ways to add tools
 
 You can add tools to Galaxy either
-* Manually
-  * Trivial for trivial tools
-  * Useful for tool development
+* Manually - Trivial for trivial tools and useful for tool development.
 * Using Tool Shed
   * Through admin UI in Galaxy
   * Using scripts
 
 ---
-# Galaxy Vocabulary
+# Example of configuration change
 
-* `tool` - XML file that describes to Galaxy how the underlying software works.
-* `repository` - Versioned code archive in Tool Shed containing Galaxy tool(s).
+- By default Galaxy loads all tools in `tool_conf.xml.sample` into tool panel.
+- To add local tools you need:
+  - Make a copy `$ cp tool_conf.xml.sample tool_conf.xml`.
+  - Add your tool entries to the `tool_conf.xml`.
+  - Restart Galaxy.
+
+???
+From 16.10 use `<toolbox monitor="true">` to trigger hot reload of tools.
 
 ---
 # How to install a tool from Tool Shed

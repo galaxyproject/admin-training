@@ -65,11 +65,15 @@ For PuTTY on Windows:
 # Clone the repository
 
 1. check what is the latest [release](https://docs.galaxyproject.org/en/master/releases/index.html)
-1. run `$ git clone -b release_16.07 https://github.com/galaxyproject/galaxy.git`
-  - release is defined by the branch name: `release_16.07` see the [branch list](https://github.com/galaxyproject/galaxy/branches/all))
+1. run
+```shell
+$ git clone -b release_16.07 https://github.com/galaxyproject/galaxy.git
+```
+Release is defined by the branch name: `release_16.07` see the [branch list](https://github.com/galaxyproject/galaxy/branches/all))
 
 Without specifying branch during clone you are running the *development* version of Galaxy.
-- For the rolling stable release: `git checkout master`<sup>[1]</sup>.
+
+For the rolling stable release: `git checkout master`<sup>[1]</sup>.
 
 .footnote[<sup>[1]</sup> This is currently not updated as often as it should be.]
 
@@ -80,7 +84,7 @@ Without specifying branch during clone you are running the *development* version
 1. `$ ./run.sh`
 1. visit `http://localhost:8080`
 
-You now see default Galaxy running.
+You should see default Galaxy running.
 
 .footnote[Note that first startup needs internet connection and takes longer than the subsequent ones.]
 
@@ -110,16 +114,20 @@ You now see default Galaxy running.
 - Galaxy often uses the files with suffix `*.sample` as declared defaults.
 
 ---
-# Example of configuration change
+# Exercise make your own config
 
-- By default Galaxy loads all tools in `tool_conf.xml.sample` into tool panel.
-- To add tools you should:
-  - Make a copy `$ cp tool_conf.xml.sample tool_conf.xml`.
-  - Add your tool entries to the `tool_conf.xml`.
-  - Restart Galaxy.
-
-???
-Use `<toolbox monitor="true">` to trigger hot reload of tools.
+* Copy the provided sample and open editor.
+```shell
+$ cp config/galaxy.ini.sample config/galaxy.ini
+$ nano config/galaxy.ini
+```
+* Set the following entries.
+```
+message_box_visible = True
+message_box_content = Hey, at least I am not popup!
+message_box_class = info
+```
+* (Re)start Galaxy.
 
 ---
 # Update the welcome page
@@ -135,9 +143,9 @@ No restarting is necessary.
 ???
 You can load remote content to this iframe (blog, existing presentation, etc.).
 
-
 ---
 # What to do next?
+
 - Keep your code up to date
 - Make yourself an administrator
 - Install tools

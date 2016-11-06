@@ -87,10 +87,12 @@ In `galaxy.ini`:
   * Directory must contain sub-directories named the same as user's email.
   * Allows users to browse and import from the given folder.
   * Works well in combination with `ftp_upload_dir`.
-* `library_import_dir`
-  * Admin-only, specifies which folder admins may browse and import from.
 * `allow_library_path_paste`
   * Admin-only, allows importing from any path that the Galaxy's user has access to.
+
+???
+If you use old library interface you can also set `library_import_dir`.
+It specifies which folder admins may browse and import from.
 
 ---
 # Libraries Exercise
