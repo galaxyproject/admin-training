@@ -1,0 +1,93 @@
+## Directory to stage files to. This should likely be updated to point
+## to an absolute path, such as /tmp/pulsar_staging or C:\\pulsar_staging
+#staging_directory: files/staging
+
+## Configure one or more named managers (more information on configuring managers
+## can be found at http://pulsar.readthedocs.org/en/latest/job_managers.html).
+#managers:
+#  _default_:
+#    type: queued_python
+#    num_concurrent_jobs: 1
+
+
+## Mode to create job releated directories with. If unset
+## will just use 0777 with umask mask applied.
+#job_directory_mode: 0777
+
+## Private token that must be sent as part of the request to
+## authorize use. If security is important, please use this in
+## combination with SSL.
+#private_token: changemeinproduction
+
+## Pulsar stores information about active jobs in the following directory - if
+## user the Pulsar runs as cannot write to the Pulsar root directory this
+## should be updated to point to some directory which it can write to. Set this
+## value to __none__ to disable persisting jobs all together.
+#persistence_directory: files/persisted_data
+
+## How are ids assigned. galaxy (default) just passes through ids as
+## is. Setting this uuid assigns each job a UUID, this is strongly
+## encouraged if multiple Galaxy servers are targetting one Pulsar server.
+#assign_ids: uuid
+
+## Pulsar-equivalent of Galaxy's tool_dependency_dir. The default directory
+## used by tool dependency resolves to find dependency scripts. Used
+## if Galaxy configures remote dependency resolution.
+#tool_dependency_dir: dependencies
+
+## Pulsar-equivalent of Galaxy's tool_dependency_resolves_conf.
+# dependency_resolvers_config_file: dependency_resolvers_conf.xml
+
+## Comma separated list of paths to toolbox files. If this is set, Pulsar
+## will use the information contained in the tools to lock down what
+## the Pulsar can execute. This absolutely *SHOULD* be enabled if the Pulsar
+## server is being opened to the world. See the documentation
+## (pulsar.readthedocs.org) for more information about securing Pulsar.
+#tool_config_files: toolbox/conf.xml
+
+## Setup job metrics file. See Galaxy documentaiton for more
+## information on job metrics. (If job_metrics_conf.xml is present,
+## this will be used unless overridden by this option.
+#job_metrics_config_file: job_metrics_conf.xml
+
+## Bind the Pulsar to an AMQP endpoint. Ensure kombu
+## Python library is available and start the Pulsar normally.
+#message_queue_url: amqp://guest:guest@localhost:5672//
+
+# AMQP does not guarantee that a published message is received by the AMQP
+# server, so Pulsar can request that the consumer acknowledge messages and will
+# resend them if acknowledgement is not received after a configurable timeout
+# (in seconds).
+#amqp_acknowledge: false
+#amqp_republish_time: 30
+
+## The AMQP client can provide an SSL client certificate (e.g. for
+## validation), the following options configure that certificate
+## (see for reference:
+##   http://kombu.readthedocs.org/en/latest/reference/kombu.connection.html
+## ). If you simply want to use SSL but not use/validate a client
+## cert, just use the ?ssl=1 query on the amqp URL instead.
+#amqp_connect_ssl_ca_certs: /path/to/cacert.pem
+#amqp_connect_ssl_keyfile: /path/to/key.pem
+#amqp_connect_ssl_certfile: /path/to/cert.pem
+#amqp_connect_ssl_cert_reqs: cert_required
+
+## AMQP Reconnection Parameters. Control if, and how often messages are re-sent
+##if they fail
+# Comments taken from http://kombu.readthedocs.org/en/latest/reference/kombu.connection.html#kombu.connection.Connection.ensure
+#amqp_publish_retry: True
+## Maximum number of times to retry. If this limit is exceeded the connection error will be re-raised.
+#amqp_publish_retry_max_retries: 5
+## The number of seconds we start sleeping for.
+#amqp_publish_retry_interval_start: 10
+## How many seconds added to the interval for each retry.
+#amqp_publish_retry_interval_step: 10
+## Maximum number of seconds to sleep between each retry.
+#amqp_publish_retry_interval_max: 60
+
+## *Experimental*. Enable file caching by specifing a directory here. 
+## Directory used to store incoming file cache. It works fine for HTTP
+## transfer, have not tested with staging by coping. Also there is no
+## mechanism for expiring cache so it will grow unbounded without
+## external clean up.
+#file_cache_dir: cache
