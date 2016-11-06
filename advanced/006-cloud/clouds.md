@@ -119,10 +119,48 @@ class: left
 class: left
 ## ![GATC Logo](../shared-images/AdminTraining2016-100.png) Galaxy on the Cloud
 .large[
-* 
-
+* There are cloud images (VM blueprints) available
+  * with Galaxy pre-installed
+  * with different sets of tools installed
+  * with access to reference data
+  * for different clouds. (AWS globally, JetStream, Nectar, CLIMB etc.)
+* You just need credentials for the cloud you want to "launch" on.
+  * Credentials are generally two strings,
+  * An access key and a secret key
+  * They are obtained from the cloud account admin page you want to use.
 ]
 .footnote[\#usegalaxy \#GATC2016 / @galaxyproject]
+---
+class: left
+## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Cloud Launch
+.large[
+* Cloud launch is a system for launching Galaxy on cloud resources
+  * Web interface located at launch.usegalaxy.org
+  * Fill in the credential details, choose a location and machine size
+  * Press go!
+* The cloud will now provision you a computer in the cloud with Galaxy installed and ready to go.
+  * Depending on your choices and availability you will also have access to reference data and various tools
+  * It should only take 2-3 minutes for everything to be set up.
+]
+
+.footnote[\#usegalaxy \#GATC2016 / @galaxyproject]
+
+---
+class: left
+## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Launch Demo
+.large[
+* Launch a Galaxy on the Cloud in NeCTAR.
+  * Similar process to AWS (but free for me)
+  * `launch.genome.edu.au`
+  * [launch.usegalaxy.org](launch.usegalaxy.org)
+* Walk through what is happening.
+* Beta Launch (Cloud Launch 2.0)
+  * [beta.launch.usegalaxy.org](beta.launch.usegalaxy.org)
+]
+
+
+.footnote[\#usegalaxy \#GATC2016 / @galaxyproject]
+
 ---
 class: left
 ## ![GATC Logo](../shared-images/AdminTraining2016-100.png) Cloud Manager
@@ -136,30 +174,47 @@ class: left
 ]
 
 
-.footnote[\#usegalaxy \#GATC2016 / @galaxyproject] CloudMan
+.footnote[\#usegalaxy \#GATC2016 / @galaxyproject]
 ---
 class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Overview
+## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  CloudMan
 
-
+.center[<img src='images/cloudman-main.png' width=85%>]
 
 .footnote[\#usegalaxy \#GATC2016 / @galaxyproject]
 
 ---
 class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Overview
+## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  CloudMan Admin
+
+.center[<img src='images/cloudman-admin.png' width=80%>]
 
 .footnote[\#usegalaxy \#GATC2016 / @galaxyproject]
 
 ---
 class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Overview
-
+## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Cluster on the Cloud?
+.large[
+* Your cloud instance is a single machine
+* CloudMan can start "worker" nodes.
+  * More cloud instances (of any size)
+  * Automatically connects to file system
+  * Are registered in slurm setup
+  * A node will take ~2-3 minutes to start and configure.
+]
 .footnote[\#usegalaxy \#GATC2016 / @galaxyproject]
 
 ---
 class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Overview
+## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Dynamic Scaling
+
+.large[
+* Can set up dynamic scaling
+  * Upper and lower node numbers
+  * When queue is full and jobs wait certain time, new nodes are launched.
+]
+
+.center[<img src='images/cloudman-scaling.png' width=60%>]
 
 .footnote[\#usegalaxy \#GATC2016 / @galaxyproject]
 
