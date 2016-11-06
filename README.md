@@ -91,7 +91,7 @@ Built slides have [an index](https://martenson.github.io/dagobah-training/).
 | 09:00 | Welcome and Introduction/Questions |  | All |
 | 09:20 | Using and configuring external authentication services | [Slides](https://martenson.github.io/dagobah-training/004-external-auth/external-auth.html) | (M) |
 | 10:30 | **Morning Break** | | |
-| 10:50 | Connecting Galaxy to a compute cluster I |  | (N) |
+| 10:50 | Connecting Galaxy to a compute cluster I | [slides](https://martenson.github.io/dagobah-training/005-compute-cluster/compute-cluster.html), [exercise 1](https://github.com/martenson/dagobah-training/blob/master/advanced/005-compute-cluster/ex1-slurm.md), [exercise 2](https://github.com/martenson/dagobah-training/blob/master/advanced/005-compute-cluster/ex2-advanced-job-configs.md) | (N) |
 | 12:20 | **Lunch**, *catered* | | |
 | 13:20 | Connecting Galaxy to a compute cluster II |  | (N) |
 | 15:20 | **Afternoon Break** | | |
