@@ -55,7 +55,13 @@ Almost all of this content is brand new, there may be sessions that are too long
 .footnote[[bit.ly/saltgalaxy](https://bit.ly/saltgalaxy)]
 
 ---
-# Thanks
+# Useful Links
+
+- https://github.com/galaxyproject/
+- https://docs.galaxyproject.org/
+- https://wiki.galaxyproject.org/ (notably https://wiki.galaxyproject.org/Admin)
+
+.footnote[[bit.ly/saltgalaxy](https://bit.ly/saltgalaxy)]
 
 - Dave Clements
 - Anita Orendt
