@@ -4,14 +4,6 @@
 
 # Tool Management Exercise
 
-#### Author @martenson
-
-## Learning Outcomes
-
-By the end of this tutorial, you should:
-
-The following exercise will flex the basics of tool installation and management.
-
 by @martenson
 
 \#usegalaxy \#GAT2016 @galaxyproject
@@ -46,7 +38,8 @@ Hint: You need to modify `shed_tool_conf.xml` in order to do this.
 ---
 ## Task 5
 *You want to show both versions of freebayes and allow users to switch versions on the tool form*
-Move freebayes revision `24:da6e10dee68b` into 'New Freebayes' section and display it.
+
+* Move freebayes revision `24:da6e10dee68b` into 'New Freebayes' section and display it.
 
 Hint: tools with the same ID and different version in the same section will 'collapse' into one and offer the switch button.
 
@@ -64,7 +57,7 @@ Hints:
 ## Task 7
 *The old freebayes version is no longer useful*
 
-Uninstall the revision `22:99684adf84de` of freebayes.
+* Uninstall the revision `22:99684adf84de` of freebayes.
 
 ---
 ## Task 8
