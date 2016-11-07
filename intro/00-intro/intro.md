@@ -78,10 +78,11 @@ Almost all of this content is brand new, there may be sessions that are too long
 # Hosts
 
 We would like to thank:
-- University of Utah Center for High Performance Computing (CHPC)
-- USTAR Center for Genetic Discovery (UCGD) @ University of Utah
-- Department of Biomedical Informatics @ University of Utah
-- Clinical & Translational Science Biomedical Informatics Core (CCTS BMIC) @ University of Utah
+
+- [University of Utah Center for High Performance Computing (CHPC)](http://www.chpc.utah.edu/)
+- [USTAR Center for Genetic Discovery (UCGD) @ University of Utah](http://ucgd.genetics.utah.edu/)
+- [Department of Biomedical Informatics @ University of Utah](http://medicine.utah.edu/dbmi/)
+- [Clinical & Translational Science Biomedical Informatics Core (CCTS BMIC) @ University of Utah](http://medicine.utah.edu/ccts/bmic/)
 
 .footnote[[bit.ly/saltgalaxy](https://bit.ly/saltgalaxy)]
 
