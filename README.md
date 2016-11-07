@@ -26,16 +26,16 @@ Built slides have [an index](https://martenson.github.io/dagobah-training/).
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
 | 09:15 | Check-in |  |  |
-| 09:30 | Welcome and Introduction | [slides](https://martenson.github.io/dagobah-training/00-intro/intro.html) | All |
-| 09:45 | Deployment and Platform Options | [slides](https://martenson.github.io/dagobah-training/01-deployment-platforms/choices.html) | (N) |
-| 10:15 | Get a Basic Galaxy Server Up and Running | [slides](https://martenson.github.io/dagobah-training/02-basic-server/get-galaxy.html) | (N + M) |
+| 09:30 | Welcome and Introduction | [Slides](https://martenson.github.io/dagobah-training/00-intro/intro.html) | All |
+| 09:45 | Deployment and Platform Options | [Slides](https://martenson.github.io/dagobah-training/01-deployment-platforms/choices.html) | (N) |
+| 10:15 | Get a Basic Galaxy Server Up and Running | [Slides](https://martenson.github.io/dagobah-training/02-basic-server/get-galaxy.html) | (N + M) |
 | 11:00 | **Morning Break** | | |
-| 11:20 | Database choices and configuration. Introduction to PostgreSQL | [slides](https://martenson.github.io/dagobah-training/03-databases/databases.html) [exercise](intro/03-databases/ex1-postgres.md) | (N + M) |
+| 11:20 | Database choices and configuration. Introduction to PostgreSQL | [Slides](https://martenson.github.io/dagobah-training/03-databases/databases.html), [Exercise](intro/03-databases/ex1-postgres.md) | (N + M) |
 | 12:20 | **Lunch**, *catered* | | |
-| 13:20 | Web server choices and configuration. Introduction to Apache and NGINX. | [slides](https://martenson.github.io/dagobah-training/04-web-servers/webservers.html), [exercise 1](https://github.com/martenson/dagobah-training/blob/master/intro/04-web-servers/ex1-apache.md), [exercise 2](https://github.com/martenson/dagobah-training/blob/master/intro/04-web-servers/ex2-nginx.md) | (N) |
-| 14:20 | Introduction to the Galaxy Tool Shed: Identifying and installing well-defined tools | [shed](https://martenson.github.io/dagobah-training/05-tool-shed/shed_intro.html), [tools](https://martenson.github.io/dagobah-training/05-tool-shed/tool_installation.html), [dependencies](https://martenson.github.io/dagobah-training/05-tool-shed/tool-dependencies.html) & [exercise](intro/05-tool-shed/ex-tool-management.md)| (M) |
+| 13:20 | Web server choices and configuration. Introduction to Apache and NGINX. | [Slides](https://martenson.github.io/dagobah-training/04-web-servers/webservers.html), [Exercise 1](https://github.com/martenson/dagobah-training/blob/master/intro/04-web-servers/ex1-apache.md), [Exercise 2](https://github.com/martenson/dagobah-training/blob/master/intro/04-web-servers/ex2-nginx.md) | (N) |
+| 14:20 | Introduction to the Galaxy Tool Shed: Identifying and installing well-defined tools | [Slides (Shed)](https://martenson.github.io/dagobah-training/05-tool-shed/shed_intro.html), [Slides (Tools)](https://martenson.github.io/dagobah-training/05-tool-shed/tool_installation.html), [Slides (Dependencies)](https://martenson.github.io/dagobah-training/05-tool-shed/tool-dependencies.html), [Exercise](intro/05-tool-shed/ex-tool-management.md)| (M) |
 | 15:30 | **Afternoon Break** | | |
-| 15:50 | Defining and importing genomes, Data Managers | [slides](https://martenson.github.io/dagobah-training/06-reference-genomes/reference_genomes.html) & [exercise](intro/06-reference-genomes/ex06_reference_genomes.md) | (S) |
+| 15:50 | Defining and importing genomes, Data Managers | [Slides](https://martenson.github.io/dagobah-training/06-reference-genomes/reference_genomes.html), [Exercise](intro/06-reference-genomes/ex06_reference_genomes.md) | (S) |
 | 17:40 | **Dinner**, *on your own* |  |  |
 | 19:00 | Discussion, troubleshooting, ad hoc support |  | All |
 | 20:30 | Close Day 1 | | All |
@@ -51,13 +51,13 @@ Built slides have [an index](https://martenson.github.io/dagobah-training/).
 | 11:00 | **Morning Break** | | |
 | 11:20 | Users, Groups, and Quotas |  | (D) |
 | 12:20 | **Lunch**, *catered* | | |
-| 13:20 | Anatomy of a Tool Definition, Planemo, Publishing | [slides](https://martenson.github.io/dagobah-training/09-tool-basics/tool-basics.html) | (S + M) |
-| 14:50 | Updating tools and supporting multiple versions of tools | [exercise](https://martenson.github.io/dagobah-training/05-tool-shed/ex-advanced-tool-management.html) | (S + M) |
+| 13:20 | Anatomy of a Tool Definition, Planemo, Publishing | [Slides](https://martenson.github.io/dagobah-training/09-tool-basics/tool-basics.html) | (S + M) |
+| 14:50 | Updating tools and supporting multiple versions of tools | [Exercise](https://martenson.github.io/dagobah-training/05-tool-shed/ex-advanced-tool-management.html) | (S + M) |
 | 15:20 | **Afternoon Break** | | |
-| 15:40 | Upgrading to a new Galaxy release | [slides](https://martenson.github.io/dagobah-training/10-upgrading-release/upgrading.html) | (N + M) |
-| 16:50 | When things go wrong: Basic Galaxy server troubleshooting | [slides](https://martenson.github.io/dagobah-training/11-basic-troubleshooting/basic-troubleshooting.html) | (N + M) |
+| 15:40 | Upgrading to a new Galaxy release | [Slides](https://martenson.github.io/dagobah-training/10-upgrading-release/upgrading.html) | (N + M) |
+| 16:50 | When things go wrong: Basic Galaxy server troubleshooting | [Slides](https://martenson.github.io/dagobah-training/11-basic-troubleshooting/basic-troubleshooting.html) | (N + M) |
 | 17:40 | **Dinner**, *catered* |  |  |
-| 19:00 | Introduction to Galaxy Architecture (Joint session with the Advanced Topics session) | [slides](https://martenson.github.io/dagobah-training/12-architecture/galaxy_architecture.html) | All |
+| 19:00 | Introduction to Galaxy Architecture (Joint session with the Advanced Topics session) | [Slides](https://martenson.github.io/dagobah-training/12-architecture/galaxy_architecture.html) | All |
 | 20:20 | Wrap up and close | | All |
 
 ### Advanced Sessions
@@ -76,7 +76,7 @@ Built slides have [an index](https://martenson.github.io/dagobah-training/).
 | 12:20 | **Lunch**, *catered* | | |
 | 13:20 | Server monitoring and maintenance: Admin UI, Log files, Direct database queries, Command line & scripts, What to backup and how |  | (S + N) |
 | 15:20 | **Afternoon Break** | | |
-| 15:40 | Controlling Galaxy with systemd and supervisor | [slides](https://martenson.github.io/dagobah-training/002a-systemd-supervisor.html), [exercise](https://github.com/martenson/dagobah-training/blob/master/advanced/002a-systemd-supervisor/ex1-supervisor.md) | (N) |
+| 15:40 | Controlling Galaxy with systemd and supervisor | [Slides](https://martenson.github.io/dagobah-training/002a-systemd-supervisor.html), [Exercise](https://github.com/martenson/dagobah-training/blob/master/advanced/002a-systemd-supervisor/ex1-supervisor.md) | (N) |
 | 16:10 | Advanced tool definition, tool failures, tool debugging |  | (M) |
 | 17:40 | **Dinner**, *on your own* |  |  |
 | 19:00 | Discussion, troubleshooting, ad hoc support |  | All |
@@ -91,11 +91,11 @@ Built slides have [an index](https://martenson.github.io/dagobah-training/).
 | 09:00 | Welcome and Introduction/Questions |  | All |
 | 09:20 | Using and configuring external authentication services | [Slides](https://martenson.github.io/dagobah-training/004-external-auth/external-auth.html) | (M) |
 | 10:30 | **Morning Break** | | |
-| 10:50 | Connecting Galaxy to a compute cluster I | [slides](https://martenson.github.io/dagobah-training/005-compute-cluster/compute-cluster.html), [exercise 1](https://github.com/martenson/dagobah-training/blob/master/advanced/005-compute-cluster/ex1-slurm.md), [exercise 2](https://github.com/martenson/dagobah-training/blob/master/advanced/005-compute-cluster/ex2-advanced-job-configs.md) | (N) |
+| 10:50 | Connecting Galaxy to a compute cluster I | [Slides](https://martenson.github.io/dagobah-training/005-compute-cluster/compute-cluster.html), [Exercise 1](https://github.com/martenson/dagobah-training/blob/master/advanced/005-compute-cluster/ex1-slurm.md), [Exercise 2](https://github.com/martenson/dagobah-training/blob/master/advanced/005-compute-cluster/ex2-advanced-job-configs.md) | (N) |
 | 12:20 | **Lunch**, *catered* | | |
 | 13:20 | Connecting Galaxy to a compute cluster II |  | (N) |
 | 15:20 | **Afternoon Break** | | |
-| 15:40 | Using Heterogeneous compute resources | [slides](https://martenson.github.io/dagobah-training/005-compute-cluster/heterogeneous.html), [exercise](https://github.com/martenson/dagobah-training/blob/master/advanced/005-compute-cluster/ex1-pulsar.md) | (N) |
+| 15:40 | Using Heterogeneous compute resources | [Slides](https://martenson.github.io/dagobah-training/005-compute-cluster/heterogeneous.html), [Exercise](https://github.com/martenson/dagobah-training/blob/master/advanced/005-compute-cluster/ex1-pulsar.md) | (N) |
 | 17:40 | **Dinner**, *on your own* |  |  |
 | 19:00 | Using public and private cloud compute resources | [Slides](https://martenson.github.io/dagobah-training/006-clouds/clouds.html) | (S) |
 | 20:30 | Close day 2 | | All |
