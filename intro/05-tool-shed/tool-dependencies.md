@@ -78,6 +78,3 @@ and prioritised in the config file `dependency_resolvers_conf.xml`.
 -->
 </dependency_resolvers>
 ```
-
----
-# Exercise

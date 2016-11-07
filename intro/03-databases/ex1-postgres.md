@@ -1,6 +1,6 @@
 ![GATC Logo](../../docs/shared-images/AdminTraining2016-100.png) ![galaxy logo](../../docs/shared-images/galaxy_logo_25percent_transparent.png)
 
-### GATC - 2016 - Salt Lake City
+### GAT - 2016 - Salt Lake City
 
 # Connecting Galaxy to PostgreSQL - Exercise.
 

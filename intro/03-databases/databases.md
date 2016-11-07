@@ -33,10 +33,9 @@ Your questions are bound to be answered.
   * Supported in past but Galaxy is not tested against it anymore.
 
 ---
-class: normal
 # Configuration
 
-* `database_connection` is specified as a connection string in `galaxy.ini` file.
+`database_connection` is specified as a connection string in `galaxy.ini` file.
   * default SQLite `sqlite:///./database/universe.sqlite?isolation_level=IMMEDIATE`
   * local PostgreSQL `postgres://<name>:<password>@localhost:5432/galaxy`
   * production example `postgresql:///galaxy?host=/var/run/postgresql`
@@ -59,7 +58,9 @@ If large database query results are causing memory or response time issues in th
 
 Galaxy can track Tool Shed data in a separate DB.
 
-`install_database_connection = sqlite:///./database/universe.sqlite?isolation_level=IMMEDIATE`
+```shell
+install_database_connection = sqlite:///./database/universe.sqlite?isolation_level=IMMEDIATE
+```
 
 This allows bootstrapping fresh Galaxy instances with pretested installs.
 
