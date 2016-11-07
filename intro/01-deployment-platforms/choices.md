@@ -1,8 +1,8 @@
 layout: true
-class: inverse, middle, large
+class: inverse, large
 
 ---
-class: special
+class: special, middle
 # Deployment and Platform Options
 
 slides by @natefoo
@@ -10,7 +10,7 @@ slides by @natefoo
 .footnote[\#usegalaxy / @galaxyproject]
 
 ---
-class: special
+class: special, middle
 # Platform Options and Requirements
 
 .footnote[\#usegalaxy / @galaxyproject]
@@ -32,7 +32,6 @@ class: left
 * Standalone Local Server
 
 ---
-class: normal
 # Choosing where to run
 
 Public Prebuilt SaaS (usegalaxy.org, public servers)
@@ -175,7 +174,7 @@ usegalaxy.org allocates from **8 GB/core** to **16 GB/core**
 Connecting Galaxy to clusters/HPC is covered in the advanced section.
 
 ---
-class: special
+class: special, middle
 # Deployment Options and Best Practices
 
 .footnote[\#usegalaxy / @galaxyproject]
