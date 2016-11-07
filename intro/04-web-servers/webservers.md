@@ -1,8 +1,8 @@
 layout: true
-class: inverse, middle, large
+class: inverse, large
 
 ---
-class: special
+class: special, middle
 # (Proxy) Web Server Choices and Configuration
 
 Introduction to Apache and NGINX
@@ -10,10 +10,6 @@ Introduction to Apache and NGINX
 slides by @natefoo
 
 .footnote[\#usegalaxy / @galaxyproject]
-
----
-class: special
-# Reverse Proxy Web Server
 
 ---
 # Reverse Proxy
@@ -54,7 +50,6 @@ Some of these features are available directly in uWSGI (covered Wednesday)
 I recommend nginx unless you have a specific need for Apache
 
 ---
-class: normal
 # nginx "flavors"
 
 nginx plugins must be compiled in<sup>[1]</sup>

@@ -8,22 +8,6 @@
 
 ## Section 1 - Installation
 
-**Part 0 - Disable sudo password**
-
-`sudo` allows you to run programs as the `root` (admin) user. We will do this a lot during the training, so to make life easier, we'll disable the password requirement. To do this, run `sudo visudo`. Locate the following line:
-
-```
-%sudo   ALL=(ALL:ALL) ALL
-```
-
-And change it to:
-
-```
-%sudo   ALL=(ALL:ALL) NOPASSWD:ALL
-```
-
-Then, save the file and quit the editor.
-
 **Part 1 - Install PostgreSQL**
 
 Install PostgreSQL from apt:
@@ -101,4 +85,23 @@ The `?host=/var/run/postgresql` portion of the database URI instructs the databa
 If you're already running Galaxy, hit `CTRL+C` to stop it, then start it again with `sh run.sh`. It will first fetch the `psycopg2` wheel, which is the python PostgreSQL library, and then proceed to populate the database as it did the first time with SQLite.
 
 ```console
+$ sh run.sh
+Collecting psycopg2==2.6.1 (from -r /dev/stdin (line 1))
+  Downloading https://wheels.galaxyproject.org/packages/psycopg2-2.6.1-cp27-cp27mu-manylinux1_x86_64.whl (2.0MB)
+    100% |████████████████████████████████| 2.0MB 1.3MB/s
+Installing collected packages: psycopg2
+Successfully installed psycopg2-2.6.1
+  ...
+galaxy.queue_worker INFO 2016-11-07 01:47:24,494 Initializing main Galaxy Queue Worker on sqlalchemy+postgresql:///galaxyguest?host=/var/run/postgresql
+  ...
+galaxy.model.migrate.check INFO 2016-11-07 01:47:25,230 No database, initializing
+galaxy.model.migrate.check INFO 2016-11-07 01:47:25,352 Migrating 0 -> 1...
+galaxy.model.migrate.check INFO 2016-11-07 01:47:25,900
+galaxy.model.migrate.check INFO 2016-11-07 01:47:25,900 Migrating 1 -> 2...
+galaxy.model.migrate.check INFO 2016-11-07 01:47:26,185
+  ...
+Starting server in PID 2962.
+serving on http://127.0.0.1:8080
 ```
+
+Visit http://localhost:8080/ and you should see that Galaxy is running (again).
