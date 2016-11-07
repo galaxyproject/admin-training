@@ -53,4 +53,4 @@ gs50.chpc.utah.edu
 [workshop-instances:vars]
 ansible_sudo_password=bqrDIwwp59gcgot
 ansible_ssh_user=galaxyguest
-ansible_ssh_private_key_file=/Users/Simon/code/galaxy_admin_course/GATC-ansible/gat-slc
+ansible_ssh_private_key_file=/Users/Simon/code/galaxy_admin_course/gat-slc

@@ -4,8 +4,8 @@
   
   vars:
     #ansible_user: galaxyguest
-    #ansible_ssh_pass: bqrDIwwp59gcgot
-    ansible_sudo_pass: bqrDIwwp59gcgot
+    #ansible_ssh_pass: 
+    ansible_sudo_pass: <password>
   tasks:
     
     #passwordless sudo!
