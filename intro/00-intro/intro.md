@@ -66,9 +66,11 @@ Almost all of this content is brand new, there may be sessions that are too long
 ---
 # Thanks
 
-- Dave Clements
+- Karen Eilbeck
+- Barry Moore
 - Anita Orendt
 - Steve Harper
+- Dave Clements
 
 .footnote[[bit.ly/saltgalaxy](https://bit.ly/saltgalaxy)]
 
