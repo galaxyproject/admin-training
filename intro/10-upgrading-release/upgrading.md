@@ -100,5 +100,3 @@ The former is probably better than the latter
 # Distribute Galaxy
 
 If you're using a compute cluster and not running from shared filesystem
-
----
