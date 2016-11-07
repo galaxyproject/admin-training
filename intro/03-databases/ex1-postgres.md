@@ -6,7 +6,7 @@
 
 #### Authors: Nate Coraor. 2016
 
-## Section 1 - Installationo
+## Section 1 - Installation
 
 **Part 0 - Disable sudo password**
 

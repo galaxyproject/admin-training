@@ -22,10 +22,10 @@ class: normal
 You only need to download Galaxy if you plan to:
 
 - Run a local production Galaxy because you want to
-  - install and use tools unavailable on public Galaxies
-  - use sensitive data (e.g. clinical)
-  - process large datasets that are too big for public Galaxies
-  - plug-in new datasources
+  - Install and use tools unavailable on public Galaxies
+  - Use sensitive data (e.g. clinical)
+  - Process large datasets that are too big for public Galaxies
+  - Plug-in new datasources
 - Develop Galaxy tools
 - Develop Galaxy itself
 
@@ -40,7 +40,7 @@ or use [Cloudlaunch](https://launch.usegalaxy.org).
 - Python 2.7
 
 Optional
-  - samtools
+  - samtools (metadata etc.)
   - Git code versioning system
   - GNU Make + gcc to compile and install tool dependencies
   - Additional requirements for shipped tools
@@ -93,6 +93,7 @@ You should see default Galaxy running.
 
 * Galaxy started logging into the terminal from which it is run.
 * Galaxy created a Python virtual environment (venv) in `.venv/`.
+* Galaxy sourced this environment (`$ source .venv/bin/activate`)
 * Galaxy fetched needed Python binaries ('wheels') into this environment.
 * Galaxy created the default SQLite database and migrated it to the latest version.
 * Galaxy binded to the default port `8080` on `localhost`.
@@ -103,7 +104,7 @@ You should see default Galaxy running.
 # Look around
 
 1. Run a basic job (e.g. upload a file).
-1. Check `http://localhost:8080/api/version` to see Galaxy's version.
+1. Check http://localhost:8080/api/version to see Galaxy's version.
 1. Stop Galaxy by terminating the console process.
 
 ---
@@ -122,7 +123,7 @@ $ cp config/galaxy.ini.sample config/galaxy.ini
 $ nano config/galaxy.ini
 ```
 * Set the following entries.
-```
+```shell
 message_box_visible = True
 message_box_content = Hey, at least I am not popup!
 message_box_class = info
@@ -144,10 +145,16 @@ No restarting is necessary.
 You can load remote content to this iframe (blog, existing presentation, etc.).
 
 ---
+# Make yourself an administrator
+
+* Create a user using Galaxy interface.
+* Modify `galaxy.ini` to include `admin_users = your@ema.il`.
+* (Re)start Galaxy.
+
+---
 # What to do next?
 
 - Keep your code up to date
-- Make yourself an administrator
 - Install tools
 - Join the mailing list
 - Set up a backup process for your instance

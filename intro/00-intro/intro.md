@@ -31,13 +31,6 @@ class: special, center, middle
 ## @galaxyproject
 
 ---
-# On Session Times
-
-We did our best to plan the session times for the expected content, and to build the content for the session time.
-
-Almost all of this content is brand new, there may be sessions that are too long or short - apologies in advance.
-
----
 # Training Home
 
 ## [bit.ly/saltgalaxy](https://bit.ly/saltgalaxy)
@@ -45,6 +38,13 @@ Almost all of this content is brand new, there may be sessions that are too long
 * The homepage of this training is a repository at GitHub reachable by the link above.
 * Most materials are written in Markdown and we encourage Pull Requests (even during the training!).
 * After this week the repo is going to be merged to Galaxy codebase and will accompany it forward.
+
+---
+# On Session Times
+
+We did our best to plan the session times for the expected content, and to build the content for the session time.
+
+Almost all of this content is brand new, there may be sessions that are too long or short - apologies in advance.
 
 ---
 # Communication channels
@@ -66,7 +66,7 @@ Almost all of this content is brand new, there may be sessions that are too long
 ---
 # Thanks
 
-- Karen Eilbeck
+- Karen Eilbeck (!!!)
 - Barry Moore
 - Anita Orendt
 - Steve Harper
