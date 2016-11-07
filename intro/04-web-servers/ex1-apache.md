@@ -1,6 +1,6 @@
 ![GATC Logo](../../docs/shared-images/AdminTraining2016-100.png) ![galaxy logo](../../docs/shared-images/galaxy_logo_25percent_transparent.png)
 
-### GATC - 2016 - Salt Lake City
+### GAT - 2016 - Salt Lake City
 
 # Apache as a Reverse Proxy for Galaxy - Exercise.
 
@@ -187,7 +187,7 @@ To activate the new configuration, you need to run:
   service apache2 reload
 $ ls -lrt conf-enabled | tail -1
 lrwxrwxrwx 1 root root 29 Nov  3 14:02 galaxy.conf -> ../conf-available/galaxy.conf
-$ 
+$
 ```
 
 Next, we modify the previously created `sites-available/000-galaxy.conf` to include directives allowing Apache to serve static content, and instructing clients to cache it for 24 hours:

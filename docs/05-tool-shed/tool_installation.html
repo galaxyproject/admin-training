@@ -42,13 +42,13 @@ You can add tools to Galaxy either
   * Using scripts
 
 ---
-# Example of configuration change
+# How to add tools manually
 
 - By default Galaxy loads all tools in `tool_conf.xml.sample` into tool panel.
 - To add local tools you need:
   - Make a copy `$ cp tool_conf.xml.sample tool_conf.xml`.
   - Add your tool entries to the `tool_conf.xml`.
-  - Restart Galaxy.
+  - (Re)start Galaxy.
 
 ???
 From 16.10 use `<toolbox monitor="true">` to trigger hot reload of tools.
@@ -56,6 +56,7 @@ From 16.10 use `<toolbox monitor="true">` to trigger hot reload of tools.
 ---
 # How to install a tool from Tool Shed
 
+* Be an admin.
 * Find the repository you want to install.
 * (Connect Your Galaxy to the Tool Shed.)
 * From Galaxy's admin UI find the repo in the connected TS.
@@ -68,6 +69,7 @@ From 16.10 use `<toolbox monitor="true">` to trigger hot reload of tools.
 
 * Select/create section for the tool.
 * If dependencies are needed you can select whether to install using TS packages or Conda.
+  * More about dependency resolution is covered in a separate deck.
 
 ---
 # What happened?
@@ -84,7 +86,7 @@ From 16.10 use `<toolbox monitor="true">` to trigger hot reload of tools.
 Starting with Galaxy 16.10 you can set `<toolbox monitor="true">` in the
 config file to make Galaxy do a hot reload during the installation.
 
-This allows loading new tools without restarting.
+This allows loading new tools without restarting even across processes.
 
 ---
 # Suites - more repos in one

@@ -34,7 +34,7 @@ Answer your questions we will.
 ---
 # Galaxy account
 
-* Stored in DB, passwords hashed (not salted).
+* Stored in DB, passwords hashed and salted, using PBKDF2 (default).
   * Unique in both email and username.
   * Table `galaxy_user`.
   * Abstracted as `User` in `lib/galaxy/model/mapping.py`.

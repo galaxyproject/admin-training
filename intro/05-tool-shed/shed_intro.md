@@ -85,6 +85,7 @@ List of available sheds is defined in `tool_sheds_conf.xml` and Galaxy comes wit
 ```
 
 ---
+class: normal
 ## Simple TS repository (remove_beginning)
 
 ```shell
@@ -98,6 +99,7 @@ List of available sheds is defined in `tool_sheds_conf.xml` and Galaxy comes wit
 ```
 
 ---
+class: normal
 ## Simple TS repository (remove_beginning)
 
 ```shell

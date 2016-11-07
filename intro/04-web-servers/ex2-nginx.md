@@ -1,6 +1,6 @@
 ![GATC Logo](../../docs/shared-images/AdminTraining2016-100.png) ![galaxy logo](../../docs/shared-images/galaxy_logo_25percent_transparent.png)
 
-### GATC - 2016 - Salt Lake City
+### GAT - 2016 - Salt Lake City
 
 # nginx as a Reverse Proxy for Galaxy - Exercise.
 
@@ -51,7 +51,7 @@ The following NEW packages will be installed:
 0 upgraded, 18 newly installed, 0 to remove and 31 not upgraded.
 Need to get 5251 kB of archives.
 After this operation, 17.0 MB of additional disk space will be used.
-Do you want to continue? [Y/n] 
+Do you want to continue? [Y/n]
 Get:1 http://archive.ubuntu.com/ubuntu xenial/main amd64 libjpeg-turbo8 amd64 1.4.2-0ubuntu3 [111 kB]
   ...
 Selecting previously unselected package libjpeg-turbo8:amd64.
@@ -62,7 +62,7 @@ Unpacking libjpeg-turbo8:amd64 (1.4.2-0ubuntu3) ...
 Setting up nginx-full (1.10.0-0ubuntu0.16.04.4) ...
 Processing triggers for libc-bin (2.23-0ubuntu3) ...
 Processing triggers for systemd (229-4ubuntu6) ...
-$ 
+$
 ```
 
 Visit http://yourhost/ and you should see the Ubuntu nginx default page (or the Apache default page if you installed Apache before nginx).
@@ -248,7 +248,7 @@ Note that:
 We can now verify that nginx is serving the file by sending the same request to `http://localhost` (with the default port `80`):
 
 ```console
-$ curl -D- 'http://localhost/datasets/f2db41e1fa331b3e/display?to_ext=txt' 
+$ curl -D- 'http://localhost/datasets/f2db41e1fa331b3e/display?to_ext=txt'
 ```
 ```http
 HTTP/1.1 200 OK

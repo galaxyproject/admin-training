@@ -32,35 +32,35 @@ Your questions are bound to be answered.
 * ~~MySQL~~
   * Supported in past but Galaxy is not tested against it anymore.
 
-
 ---
-class: normal
 # Configuration
 
-* `database_connection` is specified as a connection string in `galaxy.ini` file.
+`database_connection` is specified as a connection string in `galaxy.ini` file.
   * default SQLite `sqlite:///./database/universe.sqlite?isolation_level=IMMEDIATE`
   * local PostgreSQL `postgres://<name>:<password>@localhost:5432/galaxy`
   * production example `postgresql:///galaxy?host=/var/run/postgresql`
 
 ---
-# Tunning - pool
+# Tuning - pool
 
 If the server logs errors about not having enough database pool connections.
 * `database_engine_option_pool_size = 5` (10 on Main)
 * `database_engine_option_max_overflow = 10` (20 on Main)
 
 ---
-# Tunning - server cursor
+# Tuning - server cursor
 
 If large database query results are causing memory or response time issues in the Galaxy process leave it on server.
 * `database_engine_option_server_side_cursors = False` (True on Main, PostgreSQL only, recommended)
 
 ---
-# Tunning - install database
+# Tuning - install database
 
 Galaxy can track Tool Shed data in a separate DB.
 
-`install_database_connection = sqlite:///./database/universe.sqlite?isolation_level=IMMEDIATE`
+```shell
+install_database_connection = sqlite:///./database/universe.sqlite?isolation_level=IMMEDIATE
+```
 
 This allows bootstrapping fresh Galaxy instances with pretested installs.
 
@@ -98,3 +98,8 @@ $ python -i scripts/db_shell.py
 
 * Reports app is hooked to the Galaxy DB to present data in useful format.
 * Tool Shed app has its own database.
+
+---
+# Exercise
+
+[Connecting Galaxy to PostgreSQL - Exercise](https://github.com/martenson/dagobah-training/blob/master/intro/03-databases/ex1-postgres.md)
