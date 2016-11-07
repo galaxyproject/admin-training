@@ -64,4 +64,41 @@ Processing triggers for ureadahead (0.100.0-19) ...
 $
 ```
 
-## Section 2 - Add PostgreSQL user
+## Section 2 - Add PostgreSQL user and database
+
+PostgreSQL maintains its own user database apart from the system user database. As such, we need to create a PostgreSQL user matching the system user we're logged in as - `galaxyguest`.  By default, PostgreSQL is configured to allow access for system users with matching PostgreSQL usernames once created. This is done with the PostgreSQL `createuser` command, and it must be run as the `postgres` user:
+
+```console
+$ sudo -H -u postgres createuser galaxyguest
+```
+
+Next, we need to create an empty database. Once a database exists, Galaxy will populate it. The `createdb` command creates a database, and we want to make sure to create it with the `galaxyguest` user as the owner:
+
+```console
+$ sudo -H -u postgres createdb -O galaxyguest galaxyguest
+```
+
+We've created a new database with the name `galaxyguest`.
+
+## Section 3 - Configure Galaxy
+
+Next, we need to configure Galaxy to use PostgreSQL. To do this, open up the Galaxy config file, `galaxy.ini`, in an editor. You can find it it in `~/galaxy/config/`. Find the line:
+
+```ini
+#database_connection = sqlite:///./database/universe.sqlite?isolation_level=IMMEDIATE
+```
+
+Uncomment it and change it to:
+
+```ini
+database_connection = postgresql:///galaxyguest?host=/var/run/postgresql
+```
+
+The `?host=/var/run/postgresql` portion of the database URI instructs the database connection layer to look for PostgreSQL's socket in the given directory (because by default, it looks in `/tmp`.
+
+## Section 4 - Start Galaxy
+
+If you're already running Galaxy, hit `CTRL+C` to stop it, then start it again with `sh run.sh`. It will first fetch the `psycopg2` wheel, which is the python PostgreSQL library, and then proceed to populate the database as it did the first time with SQLite.
+
+```console
+```
