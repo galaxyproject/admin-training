@@ -5,7 +5,7 @@
   vars:
     #ansible_user: galaxyguest
     #ansible_ssh_pass: 
-    ansible_sudo_pass: <password>
+    ansible_sudo_pass: <put your sudo password here>
   tasks:
     
     #passwordless sudo!
@@ -61,4 +61,7 @@
     - name: restart sshd service
       service: name=ssh state=restarted
       become: yes
-        
+      
+    - name: Change passwd
+      user: name=galaxyguest update_password=always password='$6$rounds=656000$.MxIq3jrGOBzOLmq$/fWAPOHdOA.HcM8H4UIcd14NS9NBGIRw6XRyZQXH/YmHL05OGXHNLJkVQ4Lnm8n0IzLg7nPuVmqTQTC8gNfz1/'
+      become: yes  
