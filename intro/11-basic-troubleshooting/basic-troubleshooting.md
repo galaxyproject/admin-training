@@ -76,7 +76,7 @@ class: smaller
 
 Check the Galaxy server log for errors. Successful job lifecycle:
 
-```
+```console
 galaxy.jobs DEBUG 2016-11-03 20:11:54,897 (2) Working directory for job is: /home/galaxyguest/galaxy/database/jobs_directory/000/2
 galaxy.jobs.handler DEBUG 2016-11-03 20:11:54,903 (2) Dispatching to local runner
 galaxy.jobs DEBUG 2016-11-03 20:11:54,939 (2) Persisting job destination (destination id: local:///)
@@ -155,7 +155,7 @@ Some made up examples follow.
 # Tool errors - stderr
 
 Tool stderr contains:
-```
+```shell
 Warning: File /galaxy/job/working/foo.tmp created in the future!
 ```
 
@@ -169,7 +169,7 @@ Solutions:
 # Tool errors - stderr
 
 Tool stderr contains:
-```
+```shell
 Warning: Discarded 10000 lines of /path/to/input/dataset_1.dat because they looked funny
 ```
 
@@ -184,7 +184,7 @@ Solutions:
 # Tool errors - memory errors
 
 Tool stderr contains one of:
-```
+```shell
 MemoryError                 # Python
 what():  std::bad_alloc     # C++
 Segmentation Fault          # C - but could be other problems too
@@ -205,7 +205,7 @@ Solutions:
 # Tool errors - system errors
 
 Tool stderr contains:
-```
+```shell
 open(): /path/to/input/dataset_1.dat: No such file or directory
 ```
 
@@ -218,7 +218,7 @@ Solution:
 # Tool errors - dependency problems
 
 Tool stderr contains:
-```
+```shell
 sh: command not found: samtools
 ```
 
@@ -233,8 +233,8 @@ Solutions:
 # Tool errors - dependency problems
 
 Tool stderr contains:
-```
-foo: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.23' not found (required by foo)
+```shell
+foo: /lib/x86_64-linux-gnu/libc.so.6: version 'GLIBC_2.23' not found (required by foo)
 ```
 
 `foo` was compiled against Glibc 2.23 but Glibc < 2.23 is installed.
@@ -247,7 +247,7 @@ Solutions:
 # Tool errors - dependency problems
 
 Tool stderr contains:
-```
+```shell
 foo: error while loading shared libraries: libhitch.so.42: cannot open shared object file: No such file or directory
 ```
 
@@ -280,5 +280,5 @@ If no:
 
 - [Galaxy Biostar](https://biostar.usegalaxy.org/)
 - [galaxy-dev Mailing list](http://dev.list.galaxyproject.org/)
-- [IRC](https://wiki.galaxyproject.org/Support/IRC): #galaxyproject on Freenode
+- [IRC](https://wiki.galaxyproject.org/Support/IRC): \#galaxyproject on Freenode
 - [Wiki: Support](https://wiki.galaxyproject.org/Support)
