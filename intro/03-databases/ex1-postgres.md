@@ -8,22 +8,6 @@
 
 ## Section 1 - Installation
 
-**Part 0 - Disable sudo password**
-
-`sudo` allows you to run programs as the `root` (admin) user. We will do this a lot during the training, so to make life easier, we'll disable the password requirement. To do this, run `sudo visudo`. Locate the following line:
-
-```
-%sudo   ALL=(ALL:ALL) ALL
-```
-
-And change it to:
-
-```
-%sudo   ALL=(ALL:ALL) NOPASSWD:ALL
-```
-
-Then, save the file and quit the editor.
-
 **Part 1 - Install PostgreSQL**
 
 Install PostgreSQL from apt:
