@@ -95,10 +95,9 @@ a > code {
 }
 .remark-code, .remark-inline-code {
     font-family: 'Inconsolata';
-    color: black;
-    background-color: white;
+    color: #ebd9b2;
     padding: 3px;
-    font-size: 1.1em;
+    /*font-size: 1.1em;*/
 }
 .slightly-smaller {
     font-size: .9em;

@@ -54,7 +54,7 @@ class: normal
 # Missing tools
 
 * Restart Galaxy and watch the log for
-```
+```shell
 Loaded tool id: toolshed.g2.bx.psu.edu/repos/iuc/sickle/sickle/1.33, version: 1.33 into tool panel....
 ```
 
