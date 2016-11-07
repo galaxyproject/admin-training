@@ -261,6 +261,16 @@ Solutions:
 - Recompile `foo` without `-lhitch` (if possible)
 
 ---
+# Tool errors - Empty green history item
+
+1. The tool is not correctly detecting error conditions: stderr, exit code?
+2. The tool correctly produced an empty dataset for the given params, inputs
+
+Solutions:
+1. Fix the tool wrapper to detect errors
+2. User education
+
+---
 # One last word on tool errors
 
 All Devteam/IUC tools have tests
