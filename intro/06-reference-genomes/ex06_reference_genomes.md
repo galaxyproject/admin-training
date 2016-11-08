@@ -183,10 +183,10 @@ We will be adding a new built-in reference dataset, the sacCer1 genome build (go
   * Use the env.sh file in the Galaxy BWA tool! Then test it works!
   * From your Galaxy root: (Where the "x"s in the semantic version numbers and repo version are replaced with what's actually there!)
 
-  ```
+  ```console
 
-  source ./tools/bwa/x.x.xx/iuc/package_bwa_x_x_xx/xxxxxxxxxx/env.sh
-  bwa
+  $ source ~/galaxy/database/dependencies/bwa/0.7.12/iuc/package_bwa_0_7_12/6af9b24ddeee
+  $ bwa
 
   Program: bwa (alignment via Burrows-Wheeler transformation)
   Version: 0.7.12-r1039
