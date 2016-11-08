@@ -111,7 +111,7 @@ Built slides have [an index](https://martenson.github.io/dagobah-training/).
 | 09:00 | Welcome and Introduction/Questions |  | All |
 | 09:20 | Storage management and using heterogeneous storage services | [Slides](https://martenson.github.io/dagobah-training/007-storage/storage.html) | (N + M) |
 | 10:30 | **Morning Break** | | |
-| 10:50 | Complex Galaxy servers examples: usegalaxy.org, GVL |  | (N + S) |
+| 10:50 | Complex Galaxy servers examples: usegalaxy.org, GVL | [Slides (usegalaxy.org)](https://martenson.github.io/dagobah-training/008-galaxy-main/usegalaxy.html) | (N + S) |
 | 12:20 | **Lunch**, *on your own* | | |
 | 13:20 | When things go REALLY wrong: Advanced Galaxy server troubleshooting |  | (N) |
 | 15:20 | **Afternoon Break** | | |
