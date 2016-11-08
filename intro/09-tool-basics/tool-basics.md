@@ -121,4 +121,14 @@ $ planemo serve
 ---
 # Building a tool using Planemo
 
+This time connect with
+```
+ssh -L 9090:localhost:9090 galaxyguest@YOUR_VM
+```
+
+and then run
+```
+sudo apt-get install seqtk
+```
+
 Please follow the exercise at [Planemo documentation](http://planemo.readthedocs.io/en/latest/writing_standalone.html).
