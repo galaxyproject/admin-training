@@ -162,37 +162,31 @@ Tips:
 # Dataset Cleanup Lifecycle
 
 Mark deleted all "anonymous" histories not used within the last `$days` days:
-```
-python ./scripts/cleanup_datasets/pgcleanup.py -o $days -s delete_userless_histories
-```
+
+`python ./scripts/cleanup_datasets/pgcleanup.py -o $days -s delete_userless_histories`
 
 Remove all history exports older than `$days` days:
-```
-python ./scripts/cleanup_datasets/pgcleanup.py -o $days -s delete_exported_histories
-```
+
+`python ./scripts/cleanup_datasets/pgcleanup.py -o $days -s delete_exported_histories`
 
 Mark purged HDAs in histories deleted `$days` or more days ago (not user-recoverable):
-```
-python ./scripts/cleanup_datasets/pgcleanup.py -o $days -s purge_deleted_histories
-```
+
+`python ./scripts/cleanup_datasets/pgcleanup.py -o $days -s purge_deleted_histories`
 
 ---
 # Dataset Cleanup Lifecycle
 
 Mark purged individual HDAs deleted `$days` or more days ago (not user-recoverable):
-```
-python ./scripts/cleanup_datasets/pgcleanup.py -o $days -s purge_deleted_hdas
-```
+
+`python ./scripts/cleanup_datasets/pgcleanup.py -o $days -s purge_deleted_hdas`
 
 Mark datasets with all purged HDAs last updated `$days` or more days ago deleted:
-```
-python ./scripts/cleanup_datasets/pgcleanup.py -o $days -s delete_datasets
-```
+
+`python ./scripts/cleanup_datasets/pgcleanup.py -o $days -s delete_datasets`
 
 Mark purged all datasets last updated `$days` or more days ago **and remove from disk**:
-```
-python ./scripts/cleanup_datasets/pgcleanup.py -o $days -s purge_datasets
-```
+
+`python ./scripts/cleanup_datasets/pgcleanup.py -o $days -s purge_datasets`
 
 ---
 # Nagios
