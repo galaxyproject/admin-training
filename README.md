@@ -6,6 +6,8 @@ dagobah - The Solar System for Galaxy Training
 ---
 **Salt Lake City - 7th to 11th November 2016**
 
+[Event Logisitics](https://wiki.galaxyproject.org/Events/AdminTraining2016/Logistics) | [Admin Training Home Page](https://wiki.galaxyproject.org/Events/AdminTraining2016)
+
 jump to [Monday](#monday) | [Tuesday](#tuesday) | [Wednesday](#wednesday) | [Thursday](#thursday) | [Friday](#friday)
 
 Built slides have [an index](https://martenson.github.io/dagobah-training/).
