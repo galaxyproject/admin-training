@@ -72,6 +72,32 @@ From 16.10 use `<toolbox monitor="true">` to trigger hot reload of tools.
 * After restart Galaxy will load the tool.
 
 ---
+# Example config entry
+ one entry in `shed_tool_conf.xml`
+
+```xml
+<section id="filter" name="Filter and Sort" version="">
+  <tool file="testtoolshed.g2.bx.psu.edu/repos/devteam/bamtools_filter/23a1c1f66b47/bamtools_filter/bamtools-filter.xml" guid="testtoolshed.g2.bx.psu.edu/repos/devteam/bamtools_filter/bamFilter/0.0.1">
+      <tool_shed>testtoolshed.g2.bx.psu.edu</tool_shed>
+        <repository_name>bamtools_filter</repository_name>
+        <repository_owner>devteam</repository_owner>
+        <installed_changeset_revision>23a1c1f66b47</installed_changeset_revision>
+        <id>testtoolshed.g2.bx.psu.edu/repos/devteam/bamtools_filter/bamFilter/0.0.1</id>
+        <version>0.0.1</version>
+    </tool>
+</section>
+```
+
+---
+# Example config entry
+
+one entry in `integrated_tool_panel.xml`
+```xml
+<section id="filter" name="Filter and Sort" version="">
+    <tool id="testtoolshed.g2.bx.psu.edu/repos/devteam/bamtools_filter/bamFilter/0.0.1" />
+```
+
+---
 # Toolbox monitoring
 
 Starting with Galaxy 16.10 you can set `<toolbox monitor="true">` in the
