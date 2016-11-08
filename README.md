@@ -51,7 +51,7 @@ Built slides have [an index](https://martenson.github.io/dagobah-training/).
 | 09:30 | Welcome and Questions |  | All |
 | 09:45 | Extending your installation: FTP, SMTP, and more| [Slides](https://martenson.github.io/dagobah-training/07-extending-installation/extending.html) | (D) |
 | 11:00 | **Morning Break** | | |
-| 11:20 | Users, Groups, and Quotas |  | (D) |
+| 11:20 | Users, Groups, and Quotas | [Slides](https://martenson.github.io/dagobah-training/08-users-groups-quotas/users-groups-quotas.html) | (D) |
 | 12:20 | **Lunch**, *catered* | | |
 | 13:20 | Anatomy of a Tool Definition, Planemo, Publishing | [Slides](https://martenson.github.io/dagobah-training/09-tool-basics/tool-basics.html) | (S + M) |
 | 14:50 | Updating tools and supporting multiple versions of tools | [Exercise](intro/05-tool-shed/ex-tool-management.md) | (S + M) |

@@ -15,6 +15,7 @@ generate-slides:
 	$(IN_VENV) python slideshow/build_slideshow.py 'Tool Installation' intro/05-tool-shed/tool_installation.md 05-tool-shed
 	$(IN_VENV) python slideshow/build_slideshow.py 'Reference Genomes' intro/06-reference-genomes/reference_genomes.md 06-reference-genomes
 	$(IN_VENV) python slideshow/build_slideshow.py 'Extending Installation' intro/07-extending-installation/extending.md 07-extending-installation
+	$(IN_VENV) python slideshow/build_slideshow.py 'Users, Groups, Quotas' intro/08-users-groups-quotas/users-groups-quotas.md 08-users-groups-quotas
 	$(IN_VENV) python slideshow/build_slideshow.py 'Galaxy Tool Basics' intro/09-tool-basics/tool-basics.md 09-tool-basics
 	$(IN_VENV) python slideshow/build_slideshow.py 'Upgrading & Releases' intro/10-upgrading-release/upgrading.md 10-upgrading-release
 	$(IN_VENV) python slideshow/build_slideshow.py 'Basic Troubleshooting' intro/11-basic-troubleshooting/basic-troubleshooting.md 11-basic-troubleshooting
