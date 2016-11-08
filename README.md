@@ -49,7 +49,7 @@ Built slides have [an index](https://martenson.github.io/dagobah-training/).
 | -------- | --------- | --------- | ----------- |
 | 09:15 | Check-in |  |  |
 | 09:30 | Welcome and Questions |  | All |
-| 09:45 | Extending your installation: FTP, SMTP, and more|  | (D) |
+| 09:45 | Extending your installation: FTP, SMTP, and more| [Slides](https://martenson.github.io/dagobah-training/07-extending-installation/extending.html) | (D) |
 | 11:00 | **Morning Break** | | |
 | 11:20 | Users, Groups, and Quotas |  | (D) |
 | 12:20 | **Lunch**, *catered* | | |
