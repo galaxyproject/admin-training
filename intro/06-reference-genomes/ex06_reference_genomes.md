@@ -237,9 +237,21 @@ We will be adding a new built-in reference dataset, the sacCer1 genome build (go
   -rw-r--r-- 1 galaxy users 2.9M Oct  6  2015 sacCer1.fa.pac
   -rw-r--r-- 1 galaxy users 5.8M Oct  6  2015 sacCer1.fa.sa
   ```  
-* All that's left is to now add it to the .loc file. Add the following line to the end of the *tool-data/bwa_index.loc* file.
+* We must now add it to the .loc file. Add the following line to the end of the *tool-data/bwa_index.loc* file.
   ```
-  sacCer1     sacCer1 S. cerevisiae Oct. 2003 (SGD/sacCer1) (sacCer1) /home/galaxy/Desktop/Data_Managers/galaxy/galaxy-central/tool-data/sacCer1/bwa_index/sacCer1/sacCer1.fa
+  sacCer1     sacCer1 S. cerevisiae Oct. 2003 (SGD/sacCer1) (sacCer1) /home/galaxyguest/galaxy/tool-data/sacCer1/bwa_index/sacCer1/sacCer1.fa
+  ```
+* Now, all that's left to do is add the `bwa_mem_index` data table to the tool data table config file. Make a copy from the sample and add the new table to the bottom:
+  ```console
+  cd ~/galaxy/config
+  cp tool_data_table_conf.xml.sample tool_data_table_conf.xml
+  vi tool_data_table_conf.xml
+  ```
+  ```xml
+      <table name="bwa_mem_indexes" comment_char="#" allow_duplicate_entries="False">
+          <columns>value, dbkey, name, path</columns>
+          <file path="tool-data/bwa_mem_index.loc" />
+      </table>
   ```
 
 **Part 5: Test it all out**
