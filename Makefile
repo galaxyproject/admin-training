@@ -17,7 +17,7 @@ generate-slides:
 	$(IN_VENV) python slideshow/build_slideshow.py 'Extending Installation' intro/07-extending-installation/extending.md 07-extending-installation
 	$(IN_VENV) python slideshow/build_slideshow.py 'Galaxy Tool Basics' intro/09-tool-basics/tool-basics.md 09-tool-basics
 	$(IN_VENV) python slideshow/build_slideshow.py 'Upgrading & Releases' intro/10-upgrading-release/upgrading.md 10-upgrading-release
-	$(IN_VENV) python slideshow/build_slideshow.py 'Galaxy Architecture' intro/11-basic-troubleshooting/basic-troubleshooting.md 11-basic-troubleshooting
+	$(IN_VENV) python slideshow/build_slideshow.py 'Basic Troubleshooting' intro/11-basic-troubleshooting/basic-troubleshooting.md 11-basic-troubleshooting
 	$(IN_VENV) python slideshow/build_slideshow.py 'Galaxy Architecture' intro/12-architecture/galaxy_architecture.md 12-architecture
 	$(IN_VENV) python slideshow/build_slideshow.py 'Ansible and Galaxy - Part 1' advanced/001-ansible/ansible-introduction.md 001-ansible
 	$(IN_VENV) python slideshow/build_slideshow.py 'Monitoring and Maintenance' advanced/002-monitoring-maintenance/monitoring-maintenance.md 002-monitoring-maintenance
