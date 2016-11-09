@@ -29,6 +29,10 @@ In this exercise we will:
 
 ## Section 1 - The tutorial script source files.
 
+**The first thing we need to do is stop the old Galaxy server!**
+
+* Go to the /home/galaxyguest/galaxy directory and `sh ./run.sh --stop-daemon`
+
 Go to somewhere sensible on either your local machine or on your Galaxy server (/home/<your_username> would be sensible..)
 
 * Grab the following with wget or curl etc and then untar it.
