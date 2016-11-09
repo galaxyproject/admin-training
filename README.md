@@ -74,7 +74,7 @@ Built slides have [an index](https://martenson.github.io/dagobah-training/).
 | 09:20 | Configuration management choices: Introduction to Ansible | [Slides](https://martenson.github.io/dagobah-training/001-ansible/ansible-introduction.html), [Exercise](https://github.com/martenson/dagobah-training/blob/master/advanced/001-ansible/ex1-intro-ansible.md) | (S) |
 | 09:50 | Using Ansible to deploy Galaxy I |  [Exercise](https://github.com/martenson/dagobah-training/blob/master/advanced/001-ansible/ex2-galaxy-ansible.md)| (S) |
 | 10:30 | **Morning Break** | | |
-| 10:50 | Using Ansible to deploy Galaxy II |  | (S + N) |
+| 10:50 | Using Ansible to deploy Galaxy II | [uWSGI slides](https://martenson.github.io/dagobah-training/002-monitoring-maintenance/uwsgi.html) | (S + N) |
 | 12:20 | **Lunch**, *catered* | | |
 | 13:20 | Server monitoring and maintenance: Admin UI, Log files, Direct database queries, Command line & scripts, What to backup and how | [Slides](https://martenson.github.io/dagobah-training/002-monitoring-maintenance/monitoring-maintenance.html) | (S + N) |
 | 15:20 | **Afternoon Break** | | |
