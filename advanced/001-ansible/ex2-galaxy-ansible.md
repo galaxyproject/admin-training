@@ -168,7 +168,7 @@ Our Ansible-driven configuration replaces Galaxy's built-in Paste webserver with
 
 If you scroll up a bit you'll see that this file is referenced in `group_vars/galaxyservers.yml` (also additions from the version of `galaxyservers.yml` in the tarball).
 
-Now it's just a matter of making sure the public key is in the ssh authorised keys list on the target instance and then running:
+Now it's just a matter of running:
 
 `ansible-playbook -i inventory -vv playbook.yml`
 
@@ -181,6 +181,20 @@ To do this, use the following command:
 Use `less -R` to view the file with the colours set.
 
 The Ansible script will run and display what it's doing as it does. (Always a good idea to run it in a screen or something since networks are sometimes flaky!)
+
+**Part 5 - Upgrade Galaxy**
+
+This playbook was originally written for the 2016 Galaxy Community Conference. At the time, the stable release of Galaxy was 16.04. However, later parts of our workshop need 16.07 (and we should run the newest version of Galaxy anyway!). However, with our Ansible setup, it's trivial to upgrade. To do this, open up `group_vars/galaxyservers.yml`, locate the definition of `galaxy_changeset_id`, and update it:
+
+```yaml
+galaxy_changeset_id: release_16.07
+```
+
+Then run the same `ansible-playbook` command:
+
+```console
+ansible-playbook -i inventory -vv playbook.yml
+```
 
 
 ## So, what did we learn?
