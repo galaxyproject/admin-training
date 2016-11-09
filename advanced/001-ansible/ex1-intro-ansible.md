@@ -50,7 +50,7 @@ You'll need to change the name of the **galaxy.ini.sample** file in *galaxy/conf
 
 Once, that is complete you can start your Galaxy server to test it.
 
-* Start the server with `sh ./run.sh --pid-file=main.pid --log-file=main.log --daemon`
+* Start the server with `sh ./run.sh --pid-file=paster.pid --log-file=paster.log --daemon`
 
 If you want you can tail the log file and watch everything unfold. Once the server has finished configuring itself, try and connect to it in a web browser on port 8080. (ip_address:8080)
 
