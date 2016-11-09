@@ -61,7 +61,6 @@ Configure *different handlers* in `job_conf.xml`:
 ---
 # Install uWSGI: easy mode
 
----
 `cd` to Galaxy root dir and:
 ```console
 $ . ./.venv/bin/activate
