@@ -51,7 +51,20 @@ Have a look at the *playbook.yml* file. You'll notice that it contains quite a n
 1. Install Galaxy
 1. Installs supervisor
 
-You'll notice another play there called *Install Galaxy tools*. This has "tags" set. You'll also notice that it's host is set to localhost. This play won't get run unless you give the `--tags tools` switch to the `ansible-playbook` command line.
+You'll notice another play there called *Install Galaxy tools*. This has "tags" set. You'll also notice that it's host is set to localhost. We are going to remove this play from the playbook. Remove the following:
+
+```yaml
+- name: Install Galaxy tools
+  hosts: localhost
+  connection: local
+  vars:
+    galaxy_tools_api_key: 8279a8ce0b68beebf5e3da5a295214ec
+    galaxy_tools_base_dir: /home/nate
+    galaxy_tools_galaxy_instance_url: http://t-nate.galaxyproject.org/
+  roles:
+    - galaxyprojectdotorg.galaxy-tools
+  tags: tools
+```
 
 Take note of the fact that the playbook combines the individual roles to give us the desired outcome.
 
