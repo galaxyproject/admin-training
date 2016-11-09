@@ -79,7 +79,7 @@ Built slides have [an index](https://martenson.github.io/dagobah-training/).
 | 13:20 | Server monitoring and maintenance: Admin UI, Log files, Direct database queries, Command line & scripts, What to backup and how | [Slides](https://martenson.github.io/dagobah-training/002-monitoring-maintenance/monitoring-maintenance.html) | (S + N) |
 | 15:20 | **Afternoon Break** | | |
 | 15:40 | Controlling Galaxy with systemd and supervisor | [Slides](https://martenson.github.io/dagobah-training/002a-systemd-supervisor/systemd-supervisor.html), [Exercise](https://github.com/martenson/dagobah-training/blob/master/advanced/002a-systemd-supervisor/ex1-supervisor.md) | (N) |
-| 16:10 | Advanced tool definition, tool failures, tool debugging | [Slides](https://martenson.github.io/dagobah-training/003-tools-advanced/tools-advanced.html | (M) |
+| 16:10 | Advanced tool definition, tool failures, tool debugging | [Slides](https://martenson.github.io/dagobah-training/003-tools-advanced/tools-advanced.html) | (M) |
 | 17:40 | **Dinner**, *on your own* |  |  |
 | 19:00 | Discussion, troubleshooting, ad hoc support |  | All |
 | 20:30 | Close day 1 | | All |
