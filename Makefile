@@ -22,7 +22,8 @@ generate-slides:
 	$(IN_VENV) python slideshow/build_slideshow.py 'Galaxy Architecture' intro/12-architecture/galaxy_architecture.md 12-architecture
 	$(IN_VENV) python slideshow/build_slideshow.py 'Ansible and Galaxy - Part 1' advanced/001-ansible/ansible-introduction.md 001-ansible
 	$(IN_VENV) python slideshow/build_slideshow.py 'Monitoring and Maintenance' advanced/002-monitoring-maintenance/monitoring-maintenance.md 002-monitoring-maintenance
-	$(IN_VENV) python slideshow/build_slideshow.py 'Systetmd and Supervisor' advanced/002a-systemd-supervisor/systemd-supervisor.md 002a-systemd-supervisor
+	$(IN_VENV) python slideshow/build_slideshow.py 'Systemd and Supervisor' advanced/002a-systemd-supervisor/systemd-supervisor.md 002a-systemd-supervisor
+	$(IN_VENV) python slideshow/build_slideshow.py 'Advanced Tool Wrapping' advanced/003-tools-advanced/tools-advanced.md 003-tools-advanced
 	$(IN_VENV) python slideshow/build_slideshow.py 'External Authentication' advanced/004-external-authentication/external-auth.md 004-external-auth
 	$(IN_VENV) python slideshow/build_slideshow.py 'Compute Cluster' advanced/005-compute-cluster/compute-cluster.md 005-compute-cluster
 	cp advanced/005-compute-cluster/slurm-wlm-configurator.html docs/005-compute-cluster
