@@ -50,10 +50,27 @@ $ sudo apt-get install seqtk
 - Obtain the necessary files.
 
 ```shell
+$ mkdir -p ~/tools/seqtk/tool-data
+$ cd ~/tools/seqtk/tool-data
 $ wget https://raw.githubusercontent.com/galaxyproject/galaxy-test-data/master/2.fastq
 $ seqtk seq -A 2.fastq > 2.fasta
+$ cd ..
+$ wget https://raw.githubusercontent.com/martenson/dagobah-training/master/advanced/003-tools-advanced/seqtk_seq.xml
 ```
 
 ---
+# Make sure
+
+```
+$ planemo l
+$ planemo t
+$ planemo s
+```
+
+Check at http://localhost:9090 (with port forwarding)
+
+---
+# Advanced tool building
+
 [Planemo advanced tool wrapping](http://planemo.readthedocs.io/en/latest/writing_standalone.html#simple-parameters)
 - let's continue with the planemo-based tool wrapping!
