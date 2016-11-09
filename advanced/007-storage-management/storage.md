@@ -5,7 +5,7 @@ class: inverse, middle, large
 class: special
 # Storage Management
 
-slides by @natefoo @martenson
+slides by @natefoo, @martenson
 
 .footnote[\#usegalaxy / @galaxyproject]
 
@@ -215,3 +215,15 @@ proper:
 ```
 
 ---
+# Object Store Plugins
+
+Direct:
+- Disk
+- Amazon S3
+- Experimental
+  - Azure
+  - iRODS
+
+Nested:
+- Hierarchical
+- Distributed
