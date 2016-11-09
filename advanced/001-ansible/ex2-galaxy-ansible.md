@@ -101,6 +101,16 @@ You'll note that these roles all have pretty good documentation on how to use th
 
 Have a look at each of the roles in turn, concentrating mainly on the variables (in the defaults/main.yml files and the vars directory if present.) By modifying these variables, you can customise things like, where postgrSQL keeps it's backups, where Galaxy is installed and many others.
 
+We'll need to update the supervisor role to ensure that supervisor is started. You can do so by adding the following to the bottom of `roles/supervisor/tasks/main.yml`.
+
+```yaml
+- name: Ensure supervisor is running
+  service:
+    name: supervisor
+    enabled: yes
+    state: started
+```
+
 **Part 4 - Run the playbook**
 
 To save everyone doing this, the demonstrator will run the role in the class. Ofcourse, you can run this role anytime you like later on.
