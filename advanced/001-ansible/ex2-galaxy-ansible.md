@@ -61,6 +61,10 @@ Where do the roles come from? Ansible has a "toolshed" like system called **Ansi
 
 Open the *commands.txt* file. You'll see a command to run the playbook followed by a series of commands that download the various roles from the Ansible galaxy and put them in an appropriate place in our scripts file tree.. e.g. `ansible-galaxy install -p roles galaxyprojectdotorg.postgresql`
 
+**We actually need to do one of these. The galaxy role needs updating.**
+
+* From the script root directory - `ansible-galaxy -p roles install -f galaxyprojectdotorg.galaxy`
+
 There are many roles available for download. They all have some meta data associated with them which has information on the role's author, keywords, dependencies, licenses, available platforms etc. All of the roles in our script have that information. Checkout the *main.yml* in any of our role's *meta* directory.
 
 The Ansible Galaxy can be browsed at: [http://galaxy.ansible.com/](http://galaxy.ansible.com/)
