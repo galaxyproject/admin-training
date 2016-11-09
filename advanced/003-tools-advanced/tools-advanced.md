@@ -50,8 +50,8 @@ $ sudo apt-get install seqtk
 - Obtain the necessary files.
 
 ```shell
-$ mkdir -p ~/tools/seqtk/tool-data
-$ cd ~/tools/seqtk/tool-data
+$ mkdir -p ~/tools/seqtk/test-data
+$ cd ~/tools/seqtk/test-data
 $ wget https://raw.githubusercontent.com/galaxyproject/galaxy-test-data/master/2.fastq
 $ seqtk seq -A 2.fastq > 2.fasta
 $ cd ..
