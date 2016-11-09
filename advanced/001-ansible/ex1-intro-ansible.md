@@ -118,7 +118,7 @@ The contents of the file need to look something like this:
 
 ``` yaml
 #The system user for Galaxy
-galaxy_user: ubuntu #Set this to whatever system user has write access to all of the Galaxy files.
+galaxy_user: galaxyguest #Set this to whatever system user has write access to all of the Galaxy files.
 
 galaxy_server_url: http://localhost:8080/
 
@@ -130,7 +130,7 @@ tools_admin_email: tool_install@tools.com
 tools_admin_username: tools
 tools_admin_password: CoolToolInstaller
 
-galaxy_server_dir: /srv/galaxy #Put the actual path to your Galaxy root here
+galaxy_server_dir: /home/galaxyguest/galaxy #Put the actual path to your Galaxy root here
 
 # A system path where a virtualend for Galaxy is installed
 galaxy_venv_dir: "{{ galaxy_server_dir }}/.venv"
@@ -139,8 +139,8 @@ galaxy_venv_dir: "{{ galaxy_server_dir }}/.venv"
 galaxy_config_file: "{{ galaxy_server_dir }}/config/galaxy.ini"
 
 #The Galaxy pid and log file names.
-galaxy_pid_file: main.pid
-galaxy_log_file: main.log
+galaxy_pid_file: paster.pid
+galaxy_log_file: paster.log
 
 tool_conf: "{{ galaxy_server_dir}}/config/shed_tool_conf.xml"
 ```
