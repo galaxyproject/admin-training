@@ -140,7 +140,7 @@ ansible_become=yes
 
 * There's an addition to the files we've downloaded: `job_conf.xml`
 
-Our Ansible-driven configuration replaces Galaxy's built-in Paste webserver with uWSGI. However, uWSGI Galaxy processes aren't suitable for running jobs. `job_conf.xml` controls Galaxy's job running system, we need to create a version that will prevent the uWSGI process from handling jobs:
+Our Ansible-driven configuration replaces Galaxy's built-in Paste webserver with uWSGI. However, uWSGI Galaxy processes aren't suitable for running jobs. `job_conf.xml` controls Galaxy's job running system, we need to create a version that will prevent the uWSGI process from handling jobs. Save this file in a new directory `files/galaxy` in the script root directory.:
 
 ``` xml
 <?xml version="1.0"?>
