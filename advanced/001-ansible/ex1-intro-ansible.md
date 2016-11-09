@@ -81,7 +81,7 @@ mkdir -p roles/galaxy-tool-install/meta
 
 For this tutorial we will need a few files. A couple of python scripts that will be run on the remote machine and a list of tools to install. They are located in a swift container in Australia. We need to download the tarball and extract it.
 
-* From the same terminal, in the files directory. Use wget to download the files. They are located at: *https://swift.rc.nectar.org.au:8888/v1/AUTH_377/public/Ansible_files/files_for_tool_ansible.tgz*
+* From the same terminal, in the **files** directory. Use wget to download the files. They are located at: *https://swift.rc.nectar.org.au:8888/v1/AUTH_377/public/Ansible_files/files_for_tool_ansible.tgz*
 
 * Untar them! (`tar -xvf files_for_tool_ansible.tgz`)
 
