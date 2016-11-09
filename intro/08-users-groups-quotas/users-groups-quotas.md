@@ -46,7 +46,7 @@ class: normal
 In `galaxy.ini`:
 * `require_login` can be enabled to prevent anonymous access.
 * `show_welcome_with_login` show welcome page next to login page
-* `allow_user_creation` allow user registration. When False, admins must create users; often coupled with `allow_user_creation`.
+* `allow_user_creation` allow user registration. When False, admins must create users; often coupled with `require_login`.
 * `allow_user_dataset_purge` users can purge (permanently delete) their datasets.
 * `api_allow_run_as` list of email addresses of API users who can make calls on behalf of other users.
 * `expose_dataset_path` users to see the full path of datasets via the "View Details" option in the history.
