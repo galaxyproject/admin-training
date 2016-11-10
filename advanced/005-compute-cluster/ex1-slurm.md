@@ -92,7 +92,7 @@ $
 
 You can fix this by instructing MUNGE to log to syslog instead of writing its log files to `/var/log/munge/` directly. To do this, modify its systemd service definition using `sudo systemctl edit --full munge`. Modify the `ExecStart` option and append ` --syslog` so that the entire file appears as:
 
-``ini
+```ini
 [Unit]
 Description=MUNGE authentication service
 Documentation=man:munged(8)
