@@ -171,7 +171,7 @@ The start condition that failed was the missing slurm config file.
 
 Under Ubuntu, Slurm configs are stored in `/etc/slurm-llnl`<sup>[1]</sup>. No config is created by default.
 
-Slurm provides a tool to create a configuration file. This is [available online](https://slurm.schedmd.com/configurator.html) for the latest version, but Ubuntu 16.04 ships with Slurm 15.08. There's a copy of the configurator in `/usr/share/doc/slurmctld/slurm-wlm-configurator.html`. I've copied that to the training repository:
+Slurm provides a tool to create a configuration file. This is available online for the latest version, but Ubuntu 16.04 ships with Slurm 15.08. There's a copy of the configurator in `/usr/share/doc/slurmctld/slurm-wlm-configurator.html`. I've copied that to the training repository:
 
 [Slurm Version 15.08 Configuration Tool](https://martenson.github.io/dagobah-training/005-compute-cluster/slurm-wlm-configurator.html)
 
