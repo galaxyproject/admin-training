@@ -142,6 +142,21 @@ In addition to the modules above, mod_headers must be enabled in the Apache conf
 
 Dedicated Galaxy with Apache [wiki page](https://wiki.galaxyproject.org/Admin/Config/ApacheExternalUserAuth).
 
+---
+# Galaxy (Internal) Pluggable Authentication Modules
+
+Authenticate to external services directly in Galaxy
+
+Available [provider modules](https://github.com/galaxyproject/galaxy/tree/dev/lib/galaxy/auth/providers) for:
+- Local Galay DB (default)
+- LDAP/Active Directory
+- [System (Linux) PAM](http://www.linux-pam.org/)
+
+---
+# Galaxy PAM Exercise
+
+[PAM Authentication in Galaxy - Exercise](https://github.com/martenson/dagobah-training/blob/master/advanced/004-external-authentication/ex1-pam-auth.md)
+
     </textarea>
     <script src="../static/remark-latest.min.js">
     </script>
