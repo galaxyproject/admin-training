@@ -101,3 +101,18 @@ gx:galaxy: started
 **Part 2 - Log in to Galaxy**
 
 Go to http://yourgalaxyhost/ and log in (log out first if necessary) as `galaxyuser@example.com`.
+
+**Part 3 - Optionally disable self registration and require login**
+
+To configure Galaxy in this way, edit the galaxy config file using `sudo -H -u galaxy $EDITOR /srv/galaxy/server/config/auth_conf.xml`:
+
+```ini
+require_login = True
+allow_user_creation = False
+```
+
+Restart Galaxy with `sudo supervisorctl restart all`, then visit it in your browser. Log out and log back in again to see the results.
+
+**Part 3 - Undo changes**
+
+We don't want to leave Galaxy this way for the rest of our workshop. Undo the changes by removing `require_login` and `allow_user_creation` from `galaxy.ini`, and moving `auth_conf.xml` using `sudo -u galaxy mv /srv/galaxy/server/config/auth_conf.xml /srv/galaxy/server/config/auth_conf.xml.pam` and restarting Galaxy with `sudo supervisorctl restart all`.
