@@ -97,7 +97,7 @@ Built slides have [an index](https://martenson.github.io/dagobah-training/).
 | 12:20 | **Lunch**, *on your own* | | |
 | 13:20 | Connecting Galaxy to a compute cluster II |  | (N) |
 | 15:20 | **Afternoon Break** | | |
-| 15:40 | Using Heterogeneous compute resources | [Slides](https://martenson.github.io/dagobah-training/005-compute-cluster/heterogeneous.html), [Exercise](https://github.com/martenson/dagobah-training/blob/master/advanced/005-compute-cluster/ex1-pulsar.md) | (N) |
+| 15:40 | Using Heterogeneous compute resources | [Slides](https://martenson.github.io/dagobah-training/005-compute-cluster/heterogeneous.html), [Exercise](https://github.com/martenson/dagobah-training/blob/master/advanced/005-compute-cluster/ex3-pulsar.md) | (N) |
 | 17:40 | **Dinner**, *on your own* |  |  |
 | 19:00 | Using public and private cloud compute resources | [Slides](https://martenson.github.io/dagobah-training/006-clouds/clouds.html) | (S) |
 | 20:30 | Close day 2 | | All |
