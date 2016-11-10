@@ -89,7 +89,7 @@ Let's take a look at the `sshd` PAM service in `/etc/pam.d/sshd` and discover ho
 Finally, restart Galaxy:
 
 ```console
-$ sudo upervisorctl restart all
+$ sudo supervisorctl restart all
 gx:handler0: stopped
 gx:handler1: stopped
 gx:galaxy: stopped
