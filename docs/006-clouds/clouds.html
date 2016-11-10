@@ -205,6 +205,7 @@ class: left
 ## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Cluster on the Cloud?
 .large[
 * Your cloud instance is a single machine
+  * It is the "Head node" of a cluster
 * CloudMan can start "worker" nodes.
   * More cloud instances (of any size)
   * Automatically connects to file system
@@ -229,11 +230,98 @@ class: left
 
 ---
 class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Overview
+## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  CloudMan Galaxy
+.large[
+* Your Galaxy server is set up and ready to go!
+  * Includes large list of pre-installed tools.
+  * Includes access to reference data files
+  * Zero-to-go in less than 10 minutes.
+* Toolsets and reference sets can be tailored to suit needs
+  * Will be discussed in architecture section
+]
 
 .footnote[\#usegalaxy \#GATC2016 / @galaxyproject]
 
+---
+class: left
+## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  CloudMan Galaxy
 
+.pull-left[
+<img src='images/Cloudman-tools.png' height=85% />
+]
+.pull-right[
+<img src='images/reference_data.png'/>
+]
+
+.footnote[\#usegalaxy \#GATC2016 / @galaxyproject]
+
+---
+class: left
+## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  CloudMan Galaxy
+* Configured for Slurm out of the box
+```xml
+...
+    <destinations default="default_dynamic_job_wrapper">
+        <destination id="slurm_cluster" runner="slurm"/>
+        <destination id="slurm_4slots" runner="slurm">
+            <param id="nativeSpecification">--ntasks=4</param>
+        </destination>
+        <destination id="default_dynamic_job_wrapper" runner="dynamic">
+          <param id="type">python</param>
+          <param id="function">default_dynamic_job_wrapper</param>
+        </destination>
+    ...
+    </destinations>
+    <tools>
+        <tool id="toolshed.g2.bx.psu.edu/repos/devteam/bwa/bwa/0.3.1" destination="slurm_4slots" />
+...
+```
+``` ini
+# COMPUTE NODES
+NodeName=master NodeAddr=45.113.232.91 CPUs=15 RealMemory=64431 Weight=10 State=UNKNOWN
+NodeName=w1 NodeAddr=45.113.232.83 CPUs=16 RealMemory=64431 Weight=5 State=UNKNOWN
+NodeName=w2 NodeAddr=45.113.232.92 CPUs=8 RealMemory=32176 Weight=5 State=UNKNOWN
+NodeName=w3 NodeAddr=45.113.232.93 CPUs=8 RealMemory=32176 Weight=5 State=UNKNOWN
+```
+
+.footnote[\#usegalaxy \#GATC2016 / @galaxyproject]
+---
+class: left
+## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  CloudMan Architecture
+
+![architecture.png](images/architecture.png)
+
+.footnote[\#usegalaxy \#GATC2016 / @galaxyproject]
+---
+class: left
+## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Persistence
+
+.large[
+* Cloud instances are typically transient
+  * Can be terminated and resources returned to the pool
+* However, user data, cluster configuration etc can be persisted.
+  * Then can be attached to new instance when they start
+* Can be s3, object store, volumes, nfs
+* Cloudman stores an instance's set up in a s3 bucket or object store container
+]
+
+.footnote[\#usegalaxy \#GATC2016 / @galaxyproject]
+---
+class: left
+## ![GATC Logo](../shared-images/AdminTraining2016-100.png) Taking it Further
+
+.large[
+* Genomics Virtual Lab - an example
+]
+![gvl-architecture.png](images/gvl-architecture.png)
+
+.footnote[\#usegalaxy \#GATC2016 / @galaxyproject]
+---
+class: left
+## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Cloud Burst
+* Nate talked about attaching clusters this morning!
+
+.footnote[\#usegalaxy \#GATC2016 / @galaxyproject]
     </textarea>
     <script src="../static/remark-latest.min.js">
     </script>
