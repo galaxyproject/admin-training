@@ -84,8 +84,12 @@ Create a new config file, `/srv/galaxy/server/conf/auth_conf.xml`. To open as th
 </auth>
 ```
 
+Let's take a look at the `sshd` PAM service in `/etc/pam.d/sshd` and discover how it works.
+
+Finally, restart Galaxy:
+
 ```console
-$ supervisorctl restart all
+$ sudo upervisorctl restart all
 gx:handler0: stopped
 gx:handler1: stopped
 gx:galaxy: stopped
