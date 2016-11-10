@@ -35,40 +35,20 @@ class: smaller
 
 ```
 ╔═════════════════════════════════════════════════════╗
-║ Galaxy Job Handler (galaxy.jobs.handler)            ║
-╠─────────────────────────────────────────────────────╣
-║ Galaxy DRMAA Job Runner (galaxy.jobs.runners.drmaa) ║
-╠─────────────────────────────────────────────────────╣
-║ Pulsar DRMAA Interface (pulsar.managers.util.drmaa) ║
+║ Galaxy Job Handler (galaxy.jobs.handler)                       ║
+╟─────────────────────────────────────────────────────╢
+║ Galaxy DRMAA Job Runner (galaxy.jobs.runners.drmaa)            ║
+╠─────────────────────────────────────────────────────╢
+║ Pulsar DRMAA Interface (pulsar.managers.util.drmaa)            ║
 ╠═════════════════════════════════════════════════════╣
-║ DRMAA Python                                        ║
+║ DRMAA Python                                                   ║
 ╠═════════════════════════════════════════════════════╣
-║ C DRMAA Library (PSNC, vendor)                      ║
+║ C DRMAA Library (PSNC, vendor)                                 ║
 ╠═════════════════════════════════════════════════════╣
-║ DRM (Slurm, Condor, ...)                            ║
+║ DRM (Slurm, Condor, ...)                                       ║
 ╚═════════════════════════════════════════════════════╝
 
 ```
-
----
-class: center
-# Cluster library stack
-
-.center[| Galaxy |
-| ------------------ |
-| Galaxy Job Handler Process |
-| Galaxy DRMAA Job Runner (galaxy.jobs.runners.drmaa) |
-| Pulsar DRMAA Interface (pulsar.managers.util.drmaa) |
-
-
-| DRMAA Python |
-| ------------ |
-
-| C DRMAA Library (PSNC, vendor) |
-| ------------ |
-
-| DRM (Slurm, Condor, ...) |
-| ------------ |]
 
 ---
 # Galaxy job configuration
