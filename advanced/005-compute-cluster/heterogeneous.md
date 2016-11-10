@@ -112,4 +112,4 @@ Pulsar "managers" provide job running interfaces:
 ---
 # Exercise
 
-[Running jobs on remote resources using Pulsar](https://github.com/martenson/dagobah-training/blob/master/advanced/005-compute-cluster/ex2-advanced-job-configs.md)
+[Running jobs on remote resources using Pulsar](https://github.com/martenson/dagobah-training/blob/master/advanced/005-compute-cluster/ex3-pulsar.md)
