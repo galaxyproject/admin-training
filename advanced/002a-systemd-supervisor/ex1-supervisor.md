@@ -21,7 +21,7 @@ Moving right along...
 
 ## Section 2 - Add handlers and a group
 
-We have defined two handlers in `/srv/galaxy/config/job_conf.xml` (also installed in the Ansible session):
+We have defined two handlers in `/srv/galaxy/server/config/job_conf.xml` (also installed in the Ansible session):
 
 ```xml
     <handlers default="handlers">
