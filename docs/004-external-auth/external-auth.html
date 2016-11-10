@@ -27,9 +27,10 @@ Answer your questions we will.
 ---
 # Auth Mechanisms supported
 
-* Galaxy-specific login using e-mail address and password
-* OpenID authentication with Galaxy as a relying party
-* HTTP remote user provided by any front-end Web server
+* Galaxy-specific login using e-mail address and password.
+* OpenID authentication with Galaxy as a relying party.
+* HTTP remote user provided by any front-end Web server.
+* Galaxy authentication framework (LDAP, Kerberos).
 
 ---
 # Galaxy account
@@ -108,7 +109,7 @@ Dedicated Galaxy external auth [wiki page](https://wiki.galaxyproject.org/Admin/
 
 * You'll need to set up your system's PAM stack (very site-specific)
 * If your 'shell accounts' authenticate the same way as your 'galaxy users' you can likely copy the PAM configuration.
-* A PAM configuration that would be suitable for authentication with Kerberos (placed in /etc/pam.d/nginx might look like:
+* A PAM configuration that would be suitable for authentication with Kerberos (placed in /etc/pam.d/nginx) might look like:
 ```
 auth    [success=1 default=ignore]    pam_krb5.so minimum_uid=1000 ignore_k5login
 auth    requisite            pam_deny.so
