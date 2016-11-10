@@ -104,7 +104,7 @@ Go to http://yourgalaxyhost/ and log in (log out first if necessary) as `galaxyu
 
 **Part 3 - Optionally disable self registration and require login**
 
-To configure Galaxy in this way, edit the galaxy config file using `sudo -H -u galaxy $EDITOR /srv/galaxy/server/config/auth_conf.xml`:
+To configure Galaxy in this way, edit the galaxy config file using `sudo -H -u galaxy $EDITOR /srv/galaxy/server/galaxy.ini`:
 
 ```ini
 require_login = True

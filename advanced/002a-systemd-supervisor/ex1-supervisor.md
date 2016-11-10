@@ -94,6 +94,12 @@ gx:handler1                      STARTING
 
 Now you can control all 3 processes with `sudo supervisorctl <op> all` or `sudo supervisorctl <op> gx:*`.
 
+In addition, you can *gracefully* restart the uWSGI Galaxy process with `sudo supervisorctl signal HUP gx:galaxy`. uWSGI is configured to start Galaxy in a "master" process and then fork the configured number of worker processes. Because of this, if sent a `SIGHUP` signal, it will kill the workers but the master process will hold its socket open, blocking client (browser) connections until new workers are forked. This prevents users from seeing a proxy error page during restarts. Using this, you can restart both the uWSGI server and Galaxy handlers with:
+
+```console
+$ sudo supervisorctl signal HUP gx:galaxy && sudo supervisorctl restart gx:handler0 gx:handler1
+```
+
 ## Having trouble?
 
 - Logs in `/var/log/supervisor`
