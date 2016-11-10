@@ -281,7 +281,7 @@ Submitted batch job 3
 $ squeue
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
                  3     debug sbatch-t galaxygu  R       0:03      1 localhost
-$ cat slurm-4.out
+$ cat slurm-3.out
 Linux gat2016 4.4.0-31-generic #50-Ubuntu SMP Wed Jul 13 00:07:12 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux
  17:09:18 up  1:28,  2 users,  load average: 0.00, 0.00, 0.00
 Ubuntu 16.04.1 LTS \n \l
