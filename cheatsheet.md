@@ -165,6 +165,9 @@ $ sudo supervisorctl status
 # restart all processes
 $ sudo supervisorctl restart all
 
+# restart Galaxy process only
+$ sudo supervisorctl restart gx:galaxy
+
 # switch to Galaxy user
 $ sudo -H -u galaxy -s
 
