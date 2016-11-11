@@ -219,7 +219,7 @@ proper:
 
 Direct:
 - Disk
-- Amazon S3
+- Amazon S3/Openstack Swift
 - Experimental
   - Azure
   - iRODS
@@ -227,3 +227,8 @@ Direct:
 Nested:
 - Hierarchical
 - Distributed
+
+---
+# Object Store Exercise
+
+[Expanding File Space - Exercise](https://github.com/martenson/dagobah-training/blob/master/advanced/007-storage-management/ex1-objectstore.md)
