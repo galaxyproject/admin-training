@@ -51,8 +51,6 @@ Handlers: Define which job handler (Galaxy server) processes should handle a job
 - [Pulsar](github.com/galaxyproject/pulsar): Distributed job execution engine for Galaxy.
 - [mako](http://www.makotemplates.org/): Template library  
 - [Nagios](https://www.nagios.org/): General purpose tool for monitoring systems and services 
-- [Exercise: Tool Management](https://github.com/martenson/dagobah-training/blob/master/intro/05-tool-shed/ex-tool-management.md)  
-- [Exercise: Reference Genomes](https://github.com/martenson/dagobah-training/blob/master/intro/06-reference-genomes/ex06_reference_genomes.md)  
 - [Running Galaxy in a production environment](https://wiki.galaxyproject.org/Admin/Config/Performance/ProductionServer)
 - [systemd](https://www.freedesktop.org/wiki/Software/systemd/): Linux system and service manager
 - [Supervisor](http://supervisord.org/): A process manager written in Python; `supervisorctl`
@@ -63,6 +61,11 @@ Handlers: Define which job handler (Galaxy server) processes should handle a job
 - [Slurm](http://slurm.schedmd.com/): Cluster workload manager
  - [Exercise: Running Galaxy Jobs with Slurm](https://github.com/martenson/dagobah-training/blob/master/advanced/005-compute-cluster/ex1-slurm.md)
 
+
+
+
+- [Exercise: Tool Management](https://github.com/martenson/dagobah-training/blob/master/intro/05-tool-shed/ex-tool-management.md)  
+- [Exercise: Reference Genomes](https://github.com/martenson/dagobah-training/blob/master/intro/06-reference-genomes/ex06_reference_genomes.md)  
 
 ## Ansible Playbooks
 https://galaxy.ansible.com/galaxyprojectdotorg/  
