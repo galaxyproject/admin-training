@@ -115,7 +115,7 @@ Built slides have [an index](https://martenson.github.io/dagobah-training/).
 | 12:20 | **Lunch**, *on your own* | | |
 | 13:20 | When things go REALLY wrong: Advanced Galaxy server troubleshooting | [Slides](https://martenson.github.io/dagobah-training/009-advanced-troubleshooting/troubleshooting.md) | (N) |
 | 15:20 | **Afternoon Break** | | |
-| 15:50 | Participant selected topics |  | All |
+| 15:50 | Participant selected topics | [Interactive Environments: Jupyter](https://gist.github.com/natefoo/73bdcd9d467efd8d333ec15719e71108) | All |
 | 17:30 | **Dinner**, *catered* |  |  |
 | 18:50 | Discussion and open questions |  | All |
 | 20:30 | Wrap up and close | | All |
