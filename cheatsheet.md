@@ -63,7 +63,7 @@ Handlers: Define which job handler (Galaxy server) processes should handle a job
 
 
 
-
+## Other Tutorials
 - [Exercise: Tool Management](https://github.com/martenson/dagobah-training/blob/master/intro/05-tool-shed/ex-tool-management.md)  
 - [Exercise: Reference Genomes](https://github.com/martenson/dagobah-training/blob/master/intro/06-reference-genomes/ex06_reference_genomes.md)  
 
