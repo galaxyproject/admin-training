@@ -24,7 +24,6 @@ slides by @natefoo
   - Bridges @ PSC
   - Stampede @ TACC
   - Docker for Interactive Environments @ PSU
-- Deployed with Ansible .smaller[Ansiblificate all the things!]
 
 ---
 # usegalaxy.org Technologies
@@ -35,16 +34,15 @@ slides by @natefoo
   - Multicluster w/ Jetstream @ TACC, IU
 - Sentry
 - Grafana
-- 
+- nginx w/ upload module
+- Nagios for each destination
+- Deployed with Ansible... Ansiblificate all the things!
 
 ---
 # usegalaxy.org Limits
 
 - 250 GB Quota
-- Concurrent job limits
-  - 6 overall
-  - 2 multicore on TACC metal
-  - 4 multicore on Jetstream
+- [Concurrent job limits](https://github.com/galaxyproject/usegalaxy-playbook/blob/master/templates/galaxy/usegalaxy.org/config/job_conf.xml.j2#L658)
 
 ---
 # Multicluster Slurm
@@ -55,6 +53,13 @@ Demo
 # Diagrams
 
 [Pretty pictures](https://docs.google.com/presentation/d/1BIpB7n5etN8EDgv7Hl6UcP2u4_m0Lz1cfNFHc0goUiY/edit?usp=sharing)
+
+---
+# Reference Data
+
+- Previously hand built
+- Now built on Galaxy Test with DMs and copied into CVMFS
+- Distributed by CVMFS
 
 ---
 # CVMFS update procedure
@@ -82,5 +87,12 @@ Then use Ansible to run update procedure from *snapshot*
 
 - `web-{01,02}`
   - Serves regular client-facing requests
+  - uWSGI, nginx
 - `web-{03,04}`
   - Serves file staging to/from Pulsar on remote compute
+  - uWSGI, nginx
+
+---
+# Job configuration
+
+[usegalaxy.org job_conf.xml](https://github.com/galaxyproject/usegalaxy-playbook/blob/master/templates/galaxy/usegalaxy.org/config/job_conf.xml)
