@@ -165,6 +165,9 @@ $ sudo supervisorctl status
 # restart all processes
 $ sudo supervisorctl restart all
 
+# switch to Galaxy user
+$ sudo -H -u galaxy -s
+
 ```
 
 ## Repositories
