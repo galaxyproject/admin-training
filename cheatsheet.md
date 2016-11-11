@@ -66,6 +66,8 @@ Handlers: Define which job handler (Galaxy server) processes should handle a job
 ## Other Tutorials
 - [Exercise: Tool Management](https://github.com/martenson/dagobah-training/blob/master/intro/05-tool-shed/ex-tool-management.md)  
 - [Exercise: Reference Genomes](https://github.com/martenson/dagobah-training/blob/master/intro/06-reference-genomes/ex06_reference_genomes.md)  
+- [Exercise: Advanced Galaxy Job Configurations](https://github.com/martenson/dagobah-training/blob/master/advanced/005-compute-cluster/ex2-advanced-job-configs.md)
+
 
 ## Ansible Playbooks
 https://galaxy.ansible.com/galaxyprojectdotorg/  
@@ -112,6 +114,10 @@ dependency_resolvers_conf.xml
 
 config/tool_data_table_conf.xml.sample
 
+config/tool_destinations.yml
+
+config/job_resource_params_conf.xml
+
 # OpenID config file
 config/openid_conf.xml.sample
 ```
@@ -155,6 +161,9 @@ $ sudo supervisorctl update
 
 # check supervisor process status
 $ sudo supervisorctl status
+
+# restart all processes
+$ sudo supervisorctl restart all
 
 ```
 
