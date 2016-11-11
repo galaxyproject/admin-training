@@ -65,14 +65,14 @@ Solutions:
 
 Provide a way to conveniently share Galaxy datasets within a group of Galaxy users or with everybody that has access to a specific instance of Galaxy.
 
-* Can import data from filesystem without duplicating it.
+* Can import data from filesystem *without duplicating* it.
 
 --
-* Can import whole directories preserving the folder structure.
+* Can import *whole directories* preserving the folder structure.
 
 --
 * The dataset's size does not count towards user's quota.
-  * Every dataset in the library is stored only once no matter how many users are using it in their histories.
+  * Every dataset in the library is *stored only once* no matter how many users are using it in their histories.
 
 --
 * Uses roles and groups to control permissions on library/dataset level.
