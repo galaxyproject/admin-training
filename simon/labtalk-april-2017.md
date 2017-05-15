@@ -70,5 +70,5 @@ class: left
 
 .footnote[\#melb-bioinformatics; Lab talks 2017]
 ---
-```
+Sorry Simon, using your slides as playground.
 ---
