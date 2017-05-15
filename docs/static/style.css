@@ -211,6 +211,7 @@ i, em, b, strong {
 }
 
 .right-column-equal {
+    margin-top: 5%;
     color: #777;
     width: 40%;
     float: right;

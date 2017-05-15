@@ -51,16 +51,12 @@ Public Prebuilt SaaS (usegalaxy.org, public servers)
 Private Prebuilt SaaS (EC2, GVL, Jetstream) or build your own
 - Great choices for people needing access to compute for a fixed time analysis
 - Not as conducive to collaboration, publishing
-- Covered in:
-  - Thurday, 19:00: Using public and private cloud compute resources
-  - Friday: 10:50: Complex Galaxy servers examples: usegalaxy.org, GVL
+- Covered: Wednesday: Using public and private cloud compute resources
 
 Build your own Galaxy SaaS
 - Personalized Galaxy instances for beginner-to-intermediate users
 - Requires a lot of infrastructure building
-- Covered in:
-  - Thurday, 19:00: Using public and private cloud compute resources
-  - Friday: 10:50: Complex Galaxy servers examples: usegalaxy.org, GVL
+- Covered: Wednesday: Using public and private cloud compute resources
 
 ---
 # Choosing where to run
@@ -69,14 +65,14 @@ Scalable Local Server
 - Permanent Galaxy server
 - Flexible compute scalability
 - Full privacy control
-- Covered on: Thursday
+- Covered: Wednesday: Connecting Galaxy to a compute cluster
 
 Standalone Local Server
 - Permanent Galaxy server
 - Full privacy control
 - Should only consider this in cases of expected light usage
 - Get a beefy server
-- Covered on: Today
+- Covered: Today
 
 ---
 # Software Requirements
@@ -88,11 +84,11 @@ Required:
 
 Optional (but not really):
   - PostgreSQL
-    - Covered in: Today, 11:20: Database choices and configuration. Introduction to PostgreSQL
+    - Covered: Today
   - uWSGI (will soon come with Galaxy)
-    - Covered in: Wednesday, 9:50: Using Ansible to deploy Galaxy I
+    - Covered: Tuesday
   - Reverse proxy server (nginx, Apache)
-    - Covered in: Today, 13:20: Web server choices and configuration. Introduction to Apache and NGINX.
+    - Covered: Today
 
 .footnote[<sup>[1]</sup> Point of order: Unless stated otherwise, "RHEL" refers to RHEL and derivatives (CentOS, Scientific Linux, etc.)]
 
@@ -195,6 +191,7 @@ Current:
 
 - `git clone https://github.com/galaxyproject/galaxy.git`
 - *Framework dependencies* provided as Python "wheels", fetched at first startup with `pip`
+- *Tool dependencies* provided as Conda packages or legacy Tool Shed packages
 
 Future:
 
@@ -217,7 +214,7 @@ Future:
 # Deployment Best Practices
 
 **Use configuration management**
-- Ansible (covered in advanced section)
+- Ansible (covered on Wednesday)
 - Chef
 - Puppet
 - SaltStack
@@ -263,7 +260,7 @@ For this training:
 - OS: Ubuntu (16.04)
 - Database: PostgreSQL
 - Application server: uWSGI
-- Reverse proxy servers: nginx, Apache
+- Reverse proxy server: NGINX
 - FTP: ProFTPD
 
 ---

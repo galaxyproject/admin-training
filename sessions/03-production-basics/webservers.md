@@ -1,0 +1,98 @@
+layout: true
+class: inverse, large
+
+---
+class: special, middle
+# (Proxy) Web Server Choices and Configuration
+
+Introduction to NGINX (and Apache)
+
+slides by @natefoo
+
+.footnote[\#usegalaxy / @galaxyproject]
+
+---
+# Reverse Proxy
+
+What is a reverse proxy?
+- Sits between the client and Galaxy
+
+Extra features:
+- Serve static content
+- Compress selected content
+- Serve over HTTPS
+- Serve byte range requests
+- Serve other sites from the same server
+- Can provide authentication
+  - Will be covered on Tuesday: _Using and configuring external authentication services_
+
+Some of these features are available directly in uWSGI (covered Tuesday)
+
+---
+# Apache
+
+- The most popular web server
+- Many authentication plugins written for Apache
+- Can offload file downloads
+
+---
+# nginx
+
+- Designed specifically to be a load balancing reverse proxy
+- Widely used by large sites (third most popular web server)
+- Can offload both uploads and downloads
+
+I recommend nginx unless you have a specific need for Apache
+
+---
+# nginx "flavors"
+
+nginx plugins must be compiled in<sup>[1]</sup>
+
+Debian/Ubuntu provide multiple nginx "flavors":
+- `nginx-light`: minimal set of core modules
+- `nginx-full`: full set of core modules
+- `nginx-extras`: full set of core modules and extras (3rd party modules)
+
+There is also a "Galaxy" flavor<sup>[2]</sup> (includes [upload module](https://github.com/vkholodkov/nginx-upload-module)):
+- [RHEL](https://depot.galaxyproject.org/yum/) (derived from EPEL nginx)
+- [Ubuntu PPA](https://launchpad.net/~galaxyproject/+archive/ubuntu/nginx)
+
+.footnote[<sup>[1]</sup> Dynamic shared objects were [introduced in 1.9.11](https://www.nginx.com/blog/dynamic-modules-nginx-1-9-11/)
+
+<sup>[2]</sup> Still working on the automation to keep this up to date, though]
+
+---
+# Exercise: nginx
+
+[nginx as a Reverse Proxy for Galaxy - Exercise](https://github.com/gvlproject/dagobah-training/blob/master/sessions/03-production-basics/ex3-nginx.md)
+
+---
+# Exercise: Apache
+
+[Apache as a Reverse Proxy for Galaxy - Exercise](https://github.com/gvlproject/dagobah-training/blob/master/sessions/03-production-basics/ex4-apache.md)
+
+---
+# Additional Tips and Resources
+
+[Google's PageSpeed Tools](https://developers.google.com/speed/pagespeed/insights/) can identify any compression or caching improvements you can make.
+
+If configuring SSL (out of scope for this training), out-of-the-box SSL settings are often insecure!
+
+Use the [Qualys SSL Server Test](https://www.ssllabs.com/ssltest/analyze.html) to check
+
+---
+# uWSGI
+
+Galaxy comes with a pure-python web server, [Paste](http://pythonpaste.org/)
+
+Why switch to uWSGI?
+- Built in multiprocess (avoid the GIL)
+- Built in load balancing
+- Better performance
+- Greater scalability
+- Hundreds of other features (see [docs](http://uwsgi-docs.readthedocs.io/en/latest/))
+
+Covered: Tuesday: _Improving the web serving experience with uWSGI_
+
+uWSGI will become the default: Watch [Galaxy Pull Request #2802](https://github.com/galaxyproject/galaxy/pull/2802), [Starforge Pull Request #118](https://github.com/galaxyproject/starforge/pull/118)

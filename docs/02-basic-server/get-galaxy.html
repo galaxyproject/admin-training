@@ -59,26 +59,26 @@ Optional
 
 For OS X/Linux/Windows w/ Linux Subsystem or OpenSSH:
 ```console
-$ ssh -L 8080:localhost:8080 galaxyguest@gsNN.chpc.utah.edu
+$ ssh -L 8080:localhost:8080 ubuntu@<your_ip>
 ```
 
 For PuTTY on Windows:
 - Create a session
 - See [instructions here](http://realprogrammers.com/how_to/set_up_an_ssh_tunnel_with_putty.html).
-- User: galaxyguest
-- Host Name: gsNN.chpc.utah.edu
+- User: ubuntu
+- Host Name: `<your_ip>`
 - (Tunnel) Source port: 8080
 - (Tunnel) Destination: 127.0.0.1:8080
 
 ---
 # Clone the repository
 
-1. check what is the latest [release](https://docs.galaxyproject.org/en/master/releases/index.html)
-1. run
+1. Check what is the latest [release](https://docs.galaxyproject.org/en/master/releases/index.html)
+1. Run
 ```shell
-$ git clone -b release_16.07 https://github.com/galaxyproject/galaxy.git
+$ git clone -b release_16.10 https://github.com/galaxyproject/galaxy.git
 ```
-Release is defined by the branch name: `release_16.07` see the [branch list](https://github.com/galaxyproject/galaxy/branches/all))
+Release is defined by the branch name: `release_16.10` see the [branch list](https://github.com/galaxyproject/galaxy/branches/all))
 
 Without specifying branch during clone you are running the *development* version of Galaxy.
 
@@ -105,7 +105,7 @@ You should see default Galaxy running.
 * Galaxy sourced this environment (`$ source .venv/bin/activate`)
 * Galaxy fetched needed Python binaries ('wheels') into this environment.
 * Galaxy created the default SQLite database and migrated it to the latest version.
-* Galaxy binded to the default port `8080` on `localhost`.
+* Galaxy bound to the default port `8080` on `localhost`.
 
 .footnote[All of the above can be configured.]
 
@@ -114,7 +114,7 @@ You should see default Galaxy running.
 
 1. Run a basic job (e.g. upload a file).
 1. Check http://localhost:8080/api/version to see Galaxy's version.
-1. Stop Galaxy by terminating the console process.
+1. Stop Galaxy by terminating the console process (`CTRL+C`).
 
 ---
 # Basic configuration
@@ -124,7 +124,7 @@ You should see default Galaxy running.
 - Galaxy often uses the files with suffix `*.sample` as declared defaults.
 
 ---
-# Exercise make your own config
+# Exercise: make your own config
 
 * Copy the provided sample and open editor.
 ```shell
@@ -134,7 +134,7 @@ $ nano config/galaxy.ini
 * Set the following entries.
 ```shell
 message_box_visible = True
-message_box_content = Hey, at least I am not popup!
+message_box_content = Hey, at least I'm not a popup!
 message_box_class = info
 ```
 * (Re)start Galaxy.
@@ -156,9 +156,43 @@ You can load remote content to this iframe (blog, existing presentation, etc.).
 ---
 # Make yourself an administrator
 
+* Create an account (User -> Register) <sup>[1]</sup>
 * Create a user using Galaxy interface.
 * Modify `galaxy.ini` to include `admin_users = your@ema.il`.
 * (Re)start Galaxy.
+
+.footnote[<sup>[1]</sup> Registering in the UI *before* setting `admin_users` is not strictly necessary, but is the best security practice]
+
+---
+# Start/stop in the background
+
+Start:
+```shell
+$ sh run.sh --daemon
+  ...
+Activating virtualenv at .venv
+Entering daemon mode
+```
+
+Monitor:
+```
+$ tail -f paster.log
+  ...
+Starting server in PID 1469.
+serving on http://127.0.0.1:8080
+^C
+
+Stop:
+```console
+$ sh run.sh --stop-daemon
+```
+
+---
+# Be secure
+
+You are running Galaxy as an **admin** user with **sudo** privileges (that's bad)!
+
+We'll fix this shortly.
 
 ---
 # What to do next?
