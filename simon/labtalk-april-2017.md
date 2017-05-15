@@ -50,7 +50,7 @@ class: left
 ```markdown
 ---
 class: left
-## ![galaxy Logo](images/galaxy_project_logo.png)  Motivation
+## ![galaxy Logo](images/galaxy_project_logo.jpg)  Motivation
 .large[
 * Galaxy admin training
   * Lots of contributors
