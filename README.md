@@ -1,6 +1,6 @@
 # GCC Accelerated Administrators Course
 
-**Montpellier - 15:30 28th of June 2017**
+**Montpellier 15:30-18:00 28th of June 2017**
 
 
 Built slides have [an index](https://galaxyproject.github.io/dagobah-training/2017-montpellier/).
