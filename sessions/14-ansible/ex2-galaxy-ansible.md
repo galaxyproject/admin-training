@@ -25,11 +25,11 @@ In this exercise we will:
 
 ## Section 1 - The tutorial script source files.
 
-Go to somewhere sensible on either your local machine or on your Galaxy server (/home/<your_username> would be sensible..)
+Go to somewhere sensible on either your local machine or on your Galaxy server (/home/<your_username> would be sensible.)
 
 * Grab the following with `wget` or `curl` and then untar it.
 
-  `https://swift.rc.nectar.org.au:8888/v1/AUTH_377/public/Ansible_files/gat2017-ansible.tar.gz`
+  `https://iu.jetstream-cloud.org:8080/swift/v1/gcc2017/gcc2017-ansible.tar.gz`
 
 This will copy the entire playbook and associated roles to somewhere we can look at it.
 
@@ -50,17 +50,24 @@ Take note of the fact that the playbook combines the individual roles to give us
 
 Where do the roles come from? Ansible has a "ToolShed"-like system called **Ansible Galaxy** - d'oh.
 
-Open the *commands.txt* file. You'll see a command to run the playbook followed by a series of commands that download the various roles from the Ansible galaxy and put them in an appropriate place in our scripts file tree.. e.g. `ansible-galaxy install -p roles galaxyproject.postgresql`
+Open the *commands.txt* file. You'll see a series of commands that download the various roles from the Ansible galaxy and put them in an appropriate place in our scripts file tree (e.g. `ansible-galaxy install -p roles galaxyproject.postgresql`) followed by a command to run the playbook (e.g., `ansible-playbook -i inventory playbook.yml`)
 
-There are many roles available for download. They all have some meta data associated with them which has information on the role's author, keywords, dependencies, licenses, available platforms etc. All of the roles in our script have that information. Checkout the *main.yml* in any of our role's *meta* directory.
+There are many roles available for download for various aspects of system administration or application setup. They all have some meta data associated with them which has information on the role's author, keywords, dependencies, licenses, available platforms etc. All of the roles in our script have that information. The Ansible Galaxy can be browsed at: [https://galaxy.ansible.com/](https://galaxy.ansible.com/). Checkout the *main.yml* in any of [Galaxy project's role's](https://galaxy.ansible.com/galaxyproject/) *meta* directory.
 
-The Ansible Galaxy can be browsed at: [http://galaxy.ansible.com/](http://galaxy.ansible.com/)
+Let's go ahead and download the necessary and available roles. A couple of roles have already been included in the archive we downloaded earlier so let's use Ansible Galaxy to download the rest:
+
+```
+ansible-galaxy install -p roles galaxyproject.postgresql
+ansible-galaxy install -p roles natefoo.postgresql_objects
+ansible-galaxy install -p roles galaxyproject.nginx
+ansible-galaxy install -p roles galaxyproject.galaxy
+```
 
 **Part 3 - Browse the roles**
 
 The demonstrator will now work through a couple of the roles and will run the playbook on a machine for us.
 
-The roles that this playbook use are:
+The roles used by this playbook use are:
 
 | Order run | Role name | Purpose | Variables to consider |
 | --------- | --------- | ------- | --------------------- |
@@ -80,7 +87,7 @@ Have a look at any one role, concentrating mainly on the variables (in the `defa
 
 To run the role we will need a Linux instance (we will use Ubuntu 16.04) with a set public/private keypair, or we need to run the playbook "locally" (i.e. on the managed host itself). We will also need to know it's IP address.
 
-* Set all the variables in *group_vars/galaxyservers.yml* as follows:
+* Make sure that all the variables in *group_vars/galaxyservers.yml* are set as follows:
 
 ``` yaml
 galaxy_user: galaxy
@@ -161,7 +168,7 @@ Now it's just a matter of running:
 The `-vv` switch indicates that we want the 2nd level of verbosity - it is a handy one to have if you want to see what is going on.
 The Ansible script will run and display what it's doing as it does. (Always a good idea to run it in a screen or something since networks are sometimes flaky!)
 
-Once the playbook has completed its run
+Once the playbook has completed its run we can access Galaxy on the machine we installed it on. The playbook has setup the Postgres database, Nginx proxy server, ProFTPD ftp server, Galaxy, and the necessary configurations.
 
 **Part 5 - Upgrade Galaxy**
 
@@ -176,17 +183,19 @@ Then run the same `ansible-playbook` command:
 ```console
 ansible-playbook -i inventory playbook.yml
 ```
-After it finished, we'll need to restart Galaxy. The playbook configured Supervisor to manage Galaxy so we'll restart it as follows:
+After it finished, we'll need to restart Galaxy. The playbook configured Supervisor to manage Galaxy so we'll restart Galaxy as follows:
 ```
 $ sudo supervisorctl
 supervisor> restart gx:
 ```
 
+This will restart the job handlers and the Galaxy uWSGI server.
+
 ## So, what did we learn?
 
 Hopefully, you now understand:
-* How Ansible combines roles with a playbook
-* Where to go to get more roles to add to a playbook
+* How Ansible combines roles with a playbook;
+* Where to go to get more roles to add to a playbook;
 * How to install Galaxy on a machine using Ansible.
 
 ## Further reading
@@ -194,5 +203,3 @@ Hopefully, you now understand:
 If you want to know more about Ansible and Galaxy, see the Galaxy Project Github page:  [https://github.com/galaxyproject](https://github.com/galaxyproject) and search for "ansible".
 
 If you want to know more about Ansible, details can be found at [www.ansible.com](https://www.ansible.com)
-
-Suggestions and comments are welcome. Please contact:
