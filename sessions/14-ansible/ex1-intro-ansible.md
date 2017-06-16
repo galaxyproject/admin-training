@@ -1,326 +1,198 @@
-![GATC Logo](../../docs/shared-images/AdminTraining2016-100.png) ![galaxy logo](../../docs/shared-images/galaxy_logo_25percent_transparent.png)
+![gcc2017 logo](../../docs/shared-images/gcc2017_logo.png) ![galaxy logo](../../docs/shared-images/galaxy_logo_25percent_transparent.png)
 
-### GATC - 2017 - Melbourne
+### GCC - 2017 - Montpellier
 
-# Introduction to Ansible - Exercise.
-
-#### Authors: Simon Gladman. 2016
+# Setup a production Galaxy with Ansible - Exercise.
 
 ## Learning Outcomes
 
-By the end of this tutorial, you should:
+By the end of this section, you should:
 
-1. Have an understanding of how Ansible roles are structured
-2. Be able to to write a simple role in Ansible to install a list of tool into Galaxy
-3. Understand how to use a role in a playbook.
+1. Have an understanding of how Galaxy's Ansible roles are structured and interact with one another;
+2. Be able to use an Ansible playbook to install different flavors of Galaxy for different purposes;
+3. Be able to write a playbook to suit your own purposes.
 
 ## Introduction
 
-Occasionally as a Galaxy administrator, you will be asked to install a whole suite of tools. You could use the Galaxy Admin UI to install all of the tools but this gets old pretty quickly.. We need a more *"sys-admin"* way of doing it. 
+We will be making use of the Galaxy project's pre-written Ansible roles and will look at how they are combined in a project.
 
-This is a perfect example of what Ansible is useful for! In this exercise we will write an Ansible role to:
+In this exercise we will:
 
-* Take a list of tools in YAML format
-* Create an administrator user for your Galaxy server
-* Get the admin user's API key
-* Use a python bioblend script to install the tools
-* Restart the Galaxy server!
+1. Download an Ansible playbook and associated roles.
+1. Walk through the various parts including the roles and the playbook.
+1. Discuss the group vars file
+1. Go through the Ansible "galaxy" - an unfortunate name... (It's Ansible's ToolShed.)
 
-We will use a number of Ansible structures and modules including:
+## Section 1 - The tutorial script source files.
 
-* variables
-* handlers
-* templates
-* tasks
-* files
+Go to somewhere sensible on either your local machine or on your Galaxy server (/home/<your_username> would be sensible..)
 
-## Preparation - Setup simple Galaxy.
+* Grab the following with `wget` or `curl` and then untar it.
 
-If you haven't participated in the Introduction days of this course (i.e. You're just doing the advanced sessions), you won't have a working Galaxy installation on your Virtual Machine yet. So, we will be doing a minimal quick install of Galaxy to get you up and running with the rest of this section of the exercise.
+  `https://swift.rc.nectar.org.au:8888/v1/AUTH_377/public/Ansible_files/gat2017-ansible.tar.gz`
 
-We will be cloning the Galaxy github repo into you home directory and then starting it up so it automatically downloads all of it its extra requirements.
+This will copy the entire playbook and associated roles to somewhere we can look at it.
 
-* Login to your VM as the *ubuntu* user. This user has sudo rights but we will not be needing them.
+**Part 1 - Examine the playbook**
 
-Once you've logged in, from your home directory, clone the Galaxy git repo.
+Have a look at the *playbook.yml* file. You'll notice that it contains quite a number of plays each of which reference a different role/s. The order in which the roles are referenced is important. This playbook does the following:
 
-`git clone https://github.com/galaxyproject/galaxy.git`
+1. Performs some system tasks (system packages, creates a galaxy user, etc.)
+1. Installs Postgres and Nginx
+1. Configures Postgres
+1. Installs and configures Galaxy
+1. Installs and configures ProFTPD
+1. Installs and configures supervisor
 
-You'll need to change the name of the **galaxy.ini.sample** file in *galaxy/config* to **galaxy.ini**. Then edit the file using an editor. We need to uncomment the line `#host = 127.0.0.1` and set the ip to `0.0.0.0` so that the Galaxy server is available over the internet.
+Take note of the fact that the playbook combines the individual roles to give us the desired outcome.
 
-Once, that is complete you can start your Galaxy server to test it.
+**Part 2 - Ansible galaxy**
 
-* Start the server with `sh ./run.sh --pid-file=paster.pid --log-file=paster.log --daemon`
+Where do the roles come from? Ansible has a "ToolShed"-like system called **Ansible Galaxy** - d'oh.
 
-If you want you can tail the log file and watch everything unfold. Once the server has finished configuring itself, try and connect to it in a web browser on port 8080. (ip_address:8080)
+Open the *commands.txt* file. You'll see a command to run the playbook followed by a series of commands that download the various roles from the Ansible galaxy and put them in an appropriate place in our scripts file tree.. e.g. `ansible-galaxy install -p roles galaxyproject.postgresql`
 
-If you see a Galaxy interface, everything worked! Now you can move on with learning about Ansible.
+There are many roles available for download. They all have some meta data associated with them which has information on the role's author, keywords, dependencies, licenses, available platforms etc. All of the roles in our script have that information. Checkout the *main.yml* in any of our role's *meta* directory.
 
-## Section 1 - Build the structure, copy some files, set some variables.
+The Ansible Galaxy can be browsed at: [http://galaxy.ansible.com/](http://galaxy.ansible.com/)
 
-**Part 1 - Create the ansible script directory tree**
+**Part 3 - Browse the roles**
 
-The first thing we need to do is build the structure for the ansible role and playbook.
+The demonstrator will now work through a couple of the roles and will run the playbook on a machine for us.
 
-* From a terminal on your **remote** machine (in a suitable place..)
+The roles that this playbook use are:
 
-``` bash
-mkdir galaxy-tool-ansible
-cd galaxy-tool-ansible
+| Order run | Role name | Purpose | Variables to consider |
+| --------- | --------- | ------- | --------------------- |
+| 0 | global_vars | Set some variables for the entire playbook | galaxy_server_dir, galaxy_changeset_id |
+| 1 | galaxyproject.postgresql | Installs postgreSQL database server.| postgresql_backup_local_dir |
+| 2 | galaxyproject.nginx | Installs and configures nginx (web server) |  |
+| 3 | natefoo.postgresql_objects | Installs postgreSQL scripts to work with privileges etc. |  |
+| 4 | galaxyproject.galaxy | Installs and configures Galaxy | galaxy_server_dir, galaxy_vcs (git or hg) |
+| 5 | supervisor | Installs supervisor configs for Galaxy | . |
+| 6 | proftpd | Installs ProFTPD configs for Galaxy | . |
 
-mkdir -p roles/galaxy-tool-install/defaults
-mkdir -p roles/galaxy-tool-install/files
-mkdir -p roles/galaxy-tool-install/tasks
-mkdir -p roles/galaxy-tool-install/handlers
-mkdir -p roles/galaxy-tool-install/templates
-mkdir -p roles/galaxy-tool-install/meta
+You'll note that these roles all have pretty good documentation on how to use them, which variables to set and how, and when they should be used. This makes it all much easier to understand.
 
-```
+Have a look at any one role, concentrating mainly on the variables (in the `defaults/main.yml` files and the vars directory if present.) By modifying these variables, you can customize things like, where postgreSQL keeps it's backups, where Galaxy is installed, and many others.
 
-**Part 2 - Copy some needed files**
+**Part 4 - Run the playbook**
 
-For this tutorial we will need a few files. A couple of python scripts that will be run on the remote machine and a list of tools to install. They are located in a swift container in Australia. We need to download the tarball and extract it.
+To run the role we will need a Linux instance (we will use Ubuntu 16.04) with a set public/private keypair, or we need to run the playbook "locally" (i.e. on the managed host itself). We will also need to know it's IP address.
 
-* From the same terminal, in the **files** directory. Use wget to download the files. They are located at: *https://swift.rc.nectar.org.au:8888/v1/AUTH_377/public/Ansible_files/files_for_tool_ansible.tgz*
-
-* Untar them! (`tar -xvf files_for_tool_ansible.tgz`)
-
-You will now have 3 files in your directory. They are:
-
-* **install_tool_shed_tools.py**. This is a python script that will take a list of tools in yaml format and install them into a Galaxy server given an admin user's api key.
-* **manage_bootstrap_user.py**. This is a python script that will create an admin user by directly editing the Galaxy database. When run in create mode, it returns the admin user's api key
-* **tool_list.yaml**. This is a list of tools to install. The format is as follows:
-
-```yaml
-- name: tool_name
-  owner: tool_owner
-  tool_shed_url: https://toolshed.g2.bx.psu.edu #e.g.
-  tool_panel_section: section_name
-  revisions:
-    - xxxxxxxxxx
-    - yyyyyyyyyy #can specify multiple revisions.
-```
-
-Note that the *section_name* has to exist prior to running the script! Therefore, we will need to add a couple of sections to our *shed_tool_conf.xml* file in the tasks..
-
-**Part 3 - Create some default variables.**
-
-* Now we need to create a file in *roles/galaxy-tool-install/defaults/* called **main.yml**
-
-This file will contain a bunch of variables that we will call upon during in the rest of our role. It will contain things like:
-
-* Path to the Galaxy server.
-* Config file locations
-* Name of the tool file
-* Admin user name (if one already exists)
-
-The contents of the file need to look something like this:
+* Set all the variables in *group_vars/galaxyservers.yml* as follows:
 
 ``` yaml
-#The system user for Galaxy
-galaxy_user: galaxy #Set this to whatever system user has write access to all of the Galaxy files.
+galaxy_user: galaxy
 
-galaxy_server_url: http://localhost/
+postgresql_objects_users:
+  - name: galaxy
 
-# Blank variable to make sure it's defined
-galaxy_tools_api_key: ''
+postgresql_objects_databases:
+  - name: galaxy
+    owner: galaxy
 
-# A user for the Galaxy bootstrap user
-tools_admin_email: tool_install@tools.com
-tools_admin_username: tools
-tools_admin_password: CoolToolInstaller
+galaxy_root_dir: /srv/galaxy
+galaxy_server_dir: "{{ galaxy_root_dir }}/server"
+galaxy_config_dir: "{{ galaxy_root_dir }}/config"
+galaxy_mutable_config_dir: "{{ galaxy_root_dir }}/config"
+galaxy_venv_dir: "{{ galaxy_root_dir }}/venv"
+galaxy_shed_tools_dir: "{{ galaxy_root_dir }}/shed_tools"
+galaxy_vcs: git
+galaxy_changeset_id: release_17.01
 
-galaxy_server_dir: /srv/galaxy/server #Put the actual path to your Galaxy root here
+galaxy_config:
+  "app:main":
+    database_connection: postgresql:///galaxy?host=/var/run/postgresql
+    file_path: "{{ galaxy_root_dir }}/data"
+    tool_dependency_dir: "{{ galaxy_root_dir }}/dependencies"
+    admin_users: your@ema.il                                            # <---- Put your user email here
+    galaxy_data_manager_data_path: "{{ galaxy_root_dir }}/tool-data"
+    auth_config_file: "{{ galaxy_config_dir }}/auth_conf.xml"
+    job_config_file: "{{ galaxy_config_dir }}/job_conf.xml"
+    nginx_x_accel_redirect_base: /_x_accel_redirect
+    nginx_upload_store: "{{ galaxy_root_dir }}/upload_store"
+    nginx_upload_path: /_upload
+    ftp_upload_dir: "{{ galaxy_root_dir }}/ftp"
+    ftp_upload_site: galaxy.example.org
+    conda_auto_init: "True"
+  "uwsgi":
+    processes: 2
+    threads: 2
+    socket: 127.0.0.1:4001
+    pythonpath: lib
+    master: True
+    logto: "{{ galaxy_root_dir }}/log/uwsgi.log"
+    logfile-chmod: 644
 
-# A system path where a virtualend for Galaxy is installed
-galaxy_venv_dir: "/srv/galaxy/venv"
+galaxy_config_files:
+  - src: files/galaxy/job_conf.xml
+    dest: "{{ galaxy_config_dir }}/job_conf.xml"
+  - src: files/galaxy/auth_conf.xml
+    dest: "{{ galaxy_config_dir }}/auth_conf.xml"
 
-# A system path for Galaxy's main configuration file
-galaxy_config_file: "/srv/galaxy/config/galaxy.ini"
+nginx_flavor: extras
 
-tool_conf: "/srv/galaxy/config/shed_tool_conf.xml"
+nginx_configs:
+  - galaxy
+
+supervisor_configs:
+  - galaxy
+
+proftpd_configs:
+  - galaxy
 ```
 
-## Section 2 - Build the tasks
-
-Ansible tasks are run in order. So we just need to think about what we need to do and when. Once we have figured that out, we create an ansible task for each step. For this tutorial, all of our steps will reside in a single file. Note that this does not need to be the case.
-
-* Create a new file called **main.yml** in *roles/galaxy-tool-install/tasks/*. This will be our tasks list file.
-
-The first thing we need to get our script to do is copy the python scripts we need to use into the correct place in the Galaxy file tree on the remote machine. We use the *copy* ansible module for that.
-
-Put the following into the main.yml file.
-
-``` yaml
---- #this tells ansible that we have a yaml file.. 
-
-- name: Copy files to remote machine.
-  copy: src="{{ item }}" dest="{{ galaxy_server_dir }}/scripts/{{ item }}" owner="{{ galaxy_user }}" mode="u+rwx"
-  become: yes
-  become_user: "{{ galaxy_user }}"
-  with_items:
-    - install_tool_shed_tools.py
-    - manage_bootstrap_user.py
-
-```
-
-Done. We've written our first ansible task. This one is using a list of items to copy...
-
-Now we need to add a bunch of other tasks. We need to:
-
-1. Create the bootstrap admin user and record their api key
-1. Add the bootstrap user to the *admin_users=* line in galaxy.ini
-1. Restart Galaxy
-1. Run *install_tool_shed_tools.py* with the list of tools to install and the api key.
-1. Remove the bootstrap user from the *galaxy.ini* file and the Galaxy database.
-1. Finally, we probably should restart Galaxy for good measure.
-
-To complete these tasks we will be using various ansible modules. This is by no means the only or best way to complete this task but this tutorial is meant to serve of an example of a simple ansible script.
-
-Add the following to your tasks *main.yml*
-
-```yaml
-
-- name: Create the bootstrap user
-  command: chdir="{{ galaxy_server_dir }}" {{ galaxy_venv_dir }}/bin/python scripts/manage_bootstrap_user.py -c "{{ galaxy_config_file }}" create -u "{{ tools_admin_username }}" -e "{{ tools_admin_email }}" -p "{{ tools_admin_password }}"
-  register: api_key
-  become: yes
-  become_user: "{{ galaxy_user }}"
-
-- debug: var=api_key
-
-#set the api key for irida to the one that was returned
-- set_fact: galaxy_tools_api_key="{{ api_key.stdout_lines[0] }}"
-
-#Add the admin user to galaxy.ini (check to see if the admin users line already exists)
-- name: Check/Set bootstrap user as Galaxy Admin if admin_users tag is already in the config file
-  replace: dest="{{ galaxy_config_file }}" regexp="^[ ]*admin_users[ ]*=[ ]*" replace="admin_users = {{ tools_admin_email }},"  #"
-  register: admin_users_found
-  become: yes
-  become_user: "{{ galaxy_user }}"
-
-- name: Set bootstrap user as Galaxy Admin
-  lineinfile: dest="{{ galaxy_config_file }}" state=present insertafter="app:main" line="admin_users = {{ tools_admin_email }}"  #"
-  when: admin_users_found.msg == ""
-  become: yes
-  become_user: "{{ galaxy_user }}"
-
-#Copy the tool list to galaxy_server_dir
-- name: Copy the tool list to galaxy_server_dir
-  copy: src="tool_list.yaml" dest="{{ galaxy_server_dir }}/tool_list.yaml"
-  become: yes
-  become_user: "{{ galaxy_user }}"
-
-# Add some required sections to the shed_tool_conf.xml file
-- name: Insert some sections into the tool panel file
-  lineinfile: dest="{{ tool_conf }}" insertbefore="^</toolbox>" line="{{ item }}" state=present
-  with_items:
-    - '<section id="assembly" name="Assembly">'
-    - '</section> #assembly'
-    - '<section id="cshl_library_information" name="CSHL Library Information">'
-    - '</section> #cshl_library_information'
-  become: yes
-  become_user: "{{ galaxy_user }}"
-
-#restart Galaxy
-- name: Restart Galaxy
-  supervisorctl: "name=gx: state=restarted"
-  become: yes
-
-- name: Wait for Galaxy to start
-  wait_for: port=80 delay=5 state=started timeout=600
-
-#Install the tools!
-- name: Install the toolshed tools!
-  command: chdir="{{ galaxy_server_dir }}" "{{ galaxy_venv_dir }}/bin/python" "{{ galaxy_server_dir }}"/scripts/install_tool_shed_tools.py -g "{{ galaxy_server_url }}" -a "{{ galaxy_tools_api_key }}" -t tool_list.yaml
-  become: yes
-  become_user: "{{ galaxy_user }}"
-  ignore_errors: true
-
-#Now de admin the bootstrap user..
-- name: De-admin the bootstrap user
-  replace: dest="{{ galaxy_config_file }}" regexp="{{ tools_admin_email}}[,]?" replace=""
-  become: yes
-  become_user: "{{ galaxy_user }}"
-
-#Finally, restart Galaxy for good measure..
-- name: Restart Galaxy
-  supervisorctl: "name=gx: state=restarted"
-  become: yes
-
-- name: Wait for Galaxy to start
-  wait_for: port=80 delay=5 state=started timeout=600
-```
-
-Phew. Done. Now we have our tasks to be completed.
-
-Note that we have repeated some code to restart Galaxy. We should either make this a handler or a separate task file and replace it in this file with include statements...
-
-## Section 3 - Write the playbook
-
-Now we need to write the playbook to call the role we've created. The playbook contains a list of hosts to run on and a list of roles to run. Ours will be simple..
-
-* In the root directory of our Ansible script, create a file called *playbook.yml* and add the following contents:
-
-``` yaml
----
-# file: playbook.yml
-#   Use this file to run the galaxy-tool-install script
-
-# Use this role via the following command:
-#
-#   % ansible-playbook playbook.yml
-#
-- hosts: localhost
-  connection: local
-  become: yes
-  roles:
-    - role: galaxy-tool-install
-```
-
-This playbook runs on the localhost and so the script needs to actually be on the target machine. By adding some private/public key information and an ip address here, we can also run this role on a remote machine.
-
-
-## Section 4 - Run the playbook!
-
-Now we can run the playbook on our Galaxy instance! (The entire script directory tree needs to be present on the target machine as we are running it using localhost...)
-
-* From the root of the script directory: `ansible-playbook -vv playbook.yml`
-
-The -vv here just means two levels of verbosity.. It shows us what is going on. There are 4 levels of verbosity from none to extremely verbose...
-
-**Remote running** 
-
-To run this playbook on a remote machine, you'll need to have a public/private ssh key setup on the remote. You then need to make an inventory or hosts file. This is quite simple and looks something like this:
+* Set the contents of the *inventory* file appropriately.
 
 ``` ini
-[hosts]
-<instance_ip>
-<instance_ip>
+[galaxyservers]
+localhost
 
-[vars]
-ansible_ssh_user=ubuntu
-ansible_ssh_private_key_file=<path_to_your_private_ssh_key>
-
+[galaxyservers:vars]
+ansible_connection=local
+ansible_become=yes
 ```
 
-You then need to modify your playbook slightly to use *[hosts]*. Change the `- hosts: localhost` line to `- hosts: hosts` and remove the `connection: local` line. 
+Now it's just a matter of running:
 
-Then you can run the playbook on the hosts with the *-i hosts_file* switch. `ansible-playbook -i hosts_file playbook.yml`
+`ansible-playbook -i inventory -vv playbook.yml`
 
-As mentioned in the slides, you can have groups of different machine types etc. You can operate on more than one remote machine at once. For example, if you're running a course for students and have 40 machines to add tools and/or data to, just list all the ip addresses in the hosts file and you're set to go!
+The `-vv` switch indicates that we want the 2nd level of verbosity - it is a handy one to have if you want to see what is going on.
+The Ansible script will run and display what it's doing as it does. (Always a good idea to run it in a screen or something since networks are sometimes flaky!)
+
+Once the playbook has completed its run
+
+**Part 5 - Upgrade Galaxy**
+
+This playbook uses the stable release of Galaxy 17.01. Let's use our Ansible setup to upgrade it to 17.05. To do this, open up `group_vars/galaxyservers.yml`, locate the definition of `galaxy_changeset_id`, and update it:
+
+```yaml
+galaxy_changeset_id: release_17.01
+```
+
+Then run the same `ansible-playbook` command:
+
+```console
+ansible-playbook -i inventory playbook.yml
+```
+After it finished, we'll need to restart Galaxy. The playbook configured Supervisor to manage Galaxy so we'll restart it as follows:
+```
+$ sudo supervisorctl
+supervisor> restart gx:
+```
 
 ## So, what did we learn?
 
-Hopefully, you now:
-* Understand how Ansible roles are structured
-* Are able to to write a simple role in Ansible to install a list of tool into Galaxy
-* Understand how to use a role in a playbook.
+Hopefully, you now understand:
+* How Ansible combines roles with a playbook
+* Where to go to get more roles to add to a playbook
+* How to install Galaxy on a machine using Ansible.
 
 ## Further reading
 
-If you want to know more about Ansible, details can be found at [www.ansible.com](https://www.ansible.com)
+If you want to know more about Ansible and Galaxy, see the Galaxy Project Github page:  [https://github.com/galaxyproject](https://github.com/galaxyproject) and search for "ansible".
 
-More information on the galaxy ansible scripts can be found at [github.com/galaxyproject](http://github.com/galaxyproject) and searching for key word: ansible
+If you want to know more about Ansible, details can be found at [www.ansible.com](https://www.ansible.com)
 
 Suggestions and comments are welcome. Please contact:
