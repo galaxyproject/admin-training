@@ -172,10 +172,10 @@ Once the playbook has completed its run we can access Galaxy on the machine we i
 
 **Part 5 - Upgrade Galaxy**
 
-This playbook uses the stable release of Galaxy 17.01. Let's use our Ansible setup to upgrade it to 17.05. To do this, open up `group_vars/galaxyservers.yml`, locate the definition of `galaxy_changeset_id`, and update it:
+This playbook uses the stable release of Galaxy 17.01. Let's use our Ansible setup to upgrade it to 17.05. To do this, open up `group_vars/galaxyservers.yml`, locate the definition of `galaxy_changeset_id`, and update it so it reads:
 
 ```yaml
-galaxy_changeset_id: release_17.01
+galaxy_changeset_id: release_17.05
 ```
 
 Then run the same `ansible-playbook` command:
