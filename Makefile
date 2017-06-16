@@ -14,6 +14,9 @@ generate-slides:
 	$(IN_VENV) python slideshow/build_slideshow.py 'Tool Dependencies' sessions/04-tool-shed/tool-dependencies.md 04-tool-shed
 	$(IN_VENV) python slideshow/build_slideshow.py 'Tool Installation' sessions/04-tool-shed/tool_installation.md 04-tool-shed
 
+	# Enis
+	$(IN_VENV) python slideshow/build_slideshow.py 'Ansible and Galaxy' sessions/14-ansible/ansible-introduction.md 14-ansible
+
 	# other topics
 	# $(IN_VENV) python slideshow/build_slideshow.py 'Deployment and Platform Options' sessions/01-deployment-platforms/choices.md 01-deployment-platforms
 	# $(IN_VENV) python slideshow/build_slideshow.py 'Get Galaxy' sessions/02-basic-server/get-galaxy.md 02-basic-server
