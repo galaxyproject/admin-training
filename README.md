@@ -1,19 +1,8 @@
-# GCC Accelerated Administrators Course
+# Accelerated Galaxy Administrators Course at [GCC2017](https://gcc2017.sciencesconf.org/)
 
-**Montpellier 15:30-18:00 28th of June 2017**
-
+**Montpellier 15:30-18:00 CEST 28th of June 2017**
 
 Built slides have [an index](https://galaxyproject.github.io/dagobah-training/2017-montpellier/).
-
-### Instructors
-
-* (N)ate Coraor - Galaxy Project, BMB, Penn State University, USA
-* (S)imon Gladman - VLSCI, University of Melbourne, Australia
-* (E)nis Afgan - Galaxy Project, Department of Biology, Johns Hopkins University, USA
-* (D)an Blankenberg - Galaxy Project, BMB, Penn State University, USA
-* (J)ohn Chilton - Galaxy Project, BMB, Penn State University, USA
-* (M)artin Čech - Galaxy Project, BMB, Penn State University, USA
-
 
 ## Timetable
 
@@ -29,6 +18,15 @@ Built slides have [an index](https://galaxyproject.github.io/dagobah-training/20
 | 17:25 | Reference Genomes | [tutorial](https://github.com/galaxyproject/dagobah-training/tree/2017-montpellier/sessions/05-reference-genomes) | (S) |
 | 17:45 | Q&A |  | All |
 | 18:00 | END |  |  |
+
+### Instructors
+
+* (N)ate Coraor - Galaxy Project, BMB, Penn State University, USA
+* (S)imon Gladman - VLSCI, University of Melbourne, Australia
+* (E)nis Afgan - Galaxy Project, Department of Biology, Johns Hopkins University, USA
+* (D)an Blankenberg - Galaxy Project, BMB, Penn State University, USA
+* (J)ohn Chilton - Galaxy Project, BMB, Penn State University, USA
+* (M)artin Čech - Galaxy Project, BMB, Penn State University, USA
 
 ---
 
