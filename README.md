@@ -11,6 +11,7 @@ Built slides have [an index](https://galaxyproject.github.io/dagobah-training/20
 * (S)imon Gladman - VLSCI, University of Melbourne, Australia
 * (E)nis Afgan - Galaxy Project, Department of Biology, Johns Hopkins University, USA
 * (D)an Blankenberg - Galaxy Project, BMB, Penn State University, USA
+* (J)ohn Chilton - Galaxy Project, BMB, Penn State University, USA
 * (M)artin Čech - Galaxy Project, BMB, Penn State University, USA
 
 ---
