@@ -3,11 +3,13 @@ class: inverse
 
 ---
 class: special, center
-![gcc2017 logo](../shared-images/gcc2017_logo.png)
+![gcc2017 logo](../shared-images/gcc2017_logo_black.png)
 
 # Galaxy Admin Training
 28th of June 2017
+
 15:30-18:00
+
 Montpellier, France
 
 ---
