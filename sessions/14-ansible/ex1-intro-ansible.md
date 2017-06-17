@@ -16,7 +16,7 @@ By the end of this tutorial, you should:
 
 ## Introduction
 
-Occasionally as a Galaxy administrator, you will be asked to install a whole suite of tools. You could use the Galaxy Admin UI to install all of the tools but this gets old pretty quickly.. We need a more *"sys-admin"* way of doing it. 
+Occasionally as a Galaxy administrator, you will be asked to install a whole suite of tools. You could use the Galaxy Admin UI to install all of the tools but this gets old pretty quickly.. We need a more *"sys-admin"* way of doing it.
 
 This is a perfect example of what Ansible is useful for! In this exercise we will write an Ansible role to:
 
@@ -152,7 +152,7 @@ The first thing we need to get our script to do is copy the python scripts we ne
 Put the following into the main.yml file.
 
 ``` yaml
---- #this tells ansible that we have a yaml file.. 
+--- #this tells ansible that we have a yaml file..
 
 - name: Copy files to remote machine.
   copy: src="{{ item }}" dest="{{ galaxy_server_dir }}/scripts/{{ item }}" owner="{{ galaxy_user }}" mode="u+rwx"
@@ -289,7 +289,7 @@ Now we can run the playbook on our Galaxy instance! (The entire script directory
 
 The -vv here just means two levels of verbosity.. It shows us what is going on. There are 4 levels of verbosity from none to extremely verbose...
 
-**Remote running** 
+**Remote running**
 
 To run this playbook on a remote machine, you'll need to have a public/private ssh key setup on the remote. You then need to make an inventory or hosts file. This is quite simple and looks something like this:
 
@@ -304,7 +304,7 @@ ansible_ssh_private_key_file=<path_to_your_private_ssh_key>
 
 ```
 
-You then need to modify your playbook slightly to use *[hosts]*. Change the `- hosts: localhost` line to `- hosts: hosts` and remove the `connection: local` line. 
+You then need to modify your playbook slightly to use *[hosts]*. Change the `- hosts: localhost` line to `- hosts: hosts` and remove the `connection: local` line.
 
 Then you can run the playbook on the hosts with the *-i hosts_file* switch. `ansible-playbook -i hosts_file playbook.yml`
 

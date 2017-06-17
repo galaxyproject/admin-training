@@ -1,42 +1,43 @@
 - name: Pre-configure
-
   hosts: workshop-instances
-  
+  vars:
+      - ansible_python_interpreter: /usr/bin/python3
   tasks:
-    
-    #Set the ubuntu password
-    - name: Set the ubuntu password
+
+    # Set the ubuntu password
+    - name: Set the ubuntu user password
       user:
         name: ubuntu
-        password: '$6$rounds=656000$FVCztO55xjNo/jO0$7EYyaFNeYMND8edk2BPnv6iDvMWFySZDgwnYNbarbSeD.jdlsE6yuOsDaRvw2LCv86fmk2eM7ZrjlXIWmjUw.0'
+        password: '$1$fiuynbkd$M7Wo.BhNSMJuN0TJruOkE/'
       become: yes
       become_user: root
-        
+
     - name: Change the /etc/ssh/sshd_config file to allow password logins.
-      replace: dest="/etc/ssh/sshd_config" regexp="PasswordAuthentication no" replace="PasswordAuthentication yes"
+      lineinfile:
+        dest: /etc/ssh/sshd_config
+        regexp: '^PasswordAuthentication no'
+        line: 'PasswordAuthentication yes'
       become: yes
       become_user: root
-    
+
     - name: restart sshd
       service: name=sshd state=restarted
       become: yes
       become_user: root
-    
-    #Oracle Java and the Atom repo
-    - name: Install oracle java and atom ppds
+
+    - name: Install Oracle java ppa
       apt_repository: repo="{{ item }}" state=present
       become: yes
       become_user: root
       with_items:
-        - ppa:webupd8team/atom
         - ppa:webupd8team/java
-      
+
     - name: Update repos
       apt: update_cache=yes
       become: yes
       become_user: root
-      
-    - name: Install other packages
+
+    - name: Install system packages
       become: yes
       apt: name="{{ item }}" state=latest
       with_items:
@@ -51,13 +52,16 @@
         - python-pip
         - sendmail
         - proftpd-basic
-        - atom
         - postgresql
         - zlib1g-dev
-      
+
     - name: Accept Java 8 License
       become: yes
-      debconf: name='oracle-java8-installer' question='shared/accepted-oracle-license-v1-1' value='true' vtype='select'
+      debconf:
+        name: 'oracle-java8-installer'
+        question: 'shared/accepted-oracle-license-v1-1'
+        value: 'true'
+        vtype: 'select'
 
     - name: Install Oracle Java 8
       become: yes
@@ -66,9 +70,10 @@
         - oracle-java8-installer
         - ca-certificates
         - oracle-java8-set-default
-  
-    - name: Install planemo
+
+    - name: Update vimrc
       become: yes
-      pip: name="{{ item }}"
-      with_items:
-        - planemo
+      lineinfile:
+        dest: /etc/vim/vimrc
+        regexp: '"set background=dark'
+        line: 'set background=dark'
