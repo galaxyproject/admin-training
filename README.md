@@ -14,7 +14,7 @@ Built slides have [an index](https://galaxyproject.github.io/dagobah-training/20
 | 16:15 | PostgreSQL/nginx and uWSGI/supervisor/webless handlers and job conf/cluster |  | (N) |
 | 16:43 | Authentication |  | (J) |
 | 16:50 | WTGW/troubleshooting and GIEs |  | (N) |
-| 17:10 | Tools and the Tool Shed (bwa) |  | (M) |
+| 17:10 | Tools and the Tool Shed | [shed](https://galaxyproject.github.io/dagobah-training/2017-montpellier/04-tool-shed/shed_intro.html#1) [installation](https://galaxyproject.github.io/dagobah-training/2017-montpellier/04-tool-shed/tool_installation.html#1) [exercise](https://github.com/galaxyproject/dagobah-training/blob/2017-montpellier/sessions/04-tool-shed/ex-ephemeris.md) | (M) |
 | 17:25 | Reference Genomes | [tutorial](https://github.com/galaxyproject/dagobah-training/tree/2017-montpellier/sessions/05-reference-genomes) | (S) |
 | 17:45 | Q&A |  | All |
 | 18:00 | END |  |  |

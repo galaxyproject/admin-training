@@ -1,8 +1,7 @@
-# Exercise - Tool installation usinf Ephemeris
+# Exercise - Tool installation using Ephemeris
 
 by @martenson
 
 \#usegalaxy @galaxyproject
 
----
 

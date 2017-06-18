@@ -68,6 +68,10 @@ to automate tool installation tasks.
 It will help you accomplish such goals as 'mirror toolset on Main'.
 
 ---
+# Exercise - Tool installation using Ephemeris
+
+
+---
 # What happened?
 
 * Repository was downloaded/cloned.
