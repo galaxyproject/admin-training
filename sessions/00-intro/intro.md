@@ -5,7 +5,7 @@ class: inverse
 class: special, center
 ![gcc2017 logo](../shared-images/gcc2017_logo_black.png)
 
-# Galaxy Admin Training
+# Accelerated Admin Training
 28th of June 2017
 
 15:30-18:00
@@ -30,7 +30,7 @@ Montpellier, France
 
 ---
 class: special, center, middle
-# Feel free to Tweet
+# Spread the word
 
 # \#usegalaxy
 ## @galaxyproject
@@ -60,7 +60,7 @@ class: special, center, middle
 - https://galaxyproject.org/
   - https://galaxyproject.org/admin
 - http://galaxyproject.github.io/training-material/
-  - notably http://galaxyproject.github.io/training-material/topics/admin/
+  - http://galaxyproject.github.io/training-material/topics/admin/
 
 ]
 .footnote[[http://bit.ly/gcc17admin](https://github.com/galaxyproject/dagobah-training/tree/2017-montpellier)]

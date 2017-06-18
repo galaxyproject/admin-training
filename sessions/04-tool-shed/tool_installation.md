@@ -37,23 +37,20 @@ You can add tools to Galaxy either
 
 - By default Galaxy loads all tools in `tool_conf.xml.sample` into tool panel.
 - To add local tools you need:
-  - Make a copy `$ cp tool_conf.xml.sample tool_conf.xml`.
+  - Make a copy of the config `$ cp tool_conf.xml.sample tool_conf.xml`.
   - Add your tool entries to the `tool_conf.xml`.
   - (Re)start Galaxy.
-
-???
-From 16.10 use `<toolbox monitor="true">` to trigger hot reload of tools.
 
 ---
 # How to install a tool from Tool Shed
 
-* Be an admin.
+* Be a Galaxy admin.
 * Find the repository you want to install.
 * (Connect Your Galaxy to the Tool Shed.)
 * From Galaxy's admin UI find the repo in the connected TS.
 * Install the repo into Galaxy.
 
-.footnote[Step by step tutorial with screenshots [on wiki](https://wiki.galaxyproject.org/Admin/Tools/AddToolFromToolShedTutorial)]
+.footnote[Step by step tutorial with screenshots [on hub](https://galaxyproject.org/admin/tools/add-tool-from-toolshed-tutorial/)]
 
 ---
 # Installation options
@@ -63,13 +60,21 @@ From 16.10 use `<toolbox monitor="true">` to trigger hot reload of tools.
   * More about dependency resolution is covered in a separate deck.
 
 ---
+# Tool installation automation
+
+You can use scripts in the project [Ephemeris](https://github.com/galaxyproject/ephemeris)
+to automate tool installation tasks.
+
+It will help you accomplish such goals as 'mirror toolset on Main'.
+
+---
 # What happened?
 
-* Repository was downloaded.
+* Repository was downloaded/cloned.
 * If needed Galaxy downloaded and compiled the needed dependencies.
 * Galaxy created an entry for the tool in the DB.
 * Galaxy added the tool to one of the tool configs (`shed_tool_conf.xml`).
-* After restart Galaxy will load the tool.
+* Galaxy performed a hot-reload to make the tool accessible (with release 17.01).
 
 ---
 # Example config entry
@@ -91,25 +96,24 @@ From 16.10 use `<toolbox monitor="true">` to trigger hot reload of tools.
 ---
 # Example config entry
 
-one entry in `integrated_tool_panel.xml`
+One entry in `integrated_tool_panel.xml`:
 ```xml
 <section id="filter" name="Filter and Sort" version="">
     <tool id="testtoolshed.g2.bx.psu.edu/repos/devteam/bamtools_filter/bamFilter/0.0.1" />
 ```
 
 ---
-# Toolbox monitoring
+# Tool panel labels
 
-Starting with Galaxy 16.10 you can set `<toolbox monitor="true">` in the
-config file to make Galaxy do a hot reload during the installation.
+You can add `<tool labels="updated" />` to achieve:
 
-This allows loading new tools without restarting even across processes.
+![tool panel labels](images/toolpanel_labels.png)
 
 ---
 # Suites - more repos in one
 
 * To install multiple repositories some authors offer suites.
-* Suite is a single repository that 'depends' on many other.
+* Suite is a single TS repository that 'depends' on many other.
 * If you install the suite all 'dependency repositories' will be installed too.
 
 ---
@@ -121,7 +125,7 @@ This allows loading new tools without restarting even across processes.
 * Modify it if you want to reorder tools or move section.
 
 ---
-# Toolpanel search configuration
+# Toolpanel search configuration 1/2
 
 Tool panel search is done on pre-built index. However you can tweak toolpanel
 searching by configuring the boosts in `galaxy.ini`.
@@ -139,9 +143,16 @@ You can also manipulate the searchlimit with `tool_search_limit = 20` which will
 display more/less results of the search.
 
 ---
-# Tool installation automation
+# Toolpanel search configuration 2/2
 
-You can use scripts in the project [Ephemeris](https://github.com/galaxyproject/ephemeris)
-to automate tool installation tasks.
+```
+# Enable/ disable Ngram-search for tools. It makes tool
+# search results tolerant for spelling mistakes in the query
+# by dividing the query into multiple ngrams and search for
+# each ngram
+#tool_enable_ngram_search = False
 
-It will help you accomplish such goals as 'mirror toolset on Main'.
+# Set minimum and maximum sizes of ngrams
+#tool_ngram_minsize = 3
+#tool_ngram_maxsize = 4
+```

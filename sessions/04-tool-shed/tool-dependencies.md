@@ -5,8 +5,6 @@ class: inverse, middle, large
 class: special
 # Galaxy Tool Dependencies
 
-This is a very current topic for Galaxy and you can make your voice heard in the Galaxy repo.
-
 
 slides by @martenson
 
