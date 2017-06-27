@@ -18,7 +18,7 @@ Built slides have [an index](https://galaxyproject.github.io/dagobah-training/20
 | 16:15 | Authentication |  | (J) |
 | 16:20 | Tools and the Tool Shed | [shed](https://galaxyproject.github.io/dagobah-training/2017-montpellier/04-tool-shed/shed_intro.html#1) [installation](https://galaxyproject.github.io/dagobah-training/2017-montpellier/04-tool-shed/tool_installation.html#1) [exercise](https://github.com/galaxyproject/dagobah-training/blob/2017-montpellier/sessions/04-tool-shed/ex-ephemeris.md) | (M) |
 | 16:35 | Reference Genomes |[Slides](https://galaxyproject.github.io/dagobah-training/2017-montpellier/05-reference-genomes/reference_genomes.html)  [Exercise](https://github.com/galaxyproject/dagobah-training/tree/2017-montpellier/sessions/05-reference-genomes/ex1-reference-genomes.md) | (S) |
-| 16:55 | uWSGI/supervisor/webless handlers | [slides](https://galaxyproject.github.io/dagobah-training/2017-montpellier/10-uwsgi/uwsgi.html), [exercise](https://github.com/galaxyproject/dagobah-training/tree/2017-montpellier/sessions/10-uwsgi/ex2-zerg-mode.md)) | (N) |
+| 16:55 | uWSGI/supervisor/webless handlers | [slides](https://galaxyproject.github.io/dagobah-training/2017-montpellier/10-uwsgi/uwsgi.html), [exercise](https://github.com/galaxyproject/dagobah-training/tree/2017-montpellier/sessions/10-uwsgi/ex2-zerg-mode.md) | (N) |
 | 17:15 | Advanced Job Configuration | [slides](), [exercise]() | (N) |
 | 17:35 | Galaxy Interactive Environments | [slides](), [exercise]() | (N) |
 | 17:45 | Q&A |  | All |
