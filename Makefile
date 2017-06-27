@@ -17,6 +17,9 @@ generate-slides:
 	# Enis
 	$(IN_VENV) python slideshow/build_slideshow.py 'Ansible and Galaxy' sessions/14-ansible/ansible-introduction.md 14-ansible
 
+	# Simon
+	$(IN_VENV) python slideshow/build_slideshow.py 'Reference Genomes' sessions/05-reference-genomes/reference_genomes.md 05-reference-genomes
+
 	# other topics
 	# $(IN_VENV) python slideshow/build_slideshow.py 'Deployment and Platform Options' sessions/01-deployment-platforms/choices.md 01-deployment-platforms
 	# $(IN_VENV) python slideshow/build_slideshow.py 'Get Galaxy' sessions/02-basic-server/get-galaxy.md 02-basic-server
