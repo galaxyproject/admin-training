@@ -4,6 +4,10 @@
 
 Built slides have [an index](https://galaxyproject.github.io/dagobah-training/2017-montpellier/).
 
+### Instances for workshop
+
+[Here is a list](https://docs.google.com/spreadsheets/d/1pm84zgPc29Y36csNZ5xnN2H6RPTKCI7_4ZAetamWuuQ/edit?usp=sharing) of instances for the workshop: Please **carefully** claim one by putting your name in the student column next to a machine name. Then, write down your IP address.
+
 ## Timetable
 
 | **Time** | **Topic** | **Links** | **Instructor** |
