@@ -22,6 +22,7 @@ generate-slides:
 
 	# Nate
 	$(IN_VENV) python slideshow/build_slideshow.py 'uWSGI' sessions/10-uwsgi/uwsgi.md 10-uwsgi
+	$(IN_VENV) python slideshow/build_slideshow.py 'Galaxy Job Configuration' sessions/15-job-conf/job_conf.md 15-job-conf
 
 	# other topics
 	# $(IN_VENV) python slideshow/build_slideshow.py 'Deployment and Platform Options' sessions/01-deployment-platforms/choices.md 01-deployment-platforms

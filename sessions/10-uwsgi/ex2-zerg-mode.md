@@ -1,6 +1,6 @@
 ![GCC Logo](../../docs/shared-images/gcc2017_logo.png) ![galaxy logo](../../docs/shared-images/galaxy_logo_25percent_transparent.png)
 
-### GCC - 2017 - Melbourne
+### GCC - 2017 - Montpellier
 
 # Run uWSGI Zerg Mode - Exercise.
 
