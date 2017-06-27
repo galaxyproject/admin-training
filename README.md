@@ -14,7 +14,7 @@ Built slides have [an index](https://galaxyproject.github.io/dagobah-training/20
 | -------- | --------- | --------- | ----------- |
 | 15:30 | Intro |  | All |
 | 15:35 |Setup a production Galaxy w/ Ansible | [tutorial](https://github.com/galaxyproject/dagobah-training/blob/2017-montpellier/sessions/14-ansible/ex2-galaxy-ansible.md) | (E) |
-| 16:05 | galaxy.ini / available options |  | (D) |
+| 16:05 | galaxy.ini / available options | [config/galaxy.ini.sample](https://raw.githubusercontent.com/galaxyproject/galaxy/dev/config/galaxy.ini.sample) | (D) |
 | 16:15 | PostgreSQL/nginx and uWSGI/supervisor/webless handlers and job conf/cluster |  | (N) |
 | 16:43 | Authentication |  | (J) |
 | 16:50 | WTGW/troubleshooting and GIEs |  | (N) |
