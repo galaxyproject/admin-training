@@ -10,12 +10,6 @@ slides by @martenson
 .footnote[\#usegalaxy / @galaxyproject]
 
 ---
-class: larger
-
-## Please Interrupt!
-Answer your questions we will.
-
----
 # Auth Mechanisms supported
 
 * Galaxy-specific login using e-mail address and password.
