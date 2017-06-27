@@ -146,7 +146,7 @@ Config includes:
 - Program group
 
 ---
-class: smaller
+class: normal
 # Supervisor - process control
 
 Most useful subcommands:
@@ -176,7 +176,7 @@ Get restarts without interruption or blocking
 - As long as at least one is connected, requests are served (by any connected zergling)
 
 ---
-class: smaller
+class: normal
 # uWSGI Zerg Mode - Galaxy config
 
 Zerg Mode can be configured in a variety of ways. In our case:
