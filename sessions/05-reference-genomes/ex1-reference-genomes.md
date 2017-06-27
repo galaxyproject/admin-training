@@ -41,57 +41,90 @@ Most importantly they are **Tab delimited** (not *space* delimited) flat files, 
 * Search toolshed for a tool that uses reference data, say the **bwa** tool
   * http://toolshed.g2.bx.psu.edu/view/devteam/bwa
 * Click **Repository Actions** button and select **Browse repository tip files**
-* Find and click on *bwa_wrapper.xml* and note the section that uses indexed data, in particular note lines 7 - 11. These lines in the tool wrapper refer to the "bwa_indexes" section of the *tool_data_table_conf.xml* file.
+* Find and click on *bwa_macros.xml* and note the section that uses indexed data, in particular note the XML block beginning with `<macro name="reference_source_conditional">`. These lines in the tool wrapper refer to the `bwa_mem_indexes` table defined in the *tool_data_table_conf.xml* file.
 
   ``` xml
-  <conditional name="genomeSource">
-    <param name="refGenomeSource" type="select" label="Will you select a reference genome from your history or use a built-in index?">
-      <option value="indexed">Use a built-in index</option>
-      <option value="history">Use one from the history</option>
-    </param>
-    <when value="indexed">
-      <param name="indices" type="select" label="Select a reference genome">
-        <options from_data_table="bwa_indexes">
-          <filter type="sort_by" column="2" />
-          <validator type="no_options" message="No indexes are available" />
-        </options>
+  <macro name="reference_source_conditional">
+    <conditional name="reference_source">
+      <param name="reference_source_selector" type="select" label="Will you select a reference genome from your history or use a built-in index?" help="Built-ins were indexed using default options. See `Indexes` section of help below">
+        <option value="cached">Use a built-in genome index</option>
+        <option value="history">Use a genome from history and build index</option>
       </param>
-    </when>
-    <when value="history">
-      <param name="ownFile" type="data" format="fasta" metadata_name="dbkey" label="Select a reference from history" />
-    </when>
-  </conditional>
+      <when value="cached">
+        <param name="ref_file" type="select" label="Using reference genome" help="Select genome from the list">
+          <options from_data_table="bwa_mem_indexes">
+            <filter type="sort_by" column="2" />
+            <validator type="no_options" message="No indexes are available" />
+          </options>
+          <validator type="no_options" message="A built-in reference genome is not available for the build associated with the selected input file"/>
+        </param>
+      </when>
+      <when value="history">
+        <param name="ref_file" type="data" format="fasta" label="Use the following dataset as the reference sequence" help="You can upload a FASTA sequence to the history and use it as reference" />
+        <param name="index_a" type="select" label="Algorithm for constructing the BWT index" help="(-a)">
+          <option value="auto">Auto. Let BWA decide the best algorithm to use</option>
+          <option value="is">IS linear-time algorithm for constructing suffix array. It requires 5.37N memory where N is the size of the database. IS is moderately fast, but does not work with database larger than 2GB</option>
+          <option value="bwtsw">BWT-SW algorithm. This method works also with big genomes</option>
+        </param>
+      </when>
+    </conditional>
+  </macro>
   ```
 
-* Now Find and click on *tool_data_table_conf.xml.sample* which defines the mapping to the *tool-data/bwa_index.loc* file. Note that column two referred to in the above tool file is listed here as "name" or the name of the reference sequence (0 indexed list).
+* Now Find and click on *tool_data_table_conf.xml.sample* which defines the mapping to the *tool-data/bwa_mem_index.loc* file. Note that column two referred to in the above tool file is listed here as "name" or the name of the reference sequence (0 indexed list).
 
   ``` xml
-  <tables>
-     <!-- Locations of indexes in the BWA mapper format -->
-     <table name="bwa_indexes" comment_char="#">
-       <columns>value, dbkey, name, path</columns>
-       <file path="tool-data/bwa_index.loc" />
-     </table>
-  </tables>
+<!-- Use the file tool_data_table_conf.xml.oldlocstyle if you don't want to update your loc files as changed in revision 4550:535d276c92bc-->
+<tables>
+    <!-- Locations of indexes in the BWA mapper format for BWA versions 0.6 and higher including BWA MEM and ALN-->
+    <table name="bwa_mem_indexes" comment_char="#">
+        <columns>value, dbkey, name, path</columns>
+        <file path="tool-data/bwa_mem_index.loc" />
+    </table>
+</tables>
   ```
 
-* Find and click on *bwa_index.loc.sample*. This is a sample .loc file for the bwa mapping tool. It contains the names and paths to the actual indices.
+* Find and click on *bwa_mem_index.loc.sample*. This is a sample .loc file for the bwa mapping tool. It contains the names and paths to the actual indices.
 
   ```
-  #This is a sample file distributed with Galaxy that enables tools
-  #to use a directory of BWA indexed sequences data files. You will need
-  #to create these data files and then create a bwa_index.loc file
-  #similar to this one (store it in this directory) that points to
-  #the directories in which those files are stored. The bwa_index.loc
-  #file has this format (longer white space characters are TAB characters):
-  #
-  #<unique_build_id>   <dbkey>   <display_name>   <file_path>
-  #
-  #So, for example, if you had phiX indexed stored in
-  #/depot/data2/galaxy/phiX/base/,
-  #then the bwa_index.loc entry would look like this:
-  #
-  #phiX174   phiX   phiX Pretty   /depot/data2/galaxy/phiX/base/phiX.fa
+#This is a sample file distributed with Galaxy that enables tools
+#to use a directory of BWA indexed sequences data files. You will need
+#to create these data files and then create a bwa_index.loc file
+#similar to this one (store it in this directory) that points to
+#the directories in which those files are stored. The bwa_index.loc
+#file has this format (longer white space characters are TAB characters):
+#
+#<unique_build_id>   <dbkey>   <display_name>   <file_path>
+#
+#So, for example, if you had phiX indexed stored in 
+#/depot/data2/galaxy/phiX/base/, 
+#then the bwa_index.loc entry would look like this:
+#
+#phiX174   phiX   phiX Pretty   /depot/data2/galaxy/phiX/base/phiX.fa
+#
+#and your /depot/data2/galaxy/phiX/base/ directory
+#would contain phiX.fa.* files:
+#
+#-rw-r--r--  1 james    universe 830134 2005-09-13 10:12 phiX.fa.amb
+#-rw-r--r--  1 james    universe 527388 2005-09-13 10:12 phiX.fa.ann
+#-rw-r--r--  1 james    universe 269808 2005-09-13 10:12 phiX.fa.bwt
+#...etc...
+#
+#Your bwa_index.loc file should include an entry per line for each
+#index set you have stored. The "file" in the path does not actually
+#exist, but it is the prefix for the actual index files.  For example:
+#
+#phiX174	phiX	phiX174	/depot/data2/galaxy/phiX/base/phiX.fa
+#hg18canon	hg18	hg18 Canonical	/depot/data2/galaxy/hg18/base/hg18canon.fa
+#hg18full	hg18	hg18 Full	/depot/data2/galaxy/hg18/base/hg18full.fa
+#/orig/path/hg19.fa	hg19	hg19	/depot/data2/galaxy/hg19/base/hg19.fa
+#...etc...
+#
+#Note that for backwards compatibility with workflows, the unique ID of
+#an entry must be the path that was in the original loc file, because that
+#is the value stored in the workflow for that parameter. That is why the
+#hg19 entry above looks odd. New genomes can be better-looking.
+#
   ```
 
 **NOTE:** When editing .loc files, your editor **MUST** use **TABS** and not expand them into spaces.
@@ -140,16 +173,16 @@ Skip this part if BWA is already installed on your Galaxy server!
   * Click **Search tool shed**
   * Click *Galaxy Main Tool Shed*
   * Searh for *bwa*
-  * Select *bwa_wrappers* owned by devteam
+  * Select *bwa* owned by devteam
   * Click **Install to Galaxy**
   * Click **Install**
   * Watch the interface and wait until BWA is installed.
 
 
 * Check it worked
-  * In your terminal window view *shed_tool_conf.xml*, it should now contain a bwa_wrapper entry.
+  * In your terminal window view *shed_tool_conf.xml*, it should now contain a bwa entry.
   * View *shed_tool_data_table_conf.xml* should have the bwa *tool_data_table_conf.xml.sample* table entries added.
-  * There should be a *tool-data/bwa_index.loc* file (copied from "bwa_index.loc.sample" if not already created)
+  * There should be a *tool-data/bwa_mem_index.loc* file (copied from "bwa_mem_index.loc.sample" if not already created)
   * Upload some sample FASTQ datasets:
   ```
 http://www.bx.psu.edu/~dan/examples/gcc2014/data_manager_workshop/fastq/SRR507778-10k_1.fastqsanger
@@ -184,7 +217,7 @@ We will be adding a new built-in reference dataset, the sacCer1 genome build (go
 
   ```console
 
-  $ source /srv/galaxy/dependencies/bwa/0.7.12/iuc/package_bwa_0_7_12/6af9b24ddeee
+  $ source /srv/galaxy/dependencies/bwa/0.7.12/iuc/package_bwa_0_7_12/53646aaaafef/env.sh
   $ bwa
 
   Program: bwa (alignment via Burrows-Wheeler transformation)
