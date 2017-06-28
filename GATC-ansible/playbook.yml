@@ -4,6 +4,18 @@
       - ansible_python_interpreter: /usr/bin/python3
   tasks:
 
+    - name: Get hostname
+      command: hostname
+      register: hostname
+
+    - name: Include hostname in etc hosts
+      become: yes
+      become_user: root
+      lineinfile:
+        dest: /etc/hosts
+        regexp: '^127\.0\.0\.1'
+        line: '127.0.0.1 localhost {{ hostname.stdout }}'
+
     # Set the ubuntu password
     - name: Set the ubuntu user password
       user:
