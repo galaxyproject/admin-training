@@ -66,6 +66,7 @@
         - proftpd-basic
         - postgresql
         - zlib1g-dev
+        - dstat
 
     - name: Install Ansible
       pip:
