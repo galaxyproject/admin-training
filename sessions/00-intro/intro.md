@@ -66,25 +66,21 @@ class: special, center, middle
 .footnote[[http://bit.ly/gcc17admin](https://github.com/galaxyproject/dagobah-training/tree/2017-montpellier)]
 
 ---
-# Thanks
-.large[
-]
-.footnote[[http://bit.ly/gcc17admin](https://github.com/galaxyproject/dagobah-training/tree/2017-montpellier)]
-
----
 # Hosts
 
-We would like to thank:
+We would like to thank as our infrastructure providers:
 .large[
+- NeCTAR cloud (https://nectar.org.au/research-cloud/)
+- Jetstream Cloud (http://jetstream-cloud.org/)
+- CLIMB cloud (http://www.climb.ac.uk/)
 ]
+
 .footnote[[http://bit.ly/gcc17admin](https://github.com/galaxyproject/dagobah-training/tree/2017-montpellier)]
 
 ---
-# Computing resources
-
-
----
+class: special, center, middle
 # Future events
 .large[
+Oslo - January 8, 2018!
 ]
 .footnote[[http://bit.ly/gcc17admin](https://github.com/galaxyproject/dagobah-training/tree/2017-montpellier)]

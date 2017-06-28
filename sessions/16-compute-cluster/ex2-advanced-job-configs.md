@@ -1,6 +1,6 @@
-![GATC Logo](../../docs/shared-images/gatc2017_logo_150.png) ![galaxy logo](../../docs/shared-images/galaxy_logo_25percent_transparent.png)
+![GCC Logo](../../docs/shared-images/gcc2017_logo.png) ![galaxy logo](../../docs/shared-images/galaxy_logo_25percent_transparent.png)
 
-### GATC - 2017 - Melbourne
+### GCC - 2017 - Montpellier
 
 # Running Galaxy Jobs with Slurm - Exercise
 
@@ -53,8 +53,8 @@ Of course, this tool doesn't actually *use* the allocated number of cores. In a 
 Up until now we've been using the default tool panel config file, located at `/srv/galaxy/server/config/tool_conf.xml.sample`. Copy this to `/srv/galaxy/config/tool_conf.xml` in the same directory as the sample and open it up with an editor. We need to add the entry for our new tool. This can go anywhere, but I suggest putting it at the very top, between the opening `<toolbox>` and first `<section>`, so that it appears right at the top of the toolbox.
 
 ```console
-$ cp /srv/galaxy/server/config/tool_conf.xml.sample /srv/galaxy/config/tool_conf.xml
-$ vim /srv/galaxy/config/tool_conf.xml
+cp /srv/galaxy/server/config/tool_conf.xml.sample /srv/galaxy/config/tool_conf.xml
+vim /srv/galaxy/config/tool_conf.xml
 ```
 
 The tag to add is:
@@ -79,32 +79,16 @@ Reload Galaxy in your browser and the new tool should now appear in the tool pan
 Running with '1' threads
 ```
 
-**Part 2 - Create a destination and map the tool**
-
-We want our tool to run with more than one core. To do this, we need to instruct Slurm to allocate more cores for this job. This is done in the job configuration file.
-
-As the `galaxy` user, open up `/srv/galaxy/config/job_conf.xml` and add the following new destination:
+We're going to fake a cluster for this exercise. Do so by replacing the exiting `<destinations>` block in `/srv/galaxy/config/job_conf.xml` with:
 
 ```xml
-        <destination id="slurm-2c" runner="slurm">
-            <param id="nativeSpecification">--nodes=1 --ntasks=2</param>
+    <destinations default="local">
+        <destination id="local" runner="local"/>
+        <destination id="slurm" runner="local"/>
+        <destination id="slurm-2c" runner="local">
+            <param id="local_slots">2</param>
         </destination>
-```
-
-Then, map the new tool to the new destination using the tool ID (`<tool id="multi">`) and destination id (`<destination id="slurm-2c">`) by adding a new section to the job config, `<tools>`:
-
-```xml
-    <tools>
-        <tool id="multi" destination="slurm-2c"/>
-    </tools>
-```
-
-And finally, restart Galaxy with `sudo supervisorctl restart all` (as the `ubuntu` user).
-
-Now, click the rerun button on the last history item, or click **Multicore Tool** in the tool panel, and then click the tool's Execute button. If successful, your tool's output should now be:
-
-```
-Running with '2' threads
+    </destinations>
 ```
 
 ## Section 2 - Dynamically map a tool to a job destination
@@ -194,7 +178,7 @@ job_resource_params_file = /srv/galaxy/config/job_resource_params_conf.xml
 
 **Part 2 - Configure Galaxy to use the resource selector**
 
-Next, we define a new section in `job_conf.xml`: `<resources>`. This groups together parameters that should appear together on a tool form. Add the following section to `/srv/galaxy/server/job_conf.xml`:
+Next, we define a new section in `job_conf.xml`: `<resources>`. This groups together parameters that should appear together on a tool form. Add the following section to `/srv/galaxy/config/job_conf.xml`:
 
 ```xml
     <resources>
@@ -246,42 +230,31 @@ DESTINATION_IDS = {
 FAILURE_MESSAGE = 'This tool could not be run because of a misconfiguration in the Galaxy job running system, please report this error'
 
 
-def dynamic_cores_time(app, tool, job, user_email):
+def dynamic_cores_time(app, tool, job, resource_params, user_email):
     destination = None
     destination_id = 'slurm'
 
-    # build the param dictionary
-    param_dict = dict( [ ( p.name, p.value ) for p in job.parameters ] )
-    param_dict = tool.params_from_strings( param_dict, app )
-
     # handle job resource parameters
-    if '__job_resource' in param_dict:
-        if param_dict['__job_resource']['__job_resource__select'] == 'yes':
-            try:
-                # validate params
-                cores = int(param_dict['__job_resource']['cores'])
-                time = int(param_dict['__job_resource']['time'])
-                assert cores in (1, 2), "Invalid value for core selector"
-                assert time in range(1, 25), "Invalid value for time selector"
-            except (TypeError, AssertionError) as exc:
-                log.exception(exc)
-                log.error('(%s) param_dict was: %s', job.id, param_dict)
-                raise JobMappingException( FAILURE_MESSAGE )
-            # params validated
-            destination_id = DESTINATION_IDS[cores]
-            destination = app.job_config.get_destination(destination_id)
-            # set walltime
-            if 'nativeSpecification' not in destination.params:
-                destination.params['nativeSpecification'] = ''
-            destination.params['nativeSpecification'] += ' --time=%s:00:00' % time
-        elif param_dict['__job_resource']['__job_resource__select'] != 'no':
-            # someone's up to some shennanigans
-            log.error('(%s) resource selector not yes/no, param_dict was: %s', job.id, param_dict)
-            raise JobMappingException( FAILURE_MESSAGE )
+    if resource_params:
+        try:
+            cores = int(resource_params['cores'])
+            time = int(resource_params['time'])
+            assert cores in (1, 2), "Invalid value for core selector"
+            assert time in range(1, 25), "Invalid value for time selector"
+        except (TypeError, AssertionError) as exc:
+            log.exception(exc)
+            log.error('(%s) resource_params were: %s', job.id, resource_params)
+            raise JobMappingException(FAILURE_MESSAGE)
+        # params validated
+        destination_id = DESTINATION_IDS[cores]
+        destination = app.job_config.get_destination(destination_id)
+        # set walltime
+        if 'nativeSpecification' not in destination.params:
+            destination.params['nativeSpecification'] = ''
+        destination.params['nativeSpecification'] += ' --time=%s:00:00' % time
     else:
-        # resource param selector not sent with tool form, job_conf.xml misconfigured
-        log.warning('(%s) did not receive the __job_resource param, keys were: %s', job.id, param_dict.keys())
-        raise JobMappingException( FAILURE_MESSAGE )
+        log.warning('(%s) did not receive a valid resource key, resource params were: %s', job.id, resource_params)
+        raise JobMappingException(FAILURE_MESSAGE)
 
     if destination is not None and 'nativeSpecification' in destination.params:
         log.info("native specification: %s", destination.params['nativeSpecification'])
@@ -289,7 +262,7 @@ def dynamic_cores_time(app, tool, job, user_email):
     return destination or destination_id
 ```
 
-It is important to note that **you are responsible for parameter validation, including the job resource selector**. This function only handles the job resource parameter fields, but it could do many other things - examine inputs, job queues, other tool paramters, etc.
+It is important to note that **you are responsible for parameter validation**. This function only handles the job resource parameter fields, but it could do many other things - examine inputs, job queues, other tool paramters, etc.
 
 Once written, restart Galaxy with `sudo supervisorctl restart all`.
 
@@ -302,38 +275,7 @@ Run the **Multicore Tool* with various resource parameter selections:
   - 2 cores
   - Some value for walltime from 1-24
 
-The cores parameter can be verified from the output of the tool. The walltime can be verified with `scontrol`:
-
-```console
-$ scontrol show job 24
-JobId=24 JobName=g24_multi_anonymous_10_0_2_2
-   UserId=galaxy(999) GroupId=galaxy(999)
-   Priority=4294901747 Nice=0 Account=(null) QOS=(null)
-   JobState=COMPLETED Reason=None Dependency=(null)
-   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
-   RunTime=00:00:05 TimeLimit=12:00:00 TimeMin=N/A
-   SubmitTime=2016-11-05T22:01:09 EligibleTime=2016-11-05T22:01:09
-   StartTime=2016-11-05T22:01:09 EndTime=2016-11-05T22:01:14
-   PreemptTime=None SuspendTime=None SecsPreSuspend=0
-   Partition=debug AllocNode:Sid=gat2016:1860
-   ReqNodeList=(null) ExcNodeList=(null)
-   NodeList=localhost
-   BatchHost=localhost
-   NumNodes=1 NumCPUs=1 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
-   TRES=cpu=1,node=1
-   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
-   MinCPUsNode=1 MinMemoryNode=0 MinTmpDiskNode=0
-   Features=(null) Gres=(null) Reservation=(null)
-   Shared=OK Contiguous=0 Licenses=(null) Network=(null)
-   Command=(null)
-   WorkDir=/srv/galaxy/server/database/jobs/000/24
-   StdErr=/srv/galaxy/server/database/jobs/000/24/galaxy_24.e
-   StdIn=StdIn=/dev/null
-   StdOut=/srv/galaxy/server/database/jobs/000/24/galaxy_24.o
-   Power= SICP=0
-```
-
-Note that the `TimeLimit` for this job (which I gave a 12 hour time limit) was set to `12:00:00`.
+The cores parameter can be verified from the output of the tool.
 
 ## So, what did we learn?
 

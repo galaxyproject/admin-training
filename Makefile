@@ -20,6 +20,10 @@ generate-slides:
 	# Simon
 	$(IN_VENV) python slideshow/build_slideshow.py 'Reference Genomes' sessions/05-reference-genomes/reference_genomes.md 05-reference-genomes
 
+	# Nate
+	$(IN_VENV) python slideshow/build_slideshow.py 'uWSGI' sessions/10-uwsgi/uwsgi.md 10-uwsgi
+	$(IN_VENV) python slideshow/build_slideshow.py 'Galaxy Job Configuration' sessions/15-job-conf/job_conf.md 15-job-conf
+
 	# other topics
 	# $(IN_VENV) python slideshow/build_slideshow.py 'Deployment and Platform Options' sessions/01-deployment-platforms/choices.md 01-deployment-platforms
 	# $(IN_VENV) python slideshow/build_slideshow.py 'Get Galaxy' sessions/02-basic-server/get-galaxy.md 02-basic-server
@@ -30,10 +34,9 @@ generate-slides:
 	# $(IN_VENV) python slideshow/build_slideshow.py 'Extending Installation' sessions/06-extending-installation/extending.md 06-extending-installation
 	# $(IN_VENV) python slideshow/build_slideshow.py 'Users, Groups, Quotas' sessions/07-users-groups-quotas/users-groups-quotas.md 07-users-groups-quotas
 	# $(IN_VENV) python slideshow/build_slideshow.py 'Upgrading & Releases' sessions/08-upgrading-release/upgrading.md 08-upgrading-release
-	# $(IN_VENV) python slideshow/build_slideshow.py 'uWSGI' sessions/10-uwsgi/uwsgi.md 10-uwsgi
 	# $(IN_VENV) python slideshow/build_slideshow.py 'Systemd and Supervisor' sessions/11-systemd-supervisor/systemd-supervisor.md 11-systemd-supervisor
 	# $(IN_VENV) python slideshow/build_slideshow.py 'Monitoring and Maintenance' sessions/12-monitoring-maintenance/monitoring-maintenance.md 12-monitoring-maintenance
-	# $(IN_VENV) python slideshow/build_slideshow.py 'External Authentication' sessions/13-external-auth/external-auth.md 13-external-auth
+	$(IN_VENV) python slideshow/build_slideshow.py 'External Authentication' sessions/13-external-auth/external-auth.md 13-external-auth
 	# $(IN_VENV) python slideshow/build_slideshow.py 'Ansible and Galaxy - Part 1' sessions/14-ansible/ansible-introduction.md 14-ansible
 	# $(IN_VENV) python slideshow/build_slideshow.py 'Galaxy Job Configuration' sessions/15-job-conf/job_conf.md 15-job-conf
 	# $(IN_VENV) python slideshow/build_slideshow.py 'Compute Cluster' sessions/16-compute-cluster/compute-cluster.md 16-compute-cluster

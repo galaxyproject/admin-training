@@ -1,6 +1,6 @@
-![GATC Logo](../../docs/shared-images/gatc2017_logo_150.png) ![galaxy logo](../../docs/shared-images/galaxy_logo_25percent_transparent.png)
+![GCC Logo](../../docs/shared-images/gcc2017_logo.png) ![galaxy logo](../../docs/shared-images/galaxy_logo_25percent_transparent.png)
 
-### GATC - 2017 - Melbourne
+### GCC - 2017 - Montpellier
 
 # Exercise - Running the Jupyter Galaxy Interactive Environment (GIE)
 
@@ -37,12 +37,12 @@ $ sudo -u galaxy docker pull bgruening/docker-jupyter-notebook:16.01.1
 In a separate terminal window, open a shell as the `galaxy` user and run:
 
 ```console
-$ sudo -Hsu galaxy
-$ cd /srv/galaxy/server/lib/galaxy/web/proxy/js
-$ npm install
-$ cd /srv/galaxy/server/config/plugins/interactive_environments/jupyter/config
-$ cp jupyter.ini.sample jupyter.ini
-$ cp allowed_images.yml.sample allowed_images.yml
+sudo -Hsu galaxy
+cd /srv/galaxy/server/lib/galaxy/web/proxy/js
+npm install
+cd /srv/galaxy/server/config/plugins/interactive_environments/jupyter/config
+cp jupyter.ini.sample jupyter.ini
+cp allowed_images.yml.sample allowed_images.yml
 ```
 
 Have a look in the config files you have just created. Edit `allowed_images.yml` and change the `image`:
@@ -67,7 +67,7 @@ dynamic_proxy_bind_ip = 127.0.0.1
 Once saved, exit your `galaxy` user shell and return to the `ubuntu` user. Then, restart Galaxy:
 
 ```console
-$ sudo supervisorctl restart gx:galaxy
+sudo supervisorctl restart gx:galaxy
 ```
 
 **Part 2 - Configure nginx**
@@ -94,7 +94,7 @@ We'll now proxy the Node.js proxy with nginx. This is done by adding to `/etc/ng
 Once saved, restart nginx to reread the config:
 
 ```console
-$ sudo systemctl restart nginx
+sudo systemctl restart nginx
 ```
 
 **Part 3 - Configure proxy to start with supervisor**
@@ -118,7 +118,7 @@ redirect_stderr = true
 Once saved, start the proxy by updating supervisor:
 
 ```console
-$ sudo supervisorctl update
+sudo supervisorctl update
 ```
 
 ## Section 3 - Test
