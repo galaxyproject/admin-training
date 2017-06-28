@@ -13,14 +13,14 @@ Built slides have [an index](https://galaxyproject.github.io/dagobah-training/20
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
 | 15:30 | Intro |  | All |
-| 15:35 |Setup a production Galaxy w/ Ansible | [tutorial](https://github.com/galaxyproject/dagobah-training/blob/2017-montpellier/sessions/14-ansible/ex2-galaxy-ansible.md) | (E) |
+| 15:35 |Setup a production Galaxy w/ Ansible | [Slides](https://galaxyproject.github.io/dagobah-training/2017-montpellier/14-ansible/ansible-introduction.html#1), [Tutorial](https://github.com/galaxyproject/dagobah-training/blob/2017-montpellier/sessions/14-ansible/ex2-galaxy-ansible.md) | (E) |
 | 16:05 | galaxy.ini / available options | [config/galaxy.ini.sample](https://raw.githubusercontent.com/galaxyproject/galaxy/dev/config/galaxy.ini.sample) | (D) |
-| 16:15 | Authentication | [tutorial](https://github.com/galaxyproject/dagobah-training/blob/2017-montpellier/sessions/13-external-auth/external-auth.md) | (J) |
-| 16:20 | Tools and the Tool Shed | [shed](https://galaxyproject.github.io/dagobah-training/2017-montpellier/04-tool-shed/shed_intro.html#1) [installation](https://galaxyproject.github.io/dagobah-training/2017-montpellier/04-tool-shed/tool_installation.html#1) [exercise](https://github.com/galaxyproject/dagobah-training/blob/2017-montpellier/sessions/04-tool-shed/ex-ephemeris.md) | (M) |
-| 16:35 | Reference Genomes |[Slides](https://galaxyproject.github.io/dagobah-training/2017-montpellier/05-reference-genomes/reference_genomes.html)  [Exercise](https://github.com/galaxyproject/dagobah-training/tree/2017-montpellier/sessions/05-reference-genomes/ex1-reference-genomes.md) | (S) |
-| 16:55 | uWSGI/supervisor/webless handlers | [slides](https://galaxyproject.github.io/dagobah-training/2017-montpellier/10-uwsgi/uwsgi.html), [exercise](https://github.com/galaxyproject/dagobah-training/tree/2017-montpellier/sessions/10-uwsgi/ex2-zerg-mode.md) | (N) |
-| 17:15 | Advanced Job Configuration | [slides](https://galaxyproject.github.io/dagobah-training/2017-montpellier/15-job-conf/job_conf.html), [exercise](https://github.com/galaxyproject/dagobah-training/tree/2017-montpellier/sessions/16-compute-cluster/ex2-advanced-job-configs.md) | (N) |
-| 17:35 | Galaxy Interactive Environments | [exercise](https://github.com/galaxyproject/dagobah-training/tree/2017-montpellier/sessions/21-gie/ex1-jupyter.md) | (N) |
+| 16:15 | Authentication | [Tutorial](https://github.com/galaxyproject/dagobah-training/blob/2017-montpellier/sessions/13-external-auth/external-auth.md) | (J) |
+| 16:20 | Tools and the Tool Shed | [Slides](https://galaxyproject.github.io/dagobah-training/2017-montpellier/04-tool-shed/shed_intro.html#1), [Installation](https://galaxyproject.github.io/dagobah-training/2017-montpellier/04-tool-shed/tool_installation.html#1), [Exercise](https://github.com/galaxyproject/dagobah-training/blob/2017-montpellier/sessions/04-tool-shed/ex-ephemeris.md) | (M) |
+| 16:35 | Reference Genomes |[Slides](https://galaxyproject.github.io/dagobah-training/2017-montpellier/05-reference-genomes/reference_genomes.html), [Exercise](https://github.com/galaxyproject/dagobah-training/tree/2017-montpellier/sessions/05-reference-genomes/ex1-reference-genomes.md) | (S) |
+| 16:55 | uWSGI/supervisor/webless handlers | [Slides](https://galaxyproject.github.io/dagobah-training/2017-montpellier/10-uwsgi/uwsgi.html), [Exercise](https://github.com/galaxyproject/dagobah-training/tree/2017-montpellier/sessions/10-uwsgi/ex2-zerg-mode.md) | (N) |
+| 17:15 | Advanced Job Configuration | [Slides](https://galaxyproject.github.io/dagobah-training/2017-montpellier/15-job-conf/job_conf.html), [Exercise](https://github.com/galaxyproject/dagobah-training/tree/2017-montpellier/sessions/16-compute-cluster/ex2-advanced-job-configs.md) | (N) |
+| 17:35 | Galaxy Interactive Environments | [Exercise](https://github.com/galaxyproject/dagobah-training/tree/2017-montpellier/sessions/21-gie/ex1-jupyter.md) | (N) |
 | 17:45 | Q&A |  | All |
 | 18:00 | END |  |  |
 
