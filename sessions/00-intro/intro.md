@@ -23,6 +23,8 @@ Montpellier, France
   - VLSCI, University of Melbourne, Australia [@simongladman1](https://twitter.com/simongladman1)
 - Dan Blankenberg
   - Penn State University [@DBlankenberg](https://twitter.com/DBlankenberg)
+- John Chilton [@jmchilton](https://twitter.com/jmchilton)
+  - Galaxy Project, BMB, Penn State University, USA
 - Martin Čech
   - Penn State University [@martenson](https://twitter.com/martenson)
 ]
