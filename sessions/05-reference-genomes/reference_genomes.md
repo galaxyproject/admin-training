@@ -69,7 +69,7 @@ class: left
 * Download the genome
 * Index via command line
 * Edit 3 different config files
-* Make sure you use <tabs> not <spaces> in tab separated data
+* Make sure you use \<tabs\> not \<spaces\> in tab separated data
 
 ]
 ---
