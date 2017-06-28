@@ -188,5 +188,4 @@ Zerg Mode can be configured in a variety of ways. In our case:
 
 ---
 class: middle
-
-- [uWSGI Zerg Mode - Exercise](https://github.com/galaxyproject/dagobah-training/blob/master/sessions/10-uwsgi/ex2-zerg-mode.md)
+- [uWSGI Zerg Mode - Exercise](https://github.com/galaxyproject/dagobah-training/blob/2017-montpellier/sessions/10-uwsgi/ex2-zerg-mode.md)
