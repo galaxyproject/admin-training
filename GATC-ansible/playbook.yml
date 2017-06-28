@@ -46,7 +46,7 @@
         - nano
         - vim
         - emacs
-        - ansible
+        - libssl-dev
         - python2.7
         - virtualenv
         - python-pip
@@ -54,6 +54,11 @@
         - proftpd-basic
         - postgresql
         - zlib1g-dev
+
+    - name: Install Ansible
+      pip:
+        name: ansible
+        version: 2.2.3
 
     - name: Accept Java 8 License
       become: yes
