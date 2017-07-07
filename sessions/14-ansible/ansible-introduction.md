@@ -2,7 +2,6 @@ layout: true
 class: inverse
 ---
 class: special, center
-![GCC Logo](../shared-images/gcc2017_logo_black.png)
 
 # Ansible and Galaxy
 
@@ -15,8 +14,6 @@ class: left, inverse
 
 ---
 class: special, center
-![GCC Logo](../shared-images/gcc2017_logo_black_2in.png)
-
 .large[
 ## Please interrupt
 *We are here to answer questions!*
@@ -25,7 +22,7 @@ class: special, center
 .footnote[\#usegalaxy \#GCC2017 / @galaxyproject]
 ---
 class: left
-## ![GCC Logo](../shared-images/gcc2017_logo_black_2in.png)  Overview
+## Overview
 .large[
 * What is Ansible? A quick introduction
 * Galaxy and Ansible: building a production server
@@ -33,7 +30,7 @@ class: left
 .footnote[\#usegalaxy \#GCC2017 / @galaxyproject]
 ---
 class: left
-## ![GCC Logo](../shared-images/gcc2017_logo_black_2in.png)  What is Ansible?
+## What is Ansible?
 .large[
 * Automation tool for configuring and managing computers. (c.f. Puppet, Chef etc.)
 * Initial release: Feb. 2012
@@ -44,7 +41,7 @@ class: left
 .footnote[\#usegalaxy \#GCC2017 / @galaxyproject]
 ---
 class: left
-## ![GCC Logo](../shared-images/gcc2017_logo_black_2in.png)  Why?
+## Why?
 .large[
 * Avoid forgetting what you did to install and configure some piece of software
 * Codify knowledge about a system
@@ -55,7 +52,7 @@ class: left
 .footnote[\#usegalaxy \#GCC2017 / @galaxyproject]
 ---
 class: left
-## ![GCC Logo](../shared-images/gcc2017_logo_black_2in.png)  Features of Ansible
+## Features of Ansible
 .large[
 * Easy to learn
   * Playbooks in YAML, Templates in Jinja2, Inventory in INI file
@@ -72,7 +69,7 @@ class: left
 ]
 ---
 class: left
-## ![GCC Logo](../shared-images/gcc2017_logo_black_2in.png)  Ansible structure
+## Ansible structure
 .large[
 * Ansible scripts are called playbooks
 * Scripts written as simple yaml files
@@ -86,7 +83,7 @@ class: left
 .footnote[\#usegalaxy \#GCC2017 / @galaxyproject]
 ---
 class: left
-## ![GCC Logo](../shared-images/gcc2017_logo_black_2in.png)  Ansible playbook layout
+## Ansible playbook layout
 
 
 ``` text
@@ -112,14 +109,14 @@ class: left
 .footnote[\#usegalaxy \#GCC2017 / @galaxyproject]
 ---
 class: left
-## ![GCC Logo](../shared-images/gcc2017_logo_black_2in.png)  Roles contain tasks
+## Roles contain tasks
 
 ![ansible-roles-tasks.png](images/ansible-roles-tasks.png)
 
 .footnote[\#usegalaxy \#GCC2017 / @galaxyproject]
 ---
 class: left
-## ![GCC Logo](../shared-images/gcc2017_logo_black_2in.png)  Ansible inventory
+## Ansible inventory
 * An INI file.
 * List of remote machines to run ansible on
 * Can have groups
@@ -141,7 +138,7 @@ jetstream-iu0.galaxyproject.org
 .footnote[\#usegalaxy \#GCC2017 / @galaxyproject]
 ---
 class: left
-## ![GCC Logo](../shared-images/gcc2017_logo_black_2in.png)  Ansible Variables
+## Ansible Variables
 .left-column-equal[
 **Group Variables**
 
@@ -171,7 +168,7 @@ galaxy_installer: true
 .footnote[\#usegalaxy \#GCC2017 / @galaxyproject]
 ---
 class: left
-## ![GCC Logo](../shared-images/gcc2017_logo_black_2in.png)  Ansible Tasks
+## Ansible Tasks
 
 * Perform a task on the inventory
 
@@ -199,7 +196,7 @@ class: left
 .footnote[\#usegalaxy \#GCC2017 / @galaxyproject]
 ---
 class: left
-## ![GCC Logo](../shared-images/gcc2017_logo_black_2in.png)  Ansible Handlers
+## Ansible Handlers
 * Syntax is the same as tasks, but these are only run when triggered by a notify.
 
 * Task:
@@ -223,7 +220,7 @@ class: left
 .footnote[\#usegalaxy \#GCC2017 / @galaxyproject]
 ---
 class: left
-## ![GCC Logo](../shared-images/gcc2017_logo_black_2in.png)  Plays
+## Plays
 .large[
 * Contain:
   * What hosts you want to run on
@@ -245,7 +242,7 @@ class: left
 .footnote[\#usegalaxy \#GCC2017 / @galaxyproject]
 ---
 class: left
-## ![GCC Logo](../shared-images/gcc2017_logo_black_2in.png)  Plays and Tags
+## Plays and Tags
 
 * Plays can have tags associated with them
 
@@ -272,7 +269,7 @@ class: left
 .footnote[\#usegalaxy \#GCC2017 / @galaxyproject]
 ---
 class: left
-## ![GCC Logo](../shared-images/gcc2017_logo_black_2in.png)  How Ansible works
+## How Ansible works
 
 ![how-ansible-works.png](images/how-ansible-works.png)
 
@@ -280,7 +277,7 @@ class: left
 
 ---
 class: left
-## ![GCC Logo](../shared-images/gcc2017_logo_black_2in.png)  Many reusable roles exist
+## Many reusable roles exist
 .large[
 .left-column-equal[
 * Roles:
@@ -306,7 +303,7 @@ class: left
 .footnote[\#usegalaxy \#GCC2017 / @galaxyproject]
 ---
 class: left
-## ![GCC Logo](../shared-images/gcc2017_logo_black_2in.png)  Exercise!
+## Exercise!
 .large[
 In this exercise we will:
 * Look at how the Galaxy Ansible roles can be combined together to install Galaxy
