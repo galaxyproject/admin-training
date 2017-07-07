@@ -6,7 +6,7 @@ class: special, center
 # Ansible and Galaxy
 
 
-.footnote[\#usegalaxy \#GCC2017 / @galaxyproject]
+.footnote[\#usegalaxy / @galaxyproject]
 ---
 
 layout: true
@@ -19,7 +19,7 @@ class: special, center
 *We are here to answer questions!*
 ]
 
-.footnote[\#usegalaxy \#GCC2017 / @galaxyproject]
+.footnote[\#usegalaxy / @galaxyproject]
 ---
 class: left
 ## Overview
@@ -27,7 +27,7 @@ class: left
 * What is Ansible? A quick introduction
 * Galaxy and Ansible: building a production server
 ]
-.footnote[\#usegalaxy \#GCC2017 / @galaxyproject]
+.footnote[\#usegalaxy / @galaxyproject]
 ---
 class: left
 ## What is Ansible?
@@ -38,7 +38,7 @@ class: left
 ]
 ![ansible-vanilla.png](images/ansible-vanilla.png)
 
-.footnote[\#usegalaxy \#GCC2017 / @galaxyproject]
+.footnote[\#usegalaxy / @galaxyproject]
 ---
 class: left
 ## Why?
@@ -49,7 +49,7 @@ class: left
 * Make it programmable - “Infrastructure as Code”
 ]
 .right[![ansible-logo](images/ansible-logo.png)]
-.footnote[\#usegalaxy \#GCC2017 / @galaxyproject]
+.footnote[\#usegalaxy / @galaxyproject]
 ---
 class: left
 ## Features of Ansible
@@ -80,7 +80,7 @@ class: left
   * cron, mount etc
 ]
 [http://docs.ansible.com/ansible/modules_by_category.html](http://docs.ansible.com/ansible/modules_by_category.html)
-.footnote[\#usegalaxy \#GCC2017 / @galaxyproject]
+.footnote[\#usegalaxy / @galaxyproject]
 ---
 class: left
 ## Ansible playbook layout
@@ -106,14 +106,14 @@ class: left
 └── README.md
 ```
 
-.footnote[\#usegalaxy \#GCC2017 / @galaxyproject]
+.footnote[\#usegalaxy / @galaxyproject]
 ---
 class: left
 ## Roles contain tasks
 
 ![ansible-roles-tasks.png](images/ansible-roles-tasks.png)
 
-.footnote[\#usegalaxy \#GCC2017 / @galaxyproject]
+.footnote[\#usegalaxy / @galaxyproject]
 ---
 class: left
 ## Ansible inventory
@@ -135,7 +135,7 @@ login5.stampede.tacc.utexas.edu
 jetstream-tacc0.galaxyproject.org
 jetstream-iu0.galaxyproject.org
 ```
-.footnote[\#usegalaxy \#GCC2017 / @galaxyproject]
+.footnote[\#usegalaxy / @galaxyproject]
 ---
 class: left
 ## Ansible Variables
@@ -165,7 +165,7 @@ galaxy_installer: true
 ```
 ]
 
-.footnote[\#usegalaxy \#GCC2017 / @galaxyproject]
+.footnote[\#usegalaxy / @galaxyproject]
 ---
 class: left
 ## Ansible Tasks
@@ -193,7 +193,7 @@ class: left
       when: "{{ ansible_os_family }} == 'Debian'"
     ```
 
-.footnote[\#usegalaxy \#GCC2017 / @galaxyproject]
+.footnote[\#usegalaxy / @galaxyproject]
 ---
 class: left
 ## Ansible Handlers
@@ -217,7 +217,7 @@ class: left
     name: ”postgresql-{{ postgresql_version }}”
     state: restarted
 ```
-.footnote[\#usegalaxy \#GCC2017 / @galaxyproject]
+.footnote[\#usegalaxy / @galaxyproject]
 ---
 class: left
 ## Plays
@@ -239,7 +239,7 @@ class: left
   roles:
     - natefoo.postgresql_objects
 ```
-.footnote[\#usegalaxy \#GCC2017 / @galaxyproject]
+.footnote[\#usegalaxy / @galaxyproject]
 ---
 class: left
 ## Plays and Tags
@@ -266,14 +266,14 @@ class: left
 `ansible-playbook -i inv_file playbook.yml --tags galaxy_setup`
 
 
-.footnote[\#usegalaxy \#GCC2017 / @galaxyproject]
+.footnote[\#usegalaxy / @galaxyproject]
 ---
 class: left
 ## How Ansible works
 
 ![how-ansible-works.png](images/how-ansible-works.png)
 
-.footnote[\#usegalaxy \#GCC2017 / @galaxyproject]
+.footnote[\#usegalaxy / @galaxyproject]
 
 ---
 class: left
@@ -300,7 +300,7 @@ class: left
   * GalaxyKickStart
 ]
 ]
-.footnote[\#usegalaxy \#GCC2017 / @galaxyproject]
+.footnote[\#usegalaxy / @galaxyproject]
 ---
 class: left
 ## Exercise!
@@ -314,4 +314,4 @@ In this exercise we will:
 
 ]
 
-.footnote[\#usegalaxy \#GCC2017 / @galaxyproject]
+.footnote[\#usegalaxy / @galaxyproject]
