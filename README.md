@@ -12,7 +12,7 @@ Built slides have [an index](https://galaxyproject.github.io/dagobah-training/20
 | -------- | --------- | --------- | ----------- |
 | 14:30 | Welcome | [Slides](https://galaxyproject.github.io/dagobah-training/2017-ismb/00-intro/intro.html#1) | All |
 | 14:35 | Introduction to Galaxy - From Data Exploration to Workflow Building | [Slides](http://galaxyproject.github.io/training-material/topics/introduction/slides/#1) | (?) |
-| 14:50 | Integrating Tools into Galaxy and Wrapping a Tool | [Slides](https://galaxyproject.github.io/training-material//topics/dev/tutorials/tool-integration/slides.html#1) | [Hands On](http://planemo.readthedocs.io/en/latest/writing_standalone.html) | (?) |
+| 14:50 | Integrating Tools into Galaxy and Wrapping a Tool | [Slides](https://galaxyproject.github.io/training-material//topics/dev/tutorials/tool-integration/slides.html#1), [Hands On](http://planemo.readthedocs.io/en/latest/writing_standalone.html) | (?) |
 | 15:45 | Tools and the Tool Shed | [Slides](https://galaxyproject.github.io/dagobah-training/2017-ismb/04-tool-shed/shed_intro.html#1), [Installation](https://galaxyproject.github.io/dagobah-training/2017-ismb/04-tool-shed/tool_installation.html#1) | (M) |
 | 15:55 | Tools Q & A | | All |
 | 16:00 | Coffee Break | | |
