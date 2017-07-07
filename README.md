@@ -1,12 +1,8 @@
-# Make Galaxy Work for You
+# Tutorial PM6: Make Galaxy Work for You
 
 **ISMB 14:30-18:00 CEST 28th of June 2017**
 
-Built slides have [an index](https://galaxyproject.github.io/dagobah-training/2017-ismb/).
-
-### Instances for workshop
-
-## Timetable
+## Timetable and Content
 
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
