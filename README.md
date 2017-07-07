@@ -10,16 +10,17 @@ Built slides have [an index](https://galaxyproject.github.io/dagobah-training/20
 
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
-| 15:30 | Intro | [Slides](https://galaxyproject.github.io/dagobah-training/2017-ismb/00-intro/intro.html#1) | All |
-| 15:35 |Setup a production Galaxy w/ Ansible | [Slides](https://galaxyproject.github.io/dagobah-training/2017-ismb/14-ansible/ansible-introduction.html#1), [Exercise](https://github.com/galaxyproject/dagobah-training/blob/2017-ismb/sessions/14-ansible/ex2-galaxy-ansible.md) | (E) |
-| 16:05 | galaxy.ini / available options | [config/galaxy.ini.sample](https://raw.githubusercontent.com/galaxyproject/galaxy/dev/config/galaxy.ini.sample) | (D) |
-| 16:15 | Authentication | [Slides](https://galaxyproject.github.io/dagobah-training/2017-ismb/13-external-auth/external-auth.html) | (J) |
-| 16:20 | Tools and the Tool Shed | [Slides](https://galaxyproject.github.io/dagobah-training/2017-ismb/04-tool-shed/shed_intro.html#1), [Installation](https://galaxyproject.github.io/dagobah-training/2017-ismb/04-tool-shed/tool_installation.html#1), [Exercise](https://github.com/galaxyproject/dagobah-training/blob/2017-ismb/sessions/04-tool-shed/ex-ephemeris.md) | (M) |
-| 16:35 | Reference Genomes |[Slides](https://galaxyproject.github.io/dagobah-training/2017-ismb/05-reference-genomes/reference_genomes.html), [Exercise](https://github.com/galaxyproject/dagobah-training/tree/2017-ismb/sessions/05-reference-genomes/ex1-reference-genomes.md) | (S) |
-| 16:55 | uWSGI/supervisor/webless handlers | [Slides](https://galaxyproject.github.io/dagobah-training/2017-ismb/10-uwsgi/uwsgi.html), [Exercise](https://github.com/galaxyproject/dagobah-training/tree/2017-ismb/sessions/10-uwsgi/ex2-zerg-mode.md) | (N) |
-| 17:15 | Advanced Job Configuration | [Slides](https://galaxyproject.github.io/dagobah-training/2017-ismb/15-job-conf/job_conf.html), [Exercise](https://github.com/galaxyproject/dagobah-training/tree/2017-ismb/sessions/16-compute-cluster/ex2-advanced-job-configs.md) | (N) |
-| 17:35 | When Things Go Wrong: Troubleshooting | [Slides](https://galaxyproject.github.io/dagobah-training/2017-ismb/22-troubleshooting/troubleshooting.html) | (N) |
-| 17:45 | Q&A |  | All |
+| 14:30 | Welcome | [Slides](https://galaxyproject.github.io/dagobah-training/2017-ismb/00-intro/intro.html#1) | All |
+| 14:35 | Introduction to Galaxy - From Data Exploration to Workflow Building | [Slides](http://galaxyproject.github.io/training-material/topics/introduction/slides/#1) | (?) |
+| 14:50 | Integrating Tools into Galaxy and Wrapping a Tool | [Slides](https://galaxyproject.github.io/training-material//topics/dev/tutorials/tool-integration/slides.html#1) | [Hands On](http://planemo.readthedocs.io/en/latest/writing_standalone.html) | (?) |
+| 15:45 | Tools and the Tool Shed | [Slides](https://galaxyproject.github.io/dagobah-training/2017-ismb/04-tool-shed/shed_intro.html#1), [Installation](https://galaxyproject.github.io/dagobah-training/2017-ismb/04-tool-shed/tool_installation.html#1) | (M) |
+| 15:55 | Tools Q & A | | All |
+| 16:00 | Coffee Break | | |
+| 16:15 | Deployment and Platform Options | [Slides](https://galaxyproject.github.io/dagobah-training/2017-ismb/01-deployment-platforms/choices.html#1) | |
+| 16:15 | Get a Basic Server Up and Running | [Slides](https://galaxyproject.github.io/dagobah-training/2017-ismb/02-basic-server/get-galaxy.html#1) | |
+| 16:45 | Automated Deployment with Ansible | [Slides](https://galaxyproject.github.io/dagobah-training/2017-ismb/14-ansible/ansible-introduction.md) | |
+| 17:15 | Leveraging Compute Clusters | [Slides](https://galaxyproject.github.io/dagobah-training/2017-ismb/16-compute-cluster/compute-cluster.md) | |
+| 17:30 | Q & A, Troubleshooting |  | All |
 | 18:00 | END |  |  |
 
 ### Running the exercises on your own
