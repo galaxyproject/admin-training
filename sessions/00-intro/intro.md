@@ -36,7 +36,7 @@ class: special, center, middle
 ---
 # Training Home
 
-## [http://bit.ly/gcc17admin](https://github.com/galaxyproject/dagobah-training/tree/2017-ismb)
+## [http://bit.ly/ismb2017](https://github.com/galaxyproject/dagobah-training/tree/2017-ismb)
 .large[
 * The homepage of this training is a repository at GitHub reachable by the link above.
 * Most materials are written in Markdown and we encourage Pull Requests (even during the training!).
@@ -48,7 +48,7 @@ class: special, center, middle
 .large[
 * Web browser based chat at https://gitter.im/dagobah-training/Lobby.
 ]
-.footnote[[http://bit.ly/gcc17admin](https://github.com/galaxyproject/dagobah-training/tree/2017-ismb)]
+.footnote[[http://bit.ly/ismb2017](https://github.com/galaxyproject/dagobah-training/tree/2017-ismb)]
 
 ---
 # Useful Links
@@ -61,7 +61,7 @@ class: special, center, middle
   - http://galaxyproject.github.io/training-material/topics/admin/
 
 ]
-.footnote[[http://bit.ly/gcc17admin](https://github.com/galaxyproject/dagobah-training/tree/2017-ismb)]
+.footnote[[http://bit.ly/ismb2017](https://github.com/galaxyproject/dagobah-training/tree/2017-ismb)]
 
 ---
 class: special, center, middle
@@ -69,4 +69,4 @@ class: special, center, middle
 .large[
 Oslo - January 8, 2018!
 ]
-.footnote[[http://bit.ly/gcc17admin](https://github.com/galaxyproject/dagobah-training/tree/2017-ismb)]
+.footnote[[http://bit.ly/ismb2017](https://github.com/galaxyproject/dagobah-training/tree/2017-ismb)]
