@@ -5,28 +5,25 @@ class: inverse
 class: special, center
 ![gcc2017 logo](../shared-images/gcc2017_logo_black.png)
 
-# Accelerated Admin Training
-28th of June 2017
+# Making Galaxy Work for You!
 
-15:30-18:00
+## Deploying and Scaling Galaxy
 
-Montpellier, France
+21th of July 2017
+
+14:30-18:00
+
+Prague, Czech Republic
 
 ---
 # Your Instructors
 .large[
-- Enis Afgan
-  - Johns Hopkins University [@EnisAfgan](https://twitter.com/EnisAfgan)
-- Nate Coraor
-  - Penn State University [@natefoo](https://twitter.com/natefoo)
-- Simon Gladman
-  - VLSCI, University of Melbourne, Australia [@simongladman1](https://twitter.com/simongladman1)
-- Dan Blankenberg
-  - Penn State University [@DBlankenberg](https://twitter.com/DBlankenberg)
+- Dr Björn Grüning [@bjoerngruening](https://twitter.com/bjoerngruening)
+  - Bioinformatics Group, Albert-Ludwigs-Universität Freiburg, Germany
 - John Chilton [@jmchilton](https://twitter.com/jmchilton)
   - Galaxy Project, BMB, Penn State University, USA
-- Martin Čech
-  - Penn State University [@martenson](https://twitter.com/martenson)
+- Martin Čech [@martenson](https://twitter.com/martenson)
+  - Penn State University
 ]
 .footnote[\#usegalaxy / @galaxyproject]
 
@@ -40,7 +37,7 @@ class: special, center, middle
 ---
 # Training Home
 
-## [http://bit.ly/gcc17admin](https://github.com/galaxyproject/dagobah-training/tree/2017-montpellier)
+## [http://bit.ly/gcc17admin](https://github.com/galaxyproject/dagobah-training/tree/2017-ismb)
 .large[
 * The homepage of this training is a repository at GitHub reachable by the link above.
 * Most materials are written in Markdown and we encourage Pull Requests (even during the training!).
@@ -52,7 +49,7 @@ class: special, center, middle
 .large[
 * Web browser based chat at https://gitter.im/dagobah-training/Lobby.
 ]
-.footnote[[http://bit.ly/gcc17admin](https://github.com/galaxyproject/dagobah-training/tree/2017-montpellier)]
+.footnote[[http://bit.ly/gcc17admin](https://github.com/galaxyproject/dagobah-training/tree/2017-ismb)]
 
 ---
 # Useful Links
@@ -65,19 +62,7 @@ class: special, center, middle
   - http://galaxyproject.github.io/training-material/topics/admin/
 
 ]
-.footnote[[http://bit.ly/gcc17admin](https://github.com/galaxyproject/dagobah-training/tree/2017-montpellier)]
-
----
-# Hosts
-
-We would like to thank as our infrastructure providers:
-.large[
-- NeCTAR cloud (https://nectar.org.au/research-cloud/)
-- Jetstream Cloud (http://jetstream-cloud.org/)
-- CLIMB cloud (http://www.climb.ac.uk/)
-]
-
-.footnote[[http://bit.ly/gcc17admin](https://github.com/galaxyproject/dagobah-training/tree/2017-montpellier)]
+.footnote[[http://bit.ly/gcc17admin](https://github.com/galaxyproject/dagobah-training/tree/2017-ismb)]
 
 ---
 class: special, center, middle
@@ -85,4 +70,4 @@ class: special, center, middle
 .large[
 Oslo - January 8, 2018!
 ]
-.footnote[[http://bit.ly/gcc17admin](https://github.com/galaxyproject/dagobah-training/tree/2017-montpellier)]
+.footnote[[http://bit.ly/gcc17admin](https://github.com/galaxyproject/dagobah-training/tree/2017-ismb)]
