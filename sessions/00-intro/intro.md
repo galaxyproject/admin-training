@@ -3,7 +3,6 @@ class: inverse
 
 ---
 class: special, center
-![gcc2017 logo](../shared-images/gcc2017_logo_black.png)
 
 # Making Galaxy Work for You!
 
