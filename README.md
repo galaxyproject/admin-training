@@ -23,10 +23,6 @@ Built slides have [an index](https://galaxyproject.github.io/dagobah-training/20
 | 17:30 | Q & A, Troubleshooting |  | All |
 | 18:00 | END |  |  |
 
-### Running the exercises on your own
-
-To perform the training exercises on your own at a later time, you can do so with a fresh Ubuntu 16.04 docker container, virtual machine, or cloud instance, and by running the [initial setup Ansible playbook](https://github.com/galaxyproject/dagobah-training/blob/2017-ismb/GATC-ansible/README.md).
-
 ### Instructors
 
 * (J)ohn Chilton - Galaxy Project, BMB, Penn State University, USA

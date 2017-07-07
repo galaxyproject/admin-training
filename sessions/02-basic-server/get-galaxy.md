@@ -172,6 +172,7 @@ $ tail -f paster.log
 Starting server in PID 1469.
 serving on http://127.0.0.1:8080
 ^C
+```
 
 Stop:
 ```console
