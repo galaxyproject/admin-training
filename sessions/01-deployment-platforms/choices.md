@@ -28,8 +28,6 @@ class: left
 
 ---
 
-class: smaller
-
 # Choosing where to run
 
 Public Prebuilt SaaS (usegalaxy.org, public servers)
