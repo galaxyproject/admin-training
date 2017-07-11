@@ -5,7 +5,7 @@ class: inverse, middle, large
 class: special
 # How to get Galaxy
 
-slides by @martenson
+slides by @martenson, @jmchilton
 
 .footnote[\#usegalaxy / @galaxyproject]
 
@@ -22,28 +22,16 @@ class: normal
 You only need to download Galaxy if you plan to:
 
 - Run a local production Galaxy because you want to
-  - Install and use tools unavailable on public Galaxies
+  - Install and use tools and visualizations unavailable on public Galaxies
   - Use sensitive data (e.g. clinical)
   - Process large datasets that are too big for public Galaxies
   - Plug-in new datasources
-- Develop Galaxy tools
+- Develop Galaxy tools and visualizations
 - Develop Galaxy itself
 
 Even when you plan any of the above sometimes you can leverage pre-configured
 [Docker image](https://github.com/bgruening/docker-galaxy-stable)
 or use [Cloudlaunch](https://launch.usegalaxy.org).
-
----
-# Requirements
-
-- Any Linux or Mac OS
-- Python 2.7
-
-Optional
-  - samtools (metadata etc.)
-  - Git code versioning system
-  - GNU Make + gcc to compile and install tool dependencies
-  - Additional requirements for shipped tools
 
 ---
 # Get logged in to your VM
@@ -67,15 +55,13 @@ For PuTTY on Windows:
 1. Check what is the latest [release](https://docs.galaxyproject.org/en/master/releases/index.html)
 1. Run
 ```shell
-$ git clone -b release_16.10 https://github.com/galaxyproject/galaxy.git
+$ git clone -b release_17.05 https://github.com/galaxyproject/galaxy.git
 ```
-Release is defined by the branch name: `release_16.10` see the [branch list](https://github.com/galaxyproject/galaxy/branches/all))
+Release is defined by the branch name: `release_17.05` see the [branch list](https://github.com/galaxyproject/galaxy/branches/all))
 
 Without specifying branch during clone you are running the *development* version of Galaxy.
 
-For the rolling stable release: `git checkout master`<sup>[1]</sup>.
-
-.footnote[<sup>[1]</sup> This is currently not updated as often as it should be.]
+For the rolling stable release: `git checkout master`.
 
 ---
 # Start Galaxy
@@ -86,7 +72,7 @@ For the rolling stable release: `git checkout master`<sup>[1]</sup>.
 
 You should see default Galaxy running.
 
-.footnote[Note that first startup needs internet connection and takes longer than the subsequent ones.]
+.footnote[Note that first startup needs an Internet connection and takes longer than the subsequent ones.]
 
 ---
 # What happened?
@@ -94,7 +80,7 @@ You should see default Galaxy running.
 * Galaxy started logging into the terminal from which it is run.
 * Galaxy created a Python virtual environment (venv) in `.venv/`.
 * Galaxy sourced this environment (`$ source .venv/bin/activate`)
-* Galaxy fetched needed Python binaries ('wheels') into this environment.
+* Galaxy fetched needed Python libraries into this environment.
 * Galaxy created the default SQLite database and migrated it to the latest version.
 * Galaxy bound to the default port `8080` on `localhost`.
 
