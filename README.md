@@ -15,8 +15,8 @@
 | 16:00 | Coffee Break | | |
 | | **Deploying and Scaling Galaxy** | | |
 | 16:15 | Deployment and Platform Options | [Slides](https://galaxyproject.github.io/dagobah-training/2017-ismb/01-deployment-platforms/choices.html#1) | |
-| 16:15 | Get a Basic Server Up and Running | [Slides](https://galaxyproject.github.io/dagobah-training/2017-ismb/02-basic-server/get-galaxy.html#1) | |
-| 16:45 | Automated Deployment with Ansible | [Slides](https://galaxyproject.github.io/dagobah-training/2017-ismb/14-ansible/ansible-introduction.html) | |
+| 16:25 | Get a Basic Server Up and Running | [Slides](https://galaxyproject.github.io/dagobah-training/2017-ismb/02-basic-server/get-galaxy.html#1) | |
+| 16:55 | Automated Deployment with Ansible | [Slides](https://galaxyproject.github.io/dagobah-training/2017-ismb/14-ansible/ansible-introduction.html) | |
 | 17:15 | Leveraging Compute Clusters | [Slides](https://galaxyproject.github.io/dagobah-training/2017-ismb/16-compute-cluster/compute-cluster.html) | |
 | 17:30 | Q & A, Troubleshooting |  | All |
 | 18:00 | END |  |  |
