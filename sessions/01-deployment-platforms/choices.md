@@ -2,16 +2,13 @@ layout: true
 class: inverse, large
 
 ---
+
 class: special, middle
 # Deployment and Platform Options
 
-slides by @natefoo
+## What is needed to Make Galaxy Work for You!
 
-.footnote[\#usegalaxy / @galaxyproject]
-
----
-class: special, middle
-# Platform Options and Requirements
+slides by @natefoo, @jmchilton
 
 .footnote[\#usegalaxy / @galaxyproject]
 
@@ -22,32 +19,26 @@ class: left
   - [usegalaxy.org](https://usegalaxy.org)
   - [Public Galaxy Servers](https://wiki.galaxyproject.org/PublicGalaxyServers)
   - [Amazon EC2](https://wiki.galaxyproject.org/CloudMan)
-  - Semi-private cloud (e.g.: [Genomics Virtual Lab](https://www.genome.edu.au/), [Jetstream](http://jetstream-cloud.org/))
+  - Semi-private cloud (e.g. [Genomics Virtual Lab](https://www.genome.edu.au/), [Jetstream](http://jetstream-cloud.org/))
 * Private cloud (build your own Galaxy SaaS)
-* Cloud (IaaS)
-  - Any cloud
 * Scalable Local Server
   - Dedicated or shared compute cluster(s)
   - Cloud compute resources
 * Standalone Local Server
 
 ---
+
+class: smaller
+
 # Choosing where to run
 
 Public Prebuilt SaaS (usegalaxy.org, public servers)
 - Quickest to use today, but probably not why you're here...
 - Institutional/Protected data a concern
-- Not covered in this training
 
 Private Prebuilt SaaS (EC2, GVL, Jetstream) or build your own
 - Great choices for people needing access to compute for a fixed time analysis
 - Not as conducive to collaboration, publishing
-- Covered: Wednesday: Using public and private cloud compute resources
-
-Build your own Galaxy SaaS
-- Personalized Galaxy instances for beginner-to-intermediate users
-- Requires a lot of infrastructure building
-- Covered: Wednesday: Using public and private cloud compute resources
 
 ---
 # Choosing where to run
@@ -56,32 +47,24 @@ Scalable Local Server
 - Permanent Galaxy server
 - Flexible compute scalability
 - Full privacy control
-- Covered: Wednesday: Connecting Galaxy to a compute cluster
 
 Standalone Local Server
 - Permanent Galaxy server
 - Full privacy control
 - Should only consider this in cases of expected light usage
 - Get a beefy server
-- Covered: Today
+- Docker is a great choice!
 
 ---
 # Software Requirements
 
 Required:
   - Galaxy is written in Python and depends on **Python 2.7**
-  - All major distros in wide circulation have 2.7, *except* RHEL<sup>[1]</sup> 6
-    - See: Software Collections for [RHEL](https://access.redhat.com/solutions/472793), [CentOS](https://wiki.centos.org/AdditionalResources/Repositories/SCL), [Scientific Linux](http://linux.web.cern.ch/linux/scl/)
 
-Optional (but not really):
+Optional:
   - PostgreSQL
-    - Covered: Today
   - uWSGI (will soon come with Galaxy)
-    - Covered: Tuesday
   - Reverse proxy server (nginx, Apache)
-    - Covered: Today
-
-.footnote[<sup>[1]</sup> Point of order: Unless stated otherwise, "RHEL" refers to RHEL and derivatives (CentOS, Scientific Linux, etc.)]
 
 ---
 # What can run Galaxy
@@ -90,8 +73,6 @@ UNIX-like operating system:
 
 - Linux (any distribution)
 - OS X / macOS
-- Windows under MinGW (maybe?)
-- Other architectures (maybe?)
 
 ---
 # What can run Galaxy
@@ -120,7 +101,7 @@ If possible, run the Galaxy server *separate* from Galaxy jobs
 
 Based on concurrent user count and assuming separate compute for jobs:
 
-Users | Resource estimate
+Users | Resource estimate (cores/RAM/disk)
 ------|-------------------
 1-5   | 1 core, 1GB, 10 TB
 5-20  | 2 cores, 2 GB, 40 TB
@@ -182,13 +163,7 @@ Current:
 
 - `git clone https://github.com/galaxyproject/galaxy.git`
 - *Framework dependencies* provided as Python "wheels", fetched at first startup with `pip`
-- *Tool dependencies* provided as Conda packages or legacy Tool Shed packages
-
-Future:
-
-- RPM, Debian packages
-- Galaxy wheel in PyPI
-- Watch: [Pull Request #921](https://github.com/galaxyproject/galaxy/pull/921)
+- *Tool dependencies* provided as Conda packages mostly (installed when you start up Galaxy the first time)
 
 ---
 # Making Plans
@@ -202,37 +177,7 @@ Future:
   - Make sure it will be accessible to any eventual compute
 
 ---
-# Deployment Best Practices
 
-**Use configuration management**
-- Ansible (covered on Wednesday)
-- Chef
-- Puppet
-- SaltStack
-- CFEngine
-
-**Use configuration management** but if you don't, *record every change you make somehow.*
-- Large, complex deployments grow organically
-- If you don't know what you did you can't do it again
-- "My context switching penalty is high and my process isolation is not what it used to be." -Elon Musk
-
----
-# System Administration Best Practices
-
-Take security seriously
-- OS security best practices (not covered)
-- **Update Galaxy when security updates are released**
-  - We put a lot of effort into these!
-
-Privilege separate if you can
-- Separate code and job/data ownership
-
-Write protect Galaxy and data if you can
-- Read-only cluster mounts
-
-Back up everything (except that which is managed by configuration management)
-
----
 # Galaxy Server Styles
 
 - Public, anonymous allowed
@@ -244,18 +189,39 @@ Back up everything (except that which is managed by configuration management)
 - Private, registration/access controlled externally (Galaxy pluggable auth)
 
 ---
-# Options
-
-For this training:
-
-- OS: Ubuntu (16.04)
-- Database: PostgreSQL
-- Application server: uWSGI
-- Reverse proxy server: NGINX
-- FTP: ProFTPD
-
----
 class: special
 # Let's get our hands dirty!
 
 Any questions first?
+
+---
+# Deployment Best Practices
+
+**Use configuration management**
+- Ansible
+- Chef
+- Puppet
+- SaltStack
+- CFEngine
+
+**Use configuration management** but if you don't, *record every change you make somehow.*
+- Large, complex deployments grow organically
+- If you don't know what you did you can't do it again
+- "My context switching penalty is high and my process isolation is not what it used to be." -Elon Musk
+
+---
+
+# System Administration Best Practices
+
+Take security seriously
+- OS security best practices
+- **Update Galaxy when security updates are released**
+  - We put a lot of effort into these!
+
+Privilege separate if you can
+- Separate code and job/data ownership
+
+Write protect Galaxy and data if you can
+- Read-only cluster mounts
+
+Back up everything (except that which is managed by configuration management)
