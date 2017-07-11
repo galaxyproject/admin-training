@@ -126,7 +126,7 @@ You can add `<tool labels="updated" />` to achieve:
 * How the toolpanel looks like is decided in a file called `integrated_tool_panel.xml`.
 * By default it resides in Galaxy's root folder.
 * If missing it is generated from all other tool config files during startup.
-* Modify it if you want to reorder tools or move section.
+* Modify it if you want to reorder tools or move sections.
 
 ---
 # Toolpanel search configuration 1/2

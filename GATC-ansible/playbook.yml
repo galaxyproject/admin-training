@@ -16,7 +16,7 @@
         regexp: '^127\.0\.0\.1'
         line: '127.0.0.1 localhost {{ hostname.stdout }}'
 
-    # Set the ubuntu password
+    # Set the ubuntu password to gcc2017training
     - name: Set the ubuntu user password
       user:
         name: ubuntu
