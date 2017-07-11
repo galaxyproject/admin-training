@@ -22,7 +22,7 @@ Prague, Czech Republic
 - John Chilton [@jmchilton](https://twitter.com/jmchilton)
   - Galaxy Project, BMB, Penn State University, USA
 - Martin Čech [@martenson](https://twitter.com/martenson)
-  - Penn State University
+  - Galaxy Project, BMB, Penn State University, USA
 ]
 .footnote[\#usegalaxy / @galaxyproject]
 
@@ -56,9 +56,7 @@ class: special, center, middle
 - https://github.com/galaxyproject/
 - https://docs.galaxyproject.org/
 - https://galaxyproject.org/
-  - https://galaxyproject.org/admin
-- http://galaxyproject.github.io/training-material/
-  - http://galaxyproject.github.io/training-material/topics/admin/
+- http://training.galaxyproject.org/
 
 ]
 .footnote[[http://bit.ly/ismb2017](https://github.com/galaxyproject/dagobah-training/tree/2017-ismb)]
