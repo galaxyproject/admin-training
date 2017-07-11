@@ -2,6 +2,8 @@
 
 **ISMB 14:30-18:00 CEST 28th of June 2017**
 
+Built slides have [an index](https://galaxyproject.github.io/dagobah-training/2017-ismb/).
+
 ## Timetable and Content
 
 | **Time** | **Topic** | **Links** | **Instructor** |
