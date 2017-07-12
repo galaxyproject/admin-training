@@ -28,7 +28,7 @@ Prague, Czech Republic
 
 ---
 class: special, center, middle
-# Spread the word
+# Reach us
 
 # \#usegalaxy
 ## @galaxyproject

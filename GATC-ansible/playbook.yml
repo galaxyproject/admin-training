@@ -16,11 +16,11 @@
         regexp: '^127\.0\.0\.1'
         line: '127.0.0.1 localhost {{ hostname.stdout }}'
 
-    # Set the ubuntu password to gcc2017training
+    # Set the ubuntu password to ismbtutorial
     - name: Set the ubuntu user password
       user:
         name: ubuntu
-        password: '$1$fiuynbkd$M7Wo.BhNSMJuN0TJruOkE/'
+        password: '$1$mNV7qnuZ$hDM8Mu5Xzs4XZIpFp4ZjC0'
       become: yes
       become_user: root
 

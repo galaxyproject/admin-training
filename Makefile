@@ -8,6 +8,7 @@ generate-slides:
 
 	# Selected topics for this training
 	$(IN_VENV) python slideshow/build_slideshow.py 'Welcome and Introduction' sessions/00-intro/intro.md 00-intro
+	$(IN_VENV) python slideshow/build_slideshow.py 'Setup' sessions/00-intro/setup.md 00-intro
 
 
 	$(IN_VENV) python slideshow/build_slideshow.py 'Tool Shed' sessions/04-tool-shed/shed_intro.md 04-tool-shed
