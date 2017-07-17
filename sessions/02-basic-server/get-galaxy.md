@@ -10,6 +10,7 @@ slides by @martenson, @jmchilton
 .footnote[\#usegalaxy / @galaxyproject]
 
 ---
+
 class: larger
 
 ## Please Interrupt!
@@ -169,6 +170,87 @@ $ sh run.sh --stop-daemon
 # Be secure
 
 You are running Galaxy as an **admin** user with **sudo** privileges (that's bad)!
+
+---
+
+# Toward a Production Server
+
+- Database
+- Web Server (Proxy)
+
+---
+
+# Defaults
+
+* Galaxy uses database abstraction layer [SQLAlchemy](http://www.sqlalchemy.org/). This allows for different databases to be plugged in.
+* By default Galaxy will automatically create and use [SQLite](https://sqlite.org/) database during first startup.
+  * The database is in file `database/universe.sqlite`
+
+---
+
+# Choices
+
+* SQLite
+  * Useful for ad-hoc Galaxies or development.
+* **PostgreSQL**
+  * The recommended standard for anything serious.
+* ~~MySQL~~
+  * Supported but Galaxy is not tested against it.
+
+---
+
+# Configuration
+
+`database_connection` is specified as a connection string in `galaxy.ini` file.
+  * Default SQLite: `sqlite:///./database/universe.sqlite?isolation_level=IMMEDIATE`
+  * Local PostgreSQL (socket) `postgresql:///<db_name>?host=/var/run/postgresql`
+  * Network PostgreSQL: `postgresql://<name>:<password>@<host>:5432/<db_name>`
+
+---
+
+# Reverse Proxy
+
+What is a reverse proxy?
+- Sits between the client and Galaxy
+
+Extra features:
+- Serve static content
+- Compress selected content
+- Serve over HTTPS
+- Serve byte range requests
+- Serve other sites from the same server
+- Can provide authentication
+  - Will be covered on Tuesday: _Using and configuring external authentication services_
+
+---
+# Apache
+
+- The most popular web server
+- Many authentication plugins written for Apache
+- Can offload file downloads
+
+---
+# nginx
+
+- Designed specifically to be a load balancing reverse proxy
+- Widely used by large sites (third most popular web server)
+- Can offload both uploads and downloads
+
+I recommend nginx unless you have a specific need for Apache
+
+---
+# nginx "flavors"
+
+nginx plugins must be compiled in<sup>[1]</sup>
+
+Debian/Ubuntu provide multiple nginx "flavors":
+- `nginx-light`: minimal set of core modules
+- `nginx-full`: full set of core modules
+- `nginx-extras`: full set of core modules and extras (3rd party modules)
+
+There is also a "Galaxy" flavor<sup>[2]</sup> (includes [upload module](https://github.com/vkholodkov/nginx-upload-module)):
+- [RHEL](https://depot.galaxyproject.org/yum/) (derived from EPEL nginx)
+- [Ubuntu PPA](https://launchpad.net/~galaxyproject/+archive/ubuntu/nginx)
 
 ---
 
