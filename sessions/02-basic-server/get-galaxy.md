@@ -170,9 +170,8 @@ $ sh run.sh --stop-daemon
 
 You are running Galaxy as an **admin** user with **sudo** privileges (that's bad)!
 
-We'll fix this shortly.
-
 ---
+
 # What to do next?
 
 - Keep your code up to date

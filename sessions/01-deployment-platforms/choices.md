@@ -41,7 +41,7 @@ Private Prebuilt SaaS (EC2, GVL, Jetstream) or build your own
 ---
 # Choosing where to run
 
-Scalable Local Server
+Local Server and Cluster
 - Permanent Galaxy server
 - Flexible compute scalability
 - Full privacy control
@@ -71,16 +71,6 @@ UNIX-like operating system:
 
 - Linux (any distribution)
 - OS X / macOS
-
----
-# What can run Galaxy
-
-UNIX-like operating system:
-
-- **Linux (any distribution)**
-- **OS X / macOS**
-- Windows under MinGW (maybe?)
-- Other architectures (maybe?)
 
 ---
 # Hardware Requirements
