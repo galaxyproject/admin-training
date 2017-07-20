@@ -29,7 +29,7 @@ Go to somewhere sensible on either your local machine or on your Galaxy server (
 
 * Grab the following with `wget` or `curl` and then untar it.
 
-  `https://iu.jetstream-cloud.org:8080/swift/v1/gcc2017/gcc2017-ansible.tar.gz`
+  `https://iu.jetstream-cloud.org:8080/swift/v1/gcc2017/ismb2017-ansible.tar.gz`
 
 This will copy the entire playbook and associated roles to somewhere we can look at it.
 
