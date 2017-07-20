@@ -1,7 +1,5 @@
 - name: Pre-configure
   hosts: workshop-instances
-  vars:
-      - ansible_python_interpreter: /usr/bin/python3
   tasks:
 
     - name: Get hostname
@@ -20,7 +18,7 @@
     - name: Set the ubuntu user password
       user:
         name: ubuntu
-        password: '$1$fiuynbkd$M7Wo.BhNSMJuN0TJruOkE/'
+        password: '$1$ZCj3T0wl$VXJVQCa5NFd6DGPlgFhXA1'
       become: yes
       become_user: root
 
@@ -62,7 +60,6 @@
         - python2.7
         - virtualenv
         - python-pip
-        - python3-pip
         - sendmail
         - proftpd-basic
         - postgresql
