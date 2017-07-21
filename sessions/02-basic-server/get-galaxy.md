@@ -168,12 +168,12 @@ You are running Galaxy as an **admin** user with **sudo** privileges (that's bad
 
 # Toward a Production Server
 
-- Database
-- Web Server (Proxy)
+- A Production Database
+- A Production Web Server (Proxy)
 
 ---
 
-# Defaults
+# Database - Defaults
 
 * Galaxy uses database abstraction layer [SQLAlchemy](http://www.sqlalchemy.org/). This allows for different databases to be plugged in.
 * By default Galaxy will automatically create and use [SQLite](https://sqlite.org/) database during first startup.
@@ -181,7 +181,7 @@ You are running Galaxy as an **admin** user with **sudo** privileges (that's bad
 
 ---
 
-# Choices
+# Database - Choices
 
 * SQLite
   * Useful for ad-hoc Galaxies or development.
@@ -192,7 +192,7 @@ You are running Galaxy as an **admin** user with **sudo** privileges (that's bad
 
 ---
 
-# Configuration
+# Database - Configuration
 
 `database_connection` is specified as a connection string in `galaxy.ini` file.
   * Default SQLite: `sqlite:///./database/universe.sqlite?isolation_level=IMMEDIATE`
@@ -201,7 +201,21 @@ You are running Galaxy as an **admin** user with **sudo** privileges (that's bad
 
 ---
 
-# Reverse Proxy
+# Database - Configuration (server cursor)
+
+If large database query results are causing memory or response time issues in the Galaxy process leave it on server.
+* `database_engine_option_server_side_cursors = False`
+
+---
+
+# More Resources
+
+- https://github.com/galaxyproject/dagobah-training/blob/2017-melbourne/sessions/03-production-basics/ex2-postgres.md
+- https://galaxyproject.github.io/training-material/topics/admin/tutorials/database-schema/tutorial.html
+
+---
+
+# Prouduction Web Server - Reverse Proxy
 
 What is a reverse proxy?
 - Sits between the client and Galaxy
@@ -216,32 +230,32 @@ Extra features:
   - Will be covered on Tuesday: _Using and configuring external authentication services_
 
 ---
-# Apache
+# Production Web Server - Apache
 
 - The most popular web server
 - Many authentication plugins written for Apache
 - Can offload file downloads
 
 ---
-# nginx
+# Production Web Server - nginx
 
 - Designed specifically to be a load balancing reverse proxy
 - Widely used by large sites (third most popular web server)
 - Can offload both uploads and downloads
 
-I recommend nginx unless you have a specific need for Apache
+Galaxy team recommends nginx unless you have a specific need for Apache
 
 ---
-# nginx "flavors"
+# Production Web Server - nginx "flavors"
 
-nginx plugins must be compiled in<sup>[1]</sup>
+nginx plugins must be compiled in
 
 Debian/Ubuntu provide multiple nginx "flavors":
 - `nginx-light`: minimal set of core modules
 - `nginx-full`: full set of core modules
 - `nginx-extras`: full set of core modules and extras (3rd party modules)
 
-There is also a "Galaxy" flavor<sup>[2]</sup> (includes [upload module](https://github.com/vkholodkov/nginx-upload-module)):
+There is also a "Galaxy" flavor (includes [upload module](https://github.com/vkholodkov/nginx-upload-module)):
 - [RHEL](https://depot.galaxyproject.org/yum/) (derived from EPEL nginx)
 - [Ubuntu PPA](https://launchpad.net/~galaxyproject/+archive/ubuntu/nginx)
 
