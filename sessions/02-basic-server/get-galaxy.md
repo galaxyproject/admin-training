@@ -261,6 +261,15 @@ There is also a "Galaxy" flavor (includes [upload module](https://github.com/vkh
 
 ---
 
+# Production Databases - More Resources
+
+- Docs for Apache - https://galaxyproject.org/admin/config/apache-proxy/
+- Docs for Nginx - https://galaxyproject.org/admin/config/nginx-proxy/
+- Exercise for Nginx - https://github.com/galaxyproject/dagobah-training/blob/2017-melbourne/sessions/03-production-basics/ex3-nginx.md
+- Exercise for Apache - https://github.com/galaxyproject/dagobah-training/blob/2017-melbourne/sessions/03-production-basics/ex4-apache.md
+
+---
+
 # What to do next?
 
 - Keep your code up to date
