@@ -52,13 +52,14 @@ Local Server and Cluster
 - Permanent Galaxy server
 - Flexible compute scalability
 - Full privacy control
+- Docker is a great choice!
 
 Standalone Local Server
 - Permanent Galaxy server
 - Full privacy control
 - Should only consider this in cases of expected light usage
 - Get a beefy server
-- Docker is a great choice!
+- Docker is a great choice here also!
 
 ---
 # Software Requirements
