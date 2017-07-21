@@ -1,6 +1,6 @@
-![gcc2017 logo](../../docs/shared-images/gcc2017_logo.png) ![galaxy logo](../../docs/shared-images/galaxy_logo_25percent_transparent.png)
+![galaxy logo](../../docs/shared-images/galaxy_logo_25percent_transparent.png)
 
-### GCC - 2017 - Montpellier
+### ISMB - 2017 - Prague
 
 # Setup a production Galaxy with Ansible - Exercise.
 

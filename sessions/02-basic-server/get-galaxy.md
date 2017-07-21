@@ -227,7 +227,6 @@ Extra features:
 - Serve byte range requests
 - Serve other sites from the same server
 - Can provide authentication
-  - Will be covered on Tuesday: _Using and configuring external authentication services_
 
 ---
 # Production Web Server - Apache
