@@ -23,7 +23,7 @@ You can follow @ [http://bit.ly/ismb2017](http://bit.ly/ismb2017)
 .large[
 - Dr Björn Grüning [@bjoerngruening](https://twitter.com/bjoerngruening)
   - Bioinformatics Group, Albert-Ludwigs-Universität Freiburg, Germany
-- Dr. Bérénice Batut
+- Dr. Bérénice Batut [@bebatut](https://twitter.com/bebatut)
   - Bioinformatics Group, Albert-Ludwigs-Universität Freiburg, Germany
 - John Chilton [@jmchilton](https://twitter.com/jmchilton)
   - Galaxy Project, BMB, Penn State University, USA
