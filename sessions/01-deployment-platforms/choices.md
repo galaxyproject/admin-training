@@ -13,6 +13,13 @@ slides by @natefoo, @jmchilton
 .footnote[\#usegalaxy / @galaxyproject]
 
 ---
+
+class: larger
+
+## Please Interrupt!
+This should ideally be interactive!
+
+---
 class: left
 # Where can Galaxy run?
 * Cloud (SaaS)
@@ -136,8 +143,6 @@ This depends:
 
 usegalaxy.org allocates from **8 GB/core** to **16 GB/core**
 
-Connecting Galaxy to clusters/HPC is covered in the advanced section.
-
 ---
 class: special, middle
 # Deployment Options and Best Practices
@@ -181,6 +186,10 @@ class: special
 # Let's get our hands dirty!
 
 Any questions first?
+
+---
+
+# Extra Slides
 
 ---
 # Deployment Best Practices

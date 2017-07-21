@@ -14,10 +14,14 @@ class: special, center
 
 Prague, Czech Republic
 
+WIFI: ISMBECCB / PRAGUE17
+
 ---
 # Your Instructors
 .large[
 - Dr Björn Grüning [@bjoerngruening](https://twitter.com/bjoerngruening)
+  - Bioinformatics Group, Albert-Ludwigs-Universität Freiburg, Germany
+- Dr. Bérénice Batut
   - Bioinformatics Group, Albert-Ludwigs-Universität Freiburg, Germany
 - John Chilton [@jmchilton](https://twitter.com/jmchilton)
   - Galaxy Project, BMB, Penn State University, USA

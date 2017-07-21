@@ -10,13 +10,6 @@ slides by @martenson, @jmchilton
 .footnote[\#usegalaxy / @galaxyproject]
 
 ---
-
-class: larger
-
-## Please Interrupt!
-Your questions will be answered.
-
----
 class: normal
 # Reasons to Install Your Own Galaxy
 
