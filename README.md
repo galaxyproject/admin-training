@@ -23,6 +23,7 @@ Built slides have [an index](https://galaxyproject.github.io/dagobah-training/20
 | 17:30 | Q & A, Troubleshooting |  | All |
 | 18:00 | END |  |  |
 | solo | (alternative topic) Galaxy Visualizations | [Slides](https://galaxyproject.github.io/training-material//topics/dev/tutorials/visualization-charts/slides.html#1) | self |
+| solo | (alternative topic) External Data Sources | [Documentation](https://galaxyproject.org/admin/internals/data-sources/) | self |
 | solo | (alternative topic) Galaxy in Docker | [Slides](https://galaxyproject.github.io/training-material//topics/admin/tutorials/galaxy-docker/slides.html#1) | self |
 
 ### Instructors
