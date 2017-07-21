@@ -8,7 +8,7 @@ Built slides have [an index](https://galaxyproject.github.io/dagobah-training/20
 
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
-| 14:30 | Welcome | [Slides](https://galaxyproject.github.io/dagobah-training/2017-ismb/00-intro/intro.html#1) [setup](https://galaxyproject.github.io/dagobah-training/2017-ismb/00-intro/setup.html#1) | All |
+| 14:30 | Welcome | [Slides](https://galaxyproject.github.io/dagobah-training/2017-ismb/00-intro/intro.html#1) | All |
 | 14:35 | **Introduction to Galaxy - From Data Exploration to Workflow Building** | [Slides](http://galaxyproject.github.io/training-material/topics/introduction/slides/#1) | (B!) |
 | | **Integrating Tools into Galaxy** | | |
 | 14:50 | Anatomy of Galaxy Tools & Introduction to Planemo & Wrapping a Tool | [Slides](https://galaxyproject.github.io/training-material//topics/dev/tutorials/tool-integration/slides.html#1), [Hands On](http://planemo.readthedocs.io/en/latest/writing_standalone.html) | (M) |

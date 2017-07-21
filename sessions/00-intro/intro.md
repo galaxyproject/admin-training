@@ -16,6 +16,8 @@ Prague, Czech Republic
 
 WIFI: ISMBECCB / PRAGUE17
 
+You can follow @[http://bit.ly/ismb2017](http://bit.ly/ismb2017)
+
 ---
 # Your Instructors
 .large[
@@ -38,6 +40,17 @@ class: special, center, middle
 ## @galaxyproject
 
 ---
+
+# Goals and objectives
+
+Be able to:
+
+* Deploy Galaxy server and install tools
+* Integrate software/scripts into Galaxy as tools
+* Locate resources for other topics of interest
+
+---
+
 # Training Home
 
 ## [http://bit.ly/ismb2017](https://github.com/galaxyproject/dagobah-training/tree/2017-ismb)
@@ -64,6 +77,27 @@ class: special, center, middle
 
 ]
 .footnote[[http://bit.ly/ismb2017](https://github.com/galaxyproject/dagobah-training/tree/2017-ismb)]
+
+---
+
+# Hands-on Setup
+
+* Everybody claim a machine at [https://bit.ly/ismbmachines](https://bit.ly/ismbmachines)
+    * The machines are up and pre-configured
+* username is `ubuntu` and password is `ismbtutorial`
+
+For OS X/Linux/Windows w/ Linux Subsystem or OpenSSH:
+```console
+$ ssh -L 8080:localhost:8080 ubuntu@<your_ip>
+```
+
+For PuTTY on Windows:
+- Create a session
+- See [instructions here](http://realprogrammers.com/how_to/set_up_an_ssh_tunnel_with_putty.html).
+- User: ubuntu
+- Host Name: `<your_ip>`
+- (Tunnel) Source port: 8080
+- (Tunnel) Destination: 127.0.0.1:8080
 
 ---
 class: special, center, middle
