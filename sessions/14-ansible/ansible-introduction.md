@@ -310,7 +310,7 @@ In this exercise we will:
 * We will work through the contents of the scripts
 * We will run the roles from a playbook to create a production-ready Galaxy installation
 
-[Installing Galaxy with Ansible](https://github.com/galaxyproject/dagobah-training/blob/2017-montpellier/sessions/14-ansible/ex2-galaxy-ansible.md)
+[Installing Galaxy with Ansible](https://github.com/galaxyproject/dagobah-training/blob/2017-ismb/sessions/14-ansible/ex2-galaxy-ansible.md)
 
 ]
 
