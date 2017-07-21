@@ -8,19 +8,6 @@ class: special, center
 
 .footnote[\#usegalaxy / @galaxyproject]
 ---
-
-layout: true
-class: left, inverse
-
----
-class: special, center
-.large[
-## Please interrupt
-*We are here to answer questions!*
-]
-
-.footnote[\#usegalaxy / @galaxyproject]
----
 class: left
 ## Overview
 .large[
