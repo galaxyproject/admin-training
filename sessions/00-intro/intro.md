@@ -16,7 +16,7 @@ Prague, Czech Republic
 
 WIFI: ISMBECCB / PRAGUE17
 
-You can follow @[http://bit.ly/ismb2017](http://bit.ly/ismb2017)
+You can follow @ [http://bit.ly/ismb2017](http://bit.ly/ismb2017)
 
 ---
 # Your Instructors
@@ -100,6 +100,23 @@ For PuTTY on Windows:
 - (Tunnel) Destination: 127.0.0.1:8080
 
 ---
+
+class: special, center, middle
+
+# ISMB Events
+
+BoF B4: What can the Galaxy Project do for you?
+
+Monday July 24 @ 12:45 pm
+
+<br>
+
+Pay-your-own-way Galaxy Dinner Monday Night
+
+https://bit.ly/gxyismb2017dinner
+
+---
+
 class: special, center, middle
 # Future events
 .large[
