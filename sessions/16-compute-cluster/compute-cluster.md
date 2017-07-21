@@ -36,17 +36,17 @@ class: smaller
 
 ```
 ╔═════════════════════════════════════════════════════╗
-║ Galaxy Job Handler (galaxy.jobs.handler)                       ║
+║ Galaxy Job Handler (galaxy.jobs.handler)            ║
 ╟─────────────────────────────────────────────────────╢
-║ Galaxy DRMAA Job Runner (galaxy.jobs.runners.drmaa)            ║
+║ Galaxy DRMAA Job Runner (galaxy.jobs.runners.drmaa) ║
 ╠─────────────────────────────────────────────────────╢
-║ Pulsar DRMAA Interface (pulsar.managers.util.drmaa)            ║
+║ Pulsar DRMAA Interface (pulsar.managers.util.drmaa) ║
 ╠═════════════════════════════════════════════════════╣
-║ DRMAA Python                                                   ║
+║ DRMAA Python                                        ║
 ╠═════════════════════════════════════════════════════╣
-║ C DRMAA Library (PSNC, vendor)                                 ║
+║ C DRMAA Library (PSNC, vendor)                      ║
 ╠═════════════════════════════════════════════════════╣
-║ DRM (Slurm, Condor, ...)                                       ║
+║ DRM (Slurm, Condor, ...)                            ║
 ╚═════════════════════════════════════════════════════╝
 
 ```
