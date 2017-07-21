@@ -93,3 +93,9 @@
         dest: /etc/vim/vimrc
         regexp: '"set background=dark'
         line: 'set background=dark'
+
+    - name: Install planemo
+      become: yes
+      pip: name="{{ item }}"
+      with_items:
+        - planemo
