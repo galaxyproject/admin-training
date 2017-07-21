@@ -18,7 +18,7 @@ Built slides have [an index](https://galaxyproject.github.io/dagobah-training/20
 | | **Deploying and Scaling Galaxy** | | |
 | 16:15 | Deployment and Platform Options | [Slides](https://galaxyproject.github.io/dagobah-training/2017-ismb/01-deployment-platforms/choices.html#1) | (J) |
 | 16:25 | Get a Basic Server Up and Running | [Slides](https://galaxyproject.github.io/dagobah-training/2017-ismb/02-basic-server/get-galaxy.html#1) | (J) |
-| 16:55 | Automated Deployment with Ansible | [Slides](https://galaxyproject.github.io/dagobah-training/2017-ismb/14-ansible/ansible-introduction.html) [exercise](https://github.com/galaxyproject/dagobah-training/blob/2017-ismb/sessions/14-ansible/ex2-galaxy-ansible.md) | (M) |
+| 16:55 | Automated Deployment with Ansible | [Slides](https://galaxyproject.github.io/dagobah-training/2017-ismb/14-ansible/ansible-introduction.html) [exercise](https://github.com/galaxyproject/dagobah-training/blob/2017-ismb/sessions/14-ansible/ex2-galaxy-ansible.md) | (B) |
 | 17:15 | Leveraging Compute Clusters | [Slides](https://galaxyproject.github.io/dagobah-training/2017-ismb/16-compute-cluster/compute-cluster.html) | (J) |
 | 17:30 | Q & A, Troubleshooting |  | All |
 | 18:00 | END |  |  |
