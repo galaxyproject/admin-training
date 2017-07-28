@@ -6,7 +6,7 @@ Built slides have [an index](https://galaxyproject.github.io/dagobah-training/20
 
 ### Instances for workshop
 
-[Here is a list](https://docs.google.com/spreadsheets/d/1pm84zgPc29Y36csNZ5xnN2H6RPTKCI7_4ZAetamWuuQ/edit?usp=sharing) of instances for the workshop: Please **carefully** claim one by putting your name in the student column next to a machine name. Then, write down your IP address.
+The instances we used for the workshop have now all been shutdown. Please see the bottom of this README for instructions on how to get a machine to do the workshop on your own.
 
 ## Timetable
 
