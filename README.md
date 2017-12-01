@@ -1,34 +1,33 @@
-![gatc2017_logo.png](docs/shared-images/gatc2017_logo.png)
-
 # Galaxy Administrators Course
 
-dagobah - The Solar System for Galaxy Training
-> "The planet shown in Dagobah, in the Sluis sector, is a world of murky swamps, steaming bayous, and petrified forests."
+**Oslo, 8th to 12th January 2018**
 
----
-**Melbourne - 6th to 9th February 2017**
+[Event Logisitics](https://docs.google.com/document/d/17ZpNQu6cC6tx-WNF6iN7T7Gu2TrOJthS98KglJa6k9s/edit?usp=sharing) | [Admin Training Home Page](https://wiki.galaxyproject.org/Events/AdminTraining2016)
 
-[Event Logisitics]() | [Admin Training Home Page]()
+jump to [Monday](#monday) | [Tuesday](#tuesday) | [Wednesday](#wednesday) | [Thursday](#thursday) | [Friday](#friday)
 
-jump to [Monday](#monday) | [Tuesday](#tuesday) | [Wednesday](#wednesday) | [Thursday](#thursday)
-
-Built slides have [an index](https://galaxyproject.github.io/dagobah-training/2017-melbourne/).
+Built slides have [an index](https://galaxyproject.github.io/dagobah-training/2018-oslo/).
 
 ### Instructors
 
-* (N)ate Coraor - Galaxy Project, BMB, Penn State University, USA
-* (S)imon Gladman - VLSCI, University of Melbourne, Australia
-* (E)nis Afgan - Galaxy Project, Department of Biology, Johns Hopkins University, USA
-* (B)jörn Grüning - Head of Freiburg Galaxy Team, University of Freiburg, Germany
-* (R)oss Lazarus - Galaxy Project and formerly of Baker IDI, Australia.
+* (B)jörn Grüning - Elixir Galaxy WG, Elixir Germany, de.NBI, University of Freiburg, Germany
+* (M)arius van den Beek - Elixir Galaxy WG, Institute Curie, Paris, France
+* (N)icola Soranzo - Elixir Galaxy WG, Earlham Institute, UK
+* (E)nis Afgan - Galaxy Project, Johns Hopkins University, USA
+* (A)bdulrahman Azab - Elixir Norway, USIT, University of Oslo, NO
 
-List of instances for course:
+### Location
 
-[spreadsheet](https://docs.google.com/spreadsheets/d/1uaOpQcKNv6iOG8lbURW1_cFsLhrMrJivuQSh6Wfq7pM/edit?usp=sharing)
+Building: [Ole Johan Dahls hus, University of Oslo](https://www.uio.no/english/about/getting-around/areas/gaustad/ga06/)
+Room: [Seminar room Python](https://tp.uio.no/timeplan/rom.php?area=GA&building=GA06&id=GA062269&week=2&ar=2018&ca=false&cb=false)
+
+## Timetable
+
+Timetable with sessions and material will be continously updated towards the workshop.
 
 ## Timetable
 #### Monday
-**6th February** - [Lab 14 Seminar Room, 700 Swanston St, Carlton, Victoria](https://goo.gl/maps/FD2cdrFeDfG2)
+**8th January** - Location
 
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
@@ -47,7 +46,7 @@ List of instances for course:
 | 18:00 | Close Day 1 | | All |
 
 #### Tuesday
-**7th February** - [Lab 14 Seminar Room, 700 Swanston St, Carlton, Victoria](https://goo.gl/maps/FD2cdrFeDfG2)
+**9th January**  - Location
 
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
@@ -66,7 +65,7 @@ List of instances for course:
 | 18:00 | Close Day 2 | | All |
 
 #### Wednesday
-**8th February** - [Lab 14 Seminar Room, 700 Swanston St, Carlton, Victoria](https://goo.gl/maps/FD2cdrFeDfG2)
+**10th January**  - Location
 
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
@@ -87,7 +86,7 @@ List of instances for course:
 **We will most likely all go out for dinner together somewhere local tonight**
 
 #### Thursday
-**9th February** - [Lab 14 Seminar Room, 700 Swanston St, Carlton, Victoria](https://goo.gl/maps/FD2cdrFeDfG2)
+**11th January**  - Location
 
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
@@ -102,3 +101,11 @@ List of instances for course:
 | 15:45 | OPEN: Submitted topics | [link to nomination document](https://docs.google.com/document/d/1PTPulqS_Ki7DPmYYoUsdvfHyeJRQBP8jOS6kRl7_fZ4/edit?usp=sharing), [uWSGI Zerg Mode](https://gist.github.com/natefoo/9dc5c349350770094c9fb14259e5c88a) | |
 | 16:45 | Galaxy server architecture | [Slides](https://galaxyproject.github.io/dagobah-training/2017-melbourne/23-architecture/galaxy_architecture.html) | |
 | 18:00 | Wrap up and close | | All |
+
+
+#### Friday
+**12th January**  - Location
+
+| **Time** | **Topic** | **Links** | **Instructor** |
+| -------- | --------- | --------- | ----------- |
+| 09:00 | Welcome and questions |  | All |
