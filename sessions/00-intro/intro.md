@@ -25,14 +25,14 @@ Australia
 - Ross Lazarus
   -  Formerly of Baker IDI and Galaxy Legend!
 ]
-.footnote[\#usegalaxy \#GAT2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 
 ---
 class: special, center, middle
 # Feel free to Tweet
 
 # \#usegalaxy
-## \#GAT2017  
+## \#Oslo2018  
 ## @galaxyproject
 
 ---

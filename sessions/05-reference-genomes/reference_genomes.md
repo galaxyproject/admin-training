@@ -10,7 +10,7 @@ class: special, center
 **Slides: @blankenberg, @Slugger70**
 
 
-.footnote[\#usegalaxy \#GAT2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 ---
 
 layout: true
@@ -26,7 +26,7 @@ class: left, middle, center
 
 *We are here to answer questions!*
 
-.footnote[\#usegalaxy \#GAT2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 ---
 class: left
 ## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Overview
@@ -37,7 +37,7 @@ class: left
 * Data Managers
 ]
 
-.footnote[\#usegalaxy \#GAT2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 ---
 class: left
 ## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Built in Data
@@ -46,7 +46,7 @@ class: left
 
 
 
-.footnote[\#usegalaxy \#GAT2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 ---
 class: left
 
@@ -58,7 +58,7 @@ class: left
 * Better to pre-build the indices.
 ]
 
-.footnote[\#usegalaxy \#GAT2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 ---
 class: left
 ## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Overview
@@ -74,7 +74,7 @@ class: left
 ![schematic](images/data_managers_schematic_overview.png)
 
 
-.footnote[\#usegalaxy \#GAT2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 ---
 ## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Using reference data in a tool
 
@@ -99,7 +99,7 @@ class: left
 
 ```
 
-.footnote[\#usegalaxy \#GAT2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 ---
 ## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Where are the data tables?
 
@@ -117,7 +117,7 @@ class: left
   </tables>
 ```
 
-.footnote[\#usegalaxy \#GAT2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 ---
 ## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  "loc" files - Short for location!
 
@@ -143,7 +143,7 @@ mm10    mm10    Mouse (mm10)    /mnt/galaxyIndices/genomes/mm10/bwa_mem_index/mm
 ```
 
 
-.footnote[\#usegalaxy \#GAT2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 ---
 class: left
 ## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Overview
@@ -164,31 +164,31 @@ class: left
   * expected format of the reference data
   * format of the .loc file
 ]
-.footnote[\#usegalaxy \#GAT2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 ---
 ## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Typical conversation
 
 .middle[![ref-problem-1.png](images/Ref-problem-1.png)]
 
-.footnote[\#usegalaxy \#GAT2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 ---
 ## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Typical conversation
 
 .middle[![ref-problem-2.png](images/Ref-problem-2.png)]
 
-.footnote[\#usegalaxy \#GAT2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 ---
 ## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Typical conversation
 
 .middle[![ref-problem-3.png](images/Ref-problem-3.png)]
 
-.footnote[\#usegalaxy \#GAT2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 ---
 ## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Typical conversation
 
 .middle[![ref-problem-4.png](images/Ref-problem-4.png)]
 
-.footnote[\#usegalaxy \#GAT2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 ---
 
 ## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Other concerns
@@ -204,7 +204,7 @@ class: left
   * Restart Galaxy server for new entries
 ]
 
-.footnote[\#usegalaxy \#GAT2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 ---
 class: left
 ## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Overview
@@ -228,7 +228,7 @@ class: left
 
 * Defined **locally** or installed from **ToolShed**
 ]
-.footnote[\#usegalaxy \#GAT2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 ---
 
 ## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Data Managers
@@ -243,7 +243,7 @@ class: left
   * Fetching genome (fasta) sequences
   * Building short read mapper indices for genomes
 ]
-.footnote[\#usegalaxy \#GAT2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 
 ---
 
@@ -254,7 +254,7 @@ Looks just like a normal Galaxy tool!
 ![Data-manager-ui.png](images/Data-manager-ui.png)
 
 
-.footnote[\#usegalaxy \#GAT2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 
 ---
 
@@ -270,7 +270,7 @@ This gets turned into a new data table entry
 
 The index files themselves get placed in the appropriate location.
 
-.footnote[\#usegalaxy \#GAT2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 
 ---
 
@@ -280,7 +280,7 @@ The index files themselves get placed in the appropriate location.
 ]
 ![data_managers_tool_list.png](images/data_managers_tool_list.png)
 
-.footnote[\#usegalaxy \#GAT2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 ---
 ## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Data Managers Admin
 
@@ -291,7 +291,7 @@ The index files themselves get placed in the appropriate location.
 ]
 ![data_table_ui.png](images/data_table_ui.png)
 
-.footnote[\#usegalaxy \#GAT2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 ---
 ## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Resources / further reading
 
@@ -303,10 +303,10 @@ The index files themselves get placed in the appropriate location.
 
 https://wiki.galaxyproject.org/Admin/Tools/DataManagers
 ]
-.footnote[\#usegalaxy \#GAT2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 ---
 ## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Exercise Time!
 
 
 
-.footnote[\#usegalaxy \#GAT2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
