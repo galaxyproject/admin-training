@@ -1,10 +1,8 @@
 ![GATC Logo](../../docs/shared-images/AdminTraining2016-100.png) ![galaxy logo](../../docs/shared-images/galaxy_logo_25percent_transparent.png)
 
-### GAT - 2017 - Melbourne, Australia
+### Oslo2018 - Oslo, Norway
 
-# Reference Genomes - Exercise.
-
-#### Authors: Dan Blankenberg, Jim Johnson and Simon Gladman. 2014 - 2017
+# Reference Genomes - Exercise
 
 ## Learning Outcomes
 
@@ -71,60 +69,63 @@ Most importantly they are **Tab delimited** (not *space* delimited) flat files, 
   </macro>
   ```
 
-* Now Find and click on *tool_data_table_conf.xml.sample* which defines the mapping to the *tool-data/bwa_mem_index.loc* file. Note that column two referred to in the above tool file is listed here as "name" or the name of the reference sequence (0 indexed list).
+* Now Find and click on *tool_data_table_conf.xml.sample* which defines the
+  mapping to the *tool-data/bwa_mem_index.loc* file. Note that column 2 in the
+  above tool file under `<options from_data_table="bwa_mem_indexes">` is listed
+  here as `name` or the name of the reference sequence (0 indexed list).
 
   ``` xml
-<!-- Use the file tool_data_table_conf.xml.oldlocstyle if you don't want to update your loc files as changed in revision 4550:535d276c92bc-->
-<tables>
-    <!-- Locations of indexes in the BWA mapper format for BWA versions 0.6 and higher including BWA MEM and ALN-->
-    <table name="bwa_mem_indexes" comment_char="#">
-        <columns>value, dbkey, name, path</columns>
-        <file path="tool-data/bwa_mem_index.loc" />
-    </table>
-</tables>
+  <tables>
+      <table name="bwa_mem_indexes" comment_char="#">
+          <columns>value, dbkey, name, path</columns>
+          <file path="tool-data/bwa_mem_index.loc" />
+      </table>
+  </tables>
   ```
 
-* Find and click on *bwa_mem_index.loc.sample*. This is a sample .loc file for the bwa mapping tool. It contains the names and paths to the actual indices.
+* Find and click on *tool-data/bwa_mem_index.loc.sample*. This is a sample .loc
+  file for the bwa mapping tool. It contains the names and paths to the actual
+  indices.
 
   ```
-#This is a sample file distributed with Galaxy that enables tools
-#to use a directory of BWA indexed sequences data files. You will need
-#to create these data files and then create a bwa_index.loc file
-#similar to this one (store it in this directory) that points to
-#the directories in which those files are stored. The bwa_index.loc
-#file has this format (longer white space characters are TAB characters):
-#
-#<unique_build_id>   <dbkey>   <display_name>   <file_path>
-#
-#So, for example, if you had phiX indexed stored in 
-#/depot/data2/galaxy/phiX/base/, 
-#then the bwa_index.loc entry would look like this:
-#
-#phiX174   phiX   phiX Pretty   /depot/data2/galaxy/phiX/base/phiX.fa
-#
-#and your /depot/data2/galaxy/phiX/base/ directory
-#would contain phiX.fa.* files:
-#
-#-rw-r--r--  1 james    universe 830134 2005-09-13 10:12 phiX.fa.amb
-#-rw-r--r--  1 james    universe 527388 2005-09-13 10:12 phiX.fa.ann
-#-rw-r--r--  1 james    universe 269808 2005-09-13 10:12 phiX.fa.bwt
-#...etc...
-#
-#Your bwa_index.loc file should include an entry per line for each
-#index set you have stored. The "file" in the path does not actually
-#exist, but it is the prefix for the actual index files.  For example:
-#
-#phiX174	phiX	phiX174	/depot/data2/galaxy/phiX/base/phiX.fa
-#hg18canon	hg18	hg18 Canonical	/depot/data2/galaxy/hg18/base/hg18canon.fa
-#hg18full	hg18	hg18 Full	/depot/data2/galaxy/hg18/base/hg18full.fa
-#/orig/path/hg19.fa	hg19	hg19	/depot/data2/galaxy/hg19/base/hg19.fa
-#...etc...
-#
-#Note that for backwards compatibility with workflows, the unique ID of
-#an entry must be the path that was in the original loc file, because that
-#is the value stored in the workflow for that parameter. That is why the
-#hg19 entry above looks odd. New genomes can be better-looking.
-#
+  #This is a sample file distributed with Galaxy that enables tools
+  #to use a directory of BWA indexed sequences data files. You will need
+  #to create these data files and then create a bwa_index.loc file
+  #similar to this one (store it in this directory) that points to
+  #the directories in which those files are stored. The bwa_index.loc
+  #file has this format (longer white space characters are TAB characters):
+  #
+  #<unique_build_id>   <dbkey>   <display_name>   <file_path>
+  #
+  #So, for example, if you had phiX indexed stored in 
+  #/depot/data2/galaxy/phiX/base/, 
+  #then the bwa_index.loc entry would look like this:
+  #
+  #phiX174   phiX   phiX Pretty   /depot/data2/galaxy/phiX/base/phiX.fa
+  #
+  #and your /depot/data2/galaxy/phiX/base/ directory
+  #would contain phiX.fa.* files:
+  #
+  #-rw-r--r--  1 james    universe 830134 2005-09-13 10:12 phiX.fa.amb
+  #-rw-r--r--  1 james    universe 527388 2005-09-13 10:12 phiX.fa.ann
+  #-rw-r--r--  1 james    universe 269808 2005-09-13 10:12 phiX.fa.bwt
+  #...etc...
+  #
+  #Your bwa_index.loc file should include an entry per line for each
+  #index set you have stored. The "file" in the path does not actually
+  #exist, but it is the prefix for the actual index files.  For example:
+  #
+  #phiX174	phiX	phiX174	/depot/data2/galaxy/phiX/base/phiX.fa
+  #hg18canon	hg18	hg18 Canonical	/depot/data2/galaxy/hg18/base/hg18canon.fa
+  #hg18full	hg18	hg18 Full	/depot/data2/galaxy/hg18/base/hg18full.fa
+  #/orig/path/hg19.fa	hg19	hg19	/depot/data2/galaxy/hg19/base/hg19.fa
+  #...etc...
+  #
+  #Note that for backwards compatibility with workflows, the unique ID of
+  #an entry must be the path that was in the original loc file, because that
+  #is the value stored in the workflow for that parameter. That is why the
+  #hg19 entry above looks odd. New genomes can be better-looking.
+  #
   ```
 
 **NOTE:** When editing .loc files, your editor **MUST** use **TABS** and not expand them into spaces.
@@ -132,7 +133,9 @@ Most importantly they are **Tab delimited** (not *space* delimited) flat files, 
 
 ### Excercise 2: Manually add a genome to the BWA tool list.
 
-In this exercise we will be adding a reference genome to our galaxy server by manually editing all of the required files. (Use your favourite editor, but remember to make sure it uses real tabs not tabs expanded into spaces..)
+In this exercise we will be adding a reference genome to our Galaxy server by
+manually editing all of the required files (use your favourite editor, but
+remember to make sure it uses real TABs, not TABs expanded into spaces).
 
 We will:
 
@@ -162,7 +165,7 @@ Skip this part if you are already an admin user of your Galaxy server!
   sudo -Hu galaxy galaxy --daemon
 ```
 * Watch the Galaxy log file with `tail -f /srv/galaxy/log/paster.log`.
-* Test you are an Admin user by logging into your Galaxy server as the username you added to galaxy.ini
+* Test you are an Admin user by logging into your Galaxy server as the username you added to `galaxy.ini`
 * You should see an "Admin" menu item at the top of the Galaxy interface.
 
 **Part 2: Install the BWA tool**
@@ -170,19 +173,22 @@ Skip this part if you are already an admin user of your Galaxy server!
 Skip this part if BWA is already installed on your Galaxy server!
 
 * From the Galaxy admin page:
-  * Click **Search tool shed**
+  * Click **Search Tool Shed**
   * Click *Galaxy Main Tool Shed*
-  * Searh for *bwa*
+  * Search for *bwa*
   * Select *bwa* owned by devteam
   * Click **Install to Galaxy**
   * Click **Install**
   * Watch the interface and wait until BWA is installed.
 
-
 * Check it worked
-  * In your terminal window view *shed_tool_conf.xml*, it should now contain a bwa entry.
-  * View *shed_tool_data_table_conf.xml* should have the bwa *tool_data_table_conf.xml.sample* table entries added.
-  * There should be a *tool-data/bwa_mem_index.loc* file (copied from "bwa_mem_index.loc.sample" if not already created)
+  * In your terminal window view *config/shed_tool_conf.xml*, it should now
+    contain a bwa entry.
+  * View *config/shed_tool_data_table_conf.xml*. It should have the contents of
+    bwa's *tool_data_table_conf.xml.sample* table entries added (as well as
+    Tool Shed repository installation details).
+  * There should be a *tool-data/bwa_mem_index.loc* file (copied from
+    `bwa_mem_index.loc.sample` if not already created)
   * Upload some sample FASTQ datasets:
   ```
 http://www.bx.psu.edu/~dan/examples/gcc2014/data_manager_workshop/fastq/SRR507778-10k_1.fastqsanger
@@ -190,12 +196,12 @@ http://www.bx.psu.edu/~dan/examples/gcc2014/data_manager_workshop/fastq/SRR50777
   ```
   * These are paired end datasets created using Illumina technology, obtained from EBI SRA, and decreased to ~10,000 reads.
   * When uploading these datasets set the datatype to "fastqsanger".
-  * Click the "Analyze Data" menu item and select the **BWA** tool.
-  * Note the choices available under **Select a reference genome:** hint: this list should be empty (or at least not contain SacCer1 )
+  * Click the "Analyze Data" menu item and select the **Map with BWA** tool.
+  * Note the choices available under **Using reference genome** hint: this list should be empty (or at least not contain SacCer1).
 
 **Part 3: Add a new reference genome**
 
-We will be adding a new built-in reference dataset, the sacCer1 genome build (good old Saccharomyces cerevisiae - beer yeast). We will download the fasta sequence file for it, index it for bwa and edit all of the appropriate Galaxy .loc file.
+We will be adding a new built-in reference dataset, the _sacCer1_ genome build (good old Saccharomyces cerevisiae - beer yeast). We will download the fasta sequence file for it, index it for bwa, and edit all of the appropriate Galaxy `.loc` file.
 
 * Get the reference genome in the FASTA format.
   * From your Galaxy root, as the Galaxy user (e.g. `sudo -Hsu galaxy`):
@@ -206,70 +212,73 @@ We will be adding a new built-in reference dataset, the sacCer1 genome build (go
   wget http://www.bx.psu.edu/~dan/examples/gcc2014/data_manager_workshop/sacCer1/sacCer1.fa
   ```
 
-
 **Part 4: Create BWA indexes for the reference genome.**
 
-**NOTE:** This is kind of the hard part.. We need to have BWA available on the command line and in the PATH environment variable. We can either install a separate commandline BWA or use the one installed in Galaxy. It's probably better to use the Galaxy one as sometimes tool developers change the format of their index tables.. :(
+**NOTE:** This is kind of the hard part. We need to have BWA available on the command line and in the PATH environment variable. We can either install a separate commandline BWA or use the one installed in Galaxy. It's probably better to use the Galaxy one as sometimes tool developers change the format of their index tables. :(
 
 * Put BWA into the PATH.
-  * Use the env.sh file in the Galaxy BWA tool! Then test it works!
-  * From your Galaxy root: (Where the "x"s in the semantic version numbers and repo version are replaced with what's actually there!)
+  * Galaxy uses Conda by default for dependency management so the best way to
+    get Conda into the PATH is to activate the relevant Conda environment. We
+    can activate the Conda environment that Galaxy uses and look for which
+    environment bwa got installed into and activate it:
+    ``` console
+    cd $GALAXY_HOME/database/dependencies
+    source _conda/bin/activate
+    conda info --envs
+    source activate mulled-v1-a1698655ddc683fd2767d127c7c583056e87322876f94e167ba3900da02c1fc4
+    ```
 
-  ```console
+    We can now run the `bwa` command:
+    ``` console
+    $ bwa
 
-  $ source /srv/galaxy/dependencies/bwa/0.7.12/iuc/package_bwa_0_7_12/53646aaaafef/env.sh
-  $ bwa
+    Program: bwa (alignment via Burrows-Wheeler transformation)
+    Version: 0.7.17-r1188
+    Contact: Heng Li <lh3@sanger.ac.uk>
 
-  Program: bwa (alignment via Burrows-Wheeler transformation)
-  Version: 0.7.12-r1039
-  Contact: Heng Li <lh3@sanger.ac.uk>
+    Usage:   bwa <command> [options]
 
-  Usage:   bwa <command> [options]
+    Command: index         index sequences in the FASTA format
+            mem           BWA-MEM algorithm
+            fastmap       identify super-maximal exact matches
+            pemerge       merge overlapping paired ends (EXPERIMENTAL)
+            aln           gapped/ungapped alignment
+            samse         generate alignment (single ended)
+            sampe         generate alignment (paired ended)
+            bwasw         BWA-SW for long queries
 
-  Command: index         index sequences in the FASTA format
-           mem           BWA-MEM algorithm
-           fastmap       identify super-maximal exact matches
-           pemerge       merge overlapping paired ends (EXPERIMENTAL)
-           aln           gapped/ungapped alignment
-           samse         generate alignment (single ended)
-           sampe         generate alignment (paired ended)
-           bwasw         BWA-SW for long queries
+            shm           manage indices in shared memory
+            fa2pac        convert FASTA to PAC format
+            pac2bwt       generate BWT from PAC
+            pac2bwtgen    alternative algorithm for generating BWT
+            bwtupdate     update .bwt to the new format
+            bwt2sa        generate SA from BWT and Occ
 
-           shm           manage indices in shared memory
-           fa2pac        convert FASTA to PAC format
-           pac2bwt       generate BWT from PAC
-           pac2bwtgen    alternative algorithm for generating BWT
-           bwtupdate     update .bwt to the new format
-           bwt2sa        generate SA from BWT and Occ
+    Note: To use BWA, you need to first index the genome with `bwa index'.
+          There are three alignment algorithms in BWA: `mem', `bwasw', and
+          `aln/samse/sampe'. If you are not sure which to use, try `bwa mem'
+          first. Please `man ./bwa.1' for the manual.
+    ```
 
-  Note: To use BWA, you need to first index the genome with 'bwa index'.
-        There are three alignment algorithms in BWA: 'mem', 'bwasw', and
-        'aln/samse/sampe'. If you are not sure which to use, try 'bwa mem'
-        first. Please 'man ./bwa.1' for the manual.
-
-  ```
-
-
-* Now we can use bwa to build the index! Go back to the sacCer1 directory in tool-data. From Galaxy root:
+* Now we can use bwa to build the index! Go back to the sacCer1 directory in `tool-data`. From Galaxy root:
 
   ``` bash
-  cd tool-data/sacCer1
-  mkdir -p bwa_index/sacCer1
-  cd bwa_index/sacCer1
-  ln -s ../../seq/sacCer1.fa sacCer1.fa
-  bwa index sacCer1.fa
-  ls -lah
-  total 21M
-  drwxr-xr-x 2 galaxy users 4.0K Oct  6  2015 .
-  drwxr-xr-x 3 galaxy users 4.0K Oct  6  2015 ..
-  lrwxrwxrwx 1 galaxy users   20 Oct  6  2015 sacCer1.fa -> ../../seq/sacCer1.fa
-  -rw-r--r-- 1 galaxy users   14 Oct  6  2015 sacCer1.fa.amb
-  -rw-r--r-- 1 galaxy users  596 Oct  6  2015 sacCer1.fa.ann
-  -rw-r--r-- 1 galaxy users  12M Oct  6  2015 sacCer1.fa.bwt
-  -rw-r--r-- 1 galaxy users 2.9M Oct  6  2015 sacCer1.fa.pac
-  -rw-r--r-- 1 galaxy users 5.8M Oct  6  2015 sacCer1.fa.sa
+  $ cd tool-data/sacCer1
+  $ mkdir -p bwa_index/sacCer1
+  $ cd bwa_index/sacCer1
+  $ ln -s ../../seq/sacCer1.fa sacCer1.fa
+  $ bwa index sacCer1.fa
+  $ ls -lh
+  total 41576
+  lrwxr-xr-x  1 ea  staff    20B Dec 15 15:20 sacCer1.fa -> ../../seq/sacCer1.fa
+  -rw-r--r--  1 ea  staff    14B Dec 15 15:20 sacCer1.fa.amb
+  -rw-r--r--  1 ea  staff   547B Dec 15 15:20 sacCer1.fa.ann
+  -rw-r--r--  1 ea  staff    12M Dec 15 15:20 sacCer1.fa.bwt
+  -rw-r--r--  1 ea  staff   2.9M Dec 15 15:20 sacCer1.fa.pac
+  -rw-r--r--  1 ea  staff   5.8M Dec 15 15:20 sacCer1.fa.sa
   ```  
-* We must now add it to the .loc file. Add the following line to the end of the *tool-data/bwa_index.loc* file.
+* We must now add it to the `.loc` file. Add the following line to the end of
+  the *tool-data/bwa_mem_index.loc* file. Remember to use TABs.
 
   ```
   sacCer1     sacCer1 S. cerevisiae Oct. 2003 (SGD/sacCer1) (sacCer1) /srv/galaxy/server/tool-data/sacCer1/bwa_index/sacCer1/sacCer1.fa
@@ -317,22 +326,22 @@ Data Managers can be defined locally or installed through the Tool Shed.
 
 They are a flexible framework for adding reference data to Galaxy (not just genomic data). They are workflow compatible and can run via the Galaxy API.
 
-More detailed background information on data managers can be found at: [https://wiki.galaxyproject.org/Admin/Tools/DataManagers/](https://wiki.galaxyproject.org/Admin/Tools/DataManagers/) (A summary of which appears below.)
+More detailed background information on data managers can be found at: [https://galaxyproject.org/admin/tools/data-managers/](https://galaxyproject.org/admin/tools/data-managers/) (A summary of which appears below.)
 
-Details on how to define a data manager for a tool can be found here: [https://wiki.galaxyproject.org/Admin/Tools/DataManagers/HowTo/Define](https://wiki.galaxyproject.org/Admin/Tools/DataManagers/HowTo/Define)
+Details on how to define a data manager for a tool can be found here: [https://galaxyproject.org/admin/tools/data-managers/how-to/define/](https://galaxyproject.org/admin/tools/data-managers/how-to/define/)
 
 **Using Data Managers**
 
 Data Managers are composed of two components:
 
-* Data Manager configuration (e.g. data_manager_conf.xml)
-* Data Manager Tool
+* Data Manager configuration (e.g. `data_manager_conf.xml`)
+* Data Manager tool
 
 **Data Manager Configuration**
 
 We need to tell Galaxy where to find the Data Managers and their configuration.
 
-In your *galaxy.ini* file the following settings exist in the [app:main] section:
+In your *galaxy.ini* file the following settings exist in the `[app:main]` section:
 
 ```
 shed_tool_data_table_config = /srv/galaxy/config/shed_tool_data_table_conf.xml
@@ -347,9 +356,9 @@ Where:
   * *enable_data_manager_user_view* allows non-admin users to view the available data that has been managed.
   * *data_manager_config_file* defines the local xml file to use for loading the configurations of locally defined data managers.
   * *shed_data_manager_config_file* defines the local xml file to use for saving and loading the configurations of locally defined data managers.
-  * *galaxy_data_manager_data_path* defines the location to use for storing the files created by Data Managers. When not configured it defaults to the value of tool_data_path.
+  * *galaxy_data_manager_data_path* defines the location to use for storing the files created by Data Managers. When not configured it defaults to the value of `tool_data_path`.
 
-Details on Data Manager Tools and their definition can be found at: [https://wiki.galaxyproject.org/Admin/Tools/DataManagers/HowTo/Define](https://wiki.galaxyproject.org/Admin/Tools/DataManagers/HowTo/Define)
+Details on Data Manager Tools and their definition can be found at: [https://galaxyproject.org/admin/tools/data-managers/how-to/define/](https://galaxyproject.org/admin/tools/data-managers/how-to/define/)
 
 ### Exercise 3: Install a DataManager from the ToolShed
 
@@ -359,21 +368,20 @@ In this exercise we will install a data manager that can fetch the various genom
 
 Make sure you are logged in as an Admin user on your Galaxy server. Then, from the Galaxy Admin page:
 
-* Install data_manager_fetch_genome_all_fasta from Galaxy main tool shed
+* Install _data_manager_fetch_genome_dbkeys_all_fasta_ from Galaxy main tool shed
   * Click **Search Tool Shed**
   * Search for "fetch"
-  * Install the fetch genome all fasta data manager.
-
+  * Install the _data_manager_fetch_genome_dbkeys_all_fasta_ data manager.
 
 * View in the file system where the various elements land. Have a look in the configuration files located in config directory.
 
-*shed_data_manager_conf.xml*
+*config/shed_data_manager_conf.xml*
 
 ``` xml
 <?xml version="1.0"?>
 <data_managers>
-<data_manager guid="toolshed.g2.bx.psu.edu/repos/devteam/data_manager_fetch_genome_all_fasta/data_manager/fetch_genome_all_fasta/0.0.1" id="fetch_genome_all_fasta" shed_conf_file="./config/shed_tool_conf.xml">
-        <tool file="toolshed.g2.bx.psu.edu/repos/devteam/data_manager_fetch_genome_all_fasta/fb744a070bee/data_manager_fetch_genome_all_fasta/data_manager/data_manager_fetch_genome_all_fasta.xml" guid="toolshed.g2.bx.psu.edu/repos/devteam/data_manager_fetch_genome_all_fasta/data_manager_fetch_genome_all_fasta/0.0.1"><tool_shed>toolshed.g2.bx.psu.edu</tool_shed><repository_name>data_manager_fetch_genome_all_fasta</repository_name><repository_owner>devteam</repository_owner><installed_changeset_revision>fb744a070bee</installed_changeset_revision><id>toolshed.g2.bx.psu.edu/repos/devteam/data_manager_fetch_genome_all_fasta/data_manager_fetch_genome_all_fasta/0.0.1</id><version>0.0.1</version></tool><data_table name="all_fasta">
+    <data_manager guid="toolshed.g2.bx.psu.edu/repos/devteam/data_manager_fetch_genome_dbkeys_all_fasta/data_manager/fetch_genome_all_fasta_dbkeys/0.0.1" id="fetch_genome_all_fasta_dbkeys" shed_conf_file="./config/shed_tool_conf.xml">
+        <tool file="toolshed.g2.bx.psu.edu/repos/devteam/data_manager_fetch_genome_dbkeys_all_fasta/b1bc53e9bbc5/data_manager_fetch_genome_dbkeys_all_fasta/data_manager/data_manager_fetch_genome_all_fasta_dbkeys.xml" guid="toolshed.g2.bx.psu.edu/repos/devteam/data_manager_fetch_genome_dbkeys_all_fasta/data_manager_fetch_genome_all_fasta_dbkey/0.0.2"><tool_shed>toolshed.g2.bx.psu.edu</tool_shed><repository_name>data_manager_fetch_genome_dbkeys_all_fasta</repository_name><repository_owner>devteam</repository_owner><installed_changeset_revision>b1bc53e9bbc5</installed_changeset_revision><id>toolshed.g2.bx.psu.edu/repos/devteam/data_manager_fetch_genome_dbkeys_all_fasta/data_manager_fetch_genome_all_fasta_dbkey/0.0.2</id><version>0.0.2</version></tool><data_table name="all_fasta">
             <output>
                 <column name="value" />
                 <column name="dbkey" />
@@ -384,6 +392,20 @@ Make sure you are logged in as an Admin user on your Galaxy server. Then, from t
                         <target base="${GALAXY_DATA_MANAGER_DATA_PATH}">${dbkey}/seq/${path}</target>
                     </move>
                     <value_translation>${GALAXY_DATA_MANAGER_DATA_PATH}/${dbkey}/seq/${path}</value_translation>
+                    <value_translation type="function">abspath</value_translation>
+                </column>
+            </output>
+        </data_table>
+        <data_table name="__dbkeys__">
+            <output>
+                <column name="value" />
+                <column name="name" />
+                <column name="len_path" output_ref="out_file">
+                    <move type="file">
+                        <source>${len_path}</source>
+                        <target base="${GALAXY_DATA_MANAGER_DATA_PATH}">${value}/len/${len_path}</target>
+                    </move>
+                    <value_translation>${GALAXY_DATA_MANAGER_DATA_PATH}/${value}/len/${len_path}</value_translation>
                     <value_translation type="function">abspath</value_translation>
                 </column>
             </output>
@@ -401,12 +423,22 @@ Make sure you are logged in as an Admin user on your Galaxy server. Then, from t
 <tables>
 <table comment_char="#" name="all_fasta">
         <columns>value, dbkey, name, path</columns>
-        <file path="/srv/galaxy/tool-data/toolshed.g2.bx.psu.edu/repos/devteam/data_manager_fetch_genome_all_fasta/fb744a070bee/all_fasta.loc" />
+        <file path="/srv/galaxy/tool-data/toolshed.g2.bx.psu.edu/repos/devteam/data_manager_fetch_genome_dbkeys_all_fasta/b1bc53e9bbc5/all_fasta.loc" />
         <tool_shed_repository>
             <tool_shed>toolshed.g2.bx.psu.edu</tool_shed>
-            <repository_name>data_manager_fetch_genome_all_fasta</repository_name>
+            <repository_name>data_manager_fetch_genome_dbkeys_all_fasta</repository_name>
             <repository_owner>devteam</repository_owner>
-            <installed_changeset_revision>fb744a070bee</installed_changeset_revision>
+            <installed_changeset_revision>b1bc53e9bbc5</installed_changeset_revision>
+            </tool_shed_repository>
+    </table>
+<table comment_char="#" name="__dbkeys__">
+        <columns>value, name, len_path</columns>
+        <file path="/srv/galaxy/tool-data/toolshed.g2.bx.psu.edu/repos/devteam/data_manager_fetch_genome_dbkeys_all_fasta/b1bc53e9bbc5/dbkeys.loc" />
+        <tool_shed_repository>
+            <tool_shed>toolshed.g2.bx.psu.edu</tool_shed>
+            <repository_name>data_manager_fetch_genome_dbkeys_all_fasta</repository_name>
+            <repository_owner>devteam</repository_owner>
+            <installed_changeset_revision>b1bc53e9bbc5</installed_changeset_revision>
             </tool_shed_repository>
     </table>
 </tables>
@@ -414,7 +446,7 @@ Make sure you are logged in as an Admin user on your Galaxy server. Then, from t
 
 **Part 2: Download and install a reference genome sequence**
 
-Use the Galaxy Admin page and the data_manager_fetch_genome_all_fasta to install some reference data. We will grab sacCer2 (version 2 of the Saccharomyces cerevisiae genome.)
+Use the Galaxy Admin page and the _data_manager_fetch_genome_all_fasta_dbkey_ to install some reference data. We will grab sacCer2 (version 2 of the Saccharomyces cerevisiae genome.)
 
 From the Galaxy Admin page:
 
@@ -426,13 +458,14 @@ You should see something like this:
 
 * Click on **all_fasta** under *View Tool Data Table Entries*
 
-You should see the current contents of tool-data/all_fasta.loc
+You should see the current contents of `tool-data/all_fasta.loc`, which will be empty.
 
-* Under **Run Data Manager Tools**, click **Reference Genome - fetching**. The Reference Genome tool form from data_manager_fetch_genome_all_fasta is displayed. NOTE: If you receive the error "Uncaught exception in exposed API method:", you will need to restart Galaxy first.
-  * From the **DBKEY to assign to data:** list choose: *sacCer2*
+* Under **Run Data Manager Tools**, click **Create DBKey and Reference Genome - fetching**. The Reference Genome tool form from _data_manager_fetch_genome_all_fasta_dbkey_ is displayed. NOTE: If you receive the error "Uncaught exception in exposed API method:", you will need to restart Galaxy first.
+  * From the **DBKEY to assign to data:** list choose: *sacCer2* and leave the
+    defaults for the rest of the fields.
   * Click **Execute**
 
-If you look at your "Saved Histories" now, you will see a new history called "Data Manager History (automatically created)." There will be a "Reference Genome" job in the history. When the job has finished, go back to the Data Manager view on the Galaxy Admin page. (Click **Local Data**)
+In your history, you will see a new dataset for the data manager run. When the job has finished, go back to the Data Manager view on the Galaxy Admin page. (Click **Local Data**)
 
 * Click on **all_fasta** under *View Tool Data Table Entries*
 
@@ -444,22 +477,19 @@ You should see that sacCer2 has been added to all_fasta.
 
 In this part we will repeat the process from part 1 except that we will install the bwa data manager this time.
 
-* Install the newer version of the BWA tool from the toolshed. This will install bwa from Conda.
-  * From the Admin page, click **Search Toolsheds** and then search for bwa.
-  * Install the *bwa* by the devteam.
 * Install the bwa data manager from the toolshed.
   * From the Admin page, click **Search Toolsheds** and then search for bwa.
-  * Install the *data_manager_bwa_mem_index_builder* by the devteam. (This is the newer version of the BWA index builder.)
+  * Install the *data_manager_bwa_mem_index_builder* by the devteam.
 
 **Part 4: Build the BWA index for sacCer2**
 
 In this part we will actually build the BWA index for sacCer2. It will automatically be added to our list of available reference genomes in the BWA tool.
 
 * From the Galaxy Admin page, click **Local data**
-* Click on **BWA-MEM index builder** under *Run Data Manager Tools*
-  * Select *S. cerevisiae sacCer2* for Source Fasta Sequence
+* Click on **BWA-MEM index - builder** under *Run Data Manager Tools*
+  * Select *sacCer2* for Source Fasta Sequence
   * Put sacCer2 into the other two blank fields.
-  * Click **Execute**. NOTE: If oyu receive the error "Parameter all_fasta_source requires a value, but has no legal values defined.", you will need to restart Galaxy first.
+  * Click **Execute**. NOTE: If you receive the error "Parameter all_fasta_source requires a value, but has no legal values defined.", you will need to restart Galaxy first.
 
 The new BWA index for sacCer2 will now be built and the .loc file will be filled in.
 
@@ -474,7 +504,7 @@ Now we will run the BWA tool and check to see if the reference data is listed an
 
 * Run the BWA tool on the 2 fast files we loaded earlier, using sacCer2 as the reference.
 
-How cool is that? No editing .loc files, no making sure you've got TABS instead of spaces.. Fully auto!
+How cool is that? No editing `.loc` files, no making sure you've got TABs instead of spaces. Fully auto!
 
 ## So, what did we learn?
 
@@ -485,6 +515,6 @@ Hopefully, you now understand:
 
 ## Further reading
 
-If you want to know more about data managers including how to write a data manager tool, details can be found at: [https://wiki.galaxyproject.org/Admin/Tools/DataManagers/](https://wiki.galaxyproject.org/Admin/Tools/DataManagers/)
+If you want to know more about data managers including how to write a data manager tool, details can be found at: [https://galaxyproject.org/admin/tools/data-managers/](https://galaxyproject.org/admin/tools/data-managers/)
 
-Suggestions and comments are welcome. Please contact:
+Suggestions and comments are welcome.

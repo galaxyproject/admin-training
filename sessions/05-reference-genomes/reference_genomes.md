@@ -110,7 +110,7 @@ class: left
 ``` xml
   <tables>
     <!-- Locations of indexes in the BWA mapper format -->
-    <table name="bwa_indexes" comment_char="#" allow_duplicate_entries="False">
+    <table name="bwa_mem_indexes" comment_char="#" allow_duplicate_entries="False">
       <columns>value, dbkey, name, path</columns>
       <file path="tool-data/bwa_index.loc" />
     </table>
@@ -120,8 +120,6 @@ class: left
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 ---
 ## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  "loc" files - Short for location!
-
-Not *"sending me loco"*
 
 bwa_index.loc
 
@@ -214,7 +212,7 @@ class: left
 * Some problems
 * **Data Managers**
 ]
-(now we're onto the good stuff!)
+
 ---
 
 ## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Data Managers
@@ -301,7 +299,7 @@ The index files themselves get placed in the appropriate location.
   * Building
   * Examples
 
-https://wiki.galaxyproject.org/Admin/Tools/DataManagers
+https://galaxyproject.org/admin/tools/data-managers/
 ]
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 ---
