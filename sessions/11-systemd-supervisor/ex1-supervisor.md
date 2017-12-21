@@ -4,23 +4,22 @@
 
 # Managing Multiprocess Galaxy with Supervisor - Exercise.
 
-#### Authors: Nate Coraor. 2017
-
 ## Introduction
 
 A multiprocess Galaxy server is essential for scalability. However, it can also be unwieldy to manage. Supervisor is a process manager that makes the management task simple.
 
 ## Section 1 - Installation and basic configuration
 
-Install supervisor from the system pacakge manager using:
+Install supervisor from the system package manager using:
 
 ```console
 $ sudo apt install supervisor
 ```
 
-Supervisor isn't running, but we can start it with:
+Check if Supervisor is running and start it if it isn't:
 
 ```console
+$ sudo systemctl status supervisor
 $ sudo systemctl start supervisor
 ```
 
@@ -35,7 +34,7 @@ $
 
 If you are still running uWSGI, use `CTRL+C` to stop it.
 
-We need to add a `[program:x]` section to the supervsior config manage uWSGI. The default supervisor config file is at `/etc/supervisor/supervisord.conf`. This file includes any files matching `/etc/supervisor/conf.d/*.conf`. We'll create a `galaxy.conf`:
+We need to add a `[program:x]` section to the supervsior config to manage uWSGI. The default supervisor config file is at `/etc/supervisor/supervisord.conf`. This file includes any files matching `/etc/supervisor/conf.d/*.conf`. We'll create a `galaxy.conf`:
 
 ```console
 $ sudo -e /etc/supervisor/conf.d/galaxy.conf
@@ -57,7 +56,7 @@ stopsignal      = INT
 The command that we used to start uWSGI in the uWSGI exercise was:
 
 ```console
-$ sudo -Hu galaxy sh -c 'cd /srv/galaxy/server && uwsgi --plugin python --virtualenv /srv/galaxy/venv --ini-paste /srv/galaxy/config/galaxy.ini'
+$ sudo --set-home -u galaxy sh -c 'cd /srv/galaxy/server && uwsgi --plugin python --virtualenv /srv/galaxy/venv --ini-paste /srv/galaxy/config/galaxy.ini'
 ```
 
 As you can see, supervisor is running the same command, and runs it as the same user, from the same working directory.
@@ -127,7 +126,7 @@ gx:handler0                      STARTING
 gx:handler1                      STARTING  
 ```
 
-Now you can control all 3 processes with `sudo supervisorctl <op> all` or `sudo supervisorctl <op> gx:*`.
+Now you can control all 3 processes with `sudo supervisorctl <action> all` or `sudo supervisorctl <action> gx:*`.
 
 In addition, you can *gracefully* restart the uWSGI Galaxy process with `sudo supervisorctl signal HUP gx:galaxy`. uWSGI is configured to start Galaxy in a "master" process and then fork the configured number of worker processes. Because of this, if sent a `SIGHUP` signal, it will kill the workers but the master process will hold its socket open, blocking client (browser) connections until new workers are forked. This prevents users from seeing a proxy error page during restarts. Using this, you can restart both the uWSGI server and Galaxy handlers with:
 

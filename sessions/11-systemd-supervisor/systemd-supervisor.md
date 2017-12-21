@@ -3,7 +3,7 @@ class: inverse, middle, large
 
 ---
 class: special
-# Controlling Galaxy with systemd and supervisor
+# Controlling Galaxy with Supervisor
 
 slides by @natefoo
 
@@ -80,7 +80,8 @@ class: special
 
 # Systemd
 
-The new Linux init system
+The current Linux init system
+- Used to bootstrap the user space and to manage system processes after booting
 
 .footnote[\#usegalaxy / @galaxyproject]
 
