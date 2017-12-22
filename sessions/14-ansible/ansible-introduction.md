@@ -7,10 +7,7 @@ class: special, center
 # Ansible and Galaxy - Part 1
 
 
-**Slides: @afgane, @nuwang, @Slugger70**
-
-
-.footnote[\#usegalaxy \#GATC2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 ---
 
 layout: true
@@ -26,7 +23,7 @@ class: left, middle, center
 
 *We are here to answer questions!*
 
-.footnote[\#usegalaxy \#GATC2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 ---
 class: left
 ## ![GATC Logo](../shared-images/gatc2017_logo_150.png)  Overview
@@ -39,7 +36,7 @@ Later in Part 2
 * Extending and customising Galaxy with Ansible
 ]
 
-.footnote[\#usegalaxy \#GATC2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 ---
 class: left
 ## ![GATC Logo](../shared-images/gatc2017_logo_150.png)  Overview
@@ -52,7 +49,7 @@ Later in Part 2
 * Extending and customising Galaxy with Ansible
 ]
 
-.footnote[\#usegalaxy \#GATC2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 ---
 class: left
 ## ![GATC Logo](../shared-images/gatc2017_logo_150.png)  What is Ansible
@@ -63,7 +60,7 @@ class: left
 ]
 ![ansible-vanilla.png](images/ansible-vanilla.png)
 
-.footnote[\#usegalaxy \#GATC2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 ---
 class: left
 ## ![GATC Logo](../shared-images/gatc2017_logo_150.png)  Why?
@@ -74,7 +71,7 @@ class: left
 * Make it programmable - “Infrastructure as Code”
 ]
 .right[![ansible-logo](images/ansible-logo.png)]
-.footnote[\#usegalaxy \#GATC2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 ---
 class: left
 ## ![GATC Logo](../shared-images/gatc2017_logo_150.png)  Features of Ansible
@@ -99,7 +96,7 @@ class: left
 * Supports push or pull
   * Push by default but use cron job to make it pull
 * Rolling updates
-  * Useful for continuous deployment/zero downtime deployment
+  * Useful for continuous deployment
 * Inventory management
   * Dynamic inventory from external data sources
   * Execute tasks against host patterns
@@ -122,7 +119,7 @@ class: left
   * cron, mount etc
 ]
 [http://docs.ansible.com/ansible/modules_by_category.html](http://docs.ansible.com/ansible/modules_by_category.html)
-.footnote[\#usegalaxy \#GATC2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 ---
 class: left
 ## ![GATC Logo](../shared-images/gatc2017_logo_150.png)  Ansible playbook layout
@@ -148,7 +145,7 @@ class: left
 └── README.md
 ```
 
-.footnote[\#usegalaxy \#GATC2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 ---
 class: left
 ## ![GATC Logo](../shared-images/gatc2017_logo_150.png) Yet Another Markup Language
@@ -168,7 +165,7 @@ list:
   - yes
 ```
 
-.footnote[\#usegalaxy \#GATC2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 ---
 class: left
 ## ![GATC Logo](../shared-images/gatc2017_logo_150.png)  Ansible inventory
@@ -190,7 +187,7 @@ login5.stampede.tacc.utexas.edu
 jetstream-tacc0.galaxyproject.org
 jetstream-iu0.galaxyproject.org
 ```
-.footnote[\#usegalaxy \#GATC2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 ---
 class: left
 ## ![GATC Logo](../shared-images/gatc2017_logo_150.png)  Ansible Variables
@@ -220,16 +217,15 @@ galaxy_installer: true
 ```
 ]
 
-.footnote[\#usegalaxy \#GATC2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 ---
 class: left
 ## ![GATC Logo](../shared-images/gatc2017_logo_150.png)  Ansible Tasks
 .large[
-* Peform a task on the inventory
+* Perform a task on the inventory
 ]
-* These two tasks do the same thing!
 * YAML-style:
-  
+
     ```
     - name: Install nginx
       apt:
@@ -237,15 +233,8 @@ class: left
         status: latest
       when: "{{ ansible_os_family }} == 'Debian'"
     ```
-* Argument-style:
 
-    ```
-    - name: Install nginx
-      apt: pkg=nginx-full status=latest
-      when: "{{ ansible_os_family }} == 'Debian'"
-    ```
-    
-.footnote[\#usegalaxy \#GATC2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 ---
 class: left
 ## ![GATC Logo](../shared-images/gatc2017_logo_150.png)  Ansible Tasks
@@ -264,7 +253,7 @@ class: left
     - update supervisor
   when: "{{ ansible_os_family }} == 'Debian'"
 ```
-.footnote[\#usegalaxy \#GATC2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 ---
 class: left
 ## ![GATC Logo](../shared-images/gatc2017_logo_150.png)  Ansible Handlers
@@ -288,14 +277,14 @@ class: left
     name: ”postgresql-{{ postgresql_version }}”
     state: restarted
 ```
-.footnote[\#usegalaxy \#GATC2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 ---
 class: left
 ## ![GATC Logo](../shared-images/gatc2017_logo_150.png)  Roles contain tasks
 
 ![ansible-roles-tasks.png](images/ansible-roles-tasks.png)
 
-.footnote[\#usegalaxy \#GATC2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 ---
 class: left
 ## ![GATC Logo](../shared-images/gatc2017_logo_150.png)  Plays
@@ -317,7 +306,7 @@ class: left
   roles:
     - natefoo.postgresql_objects
 ```
-.footnote[\#usegalaxy \#GATC2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 ---
 class: left
 ## ![GATC Logo](../shared-images/gatc2017_logo_150.png)  Plays and Tags
@@ -344,14 +333,14 @@ class: left
 `ansible-playbook -i inv_file playbook.yml --tags galaxy_setup`
 
 
-.footnote[\#usegalaxy \#GATC2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 ---
 class: left
 ## ![GATC Logo](../shared-images/gatc2017_logo_150.png)  How Ansible works
 
 ![how-ansible-works.png](images/how-ansible-works.png)
 
-.footnote[\#usegalaxy \#GATC2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 
 ---
 class: left
@@ -364,7 +353,7 @@ In this exercise, we will:
 
 [Adding tools to Galaxy with Ansible](https://github.com/gvlproject/dagobah-training/blob/master/sessions/14-ansible/ex1-intro-ansible.md)
 ]
-.footnote[\#usegalaxy \#GATC2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 ---
 class: left
 ## ![GATC Logo](../shared-images/gatc2017_logo_150.png)  Example role
@@ -375,7 +364,7 @@ class: left
 
 [https://github.com/galaxyproject/ansible-galaxy](https://github.com/galaxyproject/ansible-galaxy)
 ]
-.footnote[\#usegalaxy \#GATC2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 ---
 class: left
 ## ![GATC Logo](../shared-images/gatc2017_logo_150.png)  What's available
@@ -398,10 +387,10 @@ class: left
   * usegalaxy-playbook
   * infrastructure-playbook
   * galaxy-cloudman-playbook
-  * ansible-artimed
+  * GalaxyKickStart
 ]
 ]
-.footnote[\#usegalaxy \#GATC2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 ---
 class: left
 ## ![GATC Logo](../shared-images/gatc2017_logo_150.png)  Exercise 2!
@@ -415,6 +404,5 @@ In this exercise we will:
 
 ]
 
-
-.footnote[\#usegalaxy \#GATC2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 ---
