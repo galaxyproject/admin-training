@@ -7,15 +7,14 @@ class: special, middle
 
 Introduction to NGINX (and Apache)
 
-slides by @natefoo
+slides by @natefoo, @nsoranzo
 
 .footnote[\#usegalaxy / @galaxyproject]
 
 ---
 # Reverse Proxy
 
-What is a reverse proxy?
-- Sits between the client and Galaxy
+Retrieves resources on behalf of a client from one or more servers (in our case Galaxy)
 
 Extra features:
 - Serve static content
@@ -24,9 +23,9 @@ Extra features:
 - Serve byte range requests
 - Serve other sites from the same server
 - Can provide authentication
-  - Will be covered on Tuesday: _Using and configuring external authentication services_
+  - Covered in _Using and configuring external authentication services_
 
-Some of these features are available directly in uWSGI (covered Tuesday)
+Some of these features are available directly in uWSGI (covered in _Improving the web serving experience with uWSGI_)
 
 ---
 # Apache
@@ -47,30 +46,30 @@ I recommend nginx unless you have a specific need for Apache
 ---
 # nginx "flavors"
 
-nginx plugins must be compiled in<sup>[1]</sup>
+nginx plugins are dynamic shared objects since [1.9.11](https://www.nginx.com/blog/compiling-dynamic-modules-nginx-plus/)
 
 Debian/Ubuntu provide multiple nginx "flavors":
 - `nginx-light`: minimal set of core modules
 - `nginx-full`: full set of core modules
 - `nginx-extras`: full set of core modules and extras (3rd party modules)
 
-There is also a "Galaxy" flavor<sup>[2]</sup> (includes [upload module](https://github.com/vkholodkov/nginx-upload-module)):
+There is also a "Galaxy" flavor<sup>[1]</sup> (includes [upload module](https://github.com/vkholodkov/nginx-upload-module)):
 - [RHEL](https://depot.galaxyproject.org/yum/) (derived from EPEL nginx)
 - [Ubuntu PPA](https://launchpad.net/~galaxyproject/+archive/ubuntu/nginx)
 
-.footnote[<sup>[1]</sup> Dynamic shared objects were [introduced in 1.9.11](https://www.nginx.com/blog/dynamic-modules-nginx-1-9-11/)
-
-<sup>[2]</sup> Still working on the automation to keep this up to date, though]
+.footnote[
+<sup>[1]</sup> Still working on the automation to keep this up to date, though
+]
 
 ---
 # Exercise: nginx
 
-[nginx as a Reverse Proxy for Galaxy - Exercise](https://github.com/gvlproject/dagobah-training/blob/master/sessions/03-production-basics/ex3-nginx.md)
+[nginx as a Reverse Proxy for Galaxy - Exercise](https://github.com/galaxyproject/dagobah-training/blob/2018-oslo/sessions/03-production-basics/ex3-nginx.md)
 
 ---
 # Exercise: Apache
 
-[Apache as a Reverse Proxy for Galaxy - Exercise](https://github.com/gvlproject/dagobah-training/blob/master/sessions/03-production-basics/ex4-apache.md)
+[Apache as a Reverse Proxy for Galaxy - Exercise](https://github.com/galaxyproject/dagobah-training/blob/2018-oslo/sessions/03-production-basics/ex4-apache.md)
 
 ---
 # Additional Tips and Resources

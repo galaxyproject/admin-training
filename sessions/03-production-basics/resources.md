@@ -12,10 +12,3 @@ Database choices and configuration \+ Introduction to PostgreSQL.
 ### GCC2015
 
 - http://gcc2015.tsl.ac.uk/Training-Day/#The_Galaxy_Database_Schema
-
-# Web servers
-
-Web server choices and configuration \+ introduction to NGINX.
-
-- https://wiki.galaxyproject.org/Admin/Config/ApacheProxy
-- https://wiki.galaxyproject.org/Admin/Config/nginxProxy

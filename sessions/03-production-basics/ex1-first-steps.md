@@ -1,10 +1,10 @@
-![gatc2017_logo.png](../../docs/shared-images/gatc2017_logo.png) ![galaxy logo](../../docs/shared-images/galaxy_logo_25percent_transparent.png)
+![galaxy logo](../../docs/shared-images/galaxy_logo_25percent_transparent.png)
 
 ### Galaxy Administrators Course
 
 # Production Server First Steps - Exercise.
 
-#### Authors: Nate Coraor. 2016
+#### Authors: Nate Coraor (2016), Nicola Soranzo (2017)
 
 ## Section 0 - Convenience
 
@@ -13,7 +13,7 @@
 - `$EDITOR` is a standard environment variable used to determine what editor to invoke when a program needs to start one (including the `sudo -e` command).
 - `$PATH` is the list of directories that will be searched for commands on the command line.
 
-First, set the variables on the command line. If you aren't familiar with UNIX editors, use the example here (`nano`):
+First, set the variables on the command line. If you are not familiar with UNIX editors, use the example here (`nano`):
 
 ```console
 export EDITOR=nano
@@ -74,18 +74,20 @@ Add a new user named `galaxy`:
 sudo useradd -d /srv/galaxy -m -r -s /bin/bash galaxy
 ```
 
+This will create a system user (`-r`) and its home directory (`-m`) located at `/srv/galaxy` (`-d /srv/galaxy`) with Bash as login shell (`-s /bin/bash`).
+
 **Part 2 - Set up directories**
 
-`useradd` has created /srv/galaxy for you with the correct ownership. We now need to create directories for the Galaxy server, our config files, data, etc.
+`useradd` has created `/srv/galaxy` for you with the correct ownership. We now need to create directories for the Galaxy server, our config files, data, etc.
 
 ```console
-$ sudo -u galaxy git clone -b release_16.10 https://github.com/galaxyproject/galaxy.git /srv/galaxy/server
+$ sudo -u galaxy git clone -b release_17.09 https://github.com/galaxyproject/galaxy.git /srv/galaxy/server
 $ sudo -u galaxy mkdir /srv/galaxy/{bin,config,data,log}
 ```
 
 **Part 3 - Set up files**
 
-Galaxy assumes that everything is located under the server directory. To separate things out, we'll create a small script to control the Galaxy server with that sets the location of Galaxy's primary config file:
+Galaxy assumes that everything is located under the server directory. To separate things out, we will create a small script to control the Galaxy server with that sets the location of Galaxy's primary config file:
 
 ```console
 $ sudo -u galaxy -e /srv/galaxy/bin/galaxy
@@ -117,7 +119,7 @@ Then, save and quit the editor. This file should be executable, make it so with 
 $ sudo -u galaxy chmod +x /srv/galaxy/bin/galaxy
 ```
 
-Next, we'll create some Galaxy config files, starting from the samples:
+Next, we will create some Galaxy config files, starting from the samples:
 
 ```console
 $ for f in galaxy.ini tool_conf.xml shed_tool_conf.xml tool_data_table_conf.xml \
@@ -162,14 +164,18 @@ Change the `tool_path` attribute of the `<toolbox>` path to an absolute path, e.
 
 Then save and quit your editor.
 
-In a production server we'd set some additional paths to prevent writing to the code directory (`/srv/galaxy/server`, especially the `database` subdirectory). The full list of options that we set for usegalaxy.org can be found in the [usegalaxy Ansible playbook](https://github.com/galaxyproject/usegalaxy-playbook/blob/7bd0ad190d148494f9430b23b1f9ab68e9936524/production/group_vars/galaxyservers.yml#L93).
+In a production server we would set some additional paths to prevent writing to the code directory (`/srv/galaxy/server`, especially the `database` subdirectory). The full list of options that we set for usegalaxy.org can be found in the [usegalaxy Ansible playbook](https://github.com/galaxyproject/usegalaxy-playbook/blob/master/env/main/group_vars/galaxyservers/vars.yml).
 
 ## Section 2 - Start your new Galaxy
 
-Unlike before, you'll now use the `galaxy` script we created to start and stop Galaxy. However, it takes the same arguments as `run.sh` (most notably `--daemon` and `--stop-daemon`). Remember that we need to start the Galaxy server as the new `galaxy` user:
+Unlike before, you will now use the `galaxy` script we created to start and stop Galaxy. However, it takes the same arguments as `run.sh` (most notably `--daemon` and `--stop-daemon`). Remember that we need to start the Galaxy server as the new `galaxy` user:
 
 ```console
 $ sudo -Hu galaxy galaxy
 ```
 
-As before, Galaxy should now be accessible at [http://localhost:8080](http://localhost:8080)
+The `-H` option is used to properly set the HOME environment variable.
+
+You should now see the Galaxy Python requirements being downloaded to the virtualenv `/srv/galaxy/venv`.
+
+As before, Galaxy should then be accessible at [http://localhost:8080](http://localhost:8080)

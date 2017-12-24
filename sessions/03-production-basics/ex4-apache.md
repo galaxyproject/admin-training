@@ -1,18 +1,18 @@
-![GATC Logo](../../docs/shared-images/AdminTraining2016-100.png) ![galaxy logo](../../docs/shared-images/galaxy_logo_25percent_transparent.png)
+![galaxy logo](../../docs/shared-images/galaxy_logo_25percent_transparent.png)
 
 ### GAT - 2016 - Salt Lake City
 
 # Apache as a Reverse Proxy for Galaxy - Exercise.
 
-#### Authors: Nate Coraor. 2016
+#### Authors: Nate Coraor (2016), Nicola Soranzo (2017)
 
 ## Learning Outcomes
 
 By the end of this tutorial, you should:
 
 1. Be able to install and configure Apache to:
-  - Serve static content
-  - Serve Galaxy datasets
+   - Serve static content
+   - Serve Galaxy datasets
 1. Access Galaxy through the proxy
 1. Download Galaxy datasets directly from the proxy
 
@@ -252,11 +252,13 @@ Next, modify `sites-available/000-galaxy.conf` to include the following *new* di
 
 In `/home/galaxyguest/galaxy/config/galaxy.ini` (copy `galaxy.ini.sample` to `galaxy.ini` if you have not already done so), uncomment `#apache_xsendfile = False` and change it to `apache_xsendfile = True`.
 
-Finally, (re)start your Galaxy server and Apache using `sudo apache2ctl restart`
+Finally, (re)start:
+- your Galaxy server (`CTRL+C` followed by `sudo -Hu galaxy galaxy` or `sudo -Hu galaxy galaxy --stop-daemon && sudo -Hu galaxy galaxy --daemon` if running as a daemon)
+- Apache using `sudo apache2ctl restart`
 
 **Part 3 - Verify**
 
-We can verify that our settings have taken effect, beginning with the compression and caching options:
+We can verify that our settings have taken effect, beginning with the compression and caching options. We will use `curl` with the `-D-` option to dump the HTTP headers to standard output.
 
 ```console
 $ curl -D- -o null -s 'http://localhost/static/style/base.css' -H 'Accept-Encoding: gzip, deflate, sdch' -H 'Cache-Control: max-age=0' --compressed
@@ -278,7 +280,7 @@ Content-Type: text/css
 ```
 
 Note that:
-- The `Cache-Control` header is set to `86400` (seconds)
+- The `Cache-Control` header is set to `86400` seconds, i.e. 24 hours
 - The `Content-Encoding` header is set to `gzip`
 
 We can also verify that `X-Sendfile` is working properly. Begin by uploading a simple 1-line text dataset to Galaxy:
@@ -288,7 +290,7 @@ We can also verify that `X-Sendfile` is working properly. Begin by uploading a s
 3. Type some random characters into the text field that has just appeared.
 4. Click "Start" and then "Close"
 
-The path portion of the URL to the first dataset should be `/datasets/f2db41e1fa331b3e/display?to_ext=txt`. If you've already created another dataset, you can get the correct path by inspecting the link target of the history item's "floppy" icon. (For the curious, the constant string `f2db41e1fa331b3e` comes from hashing the number `1` using the default value of `id_secret` in `galaxy.ini` - this is why changing `id_secret` is important).
+The path portion of the URL to the first dataset should be `/datasets/f2db41e1fa331b3e/display?to_ext=txt`. If you have already created another dataset, you can get the correct path by inspecting the link target of the history item's "floppy" icon. (For the curious, the constant string `f2db41e1fa331b3e` comes from hashing the number `1` using the default value of `id_secret` in `galaxy.ini` - this is why changing `id_secret` is important).
 
 The Galaxy server can be contacted directly at `http://localhost:8080`. Combine this with the path to the dataset and provide it to `curl`:
 
@@ -347,4 +349,4 @@ Note that:
 
 ## Further reading
 
-Galaxy's [Apache proxy documentation](https://wiki.galaxyproject.org/Admin/Config/ApacheProxy) covers additional common tasks such as serving Galaxy from a subdirectory (like http://example.org/galaxy), HTTPS, and basic load balancing.
+Galaxy's [Apache proxy documentation](https://docs.galaxyproject.org/en/master/admin/special_topics/apache.html) covers additional common tasks such as serving Galaxy from a subdirectory (like http://example.org/galaxy), HTTPS, and basic load balancing.

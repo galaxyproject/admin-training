@@ -1,4 +1,4 @@
-![gatc2017_logo.png](../../docs/shared-images/gatc2017_logo.png) ![galaxy logo](../../docs/shared-images/galaxy_logo_25percent_transparent.png)
+![galaxy logo](../../docs/shared-images/galaxy_logo_25percent_transparent.png)
 
 ### Galaxy Administrators Course
 
@@ -10,7 +10,7 @@
 
 **Part 1 - Install PostgreSQL**
 
-Install PostgreSQL from apt. In the case of the training instances, it has already been installed. However, it can't hurt to try to install it anyway:
+Install PostgreSQL from apt. In the case of the training instances, it has already been installed. However, it cannot hurt to try to install it anyway:
 
 ```console
 $ sudo apt install postgresql
@@ -24,7 +24,7 @@ $
 
 ## Section 2 - Add PostgreSQL user and database
 
-PostgreSQL maintains its own user database apart from the system user database. As such, we need to create a PostgreSQL user matching the system user we're logged in as - `galaxy`.  By default, PostgreSQL is configured to allow access for system users with matching PostgreSQL usernames once created. This is done with the PostgreSQL `createuser` command, and it must be run as the `postgres` user:
+PostgreSQL maintains its own user database apart from the system user database. As such, we need to create a PostgreSQL user matching the system user we are logged in as - `galaxy`.  By default, PostgreSQL is configured to allow access for system users with matching PostgreSQL usernames once created. This is done with the PostgreSQL `createuser` command, and it must be run as the `postgres` user:
 
 ```console
 $ sudo -Hu postgres createuser galaxy
@@ -36,7 +36,7 @@ Next, we need to create an empty database. Once a database exists, Galaxy will p
 $ sudo -Hu postgres createdb -O galaxy galaxy
 ```
 
-We've created a new database with the name `galaxy`.
+We have created a new database with the name `galaxy`.
 
 ## Section 3 - Configure Galaxy
 
@@ -62,7 +62,7 @@ The `?host=/var/run/postgresql` portion of the database URI instructs the databa
 
 ## Section 4 - Start Galaxy
 
-If you're already running Galaxy, hit `CTRL+C` to stop it (or `sudo -Hu galaxy galaxy --stop-daemon` if running as a daemon) , then start it again with `sudo -Hu galaxy galaxy`. It will first fetch the `psycopg2` wheel, which is the python PostgreSQL library, and then proceed to populate the database as it did the first time with SQLite.
+If you are already running Galaxy, hit `Ctrl+C` to stop it (or `sudo -Hu galaxy galaxy --stop-daemon` if running as a daemon), then start it again with `sudo -Hu galaxy galaxy`. It will first fetch the `psycopg2` wheel (the Python PostgreSQL library), then proceed to populate the database from scratch as it did the first time with SQLite.
 
 ```console
 $ sh run.sh

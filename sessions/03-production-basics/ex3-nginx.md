@@ -1,18 +1,18 @@
-![gatc2017_logo.png](../../docs/shared-images/gatc2017_logo.png) ![galaxy logo](../../docs/shared-images/galaxy_logo_25percent_transparent.png)
+![galaxy logo](../../docs/shared-images/galaxy_logo_25percent_transparent.png)
 
 ### Galaxy Administrators Course
 
 # nginx as a Reverse Proxy for Galaxy - Exercise.
 
-#### Authors: Nate Coraor. 2016
+#### Authors: Nate Coraor (2016), Nicola Soranzo (2017)
 
 ## Learning Outcomes
 
 By the end of this tutorial, you should:
 
 1. Be able to install and configure nginx to:
-  - Serve static content
-  - Serve Galaxy datasets
+   - Serve static content
+   - Serve Galaxy datasets
 1. Access Galaxy through the proxy
 1. Download Galaxy datasets directly from the proxy
 1. Upload new datasets directly to the proxy
@@ -36,7 +36,7 @@ If you completed the Apache exercise, it will bound to port 80, which will preve
 
 **Part 1 - Install nginx**
 
-Install nginx from apt. We'll use the `nginx-extras` flavor from Galaxy's Ubuntu Personal Package Archive (PPA) because this includes the upload module that we'll use later. Begin by enabling the PPA:
+Install nginx from apt. We will use the `nginx-extras` flavor from Galaxy's Ubuntu Personal Package Archive (PPA) because this includes the upload module that we will use later. Begin by enabling the PPA:
 
 ```console
 $ sudo apt-add-repository -y ppa:galaxyproject/nginx
@@ -132,7 +132,7 @@ server {
     listen [::]:80 default_server;
     server_name _;
 
-    client_max_body_size 10G; # aka max upload size, defaults to 1M
+    client_max_body_size 10G; # max upload size that can be handled by POST requests through nginx
 
     location / {
         proxy_pass          http://galaxy;
@@ -165,11 +165,11 @@ Your Galaxy server should now be visible at `http://<your_ip>/` (if you receive 
 
 nginx can be configured to serve the static content (such as Javascript and CSS), which reduces load on the Galaxy server process. It can also compress and instruct clients to cache these assets, which improves page load times.
 
-nginx on Ubuntu 16.04 enables gzip compression by default but it needs some additional tuning to compress *all* compressable Galaxy elements. We'll create a file, `conf.d/galaxy.conf` with the following contents to address this:
+nginx on Ubuntu 16.04 enables gzip compression by default, but it needs some additional tuning to compress *all* compressable Galaxy elements. We now create a file, `conf.d/galaxy.conf` with the following contents to address this:
 
 ```nginx
 gzip_vary on;
-gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript application/javascript;
+gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript application/json application/javascript;
 gzip_http_version 1.1;
 gzip_comp_level 6;
 gzip_buffers 16 8k;
@@ -226,12 +226,12 @@ To begin, modify `sites-available/galaxy` to include this additional block at th
 In `/srv/galaxy/config/galaxy.ini`, uncomment `#nginx_x_accel_redirect_base = False` and change it to `nginx_x_accel_redirect_base = /_x_accel_redirect`. Remember, this file is owned by the **galaxy** user so be sure to use `sudo -u galaxy` when editing it.
 
 Finally, (re)start:
-- your Galaxy server (`CTRL+C` followed by `sudo -Hu galaxy galaxy` or `sudo -Hu galaxy galaxy --stop-daemon && sudo -Hu galaxy galaxy --daemon`)
+- your Galaxy server (`CTRL+C` followed by `sudo -Hu galaxy galaxy` or `sudo -Hu galaxy galaxy --stop-daemon && sudo -Hu galaxy galaxy --daemon` if running as a daemon)
 - nginx using `sudo systemctl restart nginx`
 
 **Part 3 - Verify**
 
-We can verify that our settings have taken effect, beginning with the compression and caching options:
+We can verify that our settings have taken effect, beginning with the compression and caching options. We will use `curl` with the `-D-` option to dump the HTTP headers to standard output.
 
 ```console
 $ curl -D- -o null -s 'http://localhost/static/style/base.css' -H 'Accept-Encoding: gzip, deflate, sdch' -H 'Cache-Control: max-age=0' --compressed
@@ -249,11 +249,10 @@ ETag: W/"581b4502-47010"
 Expires: Fri, 04 Nov 2016 18:53:57 GMT
 Cache-Control: max-age=86400
 Content-Encoding: gzip
-
 ```
 
 Note that:
-- The `Cache-Control` header is set to `86400` (seconds)
+- The `Cache-Control` header is set to `86400` seconds, i.e. 24 hours
 - The `Content-Encoding` header is set to `gzip`
 
 We can also verify that `X-Accel-Redirect` is working properly. Begin by uploading a simple 1-line text dataset to Galaxy (you can skip ahead to the verification step if you already did this for the Apache example):
@@ -263,7 +262,7 @@ We can also verify that `X-Accel-Redirect` is working properly. Begin by uploadi
 3. Type some random characters into the text field that has just appeared.
 4. Click "Start" and then "Close"
 
-The path portion of the URL to the first dataset should be `/datasets/f2db41e1fa331b3e/display?to_ext=txt`. If you've already created another dataset, you can get the correct path by inspecting the link target of the history item's "floppy" icon. (For the curious, the constant string `f2db41e1fa331b3e` comes from hashing the number `1` using the default value of `id_secret` in `galaxy.ini` - this is why changing `id_secret` is important).
+The path portion of the URL to the first dataset should be `/datasets/f2db41e1fa331b3e/display?to_ext=txt`. If you have already created another dataset, you can get the correct path by inspecting the link target of the history item's "floppy" icon. (For the curious, the constant string `f2db41e1fa331b3e` comes from hashing the number `1` using the default value of `id_secret` in `galaxy.ini` - this is why changing `id_secret` is important).
 
 The Galaxy server can be contacted directly at `http://localhost:8080`. Combine this with the path to the dataset and provide it to `curl`:
 
@@ -277,9 +276,9 @@ Date: Thu, 03 Nov 2016 15:13:18 GMT
 content-length: 13
 x-content-type-options: nosniff
 content-disposition: attachment; filename="Galaxy1-[Pasted_Entry].txt"
+x-accel-redirect: /_x_accel_redirect/srv/galaxy/data/000/dataset_1.dat
 x-frame-options: SAMEORIGIN
 content-type: application/octet-stream
-x-sendfile: /srv/galaxy/data/000/dataset_1.dat
 Set-Cookie: galaxysession=c6ca0ddb55be603a151b0873219c10c7d08bb7dcedfebab34f379912ee51df3ae4688ac00316f62b; expires=Wed, 01-Feb-2017 15:13:17 GMT; httponly; Max-Age=7776000; Path=/; Version=1
 
 curl: (18) transfer closed with 13 bytes remaining to read
@@ -316,6 +315,8 @@ Note that:
 
 ## Section 3 - Upload Galaxy datasets to nginx
 
+**Part 1 - Add the upload store**
+
 The performance of your Galaxy server can be further improved by configuring nginx to handle Galaxy dataset uploads directly. nginx intercepts the upload, writes it to disk, and then passes a `POST` request on to Galaxy with the file contents replaced with the path to the file.
 
 To begin, modify `sites-available/galaxy` to include this additional block at the end, just inside the `server { ... }` block's closing brace:
@@ -342,7 +343,7 @@ To begin, modify `sites-available/galaxy` to include this additional block at th
     }
 ```
 
-Note that the directory `/srv/galaxy/upload_store` is where the nginx upload module will store uploaded datasets. nginx runs as the `www-data` user, so we need to ensure that Galaxy can read and remove files from this directory. To do this, we make the `www-data` a member of the `galaxy` group, set the directory to group-writable, change its group ownership to `galaxy`, and set its setgid bit:
+Note that the directory `/srv/galaxy/upload_store` is where the nginx upload module will store uploaded datasets. nginx runs as the `www-data` user, so we need to ensure that Galaxy can read and remove files from this directory. To do this, we make `www-data` a member of the `galaxy` group, create the directory, set its set group ID (setgid) attribute (2) and its permissions to `rwxrwx---` (770), and change its user and group ownership to `www-data` and `galaxy` respectively:
 
 ```console
 $ sudo usermod -a -G galaxy www-data
@@ -360,7 +361,7 @@ nginx_upload_path = /_upload
 
 Finally, (re)start both Galaxy and nginx.
 
-**Part 3 - Verify**
+**Part 2 - Verify**
 
 Watch nginx's access log with `sudo tail -f /var/log/nginx/access.log`
 
@@ -385,4 +386,4 @@ It means that the upload module successfully intercepted the upload. If the uplo
 
 ## Further reading
 
-Galaxy's [nginx proxy documentation](https://wiki.galaxyproject.org/Admin/Config/nginxProxy) covers additional common tasks such as serving Galaxy from a subdirectory (like http://example.org/galaxy), HTTPS, and basic load balancing.
+Galaxy's [nginx proxy documentation](https://docs.galaxyproject.org/en/master/admin/special_topics/nginx.html) covers additional common tasks such as serving Galaxy from a subdirectory (like http://example.org/galaxy), HTTPS, and basic load balancing.
