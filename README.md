@@ -10,11 +10,11 @@ Built slides have [an index](https://galaxyproject.github.io/dagobah-training/20
 
 ### Instructors
 
-* (B)jörn Grüning - Elixir Galaxy WG, Elixir Germany, de.NBI, University of Freiburg, Germany
-* (M)arius van den Beek - Elixir Galaxy WG, Institute Curie, Paris, France
-* (N)icola Soranzo - Elixir Galaxy WG, Earlham Institute, UK
+* (B)jörn Grüning - ELIXIR Galaxy WG, Elixir Germany, de.NBI, University of Freiburg, Germany
+* (M)arius van den Beek - ELIXIR Galaxy WG, Institute Curie, Paris, France
+* (N)icola Soranzo - ELIXIR Galaxy WG, Earlham Institute, UK
 * (E)nis Afgan - Galaxy Project, Johns Hopkins University, USA
-* (A)bdulrahman Azab - Elixir Norway, USIT, University of Oslo, NO
+* (A)bdulrahman Azab - ELIXIR Norway, USIT, University of Oslo, NO
 
 ### Location
 
@@ -74,8 +74,8 @@ Timetable with sessions and material will be continously updated towards the wor
 | 10:00 | Using Ansible to deploy Galaxy I | [Exercise 1](sessions/14-ansible/ex1-intro-ansible.md) | (E) |
 | 10:30 | **Morning break** | | |
 | 10:45 | Using Ansible to deploy Galaxy II | [Exercise 2](sessions/14-ansible/ex2-galaxy-ansible.md) | (E) |
-| 12:20 | **Lunch** | | |
-| 13:05 | Exploring the Galaxy job configuration file | [Slides](https://galaxyproject.github.io/dagobah-training/2018-oslo/15-job-conf/job_conf.html) | (N) |
+| 12:30 | **Lunch** | | |
+| 13:15 | Exploring the Galaxy job configuration file | [Slides](https://galaxyproject.github.io/dagobah-training/2018-oslo/15-job-conf/job_conf.html) | (N) |
 | 13:50 | Connecting Galaxy to a compute cluster I | [Slides](https://galaxyproject.github.io/dagobah-training/2018-oslo/16-compute-cluster/compute-cluster.html), [Exercise 1](sessions/16-compute-cluster/ex1-slurm.md), [Exercise 2](sessions/16-compute-cluster/ex2-advanced-job-configs.md) | (B) |
 | 15:30 | **Afternoon break** | | |
 | 15:45 | Connecting Galaxy to a compute cluster II |  | (B) |
@@ -92,14 +92,13 @@ Timetable with sessions and material will be continously updated towards the wor
 | -------- | --------- | --------- | ----------- |
 | 09:00 | Welcome and questions |  | All |
 | 09:15 | Storage management and using heterogeneous storage services | [Slides](https://galaxyproject.github.io/dagobah-training/2018-oslo/19-storage/storage.html), [Exercise](sessions/19-storage/ex1-objectstore.md) | (E) |
-| 10:30 | **Morning break** | | |
-| 10:50 | Containerize all the things: Galaxy in Docker and Docker in Galaxy | [Docker Slides](https://galaxy.slides.com/bgruening/the-galaxy-docker-project) [Conda Slides](http://galaxy.slides.com/bgruening/deck-7#/) | (B) |
+| 10:45 | **Morning break** | | |
+| 11:00 | Containerize all the things: Galaxy in Docker and Docker in Galaxy | [Docker Slides](https://galaxy.slides.com/bgruening/the-galaxy-docker-project) [Conda Slides](http://galaxy.slides.com/bgruening/deck-7#/) | (B) |
 | 12:30 | **Lunch** | | |
-| 13:15 | Running Jupyter in Galaxy with Galaxy Interactive Environments | [Exercise](sessions/21-gie/ex1-jupyter.md) | (B) + (B) |
-| 14:30 | When things go wrong: Galaxy Server Troubleshooting | [Slides](https://galaxyproject.github.io/dagobah-training/2018-oslo/22-troubleshooting/troubleshooting.html) | (M) |
+| 13:15 | Running Jupyter in Galaxy with Galaxy Interactive Environments | [Exercise](sessions/21-gie/ex1-jupyter.md) | (B) |
 | 15:30 | **Afternoon break** | | |
-| 15:45 | OPEN: Submitted topics | | |
-| 16:45 | Galaxy server architecture | | |
+| 15:45 | OPEN: Lightning talks | | |
+| 16:45 | Galaxy server architecture | | Drop? |
 | 18:00 | Wrap up and close | | All |
 
 
@@ -109,5 +108,9 @@ Timetable with sessions and material will be continously updated towards the wor
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
 | 09:00 | Welcome and questions |  | All |
-| 09.30 | Whats new? | | (?) |
-| 10.00 | Uwsgi + mules | | (N) |
+| 09.15 | Uwsgi + mules | | (?) |
+| 10:45 | **Morning break** | | |
+| 11.00 | Whats new in Galaxy 18.01? | | (?) |
+| 12:30 | **Lunch** | | |
+| 13:15 | When things go wrong: Galaxy Server Troubleshooting | [Slides](https://galaxyproject.github.io/dagobah-training/2018-oslo/22-troubleshooting/troubleshooting.html) | (M) |
+| 15:30 | Wrap up and close | | All |
