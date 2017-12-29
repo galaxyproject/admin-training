@@ -72,8 +72,8 @@ Timetable with sessions and material will be continously updated towards the wor
 | 09:00 | Welcome and questions |  | All |
 | 09:15 | Configuration management choices: Introduction to Ansible | [Slides](https://galaxyproject.github.io/dagobah-training/2018-oslo/14-ansible/ansible-introduction.html) | (E) |
 | 10:00 | Using Ansible to deploy Galaxy I | [Exercise 1](sessions/14-ansible/ex1-intro-ansible.md) | (E) |
-| 10:30 | **Morning break** | | |
-| 10:45 | Using Ansible to deploy Galaxy II | [Exercise 2](sessions/14-ansible/ex2-galaxy-ansible.md) | (E) |
+| 10:45 | **Morning break** | | |
+| 11:00 | Using Ansible to deploy Galaxy II | [Exercise 2](sessions/14-ansible/ex2-galaxy-ansible.md) | (E) |
 | 12:30 | **Lunch** | | |
 | 13:15 | Exploring the Galaxy job configuration file | [Slides](https://galaxyproject.github.io/dagobah-training/2018-oslo/15-job-conf/job_conf.html) | (N) |
 | 13:50 | Connecting Galaxy to a compute cluster I | [Slides](https://galaxyproject.github.io/dagobah-training/2018-oslo/16-compute-cluster/compute-cluster.html), [Exercise 1](sessions/16-compute-cluster/ex1-slurm.md), [Exercise 2](sessions/16-compute-cluster/ex2-advanced-job-configs.md) | (B) |
@@ -98,7 +98,6 @@ Timetable with sessions and material will be continously updated towards the wor
 | 13:15 | Running Jupyter in Galaxy with Galaxy Interactive Environments | [Exercise](sessions/21-gie/ex1-jupyter.md) | (B) |
 | 15:30 | **Afternoon break** | | |
 | 15:45 | OPEN: Lightning talks | | |
-| 16:45 | Galaxy server architecture | | Drop? |
 | 18:00 | Wrap up and close | | All |
 
 
