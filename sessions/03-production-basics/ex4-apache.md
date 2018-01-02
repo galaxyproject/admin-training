@@ -1,6 +1,6 @@
 ![galaxy logo](../../docs/shared-images/galaxy_logo_25percent_transparent.png)
 
-### GAT - 2016 - Salt Lake City
+### Galaxy Administrators Course
 
 # Apache as a Reverse Proxy for Galaxy - Exercise.
 

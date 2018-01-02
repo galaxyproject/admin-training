@@ -1,6 +1,6 @@
-![GATC Logo](../../docs/shared-images/gatc2017_logo_150.png) ![galaxy logo](../../docs/shared-images/galaxy_logo_25percent_transparent.png)
+![galaxy logo](../../docs/shared-images/galaxy_logo_25percent_transparent.png)
 
-### GATC - 2017 - Melbourne
+### Galaxy Administrators Course
 
 # Upstream Authentication - Exercise
 
