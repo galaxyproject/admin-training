@@ -6,10 +6,10 @@ class: special, center
 ![GATC Logo](../shared-images/gatc2017_logo.png)
 
 # Galaxy Admin Training
-February 6-9, 2017  
-University of Melbourne  
-Melbourne, Victoria
-Australia
+January 8-12, 2018  
+University of Oslo
+Oslo
+Norway
 
 ---
 # Your Instructors
