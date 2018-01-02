@@ -4,21 +4,26 @@
 
 # PAM Authentication in Galaxy - Exercise
 
-#### Authors: Nate Coraor. 2017
+#### Authors: Nate Coraor (2017), Nicola Soranzo (2018)
 
 ## Learning Outcomes
 
-1. By the end of this session you should be familiar with Galaxy's Pluggable Authentication System and its configuration
-2. Have basic familiarity with the Linux PAM subsystem
-3. Be able to log in to your Galaxy server with a system user
+By the end of this session you should:
+1. be familiar with Galaxy pluggable authentication framework and its configuration
+2. have basic familiarity with the Linux PAM subsystem
+3. be able to log in to your Galaxy server with a regular local user.
 
 ## Introduction
+
+[Linux-PAM (Pluggable Authentication Modules)](http://www.linux-pam.org/) is a flexible mechanism for authenticating users on Linux.
+PAM uses a modular architecture to provide a common authentication scheme for applications and services. PAM gives the system administrator significant flexibility and control over how individual applications will authenticate users.
+PAM separates the tasks of authentication into four independent management groups: account management; authentication management; password management; and session management.
 
 ## Section 1 - Install dependencies
 
 **Part 1 - Install python-pam**
 
-We need to install `python-pam` into Galaxy's virtualenv, `/srv/galaxy/venv`. To do this, run:
+For Galaxy pre-18.01, we need to install `python-pam` into Galaxy's virtualenv, `/srv/galaxy/venv`. To do this, run:
 
 ```console
 $ sudo -Hu galaxy /srv/galaxy/venv/bin/pip install python-pam
@@ -30,13 +35,11 @@ Building wheels for collected packages: python-pam
 Successfully built python-pam
 Installing collected packages: python-pam
 Successfully installed python-pam-1.8.2
-You are using pip version 8.1.2, however version 9.0.1 is available.
-You should consider upgrading via the 'pip install --upgrade pip' command.
 ```
 
-## Section 2 - Update system
+## Section 2 - Add a new local user account
 
-We don't want to grant the `ubuntu` or `galaxy` user access to Galaxy or else we'd be sending our VM admin and Galaxy user passwords in the clear. Instead, we'll create a new system user, `galaxyuser`, to log in with. If you were connecting Galaxy to your institution's authentication system, you wouldn't perform the steps in this section. Creating users in that system would be done via whatever mechanisms are appropriate for that system.
+We don't want to grant the `ubuntu` or `galaxy` user access to Galaxy, because we would be sending our VM admin or Galaxy user password in the clear. Instead, we create a new regular local user on the VM, `galaxyuser`, to log in with. If you were connecting Galaxy to your institution's authentication system, you wouldn't need to perform the steps in this section. Creating users in that system would be done via whatever mechanisms are appropriate for that system.
 
 Create the user `galaxyuser` and set a nontrivial password that is not the same as `ubuntu`'s:
 
@@ -55,7 +58,7 @@ $ getent passwd galaxyuser
 galaxyuser:x:1001:1001::/home/galaxyuser:/bin/bash
 ```
 
-One final system change needs to be made - again, only because we are using local user accounts for authentication (ones in `/etc/passwd` and `/etc/shadow`. The Galaxy server user needs to have access to the `/etc/shadow` file where hashed passwords are stored. This is not something you should normally do as it is a small security risk (if a security flaw in Galaxy allowed reading arbitrary files, attackers could use it to read `/etc/shadow`).
+One final system change needs to be made - again, only because we are using local user accounts for authentication (the ones in `/etc/passwd` and `/etc/shadow`). The Galaxy server user needs to have access to the `/etc/shadow` file where hashed passwords are stored. This is not something you should normally do as it is a small security risk (if a security flaw in Galaxy allowed reading arbitrary files, attackers could use it to read `/etc/shadow`).
 
 This change adds the `galaxy` user to the `shadow` group, which allows it to read `/etc/shadow`, which has group ownership `shadow`:
 
@@ -63,9 +66,12 @@ This change adds the `galaxy` user to the `shadow` group, which allows it to rea
 $ sudo usermod -a -G shadow galaxy
 ```
 
-## Section 3 - Update configurations and Galaxy
+## Section 3 - Update Galaxy configuration
 
-**Part 1 - Create an authentication config**
+For this exercise we will use the `sshd` PAM service, which is configured in `/etc/pam.d/sshd`. You can have a look at this file and see how it works.
+
+
+**Part 1 - Create a Galaxy auth config**
 
 Create a new config file, `/srv/galaxy/config/auth_conf.xml`:
 
@@ -88,9 +94,7 @@ $ sudo -u galaxy -e /srv/galaxy/config/auth_conf.xml
 </auth>
 ```
 
-Let's take a look at the `sshd` PAM service in `/etc/pam.d/sshd` and discover how it works.
-
-By default, Galaxy will look for this file in `/srv/galaxy/server/config`. We need to fix this in `galaxy.ini`:
+By default, Galaxy will look for this file in the `/srv/galaxy/server/config/` directory. We need to fix this in `galaxy.ini`:
 
 ```console
 $ sudo -u galaxy -e /srv/galaxy/config/galaxy.ini
@@ -129,4 +133,4 @@ Restart Galaxy with `sudo supervisorctl restart all`, then visit it in your brow
 
 **Part 3 - Undo changes**
 
-We don't want to leave Galaxy this way for the rest of our workshop. Undo the changes by removing `require_login` and `allow_user_creation` from `galaxy.ini`, and moving `auth_conf.xml` using `sudo -u galaxy mv /srv/galaxy/config/auth_conf.xml /srv/galaxy/config/auth_conf.xml.pam` and restarting Galaxy with `sudo supervisorctl restart all`.
+We don't want to leave Galaxy this way for the rest of our workshop. Undo the changes by removing `require_login` and `allow_user_creation` options from `galaxy.ini`, renaming `auth_conf.xml` using `sudo -u galaxy mv /srv/galaxy/config/auth_conf.xml /srv/galaxy/config/auth_conf.xml.pam` and restarting Galaxy again with `sudo supervisorctl restart all`.
