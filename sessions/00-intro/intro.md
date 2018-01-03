@@ -1,93 +1,91 @@
 layout: true
-class: inverse
+class: inverse, middle, large
 
 ---
 class: special, center
-![GATC Logo](../shared-images/gatc2017_logo.png)
 
 # Galaxy Admin Training
-January 8-12, 2018  
-University of Oslo
-Oslo
-Norway
 
+January 8-12, 2018<br />
+University of Oslo, Oslo, Norway
+
+https://www.elixir-europe.org/events/european-galaxy-administrator-workshop
+
+\#usegalaxy \#Oslo2018 / @galaxyproject
 ---
 # Your Instructors
-.large[
+
+- Björn Grüning
+  - University of Freiburg, Germany
+  - Twitter: [@bjoerngruening](https://twitter.com/bjoerngruening) GitHub: [@bgruening](https://github.com/bgruening)
+- Marius van den Beek
+  - Institute Curie, Paris, France
+  - Twitter: [@mariusvdbeek](https://twitter.com/mariusvdbeek) GitHub: [@mvdbeek](https://github.com/mvdbeek)
+- Nicola Soranzo
+  - Earlham Institute, Norwich, UK
+  - Twitter: [@nicolasoranzo](https://twitter.com/nicolasoranzo) GitHub: [@nsoranzo](https://github.com/nsoranzo)
 - Enis Afgan
-  - Johns Hopkins University [@EnisAfgan](https://twitter.com/EnisAfgan)
-- Nate Coraor
-  - Penn State University [@natefoo](https://twitter.com/natefoo)
-- Simon Gladman 
-  - VLSCI, University of Melbourne, Australia [@simongladman1](https://twitter.com/simongladman1)
-- Björn Grüning 
-  -  University of Freiburg [@bjoerngruening](https://twitter.com/bjoerngruening)
-- Ross Lazarus
-  -  Formerly of Baker IDI and Galaxy Legend!
-]
+  - Johns Hopkins University, USA
+  - Twitter: [@EnisAfgan](https://twitter.com/EnisAfgan) GitHub: [@afgane](https://github.com/afgane)
+- Abdulrahman Azab
+  - University of Oslo, Norway
+  - GitHub: [@abdulrahmanazab](https://github.com/abdulrahmanazab)
+
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 
 ---
-class: special, center, middle
+class: special, center
 # Feel free to Tweet
 
-# \#usegalaxy
-## \#Oslo2018  
+## \#usegalaxy
+<br />
+## \#Oslo2018
+<br />
 ## @galaxyproject
 
 ---
 # Training Home
 
-## [bit.ly/melbgalaxy](https://bit.ly/melbgalaxy)
-.large[
+https://github.com/galaxyproject/dagobah-training/
+
 * The homepage of this training is a repository at GitHub reachable by the link above.
 * Most materials are written in Markdown and we encourage Pull Requests (even during the training!).
-* After this week the repo is going to be merged to Galaxy codebase and will accompany it forward.
-]
+
 ---
 # On Session Times
-.large[
+
+
 We did our best to plan the session times for the expected content, and to build the content for the session time.
 
 Almost all of this content is new or revised, there may be sessions that are too long or short - apologies in advance.
-]
+
 ---
 # Communication channels
-.large[
+
+
 * Web browser based chat at https://gitter.im/dagobah-training/Lobby.
-* Mailing list ??
-]
-.footnote[[bit.ly/melbgalaxy](https://bit.ly/melbgalaxy)]
 
 ---
 # Useful Links
-.large[
+
 - https://github.com/galaxyproject/
 - https://docs.galaxyproject.org/
-- https://wiki.galaxyproject.org/ 
-- (notably https://wiki.galaxyproject.org/Admin)
-]
-.footnote[[bit.ly/melbgalaxy](https://bit.ly/melbgalaxy)]
+- https://galaxyproject.org/admin/
 
 ---
 # Thanks
-.large[
+
 - **Christina Hall**
 - Ben Moran
 - Chris Samuels
 - **Dave Clements**
-]
-.footnote[[bit.ly/melbgalaxy](https://bit.ly/melbgalaxy)]
 
 ---
 # Hosts
 
 We would like to thank:
-.large[
 - [Victorian Life Sciences Computation Initiative, University of Melbourne (VLSCI)](http://vlsci.org.au/)
 - [Carlton Connect Initiative, University of Melbourne](https://www.carltonconnect.com.au/)
-]
-.footnote[[bit.ly/melbgalaxy](https://bit.ly/melbgalaxy)]
 
 ---
 # Computing resources
@@ -98,7 +96,7 @@ You will each receive an IP address of your own instance. Put it somewhere easy 
 
 ---
 # Future events
-.large[
-June 26-30, Galaxy Community Conference (GCC2017) - Montpellier, France
-]
-.footnote[[bit.ly/melbgalaxy](https://bit.ly/melbgalaxy)]
+
+June 25-30, Galaxy Community Conference 2018 (GCC2018) and Bioinformatics Open Source Conference 2018 (BOSC2018) - Portland, Oregon, USA
+
+https://gccbosc2018.sched.com/
