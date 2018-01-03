@@ -1,8 +1,8 @@
-![GATC Logo](../../docs/shared-images/AdminTraining2016-100.png) ![galaxy logo](../../docs/shared-images/galaxy_logo_25percent_transparent.png)
+![galaxy logo](../../docs/shared-images/galaxy_logo_25percent_transparent.png)
 
 ### Oslo2018
 
-# Introduction to Ansible - Exercise.
+# Introduction to Ansible - Exercise I.
 
 ## Learning Outcomes
 
@@ -38,7 +38,7 @@ If you haven't participated in the Introduction days of this course (i.e. You're
 
 We will be cloning the Galaxy github repo into you home directory and then starting it up so it automatically downloads all of it its extra requirements.
 
-* Login to your VM as the *ubuntu* user. This user has sudo rights but we will not be needing them.
+* Login to your VM as the *ubuntu* user. This user has `sudo` rights but we will not be needing them.
 
 Once you've logged in, from your home directory, clone the Galaxy git repo.
 
@@ -50,17 +50,17 @@ Once, that is complete you can start your Galaxy server to test it.
 
 * Start the server with `sh ./run.sh --pid-file=paster.pid --log-file=paster.log --daemon`
 
-If you want you can tail the log file and watch everything unfold. Once the server has finished configuring itself, try and connect to it in a web browser on port 8080. (ip_address:8080)
+If you want you can tail the log file and watch everything unfold. Once the server has finished configuring itself, try and connect to it in a web browser on port 8080 (<ip_address>:8080)
 
 If you see a Galaxy interface, everything worked! Now you can move on with learning about Ansible.
 
 ## Section 1 - Build the structure, copy some files, set some variables.
 
-**Part 1 - Create the ansible script directory tree**
+**Part 1 - Create the Ansible script directory tree**
 
 The first thing we need to do is build the structure for the ansible role and playbook.
 
-* From a terminal on your **remote** machine (in a suitable place..)
+* From a terminal on your **remote** machine (in a suitable location):
 
 ``` bash
 mkdir galaxy-tool-ansible
@@ -74,6 +74,10 @@ mkdir -p roles/galaxy-tool-install/templates
 mkdir -p roles/galaxy-tool-install/meta
 ```
 
+These directories represent a typical structure of an Ansible role. More info
+about the individual directories in this structure can be found here
+http://docs.ansible.com/ansible/latest/playbooks_reuse_roles.html#role-directory-structure
+
 **Part 2 - Obtain tool list file**
 
 To instal the tools, we need a list of tools. This is typically something you
@@ -86,7 +90,7 @@ The format of this file is as follows:
 ```yaml
 - name: tool_name
   owner: tool_owner
-  tool_panel_section_label: "Galaxy section name"
+  tool_panel_section_label: "Galaxy tool section name"
   revisions:
     - xxxxxxxxxx
     - yyyyyyyyyy # Can specify multiple revisions
@@ -97,10 +101,11 @@ https://raw.githubusercontent.com/galaxyproject/ansible-galaxy-tools/master/file
 
 Place that file under `roles/galaxy-tool-install/files/tool_list.yaml`.
 
-Note that you can also use the *tool_panel_section_id* but note that in that
-case the tool section must alerady exist on the server or Galaxy will install
-the tool outside any section. If using `tool_panel_section_name`, Galaxy will
-create the necessary section if not already there.
+Note that you can also use the *tool_panel_section_id* (instead of `_label`) but
+note that in that case the tool section must already exist on the server or
+Galaxy will install the tool outside any section. If using
+`tool_panel_section_name`, Galaxy will create the necessary section if not
+already there.
 
 **Part 3 - Create some default variables.**
 
@@ -119,7 +124,7 @@ The contents of the file need to look something like this:
 --- # This tells ansible that we have a yaml file.
 
 #The system user for Galaxy
-galaxy_user: galaxy #Set this to whatever system user has write access to all of the Galaxy files.
+galaxy_user: galaxy # Set this to whatever system user has write access to all of the Galaxy files.
 
 galaxy_server_url: http://localhost/
 
@@ -131,10 +136,10 @@ tools_admin_email: tool_install@tools.com
 tools_admin_username: tools
 tools_admin_password: CoolToolInstaller
 
-galaxy_server_dir: /srv/galaxy #Put the actual path to your Galaxy root here
+galaxy_server_dir: /srv/galaxy/server # Put the actual path to your Galaxy root here
 
-# A system path where a virtualend for Galaxy is installed
-galaxy_venv_dir: "/srv/galaxy/.venv"
+# A system path where a virtualenv for Galaxy is installed
+galaxy_venv_dir: "/srv/galaxy/venv"
 
 # A system path for Galaxy's main configuration file
 galaxy_config_file: "/srv/galaxy/config/galaxy.ini"
@@ -219,7 +224,7 @@ Now, to start installing some tools, we need to add a bunch of other tasks:
 1. Create the bootstrap admin user and record their api key
 1. Add the bootstrap user to the *admin_users=* line in `galaxy.ini`
 1. Restart Galaxy
-1. Run Ephemeris *shed_install* script with the list of tools to install
+1. Run Ephemeris *shed-tools install* command with the list of tools to install
 1. Remove the bootstrap user from the *galaxy.ini* file
 1. Finally, restart Galaxy again for the change to take effect
 
@@ -275,13 +280,13 @@ Add the following to your tasks *main.yml*
 
 - name: Wait for Galaxy to start
   wait_for:
-    port: 80
+    port: 8080
     delay: 5
     state: started
     timeout: 600
 
 - name: Install the toolshed tools
-  command: shed-install --toolsfile "{{ galaxy_server_dir }}/tools/tool_list.yaml" --api_key "{{ galaxy_tools_api_key }}"
+  command: shed-tools install --toolsfile "{{ galaxy_server_dir }}/tools/tool_list.yaml" --api_key "{{ galaxy_tools_api_key }}"
   become: yes
   become_user: "{{ galaxy_user }}"
   ignore_errors: true
@@ -300,7 +305,7 @@ Add the following to your tasks *main.yml*
 
 - name: Wait for Galaxy to start
   wait_for:
-    port: 80
+    port: 8080
     delay: 5
     state: started
     timeout: 600
