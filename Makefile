@@ -34,5 +34,4 @@ generate-slides:
 	$(IN_VENV) python slideshow/build_slideshow.py 'Galaxy Tool Basics' sessions/x01-tool-basics/tool-basics.md x01-tool-basics
 	$(IN_VENV) python slideshow/build_slideshow.py 'Advanced Tool Wrapping' sessions/x02-tools-advanced/tools-advanced.md x02-tools-advanced
 	$(IN_VENV) python slideshow/build_slideshow.py 'Complex Galaxy Server Examples' sessions/x03-main-galaxy/usegalaxy.md x03-main-galaxy
-	$(IN_VENV) python slideshow/build_slideshow.py 'Simons Presentation' simon/labtalk-april-2017.md labtalk-2017
 	echo "</body></html>" >> docs/index.html
