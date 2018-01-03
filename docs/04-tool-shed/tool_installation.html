@@ -15,7 +15,7 @@ class: special
 # Installing Tools into Galaxy
 how to get tools into Galaxy
 
-slides by @martenson
+slides by @martenson, @mvdbeek
 
 .footnote[\#usegalaxy / @galaxyproject]
 
@@ -62,7 +62,7 @@ From 16.10 use `<toolbox monitor="true">` to trigger hot reload of tools.
 * From Galaxy's admin UI find the repo in the connected TS.
 * Install the repo into Galaxy.
 
-.footnote[Step by step tutorial with screenshots [on wiki](https://wiki.galaxyproject.org/Admin/Tools/AddToolFromToolShedTutorial)]
+.footnote[Step by step tutorial with screenshots [on wiki](https://galaxyproject.org/admin/tools/add-tool-from-toolshed-tutorial/)]
 
 ---
 # Installation options
@@ -78,7 +78,6 @@ From 16.10 use `<toolbox monitor="true">` to trigger hot reload of tools.
 * If needed Galaxy downloaded and compiled the needed dependencies.
 * Galaxy created an entry for the tool in the DB.
 * Galaxy added the tool to one of the tool configs (`shed_tool_conf.xml`).
-* After restart Galaxy will load the tool.
 
 ---
 # Example config entry
@@ -105,14 +104,6 @@ one entry in `integrated_tool_panel.xml`
 <section id="filter" name="Filter and Sort" version="">
     <tool id="testtoolshed.g2.bx.psu.edu/repos/devteam/bamtools_filter/bamFilter/0.0.1" />
 ```
-
----
-# Toolbox monitoring
-
-Starting with Galaxy 16.10 you can set `<toolbox monitor="true">` in the
-config file to make Galaxy do a hot reload during the installation.
-
-This allows loading new tools without restarting even across processes.
 
 ---
 # Suites - more repos in one
@@ -153,7 +144,7 @@ display more/less results of the search.
 You can use scripts in the project [Ephemeris](https://github.com/galaxyproject/ephemeris)
 to automate tool installation tasks.
 
-It will help you accomplish such goals as 'mirror toolset on Main'.
+It will help you accomplish such goals as 'mirror toolset on Main' or keeping all tools updated.
 
     </textarea>
     <script src="../static/remark-latest.min.js">

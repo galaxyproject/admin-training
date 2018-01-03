@@ -4,16 +4,16 @@
 
 # Tool Management Exercise
 
-by @martenson
+by @martenson,@mvdbeek
 
-\#usegalaxy \#GAT2016 @galaxyproject
+\#usegalaxy \#GAT2018 @galaxyproject
 
 ---
 ## Task 1
 *Your users want to use bedtools on the instance you administer.*
 * Find what Tool Shed repository has bedtools tools in it.
 
-Hint: You can use search in https://toolshed.g2.bx.psu.edu/ or http://toolshed.tools.
+Hint: You can use search in https://toolshed.g2.bx.psu.edu/.
 
 ---
 ## Task 2
@@ -63,22 +63,46 @@ Hints:
 
 ---
 ## Task 8
-*We want to use Conda package manager for our HPC sw deployment.*
+*We want to use Conda package manager to satisfy tool dependencies*
 
-* Enable Conda in your Galaxy instance.
+* Verify Conda is installed
 
-Hint: One way is to enable `conda_auto_init` in config and restart Galaxy.
+Hint: Conda will be installed automatically if you use run.sh.
+The default location is <tool_dependency_dir>/_conda.
 
 ---
 ## Task 9
+*Check the version of Conda*
 
-* Install latest seqtk and install _only_ Conda dependencies for it.
-
-Hint: By default Galaxy installs packages from both TS and Conda if available.
+Hint: `conda --version` will show the version
 
 ---
 ## Task 10
+*Check which channels Conda is going to use*
 
-* Find where the dependencies are present on the filesystem.
+Hint: You can find this information in galaxy.ini
+
+---
+## Task 11
+
+*Install latest seqtk and install _only_ Conda dependencies for it*
+
+Hints:
+-  By default Galaxy installs packages from both TS and Conda if available.
+- You can follow the installation process by looking at galaxy's log file(s).
+
+---
+## Task 12
+
+*Find where the dependencies are present on the filesystem*
 
 Hint: The information is in the config.
+
+---
+## Task 13
+
+*Uninstall the TS package and verify that the Conda package will be used*
+
+Hints:
+- To uninstall a package find the package in the `Manage Tools` section of the admin panel.
+- You can see which dependency will be used in the `Manage dependencies` section.

@@ -6,7 +6,7 @@ class: special
 # The Galaxy Tool Shed
 intro to 'shed'
 
-slides by @martenson
+slides by @martenson, @mvdbeek
 
 .footnote[\#usegalaxy / @galaxyproject]
 
@@ -22,6 +22,10 @@ We like to answer your questions.
 Tool Shed is to Galaxy as App Store is to iPhone.
 
 It is a free service that hosts repositories containing Galaxy Tools.
+Installing from the Tool Shed takes care of
+  - dependencies
+  - reference data tables
+  - configuration files
 
 ---
 Main Tool Shed (MTS) runs at http://toolshed.g2.bx.psu.edu and serves all Galaxies worldwide.
@@ -41,7 +45,7 @@ We discourage running local TS.
 * `wrapper` or `tool definition file` - The XML file that describes to Galaxy how the underlying software works, allowing Galaxy to render UI and execute the software in the right way.
 --
 
-* `repository` - A versioned code archive with tool(s) in Tool Shed. Mercurial is used.
+* `repository` - A versioned code archive with tool(s) in Tool Shed.
 --
 
 * `revision` vs `installable revision` - Every TS repo update generates a new revision but only certain (reproducibility-affecting) changes generate a new revision installable to Galaxy as a new version.
@@ -183,6 +187,37 @@ Requirements of the wrapper.
 Galaxy is aiming to be dependency resolution-agnostic.
 
 ---
+class: smaller
+### seqtk Conda package
+
+```yml
+package:
+  name: seqtk
+  version: 1.2
+source:
+  fn: v1.2.tar.gz
+  url: https://github.com/lh3/seqtk/archive/v1.2.tar.gz
+  md5: 255ffe05bf2f073dc57abcff97f11a37
+build:
+  number: 0
+requirements:
+  build:
+    - gcc   # [not osx]
+    - llvm  # [osx]
+    - zlib
+  run:
+    - zlib
+about:
+  home: https://github.com/lh3/seqtk
+  license: MIT License
+  summary: Seqtk is a fast and lightweight tool for processing sequences in the FASTA or FASTQ format
+test:
+  commands:
+    - seqtk seq
+```
+
+---
+class: normal
 ### seqtk tool_dependencies.xml file
 
 A TS way to fulfill requirements.
@@ -221,34 +256,4 @@ A TS recipe how to install the dependency.
         </install>
     </package>
 </tool_dependency>
-```
-
----
-class: smaller
-### seqtk Conda package
-
-```yml
-package:
-  name: seqtk
-  version: 1.2
-source:
-  fn: v1.2.tar.gz
-  url: https://github.com/lh3/seqtk/archive/v1.2.tar.gz
-  md5: 255ffe05bf2f073dc57abcff97f11a37
-build:
-  number: 0
-requirements:
-  build:
-    - gcc   # [not osx]
-    - llvm  # [osx]
-    - zlib
-  run:
-    - zlib
-about:
-  home: https://github.com/lh3/seqtk
-  license: MIT License
-  summary: Seqtk is a fast and lightweight tool for processing sequences in the FASTA or FASTQ format
-test:
-  commands:
-    - seqtk seq
 ```
