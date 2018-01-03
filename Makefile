@@ -30,7 +30,7 @@ generate-slides:
 	$(IN_VENV) python slideshow/build_slideshow.py 'Clouds' sessions/18-clouds/clouds.md 18-clouds
 	$(IN_VENV) python slideshow/build_slideshow.py 'Storage Management' sessions/19-storage/storage.md 19-storage
 	$(IN_VENV) python slideshow/build_slideshow.py 'Basic Troubleshooting' sessions/22-troubleshooting/troubleshooting.md 22-troubleshooting
-	$(IN_VENV) python slideshow/build_slideshow.py 'Galaxy Architecture' sessions/23-architecture/galaxy_architecture.md 23-architecture
+#	$(IN_VENV) python slideshow/build_slideshow.py 'Galaxy Architecture' sessions/23-architecture/galaxy_architecture.md 23-architecture
 	$(IN_VENV) python slideshow/build_slideshow.py 'Galaxy Tool Basics' sessions/x01-tool-basics/tool-basics.md x01-tool-basics
 	$(IN_VENV) python slideshow/build_slideshow.py 'Advanced Tool Wrapping' sessions/x02-tools-advanced/tools-advanced.md x02-tools-advanced
 	$(IN_VENV) python slideshow/build_slideshow.py 'Complex Galaxy Server Examples' sessions/x03-main-galaxy/usegalaxy.md x03-main-galaxy
