@@ -181,22 +181,11 @@ additional_files_list:
   - { src: "extra-files/tool_sheds_conf.xml", dest: "{{ galaxy_config_dir }}" }
   - { src: "extra-files/cloud_setup/vimrc", dest: "/etc/vim/" }
 ```
+* Let's also add a `pre_task` to create the `galaxy` system user to match the
+  environment we have been using thus far in the workshop. Just add the
+  following task under `pre_tasks` in `galaxy.yml`:
 
-* Set the contents of the *inventory* file appropriately.
-
-``` ini
-[oslo18]
-localhost
-
-[oslo18:vars]
-ansible_connection=local
-ansible_become=yes
-```
-
- > If you are running this on a clean system without the `galaxy` system user
- having been setup to have access to `/srv/galaxy` directory, add the following
- to the end of pre_tasks list:
- ```yaml
+  ```yaml
     - name: Create Galaxy user
       user:
         name: "galaxy"
@@ -205,6 +194,31 @@ ansible_become=yes
         shell: "/bin/bash"
         system: yes
   ```
+
+* We also need to make one more adjustment to these VMs. Namely, the hostname
+does not resolve by default so let's add another `pre_task` to make that happen
+
+```yaml
+    - name: Update /etc/hosts
+      replace:
+        dest: /etc/hosts
+        regexp: '^127.0.0.1 localhost'
+        replace: '127.0.0.1 localhost {{ ansible_hostname }}'
+        backup: yes
+```
+
+* Set the contents of the *inventory* file appropriately, depending if you are
+targeting the local host or a remote one:
+
+```ini
+[oslo18]
+localhost ansible_connection=local
+```
+
+``` ini
+[oslo18]
+158.39.75.18 ansible_user="ubuntu" ansible_ssh_private_key_file=pk.pem
+```
 
 Now it's just a matter of running:
 
