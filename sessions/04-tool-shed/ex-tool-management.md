@@ -88,7 +88,7 @@ Hint: You can find this information in galaxy.ini
 *Install latest seqtk and install _only_ Conda dependencies for it*
 
 Hints:
--  By default Galaxy installs packages from both TS and Conda if available.
+- By default Galaxy installs packages from both TS and Conda if available.
 - You can follow the installation process by looking at galaxy's log file(s).
 
 ---
@@ -106,3 +106,64 @@ Hint: The information is in the config.
 Hints:
 - To uninstall a package find the package in the `Manage Tools` section of the admin panel.
 - You can see which dependency will be used in the `Manage dependencies` section.
+
+---
+## Task 14
+
+*We want to use ephemeris to automate tool installation*
+
+* Let's install ephemeris
+
+Hint: You can install ephemeris by running `pip install ephemeris`
+
+---
+## Task 15
+
+*Create a list of tool to install*
+
+
+* Ephemeris requires a yaml file with the following syntax:
+
+```yml
+tools:
+  - name: <repository_name>
+    owner: <repository_owner>
+    tool_panel_section_label: <section label>
+    tool_shed_url: <tool_shed_url>
+    revisions:
+      - <revision_1>
+      - <revision_2>
+```
+
+* Create the tool list for [devteam/fastqc](https://toolshed.g2.bx.psu.edu/view/devteam/fastqc) versions 0.68 and 0.69
+
+Hints:
+  - You can supply as many installable revisions as you would like, they will all be installed
+  - If no revision is given the latest version will be installed, *if* the repository is not yet installed
+
+---
+## Task 16
+
+*Install fastqc using ephemeris into the section "FastQC"*
+
+* The syntax for installing tools using a yaml file is:
+```
+shed-install install -t <tool_list.yml> -a <api_key> -g <galaxy_url>
+```
+
+---
+## Task 17
+
+*Verify that fastqc is correctly installed*
+
+Hint: You can see the installation status in the admin panel
+
+---
+## Task 18
+
+*Update all installed repositories of a galaxy instance*
+
+The command is:
+```
+shed-tools update -g <galaxy_url> -a <api_key>
+```
