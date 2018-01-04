@@ -4,12 +4,13 @@
 
 # Upstream Authentication - Exercise
 
-#### Authors: Nate Coraor. 2017
+#### Authors: Nate Coraor (2017), Nicola Soranzo (2018)
 
 ## Learning Outcomes
 
-1. By the end of this session you should be familiar with configuring Galaxy to use an upstream (proxy) authentication provider
-2. Be able to log in to your Galaxy server with a file-configured user
+By the end of this session you should:
+1. be familiar with configuring Galaxy to use an upstream (proxy) authentication provider
+2. be able to log in to your Galaxy server with a file-configured user.
 
 ## Introduction
 
@@ -19,7 +20,7 @@ For this exercise we will use a basic password file method for authenticating - 
 
 **Part 1 - Configure nginx**
 
-Begin by editing `/etc/nginx/sites-available/galaxy` (as root) and modifying the `location / { ... }` block. It should now look something like this:
+Begin by editing `/etc/nginx/sites-available/galaxy` (as root) and adding the `auth_basic`, `auth_basic_user_file` and `uwsgi_param` directives to the `location / { ... }` block as below:
 
 ```nginx
     location / {
@@ -34,6 +35,19 @@ Begin by editing `/etc/nginx/sites-available/galaxy` (as root) and modifying the
     }
 ```
 
+`auth_basic` enables validation of username and password using the "HTTP Basic Authentication" protocol. Its value `galaxy` is used as a realm name to be displayed to the user when prompting for credentials.
+
+`auth_basic_user_file` specifies the file that keeps usernames and passwords, in the following format:
+
+```
+# comment
+name1:password1
+name2:password2:comment
+name3:password3
+```
+
+`uwsgi_param` adds `HTTP_REMOTE_USER` to the special variables passed by nginx to uwsgi, with value `$remote_user`, which is a nginx embedded variable containing the username supplied with the Basic authentication.
+
 **Part 2 - Create passwd file**
 
 You can use the `openssl passwd` command to do this (replace `nate` with a username of your choosing`):
@@ -44,20 +58,20 @@ $ echo "nate:$(openssl passwd qwerty)" | sudo tee /etc/nginx/passwd
 
 ## Section 2 - Configure Galaxy
 
-Galaxy needs to be instructed to expect authentication to come from the upstream proxy. In order to do this, we'll set two options in `galaxy.ini`:
+Galaxy needs to be instructed to expect authentication to come from the upstream proxy. In order to do this, set the following two options in `galaxy.ini`:
 
 ```ini
 use_remote_user = True
-remote_user_maildomain = bx.psu.edu
+remote_user_maildomain = example.org
 ```
 
 Set the `remote_user_maildomain` option to the appropriate domain name for your site. Then, restart Galaxy.
 
-If you visit your Galaxy server now you should see the following message:
+If you visit your Galaxy server now, you should see the following message:
 
 ![access denied message](images/access_denied.png)
 
-This is because we have not yet restarted nginx. Galaxy expects the `REMOTE_USER` header to be set by nginx. If it's not, Galaxy will refuse to allow access to its UI.
+This is because we have not yet restarted nginx. Galaxy expects the `REMOTE_USER` header to be set by nginx. If it is not, Galaxy will refuse to allow access to its UI.
 
 ## Section 3 - Test
 
@@ -69,7 +83,7 @@ Log in using the username and password you provided when creating the `passwd` f
 
 Note that some user features are not available when remote user support is enabled.
 
-Try logging out by selecting **User** -> **Logout**. You'll discover that when returning to the user interface, you are still logged in. This is because Galaxy has no way of logging you out of the proxy's authentication system. Instead, you should set `remote_user_logout_href` in `galaxy.ini` to point to the URL of your authentication system's logout page.
+Try logging out by selecting **User** -> **Logout**. You will discover that when returning to the user interface, you are still logged in. This is because Galaxy has no way of logging you out of the proxy's authentication system. Instead, you should set `remote_user_logout_href` in `galaxy.ini` to point to the URL of your authentication system's logout page.
 
 **Part 2 - Undo changes**
 

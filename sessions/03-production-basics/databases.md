@@ -98,7 +98,7 @@ Python script to access Galaxy's database layer **via the Galaxy models**.
 
 ```console
 $ python -i scripts/db_shell.py
->>> new_user = User('foo@example.com', 'secret')
+>>> new_user = User('foo@example.org', 'secret')
 >>> new_user.username = 'foo'
 >>> sa_session.add(new_user)
 >>> sa_session.flush()

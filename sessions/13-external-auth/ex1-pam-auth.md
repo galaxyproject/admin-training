@@ -86,7 +86,7 @@ $ sudo -u galaxy -e /srv/galaxy/config/auth_conf.xml
         <type>PAM</type>
         <options>
             <auto-register>True</auto-register>
-            <maildomain>example.com</maildomain>
+            <maildomain>example.org</maildomain>
             <login-use-email>True</login-use-email>
             <pam-service>sshd</pam-service>
         </options>
@@ -118,7 +118,7 @@ gx:galaxy: started
 
 **Part 2 - Log in to Galaxy**
 
-Go to http://yourgalaxyhost/ and log in (log out first if necessary) as `galaxyuser@example.com`.
+Go to http://yourgalaxyhost/ and log in (log out first if necessary) as `galaxyuser@example.org`.
 
 **Part 3 - Optionally disable self registration and require login**
 
