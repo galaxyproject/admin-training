@@ -4,7 +4,7 @@
 
 # Tool Management Exercise
 
-by @martenson,@mvdbeek
+by @martenson, @mvdbeek
 
 \#usegalaxy \#GAT2018 @galaxyproject
 
@@ -120,7 +120,6 @@ Hint: You can install ephemeris by running `pip install ephemeris`
 ## Task 15
 
 *Create a list of tool to install*
-
 
 * Ephemeris requires a yaml file with the following syntax:
 
