@@ -12,7 +12,6 @@ class: inverse
 
 ---
 class: special, center, middle
-![GATC Logo](../shared-images/AdminTraining2016-250.png)
 
 # Users, Groups, Quotas
 
@@ -21,9 +20,7 @@ slides by @dblankenberg, @simongladman1
 .footnote[\#usegalaxy / @galaxyproject]
 
 ---
-
-class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Overview
+# Overview
 
 This section will cover handling of users, groups and quotas for Galaxy. We will look at the following in particular:
 * User Activation and Control
@@ -34,10 +31,9 @@ This section will cover handling of users, groups and quotas for Galaxy. We will
 * Setting permissions on Libraries and Datasets
 * Quotas
 * Introduction to alternate authentication
----
 
-class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  User Activation
+---
+# User Activation
 
 Require verification that a user's email is real. You must enable SMTP first.
 
@@ -53,10 +49,9 @@ Exercise:
    - Enable User activation
    - Register a new user (second email / email+1@domail.tld)
    - Upload a Dataset
----
 
-class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png) User Control
+---
+# User Control
 
 In `galaxy.ini`:
 * `require_login` can be enabled to prevent anonymous access.
@@ -67,17 +62,14 @@ In `galaxy.ini`:
 * `expose_dataset_path` users to see the full path of datasets via the "View Details" option in the history.
 
 ---
-class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png) Password & Session Policies
+# Password & Session Policies
 
 In `galaxy.ini`:
 * `password_expiration_period` days before requiring a user to change password.
 * `session_duration` minutes before invaliding a user's session, requiring re-login.
 
 ---
-
-class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png) Admin Control
+# Admin Control
 
 In `galaxy.ini`:
 * `admin_users` comma-separated list of admin users' emails
@@ -91,9 +83,7 @@ Exercise:
  - View existing and create Histories and Datasets.
 
 ---
-
-class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png) User Privacy
+# User Privacy
 
 In `galaxy.ini`:
 * `expose_user_name` users can view other registered usernames
@@ -101,9 +91,7 @@ In `galaxy.ini`:
 * `new_user_dataset_access_role_default_private` newly created datasets are private to the creating user
 
 ---
-
-class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png) Roles and Groups
+# Roles and Groups
 
 #### Role Based Access Control (RBAC)
 
@@ -118,10 +106,7 @@ class: left
 * assign permission sets to groups
 
 ---
-
-class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png) Dataset Roles
-
+# Dataset Roles
 
 .left-column-equal[
 **manage permissions**
@@ -136,10 +121,9 @@ class: left
 ![User_roles](images/dataset_roles.png)
 ]
 ]
----
-class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png) Library Roles
 
+---
+# Library Roles
 
 .left-column-equal[
 * **modify library item**: Users having associated role can modify this library item
@@ -149,20 +133,18 @@ class: left
 ]
 .right-column-equal[
 ![Library_roles](images/Library_roles.png)
-]  
+]
 
 ---
-class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png) Role Demo
+# Role Demo
 
 * We will now demonstrate creation of Groups and Roles.
 * We will show how restricting access to a Dataset prevents usage or download.
 
 ---
-class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png) Quotas
+# Quotas
 
-Used to control user disk usage. 
+Used to control user disk usage.
 
 To turn on the use of quotas: In `galaxy.ini`:
 * `enable_quotas` Enable enforcement of quotas.  Quotas can be set from the Admin interface (under Data).
@@ -180,8 +162,7 @@ Default for user class:
 or associated with Groups or Users
 
 ---
-class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png) Exercise: Creating Quotas
+# Exercise: Creating Quotas
 
 * Create quotas for Unregistered (1b) and Registered Users (1mb)
 * Create a quota that adds 1GB
@@ -189,18 +170,16 @@ class: left
 * Create a quota that grants unlimited
 
 ---
-class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png) Alternate Authentication
+# Alternate Authentication
 
 * Galaxy-specific login using e-mail address and password
 * OpenID authentication with Galaxy as a relying party
 * HTTP remote user provided by any front-end Web server
 
-More on this topic in Advanced Session 4: External authentication
+More on this topic in *Using and configuring external authentication services*
 
 ---
-class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png) OpenID
+# OpenID
 
 * `enable_openid` Enable authentication via OpenID.
 * `openid_config_file` = config/openid_conf.xml.sample used if default does not exist

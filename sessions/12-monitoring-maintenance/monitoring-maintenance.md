@@ -2,8 +2,7 @@ layout: true
 class: inverse
 
 ---
-class: special, center
-![GATC Logo](../shared-images/AdminTraining2016-250.png)
+class: special, center, middle
 
 # Server Monitoring and Maintenance
 
@@ -12,8 +11,7 @@ class: special, center
 .footnote[\#usegalaxy / @galaxyproject]
 
 ---
-class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Admin UI
+# Admin UI
 
 Has a lot of tools and lists that are useful for administrators of the Galaxy server.
 
@@ -21,8 +19,7 @@ Has a lot of tools and lists that are useful for administrators of the Galaxy se
   * Data types
   * Data tables
   * Display applications
-  
-  
+
 * Tools for manipulating
   * Users, groups, roles and quotas etc
   * Running jobs
@@ -30,8 +27,7 @@ Has a lot of tools and lists that are useful for administrators of the Galaxy se
   * Errors etc
 
 ---
-class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Data Types
+# Data Types
 
 Data types are Galaxy's method of understanding how to handle data.
 
@@ -44,9 +40,10 @@ Data types are Galaxy's method of understanding how to handle data.
 The Admin UI has a link to display all the current data types that are registered.
 
 Datatypes are located in the `datatypes_conf.xml` file.
+
 ---
-class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  datatypes_conf.xml
+# datatypes_conf.xml
+
 Config file for datatypes. Hard to find stuff...
 ```
 <?xml version="1.0"?>
@@ -69,11 +66,11 @@ Config file for datatypes. Hard to find stuff...
 
   * Search `/srv/galaxy/server/config/datatypes_conf.xml.sample` for Genbank
   * Add `display_in_upload="true"` to the xml tag.
-  
+
 You'll then need to restart Galaxy.
+
 ---
-class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Display applications
+# Display applications
 
 This link shows the list of applications that can be used to display various datatypes.
 
@@ -91,9 +88,9 @@ They are set in the `datatypes_conf.xml` file. For example:
 ```
 
 We are not going to go into how to set these up here but there is a page on the [wiki](https://wiki.galaxyproject.org/Admin/Tools/External%20Display%20Applications%20Tutorial)
+
 ---
-class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Manage Jobs
+# Manage Jobs
 
 An admin interface to list current unfinished jobs and finished jobs of a certain age.
 
@@ -104,9 +101,9 @@ An admin interface to list current unfinished jobs and finished jobs of a certai
 .large[
 **Can be very handy!**
 ]
+
 ---
-class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Tool tools/UIs!
+# Tool tools/UIs!
 
   * **Search Toolshed** - To install tools from the toolshed(s)
   
@@ -121,9 +118,9 @@ class: left
   * **Review Tool Error Logs** - Will show tool problems during Galaxy startup.
   
   * **Manage Display Whitelist** - Allows admins to selectively allow fancy interactive stuff in tool output to be displayed/used.
+
 ---
-class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Other links
+# Other links
 
 **Data management**
 
@@ -136,7 +133,6 @@ class: left
   * **Users, Groups, Roles, Impersonate user** - Discussed earlier
   * **API Keys** - Allows generation of API keys for various users.
 
-  
 ---
 # Log Files
 

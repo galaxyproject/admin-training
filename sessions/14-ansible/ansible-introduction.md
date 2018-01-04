@@ -1,32 +1,24 @@
 layout: true
 class: inverse
 ---
-class: special, center
-![GATC Logo](../shared-images/gatc2017_logo.png)
+class: special, center, middle
 
 # Ansible and Galaxy - Part 1
 
 
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 ---
+class: center, middle
 
-layout: true
-class: left, inverse
-
----
-class: left, middle, center
-![GATC Logo](../shared-images/gatc2017_logo_150.png)
-
-## Please interrupt
-
-
+# Please interrupt
 
 *We are here to answer questions!*
 
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+
 ---
-class: left
-## ![GATC Logo](../shared-images/gatc2017_logo_150.png)  Overview
+# Overview
+
 .large[
 * What is Ansible
 * Galaxy and Ansible
@@ -37,9 +29,9 @@ Later in Part 2
 ]
 
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+
 ---
-class: left
-## ![GATC Logo](../shared-images/gatc2017_logo_150.png)  Overview
+# Overview
 .large[
 * **What is Ansible**
 * Galaxy and Ansible
@@ -50,9 +42,9 @@ Later in Part 2
 ]
 
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+
 ---
-class: left
-## ![GATC Logo](../shared-images/gatc2017_logo_150.png)  What is Ansible
+# What is Ansible
 .large[
 * Automation tool for configuring and managing computers. (c.f. Puppet, Chef etc.)
 * Initial release: Feb. 2012
@@ -61,9 +53,9 @@ class: left
 ![ansible-vanilla.png](images/ansible-vanilla.png)
 
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+
 ---
-class: left
-## ![GATC Logo](../shared-images/gatc2017_logo_150.png)  Why?
+# Why?
 .large[
 * Avoid forgetting what you did to install and configure some piece of software
 * Codify knowledge about a system
@@ -72,9 +64,9 @@ class: left
 ]
 .right[![ansible-logo](images/ansible-logo.png)]
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+
 ---
-class: left
-## ![GATC Logo](../shared-images/gatc2017_logo_150.png)  Features of Ansible
+# Features of Ansible
 .large[
 * Easy to learn
   * Playbooks in YAML, Templates in Jinja2, Inventory in INI file
@@ -89,9 +81,9 @@ class: left
 * Extensible:
   * Write your own modules
 ]
+
 ---
-class: left
-## ![GATC Logo](../shared-images/gatc2017_logo_150.png)  But wait! There's more
+# But wait! There's more
 .large[
 * Supports push or pull
   * Push by default but use cron job to make it pull
@@ -107,8 +99,7 @@ class: left
 `ansible -i inventory_file -u ubuntu -m shell -a "reboot"`
 
 ---
-class: left
-## ![GATC Logo](../shared-images/gatc2017_logo_150.png)  Ansible structure
+# Ansible structure
 .large[
 * Ansible scripts are called playbooks
 * Scripts written as simple yaml files
@@ -120,10 +111,9 @@ class: left
 ]
 [http://docs.ansible.com/ansible/modules_by_category.html](http://docs.ansible.com/ansible/modules_by_category.html)
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
----
-class: left
-## ![GATC Logo](../shared-images/gatc2017_logo_150.png)  Ansible playbook layout
 
+---
+# Ansible playbook layout
 
 ``` text
 .
@@ -146,9 +136,9 @@ class: left
 ```
 
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+
 ---
-class: left
-## ![GATC Logo](../shared-images/gatc2017_logo_150.png) Yet Another Markup Language
+# Yet Another Markup Language
 .large[
 * But YAML is a structured language with a defined syntax (like JSON or XML)
 ]
@@ -166,9 +156,9 @@ list:
 ```
 
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+
 ---
-class: left
-## ![GATC Logo](../shared-images/gatc2017_logo_150.png)  Ansible inventory
+# Ansible inventory
 * An ini file.
 * List of remote machines to run ansible on
 * Can have groups
@@ -188,9 +178,9 @@ jetstream-tacc0.galaxyproject.org
 jetstream-iu0.galaxyproject.org
 ```
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+
 ---
-class: left
-## ![GATC Logo](../shared-images/gatc2017_logo_150.png)  Ansible Variables
+# Ansible Variables
 .left-column-equal[
 **Group Variables**
 
@@ -218,9 +208,9 @@ galaxy_installer: true
 ]
 
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+
 ---
-class: left
-## ![GATC Logo](../shared-images/gatc2017_logo_150.png)  Ansible Tasks
+# Ansible Tasks
 .large[
 * Perform a task on the inventory
 ]
@@ -235,9 +225,9 @@ class: left
     ```
 
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+
 ---
-class: left
-## ![GATC Logo](../shared-images/gatc2017_logo_150.png)  Ansible Tasks
+# Ansible Tasks
 .large[
 * A more complex task:
 ]
@@ -254,9 +244,9 @@ class: left
   when: "{{ ansible_os_family }} == 'Debian'"
 ```
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+
 ---
-class: left
-## ![GATC Logo](../shared-images/gatc2017_logo_150.png)  Ansible Handlers
+# Ansible Handlers
 * Syntax is the same as tasks, but these are only run when triggered by a notify.
 
 * Task:
@@ -278,16 +268,16 @@ class: left
     state: restarted
 ```
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+
 ---
-class: left
-## ![GATC Logo](../shared-images/gatc2017_logo_150.png)  Roles contain tasks
+# Roles contain tasks
 
 ![ansible-roles-tasks.png](images/ansible-roles-tasks.png)
 
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+
 ---
-class: left
-## ![GATC Logo](../shared-images/gatc2017_logo_150.png)  Plays
+# Plays
 .large[
 * Contain:
   * What hosts you want to run on
@@ -307,9 +297,9 @@ class: left
     - natefoo.postgresql_objects
 ```
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+
 ---
-class: left
-## ![GATC Logo](../shared-images/gatc2017_logo_150.png)  Plays and Tags
+# Plays and Tags
 
 * Plays can have tags associated with them
 
@@ -334,17 +324,16 @@ class: left
 
 
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+
 ---
-class: left
-## ![GATC Logo](../shared-images/gatc2017_logo_150.png)  How Ansible works
+# How Ansible works
 
 ![how-ansible-works.png](images/how-ansible-works.png)
 
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 
 ---
-class: left
-## ![GATC Logo](../shared-images/gatc2017_logo_150.png)  Exercise Time!
+# Exercise Time!
 .large[
 In this exercise, we will:
 * Write an ansible script/role
@@ -354,9 +343,9 @@ In this exercise, we will:
 [Adding tools to Galaxy with Ansible](https://github.com/gvlproject/dagobah-training/blob/master/sessions/14-ansible/ex1-intro-ansible.md)
 ]
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+
 ---
-class: left
-## ![GATC Logo](../shared-images/gatc2017_logo_150.png)  Example role
+# Example role
 .large[
 * Galaxy project's role to install a Galaxy server.
 * Can be used in a playbook
@@ -365,9 +354,9 @@ class: left
 [https://github.com/galaxyproject/ansible-galaxy](https://github.com/galaxyproject/ansible-galaxy)
 ]
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+
 ---
-class: left
-## ![GATC Logo](../shared-images/gatc2017_logo_150.png)  What's available
+# What's available
 .large[
 .left-column-equal[
 * Roles:
@@ -391,9 +380,9 @@ class: left
 ]
 ]
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+
 ---
-class: left
-## ![GATC Logo](../shared-images/gatc2017_logo_150.png)  Exercise 2!
+# Exercise 2!
 .large[
 In this exercise we will:
 * Look at how the Galaxy Ansible roles can be combined together to install Galaxy
@@ -405,4 +394,3 @@ In this exercise we will:
 ]
 
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
----

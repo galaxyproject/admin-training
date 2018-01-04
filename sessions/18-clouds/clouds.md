@@ -1,36 +1,27 @@
 layout: true
 class: inverse
 ---
-class: special, center
-![GATC Logo](../shared-images/AdminTraining2016-250.png)
+class: special, center, middle
 
 # All these Clouds
 ## It's positively meterological..
 
-
 **Slides: @Slugger70, @nuwang, @afgane**
 
 .normal[
-.footnote[\#usegalaxy \#GAMe2017 / @galaxyproject] ]
----
-
-layout: true
-class: left, inverse
-
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject] ]
 ---
 class: left, middle, center
-![GATC Logo](../shared-images/AdminTraining2016-100.png)
 
-## Please interrupt
-
-
+# Please interrupt
 
 *We are here to answer questions!*
 
-.footnote[\#usegalaxy \#GAMe2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+
 ---
-class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Overview
+# Overview
+
 .large[
 * Galaxy in the Clouds?
 * AWS and other Clouds
@@ -42,10 +33,11 @@ class: left
 * Other cloud usage - burst!
 ]
 
-.footnote[\#usegalaxy \#GAMe2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+
 ---
-class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Help!
+# Help!
+
 .large[
 * Galaxy server flat out?
 * Queue longer than a Grateful Dead concert?
@@ -54,11 +46,11 @@ class: left
 What do you do now?
 ]
 
-.footnote[\#usegalaxy \#GAMe2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 
 ---
-class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Help!
+# Help!
+
 .large[
 * Galaxy server flat out?
 * Queue longer than a Grateful Dead concert?
@@ -70,22 +62,20 @@ What do you do now?
 ]
 .center[![cloudman](images/cloudman_logo.png)]
 
-.footnote[\#usegalaxy \#GAMe2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 
 ---
-class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Clouds?
-
+# Clouds?
 
 **Cloud computing** ... is a model for enabling ubiquitous, **on-demand** access to a **shared pool** of configurable **computing resources** ... which can be **rapidly provisioned and released** with minimal management effort. Cloud computing and storage ... may be located far from the user – ranging in distance from **across a city to across the world.** - Wikipedia, Cloud Computing.
 
 .center[![aws_logo.png](images/aws_logo.png) ![OpenStack_logo.png](images/OpenStack-logo.png) ![gce-logo.png](images/gce-logo.png)]
 
-.footnote[\#usegalaxy \#GAMe2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 
 ---
-class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Available Clouds
+# Available Clouds
+
 .large[
 * Amazon Web Services
   * Pay-per-time/machine etc.
@@ -97,11 +87,11 @@ class: left
   * NeCTAR in Australia, Jetstream in USA, CLIMB in UK, lots of others
   * Some free for researchers (NeCTAR, CLIMB), some with project grants (Jetstream)
 ]
-.footnote[\#usegalaxy \#GAMe2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 
 ---
-class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Why Clouds?
+# Why Clouds?
+
 .large[
 * Elastic compute!
   * Can dynamically resource analyses
@@ -113,11 +103,11 @@ class: left
   * Start compute there. Save on data transfer.
 ]
 
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 
-.footnote[\#usegalaxy \#GAMe2017 / @galaxyproject]
 ---
-class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png) Galaxy on the Cloud
+# Galaxy on the Cloud
+
 .large[
 * There are cloud images (VM blueprints) available
   * with Galaxy pre-installed
@@ -129,10 +119,11 @@ class: left
   * An access key and a secret key or username and password with project details
   * They are obtained from the cloud account admin page you want to use
 ]
-.footnote[\#usegalaxy \#GAMe2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+
 ---
-class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  CloudLaunch
+# CloudLaunch
+
 .large[
 * CloudLaunch is a system for launching Galaxy (and other applications) on cloud resources
   * Public servers available at [launch.usegalaxy.org](https://launch.usegalaxy.org) and [launch.genome.edu.au](https://launch.genome.edu.au)
@@ -144,11 +135,11 @@ class: left
   * It should only take 2-3 minutes for everything to be set up.
 ]
 
-.footnote[\#usegalaxy \#GAMe2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 
 ---
-class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Launch Demo
+# Launch Demo
+
 .large[
 * Launch a Galaxy on the Cloud in NeCTAR
   * Similar process to AWS (but free for me)
@@ -158,11 +149,10 @@ Today, we'll be using the all-new-still-in-beta CloudLaunch
 * Walk through what is happening
 ]
 
-.footnote[\#usegalaxy \#GAMe2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 
 ---
-class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png) Cloud Manager
+# Cloud Manager
 
 .center[![cloudman](images/cloudman_logo.png)]
 
@@ -172,27 +162,25 @@ class: left
 * Can mount filesystems, dynamically add/remove worker nodes, start/stop services
 ]
 
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 
-.footnote[\#usegalaxy \#GAMe2017 / @galaxyproject]
 ---
-class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  CloudMan
+# CloudMan
 
 .center[<img src='images/cloudman-main.png' width=85%>]
 
-.footnote[\#usegalaxy \#GAMe2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 
 ---
-class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  CloudMan Admin
+# CloudMan Admin
 
 .center[<img src='images/cloudman-admin.png' width=80%>]
 
-.footnote[\#usegalaxy \#GAMe2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 
 ---
-class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Cluster on the Cloud?
+# Cluster on the Cloud?
+
 .large[
 * Your CloudMan instance is a single machine
   * It is the "Head node" of a cluster
@@ -202,11 +190,10 @@ class: left
   * Are registered in Slurm setup
   * A node will take ~2-3 minutes to start and configure.
 ]
-.footnote[\#usegalaxy \#GAMe2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 
 ---
-class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Auto-Scaling
+# Auto-Scaling
 
 .large[
 * Can set up dynamic scaling to respond to the system load
@@ -216,11 +203,11 @@ class: left
 
 .center[<img src='images/cloudman-scaling.png' width=60%>]
 
-.footnote[\#usegalaxy \#GAMe2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 
 ---
-class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  CloudMan Galaxy
+# CloudMan Galaxy
+
 .large[
 * Your Galaxy server is set up and ready to go!
   * Includes large list of pre-installed tools.
@@ -230,11 +217,10 @@ class: left
   * Will be discussed in architecture section
 ]
 
-.footnote[\#usegalaxy \#GAMe2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 
 ---
-class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  CloudMan Galaxy
+# CloudMan Galaxy
 
 .pull-left[
 <img src='images/Cloudman-tools.png' height=85% />
@@ -243,11 +229,11 @@ class: left
 <img src='images/reference_data.png'/>
 ]
 
-.footnote[\#usegalaxy \#GAMe2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 
 ---
-class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  CloudMan Galaxy
+# CloudMan Galaxy
+
 * Configured for Slurm out of the box
 ```xml
 ...
@@ -274,17 +260,17 @@ NodeName=w2 NodeAddr=45.113.232.92 CPUs=8 RealMemory=32176 Weight=5 State=UNKNOW
 NodeName=w3 NodeAddr=45.113.232.93 CPUs=8 RealMemory=32176 Weight=5 State=UNKNOWN
 ```
 
-.footnote[\#usegalaxy \#GAMe2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+
 ---
-class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  CloudMan Architecture
+# CloudMan Architecture
 
 ![architecture.png](images/architecture.png)
 
-.footnote[\#usegalaxy \#GAMe2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+
 ---
-class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Persistence
+# Persistence
 
 .large[
 * Cloud instances are typically transient
@@ -294,10 +280,10 @@ class: left
 * CloudMan stores an instance's set up in an object store container for persistence
 ]
 
-.footnote[\#usegalaxy \#GAMe2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+
 ---
-class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png) Looking to the future
+# Looking to the future
 
 .large[
 * An all-new system is under development
@@ -313,20 +299,18 @@ class: left
   * Powered by CloudBridge, so natively cross-cloud
 ]
 
-.footnote[\#usegalaxy \#GAMe2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 
 ---
-class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png) Taking it Further: GVL
+# Taking it Further: GVL
 
 ![GVL-evolution.png](images/GVL-evolution.png)
 
-.footnote[\#usegalaxy \#GAMe2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 
 ---
-class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png) GVL applications
+# GVL applications
 
 ![GVL-dash.png](images/GVL-dash.png)
 
-.footnote[\#usegalaxy \#GAMe2017 / @galaxyproject]
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]

@@ -1,35 +1,26 @@
 layout: true
 class: inverse
 ---
-class: special, center
-![GATC Logo](../shared-images/AdminTraining2016-250.png)
+class: special, center, middle
 
 # Reference Genomes in Galaxy
 
-
 **Slides: @blankenberg, @Slugger70**
 
-
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
----
-
-layout: true
-class: left, inverse
 
 ---
 class: left, middle, center
-![GATC Logo](../shared-images/AdminTraining2016-100.png)
 
-## Please interrupt
-
-
+# Please interrupt
 
 *We are here to answer questions!*
 
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+
 ---
-class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Overview
+# Overview
+
 .large[
 * **Intro to built in datasets**
 * Built in data hierarchy
@@ -38,19 +29,17 @@ class: left
 ]
 
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+
 ---
-class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Built in Data
+# Built in Data
 
 ![List_of_data.png](images/i06-List_of_data.png)
 
-
-
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
----
-class: left
 
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Data, what data?
+---
+# Data, what data?
+
 .large[
 * Some genomes are large! Human, Mouse, Coral
 * Some tools require indices of the genomes.
@@ -59,24 +48,26 @@ class: left
 ]
 
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+
 ---
-class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Overview
+# Overview
+
 .large[
 * Intro to built in datasets
 * **Built in data hierarchy**
 * Some problems
 * Data Managers
 ]
+
 ---
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Data schematics in Galaxy
+# Data schematics in Galaxy
 
 ![schematic](images/data_managers_schematic_overview.png)
 
-
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+
 ---
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Using reference data in a tool
+# Using reference data in a tool
 
 #### bwa.xml
 
@@ -100,8 +91,9 @@ class: left
 ```
 
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+
 ---
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Where are the data tables?
+# Where are the data tables?
 
 #### tool_data_table_conf.xml
 
@@ -118,8 +110,9 @@ class: left
 ```
 
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+
 ---
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  "loc" files - Short for location!
+# "loc" files - Short for location!
 
 bwa_index.loc
 
@@ -142,17 +135,20 @@ mm10    mm10    Mouse (mm10)    /mnt/galaxyIndices/genomes/mm10/bwa_mem_index/mm
 
 
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+
 ---
-class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Overview
+# Overview
+
 .large[
 * Intro to built in datasets
 * Built in data hierarchy
 * **Some problems**
 * Data Managers
 ]
+
 ---
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Some Problems!
+# Some Problems!
+
 .large[
 * Time consuming!
   * ~30 minutes work just to add a new genome to 1 tool!
@@ -163,33 +159,37 @@ class: left
   * format of the .loc file
 ]
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+
 ---
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Typical conversation
+# Typical conversation
 
 .middle[![ref-problem-1.png](images/Ref-problem-1.png)]
 
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+
 ---
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Typical conversation
+# Typical conversation
 
 .middle[![ref-problem-2.png](images/Ref-problem-2.png)]
 
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+
 ---
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Typical conversation
+# Typical conversation
 
 .middle[![ref-problem-3.png](images/Ref-problem-3.png)]
 
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+
 ---
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Typical conversation
+# Typical conversation
 
 .middle[![ref-problem-4.png](images/Ref-problem-4.png)]
 
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
----
 
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Other concerns
+---
+# Other concerns
 
 .large[
 * **Accessible?**
@@ -203,9 +203,10 @@ class: left
 ]
 
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+
 ---
-class: left
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Overview
+# Overview
+
 .large[
 * Intro to built in datasets
 * Built in data hierarchy
@@ -214,8 +215,8 @@ class: left
 ]
 
 ---
+# Data Managers
 
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Data Managers
 .large[
 * Allows for the **creation of built-in** (reference) data
 	* underlying data
@@ -227,9 +228,10 @@ class: left
 * Defined **locally** or installed from **ToolShed**
 ]
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
----
 
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Data Managers
+---
+# Data Managers
+
 .large[
 * **Flexible** framework
   * Not just genomic data
@@ -244,19 +246,16 @@ class: left
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 
 ---
-
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Special class of Galaxy tool
+# Special class of Galaxy tool
 
 Looks just like a normal Galaxy tool!
 
 ![Data-manager-ui.png](images/Data-manager-ui.png)
 
-
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 
 ---
-
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  What does it do?
+# What does it do?
 
 The output of the data manager is a JSON description of the new data table entry
 
@@ -271,16 +270,17 @@ The index files themselves get placed in the appropriate location.
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 
 ---
+# Data Managers Admin
 
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Data Managers Admin
 .large[
 * Located on the Galaxy's Admin Tab under **Local Data**
 ]
 ![data_managers_tool_list.png](images/data_managers_tool_list.png)
 
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+
 ---
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Data Managers Admin
+# Data Managers Admin
 
 .large[
 * UI tools to fetch reference genomes/build indices
@@ -290,8 +290,9 @@ The index files themselves get placed in the appropriate location.
 ![data_table_ui.png](images/data_table_ui.png)
 
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+
 ---
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Resources / further reading
+# Resources / further reading
 
 .large[
 * Galaxy Wiki Page on Data Managers
@@ -302,9 +303,8 @@ The index files themselves get placed in the appropriate location.
 https://galaxyproject.org/admin/tools/data-managers/
 ]
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+
 ---
-## ![GATC Logo](../shared-images/AdminTraining2016-100.png)  Exercise Time!
-
-
+# Exercise Time!
 
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
