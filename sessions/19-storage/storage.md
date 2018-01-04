@@ -84,10 +84,10 @@ Provide a way to conveniently share Galaxy datasets within a group of Galaxy use
 In `galaxy.ini`:
 
 * `user_library_import_dir`
+  * Allows authorized non-administrators to upload a directory of files.
   * Directory must contain sub-directories named the same as user's email.
-  * Allows users to browse and import from the given folder.
   * Works well in combination with `ftp_upload_dir`.
-* `allow_library_path_paste`
+* `allow_path_paste`
   * Admin-only, allows importing from any path that the Galaxy's user has access to.
 
 ???
@@ -123,6 +123,7 @@ It specifies which folder admins may browse and import from.
 class: normal
 
 ```shell
+source /srv/galaxy/venv/bin/activate
 python ./scripts/cleanup_datasets/cleanup_datasets.py ./config/galaxy.ini -d 10 -5 -r ${GALAXY_ROOT} >> ./scripts/cleanup_datasets/purge_folders.log
 ```
 
@@ -139,6 +140,7 @@ flag	| short |	description
 --purge_folders |	-5 |	purge deleted library folders
 --delete_datasets |	-6 |	mark deletable datasets as deleted and purge associated dataset instances
 
+Note that only a single numbered flag can be used at a time.
 ---
 # Bash wrappers
 
@@ -219,10 +221,11 @@ proper:
 
 Direct:
 - Disk
-- Amazon S3/Openstack Swift
+- Amazon S3/OpenStack Swift
 - Experimental
   - Azure
   - iRODS
+  - CloudBridge → S3, Swift, Azure, GCE
 
 Nested:
 - Hierarchical

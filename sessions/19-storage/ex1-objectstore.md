@@ -14,7 +14,7 @@ Alternatively, you may wish to write new datasets to more than one filesystem. F
 
 ## Section 1 - Hierarchical Object Store
 
-First, note that your Galaxy datasets have been created thus far in the directory `/srv/galaxy/data`. This is because of the setting `file_path` in `galaxy.ini`. We can instruct Galaxy to place new datasets in a different place, but still look in `/srv/galaxy/data` for old datasets.
+First, note that your Galaxy datasets have been created thus far in the directory `/srv/galaxy/data/datasets`. This is because of the setting `file_path` in `galaxy.ini`. We can instruct Galaxy to place new datasets in a different place, but still look in `/srv/galaxy/data/datasets` for old datasets.
 
 Configure Galaxy to recognize an object store configuration file by editing `galaxy.ini` as usual:
 
@@ -46,7 +46,7 @@ Next, create the new config file: `/srv/galaxy/config/object_store_conf.xml`:
 </object_store>
 ```
 
-Then restart your Galaxy server with `sudo supervisorctl restart gx:*`.
+Then restart your Galaxy server with `sudo supervisorctl restart galaxy:*`.
 
 Create new jobs and you'll find that they are created in the folder `/srv/galaxy/newdata`. However, older datasets in `/srv/galaxy/data` are still accessible:
 

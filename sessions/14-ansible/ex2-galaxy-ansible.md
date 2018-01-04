@@ -233,6 +233,12 @@ machine we installed it on. The playbook has setup the PostgreSQL database,
 Nginx proxy server, ProFTPD ftp server, Galaxy, CVMFS for reference data, and
 the necessary configurations.
 
+In regard to the _opinionated_ model of reusing existing playbooks, note that
+this playbook configured Supervisor programs for Galaxy to be prefixed with
+`galaxy` instead of `gx` as we have been using thus far. So going forward,
+replace any stale references to `supervisorctl restart gx:` with
+`supervisorctl restart galaxy:`.
+
 ## Section 2 - Using CVMFS for reference data (time permitting)
 
 One particularly nice aspect of the the system that we built is that is comes
