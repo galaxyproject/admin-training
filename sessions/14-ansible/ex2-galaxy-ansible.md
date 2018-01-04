@@ -141,7 +141,6 @@ galaxy_admin_pw: admin18
 galaxy_root_dir: /srv/galaxy
 galaxy_server_dir: "{{ galaxy_root_dir }}/server"
 galaxy_venv_dir: "{{ galaxy_root_dir }}/venv"
-galaxy_data: "{{ galaxy_root_dir }}/data"
 galaxy_mutable_data_dir: "{{ galaxy_data }}"
 proftpd_files_dir: "{{ galaxy_data }}/ftp"
 galaxy_config_dir: "{{ galaxy_root_dir }}/config"
@@ -162,11 +161,13 @@ galaxy_restart_handler_enabled: True
 
 galaxy_config:
   "app:main":
+    database_connection: "{{ galaxy_db }}"
     file_path: "{{ galaxy_data }}/datasets"
     new_file_path: "{{ galaxy_data }}/tmp"
     galaxy_data_manager_data_path: "{{ galaxy_data }}/tool-data"
     job_config_file: "{{ galaxy_job_conf_path }}"
     ftp_upload_dir: "{{ proftpd_files_dir }}"
+    ftp_upload_site: ftp://[server IP address]
     tool_data_table_config_path: "{{ tool_data_table_config_path }}"
     len_file_path: "{{ len_file_path }}"
   "uwsgi":
@@ -210,13 +211,37 @@ Now it's just a matter of running:
 `ansible-playbook -i inventory galaxy.yml`
 
 The Ansible script will run and display what it's doing as it does (it's a good
-idea to run it in a _screen_ since networks are sometimes flaky).
+idea to run it in a _screen_ since networks are sometimes flaky). It should
+take about 15 minutes for the playbook to run to completion.
 
-Once the playbook has completed its run, let's reboot the machine (with `sudo
-reboot` for all the changes to take effect) and we can then access Galaxy on the
-machine we installed it on. The playbook has setup the PostgreSQL database, Nginx
-proxy server, ProFTPD ftp server, Galaxy, CVMFS for reference data, and the
-necessary configurations.
+Once the playbook has completed its run, we can then access Galaxy on the
+machine we installed it on. The playbook has setup the PostgreSQL database,
+Nginx proxy server, ProFTPD ftp server, Galaxy, CVMFS for reference data, and
+the necessary configurations.
+
+## Section 2 - Using CVMFS for reference data (time permitting)
+
+One particularly nice aspect of the the system that we built is that is comes
+configured with a Cern Virtual Macine File System (CVMFS) for Galaxy's reference
+data. This file system represents an additional method for obtaining reference
+data for a Galaxy installation and tends to be the simplest for getting a large
+amount of data readily available.
+
+So how does it work? The Galaxy community hosts a number of geographically
+distributed replicas of the read-only file system that clients can simply
+mount locally. CVMFS software then streams and caches the requested data locally
+for the tools to use.
+
+Give it a try by navigating to `/cvmfs/data.galaxyproject.org` and exploring
+the contents of those folders. You can also install `bwa` tool for example in
+Galaxy, upload a _fastqsanger_ file, and observe the list of available built-in
+genomes. Pretty cool given we didn't have to set any of it up by hand!
+
+How is it configured though? It's pretty easy to check and get all the details
+for the setup by inspecting the set of Ansible tasks used to configure it - an
+immediate example of the benefits of using code to manage infrastructure:
+https://github.com/galaxyproject/ansible-galaxy-extras/blob/master/tasks/cvmfs_client.yml
+
 
 ## So, what did we learn?
 
