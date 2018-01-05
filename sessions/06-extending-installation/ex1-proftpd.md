@@ -4,7 +4,7 @@
 
 # Allow users to upload data via FTP - Exercise.
 
-#### Author: Nate Coraor. 2017
+#### Author: Nate Coraor (2017), Abdulrahman Azab (2018)
 
 ## Introduction
 
@@ -58,7 +58,7 @@ LoadModule mod_sql_passwd.c
 
 Then, save and quit your editor.
 
-Next, verify that your Galaxy user's UID and GID are `999`. You'll need this for the next config file:
+Next, get your Galaxy user's UID and GID. You'll need this for the next config file:
 
 ```console
 $ id galaxy
@@ -138,7 +138,7 @@ SQLPasswordEncoding             base64
 # See http://dev.list.galaxyproject.org/ProFTPD-integration-with-Galaxy-td4660295.html
 SQLPasswordUserSalt             sql:/GetUserSalt
 
-# Define a custom query for lookup that returns a passwd-like entry. Replace 999 with the UID and GID of the user running the Galaxy server
+# Define a custom query for lookup that returns a passwd-like entry. Replace '999' with the UID and GID of the user running the Galaxy server
 SQLUserInfo                     custom:/LookupGalaxyUser
 SQLNamedQuery                   LookupGalaxyUser SELECT "email, (CASE WHEN substring(password from 1 for 6) = 'PBKDF2' THEN substring(password from 38 for 69) ELSE password END) AS password2,999,999,'/srv/galaxy/ftp/%U','/bin/bash' FROM galaxy_user WHERE email='%U'"
 
@@ -176,6 +176,12 @@ ftp_upload_site = galaxy.example.org
 Then, save and quit your editor, and restart Galaxy with `CTRL+C` followed by `sudo -Hu galaxy galaxy` or `sudo -Hu galaxy galaxy --stop-daemon && sudo -Hu galaxy galaxy --daemon`
 
 ## Section 4 - Test FTP
+
+First of all you create an FTP directory for each Galaxy user that will use FTP
+
+```console
+sudo -u galaxy mkdir /srv/galaxy/ftp/<galaxy-user-email>
+```
 
 If you have an FTP client on your system you can try it out now. Your username is the email address you registered in Galaxy with. If you don't, you can use the command line `ftp` client on your training instance. You can find a sample BED format file at `/srv/galaxy/server/test-data/1.bed`
 
