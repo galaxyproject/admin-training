@@ -19,7 +19,8 @@ Built slides have [an index](https://galaxyproject.github.io/dagobah-training/20
 ### Location
 
 Building: [Ole Johan Dahls hus, University of Oslo](https://www.uio.no/english/about/getting-around/areas/gaustad/ga06/)
-Room: [Seminar room Prolog](https://tp.uio.no/timeplan/?type=room&area=GA&building=GA06&id=GA062465&week=02&ar=2018)
+
+Room: [Seminar room Prolog (Room number: 2465, 2nd floor)](https://tp.uio.no/timeplan/?type=room&area=GA&building=GA06&id=GA062465&week=02&ar=2018&lang=en)
 
 ## Timetable
 
