@@ -48,7 +48,7 @@ gpg: key 9735427B: public key "Launchpad PPA for Galaxy Project" imported
 gpg: Total number processed: 1
 gpg:               imported: 1  (RSA: 1)
 OK
-$ sudo apt update
+$ sudo apt-get update
 Hit:1 http://au.archive.ubuntu.com/ubuntu xenial InRelease
 Hit:2 http://au.archive.ubuntu.com/ubuntu xenial-updates InRelease
 Hit:3 http://au.archive.ubuntu.com/ubuntu xenial-backports InRelease
@@ -60,17 +60,13 @@ Get:8 http://ppa.launchpad.net/galaxyproject/nginx/ubuntu xenial/main i386 Packa
 Get:9 http://ppa.launchpad.net/galaxyproject/nginx/ubuntu xenial/main Translation-en [1,660 B]
 Fetched 24.7 kB in 2s (11.7 kB/s)
 Reading package lists... Done
-Building dependency tree
-Reading state information... Done
-62 packages can be upgraded. Run 'apt list --upgradable' to see them.
 $
 ```
 
 Then install nginx:
 
 ```console
-
-$ sudo apt install nginx-extras
+$ sudo apt-get install nginx-extras
 Reading package lists... Done
 Building dependency tree
 Reading state information... Done
@@ -113,14 +109,14 @@ Visit `http://<your_ip>/` and you should see the Ubuntu nginx default page.
 
 Now have a look at the configuration files in `/etc/nginx`. Debian (and Ubuntu) lay out nginx and Apache's configuration directories in consistent ways:
 
-- `nginx.conf`: Main Apache config file. Note the `include` directories
+- `nginx.conf`: Main nginx config file. Note the `include` directives
 - `conf.d/*.conf`: Included config files
 - `sites-available/*`: Repository of available sites
 - `sites-enabled/*.conf`: Symlinks to `sites-available/` files
 
 nginx comes with everything needed to make it serve as a reverse proxy right out of the box, no additional modules need to be installed or enabled.
 
-We need to create a config for the Galaxy "site". Create the file `sites-available/galaxy` as the `root` user (e.g. with `sudo -e sites-available/galaxy`). Unlike Apache, nginx does not have a "default" virtualhost, you have to create one using the `server { ... }` block:
+We need to create a config for the Galaxy "site". Create the file `sites-available/galaxy` as the `root` user (e.g. with `sudo -e /etc/nginx/sites-available/galaxy`). Unlike Apache, nginx does not have a "default" virtualhost, you have to create one using the `server { ... }` block:
 
 ```nginx
 upstream galaxy {
@@ -142,9 +138,14 @@ server {
 }
 ```
 
+The `_` value of `server_name` is an invalid domain name used on purpose as a catch-all because it never intersects with any real server name. This works because when nginx decides which server should process a request, it checks the header field "Host" to determine which server the request should be routed to. If its value does not match any server name, then nginx will route the request to the default server for this port, which by default is the first one.
+
+The X-Forwarded-Host and X-Forwarded-For HTTP headers are de-facto standard headers used by proxy servers for identifying respectively the original host requested by the client in the Host HTTP request header and the originating IP address of the client.
+
 Ubuntu's Apache packages come with "enable" and "disable" commands for enabling and disable sites and modules. In reality, these simply create symlinks from the `sites-enabled/` directory to the `sites-available/` directory. With nginx you have to create/remove the symbolic links yourself. We want to disable the "default" site and enable the Galaxy site we just created:
 
 ```console
+$ cd /etc/nginx/
 $ sudo rm sites-enabled/default
 $ sudo ln -s ../sites-available/galaxy sites-enabled/galaxy
 ```

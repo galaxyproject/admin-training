@@ -28,7 +28,7 @@ Extra features:
 Some of these features are available directly in uWSGI (covered in _Improving the web serving experience with uWSGI_)
 
 ---
-# Apache
+# Apache HTTP Server
 
 - The most popular web server
 - Many authentication plugins written for Apache
@@ -41,7 +41,7 @@ Some of these features are available directly in uWSGI (covered in _Improving th
 - Widely used by large sites (third most popular web server)
 - Can offload both uploads and downloads
 
-I recommend nginx unless you have a specific need for Apache
+We recommend nginx unless you have a specific need for Apache
 
 ---
 # nginx "flavors"
