@@ -265,7 +265,7 @@ pulsar: added process group
 Verify that Pulsar has started by looking at pulsar's log file:
 
 ```console
-$ more /srv/pulsar/var/uwsgi.log
+$ less /srv/pulsar/var/uwsgi.log
 os: Linux-4.4.0-45-generic #66-Ubuntu SMP Wed Oct 19 14:12:37 UTC 2016
 nodename: gat2016
 machine: x86_64
@@ -402,12 +402,16 @@ Now, restart your Galaxy server:
 
 ```console
 $ sudo supervisorctl restart galaxy:
-gx:handler0: stopped
-gx:handler1: stopped
-gx:galaxy: stopped
-gx:galaxy: started
-gx:handler0: started
-gx:handler1: started
+galaxy:handler0: stopped
+galaxy:handler1: stopped
+galaxy:handler2: stopped
+galaxy:handler3: stopped
+galaxy:galaxy_web: stopped
+galaxy:galaxy_web: started
+galaxy:handler0: started
+galaxy:handler1: started
+galaxy:handler2: started
+galaxy:handler3: started
 ```
 
 **Part 2 - Verify**
