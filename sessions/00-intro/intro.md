@@ -93,7 +93,7 @@ We would like to thank:
 
 The computing resources for this training have been provided by USIT via the [UH-IaaS Cloud](http://www.uh-iaas.no/)
 
-You will each receive an IP address of your own instance. Put it somewhere easy to copy/paste.
+Find the IP address for your instance [here](https://github.com/galaxyproject/dagobah-training/blob/2018-oslo/sessions/00-intro/vms.md). Put it somewhere easy to copy/paste.
 
 ---
 # Future events
