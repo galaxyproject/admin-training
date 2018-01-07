@@ -1,3 +1,4 @@
+![logo.png](docs/shared-images/logo.png)
 # Galaxy Administrators Course
 
 **Oslo, 8th to 12th January 2018**
