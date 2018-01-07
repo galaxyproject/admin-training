@@ -64,7 +64,7 @@ Queries slower than this threshold (in s) will be logged at debug level
 `slow_query_log_threshold = 0` (5000 on Main)
 
 ---
-# Tuning - Install database
+# Tuning - TS install database
 
 Galaxy can track Tool Shed data in a separate DB.
 
@@ -82,7 +82,7 @@ All other database config options but prefixed with `install_` are also availabl
 ---
 # Migrations
 
-Changes in the DB model are captured incrementally in the form of [atomic scripts](https://github.com/galaxyproject/galaxy/tree/dev/lib/galaxy/model/migrate/versions).
+Changes in the Galaxy DB model are captured incrementally in the form of [atomic scripts](https://github.com/galaxyproject/galaxy/tree/dev/lib/galaxy/model/migrate/versions).
 
 Each script can both upgrade and downgrade a DB.
 

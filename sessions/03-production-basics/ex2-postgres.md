@@ -10,16 +10,10 @@
 
 **Part 1 - Install PostgreSQL**
 
-Install PostgreSQL from apt. In the case of the training instances, it has already been installed. However, it cannot hurt to try to install it anyway:
+Install PostgreSQL on your Galaxy VM:
 
 ```console
-$ sudo apt install postgresql
-Reading package lists... Done
-Building dependency tree       
-Reading state information... Done
-postgresql is already the newest version (9.5+173).
-0 to upgrade, 0 to newly install, 0 to remove and 60 not to upgrade.
-$
+$ sudo apt-get install postgresql
 ```
 
 ## Section 2 - Add PostgreSQL user and database
@@ -65,7 +59,8 @@ The `?host=/var/run/postgresql` portion of the database URI instructs the databa
 If you are already running Galaxy, hit `Ctrl+C` to stop it (or `sudo -Hu galaxy galaxy --stop-daemon` if running as a daemon), then start it again with `sudo -Hu galaxy galaxy`. It will first fetch the `psycopg2` wheel (the Python PostgreSQL library), then proceed to populate the database from scratch as it did the first time with SQLite.
 
 ```console
-$ sh run.sh
+$ sudo -Hu galaxy galaxy
+...
 Collecting psycopg2==2.6.1 (from -r /dev/stdin (line 1))
   Downloading https://wheels.galaxyproject.org/packages/psycopg2-2.6.1-cp27-cp27mu-manylinux1_x86_64.whl (2.0MB)
     100% |████████████████████████████████| 2.0MB 1.3MB/s
