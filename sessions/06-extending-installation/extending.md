@@ -129,7 +129,7 @@ In `galaxy.ini`:
 class: normal
 # Exercise
 
-* [Exercise - Configuring FTP](https://github.com/gvlproject/dagobah-training/blob/master/sessions/06-extending-installation/ex1-proftpd.md)
+* [Exercise - Configuring FTP](https://github.com/galaxyproject/dagobah-training/blob/2018-oslo/sessions/06-extending-installation/ex1-proftpd.md)
 
 ---
 
