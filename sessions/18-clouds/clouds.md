@@ -6,8 +6,6 @@ class: special, center, middle
 # All these Clouds
 ## It's positively meterological..
 
-**Slides: @Slugger70, @nuwang, @afgane**
-
 .normal[
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject] ]
 ---
@@ -26,11 +24,10 @@ class: left, middle, center
 * Galaxy in the Clouds?
 * AWS and other Clouds
 * CloudMan and CloudLaunch (& cloud agnosticisim)
-* CloudMan Galaxy
+* Genomics Virtual Lab
 * Architecture
 * Persistence
-* Taking it further - The GVL
-* Other cloud usage - burst!
+* Integration with the cloud: CloudBridge
 ]
 
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
@@ -77,13 +74,13 @@ What do you do now?
 # Available Clouds
 
 .large[
-* Amazon Web Services
+* Commercial: Amazon Web Services, Google Compute Engine, Microsoft Azure
   * Pay-per-time/machine etc.
   * Reasonably priced, but keep an eye on the costs
   * Large range of machine (i.e., instance) types
   * Education grants
-* OpenStack
-  * Open source community project
+* Academic:
+  * OpenStack: open source community project
   * NeCTAR in Australia, Jetstream in USA, CLIMB in UK, lots of others
   * Some free for researchers (NeCTAR, CLIMB), some with project grants (Jetstream)
 ]
@@ -122,11 +119,18 @@ What do you do now?
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 
 ---
+# Taking it Further: Genomics Virtual Lab (GVL)
+
+![GVL-evolution.png](images/GVL-evolution.png)
+
+.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+
+---
 # CloudLaunch
 
 .large[
 * CloudLaunch is a system for launching Galaxy (and other applications) on cloud resources
-  * Public servers available at [launch.usegalaxy.org](https://launch.usegalaxy.org) and [launch.genome.edu.au](https://launch.genome.edu.au)
+  * Public server available at [launch.usegalaxy.org](https://launch.usegalaxy.org)
   * You can also install and run your own
   * Fill in the credential details, choose a location and machine size
   * Press go!
@@ -141,15 +145,26 @@ What do you do now?
 # Launch Demo
 
 .large[
-* Launch a Galaxy on the Cloud in NeCTAR
-  * Similar process to AWS (but free for me)
-Today, we'll be using the all-new-still-in-beta CloudLaunch
-  * [beta.launch.usegalaxy.org](beta.launch.usegalaxy.org)
-  * [betalaunch.genome.edu.au](betalaunch.genome.edu.au)
-* Walk through what is happening
+1. **End-user** perspective
+2. Application **developer** perspective
+3. Application **deployer** perspective
+
+https://launch.usegalaxy.org/
 ]
 
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+
+---
+# CloudLaunch references
+
+.large[
+CloudLaunch server
+  * github.com/galaxyproject/cloudlaunch/
+  * github.com/CloudVE/djcloudbridge
+
+CloudLaunch	UI
+  * github.com/galaxyproject/cloudlaunch-ui/
+]
 
 ---
 # Cloud Manager
@@ -290,7 +305,7 @@ NodeName=w3 NodeAddr=45.113.232.93 CPUs=8 RealMemory=32176 Weight=5 State=UNKNOW
 * We already saw the new CloudLaunch
   * No longer Galaxy-only: any application and multiple clouds can be plugged in
 * It is powered by CloudBridge
-  * [http://cloudbridge.readthedocs.io/](http://cloudbridge.readthedocs.io/en/latest/)
+  * [http://cloudbridge.cloudve.org/](http://cloudbridge.cloudve.org/)
   * An abstraction layer for mature clouds
   * Will let the new version of CloudMan run on any cloud
   * Therefore, we can use our Galaxy images on any cloud
@@ -302,15 +317,30 @@ NodeName=w3 NodeAddr=45.113.232.93 CPUs=8 RealMemory=32176 Weight=5 State=UNKNOW
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 
 ---
-# Taking it Further: GVL
+# CloudBridge: a single API for multi-cloud computing
 
-![GVL-evolution.png](images/GVL-evolution.png)
-
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.medium[
+1. Offer a uniform API irrespective of the underlying provider
+  * No special casing of application code
+  * Simpler code
+2. Provide a set of conformance tests for all supported clouds
+  * No need to test against each cloud
+  * Goal of “write-once-run-anywhere”
+3. Focus on mature clouds with a required minimal set of features
+  * Enables 1 and 2
+4. Be as thin as possible
+  * Keep the code-simple and reuse existing work ⟶ greater reliability, reduced development time
+]
 
 ---
-# GVL applications
+# CloudBridge design
 
-![GVL-dash.png](images/GVL-dash.png)
-
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.large[
+API revolves around 3 concepts
+  * Providers
+    * An entry point for a service, encapsulating a connection
+  * Services
+    * Exposes provider functionality/feature sets
+  * Resources
+    * A remote cloud resource, such a Machine Instance, Volume etc.
+]
