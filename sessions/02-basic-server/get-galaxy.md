@@ -34,18 +34,6 @@ Even when you plan any of the above sometimes you can leverage pre-configured
 or use [Cloudlaunch](https://launch.usegalaxy.org).
 
 ---
-# Requirements
-
-- Any Linux or Mac OS
-- Python 2.7
-
-Optional
-  - samtools (metadata etc.)
-  - Git code versioning system
-  - GNU Make + gcc to compile and install tool dependencies
-  - Additional requirements for shipped tools
-
----
 # Get logged in to your VM
 
 For OS X/Linux/Windows w/ Linux Subsystem or OpenSSH:
@@ -62,13 +50,31 @@ For PuTTY on Windows:
 - (Tunnel) Destination: 127.0.0.1:8080
 
 ---
+# Requirements
+
+- Any Linux or Mac OS
+- Python 2.7
+
+Optional
+  - samtools (metadata etc.)
+  - Git code versioning system
+  - GNU Make + gcc to compile and install tool dependencies
+  - Additional requirements for shipped tools
+
+Run:
+```shell
+$ sudo apt-get install git python samtools
+```
+
+---
 # Clone the repository
 
 1. Check what is the latest [release](https://docs.galaxyproject.org/en/master/releases/index.html)
 1. Run
-```shell
-$ git clone -b release_17.09 https://github.com/galaxyproject/galaxy.git
-```
+   ```shell
+   $ git clone -b release_17.09 https://github.com/galaxyproject/galaxy.git
+   ```
+
 Release is defined by the branch name: `release_17.09` see the [branch list](https://github.com/galaxyproject/galaxy/branches/all))
 
 Without specifying branch during clone you are running the *development* version of Galaxy.
@@ -80,7 +86,6 @@ For the rolling stable release: `git checkout master`<sup>[1]</sup>.
 ---
 # Start Galaxy
 
-1. `$ sudo apt-get install python`
 1. `$ cd galaxy/`
 1. `$ ./run.sh`
 1. Visit `http://localhost:8080` with your laptop's web browser
