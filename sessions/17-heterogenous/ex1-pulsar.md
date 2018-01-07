@@ -4,7 +4,7 @@
 
 # Running jobs on remote resources using Pulsar - Exercise
 
-#### Authors: Nate Coraor. 2017
+#### Authors: Nate Coraor. 2017, Marius van den Beek. 2018
 
 ## Section 1 - Pulsar installation
 
@@ -102,8 +102,6 @@ Installing collected packages: webob, six, pyyaml, psutil, paste, PasteDeploy, P
 Successfully installed PasteDeploy-1.5.2 PasteScript-2.0.2 docutils-0.12 galaxy-lib-16.10.10 paste-2.0.3 psutil-4.4.2 pulsar-app-0.7.3 pyyaml-3.12 six-1.10.0 webob-1.6.2
 ```
 
-If `psutil` fails to compile due to a missing header `Python.h`, that's because the `python-dev` package has not been installed yet. Do that with `sudo apt-get install python-dev` as the `ubuntu` user and rerun the `pip install` above (as the `pulsar` user with the virtualenv activated).
-
 We'll be using a few optional Pulsar features which have additional dependencies. Install these dependencies now with:
 
 ```console
@@ -197,7 +195,7 @@ We've referenced a number of new directories in `app.yml`, and a new config file
 $ mkdir /srv/pulsar/var
 ```
 
-The subdirectories will be created automatically. The latter config file needs to be created. Luckily, it's the same format as Galaxy's dependency resolver config. We want to instruct Pulsar to use Conda to resolve dependencies, and we want to automatically install Conda and any missing dependencies at runtime.
+The subdirectories will be created automatically. The latter config file needs to be created. Luckily, it's the same format as Galaxy's dependency resolver config. We want to instruct Pulsar to use Conda to resolve dependencies, and we want to automatically install Conda and any missing dependencies at runtime. **Note that automatically installing tool dependencies is unstable if conda attempts to install the same dependency multiple times, this should be avoided if a pulsar server can receive more than 1 job at a time by preinstalling the dependencies. We will ignore this for now.**
 
 Create a new file `dependency_resolvers_conf.xml` in an editor and add the following contents:
 
@@ -264,10 +262,10 @@ $ sudo supervisorctl update
 pulsar: added process group
 ```
 
-Verify that Pulsar has started with Supervisor's log `tail` function:
+Verify that Pulsar has started by looking at pulsar's log file:
 
 ```console
-$ sudo supervisorctl tail pulsar
+$ more /srv/pulsar/var/uwsgi.log
 os: Linux-4.4.0-45-generic #66-Ubuntu SMP Wed Oct 19 14:12:37 UTC 2016
 nodename: gat2016
 machine: x86_64
@@ -403,7 +401,7 @@ Finally, we need to map a tool to the Pulsar destination. Do so by commenting ou
 Now, restart your Galaxy server:
 
 ```console
-$ sudo supervisorctl restart gx:*
+$ sudo supervisorctl restart galaxy:
 gx:handler0: stopped
 gx:handler1: stopped
 gx:galaxy: stopped
@@ -414,7 +412,7 @@ gx:handler1: started
 
 **Part 2 - Verify**
 
-We can test that the connection is working by running our favorite Multicore Tool. The input to the tool does not matter in this case. Simply run the tool on any input while watching the Galaxy job handler logs (`tail -f /srv/galaxy/server/handler?.log`):
+We can test that the connection is working by running our favorite Multicore Tool. The input to the tool does not matter in this case. Simply run the tool on any input while watching the Galaxy job handler logs (`tail -f /srv/galaxy/log/handler*.log`):
 
 ```
 galaxy.jobs DEBUG 2016-11-06 12:38:14,985 (29) Working directory for job is: /srv/galaxy/server/database/jobs/000/29
