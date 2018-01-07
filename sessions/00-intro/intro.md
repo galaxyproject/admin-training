@@ -75,7 +75,6 @@ Almost all of this content is new or revised, there may be sessions that are too
 ---
 # Thanks
 
-- **Abdulrahman Azab**
 - Ståle Nygård
 - Eivind Hovig
 - Kjell Petersen
