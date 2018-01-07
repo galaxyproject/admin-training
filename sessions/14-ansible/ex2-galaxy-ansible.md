@@ -56,7 +56,7 @@ use `ansible-galaxy` command to install all the dependent roles:
 ```
   git clone https://github.com/ARTbio/GalaxyKickStart
   cd GalaxyKickStart
-  ansible-galaxy install -r requirements_roles.yaml -p roles --force
+  ansible-galaxy install -r requirements_roles.yml -p roles --force
 ```
 
 The last command will install all the dependent roles the playbook uses into the
