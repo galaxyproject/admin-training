@@ -53,7 +53,7 @@ Timetable with sessions and material will be continously updated towards the wor
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
 | 09:00 | Welcome and questions |  | All |
-| 09:15 | Users, Groups, and Quotas | [Slides](https://galaxyproject.github.io/dagobah-training/2018-oslo/07-users-groups-quotas/users-groups-quotas.html) | (B) |
+| 09:15 | Users, Groups, and Quotas | [Slides](http://galaxyproject.github.io/training-material/topics/admin/tutorials/users-groups-quotas/slides.html) | (B) |
 | 10:45 | **Morning break** | | |
 | 11:00 | Updating tools and supporting multiple versions of tools | [Exercise](sessions/04-tool-shed/ex-tool-management.md) | (M) |
 | 12:30 | **Lunch** | | |
