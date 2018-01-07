@@ -153,9 +153,8 @@ You can load remote content to this iframe (blog, existing presentation, etc.).
 ---
 # Make yourself an administrator
 
-* Create an account (User -> Register) <sup>[1]</sup>
-* Create a user using Galaxy interface.
-* Modify `galaxy.ini` to include `admin_users = your@ema.il`.
+* Create a user account using the Galaxy UI (Login or Register -> Register) <sup>[1]</sup>
+* Modify `config/galaxy.ini` to include e.g. `admin_users = foo@example.org`
 * (Re)start Galaxy.
 
 .footnote[<sup>[1]</sup> Registering in the UI *before* setting `admin_users` is not strictly necessary, but is the best security practice]
