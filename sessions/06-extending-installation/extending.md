@@ -5,7 +5,7 @@ class: inverse, middle, large
 class: special
 # Extending basic installation
 
-slides by @dblankenberg
+slides by @dblankenberg and @abdulrahmanazab
 
 .footnote[\#usegalaxy / @galaxyproject]
 
@@ -152,9 +152,13 @@ In `galaxy.ini`:
 class: normal
 # Exercise: Configuring SMTP for Bug Reports
 
+Install a mail tranfer agent (MTA):
+* Here is a tutorial on how to [install Postfix MTA](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-postfix-as-a-send-only-smtp-server-on-ubuntu-14-04)
+
 In `galaxy.ini`:
 * set `smtp_server = localhost:25`
 * set `error_email_to = you@email.tld` (use your email)
+* Run a Galaxy tool the produces an error
 * attempt to send a bug report
 
 ---
