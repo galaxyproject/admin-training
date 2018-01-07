@@ -15,7 +15,7 @@ Built slides have [an index](https://galaxyproject.github.io/dagobah-training/20
 * (M)arius van den Beek - ELIXIR Galaxy WG, Institute Curie, Paris, France
 * (N)icola Soranzo - ELIXIR Galaxy WG, Earlham Institute, UK
 * (E)nis Afgan - Galaxy Project, Johns Hopkins University, USA
-* (A)bdulrahman Azab - ELIXIR Norway, USIT, University of Oslo, NO
+* (A)bdulrahman Azab - ELIXIR Galaxy WG, PRACE, NeIC, USIT, University of Oslo, Norway
 
 ### Location
 
