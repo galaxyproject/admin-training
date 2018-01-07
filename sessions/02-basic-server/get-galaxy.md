@@ -67,9 +67,9 @@ For PuTTY on Windows:
 1. Check what is the latest [release](https://docs.galaxyproject.org/en/master/releases/index.html)
 1. Run
 ```shell
-$ git clone -b release_16.10 https://github.com/galaxyproject/galaxy.git
+$ git clone -b release_17.09 https://github.com/galaxyproject/galaxy.git
 ```
-Release is defined by the branch name: `release_16.10` see the [branch list](https://github.com/galaxyproject/galaxy/branches/all))
+Release is defined by the branch name: `release_17.09` see the [branch list](https://github.com/galaxyproject/galaxy/branches/all))
 
 Without specifying branch during clone you are running the *development* version of Galaxy.
 
