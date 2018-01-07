@@ -75,22 +75,24 @@ Almost all of this content is new or revised, there may be sessions that are too
 ---
 # Thanks
 
-- **Christina Hall**
-- Ben Moran
-- Chris Samuels
+- **Abdulrahman Azab**
+- Ståle Nygård
+- Eivind Hovig
+- Kjell Petersen
+- Sveinung Gundersen
 - **Dave Clements**
 
 ---
 # Hosts
 
 We would like to thank:
-- [Victorian Life Sciences Computation Initiative, University of Melbourne (VLSCI)](http://vlsci.org.au/)
-- [Carlton Connect Initiative, University of Melbourne](https://www.carltonconnect.com.au/)
+- [Department of Informatics, University of Oslo (IFI)](http://www.mn.uio.no/ifi/)
+- [University Center for Information Technology, University of Oslo (USIT)](http://www.usit.uio.no/)
 
 ---
 # Computing resources
 
-The computing resources for this training have been provided by the VLSCI via the [Nectar Cloud](https://nectar.org.au/research-cloud/)
+The computing resources for this training have been provided by USIT via the [UH-IaaS Cloud](http://www.uh-iaas.no/)
 
 You will each receive an IP address of your own instance. Put it somewhere easy to copy/paste.
 
