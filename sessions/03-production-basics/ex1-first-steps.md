@@ -140,9 +140,9 @@ Let's set a few config variables that will be useful for this and upcoming sessi
 file_path = /srv/galaxy/data
 tool_config_file = /srv/galaxy/config/tool_conf.xml,/srv/galaxy/config/shed_tool_conf.xml
 tool_dependency_dir = /srv/galaxy/dependencies
-tool_data_table_config = /srv/galaxy/config/tool_data_table_conf.xml
+tool_data_table_config_path = /srv/galaxy/config/tool_data_table_conf.xml
 shed_tool_data_table_config = /srv/galaxy/config/shed_tool_data_table_conf.xml
-admin_users = your@ema.il
+admin_users = foo@example.org
 data_manager_config_file = /srv/galaxy/config/data_manager_conf.xml
 shed_data_manager_config_file = /srv/galaxy/config/shed_data_manager_conf.xml
 galaxy_data_manager_data_path = /srv/galaxy/tool-data
@@ -171,7 +171,7 @@ In a production server we would set some additional paths to prevent writing to 
 Unlike before, you will now use the `galaxy` script we created to start and stop Galaxy. However, it takes the same arguments as `run.sh` (most notably `--daemon` and `--stop-daemon`). Remember that we need to start the Galaxy server as the new `galaxy` user:
 
 ```console
-$ sudo -Hu galaxy galaxy
+$ sudo -Hu galaxy /srv/galaxy/bin/galaxy
 ```
 
 The `-H` option is used to properly set the HOME environment variable.
