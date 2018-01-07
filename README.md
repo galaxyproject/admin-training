@@ -46,6 +46,7 @@ Timetable with sessions and material will be continously updated towards the wor
 | 16:50 | Extending your installation: FTP, SMTP, and more | [Slides](https://galaxyproject.github.io/dagobah-training/2018-oslo/06-extending-installation/extending.html), [Exercise](sessions/06-extending-installation/ex1-proftpd.md) | (A) |
 | 18:00 | Close Day 1 | | All |
 
+
 #### Tuesday
 **9th January**  - Location
 
@@ -53,17 +54,18 @@ Timetable with sessions and material will be continously updated towards the wor
 | -------- | --------- | --------- | ----------- |
 | 09:00 | Welcome and questions |  | All |
 | 09:15 | Users, Groups, and Quotas | [Slides](https://galaxyproject.github.io/dagobah-training/2018-oslo/07-users-groups-quotas/users-groups-quotas.html) | (B) |
-| 10:30 | Upgrading to a new Galaxy release | [Slides](https://galaxyproject.github.io/dagobah-training/2018-oslo/08-upgrading-release/upgrading.html) | (N) |
-| 11:00 | **Morning break** | | |
-| 11:15 | Updating tools and supporting multiple versions of tools | [Exercise](sessions/04-tool-shed/ex-tool-management.md) | (M) |
+| 10:45 | **Morning break** | | |
+| 11:00 | Updating tools and supporting multiple versions of tools | [Exercise](sessions/04-tool-shed/ex-tool-management.md) | (M) |
 | 12:30 | **Lunch** | | |
 | 13:15 | Improving the web serving experience with uWSGI | [Slides](https://galaxyproject.github.io/dagobah-training/2018-oslo/10-uwsgi/uwsgi.html) [Exercise](sessions/10-uwsgi/ex1-uwsgi.md) | (B) |
 | 14:15 | Controlling Galaxy with systemd and supervisor | [Slides](https://galaxyproject.github.io/dagobah-training/2018-oslo/11-systemd-supervisor/systemd-supervisor.html), [Exercise](sessions/11-systemd-supervisor/ex1-supervisor.md) | (E) |
 | 15:15 | **Afternoon break** | | |
 | 15:30 | Server monitoring and maintenance: Admin UI, Log files, Direct database queries, command line & scripts, what to backup and how | [Slides](https://galaxyproject.github.io/dagobah-training/2018-oslo/12-monitoring-maintenance/monitoring-maintenance.html), [Exercise](sessions/12-monitoring-maintenance/ex1-reports.md) | (B) |
 | 16:30 | Using and configuring external authentication services | [Slides](https://galaxyproject.github.io/dagobah-training/2018-oslo/13-external-auth/external-auth.html), [PAM Auth Exercise](sessions/13-external-auth/ex1-pam-auth.md), [Upstream Auth Exercise](sessions/13-external-auth/ex2-upstream-auth.md) | (N) |
-| 17:45 | Questions and ad-hoc troubleshooting | | All |
-| 18:00 | Close Day 2 | | All |
+| 17:45 | Close Day 2 | | All |
+
+**Free common dinner at 7pm at [Elias mat og sånt](http://www.cafeelias.no/nb/) located downtown.**
+
 
 #### Wednesday
 **10th January**  - Location
@@ -84,7 +86,6 @@ Timetable with sessions and material will be continously updated towards the wor
 | 17:30 | Using public and private cloud compute resources | [Slides](https://galaxyproject.github.io/dagobah-training/2018-oslo/18-clouds/clouds.html) | (E) |
 | 18:00 | Close day 3 | | All |
 
-**We will most likely all go out for dinner together somewhere local tonight**
 
 #### Thursday
 **11th January**  - Location
@@ -109,6 +110,7 @@ Timetable with sessions and material will be continously updated towards the wor
 | -------- | --------- | --------- | ----------- |
 | 09:00 | Welcome and questions |  | All |
 | 09.15 | Uwsgi + mules | | (?) |
+| 10:15 | Upgrading to a new Galaxy release | [Slides](https://galaxyproject.github.io/dagobah-training/2018-oslo/08-upgrading-release/upgrading.html) | (N) |
 | 10:45 | **Morning break** | | |
 | 11.00 | Whats new in Galaxy 18.01? | | (?) |
 | 12:30 | **Lunch** | | |
