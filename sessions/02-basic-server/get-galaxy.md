@@ -83,7 +83,7 @@ For the rolling stable release: `git checkout master`<sup>[1]</sup>.
 1. `$ sudo apt-get install python`
 1. `$ cd galaxy/`
 1. `$ ./run.sh`
-1. visit `http://localhost:8080`1
+1. Visit `http://localhost:8080` with your laptop's web browser
 
 You should see default Galaxy running.
 
