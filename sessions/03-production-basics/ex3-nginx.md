@@ -103,7 +103,7 @@ Processing triggers for ufw (0.35-0ubuntu2) ...
 $
 ```
 
-Visit `http://<your_ip>/` and you should see the Ubuntu nginx default page.
+Visit `http://<your_ip>/` (not localhost) and you should see the Ubuntu nginx default page.
 
 **Part 2 - Basic configuration**
 
@@ -150,7 +150,7 @@ $ sudo rm sites-enabled/default
 $ sudo ln -s ../sites-available/galaxy sites-enabled/galaxy
 ```
 
-After these config changes, nginx must be restarted. Again, unlike Apache, nginx does not have its own command to control the nginx server. It can be restarted with systemd's `systemctl` command: `sudo systemctl restart nginx`. It can also be instructed to reread its configs with `sudo nginx -s reload` but beware: it will not reload if there is a config mistake (these refusals to reload can be discovered in `/var/log/nginx/error.log`). Config can be validated with `sudo nginx -t`.
+After these config changes, nginx must be restarted. Again, unlike Apache, nginx does not have its own command to control the nginx server. It can be restarted with systemd's `systemctl` command: `sudo systemctl restart nginx`. It can also be instructed to reread its configs with `sudo nginx -s reload` (or `sudo systemctl reload nginx`), but beware: it will not reload if there is a config mistake (these refusals to reload can be discovered in `/var/log/nginx/error.log`). Config can be validated with `sudo nginx -t`.
 
 
 ```console
@@ -209,7 +209,7 @@ Next, we modify the previously created `sites-available/galaxy` to include direc
     }
 ```
 
-And restart the server with `sudo systemctl restart nginx`.
+And reload the nginx configuration with `sudo systemctl reload nginx`.
 
 **Part 2 - Serve Galaxy datasets with nginx**
 
