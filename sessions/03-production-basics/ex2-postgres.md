@@ -30,6 +30,13 @@ Next, we need to create an empty database. Once a database exists, Galaxy will p
 $ sudo -Hu postgres createdb -O galaxy galaxy
 ```
 
+Change this 'ident' to 'md5' :
+/var/lib/pgsql/data/pg_hba.conf
+host    all             all             127.0.0.1/32            md5
+host    all             all             ::1/128                 md5
+su - postgres
+pg_ctl reload
+
 We have created a new database with the name `galaxy`.
 
 ## Section 3 - Configure Galaxy
