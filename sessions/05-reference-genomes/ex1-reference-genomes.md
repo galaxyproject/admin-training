@@ -206,7 +206,7 @@ We will be adding a new built-in reference dataset, the _sacCer1_ genome build (
 * Get the reference genome in the FASTA format.
   * From your Galaxy root, as the Galaxy user (e.g. `sudo -Hsu galaxy`):
   ``` bash
-  cd tool-data/
+  cd /srv/galaxy/data/tool-data/
   mkdir -p sacCer1/seq
   cd sacCer1/seq
   wget http://www.bx.psu.edu/~dan/examples/gcc2014/data_manager_workshop/sacCer1/sacCer1.fa
@@ -222,7 +222,7 @@ We will be adding a new built-in reference dataset, the _sacCer1_ genome build (
     can activate the Conda environment that Galaxy uses and look for which
     environment bwa got installed into and activate it:
     ``` console
-    cd $GALAXY_HOME/database/dependencies
+    cd /srv/galaxy/dependencies/
     source _conda/bin/activate
     conda info --envs
     source activate mulled-v1-a1698655ddc683fd2767d127c7c583056e87322876f94e167ba3900da02c1fc4
@@ -263,7 +263,7 @@ We will be adding a new built-in reference dataset, the _sacCer1_ genome build (
 * Now we can use bwa to build the index! Go back to the sacCer1 directory in `tool-data`. From Galaxy root:
 
   ``` bash
-  $ cd tool-data/sacCer1
+  $ cd /srv/galaxy/data/tool-data/sacCer1
   $ mkdir -p bwa_index/sacCer1
   $ cd bwa_index/sacCer1
   $ ln -s ../../seq/sacCer1.fa sacCer1.fa
