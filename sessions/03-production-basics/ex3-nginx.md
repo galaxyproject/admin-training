@@ -235,7 +235,7 @@ Finally, (re)start:
 We can verify that our settings have taken effect, beginning with the compression and caching options. We will use `curl` with the `-D-` option to dump the HTTP headers to standard output.
 
 ```console
-$ curl -D- -o null -s 'http://localhost/static/style/base.css' -H 'Accept-Encoding: gzip, deflate, sdch' -H 'Cache-Control: max-age=0' --compressed
+$ curl -D- -o /dev/null -s 'http://localhost/static/style/base.css' -H 'Accept-Encoding: gzip, deflate, sdch' -H 'Cache-Control: max-age=0' --compressed
 ```
 ```http
 HTTP/1.1 200 OK
