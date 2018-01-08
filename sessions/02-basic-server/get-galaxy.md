@@ -48,7 +48,7 @@ For [PuTTY](http://www.putty.org/) on Windows:
 - Host Name: `<your_ip>`
 - (Tunnel) Source port: 8080
 - (Tunnel) Destination: 127.0.0.1:8080
-- Click "Add"
+- (Tunnel) Click "Add"
 
 ---
 # Requirements
