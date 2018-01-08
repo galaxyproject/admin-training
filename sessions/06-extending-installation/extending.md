@@ -171,7 +171,7 @@ In `galaxy.ini`:
   * `library_import_dir` upload files from configured directory.
   * `allow_library_path_paste` set to True to allow admins to paste any path to upload.
 * Users
-  * `user_library_import_dir` root directory containing sub-directories named by user emails.
+  * `user_library_import_dir` root directory containing sub-directories named by user emails. A common setup is that the value for `user_library_import_dir` is the same as for `ftp_upload_dir` allowing users to upload files via FTP and then import them either in history or data library. 
 * Disabling compressed library archives downloads
   * `disable_library_comptypes` Can be 'zip', 'gz', and 'bz2'
 
