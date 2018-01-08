@@ -78,7 +78,7 @@ There is also a "Galaxy" flavor<sup>[1]</sup> (includes [upload module](https://
 
 If configuring SSL (out of scope for this training), out-of-the-box SSL settings are often insecure!
 
-Use the [Qualys SSL Server Test](https://www.ssllabs.com/ssltest/analyze.html) to check
+Use the [Mozilla SSL config generator](https://mozilla.github.io/server-side-tls/ssl-config-generator/) to create a default config and [Qualys SSL Server Test](https://www.ssllabs.com/ssltest/analyze.html) to check it.
 
 ---
 # uWSGI
