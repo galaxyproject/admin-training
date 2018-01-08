@@ -35,7 +35,7 @@ Timetable with sessions and material will be continously updated towards the wor
 | -------- | --------- | --------- | ----------- |
 | 08:30 | Registration |  |  |
 | 09:15 | Welcome and introduction | [Slides](https://galaxyproject.github.io/dagobah-training/2018-oslo/00-intro/intro.html) | All |
-| 09:30 | Deployment and platform options | [Slides](https://galaxyproject.github.io/dagobah-training/2018-oslo/01-deployment-platforms/choices.html) | (B) |
+| 09:30 | Deployment and platform options | [Slides](http://galaxyproject.github.io/training-material/topics/admin/tutorials/deployment-platforms-options/slides.html) | (B) |
 | 10:00 | Get a basic Galaxy server up and running | [Slides](https://galaxyproject.github.io/dagobah-training/2018-oslo/02-basic-server/get-galaxy.html) | (A) |
 | 10:45 | **Morning break** | | |
 | 11:00 | Galaxy server optional necessities: PostgreSQL and nginx | [First Steps Slides](https://galaxyproject.github.io/dagobah-training/2018-oslo/03-production-basics/production.html), [First Steps Exercise](sessions/03-production-basics/ex1-first-steps.md), [PostgreSQL Slides](https://galaxyproject.github.io/dagobah-training/2018-oslo/03-production-basics/databases.html), [PostgreSQL Exercise](sessions/03-production-basics/ex2-postgres.md),  [nginx/Apache Slides](https://galaxyproject.github.io/dagobah-training/2018-oslo/03-production-basics/webservers.html), [nginx Exercise](sessions/03-production-basics/ex3-nginx.md), [Apache Exercise](sessions/03-production-basics/ex4-apache.md) (for reference)| (N) |
@@ -54,14 +54,14 @@ Timetable with sessions and material will be continously updated towards the wor
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
 | 09:00 | Welcome and questions |  | All |
-| 09:15 | Users, Groups, and Quotas | [Slides](https://galaxyproject.github.io/dagobah-training/2018-oslo/07-users-groups-quotas/users-groups-quotas.html) | (B) |
+| 09:15 | Users, Groups, and Quotas | [Slides](http://galaxyproject.github.io/training-material/topics/admin/tutorials/users-groups-quotas/slides.html) | (B) |
 | 10:45 | **Morning break** | | |
 | 11:00 | Updating tools and supporting multiple versions of tools | [Exercise](sessions/04-tool-shed/ex-tool-management.md) | (M) |
 | 12:30 | **Lunch** | | |
 | 13:15 | Improving the web serving experience with uWSGI | [Slides](https://galaxyproject.github.io/dagobah-training/2018-oslo/10-uwsgi/uwsgi.html) [Exercise](sessions/10-uwsgi/ex1-uwsgi.md) | (B) |
 | 14:15 | Controlling Galaxy with systemd and supervisor | [Slides](https://galaxyproject.github.io/dagobah-training/2018-oslo/11-systemd-supervisor/systemd-supervisor.html), [Exercise](sessions/11-systemd-supervisor/ex1-supervisor.md) | (E) |
 | 15:15 | **Afternoon break** | | |
-| 15:30 | Server monitoring and maintenance: Admin UI, Log files, Direct database queries, command line & scripts, what to backup and how | [Slides](https://galaxyproject.github.io/dagobah-training/2018-oslo/12-monitoring-maintenance/monitoring-maintenance.html), [Exercise](sessions/12-monitoring-maintenance/ex1-reports.md) | (B) |
+| 15:30 | Server monitoring and maintenance: Admin UI, Log files, Direct database queries, command line & scripts, what to backup and how | [Slides](http://galaxyproject.github.io/training-material/topics/admin/tutorials/monitoring-maintenance/slides.html), [Exercise](http://galaxyproject.github.io/training-material/topics/admin/tutorials/monitoring-maintenance/tutorial.html) | (B) |
 | 16:30 | Using and configuring external authentication services | [Slides](https://galaxyproject.github.io/dagobah-training/2018-oslo/13-external-auth/external-auth.html), [PAM Auth Exercise](sessions/13-external-auth/ex1-pam-auth.md), [Upstream Auth Exercise](sessions/13-external-auth/ex2-upstream-auth.md) | (N) |
 | 17:45 | Close Day 2 | | All |
 
@@ -80,7 +80,7 @@ Timetable with sessions and material will be continously updated towards the wor
 | 11:00 | Using Ansible to deploy Galaxy II | [Exercise 2](sessions/14-ansible/ex2-galaxy-ansible.md) | (E) |
 | 12:30 | **Lunch** | | |
 | 13:15 | Exploring the Galaxy job configuration file | [Slides](https://galaxyproject.github.io/dagobah-training/2018-oslo/15-job-conf/job_conf.html) | (N) |
-| 13:50 | Connecting Galaxy to a compute cluster I | [Slides](https://galaxyproject.github.io/dagobah-training/2018-oslo/16-compute-cluster/compute-cluster.html), [Exercise 1](sessions/16-compute-cluster/ex1-slurm.md), [Exercise 2](sessions/16-compute-cluster/ex2-advanced-job-configs.md) | (B) |
+| 13:50 | Connecting Galaxy to a compute cluster I | [Slides](http://galaxyproject.github.io/training-material/topics/admin/tutorials/connect-to-compute-cluster/slides.html), [Exercise](http://galaxyproject.github.io/training-material/topics/admin/tutorials/connect-to-compute-cluster/tutorial.html) | (B) |
 | 15:30 | **Afternoon break** | | |
 | 15:45 | Connecting Galaxy to a compute cluster II |  | (B) |
 | 16:30 | Using heterogeneous compute resources | [Slides](https://galaxyproject.github.io/dagobah-training/2018-oslo/17-heterogenous/heterogeneous.html), [Exercise](sessions/17-heterogenous/ex1-pulsar.md) | (M) |
