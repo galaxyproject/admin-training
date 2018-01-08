@@ -202,11 +202,12 @@ http://www.bx.psu.edu/~dan/examples/gcc2014/data_manager_workshop/fastq/SRR50777
 **Part 3: Add a new reference genome**
 
 We will be adding a new built-in reference dataset, the _sacCer1_ genome build (good old Saccharomyces cerevisiae - beer yeast). We will download the fasta sequence file for it, index it for bwa, and edit all of the appropriate Galaxy `.loc` file.
+It it typically better to place these files under a directory external to the Galaxy server code but for the demonstration purposes today, we are going to place it in the default location, under `$GALAXY_HOME/tool-data`.
 
 * Get the reference genome in the FASTA format.
-  * From your Galaxy root, as the Galaxy user (e.g. `sudo -Hsu galaxy`):
+  * As the Galaxy user (e.g. `sudo -Hsu galaxy`):
   ``` bash
-  cd /srv/galaxy/data/tool-data/
+  cd /srv/galaxy/server/tool-data/
   mkdir -p sacCer1/seq
   cd sacCer1/seq
   wget http://www.bx.psu.edu/~dan/examples/gcc2014/data_manager_workshop/sacCer1/sacCer1.fa
@@ -263,14 +264,14 @@ We will be adding a new built-in reference dataset, the _sacCer1_ genome build (
 * Now we can use bwa to build the index! Go back to the sacCer1 directory in `tool-data`. From Galaxy root:
 
   ``` bash
-  $ cd /srv/galaxy/data/tool-data/sacCer1
-  $ mkdir -p bwa_index/sacCer1
-  $ cd bwa_index/sacCer1
-  $ ln -s ../../seq/sacCer1.fa sacCer1.fa
+  $ cd /srv/galaxy/server/tool-data/sacCer1
+  $ mkdir bwa_index
+  $ cd bwa_index
+  $ ln -s ../seq/sacCer1.fa sacCer1.fa
   $ bwa index sacCer1.fa
   $ ls -lh
   total 41576
-  lrwxr-xr-x  1 ea  staff    20B Dec 15 15:20 sacCer1.fa -> ../../seq/sacCer1.fa
+  lrwxr-xr-x  1 ea  staff    20B Dec 15 15:20 sacCer1.fa -> ../seq/sacCer1.fa
   -rw-r--r--  1 ea  staff    14B Dec 15 15:20 sacCer1.fa.amb
   -rw-r--r--  1 ea  staff   547B Dec 15 15:20 sacCer1.fa.ann
   -rw-r--r--  1 ea  staff    12M Dec 15 15:20 sacCer1.fa.bwt
@@ -278,7 +279,7 @@ We will be adding a new built-in reference dataset, the _sacCer1_ genome build (
   -rw-r--r--  1 ea  staff   5.8M Dec 15 15:20 sacCer1.fa.sa
   ```  
 * We must now add it to the `.loc` file. Add the following line to the end of
-  the *tool-data/bwa_mem_index.loc* file. Remember to use TABs.
+  the *tool-data/bwa_mem_index.loc* file. Remember to use TABs (*:set noexpandtab* in vim).
 
   ```
   sacCer1     sacCer1 S. cerevisiae Oct. 2003 (SGD/sacCer1) (sacCer1) /srv/galaxy/server/tool-data/sacCer1/bwa_index/sacCer1/sacCer1.fa
