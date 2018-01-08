@@ -180,6 +180,7 @@ In `galaxy.ini`:
 class: normal
 # Integrating Custom Biostars site
 
+[Biosters](https://www.biostars.org) is a forum software for Q&A in life sciences
 In `galaxy.ini`:
 * `biostar_key` shared key with Biostar instance.
 * `biostar_key_name` Cookie parameter name for storing shared key.
