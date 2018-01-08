@@ -96,6 +96,24 @@ You should see default Galaxy running.
 .footnote[Note that first startup needs internet connection and takes longer than the subsequent ones.]
 
 ---
+# Locale issues when starting Galaxy?
+
+Galaxy and the dependent programs requires US locale so if you have a
+different one set on your machine, you may get an exception starting Galaxy
+that points to a locale issue.
+
+To fix, do the following in your VM:
+```
+sudo vi /etc/ssh/sshd_config
+# Comment out the following line
+AcceptEnv LANG LC_*
+# Save & exit
+# Restart ssh service
+sudo service restart sshd
+```
+Then exit your ssh session and reconnect. Start Galaxy and it should run fine.
+
+---
 # What happened?
 
 * Galaxy started logging into the terminal from which it is run.
