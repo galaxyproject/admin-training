@@ -41,13 +41,14 @@ For OS X/Linux/Windows w/ Linux Subsystem or OpenSSH:
 $ ssh -L 8080:localhost:8080 ubuntu@<your_ip>
 ```
 
-For PuTTY on Windows:
+For [PuTTY](http://www.putty.org/) on Windows:
 - Create a session
 - See [instructions here](http://realprogrammers.com/how_to/set_up_an_ssh_tunnel_with_putty.html).
 - User: ubuntu
 - Host Name: `<your_ip>`
 - (Tunnel) Source port: 8080
 - (Tunnel) Destination: 127.0.0.1:8080
+- Click "Add"
 
 ---
 # Requirements
