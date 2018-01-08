@@ -138,7 +138,7 @@ tools:
 
 Hints:
   - You can supply as many installable revisions as you would like, they will all be installed
-  - If no revision is given the latest version will be installed, *if* the repository is not yet installed
+  - If no revision is given the latest revision will be installed.
 
 ---
 ## Task 16
