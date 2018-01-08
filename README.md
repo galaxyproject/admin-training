@@ -9,6 +9,8 @@ jump to [Monday](#monday) | [Tuesday](#tuesday) | [Wednesday](#wednesday) | [Thu
 
 Built slides have [an index](https://galaxyproject.github.io/dagobah-training/2018-oslo/).
 
+[Information and questions (Google Doc)](https://docs.google.com/document/d/1eo12xrdNIrFD1_SLDMQKXteysOGkR2c8l-sR_hl6sok/edit?usp=sharing)
+
 ### Instructors
 
 * (B)jörn Grüning - ELIXIR Galaxy WG, Elixir Germany, de.NBI, University of Freiburg, Germany
