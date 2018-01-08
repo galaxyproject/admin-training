@@ -130,9 +130,13 @@ You can also manipulate the searchlimit with `tool_search_limit = 20` which will
 display more/less results of the search.
 
 ---
-# Tool installation automation
+# Tool management with Ephemeris
 
-You can use scripts in the project [Ephemeris](https://github.com/galaxyproject/ephemeris)
-to automate tool installation tasks.
+* [Ephemeris](https://github.com/galaxyproject/ephemeris) uses [Bioblend](https://github.com/galaxyproject/bioblend) to remotely manage Galaxy instances via Galaxy's API.
 
-It will help you accomplish such goals as 'mirror toolset on Main' or keeping all tools updated.
+With ephemeris you can:
+ - install (long) lists of tool repositories (i.e all usegalaxy.org tools)
+ - keep all tools updated
+ - install reference data.
+
+Ephemeris is used in the ansible-galaxy-tools role (More about this on [Wednesday](https://galaxyproject.github.io/dagobah-training/2018-oslo/14-ansible/ansible-introduction.html))
