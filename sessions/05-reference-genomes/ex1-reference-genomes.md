@@ -189,10 +189,10 @@ Skip this part if BWA is already installed on your Galaxy server!
     Tool Shed repository installation details).
   * There should be a *tool-data/bwa_mem_index.loc* file (copied from
     `bwa_mem_index.loc.sample` if not already created)
-  * Upload some sample FASTQ datasets:
+* Upload some sample FASTQ datasets:
   ```
-http://www.bx.psu.edu/~dan/examples/gcc2014/data_manager_workshop/fastq/SRR507778-10k_1.fastqsanger
-http://www.bx.psu.edu/~dan/examples/gcc2014/data_manager_workshop/fastq/SRR507778-10k_2.fastqsanger
+  http://www.bx.psu.edu/~dan/examples/gcc2014/data_manager_workshop/fastq/SRR507778-10k_1.fastqsanger
+  http://www.bx.psu.edu/~dan/examples/gcc2014/data_manager_workshop/fastq/SRR507778-10k_2.fastqsanger
   ```
   * These are paired end datasets created using Illumina technology, obtained from EBI SRA, and decreased to ~10,000 reads.
   * When uploading these datasets set the datatype to "fastqsanger".
