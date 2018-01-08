@@ -92,7 +92,7 @@ To make Apache serve as a reverse proxy, we will need to enable the modules:
 - `mod_proxy`
 - `mod_proxy_http`
 
-These are enabled using the `a2enmod` command:
+These are enabled using the `a2enmod` command (without the mod_ prefix):
 
 ```console
 $ sudo a2enmod rewrite
