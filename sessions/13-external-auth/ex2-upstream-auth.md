@@ -50,7 +50,7 @@ name3:password3
 
 **Part 2 - Create passwd file**
 
-You can use the `openssl passwd` command to do this (replace `nate` with a username of your choosing`):
+You can use the `openssl passwd` command to do this (replace `nate` with a username of your choosing and `qwerty` with a password):
 
 ```console
 $ echo "nate:$(openssl passwd qwerty)" | sudo tee /etc/nginx/passwd
