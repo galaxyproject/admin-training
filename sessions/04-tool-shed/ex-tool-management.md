@@ -31,14 +31,6 @@ Hints:
 
 ---
 ## Task 4
-*Now you have two sections with two versions of bedtools. Confusing. You could uninstall it but you want users to be able to re-run jobs with old bedtools though.*
-
-* Hide the BEDtools section (with the older tool) from the tool panel without uninstalling it.
-
-Hint: You need to modify `shed_tool_conf.xml` in order to do this.
-
----
-## Task 5
 *You want to show both versions of bedtools and allow users to switch versions on the tool form*
 
 * Move bedtools revision `10:c78cf6fe3018` into 'New BEDtools' section and display it.
@@ -46,7 +38,7 @@ Hint: You need to modify `shed_tool_conf.xml` in order to do this.
 Hint: tools with the same ID and different version in the same section will 'collapse' into one and offer the switch button.
 
 ---
-## Task 6
+## Task 5
 *Now there is only one section we might not want to call it 'New'.*
 
 * Rename the 'New BEDtools' section to just 'BEDtools'.
@@ -56,13 +48,13 @@ Hints:
 - When renaming you need to be consistent across the configs.
 
 ---
-## Task 7
+## Task 6
 *The old bedtools version is no longer useful*
 
 * Uninstall the revision `10:c78cf6fe3018` of bedtools.
 
 ---
-## Task 8
+## Task 7
 *We want to use Conda package manager to satisfy tool dependencies*
 
 * Verify Conda is installed
@@ -71,19 +63,19 @@ Hint: Conda will be installed automatically if you use run.sh.
 The default location is <tool_dependency_dir>/_conda.
 
 ---
-## Task 9
+## Task 8
 *Check the version of Conda*
 
 Hint: `conda --version` will show the version
 
 ---
-## Task 10
+## Task 9
 *Check which channels Conda is going to use*
 
 Hint: You can find this information in galaxy.ini
 
 ---
-## Task 11
+## Task 10
 
 *Install latest seqtk and install _only_ Conda dependencies for it*
 
@@ -92,14 +84,14 @@ Hints:
 - You can follow the installation process by looking at galaxy's log file(s).
 
 ---
-## Task 12
+## Task 11
 
 *Find where the dependencies are present on the filesystem*
 
 Hint: The information is in the config.
 
 ---
-## Task 13
+## Task 12
 
 *Uninstall the TS package and verify that the Conda package will be used*
 
@@ -108,16 +100,18 @@ Hints:
 - You can see which dependency will be used in the `Manage dependencies` section.
 
 ---
-## Task 14
+## Task 13
 
 *We want to use ephemeris to automate tool installation*
 
 * Let's install ephemeris
 
+Hint: This can be done on your local machine or on the cloud vm.
+Hint: If you don't have a python virtualenv, create and activate one now with `virtualenv ~/.venv && source activate ~/.venv/bin/activate`
 Hint: You can install ephemeris by running `pip install ephemeris`
 
 ---
-## Task 15
+## Task 14
 
 *Create a list of tool to install*
 
@@ -141,7 +135,7 @@ Hints:
   - If no revision is given the latest revision will be installed.
 
 ---
-## Task 16
+## Task 15
 
 *Install fastqc using ephemeris into the section "FastQC"*
 
@@ -151,14 +145,14 @@ shed-install install -t <tool_list.yml> -a <api_key> -g <galaxy_url>
 ```
 
 ---
-## Task 17
+## Task 16
 
 *Verify that fastqc is correctly installed*
 
 Hint: You can see the installation status in the admin panel
 
 ---
-## Task 18
+## Task 17
 
 *Update all installed repositories of a galaxy instance*
 
