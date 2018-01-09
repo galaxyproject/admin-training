@@ -105,7 +105,7 @@ job_config_file = /srv/galaxy/config/job_conf.xml
 
 Then, save and quit your editor.
 
-## Section 4 - Configure nginx and test
+## Section 4 - Configure webserver and test
 
 **Part 1 - Configure nginx**
 
@@ -133,7 +133,7 @@ Then, save and quit your editor. Restart nginx with:
 $ sudo systemctl restart nginx
 ```
 
-**Part 1a - configure Apache for uWSGI**
+**Part 2 - configure Apache for uWSGI**
 
 Apache is configure to expect the main paster process to appear on port 8080, but we want it to communicate with uWSGI on port 4001 instead. Edit the file `/etc/apache2/sites-enabled/000-galaxy.conf` and update the line:
 
@@ -150,7 +150,7 @@ $ sudo systemctl restart apache2
 ```
 
 
-**Part 2 - Run Galaxy with uWSGI**
+**Part 3 - Run Galaxy with uWSGI**
 
 If you are still running Galaxy, stop it with `CTRL+C` followed by `sudo -Hu galaxy galaxy` or `sudo -Hu galaxy galaxy --stop-daemon`. Then, start it up under uWSGI with:
 
