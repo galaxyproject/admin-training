@@ -120,20 +120,24 @@ $ sudo systemctl restart nginx
 
 **Part 2 - Configure Apache for uWSGI**
 
-We previously configured Apache HTTP to expect the main paster process to appear on port 8080, but we want it to communicate with uWSGI on port 4001 vit its native protocol instead. Apache alas doesn't come with this as standard, but the module can be installed with:
+We previously configured Apache HTTP to expect the main paster process to appear on port 8080, but we want it to communicate with uWSGI on port 4001 via its native protocol instead. Apache alas doesn't come with this as standard, but the module can be installed with:
 
 ```console
-apt-get install libapache2-mod-proxy-uwsgi
-a2enmod proxy_uwsgi
+sudo apt-get install libapache2-mod-proxy-uwsgi
+sudo a2enmod proxy_uwsgi
 ```
 
 Edit the file `/etc/apache2/sites-enabled/galaxy.conf` and update the line:
 
-```RewriteRule ^(.*) http://localhost:8080$1 [P]```
+```apache
+RewriteRule ^(.*) http://localhost:8080$1 [P]
+```
 
 to
 
-```ProxyPass / uwsgi://localhost:4001/```
+```apache
+ProxyPass / uwsgi://localhost:4001/
+```
 
 Restart apache with:
 
