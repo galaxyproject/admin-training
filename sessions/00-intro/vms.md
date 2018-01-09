@@ -38,5 +38,6 @@ You'll get a number from the organizers. Pick up a VM accordingly from the list:
 33. galaxy-admin-ws38	158.39.75.193
 34. galaxy-admin-ws39	158.39.75.186
 35. galaxy-admin-ws40	158.39.75.190
+36. galaxy-admin-ws41	158.39.75.32
 
 
