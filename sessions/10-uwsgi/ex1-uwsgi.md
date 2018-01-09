@@ -54,6 +54,21 @@ logto = /srv/galaxy/log/uwsgi.log
 logfile-chmod = 644
 ```
 
+(If you are using Apache rather than nginx, use:
+
+
+```ini
+[uwsgi]
+processes = 2
+threads = 2
+http-socket = 127.0.0.1:4001     # uwsgi protocol for apache
+pythonpath = lib
+master = True
+logto = /srv/galaxy/log/uwsgi.log
+logfile-chmod = 644
+```
+)
+
 Then, save and quit your editor.
 
 ## Section 3 - Define job handlers
@@ -117,6 +132,23 @@ Then, save and quit your editor. Restart nginx with:
 ```console
 $ sudo systemctl restart nginx
 ```
+
+**Part 1a - configure Apache for uWSGI**
+
+Apache is configure to expect the main paster process to appear on port 8080, but we want it to communicate with uWSGI on port 4001 instead. Edit the file `/etc/apache2/sites-enabled/000-galaxy.conf` and update the line:
+
+```RewriteRule ^(.*) http://localhost:8080$1 [P]```
+
+to
+
+```RewriteRule ^(.*) http://localhost:8080$1 [P]```
+
+Restart apache with:
+
+```console
+$ sudo systemctl restart apache2
+```
+
 
 **Part 2 - Run Galaxy with uWSGI**
 
