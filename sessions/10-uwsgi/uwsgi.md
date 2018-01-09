@@ -19,7 +19,7 @@ Replaces `Paste#http` (see `galaxy.ini`)
 ---
 # The Python GIL
 
-![Python GIL](https://lh4.googleusercontent.com/HXDr4afwx28XEZgogOWBMEcaU0updIy_BsRqOnq7kaGVq3kEyXMlwmrDTvi9ZlMRI7fdW4TT5sPO4z_9kSVxlhrUznOdvK_rHQtP6pfic8ABrVcm3lOWPEoMH8sDKK2fMhw1YLI)
+![Python GIL](http://www.tivix.com/api/images/Gb8C-z3zxf_1Fm07mhm-Xjf8O4U=/427/original/Gogophercolor.png)
 
 .footnote[Image credit: [Dariusz Fryta](http://www.tivix.com/blog/lets-go-python/)]
 
