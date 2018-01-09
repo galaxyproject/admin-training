@@ -69,8 +69,8 @@ and prioritised in the config file `dependency_resolvers_conf.xml`.
 <dependency_resolvers>
   <tool_shed_packages />
   <galaxy_packages />
-  <galaxy_packages versionless="true" />
   <conda />
+  <galaxy_packages versionless="true" />
   <conda versionless="true" />
 <!-- other resolvers
   <tool_shed_tap />
