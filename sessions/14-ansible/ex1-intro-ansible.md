@@ -43,7 +43,7 @@ We will be cloning Galaxy from its Github repo into the home directory and then 
 Once you've logged in, from your home directory, we'll need to install Python 2.7 as well as clone the Galaxy git repo:
 
 ```
-sudo apt install -y python2.7
+sudo apt install -y python2.7 pip ansible
 sudo ln -s `which python2.7` /usr/local/bin/python
 git clone -b release_17.09 https://github.com/galaxyproject/galaxy.git
 ```
@@ -64,7 +64,8 @@ If you see a Galaxy interface, everything worked! Now you can move on with learn
 
 The first thing we need to do is build the structure for the ansible role and playbook.
 
-* From a terminal on your **remote** machine (in a suitable location):
+* From a terminal on your **remote** machine (in a suitable location such as
+  home directory), run:
 
 ``` bash
 mkdir galaxy-tool-ansible
@@ -78,9 +79,10 @@ mkdir -p roles/galaxy-tool-install/templates
 mkdir -p roles/galaxy-tool-install/meta
 ```
 
-These directories represent a typical structure of an Ansible role. More info
-about the individual directories in this structure can be found here
-http://docs.ansible.com/ansible/latest/playbooks_reuse_roles.html#role-directory-structure
+These directories represent a typical structure of an Ansible role. Note that
+we will not use all of these in this exercise but they are just included as an
+example. More info about the individual directories in this structure can be
+found here http://docs.ansible.com/ansible/latest/playbooks_reuse_roles.html#role-directory-structure
 
 **Part 2 - Obtain tool list file**
 
@@ -131,24 +133,21 @@ The contents of the file need to look something like this:
 tools_admin_email: tool_install@tools.com
 tools_admin_username: tools
 tools_admin_password: CoolToolInstaller
+galaxy_tools_api_key: adminApiKey
 
 #The system user for Galaxy
-galaxy_user: ubuntu # Set this to whatever system user has write access to all of the Galaxy files.
+galaxy_user: ubuntu  # Set this to whatever system user has write access to all of the Galaxy files.
 
 galaxy_server_url: http://localhost:8080/
 
-# Blank variable to make sure it's defined
-galaxy_tools_api_key: ''
-
-galaxy_server_dir: /home/ubuntu/gxy # Path to the Galaxy root here
+galaxy_server_dir: /home/ubuntu/galaxy  # Path to the Galaxy root here
 
 # A system path where a virtualenv for Galaxy is installed
-galaxy_venv_dir: "/home/ubuntu/gxy/.venv"
+galaxy_venv_dir: "{{ galaxy_server_dir }}/.venv"
 
-# A system path for Galaxy's main configuration file
-galaxy_config_file: "/home/ubuntu/gxy/config/galaxy.ini"
-
-tool_conf: "/home/ubuntu/gxy/config/shed_tool_conf.xml"
+# A system path for Galaxy's configuration files
+galaxy_config_file: "{{ galaxy_server_dir }}/config/galaxy.ini"
+tool_conf: "{{ galaxy_server_dir }}/config/shed_tool_conf.xml"
 ```
 
 ## Section 2 - Build the tasks
@@ -173,9 +172,6 @@ Put the following into the `main.yml` file.
   copy:
     src: tool_list.yaml
     dest: "{{ galaxy_server_dir }}/tools/"
-    owner: "{{ galaxy_user }}"
-  become: yes
-  become_user: "{{ galaxy_user }}"
 ```
 
 Done. We've written our first ansible task. Before proceeding, let's make sure
@@ -202,6 +198,7 @@ create a file called *playbook.yml* and add the following contents:
 - hosts: localhost
   connection: local
   become: yes
+  become_user: "{{ galaxy_user }}"
   roles:
     - role: galaxy-tool-install
 ```
@@ -211,15 +208,13 @@ the target machine. By adding some private/public key information and an IP
 address here, we can also run this role to target a remote machine. We'll get 
 to that later.
 
-* Install Anisble and then, from the root of the script directory, run the 
-playbook.
+* From the root of the playbook directory, run the playbook:
 
   ```
-  sudo apt install -y ansible
   ansible-playbook -vv playbook.yml
   ```
 
-The -vv here just means two levels of verbosity. It shows us what is going on.
+The `-vv` here just means two levels of verbosity. It shows us what is going on.
 There are 4 levels of verbosity from none to extremely verbose.
 
 ## Section 4 - Add more tasks
@@ -238,18 +233,15 @@ To complete these tasks we will be using various ansible modules. This is by no
 means the only or best way to complete these steps but this tutorial is meant to
 serve of an example of a simple ansible script.
 
-Add the following to your tasks *main.yml*
+Append the following to the tasks in the role's *main.yml*:
 
 ```yaml
-
 
 - name: Download a script for creating a bootstrap user
   get_url:
     url: https://raw.githubusercontent.com/galaxyproject/ansible-galaxy-tools/master/files/manage_bootstrap_user.py
     dest: "{{ galaxy_server_dir }}/scripts/"
     mode: a+x
-  become: yes
-  become_user: "{{ galaxy_user }}"
 
 - name: Create a Galaxy user
   command: "{{ galaxy_venv_dir }}/bin/python scripts/manage_bootstrap_user.py -c '{{ galaxy_config_file }}' create -u '{{ tools_admin_username }}' -e '{{ tools_admin_email }}' -p '{{ tools_admin_password }}' --preset_api_key '{{ galaxy_tools_api_key }}'"
@@ -267,8 +259,6 @@ Add the following to your tasks *main.yml*
     regexp: "^[ ]*admin_users[ ]*=[ ]*"
     replace: "admin_users = {{ tools_admin_email }},"
   register: admin_users_found
-  become: yes
-  become_user: "{{ galaxy_user }}"
 
 - name: Set bootstrap user as Galaxy Admin
   lineinfile:
@@ -277,12 +267,11 @@ Add the following to your tasks *main.yml*
     insertafter: "app:main"
     line: "admin_users = {{ tools_admin_email }}"
   when: admin_users_found.msg == ""
-  become: yes
-  become_user: "{{ galaxy_user }}"
 
 - name: Restart Galaxy
-  supervisorctl: "name=gx: state=restarted"
-  become: yes
+  shell: "sh ./run.sh --stop-daemon && sh ./run.sh --daemon"
+  args:
+    chdir: "{{ galaxy_server_dir }}"
 
 - name: Wait for Galaxy to start
   wait_for:
@@ -293,21 +282,18 @@ Add the following to your tasks *main.yml*
 
 - name: Install the toolshed tools
   command: shed-tools install --toolsfile "{{ galaxy_server_dir }}/tools/tool_list.yaml" --api_key "{{ galaxy_tools_api_key }}"
-  become: yes
-  become_user: "{{ galaxy_user }}"
   ignore_errors: true
 
-- name: De-admin the bootstrap user
+- name: Remove admin bootstrap user
   replace:
     dest: "{{ galaxy_config_file }}"
     regexp: "{{ tools_admin_email}}[,]?"
     replace: ""
-  become: yes
-  become_user: "{{ galaxy_user }}"
 
 - name: Restart Galaxy
-  supervisorctl: "name=gx: state=restarted"
-  become: yes
+  shell: "sh ./run.sh --stop-daemon && sh ./run.sh --daemon"
+  args:
+    chdir: "{{ galaxy_server_dir }}"
 
 - name: Wait for Galaxy to start
   wait_for:
@@ -315,7 +301,6 @@ Add the following to your tasks *main.yml*
     delay: 5
     state: started
     timeout: 600
-
 ```
 
 Phew. Done. Now we have our tasks to be completed.
@@ -325,7 +310,8 @@ Note that we have repeated some code to restart Galaxy. We should either make th
 ## Section 3 - Run the playbook
 
 We can reuse the playbook we created to test our initial task and run all
-the tasks now:
+the tasks now. Before running the playbook, make sure your Galaxy instance
+is running in _daemon_ mode.
 
 ```
 ansible-playbook playbook.yml
@@ -336,7 +322,7 @@ ansible-playbook playbook.yml
 To run this playbook on a remote machine, you'll need to have a public/private ssh key setup on the remote. You then need to make an inventory or hosts file. This is quite simple and looks something like this:
 
 ``` ini
-[hosts]
+[my_hosts]
 <instance_ip>
 <instance_ip>
 
@@ -346,9 +332,12 @@ ansible_ssh_private_key_file=<path_to_your_private_ssh_key>
 
 ```
 
-You then need to modify your playbook slightly to use *[hosts]*. Change the `- hosts: localhost` line to `- hosts: hosts` and remove the `connection: local` line.
+You then need to modify the playbook slightly to use *[my_hosts]*. Change the
+`- hosts: localhost` line to `- hosts: my_hosts` and remove the
+`connection: local` line.
 
-Then you can run the playbook on the hosts with the *-i hosts_file* switch. `ansible-playbook -i hosts_file playbook.yml`
+Then you can run the playbook on the hosts with the *-i hosts_file* switch:
+`ansible-playbook -i hosts_file playbook.yml`
 
 As mentioned in the slides, you can have groups of different machine types etc.
 You can operate on more than one remote machine at once. For example, if you're
