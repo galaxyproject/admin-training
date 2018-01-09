@@ -26,7 +26,7 @@ def main(argv=None):
     })
     
     if not os.path.exists(full_build_dir):
-        os.makedirs(directory)
+        os.makedirs(full_build_dir)
     open(output, "w").write(html)
 
     # Add the the entry to index.html.
