@@ -54,21 +54,6 @@ logto = /srv/galaxy/log/uwsgi.log
 logfile-chmod = 644
 ```
 
-(If you are using Apache HTTP rather than nginx, use:
-
-
-```ini
-[uwsgi]
-processes = 2
-threads = 2
-http-socket = 127.0.0.1:4001     # uwsgi protocol for apache
-pythonpath = lib
-master = True
-logto = /srv/galaxy/log/uwsgi.log
-logfile-chmod = 644
-```
-)
-
 Then, save and quit your editor.
 
 ## Section 3 - Define job handlers
@@ -135,13 +120,20 @@ $ sudo systemctl restart nginx
 
 **Part 2 - Configure Apache for uWSGI**
 
-We previously configured Apache HTTP to expect the main paster process to appear on port 8080, but we want it to communicate with uWSGI on port 4001 instead. Edit the file `/etc/apache2/sites-enabled/000-galaxy.conf` and update the line:
+We previously configured Apache HTTP to expect the main paster process to appear on port 8080, but we want it to communicate with uWSGI on port 4001 vit its native protocol instead. Apache alas doesn't come with this as standard, but the module can be installed with:
+
+```console
+apt-get install libapache2-mod-proxy-uwsgi
+a2enmod proxy_uwsgi
+```
+
+Edit the file `/etc/apache2/sites-enabled/galaxy.conf` and update the line:
 
 ```RewriteRule ^(.*) http://localhost:8080$1 [P]```
 
 to
 
-```RewriteRule ^(.*) http://localhost:4001$1 [P]```
+```ProxyPass / uwsgi://localhost:4001/```
 
 Restart apache with:
 
