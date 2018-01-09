@@ -217,7 +217,11 @@ ftp> quit
 221 Goodbye.
 ```
 
-Now, in the Galaxy UI, click the upload button at the top of the tool panel, then click the "Choose FTP file" button. You should see, and be able to choose the file you uploaded from the dialog that opens. Once selected, clicking "Start" adds the file to your history.
+Now, in the Galaxy UI:
+1. login with the same user (if you are not already)
+1. click the upload button at the top of the tool panel
+1. click the "Choose FTP file" button
+1. you should see, and be able to choose, the file you uploaded from the dialog that opens. Once selected, clicking "Start" adds the file to your history.
 
 ## Further reading
 
