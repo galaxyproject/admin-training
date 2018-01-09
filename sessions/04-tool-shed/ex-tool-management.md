@@ -143,7 +143,7 @@ Hints:
 
 * The syntax for installing tools using a yaml file is:
 ```
-shed-install install -t <tool_list.yml> -a <api_key> -g <galaxy_url>
+shed-tools install -t <tool_list.yml> -a <api_key> -g <galaxy_url>
 ```
 
 ---
