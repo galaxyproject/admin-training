@@ -54,7 +54,7 @@ logto = /srv/galaxy/log/uwsgi.log
 logfile-chmod = 644
 ```
 
-(If you are using Apache rather than nginx, use:
+(If you are using Apache HTTP rather than nginx, use:
 
 
 ```ini
@@ -105,11 +105,11 @@ job_config_file = /srv/galaxy/config/job_conf.xml
 
 Then, save and quit your editor.
 
-## Section 4 - Configure webserver and test
+## Section 4 - Configure reverse proxy and test
 
-**Part 1 - Configure nginx**
+**Part 1 - Configure nginx for uWSGI**
 
-nginx is currently configured to communicate with Galaxy using the http protocol on port 8080. We need to change this to communicate using uWSGI protocol on port 4001, as we configured in the `[uwsgi]` section above. To do this, we need to return to the nginx configs we worked on in the nginx session:
+We previously configured nginx to communicate with Galaxy using the HTTP protocol on port 8080. We need to change this to communicate using the uWSGI protocol on port 4001, as we configured in the `[uwsgi]` section above. To do this, we need to return to the nginx configs we worked on in the nginx session:
 
 ```console
 $ sudo -e /etc/nginx/sites-available/galaxy
@@ -133,9 +133,9 @@ Then, save and quit your editor. Restart nginx with:
 $ sudo systemctl restart nginx
 ```
 
-**Part 2 - configure Apache for uWSGI**
+**Part 2 - Configure Apache for uWSGI**
 
-Apache is configure to expect the main paster process to appear on port 8080, but we want it to communicate with uWSGI on port 4001 instead. Edit the file `/etc/apache2/sites-enabled/000-galaxy.conf` and update the line:
+We previously configured Apache HTTP to expect the main paster process to appear on port 8080, but we want it to communicate with uWSGI on port 4001 instead. Edit the file `/etc/apache2/sites-enabled/000-galaxy.conf` and update the line:
 
 ```RewriteRule ^(.*) http://localhost:8080$1 [P]```
 
