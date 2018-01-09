@@ -38,7 +38,7 @@ $ sudo -Hu galaxy /srv/galaxy/venv/bin/pip install uwsgidecorators
 We'll use uWSGI's "Paste Deploy" support to configure uWSGI with just a few small modifications to `galaxy.ini`. Begin by opening `galaxy.ini` in your editor:
 
 ```console
-$ sudo -e /srv/galaxy/config/galaxy.ini
+$ sudo -u galaxy -e /srv/galaxy/config/galaxy.ini
 ```
 
 And add the following section (the easiest place to put it is *above* the `[server:main]` section, which will now be unused):
