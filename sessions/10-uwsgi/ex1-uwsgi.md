@@ -141,7 +141,7 @@ Apache is configure to expect the main paster process to appear on port 8080, bu
 
 to
 
-```RewriteRule ^(.*) http://localhost:8080$1 [P]```
+```RewriteRule ^(.*) http://localhost:4001$1 [P]```
 
 Restart apache with:
 
