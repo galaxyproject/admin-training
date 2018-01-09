@@ -36,7 +36,7 @@ We will use a number of Ansible structures and modules including:
 
 We have new VMs today, so you won't have a working Galaxy installation on your Virtual Machine yet. So, we will be doing a minimal quick install of Galaxy to get up and running.
 
-We will be cloning Galaxy from its Github repo into the home directory and then starting it up so it automatically downloads all of it its extra requirements.
+We will be cloning Galaxy from its Github repo into the home directory and then starting it up so it automatically downloads all its extra requirements.
 
 * Login to your VM as the *ubuntu* user with tunneling enabled: `ssh -L 8080:localhost:8080 -i galaxy-ws.pem ubuntu@<IP>`
 
