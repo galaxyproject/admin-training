@@ -12,12 +12,24 @@ Loading large data into Galaxy can be difficult, especially since browser upload
 
 ## Section 1 - Install ProFTPD
 
+ProFTPD needs to be able to resolve the hostname of your VM to an IP address, you can verify that with:
+
+```shell
+$ getent hosts $(hostname)
+```
+
+If the output of this command if empty, then you need to add your hostname (which can be found using the `hostname` command) to the end of the line which starts with `127.0.0.1` in the `/etc/hosts` file, e.g.:
+
+```
+127.0.0.1 localhost <my_hostname>
+```
+
 For this example, we'll use ProFTPD. It's highly configurable and has a few important features we rely on, such as the ability to query users from a database, and PBKDF2 password support.
 
-Install ProFTPD from the system package manager:
+Use the system package manager to install ProFTPD together with `proftpd-mod-pgsql` to additionally provide PostgreSQL support:
 
 ```console
-$ sudo apt install proftpd-basic proftpd-mod-pgsql
+$ sudo apt-get install proftpd-basic proftpd-mod-pgsql
 Reading package lists... Done
 Building dependency tree
 Reading state information... Done
@@ -37,14 +49,12 @@ Unpacking proftpd-mod-pgsql (1.3.5a-1build1) ...
 Setting up proftpd-mod-pgsql (1.3.5a-1build1) ...
 ```
 
-In our training instance, `proftpd-basic` is already installed. `proftpd-mod-pgsql` additionally provides PostgreSQL support.
-
 ## Section 2 - Configure ProFTPD
 
 First, we need to instruct ProFTPD to load the `mod_sql` (SQL), `mod_sql_postgres` (PostgreSQL), and `mod_sql_passwd` (password hashing algorithms) modules. ProFTPD's config files can be found in `/etc/proftpd` and modules are loaded in `modules.conf`
 
 ```
-$ cd /etc/proftpd
+$ cd /etc/proftpd/
 $ sudo -e modules.conf
 ```
 
