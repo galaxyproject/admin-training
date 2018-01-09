@@ -175,7 +175,7 @@ We need to set a few Galaxy config options. First, the diretory where files will
 ```console
 $ sudo -u galaxy -e /srv/galaxy/config/galaxy.ini
 ```
-
+
 Locate and set `ftp_*` accordingly:
 
 ```ini
