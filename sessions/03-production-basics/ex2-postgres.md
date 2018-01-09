@@ -18,7 +18,9 @@ $ sudo apt-get install postgresql
 
 ## Section 2 - Add PostgreSQL user and database
 
-PostgreSQL maintains its own user database apart from the system user database. As such, we need to create a PostgreSQL user matching the system user we are logged in as - `galaxy`.  By default, PostgreSQL is configured to allow access for system users with matching PostgreSQL usernames once created. This is done with the PostgreSQL `createuser` command, and it must be run as the `postgres` user:
+PostgreSQL maintains its own user database apart from the system user database. By default, PostgreSQL uses the "peer" authentication method which allows access for system users with matching PostgreSQL usernames (other authentication mechanisms are available, see the [PostgreSQL Client Authentication documentation](https://www.postgresql.org/docs/current/static/client-authentication.html).
+
+For this tutorial, we will use the default "peer" authentication, so we need to create a PostgreSQL user matching the system user under which Galaxy is running, i.e. `galaxy`. This is done with the PostgreSQL `createuser` command, and it must be run as the `postgres` user:
 
 ```console
 $ sudo -Hu postgres createuser galaxy
