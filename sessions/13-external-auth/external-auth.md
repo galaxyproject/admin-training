@@ -10,12 +10,6 @@ slides by @martenson, @nsoranzo
 .footnote[\#usegalaxy / @galaxyproject]
 
 ---
-class: larger
-
-## Please Interrupt!
-Answer your questions we will.
-
----
 # Auth Mechanisms supported
 
 * Galaxy-specific account database
@@ -27,27 +21,27 @@ Answer your questions we will.
 # Galaxy account
 
 * Stored in the Galaxy DB
-  * Unique in both email and username.
-  * Passwords hashed and salted, using PBKDF2 (default).
-  * Table `galaxy_user`.
-  * Abstracted as `User` in `lib/galaxy/model/mapping.py`.
-* Session cookie expires after 3 months.
-  * Configurable with `session_duration`.
-* Password reset uses 'visit-link' mechanism.
-* `require_login` can be set to disable anonyms.
+  * Unique in both email and username
+  * Passwords hashed and salted, using PBKDF2 (default)
+  * Table `galaxy_user`
+  * Abstracted as `User` in `lib/galaxy/model/mapping.py`
+* Session cookie expires after 3 months
+  * Configurable with `session_duration`
+* Password reset uses 'visit-link' mechanism
+* `require_login` can be set to disable anonymous access
 
 ---
 # Authentication tweaks
 
 In `galaxy.ini`:
 * Activation
-  * `user_activation_on` will prevent accounts from running jobs until they visit activation link.
-  * `activation_grace_period` gives users some time before their jobs are ignored.
-  * `inactivity_box_content` defines the message shown to inactive users.
+  * `user_activation_on` will prevent accounts from running jobs until they visit activation link
+  * `activation_grace_period` gives users some time before their jobs are ignored
+  * `inactivity_box_content` defines the message shown to inactive users
 * Expiration
-  * `password_expiration_period` forces users to change password.
+  * `password_expiration_period` forces users to change password
 * Disposable domain blacklist
-  * `blacklist_file` defines domains in XXX.YYY format that will be rejected as user emails.
+  * `blacklist_file` defines domains (e.g. `example.org`) that will be rejected as user emails
 
 ???
 https://github.com/martenson/disposable-email-domains
@@ -56,9 +50,9 @@ https://github.com/martenson/disposable-email-domains
 # OpenID
 
 In `galaxy.ini`:
-* Set `enable_openid = True`.
+* Set `enable_openid = True`
 * Consumer cache in `openid_consumer_cache_path = database/openid_consumer_cache`
-* Specify provider list in `openid_config_file = config/openid_conf.xml`.
+* Specify provider list in `openid_config_file = config/openid_conf.xml`
 
 ---
 # Default OpenID providers
@@ -77,18 +71,19 @@ OpenID Connect support is [in the works](https://github.com/galaxyproject/galaxy
 # Reverse proxy
 
 In `galaxy.ini`:
-* `use_remote_user` will enable upstream authentication server to be used.
-  * The server should set `REMOTE_USER` header.
-  * Disables regular logins.
+* Set `use_remote_user = True` to delegate authentication to the upstream proxy server
+  * The proxy server should set the `REMOTE_USER` HTTP header
+  * Disables regular logins
 
 Dedicated Galaxy external auth [documentation](https://docs.galaxyproject.org/en/master/admin/authentication.html#remote-user-authentication).
 
 ---
 # General configuration
 
-* Set `remote_user_maildomain` if server returns only usernames.
-* Set shared `remote_user_secret` to disable impersonating with headers.
-* Set `remote_user_logout_href` to point to your SSO's logout page.
+* If the proxy server returns only usernames, set `remote_user_maildomain` to a default mail domain to be appended
+* If a client can bypass the proxy, it can impersonate any user by forging the `REMOTE_USER` HTTP header:
+    * Configure the proxy server to define a `GX_SECRET` header and set `remote_user_secret` to the same value
+* Set `remote_user_logout_href` to point to your logout URL
 
 ---
 # Nginx
@@ -100,8 +95,7 @@ Dedicated Galaxy external auth [documentation](https://docs.galaxyproject.org/en
 # Example PAM stack
 
 * You need to set up your system's PAM stack (very site-specific)
-* If your 'shell accounts' authenticate the same way as your 'galaxy users' you can likely copy the PAM configuration.
-* A PAM configuration that would be suitable for authentication with Kerberos (placed in /etc/pam.d/nginx) might look like:
+* A PAM configuration that would be suitable for authentication with Kerberos (placed in `/etc/pam.d/nginx`) might look like:
   ```
   auth  [success=1 default=ignore]  pam_krb5.so minimum_uid=1000 ignore_k5login
   auth  requisite                   pam_deny.so
@@ -115,16 +109,20 @@ Dedicated Galaxy external auth [documentation](https://docs.galaxyproject.org/en
 location / {
     auth_pam "Basic Auth Realm Name";
     auth_pam_service_name "nginx";
-    proxy_pass http://galaxy_app;
-    proxy_set_header REMOTE_USER $remote_user;
-    proxy_set_header X-Forwarded-Host $host;
-    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-    proxy_set_header X-URL-SCHEME https;
+    ...
+    proxy_set_header REMOTE_USER $remote_user; # if using Paste
+    uwsgi_param HTTP_REMOTE_USER $remote_user; # if using uWSGI
 }
 ```
+
+The value of `auth_pam_service_name` must match the filename of the pam configuration you created in `/etc/pam.d/` .
+
 Dedicated Galaxy with Nginx [documentation](https://galaxyproject.org/admin/config/nginx-external-user-auth/).
 
-.footnote[The value of auth_pam_service_name must match the filename of the pam configuration you created in /etc/pam.d/.]
+---
+# Upstream Auth Exercise
+
+[Upstream Authentication in Galaxy - Exercise](https://github.com/galaxyproject/dagobah-training/blob/2018-oslo/sessions/13-external-auth/ex2-upstream-auth.md)
 
 ---
 # Apache httpd
@@ -150,8 +148,3 @@ Available [provider modules](https://github.com/galaxyproject/galaxy/tree/dev/li
 # Galaxy PAM Exercise
 
 [PAM Authentication in Galaxy - Exercise](https://github.com/galaxyproject/dagobah-training/blob/2018-oslo/sessions/13-external-auth/ex1-pam-auth.md)
-
----
-# Upstream Auth Exercise
-
-[Upstream Authentication in Galaxy - Exercise](https://github.com/galaxyproject/dagobah-training/blob/2018-oslo/sessions/13-external-auth/ex2-upstream-auth.md)
