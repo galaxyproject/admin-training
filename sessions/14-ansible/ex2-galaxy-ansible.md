@@ -156,6 +156,7 @@ len_file_path: "{{ galaxy_config_dir }}/len"
 galaxy_log_dir: "{{ galaxy_root_dir }}/log"
 supervisor_slurm_config_dir: "{{ galaxy_log_dir }}"
 
+galaxy_manage_trackster: False
 galaxy_extras_config_cvmfs: True
 galaxy_restart_handler_enabled: True
 
