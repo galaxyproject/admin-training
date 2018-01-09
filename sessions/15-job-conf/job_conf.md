@@ -2,7 +2,7 @@ layout: true
 class: inverse, top, large
 
 ---
-class: special
+class: special, middle
 # Galaxy Job Configuration
 
 slides by @natefoo, @nsoranzo
@@ -13,15 +13,14 @@ slides by @natefoo, @nsoranzo
 # Galaxy job configuration
 
 `config/job_conf.xml`:
-- From basic to advanced
-- XML format
+- XML format with macro support
 - Major components:
-  - Plugins: Interface to DRMs
-  - Destinations: Where to send jobs, and what parameters to run those jobs with
-  - Handlers: Which job handler processes should handle the lifecycle of a job
-  - Tool to destination/handler mappings: Specify that a tool should be sent to a specific destination
-  - Resource selection mappings: Give users job execution options on the tool form
-  - Limits: Set job runtime limits such as the max number of concurrent jobs
+  - **Plugins**: distributed resource manager (DRM) modules to load
+  - **Handlers**: job handler processes managing the lifecycle of jobs
+  - **Destinations**: where to send jobs, and what parameters to run those jobs with
+  - **Tool** to destination/handler mappings
+  - **Resource** selection mappings: give users job execution options on the tool form (experimental!)
+  - **Limits**: job runtime limits, e.g. the max number of concurrent jobs
 
 ---
 # Plugins
@@ -35,7 +34,7 @@ Plugins for:
 - HTCondor
 - Torque: Using the `pbs_python` library
 - Pulsar: Galaxy's own remote job management system
-- CLI via SSH
+- Command Line Interface (CLI) via SSH
 - Kubernetes
 - Go-Docker
 - Chronos
@@ -48,20 +47,21 @@ Most job plugins require a **shared filesystem** between the Galaxy server and c
 The exception is **Pulsar**. More on this in *Using heterogeneous compute resources*
 
 ---
+# Handlers
+
+Define which Galaxy processes are job handlers:
+- `id` attribute should match the `--server-name` param value of a process
+- Dedicated handlers can be reserved, e.g. for small, high throughput jobs
+- The list of plugins that are loaded by a job handler can be limited using `<plugin>` subelements (e.g. when the DRMAA plugin needs to be loaded with different library paths)
+
+---
 # Destinations
 
 Define *how* jobs should be run:
 - Which plugin?
 - In a Docker container? Which one?
-- DRM params (queue, cores, memory, walltime)?
+- **DRM params** (queue, cores, memory, walltime)?
 - Environment (variables e.g. `$PATH`, source an env file, run a command)?
-
----
-# Handlers
-
-Define which job handler (Galaxy server) processes should handle a job:
-- Higher availability pool for small, high throughput jobs
-- Work around concurrency limit race conditions
 
 ---
 # The default job configuration
@@ -87,8 +87,7 @@ Define which job handler (Galaxy server) processes should handle a job:
 
 Both destinations and handlers can be grouped by **tags**:
 - Allows random selection from multiple resources
-- Allows concurrency limits on both destination and group level
-- Decision-based selection available via dynamic job runner (later)
+- Allows concurrency limits at the destination group level
 
 ---
 # Job Environment
@@ -115,7 +114,7 @@ Available limits:
 - Number of active jobs per registered user
 - Number of active jobs per unregistered user
 - Number of active jobs per registered user in a specified destination or destination tag
-- Number of active jobs total in a specified destination or destination tag
+- Number of total active jobs in a specified destination or destination tag
 
 ---
 # Job Config - Mapping Tools to Destinations
