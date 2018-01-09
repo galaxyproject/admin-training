@@ -106,8 +106,10 @@ Hints:
 
 * Let's install ephemeris
 
-Hint: This can be done on your local machine or on the cloud vm.
-Hint: If you don't have a python virtualenv, create and activate one now with `virtualenv ~/.venv && source activate ~/.venv/bin/activate`
+Hints:
+  - If you don't have virtualenv installed you can install it with `sudo apt-get install -y python-virtualenv`
+  - This can be done on your local machine or on the cloud vm.
+  - If you don't have a python virtualenv, create and activate one now with `virtualenv ~/.venv && source activate ~/.venv/bin/activate`
 Hint: You can install ephemeris by running `pip install ephemeris`
 
 ---
