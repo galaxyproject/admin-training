@@ -133,4 +133,4 @@ Restart Galaxy with `sudo supervisorctl restart all`, then visit it in your brow
 
 **Part 3 - Undo changes**
 
-We don't want to leave Galaxy this way for the rest of our workshop. Undo the changes by removing `require_login` and `allow_user_creation` options from `galaxy.ini`, renaming `auth_conf.xml` using `sudo -u galaxy mv /srv/galaxy/config/auth_conf.xml /srv/galaxy/config/auth_conf.xml.pam` and restarting Galaxy again with `sudo supervisorctl restart all`.
+We don't want to leave Galaxy this way for the rest of our workshop. Undo the changes by removing the `auth_config_file`, `require_login` and `allow_user_creation` options from `galaxy.ini`, renaming `auth_conf.xml` using `sudo -u galaxy mv /srv/galaxy/config/auth_conf.xml /srv/galaxy/config/auth_conf.xml.pam` and restarting Galaxy again with `sudo supervisorctl restart all`.
