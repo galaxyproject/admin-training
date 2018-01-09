@@ -119,7 +119,7 @@ class: normal
 In `galaxy.ini`:
 * `sanitize_all_html` by default, Galaxy sanitizes all "text/html" tool outputs. Setting to False potentially exposes users to XSS attacks.
 * `sanitize_whitelist_file` manually override html sanitization for listed tools. Can set in admin interface.
-* `serve_xss_vulnerable_mimetypes` certain filetypes (e.g. SVG) can contain JS that is vulnerable to XSS and are served as "plain/text" by default.
+* `serve_xss_vulnerable_mimetypes` certain filetypes (e.g. SVG) can contain JS that is vulnerable to XSS (Cross-site scripting) and are served as "plain/text" by default.
 * `allowed_origin_hostnames` Returns Access-Control-Allow-Origin response header that matches the Origin header of the request.
 * `use_printdebug` anything "print"ed within a Galaxy Web thread is exposed to user. Set to False in production.
 * `use_interactive` Enabled by default. Enable live debugging in your browser.  This should *never* be enabled on a public site.
