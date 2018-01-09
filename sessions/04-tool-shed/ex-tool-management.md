@@ -27,7 +27,7 @@ Hints:
 ## Task 3
 *New bedtools revision has been uploaded to the MTS.*
 
-* Install [`iuc/bedtools`](https://toolshed.g2.bx.psu.edu/view/iuc/bedtools/) from MTS in revision `13:fadebae7e69b` into section 'New BEDtools'.
+* Install [`iuc/bedtools`](https://toolshed.g2.bx.psu.edu/view/iuc/bedtools/) from MTS in revision `16:e0cec48a4695` into section 'New BEDtools'.
 
 ---
 ## Task 4
