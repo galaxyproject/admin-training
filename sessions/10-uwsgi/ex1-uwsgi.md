@@ -15,7 +15,7 @@ uWSGI serves as a more powerful, performant, and fault tolerant replacement to t
 You can install uWSGI in one of two ways:
 
 1. From the system package manager, e.g. `apt install uwsgi uwsgi-plugin-python`
-2. Directly into Galaxy's `virutalenv` using `pip`<sup>[1]</sup>
+2. Directly into Galaxy's `virtualenv` using `pip`<sup>[1]</sup>
 
 We'll use the system package manager method, but either method is fine.
 
