@@ -24,6 +24,9 @@ def main(argv=None):
         'title': title,
         'content': content,
     })
+    
+    if not os.path.exists(full_build_dir):
+        os.makedirs(directory)
     open(output, "w").write(html)
 
     # Add the the entry to index.html.
