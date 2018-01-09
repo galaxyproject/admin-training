@@ -3,7 +3,7 @@ VENV?=../galaxy/.venv
 IN_VENV=if [ -f $(VENV)/bin/activate ]; then . $(VENV)/bin/activate; fi;
 
 generate-slides:
-	rm docs/index.html 2> /dev/null
+	rm -f docs/index.html
 	echo "<html><head></head><body>" > docs/index.html
 	$(IN_VENV) python slideshow/build_slideshow.py 'Welcome and Introduction' sessions/00-intro/intro.md 00-intro
 	$(IN_VENV) python slideshow/build_slideshow.py 'Get Galaxy' sessions/02-basic-server/get-galaxy.md 02-basic-server
