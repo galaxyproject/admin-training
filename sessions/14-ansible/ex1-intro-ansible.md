@@ -34,23 +34,27 @@ We will use a number of Ansible structures and modules including:
 
 ## Preparation - Setup simple Galaxy.
 
-If you haven't participated in the Introduction days of this course (i.e. You're just doing the advanced sessions), you won't have a working Galaxy installation on your Virtual Machine yet. So, we will be doing a minimal quick install of Galaxy to get you up and running with the rest of this section of the exercise.
+We have new VMs today, so you won't have a working Galaxy installation on your Virtual Machine yet. So, we will be doing a minimal quick install of Galaxy to get up and running.
 
-We will be cloning the Galaxy github repo into you home directory and then starting it up so it automatically downloads all of it its extra requirements.
+We will be cloning Galaxy from its Github repo into the home directory and then starting it up so it automatically downloads all of it its extra requirements.
 
-* Login to your VM as the *ubuntu* user. This user has `sudo` rights but we will not be needing them.
+* Login to your VM as the *ubuntu* user with tunneling enabled: `ssh -L 8080:localhost:8080 -i galaxy-ws.pem ubuntu@<IP>`
 
-Once you've logged in, from your home directory, clone the Galaxy git repo.
+Once you've logged in, from your home directory, we'll need to install Python 2.7 as well as clone the Galaxy git repo:
 
-`git clone https://github.com/galaxyproject/galaxy.git`
+```
+sudo apt install -y python2.7
+sudo ln -s `which python2.7` /usr/local/bin/python
+git clone -b release_17.09 https://github.com/galaxyproject/galaxy.git
+```
 
-You'll need to change the name of the **galaxy.ini.sample** file in *galaxy/config* to **galaxy.ini**. Then edit the file using an editor. We need to uncomment the line `#host = 127.0.0.1` and set the ip to `0.0.0.0` so that the Galaxy server is available over the internet.
+We'll need to change the name of the **galaxy.ini.sample** and **shed_tool_conf.xml.samle** files in *galaxy/config* to **galaxy.ini** and **shed_tool_conf.xml**. Then edit **galaxy.ini** using an editor. We need to uncomment the line `#host = 127.0.0.1` and set the ip to `0.0.0.0` so that the Galaxy server is available over the internet.
 
-Once, that is complete you can start your Galaxy server to test it.
+Once, that is complete let's start Galaxy to test it.
 
-* Start the server with `sh ./run.sh --pid-file=paster.pid --log-file=paster.log --daemon`
+* Start the server with `sh ./run.sh --daemon`
 
-If you want you can tail the log file and watch everything unfold. Once the server has finished configuring itself, try and connect to it in a web browser on port 8080 (<ip_address>:8080)
+If you want you can tail the log file and watch everything unfold. Once the server has finished configuring itself, try and connect to it in a web browser on port 8080 (`localhost:8080`)
 
 If you see a Galaxy interface, everything worked! Now you can move on with learning about Ansible.
 
@@ -82,7 +86,7 @@ http://docs.ansible.com/ansible/latest/playbooks_reuse_roles.html#role-directory
 
 To instal the tools, we need a list of tools. This is typically something you
 will compose yourself or extract from an existing server. There's a nice
-utility script that can help with that available here:
+utility script within the Ephemeris library that can help with that:
 https://ephemeris.readthedocs.io/en/latest/commands/get-tool-list.html
 
 The format of this file is as follows:
@@ -123,28 +127,28 @@ The contents of the file need to look something like this:
 ``` yaml
 --- # This tells ansible that we have a yaml file.
 
-#The system user for Galaxy
-galaxy_user: galaxy # Set this to whatever system user has write access to all of the Galaxy files.
-
-galaxy_server_url: http://localhost/
-
-# Blank variable to make sure it's defined
-galaxy_tools_api_key: ''
-
 # A user for the Galaxy bootstrap user
 tools_admin_email: tool_install@tools.com
 tools_admin_username: tools
 tools_admin_password: CoolToolInstaller
 
-galaxy_server_dir: /srv/galaxy/server # Put the actual path to your Galaxy root here
+#The system user for Galaxy
+galaxy_user: ubuntu # Set this to whatever system user has write access to all of the Galaxy files.
+
+galaxy_server_url: http://localhost:8080/
+
+# Blank variable to make sure it's defined
+galaxy_tools_api_key: ''
+
+galaxy_server_dir: /home/ubuntu/gxy # Path to the Galaxy root here
 
 # A system path where a virtualenv for Galaxy is installed
-galaxy_venv_dir: "/srv/galaxy/venv"
+galaxy_venv_dir: "/home/ubuntu/gxy/.venv"
 
 # A system path for Galaxy's main configuration file
-galaxy_config_file: "/srv/galaxy/config/galaxy.ini"
+galaxy_config_file: "/home/ubuntu/gxy/config/galaxy.ini"
 
-tool_conf: "/srv/galaxy/config/shed_tool_conf.xml"
+tool_conf: "/home/ubuntu/gxy/config/shed_tool_conf.xml"
 ```
 
 ## Section 2 - Build the tasks
@@ -183,8 +187,8 @@ Before we can run the created task, we need to write the playbook to call the
 role we've created. The playbook contains a list of hosts to run on and a list
 of roles to run. Ours will be simple.
 
-* In the root directory of our Ansible script, create a file called
-  *playbook.yml* and add the following contents:
+* In the root directory of our Ansible playbook (i.e., `~/galaxy-tool-ansible/`), 
+create a file called *playbook.yml* and add the following contents:
 
 ``` yaml
 ---
@@ -203,13 +207,15 @@ of roles to run. Ours will be simple.
 ```
 
 This playbook runs on the localhost and so the script needs to actually be on
-the target machine. By adding some private/public key information and an ip
-address here, we can also run this role on a remote machine. We'll get to that
-later.
+the target machine. By adding some private/public key information and an IP
+address here, we can also run this role to target a remote machine. We'll get 
+to that later.
 
-* From the root of the script directory, run the playbook with
+* Install Anisble and then, from the root of the script directory, run the 
+playbook.
 
   ```
+  sudo apt install -y ansible
   ansible-playbook -vv playbook.yml
   ```
 
