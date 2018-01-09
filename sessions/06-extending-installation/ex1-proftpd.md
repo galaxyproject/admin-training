@@ -157,13 +157,14 @@ $ systemctl status proftpd
    Loaded: loaded (/etc/init.d/proftpd; bad; vendor preset: enabled)
    Active: active (running) since Wed 2017-02-01 04:34:42 UTC; 11s ago
 ```
+If you get a unrecognized server error, edit `/etc/hosts` and add your hostname and IP address
 
 ## Section 3 - Configure Galaxy
 
 We need to set a few Galaxy config options. First, the diretory where files will by uploaded to (we set it in the ProFTPD config as `/srv/galaxy/ftp`). Second is the address that users connect to - this is only used for display purposes in the Galaxy UI:
 
 ```console
-$ sudo -e /srv/galaxy/config/galaxy.ini
+$ sudo -u -e /srv/galaxy/config/galaxy.ini
 ```
 
 Locate and set `ftp_*` accordingly:
