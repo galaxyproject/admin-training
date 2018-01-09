@@ -47,6 +47,18 @@ In `galaxy.ini`:
 ---
 
 class: normal
+# More Authentication Options
+
+In `galaxy.ini`:
+* `require_login = False` Force everyone to log in (disable anonymous access).
+* `allow_user_creation = True` Allow unregistered users to create new accounts (otherwise, they will have to be created by an admin).
+* `allow_user_deletion = False` Allow administrators to delete accounts.
+* `allow_user_impersonation = False` Allow administrators to log in as other users (useful for debugging)
+* And more ...
+
+---
+
+class: normal
 # Securing your Object IDs
 
 In `galaxy.ini`:
