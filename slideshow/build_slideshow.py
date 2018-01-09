@@ -32,7 +32,8 @@ def main(argv=None):
 
     # Add the the entry to index.html.
     slidepath = build_dir + '/' + filename
-    open( BUILD_PATH + '/index.html', "a").write('<a href="'+ slidepath +'">' + slidepath + '</a><span>--built ' + print(datetime.datetime.utcnow()) + '</span></br>\n')
+    timestamp = datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")
+    open( BUILD_PATH + '/index.html', "a").write('<a href="'+ slidepath +'">' + slidepath + '</a><span>--built ' + timestamp + '</span></br>\n')
 
 
 if __name__ == "__main__":
