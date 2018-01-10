@@ -43,8 +43,7 @@ We will be cloning Galaxy from its Github repo into the home directory and then 
 Once you've logged in, from your home directory, we'll need to install Python 2.7 as well as clone the Galaxy git repo:
 
 ```
-sudo apt install -y python2.7 python-pip ansible
-sudo ln -s `which python2.7` /usr/local/bin/python
+sudo apt-get install -y python python-pip ansible
 git clone -b release_17.09 https://github.com/galaxyproject/galaxy.git
 ```
 
