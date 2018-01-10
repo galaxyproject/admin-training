@@ -141,8 +141,9 @@ galaxy_server_url: http://localhost:8080/
 
 galaxy_server_dir: /home/ubuntu/galaxy  # Path to the Galaxy root here
 
-# A system path where a virtualenv for Galaxy is installed
+# virtualenv paths
 galaxy_venv_dir: "{{ galaxy_server_dir }}/.venv"
+ephemeris_venv_dir: /home/ubuntu/ephemeris_venv
 
 # A system path for Galaxy's configuration files
 galaxy_config_file: "{{ galaxy_server_dir }}/config/galaxy.ini"
@@ -232,10 +233,9 @@ To complete these tasks we will be using various ansible modules. This is by no
 means the only or best way to complete these steps but this tutorial is meant to
 serve of an example of a simple ansible script.
 
-Append the following to the tasks in `roles/galaxy-tool-install/tasks/main.yml`:
+Append the following to the role tasks in `roles/galaxy-tool-install/tasks/main.yml`:
 
 ```yaml
-
 - name: Download a script for creating a bootstrap user
   get_url:
     url: https://raw.githubusercontent.com/galaxyproject/ansible-galaxy-tools/master/files/manage_bootstrap_user.py
@@ -250,6 +250,8 @@ Append the following to the tasks in `roles/galaxy-tool-install/tasks/main.yml`:
 - name: Install Ephemeris
   pip:
     name: ephemeris
+    virtualenv: "{{ ephemeris_venv_dir }}"
+    virtualenv_python: python2.7
 
 # Add the admin user to galaxy.ini (check to see if the admin users line already exists)
 - name: Check/Set bootstrap user as Galaxy Admin if admin_users tag is already in the config file
@@ -280,7 +282,7 @@ Append the following to the tasks in `roles/galaxy-tool-install/tasks/main.yml`:
     timeout: 600
 
 - name: Install the toolshed tools
-  command: shed-tools install --toolsfile "{{ galaxy_server_dir }}/tools/tool_list.yaml" --api_key "{{ galaxy_tools_api_key }}"
+  command: "{{ ephemeris_venv_dir }}/bin/shed-tools install --toolsfile '{{ galaxy_server_dir }}/tools/tool_list.yaml' --api_key '{{ galaxy_tools_api_key }}'"
   ignore_errors: true
 
 - name: Remove admin bootstrap user
