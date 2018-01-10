@@ -3,7 +3,7 @@
 
 **Oslo, 8th to 12th January 2018**
 
-[Event Logistics](https://docs.google.com/document/d/17ZpNQu6cC6tx-WNF6iN7T7Gu2TrOJthS98KglJa6k9s/edit?usp=sharing) | 
+[Event Logistics](https://docs.google.com/document/d/17ZpNQu6cC6tx-WNF6iN7T7Gu2TrOJthS98KglJa6k9s/edit?usp=sharing)
 
 jump to [Monday](#monday) | [Tuesday](#tuesday) | [Wednesday](#wednesday) | [Thursday](#thursday) | [Friday](#friday)
 
