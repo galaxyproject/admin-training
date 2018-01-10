@@ -448,7 +448,7 @@ We'll update our trusty Multicore tool to have a simple conda dependency on `zli
     </requirements>
 ```
 
-Restart Galaxy with `sudo supervisorctl restart gx:*` to read the updated tool config. Then, follow the Pulsar log with `tail -f /srv/pulsar/var/uwsgi.log`:
+Restart Galaxy with `sudo supervisorctl restart galaxy:` to read the updated tool config. Then, follow the Pulsar log with `tail -f /srv/pulsar/var/uwsgi.log`:
 
 ```
 2017-02-05 00:58:14,522 DEBUG [pulsar.managers.staging.pre][[manager=_default_]-[action=preprocess]-[job=18]] Staging input 'dataset_13.dat' via FileAction[url=http://localhost/api/jobs/2d9035b3fc152403/files?job_key=7052ed81ab8dbc36&path=/srv/galaxy/data/000/dataset_13.dat&file_type=inputpath=/srv/galaxy/data/000/dataset_13.dataction_type=remote_transfer] to /srv/pulsar/var/jobs/18/inputs/dataset_13.dat
