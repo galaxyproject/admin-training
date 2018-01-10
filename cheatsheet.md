@@ -1,6 +1,7 @@
 ## Vocabulary
 repository: version controlled directory of files  
-tool shed: repository for tools used by Galaxy  
+Tool Shed: repository for tools used by Galaxy
+[Main Tool Shed](https://toolshed.g2.bx.psu.edu/)
 suite: a single repository that 'depends' on many others  
 [data managers](https://wiki.galaxyproject.org/Admin/Tools/DataManagers): allows for the creation of built-in (reference) data  
 data library  
