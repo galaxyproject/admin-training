@@ -1,7 +1,6 @@
 # Course VMs
 
-You'll get a number from the organizers. Pick up a VM accordingly from the spreadsheet in
-https://docs.google.com/spreadsheets/d/1QQow30iIo1ImAceSFWcL7-nba1TT9ffh0GUhEAzXuH0/edit#gid=0
+You'll get a number from the organizers. Pick up a VM accordingly from the [spreadsheet](https://docs.google.com/spreadsheets/d/1QQow30iIo1ImAceSFWcL7-nba1TT9ffh0GUhEAzXuH0/edit#gid=0)
 and put your name in cell D.
 ---------------------------------------------------------------------------------
 
