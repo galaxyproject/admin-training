@@ -48,7 +48,7 @@ sudo ln -s `which python2.7` /usr/local/bin/python
 git clone -b release_17.09 https://github.com/galaxyproject/galaxy.git
 ```
 
-We'll need to change the name of the **galaxy.ini.sample** and **shed_tool_conf.xml.sample** files in *galaxy/config* to **galaxy.ini** and **shed_tool_conf.xml**. Then edit **galaxy.ini** using an editor. We need to uncomment the line `#host = 127.0.0.1` and set the ip to `0.0.0.0` so that the Galaxy server is available over the internet.
+We'll need to copy **galaxy.ini.sample** and **shed_tool_conf.xml.sample** files in *galaxy/config* to **galaxy.ini** and **shed_tool_conf.xml**. Then edit **galaxy.ini** using an editor. We need to uncomment the line `#host = 127.0.0.1` and set the ip to `0.0.0.0` so that the Galaxy server is available over the internet.
 
 Once, that is complete let's start Galaxy to test it.
 
