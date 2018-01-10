@@ -325,7 +325,7 @@ To run this playbook on a remote machine, you'll need to have a public/private s
 <instance_ip>
 <instance_ip>
 
-[vars]
+[my_hosts:vars]
 ansible_ssh_user=ubuntu
 ansible_ssh_private_key_file=<path_to_your_private_ssh_key>
 
