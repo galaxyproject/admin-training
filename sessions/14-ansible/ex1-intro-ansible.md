@@ -109,7 +109,7 @@ Place that file under `roles/galaxy-tool-install/files/tool_list.yaml`.
 Note that you can also use the `tool_panel_section_id` (instead of `_label`) but
 note that in that case the tool section must already exist on the server or
 Galaxy will install the tool outside any section. If using
-`tool_panel_section_name`, Galaxy will create the necessary section if not
+`tool_panel_section_label`, Galaxy will create the necessary section if not
 already there.
 
 **Part 3 - Create some default variables.**
