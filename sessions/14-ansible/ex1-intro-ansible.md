@@ -68,7 +68,7 @@ The first thing we need to do is build the structure for the ansible role and pl
 
 ``` bash
 mkdir galaxy-tool-ansible
-cd galaxy-tool-ansible
+cd galaxy-tool-ansible/
 
 mkdir -p roles/galaxy-tool-install/defaults
 mkdir -p roles/galaxy-tool-install/files
@@ -106,7 +106,7 @@ https://raw.githubusercontent.com/galaxyproject/ansible-galaxy-tools/master/file
 
 Place that file under `roles/galaxy-tool-install/files/tool_list.yaml`.
 
-Note that you can also use the *tool_panel_section_id* (instead of `_label`) but
+Note that you can also use the `tool_panel_section_id` (instead of `_label`) but
 note that in that case the tool section must already exist on the server or
 Galaxy will install the tool outside any section. If using
 `tool_panel_section_name`, Galaxy will create the necessary section if not
