@@ -268,7 +268,7 @@ Append the following to the tasks in `roles/galaxy-tool-install/tasks/main.yml`:
   when: admin_users_found.msg == ""
 
 - name: Restart Galaxy
-  shell: "sh ./run.sh --stop-daemon && sh ./run.sh --daemon"
+  shell: "sh ./run.sh --stop-daemon ; sh ./run.sh --daemon"
   args:
     chdir: "{{ galaxy_server_dir }}"
 
