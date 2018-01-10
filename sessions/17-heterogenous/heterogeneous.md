@@ -112,4 +112,4 @@ Pulsar "managers" provide job running interfaces:
 ---
 # Exercise
 
-[Running jobs on remote resources using Pulsar](https://github.com/gvlproject/dagobah-training/blob/master/sessions/17-heterogenous/ex1-pulsar.md)
+[Running jobs on remote resources using Pulsar](https://github.com/galaxyproject/dagobah-training/blob/2018-oslo/sessions/17-heterogenous/ex1-pulsar.md)
