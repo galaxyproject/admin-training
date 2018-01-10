@@ -232,7 +232,7 @@ To complete these tasks we will be using various ansible modules. This is by no
 means the only or best way to complete these steps but this tutorial is meant to
 serve of an example of a simple ansible script.
 
-Append the following to the tasks in the role's *main.yml*:
+Append the following to the tasks in `roles/galaxy-tool-install/tasks/main.yml`:
 
 ```yaml
 
