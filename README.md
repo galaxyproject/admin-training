@@ -104,7 +104,8 @@ Timetable with sessions and material will be continously updated towards the wor
 | 12:30 | **Lunch** | | |
 | 13:15 | Running Jupyter in Galaxy with Galaxy Interactive Environments | [Exercise](sessions/21-gie/ex1-jupyter.md) | (B) |
 | 15:30 | **Afternoon break** | | |
-| 15:45 | OPEN: Lightning talks | | |
+| 15.45 | Uwsgi + mules | | (?) |
+| 16:45 | OPEN: Lightning talks | | |
 | 18:00 | Wrap up and close | | All |
 
 
@@ -114,7 +115,7 @@ Timetable with sessions and material will be continously updated towards the wor
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
 | 09:00 | Welcome and questions |  | All |
-| 09.15 | Uwsgi + mules | | (?) |
+| 09.15 | Lightning talks (continued) | | (?) |
 | 10:15 | Upgrading to a new Galaxy release | [Slides](https://galaxyproject.github.io/dagobah-training/2018-oslo/08-upgrading-release/upgrading.html) | (N) |
 | 10:45 | **Morning break** | | |
 | 11.00 | Whats new in Galaxy 18.01? | | (?) |
