@@ -1,6 +1,8 @@
 # Course VMs
 
-You'll get a number from the organizers. Pick up a VM accordingly from the list:
+You'll get a number from the organizers. Pick up a VM accordingly from the spreadsheet in
+https://docs.google.com/spreadsheets/d/1QQow30iIo1ImAceSFWcL7-nba1TT9ffh0GUhEAzXuH0/edit#gid=0
+and put your name in cell D.
 ---------------------------------------------------------------------------------
 
 1. galaxy-admin-ws-big-1	158.39.75.11
