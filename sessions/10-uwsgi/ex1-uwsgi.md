@@ -153,6 +153,7 @@ If you are still running Galaxy, stop it with `CTRL+C` followed by `sudo -Hu gal
 ```console
 $ sudo -Hu galaxy sh -c 'cd /srv/galaxy/server && uwsgi --plugin python --virtualenv /srv/galaxy/venv --ini-paste /srv/galaxy/config/galaxy.ini'
 ```
+Galaxy log file will now be: `/srv/galaxy/log/uwsgi.log`
 
 Galaxy should now be available at `http://<your_ip>/`
 
