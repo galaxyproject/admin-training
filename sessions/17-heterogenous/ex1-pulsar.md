@@ -178,7 +178,7 @@ Investigate the config files created in `/srv/pulsar/etc`:
 
 **Part 2 - Additional configuration**
 
-You can see that `app.yml` is minimally configured. We want to add to this. The full suite of options available for app.yml is explained in [app.yml.sample in the Pulsar source](https://github.com/galaxyproject/pulsar/blob/master/app.yml.sample). I have made [a copy of app.yml.sample into the training materials with syntax highlighting](https://github.com/gvlproject/dagobah-training/blob/master/sessions/17-heterogenous/app.sample.yml).
+You can see that `app.yml` is minimally configured. We want to add to this. The full suite of options available for app.yml is explained in [app.yml.sample in the Pulsar source](https://github.com/galaxyproject/pulsar/blob/master/app.yml.sample). I have made [a copy of app.yml.sample into the training materials with syntax highlighting](https://github.com/galaxyproject/dagobah-training/blob/2018-oslo/sessions/17-heterogenous/app.sample.yml).
 
 Add the following to `app.yml`:
 
