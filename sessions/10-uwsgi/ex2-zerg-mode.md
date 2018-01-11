@@ -1,22 +1,19 @@
-![GCC Logo](../../docs/shared-images/gcc2017_logo.png) ![galaxy logo](../../docs/shared-images/galaxy_logo_25percent_transparent.png)
-
-### GCC - 2017 - Montpellier
+![galaxy logo](../../docs/shared-images/galaxy_logo_25percent_transparent.png)
 
 # Run uWSGI Zerg Mode - Exercise.
 
-#### Authors: Nate Coraor. 2017
+#### Authors: Nate Coraor (2017)
 
 ## Introduction
 
-The standard uWSGI operation mode allows you to restart the Galaxy application while blocking client connections. Zerg Mode does away with the waiting by running a special **Zerg Pool** process, and connecting **Zergling** workers (aka Galaxy application processes) to the pool. As long as at least one is connected, requests can be served. We will utilize this to do transparent restarts. In our configuration, one zergling will start automatically when supervisor loads its configuration. To restart Galaxy, a second zergling will be started. Once it has fully loaded, it will signal the first zergling to terminate. The first terminates, and the second takes over serving requests.
+The standard uWSGI operation mode allows you to restart the Galaxy application while blocking client connections. [Zerg Mode](https://uwsgi-docs.readthedocs.io/en/latest/Zerg.html) does away with the waiting by running a special **Zerg Pool** process, and connecting **Zergling** workers (aka Galaxy application processes) to the pool. As long as at least one is connected, requests can be served. We will utilize this to do transparent restarts. In our configuration, one zergling will start automatically when supervisor loads its configuration. To restart Galaxy, a second zergling will be started. Once it has fully loaded, it will signal the first zergling to terminate. The first terminates, and the second takes over serving requests.
 
 ## Section 1 - Configure Supervisor
 
 We'll replace `/etc/supervisor/conf.d/galaxy.conf` with a new one and create a directory for the zergpool communication socket:
 
 ```console
-sudo mv /etc/supervisor/conf.d/galaxy.conf.disabled
-sudo curl -L -o /etc/supervosor/conf.d/galaxy.conf https://raw.githubusercontent.com/galaxyproject/dagobah-training/2017-montpellier/sessions/10-uwsgi/supervisor_galaxy.conf
+sudo mv /etc/supervisor/conf.d/galaxy.conf /etc/supervisor/conf.d/galaxy.conf.disabled
 sudo -Hu galaxy mkdir /srv/galaxy/var
 ```
 
