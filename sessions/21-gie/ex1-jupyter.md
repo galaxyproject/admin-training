@@ -67,7 +67,7 @@ dynamic_proxy_bind_ip = 127.0.0.1
 Once saved, exit your `galaxy` user shell and return to the `ubuntu` user. Then, restart Galaxy:
 
 ```console
-$ sudo supervisorctl restart gx:galaxy
+$ sudo supervisorctl restart galaxy:
 ```
 
 **Part 2 - Configure nginx**
