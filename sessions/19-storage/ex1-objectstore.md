@@ -14,7 +14,7 @@ Alternatively, you may wish to write new datasets to more than one filesystem. F
 
 ## Section 1 - Hierarchical Object Store
 
-First, note that your Galaxy datasets have been created thus far in the directory `/srv/galaxy/data/datasets`. This is because of the setting `file_path` in `galaxy.ini`. We can instruct Galaxy to place new datasets in a different place, but still look in `/srv/galaxy/data/datasets` for old datasets.
+First, note that your Galaxy datasets have been created thus far in the directory `/home/galaxy/galaxy/datasets`. This is because of the setting `file_path` in `galaxy.ini`. We can instruct Galaxy to place new datasets in a different place, but still look in `/home/galaxy/galaxy/datasets` for old datasets.
 
 Configure Galaxy to recognize an object store configuration file by editing `galaxy.ini` as usual:
 
@@ -39,7 +39,7 @@ Next, create the new config file: `/srv/galaxy/config/object_store_conf.xml`:
             <extra_dir type="job_work" path="/srv/galaxy/server/database/newjobs"/>
         </backend>
         <backend id="olddata" type="disk" order="1">
-            <files_dir path="/srv/galaxy/data"/>
+            <files_dir path="/home/galaxy/galaxy/datasets"/>
             <extra_dir type="job_work" path="/srv/galaxy/server/database/jobs"/>
         </backend>
     </backends>
@@ -112,7 +112,7 @@ Let's undo the work we did to simplify our configuration for future sessions:
 
 ```console
 $ sudo -u galaxy mv /srv/galaxy/config/object_store_conf.xml /srv/galaxy/config/_object_store_conf.xml
-$ sudo -u galaxy mv /srv/galaxy/newnewdata/000/* /srv/galaxy/data/000
-$ sudo -u galaxy mv /srv/galaxy/newdata/000/* /srv/galaxy/data/000
+$ sudo -u galaxy mv /srv/galaxy/newnewdata/000/* /home/galaxy/galaxy/datasets/000
+$ sudo -u galaxy mv /srv/galaxy/newdata/000/* /home/galaxy/galaxy/datasets/000
 $ sudo supervisorctl restart gx:*
 ```
