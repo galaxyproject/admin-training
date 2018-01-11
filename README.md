@@ -13,6 +13,8 @@ Built slides have [an index](https://galaxyproject.github.io/dagobah-training/20
 
 [Information and questions (Google Doc)](https://docs.google.com/document/d/1eo12xrdNIrFD1_SLDMQKXteysOGkR2c8l-sR_hl6sok/edit?usp=sharing)
 
+[**IMPORTANT! Workshop Evaluation form (please help us to be better)**](https://skjema.uio.no/galaxy-admin-workshop-2018-eva)
+
 ### Instructors
 
 * (B)jörn Grüning - ELIXIR Galaxy WG, Elixir Germany, de.NBI, University of Freiburg, Germany
