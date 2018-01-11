@@ -94,7 +94,7 @@ We'll now proxy the Node.js proxy with nginx. This is done by adding to `/etc/ng
 Once saved, restart nginx to reread the config:
 
 ```console
-$ sudo systemctl restart nginx
+$ sudo supervisorctl restart nginx
 ```
 
 **Part 3 - Configure proxy to start with supervisor**
