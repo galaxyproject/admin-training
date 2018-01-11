@@ -14,7 +14,7 @@ By the end of this tutorial, you should:
 
 ## Introduction
 
-A slideshow presentation on this subject can be found [here](https://gvlproject.github.io/dagobah-training/06-reference-genomes/reference_genomes.html#1)
+A slideshow presentation on this subject can be found [here](https://galaxyproject.github.io/dagobah-training/2018-oslo/05-reference-genomes/reference_genomes.html#1)
 
 Reference genomes such as the **human, mouse, arabidopsis** etc. are all quite large. They are used extensively in bioinformatic analyses and therefore need to be widely available in analysis systems. These genomes can take up quite a bit of disk space to store especially if every user has their own copy. A lot of bioinformatic tools need to index these large genomes before they can use them. Tools such as short read mappers like **BWA** or **Bowtie** calculate indices of the genome sequences to significantly speed up their processing of short reads. However, these indices take a long time to build and it would be impractical to build them every time you want to do a read mapping.
 

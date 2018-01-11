@@ -108,7 +108,7 @@ static-map = /static=/srv/galaxy/server/galaxy/static
 ---
 # Exercise
 
-[Run Galaxy with uWSGI - Exercise](https://github.com/gvlproject/dagobah-training/blob/master/sessions/10-uwsgi/ex1-uwsgi.md)
+[Run Galaxy with uWSGI - Exercise](https://github.com/galaxyproject/dagobah-training/blob/2018-oslo/sessions/10-uwsgi/ex1-uwsgi.md)
 
 ---
 # Run job handlers (separately)

@@ -340,7 +340,7 @@ In this exercise, we will:
 * Task will be to install tools into Galaxy
 * Will use existing scripts (bioblend)
 
-[Adding tools to Galaxy with Ansible](https://github.com/gvlproject/dagobah-training/blob/master/sessions/14-ansible/ex1-intro-ansible.md)
+[Adding tools to Galaxy with Ansible](https://github.com/galaxyproject/dagobah-training/blob/2018-oslo/sessions/14-ansible/ex1-intro-ansible.md)
 ]
 .footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
 
@@ -389,7 +389,7 @@ In this exercise we will:
 * We will work through the contents of the scripts.
 * Finally, as a demonstration, we will run the roles from a playbook.
 
-[Installing Galaxy with Ansible](https://github.com/gvlproject/dagobah-training/blob/master/sessions/14-ansible/ex2-galaxy-ansible.md)
+[Installing Galaxy with Ansible](https://github.com/galaxyproject/dagobah-training/blob/2018-oslo/sessions/14-ansible/ex2-galaxy-ansible.md)
 
 ]
 
