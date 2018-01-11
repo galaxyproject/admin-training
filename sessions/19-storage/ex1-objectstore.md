@@ -40,7 +40,7 @@ Next, create the new config file: `/srv/galaxy/config/object_store_conf.xml`:
         </backend>
         <backend id="olddata" type="disk" order="1">
             <files_dir path="/home/galaxy/galaxy/datasets"/>
-            <extra_dir type="job_work" path="/srv/galaxy/server/database/jobs"/>
+            <extra_dir type="job_work" path="/home/galaxy/galaxy/jobs"/>
         </backend>
     </backends>
 </object_store>
@@ -48,7 +48,7 @@ Next, create the new config file: `/srv/galaxy/config/object_store_conf.xml`:
 
 Then restart your Galaxy server with `sudo supervisorctl restart galaxy:*`.
 
-Create new jobs and you'll find that they are created in the folder `/srv/galaxy/newdata`. However, older datasets in `/srv/galaxy/data` are still accessible:
+Create new jobs and you'll find that they are created in the folder `/srv/galaxy/newdata`. However, older datasets in `/home/galaxy/galaxy/datasets` are still accessible:
 
 ```console
 $ cat /srv/galaxy/newdata/000/dataset_19.dat
@@ -74,8 +74,8 @@ Create a new Galaxy config file: `/srv/galaxy/config/object_store_conf.xml`:
             <extra_dir type="job_work" path="/srv/galaxy/server/database/newjobs"/>
         </backend>
         <backend id="data" type="disk" weight="0">
-            <files_dir path="/srv/galaxy/data"/>
-            <extra_dir type="job_work" path="/srv/galaxy/database/jobs"/>
+            <files_dir path="/home/galaxy/galaxy/datasets"/>
+            <extra_dir type="job_work" path="/home/galaxy/galaxy/jobs"/>
         </backend>
     </backends>
 </object_store>
@@ -84,12 +84,12 @@ Create a new Galaxy config file: `/srv/galaxy/config/object_store_conf.xml`:
 Move any new datasets you created with the hierarchical object store to the old object store, and set the object store ID in the database:
 
 ```console
-$ sudo -u galaxy mv /srv/galaxy/newdata/000/* /srv/galaxy/data/000
+$ sudo -u galaxy mv /srv/galaxy/newdata/000/* /home/galaxy/galaxy/datasets/000
 $ echo "UPDATE dataset SET object_store_id='data';" | sudo -Hu galaxy psql galaxy
 UPDATE 19
 ```
 
-Then restart your Galaxy server with `sudo supervisorctl restart gx:*`.
+Then restart your Galaxy server with `sudo supervisorctl restart galaxy:*`.
 
 Create new jobs and you'll find that they are created in both `/srv/galaxy/newnewdata` and `/srv/galaxy/newdata`, with the former being about 3 times as likely to be selected as the latter. You can see this in the log messages as well (e.g. `tail -f /srv/galaxy/log/*.log`):
 
@@ -109,10 +109,11 @@ galaxy.objectstore DEBUG 2017-02-05 03:13:47,029 Using preferred backend 'newdat
 ## Section 3 - Undo
 
 Let's undo the work we did to simplify our configuration for future sessions:
+Remove or comment ` object_store_config_file = /srv/galaxy/config/object_store_conf.xml` from galaxy.ini and:
 
 ```console
 $ sudo -u galaxy mv /srv/galaxy/config/object_store_conf.xml /srv/galaxy/config/_object_store_conf.xml
 $ sudo -u galaxy mv /srv/galaxy/newnewdata/000/* /home/galaxy/galaxy/datasets/000
 $ sudo -u galaxy mv /srv/galaxy/newdata/000/* /home/galaxy/galaxy/datasets/000
-$ sudo supervisorctl restart gx:*
+$ sudo supervisorctl restart galaxy:*
 ```
