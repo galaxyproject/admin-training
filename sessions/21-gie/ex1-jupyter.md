@@ -27,7 +27,7 @@ $ sudo usermod -a -G docker galaxy
 While not explicitly necessary, it's best to pull the Docker image we'll use first. Otherwise, this occurs the first time the Jupyter GIE is called from the Galaxy UI. Because this takes a long time, attempts to use Jupyter in the UI will time out until the image has been downloaded.
 
 ```console
-$ sudo -u galaxy docker pull bgruening/docker-jupyter-notebook:16.01.1
+$ sudo -u galaxy docker pull quay.io/bgruening/docker-jupyter-notebook:17.09
 ```
 
 ## Section 2 - Configure Node.js proxy
@@ -48,7 +48,7 @@ $ cp allowed_images.yml.sample allowed_images.yml
 Have a look in the config files you have just created. Edit `allowed_images.yml` and change the `image`:
 
 ```yaml
-    image: bgruening/docker-jupyter-notebook:16.01.1
+    image: quay.io/bgruening/docker-jupyter-notebook:17.09
 ```
 
 Next, edit `/srv/galaxy/config/galaxy.ini` and add the following:
