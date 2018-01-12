@@ -11,13 +11,6 @@ slides by @martenson, @afgane, @nsoranzo
 .footnote[\#usegalaxy / @galaxyproject]
 
 ---
-class: larger
-
-## Please Interrupt!
-
-Answer your questions we will.
-
----
 # Release Cycle
 
 * Galaxy aims to release each 4 months
@@ -33,6 +26,15 @@ Answer your questions we will.
 * Every release has its own branch in the `galaxy` GitHub repository
   * Named as `release_YY_MM`
   * Kept up to date (especially for recent releases)
+
+---
+# Mantain local Galaxy modifications
+
+Two options:
+1. `git stash && git checkout ... && git pull ... && git stash pop`
+2. Commit your changes to a local branch, merge/rebase upstream Galaxy
+
+The latter is probably better than the former for large changes
 
 ---
 # Keeping a release up to date
@@ -58,12 +60,12 @@ When a new release is out:
   ```ini
   error_page 502 /static/custom_502.html;
   ```
-* When it's time, stop the Galaxy servers
+* When it's time, stop the Galaxy server processes (not the database server!)
 
 ---
 # Housekeeping
 
-Not usually necessary but can't hurt, might help:
+Not usually necessary, but might help:
 
 ```console
 $ find . -name '*.pyc' -delete
@@ -102,11 +104,21 @@ $ git diff release_17.05..release_17.09 -- config/galaxy.ini.sample
 # Upgrade virtualenv
 
 ```console
+$ export GALAXY_VIRTUAL_ENV=/srv/galaxy/venv
 $ . $GALAXY_VIRTUAL_ENV/bin/activate
 $ pip install --upgrade pip setuptools
-$ GALAXY_VIRTUAL_ENV=/srv/galaxy/venv ./scripts/common_startup.sh
+$ ./scripts/common_startup.sh
 $ deactivate
 ```
+
+---
+# make client on `dev`
+
+Since January 2018, the `dev` Galaxy branch does not contain updated client
+build artifacts (e.g. JavaScript bundles in `static/`).
+
+1. install `yarn`
+2. run `make client`
 
 ---
 # Tool migrations?
@@ -120,26 +132,19 @@ Galaxy will notify you on first startup after upgrade including migration
 ---
 # Database migrations
 
-**Backup** your database and:
-
-```console
-$ GALAXY_VIRTUAL_ENV=/srv/galaxy/venv sh manage_db.sh upgrade -c /srv/galaxy/config/galaxy.ini
-```
+1. **Backup** your database
+   - [PostgreSQL backup docs](https://www.postgresql.org/docs/current/static/backup.html)
+2. Run
+   ```console
+   $ sh manage_db.sh upgrade -c /srv/galaxy/config/galaxy.ini
+   ```
 
 ---
 # Start Galaxy
 
 * Monitor the log files
+* Check `/api/version`
 * Check that everything still works
-
----
-# Locally modified Galaxy
-
-Two options:
-1. Commit your changes to a local branch, merge/rebase upstream Galaxy
-2. `git stash && git checkout ... && git pull ... && git stash pop`
-
-The former is probably better than the latter
 
 ---
 # Distribute Galaxy
