@@ -33,6 +33,10 @@ Room: [Seminar room Prolog (Room number: 2465, 2nd floor)](https://tp.uio.no/tim
 
 Timetable with sessions and material will be continously updated towards the workshop.
 
+## Training VM instances (recommended specs)
+
+2 cores, 4 GiB memory, and 20 GiB disk
+
 ## Timetable
 #### Monday
 **8th January** - Location
