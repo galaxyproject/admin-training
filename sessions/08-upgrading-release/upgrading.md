@@ -123,7 +123,7 @@ Galaxy will notify you on first startup after upgrade including migration
 **Backup** your database and:
 
 ```console
-$ sh manage_db.sh upgrade
+$ GALAXY_VIRTUAL_ENV=/srv/galaxy/venv sh manage_db.sh upgrade -c /srv/galaxy/config/galaxy.ini
 ```
 
 ---
