@@ -3,6 +3,23 @@
 Sentry is a nice way to look at logs, be notified of errors
 and to prioritize solving issues.
 
+# If we're still on dev we will downgrade to 17.09 again
+
+```
+sudo -Hsu galaxy
+cd /srv/galaxy/server
+VIRTUAL_ENV=/srv/galaxy/venv sh manage_db.sh -c /srv/galaxy/config/galaxy.ini downgrade 135
+find lib -name \*.pyc -delete
+git stash
+git checkout release_17.09
+GALAXY_VIRTUAL_ENV=/srv/galaxy/venv GALAXY_CONFIG_FILE=/srv/galaxy/config/galaxy.ini source scripts/common_startup.sh
+```
+
+Now we restart galaxy (as the ubuntu user):
+```
+sudo supervisorctl restart galaxy
+```
+
 # Setting up a local sentry instance
 
 We will use a docker compose template that will
