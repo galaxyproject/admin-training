@@ -25,7 +25,7 @@ git cherry-pick a847dbd
 
 Now we restart galaxy (as the ubuntu user):
 ```
-sudo supervisorctl restart galaxy
+sudo supervisorctl restart galaxy:
 ```
 
 # Setting up a local sentry instance
