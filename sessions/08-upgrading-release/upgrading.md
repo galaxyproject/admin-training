@@ -104,7 +104,7 @@ $ git diff release_17.05..release_17.09 -- config/galaxy.ini.sample
 ```console
 $ . $GALAXY_VIRTUAL_ENV/bin/activate
 $ pip install --upgrade pip setuptools
-$ ./scripts/common_startup.sh
+$ GALAXY_VIRTUAL_ENV=/srv/galaxy/venv ./scripts/common_startup.sh
 $ deactivate
 ```
 
