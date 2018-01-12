@@ -120,7 +120,7 @@ Timetable with sessions and material will be continously updated towards the wor
 | 09.15 | Lightning talks (continued) | | (?) |
 | 10:15 | Upgrading to a new Galaxy release | [Slides](https://galaxyproject.github.io/dagobah-training/2018-oslo/08-upgrading-release/upgrading.html) | (N) |
 | 11:00 | **Morning break** | | |
-| 11:15 | Server monitoring and maintenance: Admin UI, Log files, Direct database queries, command line & scripts, what to backup and how | [Slides](http://galaxyproject.github.io/training-material/topics/admin/tutorials/monitoring-maintenance/slides.html), [Exercise 1](http://galaxyproject.github.io/training-material/topics/admin/tutorials/monitoring-maintenance/tutorial.html) [Exercise 2]((sessions/22-troubleshooting/ex1-sentry.md)) | (B,M) |
+| 11:15 | Server monitoring and maintenance: Admin UI, Log files, Direct database queries, command line & scripts, what to backup and how | [Slides](http://galaxyproject.github.io/training-material/topics/admin/tutorials/monitoring-maintenance/slides.html), [Exercise 1](http://galaxyproject.github.io/training-material/topics/admin/tutorials/monitoring-maintenance/tutorial.html) [Exercise 2]((sessions/22-troubleshooting/ex1-sentry.md) | (B,M) |
 | 12:30 | **Lunch** | | |
 | 13.15 | Whats new in Galaxy 18.01? | [Slides](https://galaxyproject.github.io/dagobah-training/2018-oslo/whatsnew/18.01.html) | (?) |
 | 14:15 | When things go wrong: Galaxy Server Troubleshooting | [Slides](https://galaxyproject.github.io/dagobah-training/2018-oslo/22-troubleshooting/troubleshooting.html) | (M) |
