@@ -27,6 +27,11 @@ h2 { font-size: 2em; }
     text-align: center;
 }
 
+.top-title h2 {
+    position: absolute;
+    top: 25px;
+}
+
 .centered {
     text-align: center;
 }
@@ -71,6 +76,10 @@ li p {
 }
 li li {
   font-size: 80%
+}
+
+.largeish {
+    font-size: 1.3em;
 }
 
 .normal {
