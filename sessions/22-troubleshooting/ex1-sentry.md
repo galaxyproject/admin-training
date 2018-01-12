@@ -8,7 +8,7 @@ and to prioritize solving issues.
 ```
 sudo -Hsu galaxy
 cd /srv/galaxy/server
-VIRTUAL_ENV=/srv/galaxy/venv sh manage_db.sh -c /srv/galaxy/config/galaxy.ini downgrade 135
+GALAXY_VIRTUAL_ENV=/srv/galaxy/venv sh manage_db.sh -c /srv/galaxy/config/galaxy.ini downgrade 135
 find lib -name \*.pyc -delete
 git stash
 git checkout release_17.09
