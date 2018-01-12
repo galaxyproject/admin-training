@@ -70,4 +70,11 @@ Then click on "Get your DSN" and copy the long string.
 
 We need to add this to the galaxy config (sudo -u galaxy -e /srv/galaxy/config/galaxy.ini), as `sentry_dsn = <our_dsn>`.
 
+Using sentry requires a conditional python dependency, which we can install with
+```
+sudo -Hsu galaxy
+cd /srv/galaxy/server
+GALAXY_VIRTUAL_ENV=/srv/galaxy/venv GALAXY_CONFIG_FILE=/srv/galaxy/config/galaxy.ini source scripts/common_startup.sh
+```
+
 Now restart Galaxy (`sudo supervisorctl restart galaxy:`) and observe the incoming logs in your Sentry Project!
