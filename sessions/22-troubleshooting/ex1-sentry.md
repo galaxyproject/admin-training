@@ -15,6 +15,14 @@ git checkout release_17.09
 GALAXY_VIRTUAL_ENV=/srv/galaxy/venv GALAXY_CONFIG_FILE=/srv/galaxy/config/galaxy.ini source scripts/common_startup.sh
 ```
 
+While preparing this tutorial we noticed a small bug,
+so we need to apply a small patch (still as the galaxy user):
+```
+git remote add mvdbeek https://github.com/mvdbeek/galaxy
+git fetch mvdbeek
+git cherry-pick a847dbd
+```
+
 Now we restart galaxy (as the ubuntu user):
 ```
 sudo supervisorctl restart galaxy
