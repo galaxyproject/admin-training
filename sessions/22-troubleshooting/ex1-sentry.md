@@ -14,7 +14,7 @@ We first have to install docker-compose:
 sudo apt-get install docker-compose
 ```
 
-We clone the template repository:
+We clone the template repository as the ubuntu user:
 ```bash
 git clone https://github.com/getsentry/onpremise
 cd onpremise/
