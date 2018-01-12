@@ -1,3 +1,8 @@
+# Why Sentry ?
+
+Sentry is a nice way to look at logs, be notified of errors
+and to prioritize solving issues.
+
 # Setting up a local sentry instance
 
 We will use a docker compose template that will
@@ -55,3 +60,14 @@ ssh -L 9000:127.0.0.1:9000 ubuntu@<your_ip_addresses>
 If you are using putty you need to forward port 9000 there.
 
 Go with your browser to http://localhost:9000/ you will have to enter a few details. The root URL is `http://localhost:9000/`.
+
+# Connecting sentry with Galaxy
+
+We need to create a new project in sentry.
+Click on "New Project" and enter "Galaxy" as Project name.
+
+Then click on "Get your DSN" and copy the long string.
+
+We need to add this to the galaxy config (sudo -u galaxy -e /srv/galaxy/config/galaxy.ini), as `sentry_dsn = <our_dsn>`.
+
+Now restart Galaxy (`sudo supervisorctl restart galaxy:`) and observe the incoming logs in your Sentry Project!

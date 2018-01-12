@@ -122,5 +122,6 @@ Timetable with sessions and material will be continously updated towards the wor
 | 10:45 | **Morning break** | | |
 | 11.00 | Whats new in Galaxy 18.01? | [Slides](https://galaxyproject.github.io/dagobah-training/2018-oslo/whatsnew/18.01.html) | (?) |
 | 12:30 | **Lunch** | | |
-| 13:15 | When things go wrong: Galaxy Server Troubleshooting | [Slides](https://galaxyproject.github.io/dagobah-training/2018-oslo/22-troubleshooting/troubleshooting.html) | (M) |
+| 13:15 | Error tracking with Sentry | [Exercise](sessions/22-troubleshooting/ex1-sentry.md) | (M) |
+| 13:30 | When things go wrong: Galaxy Server Troubleshooting | [Slides](https://galaxyproject.github.io/dagobah-training/2018-oslo/22-troubleshooting/troubleshooting.html) | (M) |
 | 15:30 | Wrap up and close | | All |
