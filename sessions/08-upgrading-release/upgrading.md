@@ -31,7 +31,7 @@ slides by @martenson, @afgane, @nsoranzo
 # Mantain local Galaxy modifications
 
 Two options:
-1. `git stash && git checkout ... && git pull ... && git stash pop`
+1. `git stash && git ... && git stash pop`
 2. Commit your changes to a local branch, merge/rebase upstream Galaxy
 
 The latter is probably better than the former for large changes
@@ -97,13 +97,14 @@ Merge changes as desired/necessary.
 Alternatively:
 
 ```console
-$ git diff release_17.05..release_17.09 -- config/galaxy.ini.sample
+$ git diff release_17.09..release_18.01 -- config/galaxy.ini.sample
 ```
 
 ---
 # Upgrade virtualenv
 
 ```console
+$ export GALAXY_CONFIG_FILE=/srv/galaxy/config/galaxy.ini
 $ export GALAXY_VIRTUAL_ENV=/srv/galaxy/venv
 $ . $GALAXY_VIRTUAL_ENV/bin/activate
 $ pip install --upgrade pip setuptools
@@ -150,3 +151,26 @@ Galaxy will notify you on first startup after upgrade including migration
 # Distribute Galaxy
 
 If you're using a compute cluster and not running from shared file system
+
+---
+# Downgrading
+
+If for some reason you need to move back to an older release, the process is similar, but the
+order is a bit different:
+
+```console
+$ export GALAXY_CONFIG_FILE=/srv/galaxy/config/galaxy.ini
+$ export GALAXY_VIRTUAL_ENV=/srv/galaxy/venv
+$ sh manage_db.sh -c /srv/galaxy/config/galaxy.ini downgrade 135
+$ find . -name '*.pyc' -delete
+$ git fetch
+$ git stash  # optional
+$ git checkout release_17.09
+$ git pull --ff-only
+$ git stash pop  # optional
+$ ./scripts/common_startup.sh
+```
+
+.footnote[Here we assume you know the database version of the Galaxy release you want to
+downgrade to (135 in the example above). This simplifies the procedure because
+the database downgrade needs to be done while being on the newer branch.]
