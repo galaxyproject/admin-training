@@ -82,7 +82,7 @@ This will create a system user (`-r`) and its home directory (`-m`) located at `
 
 ```console
 $ sudo -u galaxy git clone -b release_17.09 https://github.com/galaxyproject/galaxy.git /srv/galaxy/server
-$ sudo -u galaxy mkdir /srv/galaxy/{bin,config,data,log}
+$ sudo -u galaxy mkdir /srv/galaxy/{bin,config,data,dependencies,log, tool-data,venv}
 ```
 
 **Part 3 - Set up files**
