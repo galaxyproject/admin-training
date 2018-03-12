@@ -100,7 +100,7 @@ There are many roles already available for download for various aspects of
 system administration or application setup. They all have some meta data
 associated with them which has information on the role's author, keywords,
 dependencies, licenses, available platforms etc. For example, take a look at
-some of the roles published by the[Galaxy project](https://galaxy.ansible.com/galaxyproject/).
+some of the roles published by the [Galaxy project](https://galaxy.ansible.com/galaxyproject/).
 
 Note that in addition to the roles obtained from Ansible Galaxy, there are a
 number of them already included in the source of the GKS playbook.
