@@ -109,15 +109,15 @@ number of them already included in the source of the GKS playbook.
 
 Let's take a look through a couple of the roles and then run the playbook.
 
-The roles used by this playbook use are:
+The roles used by this playbook are:
 
 | Order run | Role name | Purpose |
 | --------- | --------- | ------- |
-| 1 | galaxy-os | Set up the operating system basics |
+| 1 | [galaxyproject.galaxy-os](https://galaxy.ansible.com/galaxyproject/galaxy-os/) | Set up the operating system basics |
 | 2 | galaxyproject.postgresql | Installs PostgreSQL database server |
 | 3 | natefoo.postgresql_objects | Installs PostgreSQL scripts to work with privileges etc. |
 | 4 | galaxyproject.galaxy | Installs and configures Galaxy |
-| 5 | galaxyproject.galaxy-etras | Installs and configures Galaxy for production use |
+| 5 | galaxyproject.galaxy-extras | Installs and configures Galaxy for production use |
 | 6 | galaxyproject.trackster | Configures Trackster |
 | 7 | galaxyproject.galaxy-tools | Installs tools into Galaxy from the ToolShed |
 
