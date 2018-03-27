@@ -193,11 +193,6 @@ Next, we modify the previously created `sites-available/galaxy` to include direc
         expires 24h;
     }
 
-    location /static/scripts {
-        alias $galaxy_root/static/scripts;
-        expires 24h;
-    }
-
     # serve vis/IE plugin static content
     location ~ ^/plugins/(?<plug_type>.+?)/(?<vis_name>.+?)/static/(?<static_file>.*?)$ {
         alias $galaxy_root/config/plugins/$plug_type/$vis_name/static/$static_file;
