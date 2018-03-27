@@ -170,7 +170,7 @@ nginx on Ubuntu 16.04 enables gzip compression by default, but it needs some add
 
 ```nginx
 gzip_vary on;
-gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript application/json application/javascript;
+gzip_types text/plain text/css application/x-javascript text/xml application/xml application/xml+rss text/javascript application/json application/javascript;
 gzip_http_version 1.1;
 gzip_comp_level 6;
 gzip_buffers 16 8k;
@@ -180,32 +180,35 @@ gzip_proxied any;
 Next, we modify the previously created `sites-available/galaxy` to include directives allowing nginx to serve static content, and instructing clients to cache it for 24 hours. Modify the previous `server { ... }` block to place these additions after the `location / { ... }` block, just inside the `server { ... }` block's closing brace:
 
 ```nginx
+    # use a variable for convenience
+    set $galaxy_root /srv/galaxy/server/;
+    
     location /static {
-        alias /srv/galaxy/server/static;
+        alias $galaxy_root/static;
         expires 24h;
     }
 
     location /static/style {
-        alias /srv/galaxy/server/static/style/blue;
+        alias $galaxy_root/static/style/blue;
         expires 24h;
     }
 
     location /static/scripts {
-        alias /srv/galaxy/server/static/scripts;
+        alias $galaxy_root/static/scripts;
         expires 24h;
     }
 
     # serve vis/IE plugin static content
     location ~ ^/plugins/(?<plug_type>.+?)/(?<vis_name>.+?)/static/(?<static_file>.*?)$ {
-        alias /srv/galaxy/server/config/plugins/$plug_type/$vis_name/static/$static_file;
+        alias $galaxy_root/config/plugins/$plug_type/$vis_name/static/$static_file;
     }
 
     location /robots.txt {
-        alias /srv/galaxy/server/static/robots.txt;
+        alias $galaxy_root/static/robots.txt;
     }
 
     location /favicon.ico {
-        alias /srv/galaxy/server/static/favicon.ico;
+        alias $galaxy_root/static/favicon.ico;
     }
 ```
 
@@ -218,7 +221,7 @@ The performance of your Galaxy server can be improved by configuring nginx to ha
 To begin, modify `sites-available/galaxy` to include this additional block at the end, just inside the `server { ... }` block's closing brace:
 
 ```nginx
-    location /_x_accel_redirect {
+    location /_x_accel_redirect/ {
         internal;
         alias /;
     }
