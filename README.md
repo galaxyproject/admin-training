@@ -1,41 +1,34 @@
-# Accelerated Galaxy Administrators Course at [GCC2017](https://gcc2017.sciencesconf.org/)
+# Accelerated Galaxy Administrators Course at [Galaxy Africa 2018](http://galaxyafrica.sanbi.ac.za/)
 
-**Montpellier 15:30-18:00 CEST 28th of June 2017**
+**Cape Town 14:00-17:00 SAST 5 of April 2018**
 
-Built slides have [an index](https://galaxyproject.github.io/dagobah-training/2017-montpellier/).
+Built slides have [an index](https://galaxyproject.github.io/dagobah-training/2018-cape-town/).
 
 ### Instances for workshop
 
-The instances we used for the workshop have now all been shutdown. Please see the bottom of this README for instructions on how to get a machine to do the workshop on your own.
+You will be assigned a remote virtual machine for use in this course. Please
+access that machine via ssh and follow along.
 
 ## Timetable
 
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
-| 15:30 | Intro | [Slides](https://galaxyproject.github.io/dagobah-training/2017-montpellier/00-intro/intro.html#1) | All |
-| 15:35 |Setup a production Galaxy w/ Ansible | [Slides](https://galaxyproject.github.io/dagobah-training/2017-montpellier/14-ansible/ansible-introduction.html#1), [Exercise](https://github.com/galaxyproject/dagobah-training/blob/2017-montpellier/sessions/14-ansible/ex2-galaxy-ansible.md) | (E) |
-| 16:05 | galaxy.ini / available options | [config/galaxy.ini.sample](https://raw.githubusercontent.com/galaxyproject/galaxy/dev/config/galaxy.ini.sample) | (D) |
-| 16:15 | Authentication | [Slides](https://galaxyproject.github.io/dagobah-training/2017-montpellier/13-external-auth/external-auth.html) | (J) |
-| 16:20 | Tools and the Tool Shed | [Slides](https://galaxyproject.github.io/dagobah-training/2017-montpellier/04-tool-shed/shed_intro.html#1), [Installation](https://galaxyproject.github.io/dagobah-training/2017-montpellier/04-tool-shed/tool_installation.html#1), [Exercise](https://github.com/galaxyproject/dagobah-training/blob/2017-montpellier/sessions/04-tool-shed/ex-ephemeris.md) | (M) |
-| 16:35 | Reference Genomes |[Slides](https://galaxyproject.github.io/dagobah-training/2017-montpellier/05-reference-genomes/reference_genomes.html), [Exercise](https://github.com/galaxyproject/dagobah-training/tree/2017-montpellier/sessions/05-reference-genomes/ex1-reference-genomes.md) | (S) |
-| 16:55 | uWSGI/supervisor/webless handlers | [Slides](https://galaxyproject.github.io/dagobah-training/2017-montpellier/10-uwsgi/uwsgi.html), [Exercise](https://github.com/galaxyproject/dagobah-training/tree/2017-montpellier/sessions/10-uwsgi/ex2-zerg-mode.md) | (N) |
-| 17:15 | Advanced Job Configuration | [Slides](https://galaxyproject.github.io/dagobah-training/2017-montpellier/15-job-conf/job_conf.html), [Exercise](https://github.com/galaxyproject/dagobah-training/tree/2017-montpellier/sessions/16-compute-cluster/ex2-advanced-job-configs.md) | (N) |
-| 17:35 | When Things Go Wrong: Troubleshooting | [Slides](https://galaxyproject.github.io/dagobah-training/2017-montpellier/22-troubleshooting/troubleshooting.html) | (N) |
-| 17:45 | Q&A |  | All |
-| 18:00 | END |  |  |
+| 14:00 | Intro | [Slides](https://galaxyproject.github.io/dagobah-training/2018-cape-town/00-intro/intro.html#1) | All |
+| 14:10 |Setup a production Galaxy with Ansible | [Slides](https://galaxyproject.github.io/dagobah-training/2018-cape-town/14-ansible/ansible-introduction.html#1), [Exercise](https://github.com/galaxyproject/dagobah-training/blob/2018-cape-town/sessions/14-ansible/ex2-galaxy-ansible.md) | (E) |
+| 15:00 | Break | | |
+| 15:30 | Tools and the Tool Shed | [Slides](https://galaxyproject.github.io/dagobah-training/2018-cape-town/04-tool-shed/shed_intro.html#1), [Installation](https://galaxyproject.github.io/dagobah-training/2018-cape-town/04-tool-shed/tool_installation.html#1), [Exercise](https://github.com/galaxyproject/dagobah-training/blob/2018-cape-town/sessions/04-tool-shed/ex-ephemeris.md) | (B) |
+| 16:00 | Connecting Galaxy to a compute cluster |[Slides](http://galaxyproject.github.io/training-material/topics/admin/tutorials/connect-to-compute-cluster/slides.html), [Exercise](http://galaxyproject.github.io/training-material/topics/admin/tutorials/connect-to-compute-cluster/tutorial.html) | (E) |
+| 16:30 | Storage management | [Slides](https://galaxyproject.github.io/dagobah-training/2018-oslo/19-storage/storage.html), [Exercise](https://github.com/galaxyproject/dagobah-training/blob/2018-oslo/sessions/19-storage/ex1-objectstore.md) | (E) |
+| 17:00 | END |  |  |
 
-### Running the exercises on your own
+### Running the exercises on your own outside the training
 
-To perform the training exercises on your own at a later time, you can do so with a fresh Ubuntu 16.04 docker container, virtual machine, or cloud instance, and by running the [initial setup Ansible playbook](https://github.com/galaxyproject/dagobah-training/blob/2017-montpellier/GATC-ansible/README.md).
+To perform the training exercises on your own at a later time, you can do so with a fresh Ubuntu 16.04 docker container, virtual machine, or cloud instance, and by running the [initial setup Ansible playbook](https://github.com/galaxyproject/dagobah-training/blob/2018-cape-town/GATC-ansible/README.md).
 
 ### Instructors
 
-* (N)ate Coraor - Galaxy Project, BMB, Penn State University, USA
-* (S)imon Gladman - VLSCI, University of Melbourne, Australia
-* (E)nis Afgan - Galaxy Project, Department of Biology, Johns Hopkins University, USA
-* (D)an Blankenberg - Galaxy Project, BMB, Penn State University, USA
-* (J)ohn Chilton - Galaxy Project, BMB, Penn State University, USA
-* (M)artin Čech - Galaxy Project, BMB, Penn State University, USA
+* (E)nis Afgan - Galaxy Project, Johns Hopkins University, USA
+* (B)jörn Grüning - University of Freiburg, Germany
 
 ---
 
