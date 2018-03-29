@@ -9,6 +9,9 @@ Built slides have [an index](https://galaxyproject.github.io/dagobah-training/20
 You will be assigned a remote virtual machine for use in this course. Please
 access that machine via ssh and follow along.
 
+_Recommended specs_
+2 cores, 4 GiB memory, and 20 GiB disk
+
 ### Timetable
 
 | **Time** | **Topic** | **Links** | **Instructor** |
@@ -19,7 +22,7 @@ access that machine via ssh and follow along.
 | 15:30 | Tools and the Tool Shed | [Slides](https://galaxyproject.github.io/dagobah-training/2018-cape-town/04-tool-shed/shed_intro.html#1), [Installation](https://galaxyproject.github.io/dagobah-training/2018-cape-town/04-tool-shed/tool_installation.html#1), [Exercise](https://github.com/galaxyproject/dagobah-training/blob/2018-cape-town/sessions/04-tool-shed/ex-ephemeris.md) | (B) |
 | 16:00 | Connecting Galaxy to a compute cluster |[Slides](http://galaxyproject.github.io/training-material/topics/admin/tutorials/connect-to-compute-cluster/slides.html), [Exercise](http://galaxyproject.github.io/training-material/topics/admin/tutorials/connect-to-compute-cluster/tutorial.html) | (E) |
 | 16:30 | Storage management | [Slides](https://galaxyproject.github.io/dagobah-training/2018-oslo/19-storage/storage.html), [Exercise](https://github.com/galaxyproject/dagobah-training/blob/2018-oslo/sessions/19-storage/ex1-objectstore.md) | (E) |
-| 17:00 | END |  |  |
+| 17:00 | END | | |
 
 ### Running the exercises on your own outside the training
 
