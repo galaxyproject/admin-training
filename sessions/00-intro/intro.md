@@ -3,30 +3,22 @@ class: inverse
 
 ---
 class: special, center
-![gcc2017 logo](../shared-images/gcc2017_logo_black.png)
+![galaxy-africa logo](../shared-images/galaxy-africa-white-logo.png)
 
 # Accelerated Admin Training
-28th of June 2017
+5th of April 2018
 
-15:30-18:00
+14:00-17:00
 
-Montpellier, France
+Cape Town, South Africa
 
 ---
 # Your Instructors
 .large[
 - Enis Afgan
   - Johns Hopkins University [@EnisAfgan](https://twitter.com/EnisAfgan)
-- Nate Coraor
-  - Penn State University [@natefoo](https://twitter.com/natefoo)
-- Simon Gladman
-  - VLSCI, University of Melbourne, Australia [@simongladman1](https://twitter.com/simongladman1)
-- Dan Blankenberg
-  - Penn State University [@DBlankenberg](https://twitter.com/DBlankenberg)
-- John Chilton [@jmchilton](https://twitter.com/jmchilton)
-  - Galaxy Project, BMB, Penn State University, USA
-- Martin Čech
-  - Penn State University [@martenson](https://twitter.com/martenson)
+- Björn Grüning
+  - University of Freiburg [@bjoerngruening](https://twitter.com/bjoerngruening)
 ]
 .footnote[\#usegalaxy / @galaxyproject]
 
@@ -40,19 +32,20 @@ class: special, center, middle
 ---
 # Training Home
 
-## [http://bit.ly/gcc17admin](https://github.com/galaxyproject/dagobah-training/tree/2017-montpellier)
+## [http://bit.ly/ctAdmin](http://bit.ly/ctAdmin)
 .large[
-* The homepage of this training is a repository at GitHub reachable by the link above.
-* Most materials are written in Markdown and we encourage Pull Requests (even during the training!).
-* Materials from this repo will stay accessible and unmodified after the training.
+* The homepage of this training is a repository at GitHub reachable by the link above so you can follow along
+* Most materials are written in Markdown and we encourage Pull Requests (even during the training!)
+* Materials from this repo will stay accessible and unmodified after the training
 ]
 
 ---
 # Communication channels
 .large[
-* Web browser based chat at https://gitter.im/dagobah-training/Lobby.
+* Web browser based chat at https://gitter.im/dagobah-training/Lobby
+* Note that you you will need to login/register with Gitter using your GitHub or Twitter accounts before being able to post messages
 ]
-.footnote[[http://bit.ly/gcc17admin](https://github.com/galaxyproject/dagobah-training/tree/2017-montpellier)]
+.footnote[[http://bit.ly/ctAdmin](http://bit.ly/ctAdmin)]
 
 ---
 # Useful Links
@@ -63,26 +56,25 @@ class: special, center, middle
   - https://galaxyproject.org/admin
 - http://galaxyproject.github.io/training-material/
   - http://galaxyproject.github.io/training-material/topics/admin/
-
 ]
-.footnote[[http://bit.ly/gcc17admin](https://github.com/galaxyproject/dagobah-training/tree/2017-montpellier)]
+.footnote[[http://bit.ly/ctAdmin](http://bit.ly/ctAdmin)]
 
 ---
 # Hosts
 
-We would like to thank as our infrastructure providers:
+We would like to thank as our infrastructure providers for supplying the virtual machines we will be using today:
 .large[
-- NeCTAR cloud (https://nectar.org.au/research-cloud/)
-- Jetstream Cloud (http://jetstream-cloud.org/)
-- CLIMB cloud (http://www.climb.ac.uk/)
+-
 ]
-
-.footnote[[http://bit.ly/gcc17admin](https://github.com/galaxyproject/dagobah-training/tree/2017-montpellier)]
+.footnote[[http://bit.ly/ctAdmin](http://bit.ly/ctAdmin)]
 
 ---
 class: special, center, middle
 # Future events
 .large[
-Oslo - January 8, 2018!
+GCCBOSC - June 25-30, 2018 in Portland, OR, USA
+
+The largest annual gathering of all things Galaxy
+
+https://gccbosc2018.sched.com/
 ]
-.footnote[[http://bit.ly/gcc17admin](https://github.com/galaxyproject/dagobah-training/tree/2017-montpellier)]

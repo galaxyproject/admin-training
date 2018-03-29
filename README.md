@@ -1,19 +1,19 @@
-# Accelerated Galaxy Administrators Course at [Galaxy Africa 2018](http://galaxyafrica.sanbi.ac.za/)
+## Accelerated Galaxy Administrators Course at [Galaxy Africa 2018](http://galaxyafrica.sanbi.ac.za/)
 
-**Cape Town 14:00-17:00 SAST 5 of April 2018**
+**Cape Town, 14:00-17:00 SAST, 5th of April 2018.**
 
 Built slides have [an index](https://galaxyproject.github.io/dagobah-training/2018-cape-town/).
 
-### Instances for workshop
+### Instances for the training
 
 You will be assigned a remote virtual machine for use in this course. Please
 access that machine via ssh and follow along.
 
-## Timetable
+### Timetable
 
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
-| 14:00 | Intro | [Slides](https://galaxyproject.github.io/dagobah-training/2018-cape-town/00-intro/intro.html#1) | All |
+| 14:00 | Introduction | [Slides](https://galaxyproject.github.io/dagobah-training/2018-cape-town/00-intro/intro.html#1) | All |
 | 14:10 |Setup a production Galaxy with Ansible | [Slides](https://galaxyproject.github.io/dagobah-training/2018-cape-town/14-ansible/ansible-introduction.html#1), [Exercise](https://github.com/galaxyproject/dagobah-training/blob/2018-cape-town/sessions/14-ansible/ex2-galaxy-ansible.md) | (E) |
 | 15:00 | Break | | |
 | 15:30 | Tools and the Tool Shed | [Slides](https://galaxyproject.github.io/dagobah-training/2018-cape-town/04-tool-shed/shed_intro.html#1), [Installation](https://galaxyproject.github.io/dagobah-training/2018-cape-town/04-tool-shed/tool_installation.html#1), [Exercise](https://github.com/galaxyproject/dagobah-training/blob/2018-cape-town/sessions/04-tool-shed/ex-ephemeris.md) | (B) |
