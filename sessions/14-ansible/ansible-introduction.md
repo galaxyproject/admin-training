@@ -1,39 +1,42 @@
 layout: true
 class: inverse
 ---
-class: special, center
-![GCC Logo](../shared-images/gcc2017_logo_black.png)
+class: special, center, middle
 
 # Ansible and Galaxy
 
 
-.footnote[\#usegalaxy \#GCC2017 / @galaxyproject]
+.footnote[\#usegalaxy / @galaxyproject - Cape Town 2018]
 ---
+class: center, middle
 
-layout: true
-class: left, inverse
+# Please interrupt
 
----
-class: special, center
-![GCC Logo](../shared-images/gcc2017_logo_black_2in.png)
-
-.large[
-## Please interrupt
 *We are here to answer questions!*
+
+.footnote[\#usegalaxy / @galaxyproject - Cape Town 2018]
+
+---
+# Overview
+
+.large[
+* What is Ansible
+* Galaxy and Ansible
 ]
 
-.footnote[\#usegalaxy \#GCC2017 / @galaxyproject]
+.footnote[\#usegalaxy / @galaxyproject - Cape Town 2018]
+
 ---
-class: left
-## ![GCC Logo](../shared-images/gcc2017_logo_black_2in.png)  Overview
+# Overview
 .large[
-* What is Ansible? A quick introduction
-* Galaxy and Ansible: building a production server
+* **What is Ansible**
+* Galaxy and Ansible
 ]
-.footnote[\#usegalaxy \#GCC2017 / @galaxyproject]
+
+.footnote[\#usegalaxy / @galaxyproject - Cape Town 2018]
+
 ---
-class: left
-## ![GCC Logo](../shared-images/gcc2017_logo_black_2in.png)  What is Ansible?
+# What is Ansible
 .large[
 * Automation tool for configuring and managing computers. (c.f. Puppet, Chef etc.)
 * Initial release: Feb. 2012
@@ -41,10 +44,10 @@ class: left
 ]
 ![ansible-vanilla.png](images/ansible-vanilla.png)
 
-.footnote[\#usegalaxy \#GCC2017 / @galaxyproject]
+.footnote[\#usegalaxy / @galaxyproject - Cape Town 2018]
+
 ---
-class: left
-## ![GCC Logo](../shared-images/gcc2017_logo_black_2in.png)  Why?
+# Why?
 .large[
 * Avoid forgetting what you did to install and configure some piece of software
 * Codify knowledge about a system
@@ -52,10 +55,10 @@ class: left
 * Make it programmable - “Infrastructure as Code”
 ]
 .right[![ansible-logo](images/ansible-logo.png)]
-.footnote[\#usegalaxy \#GCC2017 / @galaxyproject]
+.footnote[\#usegalaxy / @galaxyproject - Cape Town 2018]
+
 ---
-class: left
-## ![GCC Logo](../shared-images/gcc2017_logo_black_2in.png)  Features of Ansible
+# Core features of Ansible
 .large[
 * Easy to learn
   * Playbooks in YAML, Templates in Jinja2, Inventory in INI file
@@ -70,9 +73,9 @@ class: left
 * Extensible:
   * Write your own modules
 ]
+
 ---
-class: left
-## ![GCC Logo](../shared-images/gcc2017_logo_black_2in.png)  Ansible structure
+# Ansible structure
 .large[
 * Ansible scripts are called playbooks
 * Scripts written as simple yaml files
@@ -83,11 +86,10 @@ class: left
   * cron, mount etc
 ]
 [http://docs.ansible.com/ansible/modules_by_category.html](http://docs.ansible.com/ansible/modules_by_category.html)
-.footnote[\#usegalaxy \#GCC2017 / @galaxyproject]
----
-class: left
-## ![GCC Logo](../shared-images/gcc2017_logo_black_2in.png)  Ansible playbook layout
+.footnote[\#usegalaxy / @galaxyproject - Cape Town 2018]
 
+---
+# Ansible playbook layout
 
 ``` text
 .
@@ -104,24 +106,37 @@ class: left
 │    │    │    └── task_2.yml
 │    │    └── templates
 │    ├── Role_2
-│   ...
+│   ...    
 ├── playbook.yml
 └── README.md
 ```
 
-.footnote[\#usegalaxy \#GCC2017 / @galaxyproject]
----
-class: left
-## ![GCC Logo](../shared-images/gcc2017_logo_black_2in.png)  Roles contain tasks
+.footnote[\#usegalaxy / @galaxyproject - Cape Town 2018]
 
-![ansible-roles-tasks.png](images/ansible-roles-tasks.png)
-
-.footnote[\#usegalaxy \#GCC2017 / @galaxyproject]
 ---
-class: left
-## ![GCC Logo](../shared-images/gcc2017_logo_black_2in.png)  Ansible inventory
-* An INI file.
-* List of remote machines to run ansible on
+# Yet Another Markup Language
+.large[
+* But YAML is a structured language with a defined syntax (like JSON or XML)
+]
+
+```
+this_is_a_variable: this_is_its_value
+dict:
+  foo: bar
+  spam: eggs
+list:
+  - baz
+  - 42
+  - true
+  - yes
+```
+
+.footnote[\#usegalaxy / @galaxyproject - Cape Town 2018]
+
+---
+# Ansible inventory
+* An _ini_ file
+* List of remote machines to run Ansible on
 * Can have groups
 
 ```
@@ -138,10 +153,10 @@ login5.stampede.tacc.utexas.edu
 jetstream-tacc0.galaxyproject.org
 jetstream-iu0.galaxyproject.org
 ```
-.footnote[\#usegalaxy \#GCC2017 / @galaxyproject]
+.footnote[\#usegalaxy / @galaxyproject - Cape Town 2018]
+
 ---
-class: left
-## ![GCC Logo](../shared-images/gcc2017_logo_black_2in.png)  Ansible Variables
+# Ansible Variables
 .left-column-equal[
 **Group Variables**
 
@@ -168,62 +183,34 @@ galaxy_installer: true
 ```
 ]
 
-.footnote[\#usegalaxy \#GCC2017 / @galaxyproject]
----
-class: left
-## ![GCC Logo](../shared-images/gcc2017_logo_black_2in.png)  Ansible Tasks
+.footnote[\#usegalaxy / @galaxyproject - Cape Town 2018]
 
+---
+# Ansible Tasks
+.large[
 * Perform a task on the inventory
+]
+* YAML-style:
 
     ```
     - name: Install nginx
       apt:
         pkg: nginx-full
         status: latest
-    ```
-* A more complex task
-
-    ```
-    - name: Install packages
-      apt:
-        pkg: "{{ item }}"
-      with_items:
-        - nginx-full
-        - supervisord
-      notify:
-        - restart nginx
-        - update supervisor
       when: "{{ ansible_os_family }} == 'Debian'"
     ```
 
-.footnote[\#usegalaxy \#GCC2017 / @galaxyproject]
+.footnote[\#usegalaxy / @galaxyproject - Cape Town 2018]
+
 ---
-class: left
-## ![GCC Logo](../shared-images/gcc2017_logo_black_2in.png)  Ansible Handlers
-* Syntax is the same as tasks, but these are only run when triggered by a notify.
+# Roles contain tasks
 
-* Task:
+![ansible-roles-tasks.png](images/ansible-roles-tasks.png)
 
-```
-- name: Install pg_hba.conf
-  template:
-    src: pg_hba.conf.j2
-    dest: ”{{ postgresql_data_dir }}/pg_hba.conf”
-  notify: restart postgresql
-```
+.footnote[\#usegalaxy / @galaxyproject - Cape Town 2018]
 
-* Handler:
-
-```
-- name: restart postgresql
-  service:
-    name: ”postgresql-{{ postgresql_version }}”
-    state: restarted
-```
-.footnote[\#usegalaxy \#GCC2017 / @galaxyproject]
 ---
-class: left
-## ![GCC Logo](../shared-images/gcc2017_logo_black_2in.png)  Plays
+# Plays
 .large[
 * Contain:
   * What hosts you want to run on
@@ -242,10 +229,10 @@ class: left
   roles:
     - natefoo.postgresql_objects
 ```
-.footnote[\#usegalaxy \#GCC2017 / @galaxyproject]
+.footnote[\#usegalaxy / @galaxyproject - Cape Town 2018]
+
 ---
-class: left
-## ![GCC Logo](../shared-images/gcc2017_logo_black_2in.png)  Plays and Tags
+# Plays and Tags
 
 * Plays can have tags associated with them
 
@@ -269,18 +256,28 @@ class: left
 `ansible-playbook -i inv_file playbook.yml --tags galaxy_setup`
 
 
-.footnote[\#usegalaxy \#GCC2017 / @galaxyproject]
+.footnote[\#usegalaxy / @galaxyproject - Cape Town 2018]
+
 ---
-class: left
-## ![GCC Logo](../shared-images/gcc2017_logo_black_2in.png)  How Ansible works
+# How Ansible works
 
 ![how-ansible-works.png](images/how-ansible-works.png)
 
-.footnote[\#usegalaxy \#GCC2017 / @galaxyproject]
+.footnote[\#usegalaxy / @galaxyproject - Cape Town 2018]
 
 ---
-class: left
-## ![GCC Logo](../shared-images/gcc2017_logo_black_2in.png)  Many reusable roles exist
+# Example role
+.large[
+* Galaxy project's role to install a Galaxy server.
+* Can be used in a playbook
+* Has nice documentation!
+
+[https://github.com/galaxyproject/ansible-galaxy](https://github.com/galaxyproject/ansible-galaxy)
+]
+.footnote[\#usegalaxy / @galaxyproject - Cape Town 2018]
+
+---
+# What's available
 .large[
 .left-column-equal[
 * Roles:
@@ -303,18 +300,17 @@ class: left
   * GalaxyKickStart
 ]
 ]
-.footnote[\#usegalaxy \#GCC2017 / @galaxyproject]
+.footnote[\#usegalaxy / @galaxyproject - Cape Town 2018]
+
 ---
-class: left
-## ![GCC Logo](../shared-images/gcc2017_logo_black_2in.png)  Exercise!
+# Exercise!
 .large[
 In this exercise we will:
-* Look at how the Galaxy Ansible roles can be combined together to install Galaxy
+* Look at how the Galaxy Ansible roles can be combined together to install a production-ready Galaxy
 * We will work through the contents of the scripts
-* We will run the roles from a playbook to create a production-ready Galaxy installation
+* We will run the roles from a playbook.
 
-[Installing Galaxy with Ansible](https://github.com/galaxyproject/dagobah-training/blob/2017-montpellier/sessions/14-ansible/ex2-galaxy-ansible.md)
-
+[Installing Galaxy with Ansible](https://github.com/galaxyproject/dagobah-training/blob/2018-oslo/sessions/14-ansible/ex2-galaxy-ansible.md)
 ]
 
-.footnote[\#usegalaxy \#GCC2017 / @galaxyproject]
+.footnote[\#usegalaxy / @galaxyproject - Cape Town 2018]
