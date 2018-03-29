@@ -9,8 +9,7 @@ Built slides have [an index](https://galaxyproject.github.io/dagobah-training/20
 You will be assigned a remote virtual machine for use in this course. Please
 access that machine via ssh and follow along.
 
-_Recommended specs_
-2 cores, 4 GiB memory, and 20 GiB disk
+_Recommended specs_: 2 cores, 4 GiB memory, and 20 GiB disk
 
 ### Timetable
 

@@ -122,9 +122,6 @@ Ubuntu 16.04) with a set public/private keypair, or we need to run the playbook
   a file *group_vars/capetown18.yml* and set the following variables:
 
 ``` yaml
-galaxy_admin: your@email.com  # <- change this
-galaxy_admin_pw: admin18
-
 galaxy_root_dir: /srv/galaxy
 galaxy_server_dir: "{{ galaxy_root_dir }}/server"
 galaxy_venv_dir: "{{ galaxy_root_dir }}/venv"
@@ -160,9 +157,6 @@ galaxy_config:
     len_file_path: "{{ len_file_path }}"
   "uwsgi":
     master: True
-
-galaxy_tools_tool_list_files:
-  - "extra-files/galaxy-kickstart/galaxy-kickstart_tool_list.yml"
 
 additional_files_list:
   - { src: "extra-files/galaxy-kickstart/logo.png", dest: "{{ galaxy_server_dir }}/static/images/" }
