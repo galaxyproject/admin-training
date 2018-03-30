@@ -5,9 +5,9 @@ class: inverse, top
 class: special
 # Connecting Galaxy to a compute cluster
 
-slides by @natefoo
+slides by @natefoo and @jmchilton
 
-.footnote[\#usegalaxy / @galaxyproject]
+.footnote[\#usegalaxy / @galaxyproject - Cape Town 2018]
 
 ---
 # Why cluster?
@@ -28,89 +28,114 @@ Can restart Galaxy without interrupting jobs
 - LSF
 - SGE derivatives maybe?
 - Any other [DRMAA](https://www.drmaa.org/)-supported DRM
+- Container scheduling - Kubernetes, Mesos vis Chronos
 
 ---
-class: smaller
-# Cluster library stack
+
+# config/job_conf.xml
+
+A simple `job_conf.xml`:
 
 ```
-╔═════════════════════════════════════════════════════╗
-║ Galaxy Job Handler (galaxy.jobs.handler)                       ║
-╟─────────────────────────────────────────────────────╢
-║ Galaxy DRMAA Job Runner (galaxy.jobs.runners.drmaa)            ║
-╠─────────────────────────────────────────────────────╢
-║ Pulsar DRMAA Interface (pulsar.managers.util.drmaa)            ║
-╠═════════════════════════════════════════════════════╣
-║ DRMAA Python                                                   ║
-╠═════════════════════════════════════════════════════╣
-║ C DRMAA Library (PSNC, vendor)                                 ║
-╠═════════════════════════════════════════════════════╣
-║ DRM (Slurm, Condor, ...)                                       ║
-╚═════════════════════════════════════════════════════╝
-
+<job_conf>
+    <plugins workers="4"
+        <plugin id="local" type="runner"
+                load="galaxy.jobs.runners.local:LocalJobRunner" />
+    </plugins>
+    <handlers>
+        <handler id="main"/>
+    </handlers>
+    <destinations>
+        <destination id="local" runner="local"/>
+    </destinations>
+</job_conf>
 ```
 
----
-# Exercise
+- Runs all jobs on the same host as Galaxy.
+- Jobs will fail when Galaxy is restarted.
+- No external dependencies are required.
 
-[Running Galaxy jobs with Slurm](https://github.com/gvlproject/dagobah-training/blob/master/sessions/16-compute-cluster/ex1-slurm.md)
+---
+
+# Using SLURM
+
+```
+<job_conf>
+    <plugins workers="4">
+        <plugin id="slurm" type="runner"
+                load="galaxy.jobs.runners.slurm:SlurmJobRunner"/>
+    </plugins>
+    <handlers>
+        <handler id="main"/>
+    </handlers>
+    <destinations default="slurm">
+        <destination id="slurm" runner="slurm"/>
+    </destinations>
+</job_conf>
+```
+- Slurm is a production distributed resource manager.
+- Slurm can distribute jobs across different clusters and thousands of nodes.
+- Jobs will not fail if Galaxy is restarted.
+- Configuring SLURM for use with Galaxy: http://galaxyproject.github.io/training-material/topics/admin/tutorials/connect-to-compute-cluster/tutorial.html
+- More info about SLURM: https://slurm.schedmd.com/
 
 ---
+
 # Shared Filesystem
 
-Our simple example works because of two important principles:
-
 1. Some things are located *at the same path* on Galaxy server and node(s)
-  - Galaxy application (`/srv/galaxy/server`)<sup>[1]</sup>
-  - Tool dependencies<sup>[1]</sup>
+  - Galaxy application (`/srv/galaxy/server`)
+  - Tool dependencies
 2. Some things *are the same* on Galaxy server and node(s)
   - Job working directory
   - Input and output datasets
 
-The first can be worked around with symlinks or Pulsar embedded (later)
+The first can be worked around with symlinks or Pulsar embedded (advanced topic)
 
 The second can be worked around with Pulsar REST/MQ (with a performance/throughput penalty)
-
-.footnote[<sup>[1]</sup> A fix for this has been proposed
-
-<sup>[2]</sup> Except conda dependencies!]
-
----
-# Non-shared Galaxy
-
-If Galaxy server is at `/srv/galaxy/server`, nodes must find it there too. Solutions:
-- Node-local Galaxy at same path
-- Node-local Galaxy at different path w/ symlink at `/srv/galaxy/server`
-- Network filesystem Galaxy w/ symlink (usegalaxy.org uses CVMFS)
-  - Can be different network FS server from Galaxy datasets
-- Use embedded Pulsar to rewrite paths before job submission
-
----
-# One interesting hybrid solution
-
-Galaxy server as network FS server for application
-
-Other server as network FS for datasets, job dirs, dependencies
-
-Benefits:
-- Better UI performance when not running from NFS
-- Job IO does not affect Galaxy UI
-
-Drawbacks:
-- Slower dataset IO on Galaxy server
 
 ---
 # Multiprocessing
 
-Some tools can greatly improve performance by using multiple cores
+Some tools can greatly improve performance by using multiple cores.
 
 Galaxy automatically sets `$GALAXY_SLOTS` to the CPU/core count you specify when submitting, for example, 4:
 - Slurm: `sbatch --ntasks=4`
 - SGE: `qsub -pe threads 4`
 - Torque/PBS Pro: `qsub -l nodes=1:ppn=4`
-- LSF: ??
 
-Tool configs: Consume `\${GALAXY_SLOTS:-4}`
+Tool configs consume `\${GALAXY_SLOTS:-4}`
+
+---
+
+```
+<job_conf>
+    <plugins workers="4">
+        <plugin id="slurm" type="runner"
+                load="galaxy.jobs.runners.slurm:SlurmJobRunner"/>
+    </plugins>
+    <handlers>
+        <handler id="main"/>
+    </handlers>
+    <destinations default="slurm-default">
+        <destination id="slurm-default" runner="slurm">
+           <param id="nativeSpecification">--ntasks 1</param>
+        </destination>
+        <destination id="slurm-multi" runner="slurm">
+           <param id="nativeSpecification">--ntasks 8</param>
+        </destination>
+    </destinations>
+    <tools>
+    	<tool id="hisat" destination="slurm-multi" /> 
+    </tools>
+</job_conf>
+```
+
+- Can define many destinations with different walltimes, memory requirements,
+  core allocations, etc...
+- Can map tools to specific destinations.
+- Mapping can be arbitrarily sophisticated - dependent on inputs, users, resources, etc..,
+- https://github.com/galaxyproject/dagobah-training/blob/2017-melbourne/sessions/16-compute-cluster/ex2-advanced-job-configs.md 
 
 ---
 # Memory requirements
@@ -122,20 +147,12 @@ No generally consumable environment variable. But for Java tools, be sure to set
     <env id="_JAVA_OPTIONS">-Xmx4096m</env>
 </destination>
 ```
-
 ---
-# Run jobs as the "real" user
 
-If your Galaxy users == System users:
-- Submit jobs to cluster as the actual user
-- Configurable callout scripts before/after job to change ownership
-- Probably requires limited sudo for Galaxy user
+# More Resources:
 
-See: [Cluster documentation](https://wiki.galaxyproject.org/Admin/Config/Performance/Cluster)
+- [Heterogenous Resources Slides](https://galaxyproject.github.io/dagobah-training/2018-oslo/17-heterogenous/heterogeneous.html#1)
+- [Heterogenous Resources Exercise](https://github.com/galaxyproject/dagobah-training/blob/2017-melbourne/sessions/17-heterogenous/ex1-pulsar.md)
+- Pulsar Docs: http://pulsar.readthedocs.io/
 
----
-# Exercise
-
-Explore different ways to route jobs to different compute resources
-
-[Advanced Galaxy Job Configurations](https://github.com/gvlproject/dagobah-training/blob/master/sessions/16-compute-cluster/ex2-advanced-job-configs.md)
+.large.center[[Today's exercise](https://github.com/galaxyproject/dagobah-training/blob/2018-cape-town/sessions/16-compute-cluster/ex2-advanced-job-configs.md)]
