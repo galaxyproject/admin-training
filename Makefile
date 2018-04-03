@@ -12,6 +12,7 @@ generate-slides:
 	# Enis
 	$(IN_VENV) python slideshow/build_slideshow.py 'Ansible and Galaxy' sessions/14-ansible/ansible-introduction.md 14-ansible
 	$(IN_VENV) python slideshow/build_slideshow.py 'Compute Cluster' sessions/16-compute-cluster/compute-cluster.md 16-compute-cluster
+	$(IN_VENV) python slideshow/build_slideshow.py 'Storage Management' sessions/19-storage/storage.md 19-storage
 
 	# Björn
 	# $(IN_VENV) python slideshow/build_slideshow.py 'Tool Shed' sessions/04-tool-shed/shed_intro.md 04-tool-shed
@@ -40,7 +41,6 @@ generate-slides:
 	# cp sessions/16-compute-cluster/slurm-wlm-configurator.html docs/16-compute-cluster
 	# $(IN_VENV) python slideshow/build_slideshow.py 'Heterogeneous Resources' sessions/17-heterogenous/heterogeneous.md 17-heterogenous
 	# $(IN_VENV) python slideshow/build_slideshow.py 'Clouds' sessions/18-clouds/clouds.md 18-clouds
-	# $(IN_VENV) python slideshow/build_slideshow.py 'Storage Management' sessions/19-storage/storage.md 19-storage
 	# $(IN_VENV) python slideshow/build_slideshow.py 'Basic Troubleshooting' sessions/22-troubleshooting/troubleshooting.md 22-troubleshooting
 	# $(IN_VENV) python slideshow/build_slideshow.py 'Galaxy Architecture' sessions/23-architecture/galaxy_architecture.md 23-architecture
 	# $(IN_VENV) python slideshow/build_slideshow.py 'Galaxy Tool Basics' sessions/x01-tool-basics/tool-basics.md x01-tool-basics

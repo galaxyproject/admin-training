@@ -7,7 +7,7 @@ class: special
 
 slides by @natefoo, @martenson
 
-.footnote[\#usegalaxy / @galaxyproject]
+.footnote[\#usegalaxy / @galaxyproject - Cape Town 2018]
 
 ---
 class: larger
@@ -84,10 +84,10 @@ Provide a way to conveniently share Galaxy datasets within a group of Galaxy use
 In `galaxy.ini`:
 
 * `user_library_import_dir`
+  * Allows authorized non-administrators to upload a directory of files.
   * Directory must contain sub-directories named the same as user's email.
-  * Allows users to browse and import from the given folder.
   * Works well in combination with `ftp_upload_dir`.
-* `allow_library_path_paste`
+* `allow_path_paste`
   * Admin-only, allows importing from any path that the Galaxy's user has access to.
 
 ???
@@ -122,10 +122,6 @@ It specifies which folder admins may browse and import from.
 ---
 class: normal
 
-```shell
-python ./scripts/cleanup_datasets/cleanup_datasets.py ./config/galaxy.ini -d 10 -5 -r ${GALAXY_ROOT} >> ./scripts/cleanup_datasets/purge_folders.log
-```
-
 flag	| short |	description
 ---|---|---
 --days | -d	| number of days (60) to use as a cut off; do not act on objects updated more recently than this
@@ -139,6 +135,13 @@ flag	| short |	description
 --purge_folders |	-5 |	purge deleted library folders
 --delete_datasets |	-6 |	mark deletable datasets as deleted and purge associated dataset instances
 
+Note that only a single numbered flag can be used at a time.
+
+```shell
+source /srv/galaxy/venv/bin/activate
+cd /srv/galaxy/server
+python ./scripts/cleanup_datasets/cleanup_datasets.py ./config/galaxy.ini -d 10 -5 -r ${GALAXY_ROOT} >> ./scripts/cleanup_datasets/purge_folders.log
+```
 ---
 # Bash wrappers
 
@@ -219,16 +222,12 @@ proper:
 
 Direct:
 - Disk
-- Amazon S3/Openstack Swift
+- Amazon S3/OpenStack Swift
 - Experimental
   - Azure
   - iRODS
+  - CloudBridge → S3, Swift, Azure, GCE
 
 Nested:
 - Hierarchical
 - Distributed
-
----
-# Object Store Exercise
-
-[Expanding File Space - Exercise](https://github.com/gvlproject/dagobah-training/blob/master/sessions/19-storage/ex1-objectstore.md)
