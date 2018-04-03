@@ -18,7 +18,7 @@ _Recommended specs_: 2 cores, 4 GiB memory, and 20 GiB disk
 | 14:00 | Introduction | [Slides](https://galaxyproject.github.io/dagobah-training/2018-cape-town/00-intro/intro.html#1) | All |
 | 14:10 |Setup a production Galaxy with Ansible | [Slides](https://galaxyproject.github.io/dagobah-training/2018-cape-town/14-ansible/ansible-introduction.html#1), [Exercise](https://github.com/galaxyproject/dagobah-training/blob/2018-cape-town/sessions/14-ansible/ex2-galaxy-ansible.md) | (E) |
 | 15:00 | Break | | |
-| 15:30 | Tools and the Tool Shed | [Slides](https://galaxyproject.github.io/dagobah-training/2018-cape-town/04-tool-shed/shed_intro.html#1), [Installation](https://galaxyproject.github.io/dagobah-training/2018-cape-town/04-tool-shed/tool_installation.html#1), [Exercise](https://github.com/galaxyproject/dagobah-training/blob/2018-cape-town/sessions/04-tool-shed/ex-ephemeris.md) | (B) |
+| 15:30 | Installing tools and the Tool Shed | [Slides](https://galaxyproject.github.io/dagobah-training/2018-cape-town/04-tool-shed/tool_installation.html#1), [Exercise](https://github.com/galaxyproject/dagobah-training/blob/2018-cape-town/sessions/04-tool-shed/ex-ephemeris.md) | (B) |
 | 16:00 | Galaxy and compute clusters |[Slides](https://galaxyproject.github.io/dagobah-training/2018-cape-town/16-compute-cluster/compute-cluster.html#1), [Exercise](https://github.com/galaxyproject/dagobah-training/blob/2018-cape-town/sessions/16-compute-cluster/ex2-job-destinations.md) | (E) |
 | 16:30 | Storage management | [Slides](https://galaxyproject.github.io/dagobah-training/2018-cape-town/19-storage/storage.html) | (E) |
 | 17:00 | END | | |
