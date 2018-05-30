@@ -6,32 +6,27 @@ class: special, center
 
 # Galaxy Admin Training
 
-January 8-12, 2018<br />
-University of Oslo, Oslo, Norway
+Portland, Monday 25th of June, 2018
 
-https://www.elixir-europe.org/events/european-galaxy-administrator-workshop
 
-\#usegalaxy \#Oslo2018 / @galaxyproject
+\#usegalaxy \#gccbosc2018 / @galaxyproject
 ---
 # Your Instructors
 
-- Björn Grüning
-  - University of Freiburg, Germany
-  - Twitter: [@bjoerngruening](https://twitter.com/bjoerngruening) GitHub: [@bgruening](https://github.com/bgruening)
-- Marius van den Beek
+* (N)ate Coraor - Galaxy Project, Penn State University, USA
+* (S)imon Gladman - VLSCI, University of Melbourne, Australia
+* (M)arius van den Beek - ELIXIR Galaxy WG, Institute Curie, Paris, France
   - Institute Curie, Paris, France
   - Twitter: [@mariusvdbeek](https://twitter.com/mariusvdbeek) GitHub: [@mvdbeek](https://github.com/mvdbeek)
-- Nicola Soranzo
-  - Earlham Institute, Norwich, UK
-  - Twitter: [@nicolasoranzo](https://twitter.com/nicolasoranzo) GitHub: [@nsoranzo](https://github.com/nsoranzo)
-- Enis Afgan
+* (C)arrie Ganote - Indiana University Bloomington, USA
+* Nuwan (G)oonasekera - University of Melbourne, Australia
+* (E)nis Afgan - Galaxy Project, Johns Hopkins University, USA
   - Johns Hopkins University, USA
   - Twitter: [@EnisAfgan](https://twitter.com/EnisAfgan) GitHub: [@afgane](https://github.com/afgane)
-- Abdulrahman Azab
-  - University of Oslo, Norway
-  - GitHub: [@abdulrahmanazab](https://github.com/abdulrahmanazab)
+* (J)ohn Chilton - Galaxy Project, Penn State University, USA
+* Martin (Č)ech - Galaxy Project, Penn State University, USA
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#gccbosc2018 / @galaxyproject]
 
 ---
 class: special, center
@@ -39,7 +34,7 @@ class: special, center
 
 ## \#usegalaxy
 <br />
-## \#Oslo2018
+## \#gccbosc2018
 <br />
 ## @galaxyproject
 
@@ -57,7 +52,7 @@ https://github.com/galaxyproject/dagobah-training/
 
 We did our best to plan the session times for the expected content, and to build the content for the session time.
 
-Almost all of this content is new or revised, there may be sessions that are too long or short - apologies in advance.
+Almost all of this content is revised, there may be sessions that are too long or short - apologies in advance.
 
 ---
 # Communication channels
@@ -75,18 +70,12 @@ Almost all of this content is new or revised, there may be sessions that are too
 ---
 # Thanks
 
-- Ståle Nygård
-- Eivind Hovig
-- Kjell Petersen
-- Sveinung Gundersen
 - **Dave Clements**
 
 ---
 # Hosts
 
 We would like to thank:
-- [Department of Informatics, University of Oslo (IFI)](http://www.mn.uio.no/ifi/)
-- [University Center for Information Technology, University of Oslo (USIT)](http://www.usit.uio.no/)
 
 ---
 # Computing resources
@@ -97,7 +86,3 @@ Find the IP address for your instance [here](https://github.com/galaxyproject/da
 
 ---
 # Future events
-
-June 25-30, Galaxy Community Conference 2018 (GCC2018) and Bioinformatics Open Source Conference 2018 (BOSC2018) - Portland, Oregon, USA
-
-https://gccbosc2018.sched.com/
