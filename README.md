@@ -1,4 +1,4 @@
-# Intro to Galaxy Administration
+# GCCBOSC2018 - Intro to Galaxy Administration
 
 **Portland, Monday 25th of June, 2018**
 
