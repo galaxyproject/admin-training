@@ -98,7 +98,7 @@ And insert the following:
 ```sh
 #!/bin/sh
 
-export GALAXY_CONFIG_FILE='/srv/galaxy/config/galaxy.ini'
+export GALAXY_CONFIG_FILE='/srv/galaxy/config/galaxy.yml'
 export GALAXY_VIRTUAL_ENV='/srv/galaxy/venv'
 
 case $1 in
@@ -122,16 +122,16 @@ $ sudo -u galaxy chmod +x /srv/galaxy/bin/galaxy
 Next, we will create some Galaxy config files, starting from the samples:
 
 ```console
-$ for f in galaxy.ini tool_conf.xml shed_tool_conf.xml tool_data_table_conf.xml \
+$ for f in galaxy.yml tool_conf.xml shed_tool_conf.xml tool_data_table_conf.xml \
            shed_tool_data_table_conf.xml data_manager_conf.xml shed_data_manager_conf.xml; do
     sudo -u galaxy cp /srv/galaxy/server/config/${f}.sample /srv/galaxy/config/${f}
 done
 ```
 
-Next, edit Galaxy's primary configuration file, `galaxy.ini`:
+Next, edit Galaxy's primary configuration file, `galaxy.yml`:
 
 ```console
-$ sudo -u galaxy -e /srv/galaxy/config/galaxy.ini
+$ sudo -u galaxy -e /srv/galaxy/config/galaxy.yml
 ```
 
 Let's set a few config variables that will be useful for this and upcoming sessions:

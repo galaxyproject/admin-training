@@ -40,7 +40,7 @@ Install Apache from apt:
 ```console
 $ sudo apt-get install apache2
 Reading package lists... Done
-Building dependency tree       
+Building dependency tree
 Reading state information... Done
 The following additional packages will be installed:
   ...
@@ -55,7 +55,7 @@ Do you want to continue? [Y/n]
 Get:1 http://archive.ubuntu.com/ubuntu xenial/main amd64 libatm1 amd64 1:2.5.1-1.5 [24.2 kB]
   ...
 Get:57 http://archive.ubuntu.com/ubuntu xenial/main amd64 ssl-cert all 1.0.37 [16.9 kB]
-Fetched 22.6 MB in 2s (9714 kB/s)      
+Fetched 22.6 MB in 2s (9714 kB/s)
 debconf: delaying package configuration, since apt-utils is not installed
 Selecting previously unselected package libatm1:amd64.
 (Reading database ... 7256 files and directories currently installed.)
@@ -222,7 +222,7 @@ The performance of your Galaxy server can be improved by configuring Apache to h
 ```console
 $ sudo apt-get install libapache2-mod-xsendfile
 Reading package lists... Done
-Building dependency tree       
+Building dependency tree
 Reading state information... Done
 The following NEW packages will be installed:
   libapache2-mod-xsendfile
@@ -230,7 +230,7 @@ The following NEW packages will be installed:
 Need to get 13.4 kB of archives.
 After this operation, 86.0 kB of additional disk space will be used.
 Get:1 http://archive.ubuntu.com/ubuntu xenial/universe amd64 libapache2-mod-xsendfile amd64 0.12-2 [13.4 kB]
-Fetched 13.4 kB in 0s (47.4 kB/s)                    
+Fetched 13.4 kB in 0s (47.4 kB/s)
 debconf: delaying package configuration, since apt-utils is not installed
 Selecting previously unselected package libapache2-mod-xsendfile.
 (Reading database ... 16899 files and directories currently installed.)
@@ -250,7 +250,7 @@ Next, modify `sites-available/000-galaxy.conf` to include the following *new* di
 </Location>
 ```
 
-In `/home/galaxyguest/galaxy/config/galaxy.ini` (copy `galaxy.ini.sample` to `galaxy.ini` if you have not already done so), uncomment `#apache_xsendfile = False` and change it to `apache_xsendfile = True`.
+In `/home/galaxyguest/galaxy/config/galaxy.yml` (copy `galaxy.yml.sample` to `galaxy.yml` if you have not already done so), uncomment `#apache_xsendfile: False` and change it to `apache_xsendfile: True`.
 
 Finally, (re)start:
 - your Galaxy server (`CTRL+C` followed by `sudo -Hu galaxy galaxy` or `sudo -Hu galaxy galaxy --stop-daemon && sudo -Hu galaxy galaxy --daemon` if running as a daemon)
@@ -290,7 +290,7 @@ We can also verify that `X-Sendfile` is working properly. Begin by uploading a s
 3. Type some random characters into the text field that has just appeared.
 4. Click "Start" and then "Close"
 
-The path portion of the URL to the first dataset should be `/datasets/f2db41e1fa331b3e/display?to_ext=txt`. If you have already created another dataset, you can get the correct path by inspecting the link target of the history item's "floppy" icon. (For the curious, the constant string `f2db41e1fa331b3e` comes from hashing the number `1` using the default value of `id_secret` in `galaxy.ini` - this is why changing `id_secret` is important).
+The path portion of the URL to the first dataset should be `/datasets/f2db41e1fa331b3e/display?to_ext=txt`. If you have already created another dataset, you can get the correct path by inspecting the link target of the history item's "floppy" icon. (For the curious, the constant string `f2db41e1fa331b3e` comes from hashing the number `1` using the default value of `id_secret` in `galaxy.yml` - this is why changing `id_secret` is important).
 
 The Galaxy server can be contacted directly at `http://localhost:8080`. Combine this with the path to the dataset and provide it to `curl`:
 

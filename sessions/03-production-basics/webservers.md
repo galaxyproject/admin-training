@@ -64,12 +64,12 @@ There is also a "Galaxy" flavor<sup>[1]</sup> (includes [upload module](https://
 ---
 # Exercise: nginx
 
-[nginx as a Reverse Proxy for Galaxy - Exercise](https://github.com/galaxyproject/dagobah-training/blob/2018-oslo/sessions/03-production-basics/ex3-nginx.md)
+[nginx as a Reverse Proxy for Galaxy - Exercise](https://github.com/galaxyproject/dagobah-training/blob/2018-gccbosc/sessions/03-production-basics/ex3-nginx.md)
 
 ---
 # Exercise: Apache
 
-[Apache as a Reverse Proxy for Galaxy - Exercise](https://github.com/galaxyproject/dagobah-training/blob/2018-oslo/sessions/03-production-basics/ex4-apache.md)
+[Apache as a Reverse Proxy for Galaxy - Exercise](https://github.com/galaxyproject/dagobah-training/blob/2018-gccbosc/sessions/03-production-basics/ex4-apache.md)
 
 ---
 # Additional Tips and Resources
@@ -83,15 +83,13 @@ Use the [Mozilla SSL config generator](https://mozilla.github.io/server-side-tls
 ---
 # uWSGI
 
-Galaxy comes with a pure-python web server, [Paste](http://pythonpaste.org/)
+Galaxy comes with both [uWSGI](http://uwsgi-docs.readthedocs.io/en/latest/) and pure-python web server, [Paste](http://pythonpaste.org/)
 
-Why switch to uWSGI?
+Since 18.01 every new Galaxy will by default start on uWSGI (but can be configured for Paste).
+
+Why we switched to uWSGI?
 - Built in multiprocess (avoid the GIL)
 - Built in load balancing
 - Better performance
 - Greater scalability
-- Hundreds of other features (see [docs](http://uwsgi-docs.readthedocs.io/en/latest/))
-
-Covered: Tuesday: _Improving the web serving experience with uWSGI_
-
-uWSGI will become the default: Watch [Galaxy Pull Request #2802](https://github.com/galaxyproject/galaxy/pull/2802), [Starforge Pull Request #118](https://github.com/galaxyproject/starforge/pull/118)
+- Hundreds of other features

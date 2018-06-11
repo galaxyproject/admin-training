@@ -35,7 +35,7 @@ Your questions are bound to be answered.
 ---
 # Configuration
 
-`database_connection` is specified as a [database URL](http://docs.sqlalchemy.org/en/latest/core/engines.html#database-urls) in `galaxy.ini`
+`database_connection` is specified as a [database URL](http://docs.sqlalchemy.org/en/latest/core/engines.html#database-urls) in `galaxy.yml`
   * Default SQLite: `sqlite:///./database/universe.sqlite?isolation_level=IMMEDIATE`
   * Local PostgreSQL (socket) `postgresql://<user>:<password>@/<db_name>?host=/var/run/postgresql`
   * Network PostgreSQL: `postgresql://<user>:<password>@<host>:5432/<db_name>`
@@ -117,4 +117,4 @@ Need to be inside the Galaxy virtualenv for this to work
 ---
 # Exercise
 
-[Connecting Galaxy to PostgreSQL - Exercise](https://github.com/galaxyproject/dagobah-training/blob/2018-oslo/sessions/03-production-basics/ex2-postgres.md)
+[Connecting Galaxy to PostgreSQL - Exercise](https://github.com/galaxyproject/dagobah-training/blob/2018-gccbosc/sessions/03-production-basics/ex2-postgres.md)

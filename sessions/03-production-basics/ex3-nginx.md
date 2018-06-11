@@ -182,7 +182,7 @@ Next, we modify the previously created `sites-available/galaxy` to include direc
 ```nginx
     # use a variable for convenience
     set $galaxy_root /srv/galaxy/server/;
-    
+
     location /static {
         alias $galaxy_root/static;
         expires 24h;
@@ -222,7 +222,7 @@ To begin, modify `sites-available/galaxy` to include this additional block at th
     }
 ```
 
-In `/srv/galaxy/config/galaxy.ini`, uncomment `#nginx_x_accel_redirect_base = False` and change it to `nginx_x_accel_redirect_base = /_x_accel_redirect`. Remember, this file is owned by the **galaxy** user so be sure to use `sudo -u galaxy` when editing it.
+In `/srv/galaxy/config/galaxy.yml`, uncomment `#nginx_x_accel_redirect_base: False` and change it to `nginx_x_accel_redirect_base: /_x_accel_redirect`. Remember, this file is owned by the **galaxy** user so be sure to use `sudo -u galaxy` when editing it.
 
 Finally, (re)start:
 - your Galaxy server (`CTRL+C` followed by `sudo -Hu galaxy galaxy` or `sudo -Hu galaxy galaxy --stop-daemon && sudo -Hu galaxy galaxy --daemon` if running as a daemon)
@@ -261,7 +261,7 @@ We can also verify that `X-Accel-Redirect` is working properly. Begin by uploadi
 3. Type some random characters into the text field that has just appeared.
 4. Click "Start" and then "Close"
 
-The path portion of the URL to the first dataset should be `/datasets/f2db41e1fa331b3e/display?to_ext=txt`. If you have already created another dataset, you can get the correct path by inspecting the link target of the history item's "floppy" icon. (For the curious, the constant string `f2db41e1fa331b3e` comes from hashing the number `1` using the default value of `id_secret` in `galaxy.ini` - this is why changing `id_secret` is important).
+The path portion of the URL to the first dataset should be `/datasets/f2db41e1fa331b3e/display?to_ext=txt`. If you have already created another dataset, you can get the correct path by inspecting the link target of the history item's "floppy" icon. (For the curious, the constant string `f2db41e1fa331b3e` comes from hashing the number `1` using the default value of `id_secret` in `galaxy.yml` - this is why changing `id_secret` is important).
 
 The Galaxy server can be contacted directly at `http://localhost:8080`. Combine this with the path to the dataset and provide it to `curl`:
 
@@ -351,11 +351,11 @@ $ sudo chmod 2770 /srv/galaxy/upload_store
 $ sudo chown www-data:galaxy /srv/galaxy/upload_store
 ```
 
-In `/srv/galaxy/config/galaxy.ini`, uncomment `nginx_upload_store` and `nginx_upload_path` and set them:
+In `/srv/galaxy/config/galaxy.yml`, uncomment `nginx_upload_store` and `nginx_upload_path` and set them:
 
 ```ini
-nginx_upload_store = /srv/galaxy/upload_store
-nginx_upload_path = /_upload
+nginx_upload_store: /srv/galaxy/upload_store
+nginx_upload_path: /_upload
 ```
 
 Finally, (re)start both Galaxy and nginx.

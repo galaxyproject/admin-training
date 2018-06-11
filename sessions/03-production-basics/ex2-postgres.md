@@ -36,22 +36,22 @@ We have created a new database with the name `galaxy`.
 
 ## Section 3 - Configure Galaxy
 
-Next, we need to configure Galaxy to use PostgreSQL. To do this, open up the Galaxy config file, `galaxy.ini`, in an editor as the galaxy user:
+Next, we need to configure Galaxy to use PostgreSQL. To do this, open up the Galaxy config file, `galaxy.yml`, in an editor as the galaxy user:
 
 ```console
-$ sudo -u galaxy -e /srv/galaxy/config/galaxy.ini
+$ sudo -u galaxy -e /srv/galaxy/config/galaxy.yml
 ```
 
 Locate the line:
 
-```ini
-#database_connection = sqlite:///./database/universe.sqlite?isolation_level=IMMEDIATE
+```yml
+#database_connection: sqlite:///./database/universe.sqlite?isolation_level=IMMEDIATE
 ```
 
 Uncomment it and change it to:
 
-```ini
-database_connection = postgresql:///galaxy?host=/var/run/postgresql
+```yml
+database_connection: postgresql:///galaxy?host=/var/run/postgresql
 ```
 
 The `?host=/var/run/postgresql` portion of the database URI instructs the database connection layer to look for PostgreSQL's socket in the given directory (because by default, it looks in `/tmp`, and Debian/Ubuntu use a different path).

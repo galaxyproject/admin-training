@@ -46,4 +46,4 @@ slides by @natefoo
 ---
 # Exercise
 
-[Galaxy production first steps - Exercise](https://github.com/galaxyproject/dagobah-training/blob/2018-oslo/sessions/03-production-basics/ex1-first-steps.md)
+[Galaxy production first steps - Exercise](https://github.com/galaxyproject/dagobah-training/blob/2018-gccbosc/sessions/03-production-basics/ex1-first-steps.md)
