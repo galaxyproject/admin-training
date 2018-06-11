@@ -48,9 +48,8 @@ Timetable with sessions and material will be continuously updated towards the wo
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
 | 12:30 | Start Noon Session |  | All |
-| 12:30 | Anatomy of a Tool Definition |  | (M) |
 | 12:45 | Writing tools with Planemo |  | (M) |
-| 14:00 | Introduction to the Galaxy Tool Shed: Identifying and installing well-defined tools | [Slides (Shed)](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/04-tool-shed/shed_intro.html), [Slides (Tools)](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/04-tool-shed/tool_installation.html), [Slides (Dependencies)](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/04-tool-shed/tool-dependencies.html)| (M) |
+| 13:45 | Introduction to the Galaxy Tool Shed: Identifying and installing well-defined tools | [Slides (Shed)](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/04-tool-shed/shed_intro.html), [Slides (Tools)](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/04-tool-shed/tool_installation.html), [Slides (Dependencies)](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/04-tool-shed/tool-dependencies.html)| (M) |
 | 14:30 | Updating tools and supporting multiple versions of tools | [Exercise](sessions/04-tool-shed/ex-tool-management.md) | (M) |
 | 15:00 | Close Noon Session | | All |
 
