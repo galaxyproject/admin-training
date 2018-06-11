@@ -47,9 +47,8 @@ Timetable with sessions and material will be continuously updated towards the wo
 
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
-| 12:30 | Start Noon Session |  | All |
-| 12:45 | Writing tools with Planemo |  | (M) |
-| 13:45 | Introduction to the Galaxy Tool Shed: Identifying and installing well-defined tools | [Slides (Shed)](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/04-tool-shed/shed_intro.html), [Slides (Tools)](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/04-tool-shed/tool_installation.html), [Slides (Dependencies)](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/04-tool-shed/tool-dependencies.html)| (M) |
+| 12:30 | Writing tools with Planemo |  | (M) |
+| 13:30 | Introduction to the Galaxy Tool Shed: Identifying and installing well-defined tools | [Slides (Shed)](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/04-tool-shed/shed_intro.html), [Slides (Tools)](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/04-tool-shed/tool_installation.html), [Slides (Dependencies)](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/04-tool-shed/tool-dependencies.html)| (M) |
 | 14:30 | Updating tools and supporting multiple versions of tools | [Exercise](sessions/04-tool-shed/ex-tool-management.md) | (M) |
 | 15:00 | Close Noon Session | | All |
 
@@ -58,7 +57,6 @@ Timetable with sessions and material will be continuously updated towards the wo
 
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
-| 15:30 | Start Afternoon Session |  | All |
 | 15:30 | Exploring the Galaxy job configuration file | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/15-job-conf/job_conf.html) | (N) |
 | 15:50 | Connecting Galaxy to a compute cluster | [Slides](http://galaxyproject.github.io/training-material/topics/admin/tutorials/connect-to-compute-cluster/slides.html), [Exercise](http://galaxyproject.github.io/training-material/topics/admin/tutorials/connect-to-compute-cluster/tutorial.html) | (B) |
 | 16:30 | Storage management and using heterogeneous storage services | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/19-storage/storage.html), [Exercise](sessions/19-storage/ex1-objectstore.md) | (E) |
