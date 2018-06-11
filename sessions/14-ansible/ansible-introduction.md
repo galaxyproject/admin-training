@@ -310,7 +310,7 @@ In this exercise we will:
 * We will work through the contents of the scripts
 * We will run the roles from a playbook.
 
-[Installing Galaxy with Ansible](https://github.com/galaxyproject/dagobah-training/blob/2018-oslo/sessions/14-ansible/ex2-galaxy-ansible.md)
+[Installing Galaxy with Ansible](https://github.com/galaxyproject/dagobah-training/blob/2018-gccbosc/sessions/14-ansible/ex2-galaxy-ansible.md)
 ]
 
 .footnote[\#usegalaxy \#gccbosc2018 / @galaxyproject]
