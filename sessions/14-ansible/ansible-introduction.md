@@ -3,10 +3,10 @@ class: inverse
 ---
 class: special, center, middle
 
-# Ansible and Galaxy - Part 1
+# Ansible and Galaxy
 
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#gccbosc2018 / @galaxyproject]
 ---
 class: center, middle
 
@@ -14,7 +14,7 @@ class: center, middle
 
 *We are here to answer questions!*
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#gccbosc2018 / @galaxyproject]
 
 ---
 # Overview
@@ -22,26 +22,18 @@ class: center, middle
 .large[
 * What is Ansible
 * Galaxy and Ansible
-
-Later in Part 2
-* Detail on Galaxy playbooks
-* Extending and customising Galaxy with Ansible
 ]
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#gccbosc2018 / @galaxyproject]
 
 ---
 # Overview
 .large[
 * **What is Ansible**
 * Galaxy and Ansible
-
-Later in Part 2
-* Detail on Galaxy playbooks
-* Extending and customising Galaxy with Ansible
 ]
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#gccbosc2018 / @galaxyproject]
 
 ---
 # What is Ansible
@@ -52,7 +44,7 @@ Later in Part 2
 ]
 ![ansible-vanilla.png](images/ansible-vanilla.png)
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#gccbosc2018 / @galaxyproject]
 
 ---
 # Why?
@@ -63,10 +55,10 @@ Later in Part 2
 * Make it programmable - “Infrastructure as Code”
 ]
 .right[![ansible-logo](images/ansible-logo.png)]
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#gccbosc2018 / @galaxyproject]
 
 ---
-# Features of Ansible
+# Core features of Ansible
 .large[
 * Easy to learn
   * Playbooks in YAML, Templates in Jinja2, Inventory in INI file
@@ -83,22 +75,6 @@ Later in Part 2
 ]
 
 ---
-# But wait! There's more
-.large[
-* Supports push or pull
-  * Push by default but use cron job to make it pull
-* Rolling updates
-  * Useful for continuous deployment
-* Inventory management
-  * Dynamic inventory from external data sources
-  * Execute tasks against host patterns
-* Ansible Vault for encrypted data
-* Ad-hoc commands
-  * When you just need to execute a one-off command against your inventory
-]
-`ansible -i inventory_file -u ubuntu -m shell -a "reboot"`
-
----
 # Ansible structure
 .large[
 * Ansible scripts are called playbooks
@@ -110,7 +86,7 @@ Later in Part 2
   * cron, mount etc
 ]
 [http://docs.ansible.com/ansible/modules_by_category.html](http://docs.ansible.com/ansible/modules_by_category.html)
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#gccbosc2018 / @galaxyproject]
 
 ---
 # Ansible playbook layout
@@ -130,12 +106,12 @@ Later in Part 2
 │    │    │    └── task_2.yml
 │    │    └── templates
 │    ├── Role_2
-│   ...    
+│   ...
 ├── playbook.yml
 └── README.md
 ```
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#gccbosc2018 / @galaxyproject]
 
 ---
 # Yet Another Markup Language
@@ -155,12 +131,12 @@ list:
   - yes
 ```
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#gccbosc2018 / @galaxyproject]
 
 ---
 # Ansible inventory
-* An ini file.
-* List of remote machines to run ansible on
+* An _ini_ file
+* List of remote machines to run Ansible on
 * Can have groups
 
 ```
@@ -177,7 +153,7 @@ login5.stampede.tacc.utexas.edu
 jetstream-tacc0.galaxyproject.org
 jetstream-iu0.galaxyproject.org
 ```
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#gccbosc2018 / @galaxyproject]
 
 ---
 # Ansible Variables
@@ -207,7 +183,7 @@ galaxy_installer: true
 ```
 ]
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#gccbosc2018 / @galaxyproject]
 
 ---
 # Ansible Tasks
@@ -224,57 +200,14 @@ galaxy_installer: true
       when: "{{ ansible_os_family }} == 'Debian'"
     ```
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
-
----
-# Ansible Tasks
-.large[
-* A more complex task:
-]
-```
-- name: Install packages
-  apt:
-    pkg: "{{ item }}"
-  with_items:
-    - nginx-full
-    - supervisord
-  notify:
-    - restart nginx
-    - update supervisor
-  when: "{{ ansible_os_family }} == 'Debian'"
-```
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
-
----
-# Ansible Handlers
-* Syntax is the same as tasks, but these are only run when triggered by a notify.
-
-* Task:
-
-```
-- name: Install pg_hba.conf
-  template:
-    src: pg_hba.conf.j2
-    dest: ”{{ postgresql_data_dir }}/pg_hba.conf”
-  notify: restart postgresql
-```
-
-* Handler:
-
-```
-- name: restart postgresql
-  service:
-    name: ”postgresql-{{ postgresql_version }}”
-    state: restarted
-```
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#gccbosc2018 / @galaxyproject]
 
 ---
 # Roles contain tasks
 
 ![ansible-roles-tasks.png](images/ansible-roles-tasks.png)
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#gccbosc2018 / @galaxyproject]
 
 ---
 # Plays
@@ -296,7 +229,7 @@ galaxy_installer: true
   roles:
     - natefoo.postgresql_objects
 ```
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#gccbosc2018 / @galaxyproject]
 
 ---
 # Plays and Tags
@@ -323,26 +256,14 @@ galaxy_installer: true
 `ansible-playbook -i inv_file playbook.yml --tags galaxy_setup`
 
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#gccbosc2018 / @galaxyproject]
 
 ---
 # How Ansible works
 
 ![how-ansible-works.png](images/how-ansible-works.png)
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
-
----
-# Exercise Time!
-.large[
-In this exercise, we will:
-* Write an ansible script/role
-* Task will be to install tools into Galaxy
-* Will use existing scripts (bioblend)
-
-[Adding tools to Galaxy with Ansible](https://github.com/galaxyproject/dagobah-training/blob/2018-oslo/sessions/14-ansible/ex1-intro-ansible.md)
-]
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#gccbosc2018 / @galaxyproject]
 
 ---
 # Example role
@@ -353,7 +274,7 @@ In this exercise, we will:
 
 [https://github.com/galaxyproject/ansible-galaxy](https://github.com/galaxyproject/ansible-galaxy)
 ]
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#gccbosc2018 / @galaxyproject]
 
 ---
 # What's available
@@ -379,18 +300,17 @@ In this exercise, we will:
   * GalaxyKickStart
 ]
 ]
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#gccbosc2018 / @galaxyproject]
 
 ---
-# Exercise 2!
+# Exercise!
 .large[
 In this exercise we will:
-* Look at how the Galaxy Ansible roles can be combined together to install Galaxy
-* We will work through the contents of the scripts.
-* Finally, as a demonstration, we will run the roles from a playbook.
+* Look at how the Galaxy Ansible roles can be combined together to install a production-ready Galaxy
+* We will work through the contents of the scripts
+* We will run the roles from a playbook.
 
 [Installing Galaxy with Ansible](https://github.com/galaxyproject/dagobah-training/blob/2018-oslo/sessions/14-ansible/ex2-galaxy-ansible.md)
-
 ]
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#gccbosc2018 / @galaxyproject]
