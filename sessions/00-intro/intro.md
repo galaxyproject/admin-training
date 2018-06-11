@@ -4,6 +4,8 @@ class: inverse, middle, large
 ---
 class: special, center
 
+![gccbosc2018 logo](../shared-images/gccbosc2018-logo.png)
+
 # Galaxy Admin Training
 
 Portland, Monday 25th of June, 2018
@@ -13,18 +15,20 @@ Portland, Monday 25th of June, 2018
 ---
 # Your Instructors
 
-* (N)ate Coraor - Galaxy Project, Penn State University, USA
-* (S)imon Gladman - VLSCI, University of Melbourne, Australia
-* (M)arius van den Beek - ELIXIR Galaxy WG, Institute Curie, Paris, France
-  - Institute Curie, Paris, France
-  - Twitter: [@mariusvdbeek](https://twitter.com/mariusvdbeek) GitHub: [@mvdbeek](https://github.com/mvdbeek)
-* (C)arrie Ganote - Indiana University Bloomington, USA
-* Nuwan (G)oonasekera - University of Melbourne, Australia
-* (E)nis Afgan - Galaxy Project, Johns Hopkins University, USA
-  - Johns Hopkins University, USA
-  - Twitter: [@EnisAfgan](https://twitter.com/EnisAfgan) GitHub: [@afgane](https://github.com/afgane)
-* (J)ohn Chilton - Galaxy Project, Penn State University, USA
-* Martin (Č)ech - Galaxy Project, Penn State University, USA
+* Nate Coraor @natefoo
+* John Chilton @jmchilton
+* Martin Čech @martenson
+    - Galaxy Project, Penn State University, USA
+* Enis Afgan @EnisAfgan
+    - Galaxy Project, Johns Hopkins University, USA
+* Simon Gladman @SimonGladman1
+    - VLSCI, University of Melbourne, Australia
+* Marius van den Beek - @mariusvdbeek
+    - ELIXIR Galaxy WG, Institute Curie, Paris, France
+* Carrie Ganote @clganote
+    - Indiana University Bloomington, USA
+* Nuwan Goonasekera @nuwan_ag
+    - University of Melbourne, Australia
 
 .footnote[\#usegalaxy \#gccbosc2018 / @galaxyproject]
 
@@ -52,7 +56,7 @@ https://github.com/galaxyproject/dagobah-training/
 
 We did our best to plan the session times for the expected content, and to build the content for the session time.
 
-Almost all of this content is revised, there may be sessions that are too long or short - apologies in advance.
+Almost all of this content is freshly revised, there may be sessions that are too long or short - apologies in advance.
 
 ---
 # Communication channels
@@ -63,12 +67,13 @@ Almost all of this content is revised, there may be sessions that are too long o
 ---
 # Useful Links
 
-- https://github.com/galaxyproject/
 - https://docs.galaxyproject.org/
 - https://galaxyproject.org/admin/
+- https://training.galaxyproject.org/
 
 ---
 # Thanks
+
 
 - **Dave Clements**
 
@@ -80,9 +85,17 @@ We would like to thank:
 ---
 # Computing resources
 
-The computing resources for this training have been provided by USIT via the [UH-IaaS Cloud](http://www.uh-iaas.no/)
+The computing resources for this training have been provided by **Jetstream**
 
-Find the IP address for your instance [here](https://github.com/galaxyproject/dagobah-training/blob/2018-oslo/sessions/00-intro/vms.md). Put it somewhere easy to copy/paste.
+Find the IP address for your instance [here](https://github.com/galaxyproject/dagobah-training/blob/2018-gccbosc/sessions/00-intro/vms.md). Put it somewhere easy to copy/paste.
 
 ---
 # Future events
+
+European Galaxy Days
+
+Date: November 19th 2018- November 20th 2018
+Location: Freiburg, Germany
+Contact: Hans-Rudolf Hotz, Björn Grüning
+
+https://galaxyproject.org/events/2018-europe-dev/
