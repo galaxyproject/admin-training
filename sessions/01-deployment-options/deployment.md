@@ -18,7 +18,7 @@ We like questions.
 ---
 # Where can Galaxy run?
 * Cloud (SaaS)
-  - [usegalaxy.org](https://usegalaxy.org)
+  - usegalaxy.org|eu|org.au
   - [Public Galaxy Servers](https://wiki.galaxyproject.org/PublicGalaxyServers)
   - [Amazon EC2](https://wiki.galaxyproject.org/CloudMan)
   - Semi-private cloud (e.g.: [Genomics Virtual Lab](https://www.genome.edu.au/), [Jetstream](http://jetstream-cloud.org/))
@@ -29,41 +29,6 @@ We like questions.
   - Dedicated or shared compute cluster(s)
   - Cloud compute resources
 * Standalone Local Server
-
----
-# Choosing where to run
-
-__Public Prebuilt SaaS (usegalaxy.org, public servers)__
-
-- Quickest to use today, but probably not why you're here...
-- Institutional/Protected data a concern
-- Not covered in this training
-
-__Private Prebuilt SaaS (EC2, GVL, Jetstream) or build your own__
-
-- Great choices for people needing access to compute for a fixed time analysis
-- Not as conducive to collaboration, publishing
-- [tutorial](https://galaxyproject.github.io/dagobah-training/2018-oslo/18-clouds/clouds.html)
-
-__Build your own Galaxy SaaS__
-- Personalized Galaxy instances for beginner-to-intermediate users
-- Requires a lot of infrastructure building
-- [tutorial](https://galaxyproject.github.io/dagobah-training/2018-oslo/18-clouds/clouds.html)
-
----
-# Choosing where to run
-
-__Scalable Local Server__
-- Permanent Galaxy server
-- Flexible compute scalability
-- Full privacy control
-- [tutorial](http://galaxyproject.github.io/training-material/topics/admin/tutorials/connect-to-compute-cluster/slides.html)
-
-__Standalone Local Server__
-- Permanent Galaxy server
-- Full privacy control
-- Should only consider this in cases of expected light usage
-- Get a beefy server
 
 ---
 # Software Requirements
@@ -128,19 +93,11 @@ This depends:
 
 - What tools will your users be using?
   - What are their requirements?
-- In general, the most commonly used tools use a single core
+- In general, the most commonly used tools use a single core.
   - But can use lots of memory!
 - Some compute-intensive tools use multiple cores
 
 usegalaxy.org allocates from **8 GB/core** to **16 GB/core**
-
-Connecting Galaxy to clusters/HPC is covered in the advanced section.
-
----
-
-# Deployment Options and Best Practices
-
-.footnote[\#usegalaxy / @galaxyproject]
 
 ---
 
@@ -164,13 +121,12 @@ Connecting Galaxy to clusters/HPC is covered in the advanced section.
 ---
 # Deployment Best Practices
 
-**Use configuration management**
-- Most used amongst Galaxy admins is [Ansible](http://docs.ansible.com) ([tutorial](https://galaxyproject.github.io/dagobah-training/2018-oslo/14-ansible/ansible-introduction.html))
+- **Use configuration management.** Most used amongst Galaxy admins is [Ansible](http://docs.ansible.com) ([tutorial](https://galaxyproject.github.io/dagobah-training/2018-oslo/14-ansible/ansible-introduction.html))
 
-**Use configuration management** but if you don't, *record every change you make somehow.*
-- Large, complex deployments grow organically
-- If you don't know what you did you can't do it again
-- "My context switching penalty is high and my process isolation is not what it used to be." - Elon Musk
+-  Record every change you make somehow (maybe using configuration management? ^^).
+  - Large, complex deployments grow organically
+  - If you don't know what you did you can't do it again
+  - "My context switching penalty is high and my process isolation is not what it used to be." - Elon Musk
 
 ---
 
@@ -188,4 +144,7 @@ Write protect Galaxy and data if you can
 
 Back up everything (except that which is managed by configuration management)
 
+---
+
+A full-fledged version of these slides available at https://training.galaxyproject.org
 
