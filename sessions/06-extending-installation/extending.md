@@ -5,42 +5,35 @@ class: inverse, middle, large
 class: special
 # Extending basic installation
 
-slides by @dblankenberg and @abdulrahmanazab
+slides by @dblankenberg @abdulrahmanazab
 
 .footnote[\#usegalaxy / @galaxyproject]
 
 ---
 
 class: normal
-# Common `galaxy.ini` Tweaks
+# Common `galaxy.yml` Tweaks
 
 ---
 
 class: normal
-# Configuring Internal HTTP Server
+# Configuring uWSGI
 
-In `galaxy.ini`:
-* `[server:main]` contains basic internal HTTP server configuration
-  * `port = 8080` change to set the port binding.
-  * `host = 127.0.0.1` change to IP of listening network interface, or `0.0.0.0` for all network interfaces.
-  * `use_threadpool = True` change to create a new thread per request.
-  * `threadpool_workers = 10` set to number of threads in threadpool.
-  * `threadpool_kill_thread_limit = 10800` time in seconds to wait before killing a thread.
-* Multiple `[server:XYZ]`
-  * You can define additional e.g. `[server:web1]` sections.
-  * Just be sure to change `port` and/or `host` values.
-  * Can run them all with `GALAXY_RUN_ALL=1 sh run.sh --daemon`
-  * But using Supervisor and uWSGI is a better idea.
+In `galaxy.yml`:
+* `uwsgi:` section contains basic internal HTTP server configuration
+  * `http: 127.0.0.1:8080` change to the port and to IP of listening network interface, or `0.0.0.0` for all network interfaces.
+  * `threads: 4` change the number of threads for each web server process.
+  * `offload-thread: 2` change the number of threads for serving static content.
 
 ---
 
 class: normal
 # Configuring the Galaxy Application
 
-In `galaxy.ini`:
-* `[app:main]` contains application configuration
-  * `filter-with = gzip` uncomment to enable internal gzip compression.
-  * Uncomment `filter-with = proxy-prefix` and set `prefix` in `[server:]`if running Galaxy away from webserver root.
+In `galaxy.yml`:
+* `galaxy:` section contains application configuration
+  * `filter-with: gzip` uncomment to enable internal gzip compression.
+  * Uncomment `filter-with: proxy-prefix` and set `prefix` in `[server:]`if running Galaxy away from webserver root.
   * If running more than 1 Galaxy, set `cookie_path` to match `prefix`.
   * `database_connection` contains the SQLAlchemy connection string for database.
 
@@ -49,11 +42,11 @@ In `galaxy.ini`:
 class: normal
 # More Authentication Options
 
-In `galaxy.ini`:
-* `require_login = False` Force everyone to log in (disable anonymous access).
-* `allow_user_creation = True` Allow unregistered users to create new accounts (otherwise, they will have to be created by an admin).
-* `allow_user_deletion = False` Allow administrators to delete accounts.
-* `allow_user_impersonation = False` Allow administrators to log in as other users (useful for debugging)
+In `galaxy.yml`:
+* `require_login: False` Force everyone to log in (disable anonymous access).
+* `allow_user_creation: True` Allow unregistered users to create new accounts (otherwise, they will have to be created by an admin).
+* `allow_user_deletion: False` Allow administrators to delete accounts.
+* `allow_user_impersonation: False` Allow administrators to log in as other users (useful for debugging)
 * And more ...
 
 ---
@@ -61,7 +54,7 @@ In `galaxy.ini`:
 class: normal
 # Securing your Object IDs
 
-In `galaxy.ini`:
+In `galaxy.yml`:
 * User facing object IDs
   * Galaxy uses the Blowfish cipher to obscure integer IDs.
   * Prevents guessing the hashes for various Galaxy objects.
@@ -75,7 +68,7 @@ In `galaxy.ini`:
 class: normal
 # Customizing your "Brand"
 
-In `galaxy.ini`:
+In `galaxy.yml`:
 * `brand` appends "/{brand}" to the "Galaxy" text in the masthead.
 * `logo_url` sets the URL linked by the "Galaxy/brand" text.
 * `wiki_url` sets the URL linked by the "Wiki" link in the "Help" menu.
@@ -91,11 +84,11 @@ In `galaxy.ini`:
 class: normal
 # Adding a Notice box
 
-In `galaxy.ini`:
+In `galaxy.yml`:
 ```
-message_box_visible = True
-message_box_content = Downtime scheduled Sunday at Noon to one.
-message_box_class = warning
+message_box_visible: True
+message_box_content: Downtime scheduled Sunday at Noon to one.
+message_box_class: warning
 ```
 
 ---
@@ -116,7 +109,7 @@ No restarting is necessary.
 class: normal
 # Client Browser Security
 
-In `galaxy.ini`:
+In `galaxy.yml`:
 * `sanitize_all_html` by default, Galaxy sanitizes all "text/html" tool outputs. Setting to False potentially exposes users to XSS attacks.
 * `sanitize_whitelist_file` manually override html sanitization for listed tools. Can set in admin interface.
 * `serve_xss_vulnerable_mimetypes` certain filetypes (e.g. SVG) can contain JS that is vulnerable to XSS (Cross-site scripting) and are served as "plain/text" by default.
@@ -129,7 +122,7 @@ In `galaxy.ini`:
 class: normal
 # Configuring FTP
 
-In `galaxy.ini`:
+In `galaxy.yml`:
 * `ftp_upload_dir` directory containing subdirectories matching users' identifier (defaults to e-mail)
 * `ftp_upload_site` hostname of your FTP server provided to users in the help text. Must set to enable FTP import.
 * `ftp_upload_dir_identifier` user attribute for subdirectory naming. 'email' (${user.email}) is default, but 'id' or 'username' are also common.
@@ -148,7 +141,7 @@ class: normal
 class: normal
 # Configuring SMTP
 
-In `galaxy.ini`:
+In `galaxy.yml`:
 * SMTP server
   * `smtp_server` host:port of SMTP server to use. Uses STARTTLS, but will fallback.
   * `smtp_username` username for SMTP server
@@ -167,9 +160,9 @@ class: normal
 Install a mail tranfer agent (MTA):
 * Here is a tutorial on how to [install Postfix MTA](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-postfix-as-a-send-only-smtp-server-on-ubuntu-14-04)
 
-In `galaxy.ini`:
-* set `smtp_server = localhost:25`
-* set `error_email_to = you@email.tld` (use your email)
+In `galaxy.yml`:
+* set `smtp_server: localhost:25`
+* set `error_email_to: you@email.tld` (use your email)
 * Run a Galaxy tool the produces an error
 * attempt to send a bug report
 
@@ -178,12 +171,12 @@ In `galaxy.ini`:
 class: normal
 # Configuring Data Library Path Uploads
 
-In `galaxy.ini`:
+In `galaxy.yml`:
 * Admins Only
   * `library_import_dir` upload files from configured directory.
   * `allow_library_path_paste` set to True to allow admins to paste any path to upload.
 * Users
-  * `user_library_import_dir` root directory containing sub-directories named by user emails. A common setup is that the value for `user_library_import_dir` is the same as for `ftp_upload_dir` allowing users to upload files via FTP and then import them either in history or data library. 
+  * `user_library_import_dir` root directory containing sub-directories named by user emails. A common setup is that the value for `user_library_import_dir` is the same as for `ftp_upload_dir` allowing users to upload files via FTP and then import them either in history or data library.
 * Disabling compressed library archives downloads
   * `disable_library_comptypes` Can be 'zip', 'gz', and 'bz2'
 
@@ -192,19 +185,19 @@ In `galaxy.ini`:
 class: normal
 # Integrating Custom Biostars site
 
-[Biosters](https://www.biostars.org) is a forum software for Q&A in life sciences
-In `galaxy.ini`:
+[Biostars](https://www.biostars.org) is a forum software for Q&A in life sciences
+In `galaxy.yml`:
 * `biostar_key` shared key with Biostar instance.
 * `biostar_key_name` Cookie parameter name for storing shared key.
 * `biostar_enable_bug_reports` (False) allow posting bug reports to Biostars (instead of just email)
-* `biostar_url` URL to Biostars instance (must share base URL with Galaxy, e.g. biostar.usegalaxy.org)	
+* `biostar_url` URL to Biostars instance (must share base URL with Galaxy, e.g. biostar.usegalaxy.org)
 
 ---
 
 class: normal
-# galaxy.ini Explained
+# galaxy.yml Explained
 
-Everything You Always Wanted to Know About `galaxy.ini`\* (\*But Were Afraid to Ask):
-* https://raw.githubusercontent.com/galaxyproject/galaxy/dev/config/galaxy.ini.sample
+Everything You Always Wanted to Know About `galaxy.yml`\* (\*But Were Afraid to Ask):
+* https://raw.githubusercontent.com/galaxyproject/galaxy/dev/config/galaxy.yml.sample
 
  ---

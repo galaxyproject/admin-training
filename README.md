@@ -39,9 +39,9 @@ Timetable with sessions and material will be continuously updated towards the wo
 | 9:30 | Using Ansible to deploy Galaxy | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/14-ansible/ansible-introduction.html#1) [Exercise 1](sessions/14-ansible/ex1-intro-ansible.md) | (E)(G) |
 | 10:20 | Extending your installation: FTP, SMTP, and more | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/06-extending-installation/extending.html), [Exercise](sessions/06-extending-installation/ex1-proftpd.md) | (G) |
 | 10:40| Defining and importing genomes, Data Managers | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/05-reference-genomes/reference_genomes.html), [Exercise](sessions/05-reference-genomes/ex1-reference-genomes.md) | (E) |
-| 11:00 | Galaxy server optional necessities: PostgreSQL and nginx | First Steps [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/03-production-basics/production.html), [Exercise](https://github.com/galaxyproject/dagobah-training/blob/2018-oslo/sessions/03-production-basics/ex1-first-steps.md)| (M)(N) |
-| | | PostgreSQL [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/03-production-basics/databases.html) [Exercise](https://github.com/galaxyproject/dagobah-training/blob/2018-oslo/sessions/03-production-basics/ex2-postgres.md)| (M)(N) |
-| | | nginx/Apache [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/03-production-basics/webservers.html) Nginx [Exercise](https://github.com/galaxyproject/dagobah-training/blob/2018-oslo/sessions/03-production-basics/ex3-nginx.md)| (M)(N) |
+| 11:00 | Galaxy server optional necessities: PostgreSQL and nginx | First Steps [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/03-production-basics/production.html), [Exercise](https://github.com/galaxyproject/dagobah-training/blob/2018-gccbosc/sessions/03-production-basics/ex1-first-steps.md)| (M)(N) |
+| | | PostgreSQL [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/03-production-basics/databases.html) [Exercise](https://github.com/galaxyproject/dagobah-training/blob/2018-gccbosc/sessions/03-production-basics/ex2-postgres.md)| (M)(N) |
+| | | nginx/Apache [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/03-production-basics/webservers.html) Nginx [Exercise](https://github.com/galaxyproject/dagobah-training/blob/2018-gccbosc/sessions/03-production-basics/ex3-nginx.md)| (M)(N) |
 | 11:30 | Close Morning Session | | All |
 
 

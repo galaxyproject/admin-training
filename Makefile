@@ -6,15 +6,21 @@ generate-slides:
 	rm -f docs/index.html
 	echo "<html><head></head><body>" > docs/index.html
 	$(IN_VENV) python slideshow/build_slideshow.py 'Welcome and Introduction' sessions/00-intro/intro.md 00-intro
-	# $(IN_VENV) python slideshow/build_slideshow.py 'Get Galaxy' sessions/02-basic-server/get-galaxy.md 02-basic-server
+
+	$(IN_VENV) python slideshow/build_slideshow.py 'Platform options and requirements' sessions/01-deployment-options/deployment.md 01-deployment-options
+
+	$(IN_VENV) python slideshow/build_slideshow.py 'Extending Installation' sessions/06-extending-installation/extending.md 06-extending-installation
+
+	$(IN_VENV) python slideshow/build_slideshow.py 'Reference Genomes' sessions/05-reference-genomes/reference_genomes.md 05-reference-genomes
+
 	$(IN_VENV) python slideshow/build_slideshow.py 'Production Basics' sessions/03-production-basics/production.md 03-production-basics
 	$(IN_VENV) python slideshow/build_slideshow.py 'Galactic Database' sessions/03-production-basics/databases.md 03-production-basics
 	$(IN_VENV) python slideshow/build_slideshow.py 'Web Servers' sessions/03-production-basics/webservers.md 03-production-basics
+
+
 	$(IN_VENV) python slideshow/build_slideshow.py 'Tool Shed' sessions/04-tool-shed/shed_intro.md 04-tool-shed
 	$(IN_VENV) python slideshow/build_slideshow.py 'Tool Dependencies' sessions/04-tool-shed/tool-dependencies.md 04-tool-shed
 	$(IN_VENV) python slideshow/build_slideshow.py 'Tool Installation' sessions/04-tool-shed/tool_installation.md 04-tool-shed
-	$(IN_VENV) python slideshow/build_slideshow.py 'Reference Genomes' sessions/05-reference-genomes/reference_genomes.md 05-reference-genomes
-	$(IN_VENV) python slideshow/build_slideshow.py 'Extending Installation' sessions/06-extending-installation/extending.md 06-extending-installation
 	$(IN_VENV) python slideshow/build_slideshow.py 'Upgrading & Releases' sessions/08-upgrading-release/upgrading.md 08-upgrading-release
 	$(IN_VENV) python slideshow/build_slideshow.py 'uWSGI' sessions/10-uwsgi/uwsgi.md 10-uwsgi
 	$(IN_VENV) python slideshow/build_slideshow.py 'Systemd and Supervisor' sessions/11-systemd-supervisor/systemd-supervisor.md 11-systemd-supervisor
