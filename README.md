@@ -36,11 +36,11 @@ Timetable with sessions and material will be continuously updated towards the wo
 | -------- | --------- | --------- | ----------- |
 | 09:00 | Welcome and introduction | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/00-intro/intro.html) | (Č) |
 | 09:15 | Deployment and platform options | [Slides](http://galaxyproject.github.io/training-material/topics/admin/tutorials/deployment-platforms-options/slides.html) | (Č) |
-| 9:30 | Using Ansible to deploy Galaxy | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/14-ansible/ansible-introduction.html#1) [Exercise 1](sessions/14-ansible/ex1-intro-ansible.md) | (E)(G) |
+| 9:30 | Using Ansible to deploy Galaxy | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/14-ansible/ansible-introduction.html#1) [Exercise](sessions/14-ansible/ex1-intro-ansible.md) | (E)(G) |
 | 10:20 | Extending your installation: FTP, SMTP, and more | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/06-extending-installation/extending.html), [Exercise](sessions/06-extending-installation/ex1-proftpd.md) | (G) |
 | 10:40| Defining and importing genomes, Data Managers | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/05-reference-genomes/reference_genomes.html), [Exercise](sessions/05-reference-genomes/ex1-reference-genomes.md) | (E) |
-| 11:00 | PostgreSQL | PostgreSQL [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/03-production-basics/databases.html) [Exercise](https://github.com/galaxyproject/dagobah-training/blob/2018-gccbosc/sessions/03-production-basics/ex2-postgres.md)| (M)(N) |
-| 11:15 | | nginx/Apache [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/03-production-basics/webservers.html)| (M)(N) |
+| 11:00 | PostgreSQL | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/03-production-basics/databases.html) | (M)(N) |
+| 11:15 | nginx/Apache |  [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/03-production-basics/webservers.html)| (M)(N) |
 | 11:30 | Close Morning Session | |  |
 
 
@@ -48,7 +48,7 @@ Timetable with sessions and material will be continuously updated towards the wo
 
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
-| 12:30 | Writing tools with Planemo | [tutorial](http://planemo.readthedocs.io/en/latest/writing_standalone.html) | (J) |
+| 12:30 | Writing tools with Planemo | [Tutorial](http://planemo.readthedocs.io/en/latest/writing_standalone.html) | (J) |
 | 13:30 | Introduction to the Galaxy Tool Shed: Identifying and installing well-defined tools | [Slides (Shed)](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/04-tool-shed/shed_intro.html), [Slides (Tools)](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/04-tool-shed/tool_installation.html)| (M)(Č) |
 | 14:30 | Updating tools and supporting multiple versions of tools | [Exercise](sessions/04-tool-shed/ex-tool-management.md) | (M)(N) |
 | 15:00 | Close Noon Session | |  |

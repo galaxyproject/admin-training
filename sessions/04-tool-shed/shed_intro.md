@@ -48,10 +48,7 @@ We discourage running local TS.
 * `repository` - A versioned code archive with tool(s) in Tool Shed.
 --
 
-* `revision` vs `installable revision` - Every TS repo update generates a new revision but only certain (reproducibility-affecting) changes generate a new revision installable to Galaxy as a new version.
---
-
-* `metadata` - TS generates and stores a set of data for every installable revision of the repo.
+* `revision` and `installable revision` - Every TS repo update generates a new revision but only certain (reproducibility-affecting) changes generate a new revision installable to Galaxy as a new version.
 
 ???
 Every TS repo update can be propagated to the Galaxy though.
@@ -189,9 +186,7 @@ Galaxy is aiming to be dependency resolution-agnostic.
 ---
 # Intermezzo: Tool dependencies
 
-To achieve the level of reproducibility Galaxy aims for it needs to be able to:
-
-> Install any tool at any version with the exact same dependencies at any time.
+To achieve the level of reproducibility Galaxy aims for it needs to be able to install *any tool at any version with the exact same dependencies at any time*.
 
 Linux/MacOS package management is/was:
  - missing the scientific packages
@@ -202,7 +197,7 @@ Linux/MacOS package management is/was:
 ---
 # Approach
 
-* We aim to make Galaxy resolver-independent.
+* We aim to make Galaxy resolver-independent but Conda-oriented.
 * What resolver is going to be used for the tool dependency is determined at runtime
 and prioritised in the config file `dependency_resolvers_conf.xml`.
 ```xml

@@ -5,26 +5,24 @@ IN_VENV=if [ -f $(VENV)/bin/activate ]; then . $(VENV)/bin/activate; fi;
 generate-slides:
 	rm -f docs/index.html
 	echo "<html><head></head><body>" > docs/index.html
+
+# start morning
 	$(IN_VENV) python slideshow/build_slideshow.py 'Welcome and Introduction' sessions/00-intro/intro.md 00-intro
-
 	$(IN_VENV) python slideshow/build_slideshow.py 'Platform options and requirements' sessions/01-deployment-options/deployment.md 01-deployment-options
-
+	$(IN_VENV) python slideshow/build_slideshow.py 'Ansible and Galaxy - Part 1' sessions/14-ansible/ansible-introduction.md 14-ansible
 	$(IN_VENV) python slideshow/build_slideshow.py 'Extending Installation' sessions/06-extending-installation/extending.md 06-extending-installation
-
 	$(IN_VENV) python slideshow/build_slideshow.py 'Reference Genomes' sessions/05-reference-genomes/reference_genomes.md 05-reference-genomes
-
-	$(IN_VENV) python slideshow/build_slideshow.py 'Production Basics' sessions/03-production-basics/production.md 03-production-basics
 	$(IN_VENV) python slideshow/build_slideshow.py 'Galactic Database' sessions/03-production-basics/databases.md 03-production-basics
 	$(IN_VENV) python slideshow/build_slideshow.py 'Web Servers' sessions/03-production-basics/webservers.md 03-production-basics
-
+# end morning
 
 	$(IN_VENV) python slideshow/build_slideshow.py 'Tool Shed' sessions/04-tool-shed/shed_intro.md 04-tool-shed
 	$(IN_VENV) python slideshow/build_slideshow.py 'Tool Installation' sessions/04-tool-shed/tool_installation.md 04-tool-shed
+
 	$(IN_VENV) python slideshow/build_slideshow.py 'Upgrading & Releases' sessions/08-upgrading-release/upgrading.md 08-upgrading-release
 	$(IN_VENV) python slideshow/build_slideshow.py 'uWSGI' sessions/10-uwsgi/uwsgi.md 10-uwsgi
 	$(IN_VENV) python slideshow/build_slideshow.py 'Systemd and Supervisor' sessions/11-systemd-supervisor/systemd-supervisor.md 11-systemd-supervisor
 	$(IN_VENV) python slideshow/build_slideshow.py 'External Authentication' sessions/13-external-auth/external-auth.md 13-external-auth
-	$(IN_VENV) python slideshow/build_slideshow.py 'Ansible and Galaxy - Part 1' sessions/14-ansible/ansible-introduction.md 14-ansible
 	$(IN_VENV) python slideshow/build_slideshow.py 'Galaxy Job Configuration' sessions/15-job-conf/job_conf.md 15-job-conf
 	$(IN_VENV) python slideshow/build_slideshow.py 'Heterogeneous Resources' sessions/17-heterogenous/heterogeneous.md 17-heterogenous
 	$(IN_VENV) python slideshow/build_slideshow.py 'Clouds' sessions/18-clouds/clouds.md 18-clouds
