@@ -39,20 +39,19 @@ Timetable with sessions and material will be continuously updated towards the wo
 | 9:30 | Using Ansible to deploy Galaxy | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/14-ansible/ansible-introduction.html#1) [Exercise 1](sessions/14-ansible/ex1-intro-ansible.md) | (E)(G) |
 | 10:20 | Extending your installation: FTP, SMTP, and more | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/06-extending-installation/extending.html), [Exercise](sessions/06-extending-installation/ex1-proftpd.md) | (G) |
 | 10:40| Defining and importing genomes, Data Managers | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/05-reference-genomes/reference_genomes.html), [Exercise](sessions/05-reference-genomes/ex1-reference-genomes.md) | (E) |
-| 11:00 | Galaxy server optional necessities: PostgreSQL and nginx | First Steps [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/03-production-basics/production.html), [Exercise](https://github.com/galaxyproject/dagobah-training/blob/2018-gccbosc/sessions/03-production-basics/ex1-first-steps.md)| (M)(N) |
-| | | PostgreSQL [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/03-production-basics/databases.html) [Exercise](https://github.com/galaxyproject/dagobah-training/blob/2018-gccbosc/sessions/03-production-basics/ex2-postgres.md)| (M)(N) |
-| | | nginx/Apache [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/03-production-basics/webservers.html) Nginx [Exercise](https://github.com/galaxyproject/dagobah-training/blob/2018-gccbosc/sessions/03-production-basics/ex3-nginx.md)| (M)(N) |
-| 11:30 | Close Morning Session | | All |
+| 11:00 | PostgreSQL | PostgreSQL [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/03-production-basics/databases.html) [Exercise](https://github.com/galaxyproject/dagobah-training/blob/2018-gccbosc/sessions/03-production-basics/ex2-postgres.md)| (M)(N) |
+| 11:15 | | nginx/Apache [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/03-production-basics/webservers.html)| (M)(N) |
+| 11:30 | Close Morning Session | |  |
 
 
 #### Noon
 
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
-| 12:30 | Writing tools with Planemo |  | (J) |
-| 13:30 | Introduction to the Galaxy Tool Shed: Identifying and installing well-defined tools | [Slides (Shed)](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/04-tool-shed/shed_intro.html), [Slides (Tools)](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/04-tool-shed/tool_installation.html), [Slides (Dependencies)](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/04-tool-shed/tool-dependencies.html)| (M)(Č) |
+| 12:30 | Writing tools with Planemo | [tutorial](http://planemo.readthedocs.io/en/latest/writing_standalone.html) | (J) |
+| 13:30 | Introduction to the Galaxy Tool Shed: Identifying and installing well-defined tools | [Slides (Shed)](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/04-tool-shed/shed_intro.html), [Slides (Tools)](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/04-tool-shed/tool_installation.html)| (M)(Č) |
 | 14:30 | Updating tools and supporting multiple versions of tools | [Exercise](sessions/04-tool-shed/ex-tool-management.md) | (M)(N) |
-| 15:00 | Close Noon Session | | All |
+| 15:00 | Close Noon Session | |  |
 
 
 #### Afternoon
@@ -63,9 +62,9 @@ Timetable with sessions and material will be continuously updated towards the wo
 | 15:50 | Connecting Galaxy to a compute cluster | [Slides](http://galaxyproject.github.io/training-material/topics/admin/tutorials/connect-to-compute-cluster/slides.html), [Exercise](http://galaxyproject.github.io/training-material/topics/admin/tutorials/connect-to-compute-cluster/tutorial.html) | (N)(S) |
 | 16:30 | Storage management and using heterogeneous storage services | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/19-storage/storage.html), [Exercise](sessions/19-storage/ex1-objectstore.md) | (N)(C) |
 | 16:50 | Upgrading to a new Galaxy release | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/08-upgrading-release/upgrading.html) | (C) |
-| 17:10 | What's new in Galaxy 18.01? (add 18.05?) | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/whatsnew/18.01.html) | (N) |
+| 17:10 | Galaxy on uWSGI | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/whatsnew/18.01.html) | (N) |
 | 17:30 | When things go wrong: Galaxy Server Troubleshooting | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/22-troubleshooting/troubleshooting.html) | (N)(C)(S) |
-| 18:00 | Close Afternoon Session | | All |
+| 18:00 | Close Afternoon Session | |  |
 
 
 #### Extra

@@ -139,4 +139,9 @@ With ephemeris you can:
  - keep all tools updated
  - install reference data.
 
-Ephemeris is used in the ansible-galaxy-tools role (More about this on [Wednesday](https://galaxyproject.github.io/dagobah-training/2018-oslo/14-ansible/ansible-introduction.html))
+Ephemeris is used in the `ansible-galaxy-tools` role.
+
+---
+# usegalaxy.eu example
+
+https://github.com/usegalaxy-eu/usegalaxy-eu-tools

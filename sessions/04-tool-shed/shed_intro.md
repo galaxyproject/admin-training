@@ -187,6 +187,39 @@ Requirements of the wrapper.
 Galaxy is aiming to be dependency resolution-agnostic.
 
 ---
+# Intermezzo: Tool dependencies
+
+To achieve the level of reproducibility Galaxy aims for it needs to be able to:
+
+> Install any tool at any version with the exact same dependencies at any time.
+
+Linux/MacOS package management is/was:
+ - missing the scientific packages
+ - avoiding or not maintaining old versions
+ - unreliable
+ - scattered
+
+---
+# Approach
+
+* We aim to make Galaxy resolver-independent.
+* What resolver is going to be used for the tool dependency is determined at runtime
+and prioritised in the config file `dependency_resolvers_conf.xml`.
+```xml
+<dependency_resolvers>
+  <tool_shed_packages />
+  <galaxy_packages />
+  <conda />
+  <galaxy_packages versionless="true" />
+  <conda versionless="true" />
+<!-- other resolvers
+  <tool_shed_tap />
+  <homebrew />
+-->
+</dependency_resolvers>
+```
+
+---
 class: smaller
 ### seqtk Conda package
 
@@ -218,9 +251,9 @@ test:
 
 ---
 class: normal
-### seqtk tool_dependencies.xml file
+### tool_dependencies.xml
 
-A TS way to fulfill requirements.
+A deprecated way that uses TS 'recipe'.
 
 ```xml
 <?xml version="1.0"?>
@@ -231,29 +264,3 @@ A TS way to fulfill requirements.
 </tool_dependency>
 ```
 
----
-class: normal
-### seqtk TS package
-
-A TS recipe how to install the dependency.
-```xml
-<?xml version="1.0"?>
-<tool_dependency>
-    <package name="seqtk" version="1.0-r75-dirty">
-        <install version="1.0">
-            <actions>
-                <action type="shell_command">git clone https://github.com/lh3/seqtk/ seqtk</action>
-                <action type="shell_command">git reset --hard 08b3625c2a7aae3eca9ab056e1adea52ec22cbef</action>
-                <action type="shell_command">make</action>
-                <action type="move_file">
-                    <source>seqtk</source>
-                    <destination>$INSTALL_DIR/bin</destination>
-                </action>
-                <action type="set_environment">
-                  <environment_variable action="prepend_to" name="PATH">$INSTALL_DIR/bin/</environment_variable>
-                </action>
-            </actions>
-        </install>
-    </package>
-</tool_dependency>
-```
