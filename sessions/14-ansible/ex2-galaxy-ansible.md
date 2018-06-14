@@ -53,10 +53,7 @@ Go to your home directory on your Galaxy server, clone the GitHub repository,
 and use `ansible-galaxy` command to install all the dependent roles:
 
 ```
-  sudo apt update
-  sudo apt -y install python-pip
   sudo pip install ansible
-  cd ~
   git clone https://github.com/ARTbio/GalaxyKickStart
   cd GalaxyKickStart
   ansible-galaxy install -r requirements_roles.yml -p roles --force
