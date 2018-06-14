@@ -1,6 +1,6 @@
 # GCCBOSC2018 - Intro to Galaxy Administration
 
-**Portland, Monday 25th of June, 2018**
+**Portland, OR; Monday, 25th of June, 2018; 9:00 to 18:00**
 
 Link to session: [Morning](#morning) | [Noon](#noon) | [Afternoon](#afternoon)
 
@@ -12,7 +12,7 @@ _TBA_
 
 ## Training VM instances
 
-List of training instances is available in [this spreadhseet](https://docs.google.com/spreadsheets/d/1sIoU4qpv4HdKNUNOtsAtW-XKKZvIsDfReAoS7uBbCZM/edit?usp=sharing). Please pick one instance, enter your name in the user column and then copy the private ssh key to your machine and clear that cell (that way others won't be able to ssh into your instance and we have to switch focus to intrussion detection).
+List of training instances is available in [this spreadhseet](https://docs.google.com/spreadsheets/d/1sIoU4qpv4HdKNUNOtsAtW-XKKZvIsDfReAoS7uBbCZM/edit?usp=sharing). Please pick one instance, enter your name in the user column and then copy the private ssh key to your machine and clear that cell (that way others won't be able to ssh into your instance and we have to switch focus to intrusion detection).
 
 #### Recommended instance specs
 
@@ -30,7 +30,7 @@ _Timetable with sessions and material will be continuously updated towards the w
 | -------- | --------- | --------- | ----------- |
 | 09:00 | Welcome and introduction | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/00-intro/intro.html) | (Č) |
 | 09:15 | Deployment and platform options | [Slides](http://galaxyproject.github.io/training-material/topics/admin/tutorials/deployment-platforms-options/slides.html) | (Č) |
-| 9:30 | Using Ansible to deploy Galaxy | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/14-ansible/ansible-introduction.html#1) [Exercise](sessions/14-ansible/ex1-intro-ansible.md) | (E)(G) |
+| 9:30 | Using Ansible to deploy Galaxy | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/14-ansible/ansible-introduction.html#1) [Exercise](sessions/14-ansible/ex2-galaxy-ansible.md) | (E)(G) |
 | 10:20 | Extending your installation: FTP, SMTP, and more | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/06-extending-installation/extending.html), [Exercise](sessions/06-extending-installation/ex1-proftpd.md) | (G) |
 | 10:40| Defining and importing genomes, Data Managers | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/05-reference-genomes/reference_genomes.html), [Exercise](sessions/05-reference-genomes/ex1-reference-genomes.md) | (E) |
 | 11:00 | PostgreSQL | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/03-production-basics/databases.html) | (M)(N) |
@@ -77,14 +77,13 @@ _Timetable with sessions and material will be continuously updated towards the w
 | 15:45 | Controlling Galaxy with systemd and supervisor | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/11-systemd-supervisor/systemd-supervisor.html), [Exercise](sessions/11-systemd-supervisor/ex1-supervisor.md) | (E) |
 | 09:15 | Users, Groups, and Quotas | [Slides](http://galaxyproject.github.io/training-material/topics/admin/tutorials/users-groups-quotas/slides.html) | (B) |
 
-
 ### Instructors
 
 * (N)ate Coraor - Galaxy Project, Penn State University, USA
-* (S)imon Gladman - VLSCI, University of Melbourne, Australia
+* (S)imon Gladman - Melbourne Bioinformatics, University of Melbourne, Australia
 * (M)arius van den Beek - ELIXIR Galaxy WG, Institute Curie, Paris, France
 * (C)arrie Ganote - Indiana University Bloomington, USA
-* Nuwan (G)oonasekera - University of Melbourne, Australia
+* Nuwan (G)oonasekera - Melbourne Bioinformatics, University of Melbourne, Australia
 * (E)nis Afgan - Galaxy Project, Johns Hopkins University, USA
 * (J)ohn Chilton - Galaxy Project, Penn State University, USA
 * Martin (Č)ech - Galaxy Project, Penn State University, USA

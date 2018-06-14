@@ -1,8 +1,8 @@
 ![galaxy logo](../../docs/shared-images/galaxy_logo_25percent_transparent.png)
 
-### Oslo2018 - Oslo, Norway
+### GCC BOSC 2018
 
-# Setup a production Galaxy with Ansible - Exercise II.
+# Setup a production Galaxy with Ansible - Exercise.
 
 ## Learning Outcomes
 
@@ -49,11 +49,14 @@ existing playbooks, such as the GKS, as examples but it is likely you will want
 to write your own by composing and parameterizing available roles.
 
 To use the GKS playbook, we need to get a local copy by cloning the repository.
-Go to somewhere sensible on either your local machine or on your Galaxy server
-(`/home/<your_username>` would be sensible), clone the Github repository, and
-use `ansible-galaxy` command to install all the dependent roles:
+Go to your home directory on your Galaxy server, clone the GitHub repository,
+and use `ansible-galaxy` command to install all the dependent roles:
 
 ```
+  sudo apt update
+  sudo apt -y install python-pip
+  sudo pip install ansible
+  cd ~
   git clone https://github.com/ARTbio/GalaxyKickStart
   cd GalaxyKickStart
   ansible-galaxy install -r requirements_roles.yml -p roles --force
@@ -62,14 +65,14 @@ use `ansible-galaxy` command to install all the dependent roles:
 The last command will install all the dependent roles the playbook uses into the
 `roles` subdirectory by downloading them from their respective repositories.
 When you want to update your local copy of the roles, just rerun that command
-(note that the `--force` flag that will cause local copy of the roles to be
+(note that the `--force` flag, which will cause local copies of the roles to be
 overwritten).
 
 **Part 1 - Examine the playbook**
 
 Have a look at the *galaxy.yml* file. You'll notice that it contains quite a
-number role. The order in which the roles are referenced is important. This
-playbook does the following:
+number of roles. The order in which the roles are referenced is important
+because the playbook executes sequentially. This playbook does the following:
 
 1. Performs some system tasks (installs Python if missing, checks Ansible version, etc.)
 1. Installs base operating system requirements for running Galaxy
@@ -79,22 +82,23 @@ playbook does the following:
 1. Sets up Galaxy for production use
 1. Sets up Trackster and installs tools
 
-Take note of the fact that the playbook combines the individual roles to give us the desired outcome.
+Take note of the fact that the playbook combines the individual roles to give
+us the desired outcome.
 
 **Part 2 - Ansible galaxy**
 
 Where do the roles come from? Ansible has a "ToolShed"-like system called **Ansible Galaxy** - d'oh.
 
 Open the *requirements_roles.yml* file. You'll see a series of repositories that
-point to the various roles from their respective Github.
-The `ansible-galaxy install` fetches those repositories and puts them in an
+point to the various roles from their respective GitHub repositories.
+The `ansible-galaxy install` fetches those repositories and puts them in the
 appropriate place in our scripts file tree.
 
-An alternative to obtaining roles from Github is to download them directly from
+An alternative to obtaining roles from GitHub is to download them directly from
 the Ansible Galaxy hub: https://galaxy.ansible.com/. Instead of using roles
-directly from Github, roles can be deposited here and then downloaded using the
+directly from GitHub, roles can be deposited here and then downloaded using the
 same `ansible-galaxy install` command. In order to deposit a role there, you'll
-have to import it there first from your Github account.
+have to import it there first from your GitHub account.
 
 There are many roles already available for download for various aspects of
 system administration or application setup. They all have some meta data
@@ -105,39 +109,19 @@ some of the roles published by the [Galaxy project](https://galaxy.ansible.com/g
 Note that in addition to the roles obtained from Ansible Galaxy, there are a
 number of them already included in the source of the GKS playbook.
 
-**Part 3 - Browse the roles**
+**Part 3 - Run the playbook**
 
-Let's take a look through a couple of the roles and then run the playbook.
+We are going to run the playbook now and talk about some of the details while it
+is running. To run the playbook we will need a Linux instance (we will use
+Ubuntu 16.04) with a set public/private keypair, or we need to run the playbook
+"locally" (i.e. on the managed host itself).
 
-The roles used by this playbook are:
-
-| Order run | Role name | Purpose |
-| --------- | --------- | ------- |
-| 1 | [galaxyproject.galaxy-os](https://galaxy.ansible.com/galaxyproject/galaxy-os/) | Set up the operating system basics |
-| 2 | galaxyproject.postgresql | Installs PostgreSQL database server |
-| 3 | natefoo.postgresql_objects | Installs PostgreSQL scripts to work with privileges etc. |
-| 4 | galaxyproject.galaxy | Installs and configures Galaxy |
-| 5 | galaxyproject.galaxy-extras | Installs and configures Galaxy for production use |
-| 6 | galaxyproject.trackster | Configures Trackster |
-| 7 | galaxyproject.galaxy-tools | Installs tools into Galaxy from the ToolShed |
-
-You'll note that these roles all have pretty good documentation on how to use them, which variables to set and how, and when they should be used. This makes it all much easier to understand.
-
-Have a look at any one role, concentrating mainly on the variables (in the `defaults/main.yml` files and the `vars` directory if present.) By modifying these variables, you can customize things like, where PostgreSQL keeps it's backups, where Galaxy is installed, and many others.
-
-**Part 4 - Run the playbook**
-
-To run the role we will need a Linux instance (we will use Ubuntu 16.04) with a set public/private keypair, or we need to run the playbook "locally" (i.e. on the managed host itself). We will also need to know it's IP address.
-
-* Let's create our own set of variables to match the system we've been working
-  with. Keep in mind that we're adding and/or overriding variables defined in
-  `group_vars/all` so only the variables we want to change need to be set here.
-  Create a file *group_vars/oslo18.yml* and set the following variables:
+* Let's create our own set of variables. Keep in mind that we're adding and/or
+  overriding variables defined in `group_vars/all` so only the variables we want
+  to change need to be set here while the rest will adopt their defaults. Create
+  a file *group_vars/gccbosc18.yml* and set the following variables:
 
 ``` yaml
-galaxy_admin: your@email.com  # <- change this
-galaxy_admin_pw: admin18
-
 galaxy_root_dir: /srv/galaxy
 galaxy_server_dir: "{{ galaxy_root_dir }}/server"
 galaxy_venv_dir: "{{ galaxy_root_dir }}/venv"
@@ -174,71 +158,99 @@ galaxy_config:
   "uwsgi":
     master: True
 
-galaxy_tools_tool_list_files:
-  - "extra-files/galaxy-kickstart/galaxy-kickstart_tool_list.yml"
-
 additional_files_list:
   - { src: "extra-files/galaxy-kickstart/logo.png", dest: "{{ galaxy_server_dir }}/static/images/" }
   - { src: "extra-files/tool_sheds_conf.xml", dest: "{{ galaxy_config_dir }}" }
   - { src: "extra-files/cloud_setup/vimrc", dest: "/etc/vim/" }
 ```
-* Let's also add a `pre_task` to create the `galaxy` system user to match the
-  environment we have been using thus far in the workshop. Just add the
-  following task under `pre_tasks` in `galaxy.yml`:
 
-  ```yaml
-    - name: Create Galaxy user
+* Let's add a pre-task to make to create our desired system galaxy user.
+  Add the following at the end of the `pre-tasks` section of the playbook in
+  `galaxy.yml`:
+``` yaml
+    - name: Create galaxy system user
       user:
         name: "galaxy"
         home: "/srv/galaxy"
         skeleton: "/etc/skel"
         shell: "/bin/bash"
         system: yes
-  ```
-
-* We also need to make one more adjustment to these VMs. Namely, the hostname
-does not resolve by default so let's add another `pre_task` to make that happen
-
-```yaml
-    - name: Update /etc/hosts
-      replace:
-        dest: /etc/hosts
-        regexp: '^127.0.0.1 localhost'
-        replace: '127.0.0.1 localhost {{ ansible_hostname }}'
-        backup: yes
+      tags:
+          - always
 ```
 
-* Set the contents of the *inventory* file appropriately, depending if you are
-targeting the local host or a remote one:
-
-```ini
-[oslo18]
+* Create a new *inventory* file and set its contents to the following:
+``` ini
+[gccbosc18]
 localhost ansible_connection=local
 ```
 
+If you were targeting a remote machine, your inventory file would look like this
 ``` ini
-[oslo18]
+[gccbosc18]
 158.39.75.18 ansible_user="ubuntu" ansible_ssh_private_key_file=pk.pem
 ```
 
+To speed up the build for this session, let's comment out
+
 Now it's just a matter of running:
 
-`ansible-playbook -i inventory galaxy.yml`
+```
+ansible-playbook -i inventory galaxy.yml --tags "install_galaxy,install_extras"
+```
 
 The Ansible script will run and display what it's doing as it does (it's a good
-idea to run it in a _screen_ since networks are sometimes flaky). It should
-take about 15 minutes for the playbook to run to completion.
+idea to run it in a _screen_ since networks are sometimes flaky). We have also
+limited the set It should take up to 15 minutes for the playbook to run to
+completion.
 
-Once the playbook has completed its run, we can then access Galaxy on the
-machine we installed it on. The playbook has setup the PostgreSQL database,
+Once the playbook has completed its run, we can then access and use Galaxy on
+the machine we installed it on. The playbook has setup the PostgreSQL database,
 Nginx proxy server, ProFTPD ftp server, Galaxy, CVMFS for reference data, and
 the necessary configurations.
 
-In regard to the _opinionated_ model of reusing existing playbooks, note that
-this playbook configured Supervisor programs for Galaxy to be prefixed with
-`galaxy` instead of `gx` as we have been using thus far. So going forward,
-replace any stale references to `supervisorctl restart gx:` with
-`supervisorctl restart galaxy:`.
+Galaxy is now managed via Supervisord. To list all the programs issue
+`sudo supervisorctl status` command. If you need to change any of the settings,
+the Galaxy configuration file `` is located in `/srv/galaxy/config`, as per
+our variable definition above. After you've made the changes, restart the
+Galaxy process with `sudo supervisorctl restart galaxy:`. We can try this by
+adding a Galaxy admin user. Let's first register as a new user in the Galaxy
+interface and then do the following:
+```
+$ sudo su galaxy
+$ vi /srv/galaxy/config/galaxy.ini
+# Add the following line under [app:main] section
+admin_users = your@email.address
+$ exit  # change back to ubuntu user
+$ sudo supervisorctl restart galaxy:
+```
+
+Reload your Galaxy page and the _Admin_ tab should appear.
+
+**Part 4 - Browse the roles**
+
+While the playbook is running, let's take a look through a couple of the roles.
+
+Some of the roles used by this playbook are:
+
+| Order run | Role name | Purpose |
+| --------- | --------- | ------- |
+| 1 | [galaxyproject.galaxy-os](https://galaxy.ansible.com/galaxyproject/galaxy-os/) | Set up the operating system basics |
+| 2 | galaxyproject.postgresql | Installs PostgreSQL database server |
+| 3 | natefoo.postgresql_objects | Installs PostgreSQL scripts to work with privileges etc. |
+| 4 | galaxyproject.galaxy | Installs and configures Galaxy |
+| 5 | galaxyproject.galaxy-extras | Installs and configures Galaxy for production use |
+| 6 | galaxyproject.trackster | Configures Trackster |
+| 7 | galaxyproject.galaxy-tools | Installs tools into Galaxy from the ToolShed |
+
+You'll note that these roles all have pretty good documentation on how to use
+them, which variables to set and how, and when they should be used. This makes
+it all much easier to understand.
+
+Have a look at any one role, concentrating mainly on the variables (in the
+`defaults/main.yml` file and the `vars` directory if present). By modifying
+these variables, you can customize things like, where PostgreSQL keeps it's
+backups, where Galaxy is installed, and many others.
 
 ## Section 2 - Using CVMFS for reference data (time permitting)
 
@@ -263,7 +275,6 @@ for the setup by inspecting the set of Ansible tasks used to configure it - an
 immediate example of the benefits of using code to manage infrastructure:
 https://github.com/galaxyproject/ansible-galaxy-extras/blob/master/tasks/cvmfs_client.yml
 
-
 ## So, what did we learn?
 
 Hopefully, you now understand:
@@ -273,7 +284,7 @@ Hopefully, you now understand:
 
 ## Further reading
 
-If you want to know more about Ansible and Galaxy, see the Galaxy Project Github
+If you want to know more about Ansible and Galaxy, see the Galaxy Project GitHub
 page: [https://github.com/galaxyproject](https://github.com/galaxyproject) and
 search for "ansible".
 
