@@ -2,34 +2,28 @@
 
 **Portland, Monday 25th of June, 2018**
 
-
-jump to session: [Morning](#morning) | [Noon](#noon) | [Afternoon](#afternoon)
+Link to session: [Morning](#morning) | [Noon](#noon) | [Afternoon](#afternoon)
 
 Built slides have [an index](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/).
 
-### Instructors
-
-* (N)ate Coraor - Galaxy Project, Penn State University, USA
-* (S)imon Gladman - VLSCI, University of Melbourne, Australia
-* (M)arius van den Beek - ELIXIR Galaxy WG, Institute Curie, Paris, France
-* (C)arrie Ganote - Indiana University Bloomington, USA
-* Nuwan (G)oonasekera - University of Melbourne, Australia
-* (E)nis Afgan - Galaxy Project, Johns Hopkins University, USA
-* (J)ohn Chilton - Galaxy Project, Penn State University, USA
-* Martin (Č)ech - Galaxy Project, Penn State University, USA
-
 ### Location
 
+_TBA_
+
+## Training VM instances
+
+List of training instances is available in [this spreadhseet](https://docs.google.com/spreadsheets/d/1sIoU4qpv4HdKNUNOtsAtW-XKKZvIsDfReAoS7uBbCZM/edit?usp=sharing). Please pick one instance, enter your name in the user column and then copy the private ssh key to your machine and clear that cell (that way others won't be able to ssh into your instance and we have to switch focus to intrussion detection).
+
+#### Recommended instance specs
+
+2 cores, 4 GiB memory, and 20 GiB disk, Ubuntu 16.04
+
+We are using instances from the [Jetstream cloud](https://jetstream-cloud.org/), image ID _acb53109-941f-4593-9bf8-4a53cb9e0739_.
 
 ## Timetable
 
-Timetable with sessions and material will be continuously updated towards the workshop.
+_Timetable with sessions and material will be continuously updated towards the workshop._
 
-## Training VM instances (recommended specs)
-
-2 cores, 4 GiB memory, and 20 GiB disk
-
-## Timetable
 #### Morning
 
 | **Time** | **Topic** | **Links** | **Instructor** |
@@ -67,7 +61,7 @@ Timetable with sessions and material will be continuously updated towards the wo
 | 18:00 | Close Afternoon Session | |  |
 
 
-#### Extra
+#### Extra (not planned to be covered in person)
 
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
@@ -82,3 +76,15 @@ Timetable with sessions and material will be continuously updated towards the wo
 | 14:30 | Improving the web serving experience with uWSGI | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/10-uwsgi/uwsgi.html), [Exercise](sessions/10-uwsgi/ex1-uwsgi.md) | (B) |
 | 15:45 | Controlling Galaxy with systemd and supervisor | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/11-systemd-supervisor/systemd-supervisor.html), [Exercise](sessions/11-systemd-supervisor/ex1-supervisor.md) | (E) |
 | 09:15 | Users, Groups, and Quotas | [Slides](http://galaxyproject.github.io/training-material/topics/admin/tutorials/users-groups-quotas/slides.html) | (B) |
+
+
+### Instructors
+
+* (N)ate Coraor - Galaxy Project, Penn State University, USA
+* (S)imon Gladman - VLSCI, University of Melbourne, Australia
+* (M)arius van den Beek - ELIXIR Galaxy WG, Institute Curie, Paris, France
+* (C)arrie Ganote - Indiana University Bloomington, USA
+* Nuwan (G)oonasekera - University of Melbourne, Australia
+* (E)nis Afgan - Galaxy Project, Johns Hopkins University, USA
+* (J)ohn Chilton - Galaxy Project, Penn State University, USA
+* Martin (Č)ech - Galaxy Project, Penn State University, USA
