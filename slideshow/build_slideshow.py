@@ -25,7 +25,7 @@ def main(argv=None):
         'title': title,
         'content': content,
     })
-    
+
     if not os.path.exists(full_build_dir):
         os.makedirs(full_build_dir)
     open(output, "w").write(html)
@@ -34,7 +34,7 @@ def main(argv=None):
     slidepath = build_dir + '/' + filename
     timestamp = datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")
     #open( BUILD_PATH + '/index.html', "a").write('<a href="'+ slidepath +'" title="' + timestamp + '">' + slidepath + '</a></br>\n')
-    open( BUILD_PATH + '/index.html', "a").write('<a href="'+ slidepath +'">' + slidepath + '</a></br>\n')
+    open( BUILD_PATH + '/index.html', "a").write('<a href="'+ slidepath +'">' + title + '</a></br>\n')
 
 if __name__ == "__main__":
     main()
