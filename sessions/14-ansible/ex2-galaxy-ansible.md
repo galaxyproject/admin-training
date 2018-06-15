@@ -195,8 +195,8 @@ ansible-playbook -i inventory galaxy.yml --tags "install_galaxy,install_extras"
 ```
 
 The Ansible script will run and display what it's doing as it does (it's a good
-idea to run it in a _screen_ since networks are sometimes flaky). It should take up to 15 minutes for the playbook to run to
-completion.
+idea to run it in a _screen_ since networks are sometimes flaky). It should take
+up to 15 minutes for the playbook to run to completion.
 
 Once the playbook has completed its run, we can then access and use Galaxy on
 the machine we installed it on. The playbook has setup the PostgreSQL database,
