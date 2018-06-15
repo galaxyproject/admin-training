@@ -161,7 +161,7 @@ additional_files_list:
   - { src: "extra-files/cloud_setup/vimrc", dest: "/etc/vim/" }
 ```
 
-* Let's add a pre-task to make to create our desired system galaxy user.
+* Let's add a pre-task to create our desired system galaxy user.
   Add the following at the end of the `pre-tasks` section of the playbook in
   `galaxy.yml`:
 ``` yaml
@@ -188,8 +188,6 @@ If you were targeting a remote machine, your inventory file would look like this
 158.39.75.18 ansible_user="ubuntu" ansible_ssh_private_key_file=pk.pem
 ```
 
-To speed up the build for this session, let's comment out
-
 Now it's just a matter of running:
 
 ```
@@ -197,9 +195,8 @@ ansible-playbook -i inventory galaxy.yml --tags "install_galaxy,install_extras"
 ```
 
 The Ansible script will run and display what it's doing as it does (it's a good
-idea to run it in a _screen_ since networks are sometimes flaky). We have also
-limited the set It should take up to 15 minutes for the playbook to run to
-completion.
+idea to run it in a _screen_ since networks are sometimes flaky). It should take
+up to 15 minutes for the playbook to run to completion.
 
 Once the playbook has completed its run, we can then access and use Galaxy on
 the machine we installed it on. The playbook has setup the PostgreSQL database,
