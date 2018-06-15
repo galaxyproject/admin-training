@@ -67,7 +67,7 @@ Galaxy jobs, clusters, infrastructure, and maintenance
 | 17:30 | When things go wrong: Galaxy Server Troubleshooting | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/22-troubleshooting/troubleshooting.html) | (N)(C)(S) |
 | 18:00 | Close Afternoon Session | |  |
 
-
+<!--
 #### Extra (not planned to be covered in person)
 
 | **Time** | **Topic** | **Links** | **Instructor** |
@@ -82,6 +82,7 @@ Galaxy jobs, clusters, infrastructure, and maintenance
 | 11:00 | Containerize all the things: Galaxy in Docker and Docker in Galaxy | [Docker Slides](https://galaxy.slides.com/bgruening/the-galaxy-docker-project), [Conda Slides](http://galaxy.slides.com/bgruening/deck-7#/), [Galaxy Docker tool example](https://github.com/apetkau/galaxy-hackathon-2014/tree/master/smalt)| (B) |
 | 15:45 | Controlling Galaxy with systemd and supervisor | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/11-systemd-supervisor/systemd-supervisor.html), [Exercise](sessions/11-systemd-supervisor/ex1-supervisor.md) | (E) |
 | 09:15 | Users, Groups, and Quotas | [Slides](http://galaxyproject.github.io/training-material/topics/admin/tutorials/users-groups-quotas/slides.html) | (B) |
+ -->
 
 ### Instructors
 
