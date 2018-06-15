@@ -26,6 +26,8 @@ _Timetable with sessions and material will be continuously updated towards the w
 
 #### Morning
 
+Setting up production Galaxy
+
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
 | 09:00 | Welcome and introduction | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/00-intro/intro.html) | (Č) |
@@ -40,6 +42,8 @@ _Timetable with sessions and material will be continuously updated towards the w
 
 #### Noon
 
+All about Galaxy tools
+
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
 | 12:30 | Writing tools with Planemo | [Tutorial](http://planemo.readthedocs.io/en/latest/writing_standalone.html) | (J) |
@@ -50,6 +54,8 @@ _Timetable with sessions and material will be continuously updated towards the w
 
 
 #### Afternoon
+
+Galaxy jobs, clusters, infrastructure, and maintenance
 
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
