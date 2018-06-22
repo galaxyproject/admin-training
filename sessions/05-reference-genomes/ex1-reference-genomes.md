@@ -1,6 +1,6 @@
 ![galaxy logo](../../docs/shared-images/galaxy_logo_25percent_transparent.png)
 
-### Oslo2018 - Oslo, Norway
+### GCCBOSC2018 - Portland, OR
 
 # Reference Genomes - Exercise
 
@@ -459,7 +459,7 @@ You should see something like this:
 
 * Click on **all_fasta** under *View Tool Data Table Entries*
 
-You should see the current contents of `tool-data/all_fasta.loc`, which will be empty.
+You should see the current contents of `tool-data/all_fasta.loc`, which will contain info from the CVMFS repository (more on this later).
 
 * Under **Run Data Manager Tools**, click **Create DBKey and Reference Genome - fetching**. The Reference Genome tool form from _data_manager_fetch_genome_all_fasta_dbkey_ is displayed. NOTE: If you receive the error "Uncaught exception in exposed API method:", you will need to restart Galaxy first.
   * From the **DBKEY to assign to data:** list choose: *sacCer2*
@@ -467,11 +467,11 @@ You should see the current contents of `tool-data/all_fasta.loc`, which will be 
   * Leave the _ID for sequence_ field empty
   * Click **Execute**
 
-In your history, you will see a new dataset for the data manager run. When the job has finished, go back to the Data Manager view on the Galaxy Admin page. (Click **Local Data**)
+In your history, you will see a new dataset for the data manager run. When the job has finished, go back to the Data Manager view on the Galaxy Admin page (click **Local Data**).
 
 * Click on **all_fasta** under *View Tool Data Table Entries*
 
-You should see that sacCer2 has been added to all_fasta.
+You should see that _sacCer2_ has been added to _all_fasta_ list.
 
 ![all_fasta.png](../../docs/05-reference-genomes/images/all_fasta.png)
 
