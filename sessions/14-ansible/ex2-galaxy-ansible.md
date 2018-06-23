@@ -56,6 +56,7 @@ and use `ansible-galaxy` command to install all the dependent roles:
   sudo pip install ansible
   git clone https://github.com/ARTbio/GalaxyKickStart
   cd GalaxyKickStart
+  git checkout 2018-gccbosc
   ansible-galaxy install -r requirements_roles.yml -p roles --force
 ```
 
