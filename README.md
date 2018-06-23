@@ -6,6 +6,8 @@ Link to session: [Morning](#morning) | [Noon](#noon) | [Afternoon](#afternoon)
 
 Built slides have [an index](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/).
 
+Join the chat at https://gitter.im/dagobah-training/Lobby
+
 ### Location
 
 _TBA_
