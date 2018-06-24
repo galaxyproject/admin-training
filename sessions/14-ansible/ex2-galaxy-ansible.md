@@ -158,6 +158,7 @@ galaxy_config:
     ftp_upload_site: ftp://[server IP address]
     tool_data_table_config_path: "{{ tool_data_table_config_path }}"
     len_file_path: "{{ len_file_path }}"
+    check_migrate_tools: False
   uwsgi:
     module: galaxy.webapps.galaxy.buildapp:uwsgi_app()
 
