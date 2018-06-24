@@ -212,7 +212,7 @@ adding a Galaxy admin user. Let's first register as a new user in the Galaxy
 interface and then do the following:
 ```
 $ sudo su galaxy
-$ vi /srv/galaxy/config/galaxy.ini
+$ vi /srv/galaxy/config/galaxy.yml
 # Add the following line under [app:main] section
 admin_users = your@email.address
 $ exit  # change back to ubuntu user
