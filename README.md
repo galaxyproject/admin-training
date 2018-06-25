@@ -34,7 +34,7 @@ Setting up production Galaxy
 | -------- | --------- | --------- | ----------- |
 | 09:00 | Welcome and introduction | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/00-intro/intro.html) | (Č) |
 | 09:15 | Deployment and platform options | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/01-deployment-options/deployment.html#1) | (Č) |
-| 9:30 | Using Ansible to deploy Galaxy | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/14-ansible/ansible-introduction.html#1) [Exercise](sessions/14-ansible/ex2-galaxy-ansible.md) | (E)(G) |
+| 9:30 | Using Ansible to deploy Galaxy | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/14-ansible/ansible-introduction.html#1), [Exercise](sessions/14-ansible/ex2-galaxy-ansible.md) | (E)(G) |
 | 10:20 | Extending installation | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/06-extending-installation/extending.html), [Exercise](sessions/06-extending-installation/ex1-proftpd.md) | (G) |
 | 10:40| Defining and importing genomes, Data Managers | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/05-reference-genomes/reference_genomes.html), [Exercise](sessions/05-reference-genomes/ex1-reference-genomes.md) | (E) |
 | 11:00 | Galactic Database | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/03-production-basics/databases.html) | (M)(N) |
@@ -65,7 +65,7 @@ Galaxy jobs, clusters, infrastructure, and maintenance
 | 15:50 | Connecting Galaxy to a compute cluster | [Slides](http://galaxyproject.github.io/training-material/topics/admin/tutorials/connect-to-compute-cluster/slides.html), [Exercise](http://galaxyproject.github.io/training-material/topics/admin/tutorials/connect-to-compute-cluster/tutorial.html) | (N)(S) |
 | 16:30 | Storage management and using heterogeneous storage services | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/19-storage/storage.html), [Exercise](sessions/19-storage/ex1-objectstore.md) | (N)(C) |
 | 16:50 | Upgrading to a new Galaxy release | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/08-upgrading-release/upgrading.html) | (C) |
-| 17:10 | Galaxy on uWSGI | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/whatsnew/18.01.html) | (N) |
+| 17:10 | Galaxy on uWSGI | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/10-uwsgi/uwsgi.html) | (N) |
 | 17:30 | When things go wrong: Galaxy Server Troubleshooting | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/22-troubleshooting/troubleshooting.html) | (N)(C)(S) |
 | 18:00 | Close Afternoon Session | |  |
 
