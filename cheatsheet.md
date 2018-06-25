@@ -5,7 +5,7 @@ Tool Shed: repository for tools used by Galaxy
 suite: a single repository that 'depends' on many others  
 [data managers](https://wiki.galaxyproject.org/Admin/Tools/DataManagers): allows for the creation of built-in (reference) data  
 data library  
-[galaxy.ini](https://raw.githubusercontent.com/galaxyproject/galaxy/dev/config/galaxy.ini.sample): main configuration file  
+[galaxy.yml](https://raw.githubusercontent.com/galaxyproject/galaxy/dev/config/galaxy.yml.sample): main configuration file
 [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller): Model view controller  
 [WSGI](https://wsgi.readthedocs.io/en/latest/what.html): Web server gateway interface  
 [API](https://en.wikipedia.org/wiki/Application_programming_interface): Application programming interface  
@@ -91,7 +91,7 @@ production example postgresql:///galaxy?host=/var/run/postgresql
 database/universe.sqlite 
 
 # main Galaxy config file
-server/galaxy.ini 
+server/galaxy.yml
 
 server/contrib/galaxy_supervisor.conf
 
@@ -146,7 +146,7 @@ sudo apt-get install seqtk
 $ git checkout release_YY.MM && git pull --ff-only origin release_YY.MM
 
 # compare your configurations with the default
-diff -u galaxy.ini galaxy.ini.sample
+diff -u galaxy.yml galaxy.yml.sample
 
 # upgrade your database
 $ sh manage_db.sh upgrade
