@@ -62,8 +62,8 @@ Galaxy jobs, clusters, infrastructure, and maintenance
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
 | 15:30 | Exploring the Galaxy job configuration file | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/15-job-conf/job_conf.html) | (S) |
-| 15:50 | Connecting Galaxy to a compute cluster | [Slides](http://galaxyproject.github.io/training-material/topics/admin/tutorials/connect-to-compute-cluster/slides.html), [Exercise](http://galaxyproject.github.io/training-material/topics/admin/tutorials/connect-to-compute-cluster/tutorial.html) | (N)(S) |
-| 16:30 | Storage management and using heterogeneous storage services | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/19-storage/storage.html#section-4---statically-map-a-tool-to-a-job-destination), [Exercise](sessions/19-storage/ex1-objectstore.md) | (N)(C) |
+| 15:50 | Connecting Galaxy to a compute cluster | [Slides](http://galaxyproject.github.io/training-material/topics/admin/tutorials/connect-to-compute-cluster/slides.html#section-4---statically-map-a-tool-to-a-job-destination), [Exercise](http://galaxyproject.github.io/training-material/topics/admin/tutorials/connect-to-compute-cluster/tutorial.html) | (N)(S) |
+| 16:30 | Storage management and using heterogeneous storage services | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/19-storage/storage.html), [Exercise](sessions/19-storage/ex1-objectstore.md) | (N)(C) |
 | 16:50 | Upgrading to a new Galaxy release | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/08-upgrading-release/upgrading.html) | (C) |
 | 17:10 | Galaxy on uWSGI | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/10-uwsgi/uwsgi.html) | (N) |
 | 17:30 | When things go wrong: Galaxy Server Troubleshooting | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/22-troubleshooting/troubleshooting.html) | (N)(C)(S) |
