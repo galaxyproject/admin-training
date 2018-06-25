@@ -10,7 +10,7 @@ Join the chat at https://gitter.im/dagobah-training/Lobby
 
 ### Location
 
-_TBA_
+PAB 320 Performing Arts Building, Reed Campus
 
 ## Training VM instances
 
@@ -36,7 +36,7 @@ Setting up production Galaxy
 | 09:15 | Deployment and platform options | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/01-deployment-options/deployment.html#1) | (Č) |
 | 9:30 | Using Ansible to deploy Galaxy | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/14-ansible/ansible-introduction.html#1), [Exercise](sessions/14-ansible/ex2-galaxy-ansible.md) | (E)(G) |
 | 10:20 | Extending installation | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/06-extending-installation/extending.html), [Exercise](sessions/06-extending-installation/ex1-proftpd.md) | (G) |
-| 10:40| Defining and importing genomes, Data Managers | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/05-reference-genomes/reference_genomes.html), [Exercise](sessions/05-reference-genomes/ex1-reference-genomes.md) | (E) |
+| 10:40| Defining and importing genomes, Data Managers | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/05-reference-genomes/reference_genomes.html), [Exercise](sessions/05-reference-genomes/ex1-reference-genomes.md#exercise-3-install-a-datamanager-from-the-toolshed) | (E) |
 | 11:00 | Galactic Database | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/03-production-basics/databases.html) | (M)(N) |
 | 11:15 | Web Servers nginx/Apache |  [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/03-production-basics/webservers.html)| (M)(N) |
 | 11:30 | Close Morning Session | |  |
