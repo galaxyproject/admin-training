@@ -87,24 +87,26 @@ $ git stash pop  # optional
 # Diff samples
 
 ```console
-$ diff -u galaxy.ini galaxy.ini.sample
+$ diff -u galaxy.yml galaxy.yml.sample
 $ diff -u datatypes_conf.xml datatypes_xml.conf.sample
 ```
 
 Merge changes as desired/necessary.
 
-???
+---
+# Diff samples
+
 Alternatively:
 
 ```console
-$ git diff release_17.09..release_18.01 -- config/galaxy.ini.sample
+$ git diff release_17.09..release_18.01 -- config/galaxy.yml.sample
 ```
 
 ---
 # Upgrade virtualenv
 
 ```console
-$ export GALAXY_CONFIG_FILE=/srv/galaxy/config/galaxy.ini
+$ export GALAXY_CONFIG_FILE=/srv/galaxy/config/galaxy.yml
 $ export GALAXY_VIRTUAL_ENV=/srv/galaxy/venv
 $ . $GALAXY_VIRTUAL_ENV/bin/activate
 $ pip install --upgrade pip setuptools
@@ -118,8 +120,7 @@ $ deactivate
 Since January 2018, the `dev` Galaxy branch does not contain updated client
 build artifacts (e.g. JavaScript bundles in `static/`).
 
-1. install `yarn`
-2. run `make client`
+- run `make client`
 
 ---
 # Tool migrations?
@@ -159,9 +160,9 @@ If for some reason you need to move back to an older release, the process is sim
 order is a bit different:
 
 ```console
-$ export GALAXY_CONFIG_FILE=/srv/galaxy/config/galaxy.ini
+$ export GALAXY_CONFIG_FILE=/srv/galaxy/config/galaxy.yml
 $ export GALAXY_VIRTUAL_ENV=/srv/galaxy/venv
-$ sh manage_db.sh -c /srv/galaxy/config/galaxy.ini downgrade 135
+$ sh manage_db.sh -c /srv/galaxy/config/galaxy.yml downgrade 135
 $ find . -name '*.pyc' -delete
 $ git fetch
 $ git stash  # optional
