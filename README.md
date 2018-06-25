@@ -50,7 +50,7 @@ All about Galaxy tools
 | 12:45 | Writing tools with Planemo | [Tutorial](http://planemo.readthedocs.io/en/latest/writing_standalone.html) | (J) |
 | 13:30 | Galaxy Tools and Tool Shed | [Slides (Shed)](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/04-tool-shed/shed_intro.html), [Slides (Tools)](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/04-tool-shed/tool_installation.html)| (M)(Č) |
 | 14:30 | Updating tools and supporting multiple versions of tools | [Exercise](sessions/04-tool-shed/ex-tool-management.md) | (M)(N) |
-| 14:45 | Running tools in containers| | (J)(N) |
+| 14:45 | Running tools in containers | [Exercise](sessions/containers/ex1-tools-in-containers.md) | (J)(N) |
 | 15:00 | Close Noon Session | |  |
 
 
