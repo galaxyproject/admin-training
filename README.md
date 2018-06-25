@@ -35,10 +35,9 @@ Setting up production Galaxy
 | 09:00 | Welcome and introduction | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/00-intro/intro.html) | (Č) |
 | 09:15 | Deployment and platform options | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/01-deployment-options/deployment.html#1) | (Č) |
 | 9:30 | Using Ansible to deploy Galaxy | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/14-ansible/ansible-introduction.html#1), [Exercise](sessions/14-ansible/ex2-galaxy-ansible.md) | (E)(G) |
-| 10:20 | Extending installation | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/06-extending-installation/extending.html), [Exercise](sessions/06-extending-installation/ex1-proftpd.md) | (G) |
-| 10:40| Defining and importing genomes, Data Managers | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/05-reference-genomes/reference_genomes.html), [Exercise](sessions/05-reference-genomes/ex1-reference-genomes.md#exercise-3-install-a-datamanager-from-the-toolshed) | (E) |
-| 11:00 | Galactic Database | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/03-production-basics/databases.html) | (M)(N) |
-| 11:15 | Web Servers nginx/Apache |  [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/03-production-basics/webservers.html)| (M)(N) |
+| 10:40 | Extending installation | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/06-extending-installation/extending.html), [Exercise](sessions/06-extending-installation/ex1-proftpd.md) | (G) |
+| 11:00| Defining and importing genomes, Data Managers | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/05-reference-genomes/reference_genomes.html), [Exercise](sessions/05-reference-genomes/ex1-reference-genomes.md#exercise-3-install-a-datamanager-from-the-toolshed) | (E) |
+| 11:15 | Galactic Database | [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/03-production-basics/databases.html) | (M)(N) |
 | 11:30 | Close Morning Session | |  |
 
 
@@ -48,7 +47,8 @@ All about Galaxy tools
 
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
-| 12:30 | Writing tools with Planemo | [Tutorial](http://planemo.readthedocs.io/en/latest/writing_standalone.html) | (J) |
+| 12:30 | Web Servers nginx/Apache |  [Slides](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/03-production-basics/webservers.html)| (M)(N) |
+| 12:45 | Writing tools with Planemo | [Tutorial](http://planemo.readthedocs.io/en/latest/writing_standalone.html) | (J) |
 | 13:30 | Galaxy Tools and Tool Shed | [Slides (Shed)](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/04-tool-shed/shed_intro.html), [Slides (Tools)](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/04-tool-shed/tool_installation.html)| (M)(Č) |
 | 14:30 | Updating tools and supporting multiple versions of tools | [Exercise](sessions/04-tool-shed/ex-tool-management.md) | (M)(N) |
 | 14:45 | Running tools in containers| | (J)(N) |
