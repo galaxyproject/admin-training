@@ -6,7 +6,7 @@ class: special, center, middle
 # Ansible and Galaxy
 
 
-.footnote[\#usegalaxy \#gccbosc2018 / @galaxyproject]
+.footnote[\#usegalaxy \#gccbosc / @galaxyproject]
 ---
 class: center, middle
 
@@ -14,7 +14,7 @@ class: center, middle
 
 *We are here to answer questions!*
 
-.footnote[\#usegalaxy \#gccbosc2018 / @galaxyproject]
+.footnote[\#usegalaxy \#gccbosc / @galaxyproject]
 
 ---
 # Overview
@@ -24,7 +24,7 @@ class: center, middle
 * Galaxy and Ansible
 ]
 
-.footnote[\#usegalaxy \#gccbosc2018 / @galaxyproject]
+.footnote[\#usegalaxy \#gccbosc / @galaxyproject]
 
 ---
 # Overview
@@ -33,7 +33,7 @@ class: center, middle
 * Galaxy and Ansible
 ]
 
-.footnote[\#usegalaxy \#gccbosc2018 / @galaxyproject]
+.footnote[\#usegalaxy \#gccbosc / @galaxyproject]
 
 ---
 # What is Ansible
@@ -44,7 +44,7 @@ class: center, middle
 ]
 ![ansible-vanilla.png](images/ansible-vanilla.png)
 
-.footnote[\#usegalaxy \#gccbosc2018 / @galaxyproject]
+.footnote[\#usegalaxy \#gccbosc / @galaxyproject]
 
 ---
 # Why?
@@ -55,7 +55,7 @@ class: center, middle
 * Make it programmable - “Infrastructure as Code”
 ]
 .right[![ansible-logo](images/ansible-logo.png)]
-.footnote[\#usegalaxy \#gccbosc2018 / @galaxyproject]
+.footnote[\#usegalaxy \#gccbosc / @galaxyproject]
 
 ---
 # Core features of Ansible
@@ -86,7 +86,7 @@ class: center, middle
   * cron, mount etc
 ]
 [http://docs.ansible.com/ansible/modules_by_category.html](http://docs.ansible.com/ansible/modules_by_category.html)
-.footnote[\#usegalaxy \#gccbosc2018 / @galaxyproject]
+.footnote[\#usegalaxy \#gccbosc / @galaxyproject]
 
 ---
 # Ansible playbook layout
@@ -111,7 +111,7 @@ class: center, middle
 └── README.md
 ```
 
-.footnote[\#usegalaxy \#gccbosc2018 / @galaxyproject]
+.footnote[\#usegalaxy \#gccbosc / @galaxyproject]
 
 ---
 # Yet Another Markup Language
@@ -131,7 +131,7 @@ list:
   - yes
 ```
 
-.footnote[\#usegalaxy \#gccbosc2018 / @galaxyproject]
+.footnote[\#usegalaxy \#gccbosc / @galaxyproject]
 
 ---
 # Ansible inventory
@@ -153,7 +153,7 @@ login5.stampede.tacc.utexas.edu
 jetstream-tacc0.galaxyproject.org
 jetstream-iu0.galaxyproject.org
 ```
-.footnote[\#usegalaxy \#gccbosc2018 / @galaxyproject]
+.footnote[\#usegalaxy \#gccbosc / @galaxyproject]
 
 ---
 # Ansible Variables
@@ -183,7 +183,7 @@ galaxy_installer: true
 ```
 ]
 
-.footnote[\#usegalaxy \#gccbosc2018 / @galaxyproject]
+.footnote[\#usegalaxy \#gccbosc / @galaxyproject]
 
 ---
 # Ansible Tasks
@@ -200,14 +200,14 @@ galaxy_installer: true
       when: "{{ ansible_os_family }} == 'Debian'"
     ```
 
-.footnote[\#usegalaxy \#gccbosc2018 / @galaxyproject]
+.footnote[\#usegalaxy \#gccbosc / @galaxyproject]
 
 ---
 # Roles contain tasks
 
 ![ansible-roles-tasks.png](images/ansible-roles-tasks.png)
 
-.footnote[\#usegalaxy \#gccbosc2018 / @galaxyproject]
+.footnote[\#usegalaxy \#gccbosc / @galaxyproject]
 
 ---
 # Plays
@@ -229,7 +229,7 @@ galaxy_installer: true
   roles:
     - natefoo.postgresql_objects
 ```
-.footnote[\#usegalaxy \#gccbosc2018 / @galaxyproject]
+.footnote[\#usegalaxy \#gccbosc / @galaxyproject]
 
 ---
 # Plays and Tags
@@ -256,14 +256,14 @@ galaxy_installer: true
 `ansible-playbook -i inv_file playbook.yml --tags galaxy_setup`
 
 
-.footnote[\#usegalaxy \#gccbosc2018 / @galaxyproject]
+.footnote[\#usegalaxy \#gccbosc / @galaxyproject]
 
 ---
 # How Ansible works
 
 ![how-ansible-works.png](images/how-ansible-works.png)
 
-.footnote[\#usegalaxy \#gccbosc2018 / @galaxyproject]
+.footnote[\#usegalaxy \#gccbosc / @galaxyproject]
 
 ---
 # Example role
@@ -274,7 +274,7 @@ galaxy_installer: true
 
 [https://github.com/galaxyproject/ansible-galaxy](https://github.com/galaxyproject/ansible-galaxy)
 ]
-.footnote[\#usegalaxy \#gccbosc2018 / @galaxyproject]
+.footnote[\#usegalaxy \#gccbosc / @galaxyproject]
 
 ---
 # What's available
@@ -300,7 +300,7 @@ galaxy_installer: true
   * GalaxyKickStart
 ]
 ]
-.footnote[\#usegalaxy \#gccbosc2018 / @galaxyproject]
+.footnote[\#usegalaxy \#gccbosc / @galaxyproject]
 
 ---
 # Exercise!
@@ -313,4 +313,4 @@ In this exercise we will:
 [Installing Galaxy with Ansible](https://github.com/galaxyproject/dagobah-training/blob/2018-gccbosc/sessions/14-ansible/ex2-galaxy-ansible.md)
 ]
 
-.footnote[\#usegalaxy \#gccbosc2018 / @galaxyproject]
+.footnote[\#usegalaxy \#gccbosc / @galaxyproject]

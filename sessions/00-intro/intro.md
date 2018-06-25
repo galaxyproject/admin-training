@@ -11,7 +11,7 @@ class: special, center
 Portland, Monday 25th of June, 2018
 
 
-\#usegalaxy \#gccbosc2018 / @galaxyproject
+\#usegalaxy \#gccbosc / @galaxyproject
 ---
 # Your Instructors
 
@@ -30,7 +30,7 @@ Portland, Monday 25th of June, 2018
 * `Nuwan Goonasekera` @nuwan_ag
     - University of Melbourne, Australia
 
-.footnote[\#usegalaxy \#gccbosc2018 / @galaxyproject]
+.footnote[\#usegalaxy \#gccbosc / @galaxyproject]
 
 ---
 class: special, center
@@ -38,7 +38,7 @@ class: special, center
 
 ## \#usegalaxy
 <br />
-## \#gccbosc2018
+## \#gccbosc
 <br />
 ## @galaxyproject
 
@@ -101,6 +101,6 @@ https://galaxyproject.org/events/2018-europe-dev/
 ---
 # Aliases
 
-http://bit.ly/galaxyadmin
-http://bit.ly/adminvms
-http://bit.ly/gadminchat
+* http://bit.ly/galaxyadmin
+* http://bit.ly/adminvms
+* http://bit.ly/gadminchat
