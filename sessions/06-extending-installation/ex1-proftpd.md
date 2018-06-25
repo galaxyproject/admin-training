@@ -173,14 +173,14 @@ $ systemctl status proftpd
 We need to set a few Galaxy config options. First, the diretory where files will by uploaded to (we set it in the ProFTPD config as `/srv/galaxy/ftp`). Second is the address that users connect to - this is only used for display purposes in the Galaxy UI:
 
 ```console
-$ sudo -u galaxy -e /srv/galaxy/config/galaxy.ini
+$ sudo -u galaxy -e /srv/galaxy/config/galaxy.yml
 ```
 
 Locate and set `ftp_*` accordingly:
 
 ```ini
-ftp_upload_dir = /srv/galaxy/ftp
-ftp_upload_site = galaxy.example.org
+ftp_upload_dir: /srv/galaxy/ftp
+ftp_upload_site: galaxy.example.org
 ```
 
 Then, save and quit your editor, and restart Galaxy with `CTRL+C` followed by `sudo -Hu galaxy galaxy` or `sudo -Hu galaxy galaxy --stop-daemon && sudo -Hu galaxy galaxy --daemon`
