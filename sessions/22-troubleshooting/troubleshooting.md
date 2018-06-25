@@ -7,7 +7,7 @@ class: special
 
 slides by @martenson, @natefoo
 
-.footnote[\#usegalaxy / @galaxyproject]
+.footnote[\#GCCBOSC / \#usegalaxy / @galaxyproject]
 
 ---
 class: larger
@@ -103,8 +103,10 @@ galaxy.model.metadata DEBUG 2016-11-03 20:12:00,891 Cleaning up external metadat
 Not yet picked up by the Galaxy job handler subsystem
 
 Solutions:
+- If mules
+  - Ensure no `<handlers>` or:
 - If single or multiprocess
-  - Ensure that handler ID(s) in `job_conf.xml` match `--server-name`(s)
+  - Ensure that handler ID(s) in `job_conf.xml` match `server_name`(s)
 - If multiprocess, check to ensure that your job handler(s) are running
   - If yes, restart handler(s)
 
@@ -227,11 +229,9 @@ sh: command not found: samtools
 ```
 
 Solutions:
-- If this is the upload tool and the missing command is really `samtools`
-  - install `samtools` on `$PATH` or `<tool_dependencies_dir>/samtools/default`
-- Else
-  - Verify that tool dependencies are properly installed
-  - Verify that `tool_dependency_dir` is accessible
+- Verify that tool dependencies are properly installed
+- Verify that `tool_dependency_dir` is accessible
+- Install dependency from Conda
 
 ---
 # Tool errors - dependency problems
@@ -244,6 +244,7 @@ foo: /lib/x86_64-linux-gnu/libc.so.6: version 'GLIBC_2.23' not found (required b
 `foo` was compiled against Glibc 2.23 but Glibc < 2.23 is installed.
 
 Solutions:
+- Install dependency from Conda
 - Verify that tool dependencies were properly installed
 - Recompile `foo` on the "oldest" system on which it might run
 
@@ -258,6 +259,7 @@ foo: error while loading shared libraries: libhitch.so.42: cannot open shared ob
 `foo` was compiled against `libhitch.so.42` but it's not on the runtime linker path
 
 Solutions:
+- Install dependency from Conda
 - Verify that tool dependencies were properly installed
 - Modify dependency's `env.sh` to set `$LD_LIBRARY_PATH` as appropriate
 - Install `libhitch` on target system
@@ -320,8 +322,9 @@ Solutions:
 
 Galaxy gets "No such file or directory" for files that exist. NFS attribute caching is to blame. Set:
 
-```ini
-retry_job_output_collection = 5
+```yaml
+galaxy:
+    retry_job_output_collection: 5
 ```
 
 [retry_job_output_collection](https://github.com/galaxyproject/galaxy/blob/dev/lib/galaxy/jobs/__init__.py#L1229)
@@ -411,17 +414,6 @@ Increase `shared_buffers`. 2GB on Main (16GB of memory on VM)
 This error is not indicative of any kind of failure. It just means that the client closed a connection before the server finished sending a response.
 
 ---
-# Installation failures - Tool dependencies
-
-```
-utils.c:33:18: fatal error: zlib.h: No such file or directory
-compilation terminated.
-make: *** [utils.o] Error 1
-```
-
-Find `zlib.h` on [packages.ubuntu.com](http://packages.ubuntu.com/)
-
----
 # Installation failures - Python dependencies
 
 ```
@@ -431,21 +423,6 @@ error: command 'x86_64-linux-gnu-gcc' failed with exit status 1
 ```
 
 Find `Python.h` on [packages.ubuntu.com](http://packages.ubuntu.com/)
-
----
-# uWSGI errors
-
-```
-uwsgi: unrecognized option '--ini-paste'
-```
-
-Make sure you know which uWSGI you're running.
-
-`/usr/bin/python` needs the `uwsgi-plugins-python` package and requires:
-
-```console
-$ uwsgi --plugin python
-```
 
 ---
 # Job failures
