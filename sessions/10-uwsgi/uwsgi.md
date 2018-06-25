@@ -76,6 +76,7 @@ If you have an existing Galaxy server using `galaxy.ini` and `run.sh`, **nothing
 Only new installs use uWSGI by default
 
 ---
+class: largeish
 
 ## uWSGI as the default
 
@@ -122,22 +123,6 @@ You can take "full control" over this process by skipping `run.sh` and simply
 calling `uwsgi` directly.
 
 ---
-class: middle, top-title
-
-## uWSGI command line
-
-Behind the scenes, `run.sh` calls `scripts/get_uwsgi_args.py`, which:
-- locates your config file (if any),
-- parses it to determine whether you have set any of the default (or conflicting) options,
-- determines the flags needed to run Galaxy
-
-You can take "full control" over this process by skipping `run.sh` and simply
-calling `uwsgi` directly.
-
----
-class: middle, top-title, center
-
----
 # uWSGI communication
 
 - uWSGI can serve http directly using the `--http` option
@@ -145,6 +130,8 @@ class: middle, top-title, center
 
 It's best to keep the proxy server, especially if you intend to host more than just a single Galaxy server on this system
 
+---
+class: middle, top-title, center, largeish
 ## YAML config
 
 The INI format is limited, structured data formats (e.g. YAML) are more expressive
@@ -160,7 +147,7 @@ Going forward some new features may only be configurable in YAML
 [galaxy.yml.sample](https://github.com/jmchilton/galaxy/blob/78992968ecd0de1f95b99352b53ea2ecd246f954/config/galaxy.yml.sample)
 
 ---
-class: middle, top-title
+class: middle, top-title, largeish
 
 ## YAML config
 
@@ -220,11 +207,7 @@ class: middle, top-title
 
 `config_schema.yml` is also the canonical source for config option documentation, from which:
 - `galaxy.yml.sample` is generated
-- [Galaxy configuration options documentation](https://docs.galaxyproject.org/en/master/admin/index.html) is generated<sup>[1]</sup>
-
-.footnote[
-<sup>[1] Found in [#5105](https://github.com/galaxyproject/galaxy/pull/5105/) prior to the 18.01 release).</sup>
-]
+- [Galaxy configuration options documentation](https://docs.galaxyproject.org/en/master/admin/config.html) is generated
 
 ---
 class: middle, top-title
@@ -236,16 +219,22 @@ class: middle, top-title
 - Job handler mules
 
 ---
-class: middle, top-title
+class: middle, top-title, largeish
 
 ## uWSGI Wheel
 
 - The goal: Provide a no-compilation-required installation method for Galaxy that included uWSGI
+
+--
+
 - Rationale:
   - The Galaxy admin does not need to have a complex build environment on the server
   - We do not need to maintain a list of ever-changing per-distribution build-time dependencies
   - It makes installation fast and failproof (especially for development and CI)
   - We do this for all of Galaxy's other C dependencies
+
+--
+
 - The challenge:
   - Unlike Galaxy's other dependencies, uWSGI is not a Python library
   - uWSGI sits on the front side of Galaxy, rather than the back
@@ -264,7 +253,7 @@ The uWSGI wheel is built differently than when built from source with `pip insta
   - The only way to precompile uWSGI in a way that does not require libpython2.7.so or ship CPython
 
 ---
-class: middle, top-title
+class: middle, top-title, largeish
 
 ## uWSGI Wheel
 
