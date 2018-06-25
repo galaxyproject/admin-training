@@ -56,6 +56,7 @@ and use `ansible-galaxy` command to install all the dependent roles:
   sudo pip install ansible
   git clone https://github.com/ARTbio/GalaxyKickStart
   cd GalaxyKickStart
+  git checkout 2018-gccbosc
   ansible-galaxy install -r requirements_roles.yml -p roles --force
 ```
 
@@ -140,9 +141,14 @@ supervisor_slurm_config_dir: "{{ galaxy_log_dir }}"
 galaxy_manage_trackster: False
 galaxy_extras_config_cvmfs: True
 galaxy_restart_handler_enabled: True
+galaxy_mule_handlers: True
+galaxy_handler_processes: 1
+
+galaxy_config_style: yaml
+galaxy_config_file: "{{ galaxy_config_dir }}/galaxy.yml"
 
 galaxy_config:
-  "app:main":
+  galaxy:
     database_connection: "{{ galaxy_db }}"
     file_path: "{{ galaxy_data }}/datasets"
     new_file_path: "{{ galaxy_data }}/tmp"
@@ -152,8 +158,11 @@ galaxy_config:
     ftp_upload_site: ftp://[server IP address]
     tool_data_table_config_path: "{{ tool_data_table_config_path }}"
     len_file_path: "{{ len_file_path }}"
-  "uwsgi":
-    master: True
+    check_migrate_tools: False
+  uwsgi:
+    module: galaxy.webapps.galaxy.buildapp:uwsgi_app()
+    logfile-chmod: 644
+
 
 additional_files_list:
   - { src: "extra-files/galaxy-kickstart/logo.png", dest: "{{ galaxy_server_dir }}/static/images/" }
