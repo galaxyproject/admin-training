@@ -37,6 +37,11 @@ Two options:
 The latter is probably better than the former for large changes
 
 ---
+# Another possibility
+
+If you want to keep your configurations and other local changes under version control, you can move these files/folders outside of Galaxy and into their own repository. You can then use symbolic links to place the files where Galaxy expects them.
+
+---
 # Keeping a release up to date
 
 To keep your `release_*` branch up to date you can:
