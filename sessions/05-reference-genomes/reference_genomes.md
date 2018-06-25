@@ -7,7 +7,7 @@ class: special, center, middle
 
 **Slides: @blankenberg, @Slugger70**
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#GCCBOSC / @galaxyproject]
 
 ---
 class: left, middle, center
@@ -16,7 +16,7 @@ class: left, middle, center
 
 *We are here to answer questions!*
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#GCCBOSC / @galaxyproject]
 
 ---
 # Overview
@@ -28,14 +28,14 @@ class: left, middle, center
 * Data Managers
 ]
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#GCCBOSC / @galaxyproject]
 
 ---
 # Built in Data
 
 ![List_of_data.png](images/i06-List_of_data.png)
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#GCCBOSC / @galaxyproject]
 
 ---
 # Data, what data?
@@ -47,7 +47,7 @@ class: left, middle, center
 * Better to pre-build the indices.
 ]
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#GCCBOSC / @galaxyproject]
 
 ---
 # Overview
@@ -64,7 +64,7 @@ class: left, middle, center
 
 ![schematic](images/data_managers_schematic_overview.png)
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#GCCBOSC / @galaxyproject]
 
 ---
 # Using reference data in a tool
@@ -90,7 +90,7 @@ class: left, middle, center
 
 ```
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#GCCBOSC / @galaxyproject]
 
 ---
 # Where are the data tables?
@@ -109,7 +109,7 @@ class: left, middle, center
   </tables>
 ```
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#GCCBOSC / @galaxyproject]
 
 ---
 # "loc" files - Short for location!
@@ -134,7 +134,7 @@ mm10    mm10    Mouse (mm10)    /mnt/galaxyIndices/genomes/mm10/bwa_mem_index/mm
 ```
 
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#GCCBOSC / @galaxyproject]
 
 ---
 # Overview
@@ -158,35 +158,35 @@ mm10    mm10    Mouse (mm10)    /mnt/galaxyIndices/genomes/mm10/bwa_mem_index/mm
   * expected format of the reference data
   * format of the .loc file
 ]
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#GCCBOSC / @galaxyproject]
 
 ---
 # Typical conversation
 
 .middle[![ref-problem-1.png](images/Ref-problem-1.png)]
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#GCCBOSC / @galaxyproject]
 
 ---
 # Typical conversation
 
 .middle[![ref-problem-2.png](images/Ref-problem-2.png)]
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#GCCBOSC / @galaxyproject]
 
 ---
 # Typical conversation
 
 .middle[![ref-problem-3.png](images/Ref-problem-3.png)]
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#GCCBOSC / @galaxyproject]
 
 ---
 # Typical conversation
 
 .middle[![ref-problem-4.png](images/Ref-problem-4.png)]
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#GCCBOSC / @galaxyproject]
 
 ---
 # Other concerns
@@ -202,7 +202,7 @@ mm10    mm10    Mouse (mm10)    /mnt/galaxyIndices/genomes/mm10/bwa_mem_index/mm
   * Restart Galaxy server for new entries
 ]
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#GCCBOSC / @galaxyproject]
 
 ---
 # Overview
@@ -227,7 +227,7 @@ mm10    mm10    Mouse (mm10)    /mnt/galaxyIndices/genomes/mm10/bwa_mem_index/mm
 
 * Defined **locally** or installed from **ToolShed**
 ]
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#GCCBOSC / @galaxyproject]
 
 ---
 # Data Managers
@@ -243,7 +243,7 @@ mm10    mm10    Mouse (mm10)    /mnt/galaxyIndices/genomes/mm10/bwa_mem_index/mm
   * Fetching genome (fasta) sequences
   * Building short read mapper indices for genomes
 ]
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#GCCBOSC / @galaxyproject]
 
 ---
 # Special class of Galaxy tool
@@ -252,7 +252,7 @@ Looks just like a normal Galaxy tool!
 
 ![Data-manager-ui.png](images/Data-manager-ui.png)
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#GCCBOSC / @galaxyproject]
 
 ---
 # What does it do?
@@ -267,7 +267,7 @@ This gets turned into a new data table entry
 
 The index files themselves get placed in the appropriate location.
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#GCCBOSC / @galaxyproject]
 
 ---
 # Data Managers Admin
@@ -277,7 +277,7 @@ The index files themselves get placed in the appropriate location.
 ]
 ![data_managers_tool_list.png](images/data_managers_tool_list.png)
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#GCCBOSC / @galaxyproject]
 
 ---
 # Data Managers Admin
@@ -289,7 +289,7 @@ The index files themselves get placed in the appropriate location.
 ]
 ![data_table_ui.png](images/data_table_ui.png)
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#GCCBOSC / @galaxyproject]
 
 ---
 # Resources / further reading
@@ -302,9 +302,9 @@ The index files themselves get placed in the appropriate location.
 
 https://galaxyproject.org/admin/tools/data-managers/
 ]
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#GCCBOSC / @galaxyproject]
 
 ---
 # Exercise Time!
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#GCCBOSC / @galaxyproject]
