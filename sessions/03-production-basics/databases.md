@@ -44,8 +44,8 @@ Your questions are bound to be answered.
 # Tuning - Pool
 
 If the server logs errors about not having enough database pool connections.
-* `database_engine_option_pool_size = 5` (10 on Main)
-* `database_engine_option_max_overflow = 10` (20 on Main)
+* `database_engine_option_pool_size: 5` (10 on Main)
+* `database_engine_option_max_overflow: 10` (20 on Main)
 
 ???
 Values for Main are available at https://github.com/galaxyproject/usegalaxy-playbook/blob/master/env/main/group_vars/galaxyservers/vars.yml
@@ -54,14 +54,14 @@ Values for Main are available at https://github.com/galaxyproject/usegalaxy-play
 # Tuning - Server-side cursors
 
 If large database query results are causing memory or response time issues in the Galaxy process, leave it on server.
-* `database_engine_option_server_side_cursors = False` (True on Main, PostgreSQL only, recommended)
+* `database_engine_option_server_side_cursors: False` (True on Main, PostgreSQL only, recommended)
 
 ---
 # Tuning - Slow query logging
 
 Queries slower than this threshold (in s) will be logged at debug level
 
-`slow_query_log_threshold = 0` (5000 on Main)
+`slow_query_log_threshold: 0` (5000 on Main)
 
 ---
 # Tuning - TS install database
@@ -69,7 +69,7 @@ Queries slower than this threshold (in s) will be logged at debug level
 Galaxy can track Tool Shed data in a separate DB.
 
 ```ini
-install_database_connection = sqlite:///./database/universe.sqlite?isolation_level=IMMEDIATE
+install_database_connection: sqlite:///./database/universe.sqlite?isolation_level=IMMEDIATE
 ```
 
 This allows:
@@ -113,8 +113,3 @@ Need to be inside the Galaxy virtualenv for this to work
 
 * The Reports app is hooked to the Galaxy DB to present data in useful format.
 * The Tool Shed app has its own database.
-
----
-# Exercise
-
-[Connecting Galaxy to PostgreSQL - Exercise](https://github.com/galaxyproject/dagobah-training/blob/2018-gccbosc/sessions/03-production-basics/ex2-postgres.md)

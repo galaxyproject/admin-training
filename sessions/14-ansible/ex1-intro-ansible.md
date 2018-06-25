@@ -47,7 +47,7 @@ sudo apt-get install -y python python-pip ansible
 git clone -b release_17.09 https://github.com/galaxyproject/galaxy.git
 ```
 
-We'll need to copy **galaxy.ini.sample** and **shed_tool_conf.xml.sample** files in *galaxy/config* to **galaxy.ini** and **shed_tool_conf.xml**. Then edit **galaxy.ini** using an editor. We need to uncomment the line `#host = 127.0.0.1` and set the ip to `0.0.0.0` so that the Galaxy server is available over the internet.
+We'll need to copy **galaxy.yml.sample** and **shed_tool_conf.xml.sample** files in *galaxy/config* to **galaxy.yml** and **shed_tool_conf.xml**. Then edit **galaxy.yml** using an editor. We need to uncomment the line `#host = 127.0.0.1` and set the ip to `0.0.0.0` so that the Galaxy server is available over the internet.
 
 Once, that is complete let's start Galaxy to test it.
 
@@ -146,7 +146,7 @@ galaxy_venv_dir: "{{ galaxy_server_dir }}/.venv"
 ephemeris_venv_dir: /home/ubuntu/ephemeris_venv
 
 # A system path for Galaxy's configuration files
-galaxy_config_file: "{{ galaxy_server_dir }}/config/galaxy.ini"
+galaxy_config_file: "{{ galaxy_server_dir }}/config/galaxy.yml"
 tool_conf: "{{ galaxy_server_dir }}/config/shed_tool_conf.xml"
 ```
 
@@ -223,10 +223,10 @@ Now, to start installing some tools, we need to add a bunch of other tasks:
 
 1. Obtain a script that will create a bootstrap use
 1. Create the bootstrap admin user and record their api key
-1. Add the bootstrap user to the *admin_users=* line in `galaxy.ini`
+1. Add the bootstrap user to the *admin_users=* line in `galaxy.yml`
 1. Restart Galaxy
 1. Run Ephemeris *shed-tools install* command with the list of tools to install
-1. Remove the bootstrap user from the *galaxy.ini* file
+1. Remove the bootstrap user from the *galaxy.yml* file
 1. Finally, restart Galaxy again for the change to take effect
 
 To complete these tasks we will be using various ansible modules. This is by no
@@ -253,7 +253,7 @@ Append the following to the role tasks in `roles/galaxy-tool-install/tasks/main.
     virtualenv: "{{ ephemeris_venv_dir }}"
     virtualenv_python: python2.7
 
-# Add the admin user to galaxy.ini (check to see if the admin users line already exists)
+# Add the admin user to galaxy.yml (check to see if the admin users line already exists)
 - name: Check/Set bootstrap user as Galaxy Admin if admin_users tag is already in the config file
   replace:
     dest: "{{ galaxy_config_file }}"
