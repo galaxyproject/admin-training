@@ -222,8 +222,8 @@ interface and then do the following:
 ```
 $ sudo su galaxy
 $ vi /srv/galaxy/config/galaxy.yml
-# Add the following line under [app:main] section
-admin_users = your@email.address
+# Add the following line under galaxy: section
+    admin_users: your@email.address
 $ exit  # change back to ubuntu user
 $ sudo supervisorctl restart galaxy:
 ```
