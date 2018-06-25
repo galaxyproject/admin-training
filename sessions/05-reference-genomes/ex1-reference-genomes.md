@@ -155,17 +155,17 @@ Skip this part if you are already an admin user of your Galaxy server!
 * Check if your username is an admin user:
 ``` bash
   cd /srv/galaxy/config
-  grep admin_users galaxy.ini
+  grep admin_users galaxy.yml
 ```
-* It should return `admin_users = ` followed by a comma delimited list of user emails. If yours is not there, it needs to be added. Use only commas to delimit different admin users - no spaces!
+* It should return `admin_users: ` followed by a comma delimited list of user emails. If yours is not there, it needs to be added. Use only commas to delimit different admin users - no spaces!
 * If you make any changes to the galaxy.ini file, you need to restart Galaxy before they will take effect.
 * For Galaxy running in daemon mode:
 ``` bash
   sudo -Hu galaxy galaxy --stop-daemon
   sudo -Hu galaxy galaxy --daemon
 ```
-* Watch the Galaxy log file with `tail -f /srv/galaxy/log/paster.log`.
-* Test you are an Admin user by logging into your Galaxy server as the username you added to `galaxy.ini`
+* Watch the Galaxy log file with `tail -f /srv/galaxy/log/uwsgi.log`.
+* Test you are an Admin user by logging into your Galaxy server as the username you added to `galaxy.yml`
 * You should see an "Admin" menu item at the top of the Galaxy interface.
 
 **Part 2: Install the BWA tool**
@@ -342,15 +342,15 @@ Data Managers are composed of two components:
 
 We need to tell Galaxy where to find the Data Managers and their configuration.
 
-In your *galaxy.ini* file the following settings exist in the `[app:main]` section:
+In your *galaxy.yml* file the following settings exist in the `galaxy:` section:
 
 ```
-shed_tool_data_table_config = /srv/galaxy/config/shed_tool_data_table_conf.xml
+shed_tool_data_table_config: /srv/galaxy/config/shed_tool_data_table_conf.xml
 # Data manager configuration options
-enable_data_manager_user_view = True
-data_manager_config_file = /srv/galaxy/config/data_manager_conf.xml
-shed_data_manager_config_file = /srv/galaxy/config/shed_data_manager_conf.xml
-galaxy_data_manager_data_path = /srv/galaxy/tool-data
+enable_data_manager_user_view: true
+data_manager_config_file: /srv/galaxy/config/data_manager_conf.xml
+shed_data_manager_config_file: /srv/galaxy/config/shed_data_manager_conf.xml
+galaxy_data_manager_data_path: /srv/galaxy/tool-data
 ```
 
 Where:
