@@ -161,6 +161,7 @@ galaxy_config:
     check_migrate_tools: False
   uwsgi:
     module: galaxy.webapps.galaxy.buildapp:uwsgi_app()
+    logfile-chmod: 644
 
 
 additional_files_list:
