@@ -214,7 +214,7 @@ the necessary configurations.
 
 Galaxy is now managed via Supervisord. To list all the programs issue
 `sudo supervisorctl status` command. If you need to change any of the settings,
-the Galaxy configuration file `` is located in `/srv/galaxy/config`, as per
+the Galaxy configuration file `galaxy.yml` is located in `/srv/galaxy/config`, as per
 our variable definition above. After you've made the changes, restart the
 Galaxy process with `sudo supervisorctl restart galaxy:`. We can try this by
 adding a Galaxy admin user. Let's first register as a new user in the Galaxy
