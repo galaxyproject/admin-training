@@ -7,7 +7,7 @@ class: special
 
 slides by @natefoo, @martenson
 
-.footnote[\#usegalaxy / @galaxyproject]
+.footnote[\#GCCBOSC / \#usegalaxy / @galaxyproject]
 
 ---
 class: larger
@@ -29,7 +29,7 @@ Additionally, tools can produce large amounts of transient data while running.
 class: normal
 # Mechanics
 
-* When files are produced they are stored in the filesystem defined by `file_path` config in `galaxy.ini`.
+* When files are produced they are stored in the filesystem defined by `file_path` config in `galaxy.yml`.
   * Defaults to `database/files`.
 
 --
@@ -77,11 +77,12 @@ Provide a way to conveniently share Galaxy datasets within a group of Galaxy use
 --
 * Uses roles and groups to control permissions on library/dataset level.
   * Only admins can _create_ libraries.
+  * Ordinary users can be granted permission to _manage_ libraries
 
 ---
 # Libraries configuration
 
-In `galaxy.ini`:
+In `galaxy.yml`:
 
 * `user_library_import_dir`
   * Allows authorized non-administrators to upload a directory of files.
@@ -124,7 +125,7 @@ class: normal
 
 ```shell
 source /srv/galaxy/venv/bin/activate
-python ./scripts/cleanup_datasets/cleanup_datasets.py ./config/galaxy.ini -d 10 -5 -r ${GALAXY_ROOT} >> ./scripts/cleanup_datasets/purge_folders.log
+python ./scripts/cleanup_datasets/cleanup_datasets.py ./config/galaxy.yml -d 10 -5 -r ${GALAXY_ROOT} >> ./scripts/cleanup_datasets/purge_folders.log
 ```
 
 flag	| short |	description
