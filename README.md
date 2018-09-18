@@ -108,4 +108,4 @@ _Timetable with sessions and material will be continuously updated towards the w
 
 * (N)ate Coraor - Galaxy Project, Penn State University, USA
 * (J)ohn Chilton - Galaxy Project, Penn State University, USA
-* rtin Čech - Galaxy Project, Penn State University, USA
+* (M)artin Čech - Galaxy Project, Penn State University, USA
