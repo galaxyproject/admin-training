@@ -1,4 +1,4 @@
-![gat_pennstate_logo.jpg](docs/shared-images/gat_pennstate_logo.jpg)
+![gat_pennstate_logo_wtext.png](docs/shared-images/gat_pennstate_logo_wtext.png)
 # Pennsylvania State University - Intro to Galaxy Administration
 
 **Pennsylvania State University, State College, PA; Monday 1/28/2019 - Friday 2/1/2019**
