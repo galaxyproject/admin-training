@@ -81,7 +81,7 @@ This will create a system user (`-r`) and its home directory (`-m`) located at `
 `useradd` has created `/srv/galaxy` for you with the correct ownership. We now need to create directories for the Galaxy server, our config files, data, etc.
 
 ```console
-$ sudo -u galaxy git clone -b release_17.09 https://github.com/galaxyproject/galaxy.git /srv/galaxy/server
+$ sudo -u galaxy git clone -b release_18.09 https://github.com/galaxyproject/galaxy.git /srv/galaxy/server
 $ sudo -u galaxy mkdir /srv/galaxy/{bin,config,data,log}
 ```
 
@@ -103,7 +103,7 @@ export GALAXY_VIRTUAL_ENV='/srv/galaxy/venv'
 
 case $1 in
     --daemon)
-        log="--log-file=/srv/galaxy/log/paster.log"
+        log="--daemonize2 /srv/galaxy/log/galaxy.log"
         ;;
     *)
         log=""
@@ -136,16 +136,17 @@ $ sudo -u galaxy -e /srv/galaxy/config/galaxy.yml
 
 Let's set a few config variables that will be useful for this and upcoming sessions:
 
-```ini
-file_path = /srv/galaxy/data
-tool_config_file = /srv/galaxy/config/tool_conf.xml,/srv/galaxy/config/shed_tool_conf.xml
-tool_dependency_dir = /srv/galaxy/dependencies
-tool_data_table_config_path = /srv/galaxy/config/tool_data_table_conf.xml
-shed_tool_data_table_config = /srv/galaxy/config/shed_tool_data_table_conf.xml
-admin_users = foo@example.org
-data_manager_config_file = /srv/galaxy/config/data_manager_conf.xml
-shed_data_manager_config_file = /srv/galaxy/config/shed_data_manager_conf.xml
-galaxy_data_manager_data_path = /srv/galaxy/tool-data
+```yaml
+file_path: /srv/galaxy/data
+tool_config_file: '/srv/galaxy/config/tool_conf.xml,/srv/galaxy/config/shed_tool_conf.xml'
+tool_dependency_dir: /srv/galaxy/dependencies
+dependency_resolvers_config_file: /srv/galaxy/config/dependency_resolvers_conf.xml
+tool_data_table_config_path: /srv/galaxy/config/tool_data_table_conf.xml
+shed_tool_data_table_config: /srv/galaxy/config/shed_tool_data_table_conf.xml
+admin_users: foo@example.org
+data_manager_config_file: /srv/galaxy/config/data_manager_conf.xml
+shed_data_manager_config_file: /srv/galaxy/config/shed_data_manager_conf.xml
+galaxy_data_manager_data_path: /srv/galaxy/tool-data
 ```
 
 Then save and quit your editor.
