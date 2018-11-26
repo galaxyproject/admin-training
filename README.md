@@ -109,3 +109,5 @@ _Timetable with sessions and material will be continuously updated towards the w
 * (N)ate Coraor - Galaxy Project, Penn State University, USA
 * (J)ohn Chilton - Galaxy Project, Penn State University, USA
 * (M)artin Čech - Galaxy Project, Penn State University, USA
+* Simon Gladman - Melbourne Bioinformatics, University of Melbourne, Australia
+* Helena Rasche - ELIXIR Galaxy WG, Elixir Germany, de.NBI, University of Freiburg, Germany
