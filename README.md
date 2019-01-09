@@ -94,7 +94,7 @@ _Timetable with sessions and material will be continuously updated towards the w
 
 
 #### Friday
-**2nd February**
+**1st February**
 
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
