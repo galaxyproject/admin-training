@@ -1,6 +1,6 @@
 ![galaxy logo](../../docs/shared-images/galaxy_logo_25percent_transparent.png)
 
-### GCCBOSC2018 - Portland, OR
+### Galaxy Admins Course 2019 - PSU, PA
 
 # Shared Reference Genomes and Indices - Exercise
 
