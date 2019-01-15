@@ -26,6 +26,7 @@ class: left, middle, center
 * Built in data hierarchy
 * Some problems
 * Data Managers
+* There's just so much of it!
 ]
 
 .footnote[\#usegalaxy \#GCCBOSC / @galaxyproject]
@@ -57,6 +58,7 @@ class: left, middle, center
 * **Built in data hierarchy**
 * Some problems
 * Data Managers
+* There's just so much of it!
 ]
 
 ---
@@ -144,6 +146,7 @@ mm10    mm10    Mouse (mm10)    /mnt/galaxyIndices/genomes/mm10/bwa_mem_index/mm
 * Built in data hierarchy
 * **Some problems**
 * Data Managers
+* There's just so much of it!
 ]
 
 ---
@@ -212,6 +215,7 @@ mm10    mm10    Mouse (mm10)    /mnt/galaxyIndices/genomes/mm10/bwa_mem_index/mm
 * Built in data hierarchy
 * Some problems
 * **Data Managers**
+* There's just so much of it!
 ]
 
 ---
@@ -308,3 +312,62 @@ https://galaxyproject.org/admin/tools/data-managers/
 # Exercise Time!
 
 .footnote[\#usegalaxy \#GCCBOSC / @galaxyproject]
+---
+# Overview
+
+.large[
+* Intro to built in datasets
+* Built in data hierarchy
+* Some problems
+* Data Managers
+* **There's just so much of it!**
+]
+
+.footnote[\#usegalaxy \#galaxyadmins / @galaxyproject]
+
+---
+# There's a lot of reference data
+.large[
+(and it's hard to keep up with)
+]
+![ref_data_prob_flow.png](images/ref_data_prob_flow.png)
+
+.footnote[\#usegalaxy \#galaxyadmins / @galaxyproject]
+---
+# CernVM-fs to the rescue
+
+.largeish[
+* Galaxy Main has a very distributed architecture
+* Needed a method of sharing reference data across country efficiently
+* **CVM-FS** is an efficient method for read only data sharing between systems
+    * Originally designed for distributed software installation at Cern
+    * Turns out it's really useful for read only data sets as well
+* All nodes of Galaxy Main get their reference genomes and indices from CVM-FS
+    * Shared via mirroring and caching across the country
+* It's also really useful to share data **globally**
+    * The **usegalaxy.*** initiative has taken full advantage of this.
+]
+
+.footnote[\#usegalaxy \#galaxyadmins / @galaxyproject]
+---
+.widen_image[
+![cvmfs_server_distribution.png](images/cvmfs_server_distribution.png)
+]
+
+.footnote[\#usegalaxy \#galaxyadmins / @galaxyproject]
+---
+# CVM-FS Global Structure
+.widen_image[
+![cvmfs_global_structure.png](images/cvmfs_global_structure.png)
+]
+
+.footnote[\#usegalaxy \#galaxyadmins / @galaxyproject]
+---
+# Exercise #2:
+.large[
+**Connect our instances to CVMFS for reference data**
+]
+
+.footnote[\#usegalaxy \#galaxyadmins / @galaxyproject]
+---
+# END
