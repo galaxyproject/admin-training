@@ -326,8 +326,10 @@ https://galaxyproject.org/admin/tools/data-managers/
 .footnote[\#usegalaxy \#galaxyadmins / @galaxyproject]
 
 ---
-# There's a lot and it's hard to deal with
-
+# There's a lot of reference data
+.large[
+(and it's hard to keep up with)
+]
 ![ref_data_prob_flow.png](images/ref_data_prob_flow.png)
 
 .footnote[\#usegalaxy \#galaxyadmins / @galaxyproject]

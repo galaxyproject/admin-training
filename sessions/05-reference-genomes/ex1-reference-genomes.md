@@ -1,6 +1,6 @@
 ![galaxy logo](../../docs/shared-images/galaxy_logo_25percent_transparent.png)
 
-### GCCBOSC2018 - Portland, OR
+### Galaxy Admins Course 2019 - PSU, PA
 
 # Reference Genomes - Exercise
 
@@ -97,8 +97,8 @@ Most importantly they are **Tab delimited** (not *space* delimited) flat files, 
   #
   #<unique_build_id>   <dbkey>   <display_name>   <file_path>
   #
-  #So, for example, if you had phiX indexed stored in 
-  #/depot/data2/galaxy/phiX/base/, 
+  #So, for example, if you had phiX indexed stored in
+  #/depot/data2/galaxy/phiX/base/,
   #then the bwa_index.loc entry would look like this:
   #
   #phiX174   phiX   phiX Pretty   /depot/data2/galaxy/phiX/base/phiX.fa
