@@ -37,8 +37,8 @@ _Timetable with sessions and material will be continuously updated towards the w
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
 | 08:30 | Registration | | |
-| 09:15 | Welcome and introduction | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/00-intro/intro.html) | |
-| 09:45 | Deployment and platform options | [Slides](http://galaxyproject.github.io/training-material/topics/admin/tutorials/deployment-platforms-options/slides.html) |  |
+| 09:15 | Welcome and introduction | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/00-intro/intro.html) | All |
+| 09:45 | Deployment and platform options | [Slides](https://galaxyproject.github.io/training-material/topics/admin/tutorials/deployment-platforms-options/slides.html#1) | (M) |
 | 11:00 | Get a basic Galaxy server up and running | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/02-basic-server/get-galaxy.html) |  |
 | 12:00 | Galaxy server optional necessities: PostgreSQL and nginx | [First Steps Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/03-production-basics/production.html), [First Steps Exercise](sessions/03-production-basics/ex1-first-steps.md), [PostgreSQL Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/03-production-basics/databases.html), [PostgreSQL Exercise](sessions/03-production-basics/ex2-postgres.md),  [NGINX Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/03-production-basics/webservers.html), [nginx Exercise](sessions/03-production-basics/ex3-nginx.md)| (N) |
 | 15:30 | Defining and importing genomes, Data Managers | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/05-reference-genomes/reference_genomes.html), [Exercise](sessions/05-reference-genomes/ex1-reference-genomes.md) | |
