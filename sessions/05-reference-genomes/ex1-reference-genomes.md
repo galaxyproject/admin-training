@@ -227,9 +227,8 @@ How cool is that? No editing `.loc` files, no making sure you've got TABs instea
 ## So, what did we learn?
 
 Hopefully, you now understand:
-* how Galaxy stores and uses its reference data,
-* how to manually add a reference genome and tool indices if required,
-* and how to use data managers to make all of this much much easier.
+* how Galaxy stores and uses its reference data
+* how to use data managers to make all of this much much easier
 
 ## Further reading
 
