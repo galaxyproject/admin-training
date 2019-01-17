@@ -5,7 +5,7 @@
 
 jump to [Monday](#monday) | [Tuesday](#tuesday) | [Wednesday](#wednesday) | [Thursday](#thursday) | [Friday](#friday)
 
-Built slides have [an index](https://galaxyproject.github.io/dagobah-training/2018-gccbosc/).
+Built slides have [an index](https://galaxyproject.github.io/dagobah-training/2019-pennstate/).
 
 Join the chat at https://gitter.im/dagobah-training/Lobby
 
