@@ -181,18 +181,7 @@ Requirements of the wrapper.
 </requirements>
 ```
 
-Galaxy is aiming to be dependency resolution-agnostic.
-
----
-# Intermezzo: Tool dependencies
-
-To achieve the level of reproducibility Galaxy aims for it needs to be able to install *any tool at any version with the exact same dependencies at any time*.
-
-Linux/MacOS package management is/was:
- - missing the scientific packages
- - avoiding or not maintaining old versions
- - unreliable
- - scattered
+Galaxy is aiming to be dependency resolution agnostic.
 
 ---
 # Approach
@@ -243,19 +232,3 @@ test:
   commands:
     - seqtk seq
 ```
-
----
-class: normal
-### tool_dependencies.xml
-
-A deprecated way that uses TS 'recipe'.
-
-```xml
-<?xml version="1.0"?>
-<tool_dependency>
-  <package name="seqtk" version="1.2">
-    <repository name="package_seqtk_1_2" owner="iuc"/>
-  </package>
-</tool_dependency>
-```
-
