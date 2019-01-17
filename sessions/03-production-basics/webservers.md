@@ -64,7 +64,7 @@ There is also a "Galaxy" flavor<sup>[1]</sup> (includes [upload module](https://
 ---
 # Exercise: nginx
 
-[nginx as a Reverse Proxy for Galaxy - Exercise](https://github.com/galaxyproject/dagobah-training/blob/2018-gccbosc/sessions/03-production-basics/ex3-nginx.md)
+[nginx as a Reverse Proxy for Galaxy - Exercise](https://github.com/galaxyproject/dagobah-training/blob/2019-pennstate/sessions/03-production-basics/ex3-nginx.md)
 
 ---
 # Exercise: Apache

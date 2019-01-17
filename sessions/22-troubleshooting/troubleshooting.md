@@ -7,7 +7,7 @@ class: special
 
 slides by @martenson, @natefoo
 
-.footnote[\#GCCBOSC / \#usegalaxy / @galaxyproject]
+.footnote[\#usegalaxy / @galaxyproject]
 
 ---
 class: larger
