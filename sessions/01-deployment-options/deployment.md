@@ -41,7 +41,7 @@ Required:
 Optional (but not really):
   - [PostgreSQL](https://galaxyproject.github.io/dagobah-training/2018-oslo/03-production-basics/databases.html)
   - [uWSGI](https://galaxyproject.github.io/dagobah-training/2018-oslo/10-uwsgi/uwsgi.html) (will come with Galaxy from 18.01 onwards)
-  - [Reverse proxy server](https://galaxyproject.github.io/dagobah-training/2018-oslo/03-production-basics/webservers.html) (nginx, Apache)
+  - [Reverse proxy server](https://galaxyproject.github.io/dagobah-training/2018-oslo/03-production-basics/webservers.html) (NGINX)
 
 .footnote[<sup>[1]</sup> Point of order: Unless stated otherwise, "RHEL" refers to RHEL and derivatives (CentOS, Scientific Linux, etc.)]
 
