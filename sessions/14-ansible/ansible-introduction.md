@@ -3,7 +3,7 @@ class: inverse
 ---
 class: special, center, middle
 
-# Ansible and Galaxy
+# Ansible
 
 
 .footnote[\#usegalaxy / @galaxyproject]
@@ -13,25 +13,6 @@ class: center, middle
 # Please interrupt
 
 *We are here to answer questions!*
-
-.footnote[\#usegalaxy / @galaxyproject]
-
----
-# Overview
-
-.large[
-* What is Ansible
-* Galaxy and Ansible
-]
-
-.footnote[\#usegalaxy / @galaxyproject]
-
----
-# Overview
-.large[
-* **What is Ansible**
-* Galaxy and Ansible
-]
 
 .footnote[\#usegalaxy / @galaxyproject]
 
@@ -309,8 +290,6 @@ In this exercise we will:
 * Look at how the Galaxy Ansible roles can be combined together to install a production-ready Galaxy
 * We will work through the contents of the scripts
 * We will run the roles from a playbook.
-
-[Installing Galaxy with Ansible](https://github.com/galaxyproject/dagobah-training/blob/2019-pennstate/sessions/14-ansible/ex2-galaxy-ansible.md)
 ]
 
 .footnote[\#usegalaxy / @galaxyproject]
