@@ -1303,7 +1303,7 @@ Jobs across many clusters
 
 ---
 
-### nginx (or Apache)
+### NGINX
 
 - Optimized servers for static content
 - https://www.nginx.com/resources/wiki/

@@ -92,7 +92,7 @@ Then, save and quit your editor.
 
 ## Section 4 - Configure reverse proxy and test
 
-**Alternative 1 - Configure nginx for uWSGI**
+**Part 1 - Configure nginx for uWSGI**
 
 We previously configured nginx to communicate with Galaxy using the HTTP protocol on port 8080. We need to change this to communicate using the uWSGI protocol on port 4001, as we configured in the `[uwsgi]` section above. To do this, we need to return to the nginx configs we worked on in the nginx session:
 
@@ -118,35 +118,7 @@ Then, save and quit your editor. Restart nginx with:
 $ sudo systemctl restart nginx
 ```
 
-**Alternative 2 - Configure Apache for uWSGI**
-
-We previously configured Apache HTTP to expect the main paster process to appear on port 8080, but we want it to communicate with uWSGI on port 4001 via its native protocol instead. Apache alas doesn't come with this as standard, but the module can be installed with:
-
-```console
-sudo apt-get install libapache2-mod-proxy-uwsgi
-sudo a2enmod proxy_uwsgi
-```
-
-Edit the file `/etc/apache2/sites-enabled/galaxy.conf` and update the line:
-
-```apache
-RewriteRule ^(.*) http://localhost:8080$1 [P]
-```
-
-to
-
-```apache
-ProxyPass / uwsgi://localhost:4001/
-```
-
-Restart apache with:
-
-```console
-$ sudo systemctl restart apache2
-```
-
-
-**Part 3 - Run Galaxy with uWSGI**
+**Part 2 - Run Galaxy with uWSGI**
 
 If you are still running Galaxy, stop it with `CTRL+C` followed by `sudo -Hu galaxy galaxy` or `sudo -Hu galaxy galaxy --stop-daemon`. Then, start it up under uWSGI with:
 

@@ -3,9 +3,9 @@ class: inverse, large
 
 ---
 class: special, middle
-# (Proxy) Web Server Choices and Configuration
+# NGINX as a (Proxy) Web Server
 
-Introduction to NGINX (and Apache)
+Introduction to NGINX
 
 slides by @natefoo, @nsoranzo
 
@@ -26,13 +26,6 @@ Extra features:
   - Covered in _Using and configuring external authentication services_
 
 Some of these features are available directly in uWSGI (covered in _Improving the web serving experience with uWSGI_)
-
----
-# Apache HTTP Server
-
-- The most popular web server
-- Many authentication plugins written for Apache
-- Can offload file downloads
 
 ---
 # nginx
@@ -67,11 +60,6 @@ There is also a "Galaxy" flavor<sup>[1]</sup> (includes [upload module](https://
 [nginx as a Reverse Proxy for Galaxy - Exercise](https://github.com/galaxyproject/dagobah-training/blob/2019-pennstate/sessions/03-production-basics/ex3-nginx.md)
 
 ---
-# Exercise: Apache
-
-[Apache as a Reverse Proxy for Galaxy - Exercise](https://github.com/galaxyproject/dagobah-training/blob/2018-gccbosc/sessions/03-production-basics/ex4-apache.md)
-
----
 # Additional Tips and Resources
 
 [Google's PageSpeed Tools](https://developers.google.com/speed/pagespeed/insights/) can identify any compression or caching improvements you can make.
@@ -85,7 +73,7 @@ Use the [Mozilla SSL config generator](https://mozilla.github.io/server-side-tls
 
 Galaxy comes with both [uWSGI](http://uwsgi-docs.readthedocs.io/en/latest/) and pure-python web server, [Paste](http://pythonpaste.org/)
 
-Since 18.01 every new Galaxy will by default start on uWSGI (but can be configured for Paste).
+Since 18.01 every new Galaxy by default starts on uWSGI (but can be configured for Paste).
 
 Why we switched to uWSGI?
 - Built in multiprocess (avoid the GIL)
