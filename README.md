@@ -103,7 +103,7 @@ _Timetable with sessions and material will be continuously updated towards the w
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
 | 09:00 | Welcome and questions | | |
-| 09:15 | Upgrading to a new Galaxy release | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/08-upgrading-release/upgrading.html) | (N) |
+| 09:15 | Upgrading to a new Galaxy release | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/08-upgrading-release/upgrading.html) | (M) |
 | 10:00 | What's newer than year? | **SLIDES** | (N) |
 | 12:00 | Lunch | | |
 | 13:00 | When things go wrong: Galaxy Server Troubleshooting | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/22-troubleshooting/troubleshooting.html) | (N) |
