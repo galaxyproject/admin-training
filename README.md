@@ -57,12 +57,14 @@ _Timetable with sessions and material will be continuously updated towards the w
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
 | 09:00 | Welcome and questions | | |
-| 09:15 | Users, Groups, and Quotas | [Slides](http://galaxyproject.github.io/training-material/topics/admin/tutorials/users-groups-quotas/slides.html) | (M) |
-| 11:00 | Introduction to the Galaxy Tool Shed: Identifying and installing well-defined tools | [Slides (Shed)](https://galaxyproject.github.io/dagobah-training/2019-pennstate/04-tool-shed/shed_intro.html), [Slides (Tools)](https://galaxyproject.github.io/dagobah-training/2019-pennstate/04-tool-shed/tool_installation.html), [Slides (Dependencies)](https://galaxyproject.github.io/dagobah-training/2019-pennstate/04-tool-shed/tool-dependencies.html)| |
-| 13:15 | Updating tools and supporting multiple versions of tools | [Exercise](sessions/04-tool-shed/ex-tool-management.md) | |
-| 14:30 | Improving the web serving experience with uWSGI | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/10-uwsgi/uwsgi.html), [Exercise](sessions/10-uwsgi/ex1-uwsgi.md) | |
+| 09:15 | Ephemeris | | (J)(M)|
+| 09:30 | Managing Galaxy tools | [Exercise](sessions/04-tool-shed/ex-tool-management.md) | (M) |
+| 10:30 | Users, Groups, and Quotas | [Slides](http://galaxyproject.github.io/training-material/topics/admin/tutorials/users-groups-quotas/slides.html) | (M) |
+| 11:00 | Introduction to the Galaxy Tool Shed: Identifying and installing well-defined tools | [Slides (Shed)](https://galaxyproject.github.io/dagobah-training/2019-pennstate/04-tool-shed/shed_intro.html), [Slides (Tools)](https://galaxyproject.github.io/dagobah-training/2019-pennstate/04-tool-shed/tool_installation.html), [Slides (Dependencies)](https://galaxyproject.github.io/dagobah-training/2019-pennstate/04-tool-shed/tool-dependencies.html)| (M) |
+| 12:00 | Lunch | | |
+| 13:30 | Improving the web serving experience with uWSGI | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/10-uwsgi/uwsgi.html), [Exercise](sessions/10-uwsgi/ex1-uwsgi.md) | |
 | 15:45 | Controlling Galaxy with systemd and supervisor | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/11-systemd-supervisor/systemd-supervisor.html), [Exercise](sessions/11-systemd-supervisor/ex1-supervisor.md) | |
-| 16:45 | Using and configuring external authentication services | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/13-external-auth/external-auth.html), [PAM Auth Exercise](sessions/13-external-auth/ex1-pam-auth.md), [Upstream Auth Exercise](sessions/13-external-auth/ex2-upstream-auth.md) | |
+| 16:30 | Using and configuring external authentication services | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/13-external-auth/external-auth.html), [PAM Auth Exercise](sessions/13-external-auth/ex1-pam-auth.md), [Upstream Auth Exercise](sessions/13-external-auth/ex2-upstream-auth.md) | |
 | 17:00 | Close Day 2 | |  |
 
 
@@ -75,12 +77,10 @@ _Timetable with sessions and material will be continuously updated towards the w
 | -------- | --------- | --------- | ----------- |
 | 09:00 | Welcome and questions | | |
 | 09:15 | Exploring the Galaxy job configuration file | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/15-job-conf/job_conf.html) | (N) |
-| 09:50 | Connecting Galaxy to a compute cluster | [Slides](http://galaxyproject.github.io/training-material/topics/admin/tutorials/connect-to-compute-cluster/slides.html), [Exercise](http://galaxyproject.github.io/training-material/topics/admin/tutorials/connect-to-compute-cluster/tutorial.html) | |
-| 11:00 | Connecting Galaxy to a compute cluster (continued) |  | |
-| 13:30 | Configuration management choices: Introduction to Ansible | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/14-ansible/ansible-introduction.html) | |
-| 14:00 | Using Ansible to deploy Galaxy | [Exercise 1](sessions/14-ansible/ex1-intro-ansible.md), [Exercise 2](sessions/14-ansible/ex2-galaxy-ansible.md) | |
-| 15:45 | Using Ansible to deploy Galaxy (continued) | | |
-| 16:45 | Using heterogeneous compute resources | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/17-heterogenous/heterogeneous.html), [Exercise](sessions/17-heterogenous/ex1-pulsar.md) | |
+| 09:45 | Connecting Galaxy to a compute cluster | [Slides](http://galaxyproject.github.io/training-material/topics/admin/tutorials/connect-to-compute-cluster/slides.html), [Exercise](http://galaxyproject.github.io/training-material/topics/admin/tutorials/connect-to-compute-cluster/tutorial.html) | |
+| 12:00 | Lunch | | |
+| 13:00 | Storage management and using heterogeneous storage services | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/19-storage/storage.html), [Exercise](sessions/19-storage/ex1-objectstore.md) | |
+| 14:00 | Using heterogeneous compute resources | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/17-heterogenous/heterogeneous.html), [Exercise](sessions/17-heterogenous/ex1-pulsar.md) | |
 | 17:00 | Close day 3 | |  |
 
 
@@ -90,11 +90,11 @@ _Timetable with sessions and material will be continuously updated towards the w
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
 | 09:00 | Welcome and questions | | |
-| 09:15 | Storage management and using heterogeneous storage services | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/19-storage/storage.html), [Exercise](sessions/19-storage/ex1-objectstore.md) | |
-| 11:00 | Containerize all the things: Galaxy in Docker and Docker in Galaxy | [Docker Slides](https://galaxy.slides.com/bgruening/the-galaxy-docker-project), [Conda Slides](http://galaxy.slides.com/bgruening/deck-7#/), [Galaxy Docker tool example](https://github.com/apetkau/galaxy-hackathon-2014/tree/master/smalt)| |
-| 13:15 | Running Jupyter in Galaxy with Galaxy Interactive Environments | [Exercise](sessions/21-gie/ex1-jupyter.md) | |
-| 15:45 | Using public and private cloud compute resources | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/18-clouds/clouds.html) | |
-| 16:30 | Server monitoring and maintenance: Admin UI, Log files, Direct database queries, command line & scripts, what to backup and how | [Slides](http://galaxyproject.github.io/training-material/topics/admin/tutorials/monitoring-maintenance/slides.html), [Exercise 1](http://galaxyproject.github.io/training-material/topics/admin/tutorials/monitoring-maintenance/tutorial.html), [Exercise 2](sessions/22-troubleshooting/ex1-sentry.md) | (B,M) |
+| 09:15 | Containerize all the things: Galaxy in Docker and Docker in Galaxy | [Docker Slides](https://galaxy.slides.com/bgruening/the-galaxy-docker-project), [Conda Slides](http://galaxy.slides.com/bgruening/deck-7#/), [Galaxy Docker tool example](https://github.com/apetkau/galaxy-hackathon-2014/tree/master/smalt)| |
+| 11:15 | Running Ethercalc in Galaxy with Galaxy Interactive Environments | **EXERCISE** | |
+| 12:00 | Lunch | | |
+| 13:00 | Cloudbursting | **SLIDES** | |
+| 14:00 | Server monitoring and maintenance | [Slides](http://galaxyproject.github.io/training-material/topics/admin/tutorials/monitoring-maintenance/slides.html), [Exercise 1](http://galaxyproject.github.io/training-material/topics/admin/tutorials/monitoring-maintenance/tutorial.html), [Exercise 2](sessions/22-troubleshooting/ex1-sentry.md)  **GRAFANA** **SENTRY**| (B,M) |
 | 17:00 | Wrap up and close | | |
 
 
@@ -104,10 +104,11 @@ _Timetable with sessions and material will be continuously updated towards the w
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
 | 09:00 | Welcome and questions | | |
-| 10:15 | Upgrading to a new Galaxy release | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/08-upgrading-release/upgrading.html) | (N) |
-| 11.00 | What's new in Galaxy 18.01? | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/whatsnew/18.01.html) | (N) |
-| 13:30 | When things go wrong: Galaxy Server Troubleshooting | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/22-troubleshooting/troubleshooting.html) | |
-| 17:00 | Wrap up and close | | |
+| 09:15 | Upgrading to a new Galaxy release | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/08-upgrading-release/upgrading.html) | (N) |
+| 10:00 | What's newer than year? | **SLIDES** | (N) |
+| 12:00 | Lunch | | |
+| 13:00 | When things go wrong: Galaxy Server Troubleshooting | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/22-troubleshooting/troubleshooting.html) | |
+| 15:00 | Wrap up and close | | |
 
 ### Instructors
 

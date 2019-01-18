@@ -9,11 +9,10 @@ generate-slides:
 # Monday
 	$(IN_VENV) python slideshow/build_slideshow.py 'Welcome and Introduction' sessions/00-intro/intro.md 00-intro
 	$(IN_VENV) python slideshow/build_slideshow.py 'Introduction to Ansible' sessions/14-ansible/ansible-introduction.md 14-ansible
-	$(IN_VENV) python slideshow/build_slideshow.py 'Get Galaxy' sessions/02-basic-server/get-galaxy.md 02-basic-server
 	$(IN_VENV) python slideshow/build_slideshow.py 'Extending Installation' sessions/06-extending-installation/extending.md 06-extending-installation
 	$(IN_VENV) python slideshow/build_slideshow.py 'Defining and importing genomes, Data Managers' sessions/05-reference-genomes/reference_genomes.md 05-reference-genomes
 	$(IN_VENV) python slideshow/build_slideshow.py 'Galactic Database' sessions/03-production-basics/databases.md 03-production-basics
-	$(IN_VENV) python slideshow/build_slideshow.py 'Web Servers nginx/Apache' sessions/03-production-basics/webservers.md 03-production-basics
+	$(IN_VENV) python slideshow/build_slideshow.py 'Web Server NGINX' sessions/03-production-basics/webservers.md 03-production-basics
 
 # Tuesday
 # Wednesday
