@@ -62,6 +62,7 @@ Find the IP address for your instance [here](https://docs.google.com/spreadsheet
 - https://docs.galaxyproject.org/
 - https://galaxyproject.org/admin/
 - https://training.galaxyproject.org/
+- https://gitter.im/galaxyproject/admins
 
 * http://bit.ly/galaxyadmin
 * http://bit.ly/adminvms
