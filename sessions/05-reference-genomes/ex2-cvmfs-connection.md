@@ -110,7 +110,7 @@ owIDAQAB
 -----END PUBLIC KEY-----
 ```
 
-**galaxyIndices**
+**cvmfs cache**
 
 Make a directory for the cache files
 
