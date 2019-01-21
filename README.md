@@ -58,7 +58,7 @@ _Timetable with sessions and material will be continuously updated towards the w
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
 | 09:00 | Welcome and questions | | |
-| 09:15 | Ephemeris | | (H)(M)|
+| 09:15 | Ephemeris | | (J)(M)|
 | 09:30 | Managing Galaxy tools | [Exercise](sessions/04-tool-shed/ex-tool-management.md) | (M) |
 | 10:30 | Users, Groups, and Quotas | [Slides](http://galaxyproject.github.io/training-material/topics/admin/tutorials/users-groups-quotas/slides.html) | (M) |
 | 10:50 | Break (coffee & snacks) | | |
