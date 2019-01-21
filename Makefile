@@ -9,10 +9,10 @@ generate-slides:
 # Monday
 	$(IN_VENV) python slideshow/build_slideshow.py 'Welcome and Introduction' sessions/00-intro/intro.md 00-intro
 	$(IN_VENV) python slideshow/build_slideshow.py 'Introduction to Ansible' sessions/14-ansible/ansible-introduction.md 14-ansible
-	$(IN_VENV) python slideshow/build_slideshow.py 'Extending Installation' sessions/06-extending-installation/extending.md 06-extending-installation
 	$(IN_VENV) python slideshow/build_slideshow.py 'Defining and importing genomes, Data Managers' sessions/05-reference-genomes/reference_genomes.md 05-reference-genomes
 	$(IN_VENV) python slideshow/build_slideshow.py 'Galactic Database' sessions/03-production-basics/databases.md 03-production-basics
 	$(IN_VENV) python slideshow/build_slideshow.py 'Web Server NGINX' sessions/03-production-basics/webservers.md 03-production-basics
+	$(IN_VENV) python slideshow/build_slideshow.py 'Production Basics' sessions/03-production-basics/production.md 03-production-basics
 
 # Tuesday
 # Wednesday
@@ -33,6 +33,5 @@ generate-slides:
 	$(IN_VENV) python slideshow/build_slideshow.py 'Galaxy Tool Basics' sessions/x01-tool-basics/tool-basics.md x01-tool-basics
 	$(IN_VENV) python slideshow/build_slideshow.py 'Advanced Tool Wrapping' sessions/x02-tools-advanced/tools-advanced.md x02-tools-advanced
 	$(IN_VENV) python slideshow/build_slideshow.py 'Complex Galaxy Server Examples' sessions/x03-main-galaxy/usegalaxy.md x03-main-galaxy
-	$(IN_VENV) python slideshow/build_slideshow.py 'Production Basics' sessions/03-production-basics/production.md 03-production-basics
 
 	echo "</body></html>" >> docs/index.html

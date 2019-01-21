@@ -39,18 +39,16 @@ _Timetable with sessions and material will be continuously updated towards the w
 | 08:30 | Registration | | |
 | 09:00 | Welcome and introduction | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/00-intro/intro.html) | All |
 | 09:20 | Deployment and platform options | [Slides](https://galaxyproject.github.io/training-material/topics/admin/tutorials/deployment-platforms-options/slides.html#1) | (M) |
-| 9:45 | Intro to Ansible | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/14-ansible/ansible-introduction.html#1) |  |
-| 10:45 | Break (coffee & snacks) | | |
-| 11:00 | Basic Galaxy server | [Exercise](https://github.com/galaxyproject/dagobah-training/blob/2019-pennstate/sessions/14-ansible/ex2-galaxy-ansible.md)|  |
-| 12:30 | Lunch (catered) | |
-| 13:30 | Gearing towards production | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/03-production-basics/production.html), [Exercise](sessions/03-production-basics/ex1-first-steps.md)| (N) |
-| 13:45 | PostgreSQL | [PostgreSQL Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/03-production-basics/databases.html), [PostgreSQL Exercise](sessions/03-production-basics/ex2-postgres.md) |
-| 14:30 | NGINX | [NGINX Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/03-production-basics/webservers.html), [NGINX Exercise](sessions/03-production-basics/ex3-nginx.md) | (N) |
-| 15:00 | Extending your installation: FTP, SMTP, and more | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/06-extending-installation/extending.html), [Exercise](sessions/06-extending-installation/ex1-proftpd.md) | (M) |
-| 15:35 | Break (coffee & snacks) | | |
+| 9:40 | Intro to Ansible | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/14-ansible/ansible-introduction.html#1) |  |
+| 10:30 | Break (coffee & snacks) | | |
+| 10:45 | Basic Galaxy server | [Exercise](https://github.com/galaxyproject/dagobah-training/blob/2019-pennstate/sessions/14-ansible/ex2-galaxy-ansible.md)|  |
+| 12:00 | Lunch (catered) | |
+| 13:00 | Gearing towards production | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/03-production-basics/production.html), [Exercise](sessions/03-production-basics/ex1-first-steps.md) [Exercise](sessions/06-extending-installation/ex1-proftpd.md)| (N,M) |
+| 14:50 | PostgreSQL | [PostgreSQL Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/03-production-basics/databases.html), [PostgreSQL Exercise](sessions/03-production-basics/ex2-postgres.md) |
+| 15:10 | NGINX | [NGINX Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/03-production-basics/webservers.html), [NGINX Exercise](sessions/03-production-basics/ex3-nginx.md) | (N) |
+| 15:30 | Break (coffee & snacks) | | |
 | 15:45 | Reference Data | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/05-reference-genomes/reference_genomes.html), [Exercise](sessions/05-reference-genomes/ex1-reference-genomes.md) | (S) |
-| 18:00 | Close Day 1 | |  |
-
+| 17:00 | Close Day 1 | |  |
 
 #### Tuesday
 **29th January**
