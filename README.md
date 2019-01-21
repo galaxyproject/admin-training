@@ -41,9 +41,9 @@ _Timetable with sessions and material will be continuously updated towards the w
 | 09:20 | Deployment and platform options | [Slides](https://galaxyproject.github.io/training-material/topics/admin/tutorials/deployment-platforms-options/slides.html#1) | (M) |
 | 9:40 | Intro to Ansible | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/14-ansible/ansible-introduction.html#1) | (S) |
 | 10:30 | Break (coffee & snacks) | | |
-| 10:45 | Basic Galaxy server | [PostgreSQL Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/03-production-basics/databases.html) [Exercise](https://github.com/galaxyproject/dagobah-training/blob/2019-pennstate/sessions/14-ansible/ex2-galaxy-ansible.md)| (H,J) |
+| 10:45 | Basic Galaxy server | [PostgreSQL Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/03-production-basics/databases.html), [Server Exercise](https://github.com/galaxyproject/dagobah-training/blob/2019-pennstate/sessions/14-ansible/ex2-galaxy-ansible.md)| (H,J) |
 | 12:30 | Lunch (catered) | |
-| 13:30 | Gearing towards production | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/03-production-basics/production.html), [Exercise](sessions/03-production-basics/ex1-first-steps.md) [Exercise](sessions/06-extending-installation/ex1-proftpd.md)| (N,M) |
+| 13:30 | Gearing towards production | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/03-production-basics/production.html), [Production Exercise](sessions/03-production-basics/ex1-first-steps.md), [ProFTPD Exercise](sessions/06-extending-installation/ex1-proftpd.md)| (N,M) |
 | 15:10 | NGINX | [NGINX Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/03-production-basics/webservers.html), [NGINX Exercise](sessions/03-production-basics/ex3-nginx.md) | (N) |
 | 15:30 | Break (coffee & snacks) | | |
 | 15:45 | Reference Data | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/05-reference-genomes/reference_genomes.html), [Exercise](sessions/05-reference-genomes/ex1-reference-genomes.md) | (S) |
