@@ -41,7 +41,7 @@ _Timetable with sessions and material will be continuously updated towards the w
 | 09:20 | Deployment and platform options | [Slides](https://galaxyproject.github.io/training-material/topics/admin/tutorials/deployment-platforms-options/slides.html#1) | (M) |
 | 9:45 | Intro to Ansible | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/14-ansible/ansible-introduction.html#1) |  |
 | 10:45 | Break (coffee & snacks) | | |
-| 11:00 | Basic Galaxy server | [Exercise](https://github.com/galaxyproject/dagobah-training/blob/2019-pennstate/sessions/14-ansible/ex2-galaxy-ansible.md) **UPDATE**|  |
+| 11:00 | Basic Galaxy server | [Exercise](https://github.com/galaxyproject/dagobah-training/blob/2019-pennstate/sessions/14-ansible/ex2-galaxy-ansible.md)|  |
 | 12:30 | Lunch (catered) | |
 | 13:30 | Gearing towards production | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/03-production-basics/production.html), [Exercise](sessions/03-production-basics/ex1-first-steps.md)| (N) |
 | 13:45 | PostgreSQL | [PostgreSQL Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/03-production-basics/databases.html), [PostgreSQL Exercise](sessions/03-production-basics/ex2-postgres.md) |
