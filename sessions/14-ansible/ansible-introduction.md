@@ -41,17 +41,17 @@ class: center, middle
 ---
 # Core features of Ansible
 .large[
-* Easy to learn
+* **Easy to learn**
   * Playbooks in YAML, Templates in Jinja2, Inventory in INI file
   * Sequential execution
-* Minimal requirements (**Agentless**)
+* **Minimal requirements (Agentless)**
   * No need for centralised management servers/daemons
   * Single command to install (pip install ansible)
   * Uses SSH to connect to target machine
-* Idempotent:
+* **Idempotent**
   * Executing N times no different to executing once.
   * Prevents side-effects from re-running scripts
-* Extensible:
+* **Extensible**
   * Write your own modules
 ]
 
@@ -59,8 +59,8 @@ class: center, middle
 # Ansible structure
 .large[
 * Ansible scripts are called playbooks
-* Scripts written as simple yaml files
-* Can be structured in a simple folder hierarchy
+* Scripts written as yaml files
+* Can be structured in a folder hierarchy
 * Many available modules
   * apt, git, command, shell, postgresql_db
   * file, lineinfile, get_url, curl, homebrew
@@ -72,7 +72,7 @@ class: center, middle
 ---
 # Ansible playbook layout
 
-``` text
+```
 .
 ├── Variables
 │    └── vars
@@ -141,7 +141,7 @@ jetstream-iu0.galaxyproject.org
 .left-column-equal[
 **Group Variables**
 
-e.g. Galaxy_servers.yml
+e.g. `galaxy_servers.yml`
 
 ```
 galaxy_user: galaxy
@@ -156,7 +156,7 @@ deploy_env: production
 .right-column-equal[
 **Host Variables**
 
-e.g. galaxy-web-01.tacc.utexas.edu.yml
+e.g. `galaxy-web-01.tacc.utexas.edu.yml`
 
 ```
 server_codename: main_w1
@@ -168,18 +168,16 @@ galaxy_installer: true
 
 ---
 # Ansible Tasks
-.large[
-* Perform a task on the inventory
-]
-* YAML-style:
 
-    ```
-    - name: Install nginx
-      apt:
-        pkg: nginx-full
-        status: latest
-      when: "{{ ansible_os_family }} == 'Debian'"
-    ```
+Perform a task on the inventory
+
+```
+- name: Install nginx
+  apt:
+    pkg: nginx-full
+    status: latest
+  when: "{{ ansible_os_family }} == 'Debian'"
+```
 
 .footnote[\#usegalaxy / @galaxyproject]
 
@@ -281,15 +279,4 @@ galaxy_installer: true
   * GalaxyKickStart
 ]
 ]
-.footnote[\#usegalaxy / @galaxyproject]
-
----
-# Exercise!
-.large[
-In this exercise we will:
-* Look at how the Galaxy Ansible roles can be combined together to install a production-ready Galaxy
-* We will work through the contents of the scripts
-* We will run the roles from a playbook.
-]
-
 .footnote[\#usegalaxy / @galaxyproject]
