@@ -1,5 +1,5 @@
 layout: true
-class: inverse, middle, large
+class: inverse, middle
 
 ---
 class: special
@@ -10,65 +10,53 @@ slides by @dblankenberg @abdulrahmanazab
 .footnote[\#usegalaxy / @galaxyproject]
 
 ---
-
-class: normal
-# Common `galaxy.yml` Tweaks
-
----
-
-class: normal
 # Configuring uWSGI
 
-In `galaxy.yml`:
 * `uwsgi:` section contains basic internal HTTP server configuration
   * `http: 127.0.0.1:8080` change to the port and to IP of listening network interface, or `0.0.0.0` for all network interfaces.
   * `threads: 4` change the number of threads for each web server process.
   * `offload-thread: 2` change the number of threads for serving static content.
+  * `master: false` "For all practical serving deployments it’s not really a good idea not to use master mode."
+* Note that all uwsgi defaults are built-in if you use the `run.sh`, no config is needed.
+
+.footnote[modifying the `galaxy.yml`]
 
 ---
+# Basics the Galaxy App
 
-class: normal
-# Configuring the Galaxy Application
-
-In `galaxy.yml`:
 * `galaxy:` section contains application configuration
-  * `filter-with: gzip` uncomment to enable internal gzip compression.
-  * Uncomment `filter-with: proxy-prefix` and set `prefix` in `[server:]`if running Galaxy away from webserver root.
-  * If running more than 1 Galaxy, set `cookie_path` to match `prefix`.
   * `database_connection` contains the SQLAlchemy connection string for database.
+  * make sure dev settings `debug: false` and `use_interactive: false` are disabled.
+  * `tool_config_file: 'config/tool_conf.xml,config/shed_tool_conf.xml'` specifies what tools to load.
+  * `tool_dependency_dir: database/dependencies` is a folder where tool dependencies (Conda packages) go.
+
+.footnote[modifying the `galaxy.yml`]
 
 ---
+# Authentication Options
 
-class: normal
-# More Authentication Options
+* `require_login: false` Force everyone to log in (disable anonymous access).
+* `allow_user_creation: true` Allow unregistered users to create new accounts (otherwise, they will have to be created by an admin).
+* `allow_user_deletion: false` Allow administrators to delete accounts.
+* `allow_user_impersonation: false` Allow administrators to log in as other users (useful for debugging)
 
-In `galaxy.yml`:
-* `require_login: False` Force everyone to log in (disable anonymous access).
-* `allow_user_creation: True` Allow unregistered users to create new accounts (otherwise, they will have to be created by an admin).
-* `allow_user_deletion: False` Allow administrators to delete accounts.
-* `allow_user_impersonation: False` Allow administrators to log in as other users (useful for debugging)
-* And more ...
+.footnote[modifying the `galaxy.yml`]
 
 ---
-
-class: normal
 # Securing your Object IDs
 
-In `galaxy.yml`:
 * User facing object IDs
   * Galaxy uses the Blowfish cipher to obscure integer IDs.
   * Prevents guessing the hashes for various Galaxy objects.
   * `id_secret` is used as the Blowfish key.
-  * Changing `id_secret` is highly recommended.
+  * Changing the default `id_secret` is a must.
   * Changing `id_secret` will change & invalid existing URLs (e.g. datasets, histories, workflows, etc).
-* Try changing the `id_secret`. What happens?
+
+.footnote[modifying the `galaxy.yml`]
 
 ---
-
-class: normal
 # Customizing your "Brand"
 
-In `galaxy.yml`:
 * `brand` appends "/{brand}" to the "Galaxy" text in the masthead.
 * `logo_url` sets the URL linked by the "Galaxy/brand" text.
 * `wiki_url` sets the URL linked by the "Wiki" link in the "Help" menu.
@@ -79,21 +67,19 @@ In `galaxy.yml`:
 * `screencasts_url` sets the URL linked by the "Videos" link in the "Help" menu.
 * `terms_url` sets the URL linked by the "Terms and Conditions".
 
----
+.footnote[modifying the `galaxy.yml`]
 
-class: normal
+---
 # Adding a Notice box
 
-In `galaxy.yml`:
-```
-message_box_visible: True
-message_box_content: Downtime scheduled Sunday at Noon to one.
-message_box_class: warning
-```
+
+* `message_box_visible: true`
+* `message_box_content: Downtime scheduled Sunday at Noon to one.`
+* `message_box_class: warning`
+
+.footnote[modifying the `galaxy.yml`]
 
 ---
-
-class: normal
 # Update the welcome page
 
 Welcome page is `$GALAXY_ROOT/static/welcome.html` and is the first thing that
@@ -105,99 +91,88 @@ users see. It is a good idea to extend it with things like:
 No restarting is necessary.
 
 ---
-
-class: normal
 # Client Browser Security
 
-In `galaxy.yml`:
-* `sanitize_all_html` by default, Galaxy sanitizes all "text/html" tool outputs. Setting to False potentially exposes users to XSS attacks.
+* `sanitize_all_html` by default, Galaxy sanitizes all "text/html" tool outputs. Setting to false potentially exposes users to XSS attacks.
 * `sanitize_whitelist_file` manually override html sanitization for listed tools. Can set in admin interface.
 * `serve_xss_vulnerable_mimetypes` certain filetypes (e.g. SVG) can contain JS that is vulnerable to XSS (Cross-site scripting) and are served as "plain/text" by default.
 * `allowed_origin_hostnames` Returns Access-Control-Allow-Origin response header that matches the Origin header of the request.
-* `use_printdebug` anything "print"ed within a Galaxy Web thread is exposed to user. Set to False in production.
-* `use_interactive` Enabled by default. Enable live debugging in your browser.  This should *never* be enabled on a public site.
+
+.footnote[modifying the `galaxy.yml`]
 
 ---
+# Debugging
 
-class: normal
+This should never be enabled on a public site.
+
+* `debug: false` enable debug options, preserves cluster job data on disk
+* `use_profile: false` Python profiler on request
+* `use_printdebug: true` anything "print"ed within a Galaxy Web thread is exposed to user. Set to false in production.
+* `use_interactive: false` Enable live debugging in your browser.
+
+.footnote[modifying the `galaxy.yml`]
+
+---
 # Configuring FTP
 
-In `galaxy.yml`:
 * `ftp_upload_dir` directory containing subdirectories matching users' identifier (defaults to e-mail)
 * `ftp_upload_site` hostname of your FTP server provided to users in the help text. Must set to enable FTP import.
 * `ftp_upload_dir_identifier` user attribute for subdirectory naming. 'email' (${user.email}) is default, but 'id' or 'username' are also common.
 * `ftp_upload_dir_template` Python string template used to determine a users FTP upload directory (${ftp_upload_dir}/${ftp_upload_dir_identifier})
-* `ftp_upload_purge` delete files after FTP import (True)
+* `ftp_upload_purge` delete files after FTP import (true)
+
+.footnote[modifying the `galaxy.yml`]
 
 ---
-
-class: normal
 # Exercise
 
-* [Exercise - Configuring FTP](https://github.com/galaxyproject/dagobah-training/blob/2018-oslo/sessions/06-extending-installation/ex1-proftpd.md)
+* [Exercise - Configuring FTP](https://github.com/galaxyproject/dagobah-training/blob/2019-pennstate/sessions/06-extending-installation/ex1-proftpd.md)
 
 ---
+# Configuring Data Library Path Uploads
 
-class: normal
+* Admins Only
+  * `library_import_dir: ''` browse and upload files from configured directory.
+  * `allow_path_paste: false` set to true to allow admins to paste any path to upload (e.g. `file://`), applies also to the general 'upload tool'.
+* Users
+  * `user_library_import_dir: ''` root directory containing sub-directories named by user emails. A nifty setup is that the value is the same as for `ftp_upload_dir` allowing users to upload files via FTP and then import them either in history or data library.
+  * `user_library_import_dir_auto_creation: false` create user's folder upon login
+  * `user_library_import_symlink_whitelist: ''` directories that users are allowed to symlink to.
+  * `user_library_import_check_permissions: false` if Galaxy usernames match system usernames enable this to use UNIX permissions.
+
+.footnote[modifying the `galaxy.yml`]
+
+---
 # Configuring SMTP
 
-In `galaxy.yml`:
 * SMTP server
   * `smtp_server` host:port of SMTP server to use. Uses STARTTLS, but will fallback.
   * `smtp_username` username for SMTP server
   * `smtp_password` password for SMTP server. STARTTLS recommended on SMTP server.
-  * `smtp_ssl` if SMTP server requires SSL from connection start, set to True.
+  * `smtp_ssl` if SMTP server requires SSL from connection start, set to true.
 * Addresses
   * `error_email_to` address to send user error reports to.
-  * `email_from` return address used in automatic user notifications. (<galaxy-no-reply@HOSTNAME>)
+  * `email_from` return address used in automatic user notifications. (`<galaxy-no-reply@HOSTNAME>`)
   * `mailing_join_addr` mailing list to subscribe users to during registration.
 
----
+.footnote[modifying the `galaxy.yml`]
 
-class: normal
+---
 # Exercise: Configuring SMTP for Bug Reports
 
 Install a mail tranfer agent (MTA):
 * Here is a tutorial on how to [install Postfix MTA](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-postfix-as-a-send-only-smtp-server-on-ubuntu-14-04)
 
-In `galaxy.yml`:
 * set `smtp_server: localhost:25`
 * set `error_email_to: you@email.tld` (use your email)
 * Run a Galaxy tool the produces an error
 * attempt to send a bug report
 
----
-
-class: normal
-# Configuring Data Library Path Uploads
-
-In `galaxy.yml`:
-* Admins Only
-  * `library_import_dir` upload files from configured directory.
-  * `allow_library_path_paste` set to True to allow admins to paste any path to upload.
-* Users
-  * `user_library_import_dir` root directory containing sub-directories named by user emails. A common setup is that the value for `user_library_import_dir` is the same as for `ftp_upload_dir` allowing users to upload files via FTP and then import them either in history or data library.
-* Disabling compressed library archives downloads
-  * `disable_library_comptypes` Can be 'zip', 'gz', and 'bz2'
+.footnote[modifying the `galaxy.yml`]
 
 ---
+# galaxy.yml full options
 
-class: normal
-# Integrating Custom Biostars site
-
-[Biostars](https://www.biostars.org) is a forum software for Q&A in life sciences
-In `galaxy.yml`:
-* `biostar_key` shared key with Biostar instance.
-* `biostar_key_name` Cookie parameter name for storing shared key.
-* `biostar_enable_bug_reports` (False) allow posting bug reports to Biostars (instead of just email)
-* `biostar_url` URL to Biostars instance (must share base URL with Galaxy, e.g. biostar.usegalaxy.org)
-
----
-
-class: normal
-# galaxy.yml Explained
-
-Everything You Always Wanted to Know About `galaxy.yml`\* (\*But Were Afraid to Ask):
-* https://raw.githubusercontent.com/galaxyproject/galaxy/dev/config/galaxy.yml.sample
-
- ---
+a.k.a. Everything You Always Wanted to Know About `galaxy.yml`
+* [config schema](https://github.com/galaxyproject/galaxy/blob/dev/lib/galaxy/webapps/galaxy/config_schema.ym)
+* [config sample](https://raw.githubusercontent.com/galaxyproject/galaxy/dev/config/galaxy.yml.sample)
