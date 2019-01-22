@@ -43,7 +43,7 @@ _Timetable with sessions and material will be continuously updated towards the w
 | 10:30 | Break (coffee & snacks) | | |
 | 10:45 | Galaxy Server Part 1: Background, Install | [PostgreSQL Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/03-production-basics/databases.html) | (H,J) |
 | 12:30 | Lunch (catered) | |
-| 13:30 | Galaxy Server Part 2: Production Ready Install | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/03-production-basics/production.html), [NGINX Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/03-production-basics/webservers.html) | (H,N,M) |
+| 13:30 | Galaxy Server Part 2: Production Ready Install | [Production Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/03-production-basics/production.html), [NGINX Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/03-production-basics/webservers.html), [uWSGI Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/10-uwsgi/uwsgi.html), [Supervisor Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/11-systemd-supervisor/systemd-supervisor.html) | (H,N,M) |
 | 15:30 | Break (coffee & snacks) | | |
 | 15:45 | Reference Data | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/05-reference-genomes/reference_genomes.html), [Exercise](sessions/05-reference-genomes/ex1-reference-genomes.md) | (S) |
 | 17:00 | Close Day 1 | |  |
