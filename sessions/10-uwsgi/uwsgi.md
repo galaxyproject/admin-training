@@ -12,16 +12,8 @@ slides by @natefoo, @Slugger70
 ---
 # What is uWSGI?
 
-Web/application/WSGI server
-
-Replaces `Paste#http` (see `galaxy.ini`)
-
----
-class: largeish
-# Why uWSGI?
-
-- Python GIL is a severe limitation for multicore servers
-- Work around the GIL without manually managing multiple Galaxy processes
+- Web/application/WSGI server
+- Works around the GIL without manually managing multiple Galaxy processes
 
 ![Python GIL](images/gil.png)
 
@@ -35,29 +27,7 @@ class: largeish
 - Built in load balancing
 - Speak native high performance uWSGI protocol to nginx
 - Uninterrupted restarting
-
----
-# Other features
-
-Can do anything you can imagine: [uWSGI configuration options](http://uwsgi-docs.readthedocs.io/en/latest/Options.html)
-
----
-class: largeish
-# What's changed?
-
-Galaxy < 18.01: uWSGI possible and documented but not provided
-
-Galaxy >= 18.01:
-
-- uWSGI is the default server for new installs
-- YAML is the default config format for new installs
-- Lots of development work into improving Galaxy/uWSGI integration
-- Job handlers run as uWSGI *Mules*
-- uWSGI now comes with Galaxy (as a *wheel*)<sup>[1]</sup>
-
-.footnote[
-<sup>[1] Eagle-eyed viewers might have noticed that it was added to Galaxy in 17.09, but it has not been used by Galaxy itself until 18.01.</sup>
-]
+- Can do anything you can imagine: [uWSGI configuration options](http://uwsgi-docs.readthedocs.io/en/latest/Options.html)
 
 ---
 class: middle, top-title
@@ -69,20 +39,11 @@ class: middle, top-title
 - Job handler mules
 
 ---
-# uWSGI as the default
-
-If you have an existing Galaxy server using `galaxy.ini` and `run.sh`, **nothing changes**
-
-Only new installs use uWSGI by default
-
----
 class: largeish
 
 ## uWSGI as the default
 
 **Previously**, a config file was *required*.
-
-We hid this detail a bit by reading `galaxy.ini.sample` if `galaxy.ini` was not present
 
 --
 
@@ -134,8 +95,6 @@ It's best to keep the proxy server, especially if you intend to host more than j
 class: middle, top-title, center, largeish
 ## YAML config
 
-The INI format is limited, structured data formats (e.g. YAML) are more expressive
-
 uWSGI natively supports YAML configs (and INI, and PasteDeploy INI, and XML, and JSON, and ...)
 
 This allows us to put lists and dictionaries directly in to the main config file!
@@ -143,8 +102,6 @@ This allows us to put lists and dictionaries directly in to the main config file
 Galaxy configs can now be either INI or YAML
 
 Going forward some new features may only be configurable in YAML
-
-[galaxy.yml.sample](https://github.com/jmchilton/galaxy/blob/78992968ecd0de1f95b99352b53ea2ecd246f954/config/galaxy.yml.sample)
 
 ---
 class: middle, top-title, largeish
@@ -177,28 +134,6 @@ galaxy:
 - YAML line folding is used with `admin_users` to make the value more readable
 - `logging` is complex data structure of nested dictionaries and lists
 
----
-
-## YAML config
-
-*But I don't want to convert my long and tedious `galaxy.ini` to YAML!*
-
---
-
-Good news! There is a `galaxy.ini`-to-`galaxy.yml` conversion tool:
-
-```sh-session
-$ make config-convert-dry-run
-$ make config-convert
-$ make config-validate
-$ make config-lint
-```
-
---
-
-It is now possible to validate and lint the Galaxy config file!
-
-Config names are defined and their values are typed in [config_schema.yml](https://github.com/jmchilton/galaxy/blob/78992968ecd0de1f95b99352b53ea2ecd246f954/lib/galaxy/webapps/galaxy/config_schema.yml)
 
 ---
 class: middle, top-title
@@ -291,13 +226,7 @@ class: largeish
 
 ## The Job Handler Problem
 
-In the earliest days of Galaxy, it ran as a single process
-
-As load grew, the largely asynchronous tasks related to handling jobs began to interfere with servicing web requests
-
---
-
-Our solution was to run multiple Paste, and later, standalone python "webless" Galaxy servers dedicated to job handling
+Over time Galaxy grew and job handling required a lot of processing, the solution to this was standalone python "webless" Galaxy servers dedicated to job handling
 
 Managing these processes was tedious:
 - Add `[server:handlerN]` to `galaxy.ini`

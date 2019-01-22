@@ -67,17 +67,3 @@ There is also a "Galaxy" flavor<sup>[1]</sup> (includes [upload module](https://
 If configuring SSL (out of scope for this training), out-of-the-box SSL settings are often insecure!
 
 Use the [Mozilla SSL config generator](https://mozilla.github.io/server-side-tls/ssl-config-generator/) to create a default config and [Qualys SSL Server Test](https://www.ssllabs.com/ssltest/analyze.html) to check it.
-
----
-# uWSGI
-
-Galaxy comes with both [uWSGI](http://uwsgi-docs.readthedocs.io/en/latest/) and pure-python web server, [Paste](http://pythonpaste.org/)
-
-Since 18.01 every new Galaxy by default starts on uWSGI (but can be configured for Paste).
-
-Why we switched to uWSGI?
-- Built in multiprocess (avoid the GIL)
-- Built in load balancing
-- Better performance
-- Greater scalability
-- Hundreds of other features

@@ -42,7 +42,7 @@ _Timetable with sessions and material will be continuously updated towards the w
 | 10:30 | Break (coffee & snacks) | | |
 | 10:45 | Galaxy Server Part 1: Background, Install | [PostgreSQL Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/03-production-basics/databases.html) | (H,J) |
 | 12:30 | Lunch (catered) | |
-| 13:30 | Galaxy Server Part 2: Production Ready Install | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/03-production-basics/production.html), [NGINX Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/03-production-basics/webservers.html) | (H,N,M) |
+| 13:30 | Galaxy Server Part 2: Production Ready Install | [Production Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/03-production-basics/production.html), [NGINX Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/03-production-basics/webservers.html), [uWSGI Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/10-uwsgi/uwsgi.html), [Supervisor Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/11-systemd-supervisor/systemd-supervisor.html) | (H,N,M) |
 | 15:30 | Break (coffee & snacks) | | |
 | 15:45 | Reference Data | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/05-reference-genomes/reference_genomes.html), [Exercise](sessions/05-reference-genomes/ex1-reference-genomes.md) [CMVFS Exercise](https://github.com/galaxyproject/dagobah-training/blob/2019-pennstate/sessions/05-reference-genomes/ex2-cvmfs-connection.md)| (S) |
 | 17:00 | Close Day 1 | |  |
@@ -59,8 +59,6 @@ _Timetable with sessions and material will be continuously updated towards the w
 | 10:50 | Break (coffee & snacks) | | |
 | 11:00 | Introduction to the Galaxy Tool Shed: Identifying and installing well-defined tools | [Slides (Shed)](https://galaxyproject.github.io/dagobah-training/2019-pennstate/04-tool-shed/shed_intro.html), [Slides (Tools)](https://galaxyproject.github.io/dagobah-training/2019-pennstate/04-tool-shed/tool_installation.html), [Slides (Dependencies)](https://galaxyproject.github.io/dagobah-training/2019-pennstate/04-tool-shed/tool-dependencies.html)| (H)(S)(M) |
 | 12:00 | Lunch (on your own) | | |
-| 13:30 | Improving the web serving experience with uWSGI | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/10-uwsgi/uwsgi.html), [Exercise](sessions/10-uwsgi/ex1-uwsgi.md) | (N) |
-| 15:45 | Controlling Galaxy with systemd and supervisor | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/11-systemd-supervisor/systemd-supervisor.html), [Exercise](sessions/11-systemd-supervisor/ex1-supervisor.md) | (N) |
 | 16:30 | Using and configuring external authentication services | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/13-external-auth/external-auth.html), [PAM Auth Exercise](sessions/13-external-auth/ex1-pam-auth.md), [Upstream Auth Exercise](sessions/13-external-auth/ex2-upstream-auth.md) | |
 | 17:00 | Close Day 2 | |  |
 
@@ -91,10 +89,10 @@ _Timetable with sessions and material will be continuously updated towards the w
 | 09:00 | Welcome and questions | | |
 | 09:15 | Containerize all the things: Galaxy in Docker and Docker in Galaxy | [Docker Slides](https://galaxy.slides.com/bgruening/the-galaxy-docker-project), [Conda Slides](http://galaxy.slides.com/bgruening/deck-7#/), [Galaxy Docker tool example](https://github.com/apetkau/galaxy-hackathon-2014/tree/master/smalt)| (J) |
 | 10:45 | Break (coffee & snacks) | | |
-| 11:00 | Running Ethercalc in Galaxy with Galaxy Interactive Environments | | |
+| 11:00 | Running Ethercalc in Galaxy with Galaxy Interactive Environments | **EXERCISE** | (H) |
 | 12:00 | Lunch (catered)| | |
-| 13:00 | Cloudbursting | | |
-| 14:00 | Server monitoring and maintenance | [Slides](http://galaxyproject.github.io/training-material/topics/admin/tutorials/monitoring-maintenance/slides.html), [Exercise 1](http://galaxyproject.github.io/training-material/topics/admin/tutorials/monitoring-maintenance/tutorial.html), [Exercise 2](sessions/22-troubleshooting/ex1-sentry.md) | (H) |
+| 13:00 | Cloudbursting | **SLIDES** | (S) |
+| 14:00 | Server monitoring and maintenance | [Slides](http://galaxyproject.github.io/training-material/topics/admin/tutorials/monitoring-maintenance/slides.html), [Exercise 1](http://galaxyproject.github.io/training-material/topics/admin/tutorials/monitoring-maintenance/tutorial.html), [Exercise 2](sessions/22-troubleshooting/ex1-sentry.md)  **GRAFANA** **SENTRY**| (M, H) |
 | 15:15 | Break (coffee & snacks) | | |
 | 15:30 | monitoring & maintenance continued | | |
 | 17:00 | Wrap up and close | | |
