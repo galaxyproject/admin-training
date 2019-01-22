@@ -90,10 +90,10 @@ _Timetable with sessions and material will be continuously updated towards the w
 | 09:00 | Welcome and questions | | |
 | 09:15 | Containerize all the things: Galaxy in Docker and Docker in Galaxy | [Docker Slides](https://galaxy.slides.com/bgruening/the-galaxy-docker-project), [Conda Slides](http://galaxy.slides.com/bgruening/deck-7#/), [Galaxy Docker tool example](https://github.com/apetkau/galaxy-hackathon-2014/tree/master/smalt)| (J) |
 | 10:45 | Break (coffee & snacks) | | |
-| 11:00 | Running Ethercalc in Galaxy with Galaxy Interactive Environments | **EXERCISE** | (H) |
+| 11:00 | Running Ethercalc in Galaxy with Galaxy Interactive Environments | | (H) |
 | 12:00 | Lunch (catered)| | |
-| 13:00 | Cloudbursting | **SLIDES** | (S) |
-| 14:00 | Server monitoring and maintenance | [Slides](http://galaxyproject.github.io/training-material/topics/admin/tutorials/monitoring-maintenance/slides.html), [Exercise 1](http://galaxyproject.github.io/training-material/topics/admin/tutorials/monitoring-maintenance/tutorial.html), [Exercise 2](sessions/22-troubleshooting/ex1-sentry.md)  **GRAFANA** **SENTRY**| (M, H) |
+| 13:00 | Cloudbursting | | (S) |
+| 14:00 | Server monitoring and maintenance | [Slides](http://galaxyproject.github.io/training-material/topics/admin/tutorials/monitoring-maintenance/slides.html), [Exercise 1](http://galaxyproject.github.io/training-material/topics/admin/tutorials/monitoring-maintenance/tutorial.html), [Exercise 2](sessions/22-troubleshooting/ex1-sentry.md) | (M, H) |
 | 15:15 | Break (coffee & snacks) | | |
 | 15:30 | monitoring & maintenance continued | | |
 | 17:00 | Wrap up and close | | |
