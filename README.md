@@ -15,17 +15,16 @@
 
 ## Location
 
-TBA, State College, Pennsylvania, USA
+**Room W306, Millennium Science Complex** - [map](https://goo.gl/maps/1WwT15jfi5y)
+Penn State University, State College, Pennsylvania, USA
 
 ## Training VM instances
-
-TODO fill this section
 
 List of training instances is available in [TODO]. Please pick one instance and enter your name in the user column.
 
 2 cores, 4 GiB memory, and 20 GiB disk, Ubuntu 16.04
 
-We are using instances from the [Jetstream cloud](https://jetstream-cloud.org/), image ID _acb53109-941f-4593-9bf8-4a53cb9e0739_.
+We are using instances from the [Jetstream cloud](https://jetstream-cloud.org/), image ID _35ea1ea5-ffa9-45bb-a38d-f5fecc16ff64_.
 
 ## Timetable
 
@@ -45,7 +44,7 @@ _Timetable with sessions and material will be continuously updated towards the w
 | 12:30 | Lunch (catered) | |
 | 13:30 | Galaxy Server Part 2: Production Ready Install | [Production Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/03-production-basics/production.html), [NGINX Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/03-production-basics/webservers.html), [uWSGI Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/10-uwsgi/uwsgi.html), [Supervisor Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/11-systemd-supervisor/systemd-supervisor.html) | (H,N,M) |
 | 15:30 | Break (coffee & snacks) | | |
-| 15:45 | Reference Data | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/05-reference-genomes/reference_genomes.html), [Exercise](sessions/05-reference-genomes/ex1-reference-genomes.md) | (S) |
+| 15:45 | Reference Data | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/05-reference-genomes/reference_genomes.html), [Exercise](sessions/05-reference-genomes/ex1-reference-genomes.md) [CMVFS Exercise](https://github.com/galaxyproject/dagobah-training/blob/2019-pennstate/sessions/05-reference-genomes/ex2-cvmfs-connection.md)| (S) |
 | 17:00 | Close Day 1 | |  |
 
 ### Tuesday
@@ -54,7 +53,7 @@ _Timetable with sessions and material will be continuously updated towards the w
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
 | 09:00 | Welcome and questions | | |
-| 09:15 | Ephemeris | | (J)(M)|
+| 09:15 | Ephemeris | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/24-ephemeris/ephemeris.html) | (J)(M)|
 | 09:30 | Managing Galaxy tools | [Exercise](sessions/04-tool-shed/ex-tool-management.md) | (M) |
 | 10:30 | Users, Groups, and Quotas | [Slides](http://galaxyproject.github.io/training-material/topics/admin/tutorials/users-groups-quotas/slides.html) | (M) |
 | 10:50 | Break (coffee & snacks) | | |
@@ -75,8 +74,8 @@ _Timetable with sessions and material will be continuously updated towards the w
 | 10:20 | Break (coffee & snacks) | | |
 | 10:40 | Compute cluster continued | | |
 | 12:00 | Lunch (catered) | | |
-| 13:00 | Storage management and using heterogeneous storage services | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/19-storage/storage.html), [Exercise](sessions/19-storage/ex1-objectstore.md) | |
-| 14:00 | Using heterogeneous compute resources | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/17-heterogenous/heterogeneous.html), [Exercise](sessions/17-heterogenous/ex1-pulsar.md) | |
+| 13:00 | Storage management and using heterogeneous storage services | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/19-storage/storage.html), [Exercise](sessions/19-storage/ex1-objectstore.md) | (M,S) |
+| 14:00 | Using heterogeneous compute resources | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/17-heterogenous/heterogeneous.html), [Exercise](sessions/17-heterogenous/ex1-pulsar.md) | (S,N)|
 | 15:00 | Break (coffee & snacks) | | |
 | 15:20 | compute resources continued | | |
 | 17:00 | Close day 3 | |  |
@@ -107,7 +106,7 @@ _Timetable with sessions and material will be continuously updated towards the w
 | 09:00 | Welcome and questions | | |
 | 09:15 | Upgrading to a new Galaxy release | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/08-upgrading-release/upgrading.html) | (M) |
 | 10:00 | Break (coffee & snacks) | | |
-| 10:15 | What's newer than year? | **SLIDES** | (N) |
+| 10:15 | What's newer than year? | | (N, J) |
 | 12:00 | Lunch (catered) | | |
 | 13:00 | When things go wrong: Galaxy Server Troubleshooting | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/22-troubleshooting/troubleshooting.html) | (N) |
 | 15:00 | Wrap up and close | | |
