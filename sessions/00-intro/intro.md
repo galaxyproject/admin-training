@@ -57,6 +57,15 @@ The computing resources for this training have been provided by **Jetstream**
 Find the IP address for your instance [here](https://docs.google.com/spreadsheets/d/1sIoU4qpv4HdKNUNOtsAtW-XKKZvIsDfReAoS7uBbCZM/edit?usp=sharing) alias http://bit.ly/adminvms. Put it somewhere easy to copy/paste.
 
 ---
+# Training philosophy
+
+Galaxy has many options, configuration possibilities, and deployment paradigms. Our trainings used to cover multiple paths which made them longer, less focused, and prone to errors.
+
+This time we adapted our training to follow the `one true path`(c) - which is usually the one we use for `usegalaxy.*` servers - most tested and stable path.
+
+Galaxy has all the options and possibilities as before, but unless you are opinionated/locked in we recommend staying on the `one true path`(c). If you can't Galaxy comes with documentation and community to help.
+
+---
 # Useful Links
 
 - https://docs.galaxyproject.org/
@@ -72,6 +81,7 @@ Find the IP address for your instance [here](https://docs.google.com/spreadsheet
 # Thanks
 
 - **Dave Clements**
+- **Donna McMinn**
 
 ---
 #GCC 2019

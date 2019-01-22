@@ -22,6 +22,8 @@ We answer.
 * Small Python library for plugin management
     * tools, reference data, workflows, data libraries
 * `$ pip install ephemeris`
+* https://github.com/galaxyproject/ephemeris
+* https://ephemeris.readthedocs.io
 
 .footnote[Ephemeris]
 ---
