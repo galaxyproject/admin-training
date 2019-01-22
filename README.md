@@ -76,8 +76,8 @@ _Timetable with sessions and material will be continuously updated towards the w
 | 10:20 | Break (coffee & snacks) | | |
 | 10:40 | Compute cluster continued | | |
 | 12:00 | Lunch (catered) | | |
-| 13:00 | Storage management and using heterogeneous storage services | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/19-storage/storage.html), [Exercise](sessions/19-storage/ex1-objectstore.md) | |
-| 14:00 | Using heterogeneous compute resources | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/17-heterogenous/heterogeneous.html), [Exercise](sessions/17-heterogenous/ex1-pulsar.md) | |
+| 13:00 | Storage management and using heterogeneous storage services | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/19-storage/storage.html), [Exercise](sessions/19-storage/ex1-objectstore.md) | (M,S) |
+| 14:00 | Using heterogeneous compute resources | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/17-heterogenous/heterogeneous.html), [Exercise](sessions/17-heterogenous/ex1-pulsar.md) | (S,N)|
 | 15:00 | Break (coffee & snacks) | | |
 | 15:20 | compute resources continued | | |
 | 17:00 | Close day 3 | |  |
