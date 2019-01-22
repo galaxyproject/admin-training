@@ -3,15 +3,17 @@
 
 **Monday 1/28/2019 - Friday 2/1/2019**
 
-jump to [Monday](#monday) | [Tuesday](#tuesday) | [Wednesday](#wednesday) | [Thursday](#thursday) | [Friday](#friday)
+- Index
+	- [Monday](#monday)
+	- [Tuesday](#tuesday)
+	- [Wednesday](#wednesday)
+	- [Thursday](#thursday)
+	- [Friday](#friday)
+- [Slide Index](https://galaxyproject.github.io/dagobah-training/2019-pennstate/)
+- [Join the Discussion](https://gitter.im/dagobah-training/Lobby)
+- [Galaxy Training Materials](https://training.galaxyproject.org/)
 
-Built slides have [an index](https://galaxyproject.github.io/dagobah-training/2019-pennstate/).
-
-Join the chat at https://gitter.im/dagobah-training/Lobby
-
-[Galaxy Training material](http://galaxyproject.github.io/training-material/)
-
-### Location
+## Location
 
 TBA, State College, Pennsylvania, USA
 
@@ -39,11 +41,11 @@ _Timetable with sessions and material will be continuously updated towards the w
 | 08:30 | Registration | | |
 | 09:00 | Welcome and introduction | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/00-intro/intro.html) | All |
 | 09:20 | Deployment and platform options | [Slides](https://galaxyproject.github.io/training-material/topics/admin/tutorials/deployment-platforms-options/slides.html#1) | (M) |
-| 9:40 | Intro to Ansible | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/14-ansible/ansible-introduction.html#1) | (S) |
+| 09:40 | Intro to Ansible | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/14-ansible/ansible-introduction.html#1) | (S) |
 | 10:30 | Break (coffee & snacks) | | |
 | 10:45 | Galaxy Server Part 1: Background, Install | [PostgreSQL Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/03-production-basics/databases.html) | (H,J) |
 | 12:30 | Lunch (catered) | |
-| 13:30 | Galaxy Server Part 2: Gearing towards production (NGINX, LE?, ProFTPD) | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/03-production-basics/production.html), [NGINX Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/03-production-basics/webservers.html) | (H,N,M) |
+| 13:30 | Galaxy Server Part 2: Production Ready Install | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/03-production-basics/production.html), [NGINX Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/03-production-basics/webservers.html) | (H,N,M) |
 | 15:30 | Break (coffee & snacks) | | |
 | 15:45 | Reference Data | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/05-reference-genomes/reference_genomes.html), [Exercise](sessions/05-reference-genomes/ex1-reference-genomes.md) | (S) |
 | 17:00 | Close Day 1 | |  |
