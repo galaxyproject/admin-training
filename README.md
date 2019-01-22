@@ -31,8 +31,6 @@ We are using instances from the [Jetstream cloud](https://jetstream-cloud.org/),
 
 _Timetable with sessions and material will be continuously updated towards the workshop._
 
-### Basic Sessions
-
 #### Monday
 **28th January**
 
@@ -67,8 +65,6 @@ _Timetable with sessions and material will be continuously updated towards the w
 | 16:30 | Using and configuring external authentication services | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/13-external-auth/external-auth.html), [PAM Auth Exercise](sessions/13-external-auth/ex1-pam-auth.md), [Upstream Auth Exercise](sessions/13-external-auth/ex2-upstream-auth.md) | |
 | 17:00 | Close Day 2 | |  |
 
-
-### Advanced Sessions
 
 #### Wednesday
 **30th January**
