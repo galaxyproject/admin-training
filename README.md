@@ -105,7 +105,7 @@ _Timetable with sessions and material will be continuously updated towards the w
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
 | 09:00 | Welcome and questions | | |
-| 09:15 | Upgrading to a new Galaxy release | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/08-upgrading-release/upgrading.html) | (M) |
+| 09:15 | Upgrading to a new Galaxy release | [Slides](https://galaxyproject.github.io/training-material/topics/admin/tutorials/upgrading/slides.html#1) | (M) |
 | 10:00 | Break (coffee & snacks) | | |
 | 10:15 | What's newer than year? | | (N, J) |
 | 12:00 | Lunch (catered) | | |
