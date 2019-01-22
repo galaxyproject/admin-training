@@ -13,17 +13,16 @@ Join the chat at https://gitter.im/dagobah-training/Lobby
 
 ### Location
 
-TBA, State College, Pennsylvania, USA
+**Room W306, Millennium Science Complex** - [map](https://goo.gl/maps/1WwT15jfi5y)
+Penn State University, State College, Pennsylvania, USA
 
 ## Training VM instances
-
-TODO fill this section
 
 List of training instances is available in [TODO]. Please pick one instance and enter your name in the user column.
 
 2 cores, 4 GiB memory, and 20 GiB disk, Ubuntu 16.04
 
-We are using instances from the [Jetstream cloud](https://jetstream-cloud.org/), image ID _acb53109-941f-4593-9bf8-4a53cb9e0739_.
+We are using instances from the [Jetstream cloud](https://jetstream-cloud.org/), image ID _35ea1ea5-ffa9-45bb-a38d-f5fecc16ff64_.
 
 ## Timetable
 

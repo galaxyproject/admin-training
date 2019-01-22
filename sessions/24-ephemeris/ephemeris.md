@@ -1,0 +1,150 @@
+layout: true
+class: inverse, middle, large
+
+---
+class: special
+# Ephemeris
+
+slides by @martenson
+
+.footnote[\#usegalaxy / @galaxyproject]
+
+---
+class: special
+# Please ask!
+
+We answer.
+
+.footnote[Ephemeris]
+---
+# What is it and what it does?
+
+* Small Python library for plugin management
+    * tools, reference data, workflows, data libraries
+* `$ pip install ephemeris`
+
+.footnote[Ephemeris]
+---
+# Install workflows
+
+```
+workflow-install [-h] [-v] [-g GALAXY] [-u USER] [-p PASSWORD]
+                        [-a API_KEY] -w WORKFLOW_PATH [--publish_workflows]
+```
+
+(use `workflow-to-tools` to extract list of tools from a workflow)
+
+.footnote[Ephemeris]
+---
+# Get Galaxy's tool list
+
+```
+get-tool-list [-h] [-v] [-g GALAXY] [-u USER] [-p PASSWORD]
+                     [-a API_KEY] -o OUTPUT [--include_tool_panel_id]
+                     [--skip_tool_panel_name] [--skip_changeset_revision]
+                     [--get_data_managers] [--get_all_tools]
+```
+
+.footnote[Ephemeris]
+---
+```
+tools:
+- name: 'column_maker'
+  owner: 'devteam'
+  tool_panel_section_label: 'Columnmaker section'
+- name: 'bwa'
+  owner: 'devteam'
+  tool_panel_section_label: 'NGS mapping'
+  revisions:
+  - '051eba708f43'  # 0.7.15.2
+  - '4d82cf59895e'  # 0.7.16.2
+  install_resolver_dependencies: False
+- name: 'tabular_to_fasta'
+  owner: 'devteam'
+  tool_panel_section_label: 'New Converters'
+  revisions:
+  - '0b4e36026794'  # v1.1.0
+```
+
+.footnote[Ephemeris]
+---
+# Install/Update/Test tools
+
+```
+shed-tools install [-h] [-v] [--log_file LOG_FILE] [-g GALAXY] [-u USER]
+                   [-p PASSWORD] [-a API_KEY] [-t TOOL_LIST_FILE]
+                   [-y TOOL_YAML] [--name NAME] [--owner OWNER]
+                   [--revisions [REVISIONS [REVISIONS ...]]]
+                   [--toolshed TOOL_SHED_URL] [--install_tool_dependencies]
+                   [--skip_install_resolver_dependencies]
+                   [--skip_install_repository_dependencies] [--test]
+                   [--test_existing] [--test_json TEST_JSON]
+                   [--test_user_api_key TEST_USER] [--test_user TEST_USER]
+                   [--section TOOL_PANEL_SECTION_ID]
+                   [--section_label TOOL_PANEL_SECTION_LABEL] [--latest]
+```
+.small[
+* Ansible role: https://github.com/galaxyproject/ansible-galaxy-tools
+* Sample playbook: https://github.com/afgane/galaxy-tools-playbook
+]
+
+.footnote[Ephemeris]
+---
+# Run data managers
+
+```
+run-data-managers [-h] [-v] [--log_file LOG_FILE] [-g GALAXY] [-u USER]
+                         [-p PASSWORD] [-a API_KEY] --config CONFIG
+                         [--overwrite] [--ignore_errors]
+```
+
+.footnote[Ephemeris]
+---
+# Setup data libraries
+
+```
+setup-data-libraries [-h] [-v] [-g GALAXY] [-u USER] [-p PASSWORD]
+                            [-a API_KEY] -i INFILE [--training] [--legacy]
+```
+
+.footnote[Ephemeris]
+---
+```
+destination:
+  type: library
+  name: "Cool Training Library"
+  description: "A longer description."
+  synopsis: "Optional - does anyone ever set this?"
+items:
+  - name: "Test Folder 1"
+    description: "Description of what is in Test Folder 1"  # Only populated with new API.
+    items:
+      - url: https://raw.githubusercontent.com/eteriSokhoyan/test-data/master/cliques-high-representatives.fa
+        src: url
+        ext: fasta
+        info: "A cool longer description."  # Only populated with new API.
+        dbkey: "hg19"  # Only populated with new API.
+  - name: "Test data segmentation-fold"
+    items:
+      - url: https://raw.githubusercontent.com/yhoogstrate/segmentation-fold/55d0bb28b01e613844ca35cf21fa41379fd72770/scripts/energy-estimation-utility/tests/test-data/workflow-test_cd-box_kturns.xml
+        name: workflow-test_cd-box_kturns.xml  # Only populated with new API.
+        info: Downloaded from https://raw.githubusercontent.com/yhoogstrate/segmentation-fold/55d0bb28b01e613844ca35cf21fa41379fd72770/scripts/energy-estimation-utility/tests/test-data/workflow-test_cd-box_kturns.xml
+        src: url
+        ext: xml
+```
+
+.footnote[Ephemeris]
+---
+# Wait for Galaxy
+
+```
+$ galaxy-wait -g http://localhost:8080 -v
+[00] Galaxy not up yet... HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /api/version (Caused
+[01] Galaxy not up yet... HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /api/version (Caused
+[02] Galaxy not up yet... HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /api/version (Caused
+[03] Galaxy not up yet... HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /api/version (Caused
+[04] Galaxy not up yet... HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /api/version (Caused
+[05] Galaxy not up yet... HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /api/version (Caused
+Galaxy Version: 17.05
+```
+.footnote[Ephemeris]
