@@ -58,7 +58,7 @@ _Timetable with sessions and material will be continuously updated towards the w
 | 10:30 | Users, Groups, and Quotas | [Slides](http://galaxyproject.github.io/training-material/topics/admin/tutorials/users-groups-quotas/slides.html) | (M) |
 | 10:50 | Break (coffee & snacks) | | |
 | 11:00 | Introduction to the Galaxy Tool Shed: Identifying and installing well-defined tools | [Slides (Shed)](https://galaxyproject.github.io/dagobah-training/2019-pennstate/04-tool-shed/shed_intro.html), [Slides (Tools)](https://galaxyproject.github.io/dagobah-training/2019-pennstate/04-tool-shed/tool_installation.html), [Slides (Dependencies)](https://galaxyproject.github.io/dagobah-training/2019-pennstate/04-tool-shed/tool-dependencies.html)| (H)(S)(M) |
-| 12:00 | Lunch (on your own) | | |
+| 12:00 | Lunch (catered) | | |
 | 16:30 | Using and configuring external authentication services | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/13-external-auth/external-auth.html), [PAM Auth Exercise](sessions/13-external-auth/ex1-pam-auth.md), [Upstream Auth Exercise](sessions/13-external-auth/ex2-upstream-auth.md) | |
 | 17:00 | Close Day 2 | |  |
 
@@ -73,11 +73,11 @@ _Timetable with sessions and material will be continuously updated towards the w
 | 09:45 | Connecting Galaxy to a compute cluster | [Slides](http://galaxyproject.github.io/training-material/topics/admin/tutorials/connect-to-compute-cluster/slides.html), [Exercise](http://galaxyproject.github.io/training-material/topics/admin/tutorials/connect-to-compute-cluster/tutorial.html) | (N) |
 | 10:20 | Break (coffee & snacks) | | |
 | 10:40 | Compute cluster continued | | |
-| 12:00 | Lunch (catered) | | |
-| 13:00 | Storage management and using heterogeneous storage services | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/19-storage/storage.html), [Exercise](sessions/19-storage/ex1-objectstore.md) | (M,S) |
-| 14:00 | Using heterogeneous compute resources | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/17-heterogenous/heterogeneous.html), [Exercise](sessions/17-heterogenous/ex1-pulsar.md) | (S,N)|
-| 15:00 | Break (coffee & snacks) | | |
-| 15:20 | compute resources continued | | |
+| 12:00 | Lunch (on your own) | | |
+| 13:30 | Storage management and using heterogeneous storage services | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/19-storage/storage.html), [Exercise](sessions/19-storage/ex1-objectstore.md) | (M,S) |
+| 14:15 | Using heterogeneous compute resources | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/17-heterogenous/heterogeneous.html), [Exercise](sessions/17-heterogenous/ex1-pulsar.md) | (S,N)|
+| 15:15 | Break (coffee & snacks) | | |
+| 15:35 | compute resources continued | | |
 | 17:00 | Close day 3 | |  |
 
 
