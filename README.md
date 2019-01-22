@@ -31,7 +31,7 @@ We are using instances from the [Jetstream cloud](https://jetstream-cloud.org/),
 
 _Timetable with sessions and material will be continuously updated towards the workshop._
 
-#### Monday
+### Monday
 **28th January**
 
 | **Time** | **Topic** | **Links** | **Instructor** |
@@ -48,7 +48,7 @@ _Timetable with sessions and material will be continuously updated towards the w
 | 15:45 | Reference Data | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/05-reference-genomes/reference_genomes.html), [Exercise](sessions/05-reference-genomes/ex1-reference-genomes.md) | (S) |
 | 17:00 | Close Day 1 | |  |
 
-#### Tuesday
+### Tuesday
 **29th January**
 
 | **Time** | **Topic** | **Links** | **Instructor** |
@@ -66,7 +66,7 @@ _Timetable with sessions and material will be continuously updated towards the w
 | 17:00 | Close Day 2 | |  |
 
 
-#### Wednesday
+### Wednesday
 **30th January**
 
 | **Time** | **Topic** | **Links** | **Instructor** |
@@ -84,7 +84,7 @@ _Timetable with sessions and material will be continuously updated towards the w
 | 17:00 | Close day 3 | |  |
 
 
-#### Thursday
+### Thursday
 **31th January**
 
 | **Time** | **Topic** | **Links** | **Instructor** |
@@ -101,7 +101,7 @@ _Timetable with sessions and material will be continuously updated towards the w
 | 17:00 | Wrap up and close | | |
 
 
-#### Friday
+### Friday
 **1st February**
 
 | **Time** | **Topic** | **Links** | **Instructor** |
