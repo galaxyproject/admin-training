@@ -53,14 +53,14 @@ _Timetable with sessions and material will be continuously updated towards the w
 | **Time** | **Topic** | **Links** | **Instructor** |
 | -------- | --------- | --------- | ----------- |
 | 09:00 | Welcome and questions | | |
-| 09:15 | Ephemeris | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/24-ephemeris/ephemeris.html) | (J)(M)|
-| 09:30 | Managing Galaxy tools | [Exercise](sessions/04-tool-shed/ex-tool-management.md) | (M) |
-| 10:30 | Users, Groups, and Quotas | [Slides](http://galaxyproject.github.io/training-material/topics/admin/tutorials/users-groups-quotas/slides.html) | (M) |
-| 10:50 | Break (coffee & snacks) | | |
-| 11:00 | Introduction to the Galaxy Tool Shed: Identifying and installing well-defined tools | [Slides (Shed)](https://galaxyproject.github.io/dagobah-training/2019-pennstate/04-tool-shed/shed_intro.html), [Slides (Tools)](https://galaxyproject.github.io/dagobah-training/2019-pennstate/04-tool-shed/tool_installation.html), [Slides (Dependencies)](https://galaxyproject.github.io/dagobah-training/2019-pennstate/04-tool-shed/tool-dependencies.html)| (H)(S)(M) |
+| 9:15 | Galaxy Tool Shed | [Tools](https://galaxyproject.github.io/dagobah-training/2019-pennstate/04-tool-shed/tool_installation.html), [Toolshed](https://galaxyproject.github.io/dagobah-training/2019-pennstate/04-tool-shed/shed_intro.html)| (H,S,M) |
+| 10:00 | Ephemeris | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/24-ephemeris/ephemeris.html) | (J,M)|
+| 10:30 | Break (coffee & snacks) | | |
+| 10:50 | Managing Galaxy tools | [Exercise](sessions/04-tool-shed/ex-tool-management.md) | (M) |
 | 12:00 | Lunch (catered) | | |
-| 13:00 | Reference Data | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/05-reference-genomes/reference_genomes.html), [Exercise](sessions/05-reference-genomes/ex1-reference-genomes.md) [CMVFS Exercise](https://github.com/galaxyproject/dagobah-training/blob/2019-pennstate/sessions/05-reference-genomes/ex2-cvmfs-connection.md)| (S) |
-| 16:30 | Using and configuring external authentication services | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/13-external-auth/external-auth.html), [PAM Auth Exercise](sessions/13-external-auth/ex1-pam-auth.md), [Upstream Auth Exercise](sessions/13-external-auth/ex2-upstream-auth.md) | |
+| 13:00 | Users, Groups, and Quotas | [Slides](http://galaxyproject.github.io/training-material/topics/admin/tutorials/users-groups-quotas/slides.html) | (M) |
+| 14:00 | Reference Data | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/05-reference-genomes/reference_genomes.html), [Exercise](sessions/05-reference-genomes/ex1-reference-genomes.md) [CMVFS Exercise](https://github.com/galaxyproject/dagobah-training/blob/2019-pennstate/sessions/05-reference-genomes/ex2-cvmfs-connection.md)| (S) |
+| 16:15 | Using and configuring external authentication services | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/13-external-auth/external-auth.html), [PAM Auth Exercise](sessions/13-external-auth/ex1-pam-auth.md), [Upstream Auth Exercise](sessions/13-external-auth/ex2-upstream-auth.md) | |
 | 17:00 | Close Day 2 | |  |
 
 

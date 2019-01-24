@@ -39,10 +39,7 @@ You can add tools to Galaxy either
 - To add local tools you need:
   - Make a copy `$ cp tool_conf.xml.sample tool_conf.xml`.
   - Add your tool entries to the `tool_conf.xml`.
-  - (Re)start Galaxy.
-
-???
-From 16.10 use `<toolbox monitor="true">` to trigger hot reload of tools.
+  - Refresh the site
 
 ---
 # How to install a tool from Tool Shed
@@ -130,18 +127,24 @@ You can also manipulate the searchlimit with `tool_search_limit = 20` which will
 display more/less results of the search.
 
 ---
-# Tool management with Ephemeris
+# Dependency resolvers
 
-* [Ephemeris](https://github.com/galaxyproject/ephemeris) uses [Bioblend](https://github.com/galaxyproject/bioblend) to remotely manage Galaxy instances via Galaxy's API.
+* We aim to make Galaxy resolver-independent.
+* What resolver is going to be used for the tool dependency is determined at runtime and prioritised in `config/dependency_resolvers_conf.xml`.
 
-With ephemeris you can:
- - install (long) lists of tool repositories (i.e all usegalaxy.org tools)
- - keep all tools updated
- - install reference data.
-
-Ephemeris is used in the `ansible-galaxy-tools` role.
+```xml
+<dependency_resolvers>
+  <tool_shed_packages />
+  <galaxy_packages />
+  <conda />
+  <galaxy_packages versionless="true" />
+  <conda versionless="true" />
+</dependency_resolvers>
+```
 
 ---
-# usegalaxy.eu example
+# Tool management with Ephemeris
+
+* usegalaxy.eu example
 
 https://github.com/usegalaxy-eu/usegalaxy-eu-tools

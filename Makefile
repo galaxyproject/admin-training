@@ -15,10 +15,9 @@ generate-slides:
 	$(IN_VENV) python slideshow/build_slideshow.py 'Systemd and Supervisor' sessions/11-systemd-supervisor/systemd-supervisor.md 11-systemd-supervisor
 
 # Tuesday
-	$(IN_VENV) python slideshow/build_slideshow.py 'Ephemeris' sessions/24-ephemeris/ephemeris.md 24-ephemeris
+	$(IN_VENV) python slideshow/build_slideshow.py 'Tools' sessions/04-tool-shed/tool_installation.md 04-tool-shed
 	$(IN_VENV) python slideshow/build_slideshow.py 'Tool Shed' sessions/04-tool-shed/shed_intro.md 04-tool-shed
-	$(IN_VENV) python slideshow/build_slideshow.py 'Tool Installation' sessions/04-tool-shed/tool_installation.md 04-tool-shed
-	$(IN_VENV) python slideshow/build_slideshow.py 'Galaxy Tool Basics' sessions/x01-tool-basics/tool-basics.md x01-tool-basics
+	$(IN_VENV) python slideshow/build_slideshow.py 'Ephemeris' sessions/24-ephemeris/ephemeris.md 24-ephemeris
 	$(IN_VENV) python slideshow/build_slideshow.py 'Defining and importing genomes, Data Managers' sessions/05-reference-genomes/reference_genomes.md 05-reference-genomes
 	$(IN_VENV) python slideshow/build_slideshow.py 'External Authentication' sessions/13-external-auth/external-auth.md 13-external-auth
 
@@ -34,6 +33,7 @@ generate-slides:
 	$(IN_VENV) python slideshow/build_slideshow.py 'Complex Galaxy Server Examples' sessions/x03-main-galaxy/usegalaxy.md x03-main-galaxy
 
 	# $(IN_VENV) python slideshow/build_slideshow.py 'Clouds' sessions/18-clouds/clouds.md 18-clouds
+	# $(IN_VENV) python slideshow/build_slideshow.py 'Galaxy Tool Basics' sessions/x01-tool-basics/tool-basics.md x01-tool-basics
 	# $(IN_VENV) python slideshow/build_slideshow.py 'Advanced Tool Wrapping' sessions/x02-tools-advanced/tools-advanced.md x02-tools-advanced
 
 	echo "</body></html>" >> docs/index.html
