@@ -24,7 +24,7 @@ List of training instances is available in [TODO]. Please pick one instance and 
 
 2 cores, 4 GiB memory, and 20 GiB disk, Ubuntu 16.04
 
-We are using instances from the [Jetstream cloud](https://jetstream-cloud.org/), image ID _35ea1ea5-ffa9-45bb-a38d-f5fecc16ff64_.
+We are using instances from the [Jetstream cloud](https://jetstream-cloud.org/), image ID _470d2fba-d20b-47b0-a89a-ab725cd09f8b_.
 
 ## Timetable
 
