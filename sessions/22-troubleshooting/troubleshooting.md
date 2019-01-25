@@ -454,7 +454,7 @@ class: special, middle
 ---
 # Where to get help
 
-- [Galaxy Biostar](https://biostar.usegalaxy.org/)
+- [Galaxy Help](https://help.galaxyproject.org/)
 - [galaxy-dev Mailing list](http://dev.list.galaxyproject.org/)
 - [IRC](https://wiki.galaxyproject.org/Support/IRC): \#galaxyproject on Freenode
-- [Wiki: Support](https://wiki.galaxyproject.org/Support)
+- [Hub Support page](https://galaxyproject.org/support/)
