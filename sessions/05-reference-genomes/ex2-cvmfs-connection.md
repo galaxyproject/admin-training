@@ -4,6 +4,8 @@
 
 # Shared Reference Genomes and Indices - Exercise
 
+There are two sections to this exercise. The first shows you how to use ansible to setup and configure CVMFS for Galaxy. The second shows you how to do everything manually. It is recommended that you use the ansible method. The manual method is included here mainly for a more in depth understanding of what is happening.
+
 ## Learning Outcomes
 
 By the end of this tutorial, you should:
@@ -11,6 +13,7 @@ By the end of this tutorial, you should:
 1. Have an understanding of what CVMFS is and how it works
 2. Install and configure the CVMFS client on a linux machine and mount the Galaxy reference data repository
 3. Configure your Galaxy to use these reference genomes and indices
+4. Use an ansible playbook for all of the above.
 
 ## Introduction
 
@@ -44,7 +47,52 @@ The Galaxy project supports a few CVMFS repositories.
 | Singularity Containers | `singularity.galaxyproject.org` | Singularity containers for everything in Biocontainers for use in Galaxy systems |
 | Galaxy Main Configuration | `main.galaxyproject.org` | The configuration files etc for Galaxy Main (usegalaxy.org) |
 
-## Setting up an instance to access a CVMFS repository
+## Installing and configuring Galaxy's CVMFS reference data with ansible
+
+Luckily for us, the Galaxy Project has a lot of experience with using and configuring CVMFS and we are going to leverage off that. To get CVMFS working on our Galaxy server, we will use the ansible role for CVMFS written by the Galaxy Project. Firstly, we need to install the role and then write a playbook for using it.
+
+If the terms "ansible", "role" and "playbook" mean nothing to you, please checkout [the ansible introduction slides](https://galaxyproject.github.io/training-material/topics/admin/tutorials/ansible/slides.html#1) and [the ansible introduction tutorial](https://galaxyproject.github.io/training-material/topics/admin/tutorials/ansible/tutorial.html)
+
+#### Step 1: Add the CVMFS role to the ansible `requirements.yml`
+
+In your working directory, add the following line to your `requirements.yml` file (if you don't already have one, create it.)
+
+```yaml
+- src: galaxyproject.cvmfs
+```
+
+Now run ansible-galaxy to download the new requirement.
+
+```bash
+ansible-galaxy install -p roles -r requirements.yaml
+```
+
+#### Step 2: Create some variables in the group vars file
+
+We need to add some variables to the `group_vars/galaxyservers.yml` file.
+
+The variables available in this role are:
+
+| Variable | Type  | Description |
+|----------|-------|-------------|
+|`cvmfs_role` | string | Type of CVMFS host: `client`, `stratum0`, `stratum1`, or `localproxy`. Alternatively, you may put hosts in to groups `cvmfsclients`, `cvmfsstratum0servers`, `cvmfsstratum1servers`, and `cvmfslocalproxies`. Controls what packages are installed and what configuration is performed.|
+|`cvmfs_keys` | list of dicts | Keys to install on hosts of all types.|
+|`cvmfs_server_urls` | list of dicts | CVMFS server URLs, the value of `CVMFS_SERVER_URL` in `/etc/cvmfs/domain.d/<domain>.conf`.|
+|`cvmfs_repositories` | list of dicts | CVMFS repository configurations, the value of `CVMFS_REPOSITORIES` in `/etc/cvmfs/default.local` plus additional settings in `/etc/cvmfs/repositories.d/<repository>/{client,server}.conf`.|
+|`cvmfs_quota_limit` | integer in MB | Size of CVMFS client cache. Default is `4000`.|
+|`cvmfs_upgrade_client` | boolean | Upgrade CVMFS on clients to the latest version if it is already installed. Default is `false`.|
+|`cvmfs_preload_install` | boolean | Install the `cvmfs_preload` script for [preloading the CVMFS cache][preload].|
+|`cvmfs_preload_path` | path | Directory where `cvmfs_preload` should be installed|
+|`cvmfs_install_setuid_cvmfs_wipecache` | boolean | Install a setuid binary on clients that allows unprivileged users to perform `cvmfs_config wipecache`. EL only (source is provided).|
+|`cvmfs_install_setuid_cvmfs_remount_sync` | boolean | Install a setuid binary on clients that allows unprivileged users to perform `cvmfs_talk remount sync`. EL only (source is provided).|
+
+We need to set the `cvmfs_role`, `cvmfs_keys`, `cvmfs_server_urls`, `cvmfs_repositories` and `cvmfs_quota_limit` in our `group_vars/galaxyservers.yml` file as follows:
+
+```yaml
+
+```
+
+## Manually setting up an instance to access a CVMFS repository
 
 We are going to setup a CVMFS mount to the Galaxy reference data repository on our machines. To do this we have to install and configure the CVMFS client and then mount the appropriate CVMFS repository using the publicly available keys.
 
