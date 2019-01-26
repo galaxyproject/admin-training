@@ -40,11 +40,11 @@ _Timetable with sessions and material will be continuously updated towards the w
 | 09:20 | Deployment and platform options | [Slides](https://galaxyproject.github.io/training-material/topics/admin/tutorials/deployment-platforms-options/slides.html#1) | (M) |
 | 09:40 | Intro to Ansible | [Slides](https://galaxyproject.github.io/training-material/topics/admin/tutorials/ansible/slides.html), [Exercise](https://galaxyproject.github.io/training-material/topics/admin/tutorials/ansible/tutorial.html#your-first-playbook-and-first-role)| (S) |
 | 10:30 | Break (coffee & snacks) | | |
-| 10:45 | Galaxy Server Part 1: Basic Install | [Database Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/03-production-basics/databases.html) | (H,N,S,M) |
+| 10:45 | Galaxy Server Part 1: Basic Install | [Database Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/03-production-basics/databases.html), [Exercise](https://galaxyproject.github.io/training-material/topics/admin/tutorials/ansible-galaxy/tutorial.html) | (H) |
 | 12:30 | Lunch (catered) | |
-| 13:30 | Galaxy Server Part 2: Towards Production | [Production Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/03-production-basics/production.html)  | (H,N,S,M) |
+| 13:30 | Galaxy Server Part 2: Towards Production | [Production Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/03-production-basics/production.html)  | (H) |
 | 15:30 | Break (coffee & snacks) | | |
-| 15:50 | Galaxy Server Part 3: Used Technologies | [NGINX Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/03-production-basics/webservers.html), [uWSGI Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/10-uwsgi/uwsgi.html), [Supervisor Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/11-systemd-supervisor/systemd-supervisor.html) | (H,N,S,M) |
+| 15:50 | Galaxy Server Part 3: Used Technologies | [NGINX Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/03-production-basics/webservers.html), [uWSGI Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/10-uwsgi/uwsgi.html), [Supervisor Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/11-systemd-supervisor/systemd-supervisor.html) | (H) |
 | 17:00 | Close Day 1 | |  |
 
 ### Tuesday
