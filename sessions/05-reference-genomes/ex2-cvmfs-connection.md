@@ -4,6 +4,10 @@
 
 # Shared Reference Genomes and Indices - Exercise
 
+There are two sections to this exercise. The first shows you how to use ansible to setup and configure CVMFS for Galaxy. The second shows you how to do everything manually. It is recommended that you use the ansible method. The manual method is included here mainly for a more in depth understanding of what is happening.
+
+If you really want to perform all these tasks manually, go [here](#manually-setting-up-an-instance-to-access-a-cvmfs-repository), otherwise just follow along.
+
 ## Learning Outcomes
 
 By the end of this tutorial, you should:
@@ -11,6 +15,7 @@ By the end of this tutorial, you should:
 1. Have an understanding of what CVMFS is and how it works
 2. Install and configure the CVMFS client on a linux machine and mount the Galaxy reference data repository
 3. Configure your Galaxy to use these reference genomes and indices
+4. Use an ansible playbook for all of the above.
 
 ## Introduction
 
@@ -44,7 +49,167 @@ The Galaxy project supports a few CVMFS repositories.
 | Singularity Containers | `singularity.galaxyproject.org` | Singularity containers for everything in Biocontainers for use in Galaxy systems |
 | Galaxy Main Configuration | `main.galaxyproject.org` | The configuration files etc for Galaxy Main (usegalaxy.org) |
 
-## Setting up an instance to access a CVMFS repository
+## Installing and configuring Galaxy's CVMFS reference data with ansible
+
+Luckily for us, the Galaxy Project has a lot of experience with using and configuring CVMFS and we are going to leverage off that. To get CVMFS working on our Galaxy server, we will use the ansible role for CVMFS written by the Galaxy Project. Firstly, we need to install the role and then write a playbook for using it.
+
+If the terms "ansible", "role" and "playbook" mean nothing to you, please checkout [the ansible introduction slides](https://galaxyproject.github.io/training-material/topics/admin/tutorials/ansible/slides.html#1) and [the ansible introduction tutorial](https://galaxyproject.github.io/training-material/topics/admin/tutorials/ansible/tutorial.html)
+
+#### Step 1: Add the CVMFS role to the ansible `requirements.yml`
+
+In your working directory, add the following line to your `requirements.yml` file (if you don't already have one, create it.)
+
+```yaml
+- src: galaxyproject.cvmfs
+```
+
+Now run ansible-galaxy to download the new requirement.
+
+```bash
+ansible-galaxy install -p roles -r requirements.yaml
+```
+
+#### Step 2: Create some variables in the group vars file
+
+We need to add some variables to the `group_vars/galaxyservers.yml` file.
+
+The variables available in this role are:
+
+| Variable | Type  | Description |
+|----------|-------|-------------|
+|`cvmfs_role` | string | Type of CVMFS host: `client`, `stratum0`, `stratum1`, or `localproxy`. Alternatively, you may put hosts in to groups `cvmfsclients`, `cvmfsstratum0servers`, `cvmfsstratum1servers`, and `cvmfslocalproxies`. Controls what packages are installed and what configuration is performed.|
+|`cvmfs_keys` | list of dicts | Keys to install on hosts of all types.|
+|`cvmfs_server_urls` | list of dicts | CVMFS server URLs, the value of `CVMFS_SERVER_URL` in `/etc/cvmfs/domain.d/<domain>.conf`.|
+|`cvmfs_repositories` | list of dicts | CVMFS repository configurations, the value of `CVMFS_REPOSITORIES` in `/etc/cvmfs/default.local` plus additional settings in `/etc/cvmfs/repositories.d/<repository>/{client,server}.conf`.|
+|`cvmfs_quota_limit` | integer in MB | Size of CVMFS client cache. Default is `4000`.|
+
+Once again, luckily for us, the Galaxy Project cvmfs role has a lot of defaults for these variables which we can use by just setting `galaxy_cvmfs_repos_enabled` to true. We will also set the `cvmfs_quota_limit` to something sensible as we have relatively small disks on our instances (2000MB).
+
+Add the following lines to your `group_vars/galaxyservers.yml` file:
+
+```yaml
+# CVMFS vars
+cvmfs_role: client
+galaxy_cvmfs_repos_enabled: true
+cvmfs_quota_limit: 2000
+```
+
+#### Step 3: Write a new playbook for cvmfs installation.
+
+We will write a separate playbook for the cvmfs installation.
+
+Make a new `cvmfs_playbook.yml` file with the following contents:
+
+```yaml
+- hosts: galaxyservers
+  become: true
+  roles:
+    - galaxyproject.cvmfs
+```
+
+#### Step 4: Run the playbook!
+
+Run the playbook on your instance.
+
+**TO_DO: hxr - copy the `-c local` snippet here please.**
+
+```bash
+ansible-playbook -i hosts cvmfs_playbook.yml
+```
+
+Once the script finishes, go and take a look in `/cvmfs/data.galaxyproject.org`. You will see the contents of the repo. There is quite a lot of data here all available and ready to go..
+
+You'll notice also that the directory doesn't exist **until you try to `cd` to it!**
+
+Have a browse through the contents. You'll see `.loc` files, genomes and indices.
+
+And just like that we all have access to all the reference genomes and associated tool indices thanks to the Galaxy Project's and mostly Nate's hard work!
+
+## Configuring Galaxy to use the CVMFS references.
+
+Now that we have mounted the cvmfs repository we need to tell Galaxy how to find it and use it.
+
+There are two primary directories in the reference data repository:
+
+| Directory | Contents |
+|-----------|----------|
+| `/managed`    | Data generated with Galaxy Data Managers, organized by data table (index format), then by genome build.|
+| `/byhand`     | Data generated prior to the existence/use of Data Managers, manually curated. (For legacy reasons, this directory is shared as `/indexes` on the HTTP and rsync servers.) |
+
+These directories have somewhat different structures:
+
+* `/managed` is organized by index type, then by genome build (Galaxy dbkey)
+* `/byhand` is organzied by genome build, then by index type
+
+Both directories contain a location subdirectory, and each of these contain a `tool_data_table_conf.xml` file:
+
+* `/managed/location/tool_data_table_conf.xml`
+* `/byhand/location/tool_data_table_conf.xml`
+
+Galaxy consumes these `tool_data_table_conf.xml` files and the `.loc` "location" files they reference. The paths contained in these files are valid if the data is mounted via CVMFS.
+
+Examples of data include:
+
+* twoBit (`.2bit`) and FASTA (`.fa`) sequence files
+* Bowtie 2 and BWA indexes
+* Mutation Annotation Format (`.maf`) files
+* SAMTools FASTA indexes (`.fai`)
+
+Now all we need to do is tell Galaxy how to find it!
+
+#### Step 1: Edit the `groupvars/galaxyservers.yml` file.
+
+Add a `tool_data_table_config_path` entry under the `galaxy_config:` section in the `groupvars/galaxyservers.yml` file.
+
+```yaml
+galaxy_config:
+    galaxy:
+        tool_data_table_config_path: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml,/cvmfs/data.galaxyproject.org/managed/location/tool_data_table_conf.xml
+```
+
+Because we want to alter some Galaxy settings now, we need to add the Galaxy role to our playbook.
+
+Add `- galaxyproject.galaxy` to the `roles` in our `cvmfs_playbook.yml` file.
+
+```yaml
+- hosts: galaxyservers
+  become: true
+  roles:
+    - galaxyproject.cvmfs
+    - galaxyproject.galaxy
+```
+
+Now re-run the cvmfs_playbook.
+
+```bash
+ansible-playbook -i hosts cvmfs_playbook.yml
+```
+
+This adds the two cvmfs data tables to the config. Of course we need to restart Galaxy.
+
+```bash
+sudo supervisorctl restart galaxy
+```
+
+#### Step 2: Check tools now have access to genomes
+
+In your Galaxy interface, open the `bwa`, `bwa-mem` or `Bowtie2` tool interface (whichever you may have installed). Now check that there are a lot more Genomes available for use!
+
+![available_genomes.png](../../docs/05-reference-genomes/images/available_genomes.png)
+
+The Admin interface also has a good display of installed indices for genomes.
+
+Go to: **Admin -> Local Data -> View Tool Data Table Entries -> bwa_mem indexes**
+
+![bwa_mem_indices.png](../../docs/05-reference-genomes/images/bwa_mem_indices.png)
+
+
+*That's all folks.. Hope it was useful!*
+---
+
+## Manually setting up an instance to access a CVMFS repository
+
+If you wish to perform the same thing that the ansible script we built manually, follow these instructions. Otherwise, you have already done everything below... :)
 
 We are going to setup a CVMFS mount to the Galaxy reference data repository on our machines. To do this we have to install and configure the CVMFS client and then mount the appropriate CVMFS repository using the publicly available keys.
 
@@ -138,63 +303,4 @@ Have a browse through the contents. You'll see `.loc` files, genomes and indices
 
 And just like that we all have access to all the reference genomes and associated tool indices thanks to the Galaxy Project's and mostly Nate's hard work!
 
-## Configuring Galaxy to use the CVMFS references.
-
-Now that we have mounted the cvmfs repository we need to tell Galaxy how to find it and use it.
-
-There are two primary directories in the reference data repository:
-
-| Directory | Contents |
-|-----------|----------|
-| `/managed`    | Data generated with Galaxy Data Managers, organized by data table (index format), then by genome build.|
-| `/byhand`     | Data generated prior to the existence/use of Data Managers, manually curated. (For legacy reasons, this directory is shared as `/indexes` on the HTTP and rsync servers.) |
-
-These directories have somewhat different structures:
-
-* `/managed` is organized by index type, then by genome build (Galaxy dbkey)
-* `/byhand` is organzied by genome build, then by index type
-
-Both directories contain a location subdirectory, and each of these contain a `tool_data_table_conf.xml` file:
-
-* `/managed/location/tool_data_table_conf.xml`
-* `/byhand/location/tool_data_table_conf.xml`
-
-Galaxy consumes these `tool_data_table_conf.xml` files and the `.loc` "location" files they reference. The paths contained in these files are valid if the data is mounted via CVMFS.
-
-Examples of data include:
-
-* twoBit (`.2bit`) and FASTA (`.fa`) sequence files
-* Bowtie 2 and BWA indexes
-* Mutation Annotation Format (`.maf`) files
-* SAMTools FASTA indexes (`.fai`)
-
-Now all we need to do is tell Galaxy how to find it!
-
-#### Step 1: Edit the `galaxy.yml` file.
-
-Make the following changes to the `tool_data_table_config_path:` entry in your Galaxy config file.
-
-```yaml
-tool_data_table_config_path: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml,/cvmfs/data.galaxyproject.org/managed/location/tool_data_table_conf.xml,config/tool_data_table_conf.xml
-```
-
-This adds the two cvmfs data tables to the config. Of course we need to restart Galaxy.
-
-```bash
-sudo supervisorctl restart gx:
-```
-
-#### Step 2: Check tools now have access to genomes
-
-In your Galaxy interface, open the `bwa`, `bwa-mem` or `Bowtie2` tool interface (whichever you may have installed). Now check that there are a lot more Genomes available for use!
-
-![available_genomes.png](../../docs/05-reference-genomes/images/available_genomes.png)
-
-The Admin interface also has a good display of installed indices for genomes.
-
-Go to: **Admin -> Local Data -> View Tool Data Table Entries -> bwa_mem indexes**
-
-![bwa_mem_indices.png](../../docs/05-reference-genomes/images/bwa_mem_indices.png)
-
-
-*That's all folks.. Hope it was useful!*
+Now to configure Galaxy to use the CVMFS references we have just installed, see [here](#configuring-galaxy-to-use-the-cvmfs-references)
