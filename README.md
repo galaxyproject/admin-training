@@ -116,18 +116,18 @@ Helena (@erasche) might be going to [Mad Mex](https://goo.gl/maps/r2UqUVnmHyQ2) 
 ### Thursday
 **31th January**
 
-| **Time** | **Topic**                                                          | **Links**                                                                                                   | **Instructor** |
-| -------- | ---------                                                          | ---------                                                                                                   | -----------    |
-| 09:00    | Welcome and questions                                              |                                                                                                             |                |
-| 09:15    | Containerize all the things: Galaxy in Docker and Docker in Galaxy | [Docker Slides][docker-slides], [Conda Slides][conda-slides], [Galaxy Docker tool example][docker-exercise] | J              |
-| 10:45    | Break (coffee & snacks)                                            |                                                                                                             |                |
-| 11:00    | Galaxy Interactive Environments                                    |                                                                                                             | H              |
-| 12:00    | Lunch (catered)                                                    |                                                                                                             |                |
-| 13:00    | Cloudbursting                                                      |                                                                                                             | S              |
-| 14:00    | Server monitoring and maintenance                                  | [Slides][monitoring-slides], [Exercise 1][monitoring-ex1], [Exercise 2][monitoring-ex2]                     | M, H           |
-| 15:15    | Break (coffee & snacks)                                            |                                                                                                             |                |
-| 15:30    | monitoring & maintenance continued                                 |                                                                                                             |                |
-| 17:00    | Wrap up and close                                                  |                                                                                                             |                |
+| **Time** | **Topic**                                                                                     | **Links**                                                                                                   | **Instructor** |
+| -------- | ---------                                                                                     | ---------                                                                                                   | -----------    |
+| 09:00    | Welcome and questions                                                                         |                                                                                                             |                |
+| 09:15    | Containerize all the things: Galaxy in Docker and Docker in Galaxy                            | [Docker Slides][docker-slides], [Conda Slides][conda-slides], [Galaxy Docker tool example][docker-exercise] | J              |
+| 10:45    | Break (coffee & snacks)                                                                       |                                                                                                             |                |
+| 11:00    | Galaxy Interactive Environments                                                               |                                                                                                             | H              |
+| 12:00    | Lunch (catered)                                                                               |                                                                                                             |                |
+| 13:00    | Cloudbursting                                                                                 |                                                                                                             | S              |
+| 14:00    | Server Monitoring and Maintenance Part 1: Admin UI, Log Files                                 | [Slides][monitoring-slides], [Exercise 1][monitoring-ex1], [Exercise 2][monitoring-ex2]                     | M, H           |
+| 15:15    | Break (coffee & snacks)                                                                       |                                                                                                             |                |
+| 15:30    | Server monitoring and maintenance: DB queries, command line & scripts, what to backup and how |                                                                                                             |                |
+| 17:00    | Wrap up and close                                                                             |                                                                                                             |                |
 
 [docker-slides]:       https://galaxy.slides.com/bgruening/the-galaxy-docker-project
 [conda-slides]:        http://galaxy.slides.com/bgruening/deck-7#/
