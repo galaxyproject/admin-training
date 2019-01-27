@@ -39,7 +39,7 @@ _Timetable with sessions and material will be continuously updated towards the w
 | 09:40    | Intro to Ansible                         | [Slides][ansible-slides], [Exercise][ansible-exercise]                                             | S              |
 | 10:30    | Break (coffee & snacks)                  |                                                                                                    |                |
 | 10:45    | Galaxy Server Part 1: Basic Install      | [Database Slides][db-slides], [Exercise][ansible-galaxy]                                           | H              |
-| 12:30    | Lunch (catered)                          |                                                                                                    |
+| 12:30    | Lunch (catered)                          |                                                                                                    |                |
 | 13:30    | Galaxy Server Part 2: Towards Production | [Production Slides][production-slides]                                                             | H              |
 | 15:30    | Break (coffee & snacks)                  |                                                                                                    |                |
 | 15:50    | Galaxy Server Part 3: Advanced Install   | [NGINX Slides][nginx-slides], [uWSGI Slides][uwsgi-slides], [Supervisor Slides][supervisor-slides] | H              |
@@ -59,18 +59,18 @@ _Timetable with sessions and material will be continuously updated towards the w
 ### Tuesday
 **29th January**
 
-| **Time** | **Topic**                                              | **Links**                                                                                                 | **Instructor** |
-| -------- | ---------                                              | ---------                                                                                                 | -----------    |
-| 09:00    | Welcome and questions                                  |                                                                                                           |                |
-| 09:15    | Galaxy Tool Shed                                       | [Tools][tool-slides], [Toolshed][toolshed-slides]                                                         | H, S, M        |
-| 10:00    | Ephemeris                                              | [Slides][ephemeris-slides]                                                                                | J, M           |
-| 10:30    | Break (coffee & snacks)                                |                                                                                                           |                |
-| 10:50    | Managing Galaxy tools                                  | [Exercise][ephemeris-exercise]                                                                            | M, H           |
-| 12:00    | Lunch (catered)                                        |                                                                                                           |                |
-| 13:00    | Users, Groups, and Quotas                              | [Slides][users-groups-slides]                                                                             | M              |
-| 14:00    | Reference Data                                         | [Slides][ref-genomes-slides], [Exercise][ref-genome-exercise], [CMVFS Exercise][cvmfs-exercise]           | S              |
-| 16:15    | Using and configuring external authentication services | [Slides][pam-slides], [PAM Auth Exercise][pam-exercise], [Upstream Auth Exercise][upstream-auth-exercise] | H              |
-| 17:00    | Close Day 2                                            |                                                                                                           |                |
+| **Time** | **Topic**                 | **Links**                                                                                                 | **Instructor** |
+| -------- | ---------                 | ---------                                                                                                 | -----------    |
+| 09:00    | Welcome and questions     |                                                                                                           |                |
+| 09:15    | Galaxy Tool Shed          | [Tools][tool-slides], [Toolshed][toolshed-slides]                                                         | H, S, M        |
+| 10:00    | Ephemeris                 | [Slides][ephemeris-slides]                                                                                | J, M           |
+| 10:30    | Break (coffee & snacks)   |                                                                                                           |                |
+| 10:50    | Managing Galaxy tools     | [Exercise][ephemeris-exercise]                                                                            | M, H           |
+| 12:00    | Lunch (catered)           |                                                                                                           |                |
+| 13:00    | Users, Groups, and Quotas | [Slides][users-groups-slides]                                                                             | M              |
+| 14:00    | Reference Data            | [Slides][ref-genomes-slides], [Exercise][ref-genome-exercise], [CMVFS Exercise][cvmfs-exercise]           | S              |
+| 16:15    | External authentication   | [Slides][pam-slides], [PAM Auth Exercise][pam-exercise], [Upstream Auth Exercise][upstream-auth-exercise] | H              |
+| 17:00    | Close Day 2               |                                                                                                           |                |
 
 [tool-slides]:              https://galaxyproject.github.io/dagobah-training/2019-pennstate/04-tool-shed/tool_installation.html
 [toolshed-slides]:          https://galaxyproject.github.io/dagobah-training/2019-pennstate/04-tool-shed/shed_intro.html
@@ -87,19 +87,19 @@ _Timetable with sessions and material will be continuously updated towards the w
 ### Wednesday
 **30th January**
 
-| **Time** | **Topic**                                                   | **Links**                                              | **Instructor** |
-| -------- | ---------                                                   | ---------                                              | -----------    |
-| 09:00    | Welcome and questions                                       |                                                        |                |
-| 09:15    | Exploring the Galaxy job configuration file                 | [Slides][jobconf-slides]                               | J              |
-| 09:45    | Connecting Galaxy to a compute cluster                      | [Slides][cluster-slides], [Exercise][cluster-exercise] | N, H           |
-| 10:20    | Break (coffee & snacks)                                     |                                                        |                |
-| 10:40    | Compute cluster (continued)                                 |                                                        |                |
-| 12:00    | Lunch (on your own)                                         |                                                        |                |
-| 13:30    | Storage management and using heterogeneous storage services | [Slides][storage-slides], [Exercise][storage-exercise] | M, S           |
-| 14:15    | Using heterogeneous compute resources                       | [Slides][hetero-slides], [Exercise][hetero-exercise]   | S, N           |
-| 15:15    | Break (coffee & snacks)                                     |                                                        |                |
-| 15:35    | compute resources continued                                 |                                                        |                |
-| 17:00    | Close day 3                                                 |                                                        |                |
+| **Time** | **Topic**                                   | **Links**                                              | **Instructor** |
+| -------- | ---------                                   | ---------                                              | -----------    |
+| 09:00    | Welcome and questions                       |                                                        |                |
+| 09:15    | Exploring the Galaxy job configuration file | [Slides][jobconf-slides]                               | J              |
+| 09:45    | Connecting Galaxy to a compute cluster      | [Slides][cluster-slides], [Exercise][cluster-exercise] | N, H           |
+| 10:20    | Break (coffee & snacks)                     |                                                        |                |
+| 10:40    | Compute cluster (continued)                 |                                                        |                |
+| 12:00    | Lunch (on your own)                         |                                                        |                |
+| 13:30    | Storage management                          | [Slides][storage-slides], [Exercise][storage-exercise] | M, S           |
+| 14:15    | Using heterogeneous compute resources       | [Slides][hetero-slides], [Exercise][hetero-exercise]   | S, N           |
+| 15:15    | Break (coffee & snacks)                     |                                                        |                |
+| 15:35    | compute resources continued                 |                                                        |                |
+| 17:00    | Close day 3                                 |                                                        |                |
 
 [jobconf-slides]:     https://galaxyproject.github.io/dagobah-training/2019-pennstate/15-job-conf/job_conf.html
 [cluster-slides]:     https://galaxyproject.github.io/training-material/topics/admin/tutorials/connect-to-compute-cluster/slides.html
@@ -117,7 +117,7 @@ _Timetable with sessions and material will be continuously updated towards the w
 | 09:00    | Welcome and questions                                              |                                                                                                             |                |
 | 09:15    | Containerize all the things: Galaxy in Docker and Docker in Galaxy | [Docker Slides][docker-slides], [Conda Slides][conda-slides], [Galaxy Docker tool example][docker-exercise] | J              |
 | 10:45    | Break (coffee & snacks)                                            |                                                                                                             |                |
-| 11:00    | Running Ethercalc in Galaxy with Galaxy Interactive Environments   |                                                                                                             | H              |
+| 11:00    | Galaxy Interactive Environments                                    |                                                                                                             | H              |
 | 12:00    | Lunch (catered)                                                    |                                                                                                             |                |
 | 13:00    | Cloudbursting                                                      |                                                                                                             | S              |
 | 14:00    | Server monitoring and maintenance                                  | [Slides][monitoring-slides], [Exercise 1][monitoring-ex1], [Exercise 2][monitoring-ex2]                     | M, H           |
