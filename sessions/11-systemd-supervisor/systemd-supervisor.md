@@ -36,7 +36,7 @@ $ supervisorctl help
 
 default commands (type help <topic>):
 =====================================
-add    clear  fg        open  quit    remove  restart   start   stop  update 
+add    clear  fg        open  quit    remove  restart   start   stop  update
 avail  exit   maintail  pid   reload  reread  shutdown  status  tail  version
 
 $ supervisorctl status
@@ -67,13 +67,6 @@ startsecs       = 10
 user            = galaxy
 stopsignal      = INT
 ```
-
----
-# Supervisor - An exercise
-
-Let's add some job handlers
-
-[Managing Multiprocess Galaxy with Supervisor - Exercise](https://github.com/galaxyproject/dagobah-training/blob/2018-oslo/sessions/11-systemd-supervisor/ex1-supervisor.md)
 
 ---
 class: special
