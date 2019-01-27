@@ -3,7 +3,7 @@
 
 **Monday 1/28/2019 - Friday 2/1/2019**
 
-- Index
+- [Timetable](#timetable)
 	- [Monday](#monday)
 	- [Tuesday](#tuesday)
 	- [Wednesday](#wednesday)
@@ -55,6 +55,10 @@ _Timetable with sessions and material will be continuously updated towards the w
 [nginx-slides]:        https://galaxyproject.github.io/dagobah-training/2019-pennstate/03-production-basics/webservers.html
 [uwsgi-slides]:        https://galaxyproject.github.io/dagobah-training/2019-pennstate/10-uwsgi/uwsgi.html
 [supervisor-slides]:   https://galaxyproject.github.io/dagobah-training/2019-pennstate/11-systemd-supervisor/systemd-supervisor.html
+
+#### Evening Program
+
+Helena (@erasche) might be going to Mad Mex which has $6 "all you can eat tacos". You're welcome to join her for further Galaxy admin discussion!
 
 ### Tuesday
 **29th January**
