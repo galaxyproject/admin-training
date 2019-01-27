@@ -58,7 +58,7 @@ _Timetable with sessions and material will be continuously updated towards the w
 
 #### Evening Program
 
-Helena (@erasche) might be going to Mad Mex which has $6 "all you can eat tacos". You're welcome to join her for further Galaxy admin discussion!
+Helena (@erasche) might be going to [Mad Mex](https://goo.gl/maps/r2UqUVnmHyQ2) which seems to have $6 "all you can eat burritos". You're welcome to join her for further Galaxy admin discussion.
 
 ### Tuesday
 **29th January**
