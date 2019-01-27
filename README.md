@@ -22,9 +22,7 @@ Penn State University, State College, Pennsylvania, USA
 
 List of training instances is available in [TODO]. Please pick one instance and enter your name in the user column.
 
-2 cores, 4 GiB memory, and 20 GiB disk, Ubuntu 16.04
-
-We are using instances from the [Jetstream cloud](https://jetstream-cloud.org/), image ID _470d2fba-d20b-47b0-a89a-ab725cd09f8b_.
+We are using instances from the [Jetstream cloud](https://jetstream-cloud.org/) with 2 cores, 4 GiB memory, 20 GiB disk, running Ubuntu 18.04
 
 ## Timetable
 
@@ -47,16 +45,16 @@ _Timetable with sessions and material will be continuously updated towards the w
 | 15:50    | Galaxy Server Part 3: Advanced Install   | [NGINX Slides][nginx-slides], [uWSGI Slides][uwsgi-slides], [Supervisor Slides][supervisor-slides] | H              |
 | 17:00    | Close Day 1                              |                                                                                                    |                |
 
-[welcome-slides]: https://galaxyproject.github.io/dagobah-training/2019-pennstate/00-intro/intro.html
-[deployment-slides]: https://galaxyproject.github.io/training-material/topics/admin/tutorials/deployment-platforms-options/slides.html#1
-[ansible-slides]: https://galaxyproject.github.io/training-material/topics/admin/tutorials/ansible/slides.html
-[ansible-exercise]: https://galaxyproject.github.io/training-material/topics/admin/tutorials/ansible/tutorial.html#your-first-playbook-and-first-role
-[db-slides]: https://galaxyproject.github.io/dagobah-training/2019-pennstate/03-production-basics/databases.html
-[ansible-galaxy]: https://galaxyproject.github.io/training-material/topics/admin/tutorials/ansible-galaxy/tutorial.html
-[production-slides]: https://galaxyproject.github.io/dagobah-training/2019-pennstate/03-production-basics/production.html
-[nginx-slides]: https://galaxyproject.github.io/dagobah-training/2019-pennstate/03-production-basics/webservers.html
-[uwsgi-slides]: https://galaxyproject.github.io/dagobah-training/2019-pennstate/10-uwsgi/uwsgi.html
-[supervisor-slides]: https://galaxyproject.github.io/dagobah-training/2019-pennstate/11-systemd-supervisor/systemd-supervisor.html
+[welcome-slides]:      https://galaxyproject.github.io/dagobah-training/2019-pennstate/00-intro/intro.html
+[deployment-slides]:   https://galaxyproject.github.io/training-material/topics/admin/tutorials/deployment-platforms-options/slides.html#1
+[ansible-slides]:      https://galaxyproject.github.io/training-material/topics/admin/tutorials/ansible/slides.html
+[ansible-exercise]:    https://galaxyproject.github.io/training-material/topics/admin/tutorials/ansible/tutorial.html#your-first-playbook-and-first-role
+[db-slides]:           https://galaxyproject.github.io/dagobah-training/2019-pennstate/03-production-basics/databases.html
+[ansible-galaxy]:      https://galaxyproject.github.io/training-material/topics/admin/tutorials/ansible-galaxy/tutorial.html
+[production-slides]:   https://galaxyproject.github.io/dagobah-training/2019-pennstate/03-production-basics/production.html
+[nginx-slides]:        https://galaxyproject.github.io/dagobah-training/2019-pennstate/03-production-basics/webservers.html
+[uwsgi-slides]:        https://galaxyproject.github.io/dagobah-training/2019-pennstate/10-uwsgi/uwsgi.html
+[supervisor-slides]:   https://galaxyproject.github.io/dagobah-training/2019-pennstate/11-systemd-supervisor/systemd-supervisor.html
 
 ### Tuesday
 **29th January**
@@ -74,17 +72,17 @@ _Timetable with sessions and material will be continuously updated towards the w
 | 16:15    | Using and configuring external authentication services | [Slides][pam-slides], [PAM Auth Exercise][pam-exercise], [Upstream Auth Exercise][upstream-auth-exercise] | H              |
 | 17:00    | Close Day 2                                            |                                                                                                           |                |
 
-[tool-slides]: https://galaxyproject.github.io/dagobah-training/2019-pennstate/04-tool-shed/tool_installation.html
-[toolshed-slides]: https://galaxyproject.github.io/dagobah-training/2019-pennstate/04-tool-shed/shed_intro.html
-[ephemeris-slides]: https://galaxyproject.github.io/dagobah-training/2019-pennstate/24-ephemeris/ephemeris.html
-[ephemeris-exercise]: sessions/04-tool-shed/ex-tool-management.md
-[users-groups-slides]: http://galaxyproject.github.io/training-material/topics/admin/tutorials/users-groups-quotas/slides.html
-[ref-genomes-slides]: https://galaxyproject.github.io/dagobah-training/2019-pennstate/05-reference-genomes/reference_genomes.html
-[ref-genome-exercise]: sessions/05-reference-genomes/ex1-reference-genomes.md
-[cvmfs-exercise]: https://github.com/galaxyproject/dagobah-training/blob/2019-pennstate/sessions/05-reference-genomes/ex2-cvmfs-connection.md
-[pam-slides]: https://galaxyproject.github.io/dagobah-training/2019-pennstate/13-external-auth/external-auth.html
-[pam-exercise]: sessions/13-external-auth/ex1-pam-auth.md
-[upstream-auth-exercise]: sessions/13-external-auth/ex2-upstream-auth.md
+[tool-slides]:              https://galaxyproject.github.io/dagobah-training/2019-pennstate/04-tool-shed/tool_installation.html
+[toolshed-slides]:          https://galaxyproject.github.io/dagobah-training/2019-pennstate/04-tool-shed/shed_intro.html
+[ephemeris-slides]:         https://galaxyproject.github.io/training-material/topics/admin/tutorials/tool-management/tutorial.html
+[ephemeris-exercise]:       https://galaxyproject.github.io/training-material/topics/admin/tutorials/tool-management/tutorial.html
+[users-groups-slides]:      https://galaxyproject.github.io/training-material/topics/admin/tutorials/users-groups-quotas/slides.html
+[ref-genomes-slides]:       https://galaxyproject.github.io/dagobah-training/2019-pennstate/05-reference-genomes/reference_genomes.html
+[ref-genome-exercise]:      sessions/05-reference-genomes/ex1-reference-genomes.md
+[cvmfs-exercise]:           https://galaxyproject.github.io/training-material/topics/admin/tutorials/cvmfs/tutorial.html
+[pam-slides]:               https://galaxyproject.github.io/dagobah-training/2019-pennstate/13-external-auth/external-auth.html
+[pam-exercise]:             sessions/13-external-auth/ex1-pam-auth.md
+[upstream-auth-exercise]:   sessions/13-external-auth/ex2-upstream-auth.md
 
 ### Wednesday
 **30th January**
@@ -103,13 +101,13 @@ _Timetable with sessions and material will be continuously updated towards the w
 | 15:35    | compute resources continued                                 |                                                        |                |
 | 17:00    | Close day 3                                                 |                                                        |                |
 
-[jobconf-slides]: https://galaxyproject.github.io/dagobah-training/2019-pennstate/15-job-conf/job_conf.html
-[cluster-slides]: http://galaxyproject.github.io/training-material/topics/admin/tutorials/connect-to-compute-cluster/slides.html
-[cluster-exercise]: http://galaxyproject.github.io/training-material/topics/admin/tutorials/connect-to-compute-cluster/tutorial.html
-[storage-slides]: https://galaxyproject.github.io/dagobah-training/2019-pennstate/19-storage/storage.html
-[storage-exercise]: sessions/19-storage/ex1-objectstore.md
-[hetero-slides]: https://galaxyproject.github.io/dagobah-training/2019-pennstate/17-heterogenous/heterogeneous.html
-[hetero-exercise]: sessions/17-heterogenous/ex1-pulsar.md
+[jobconf-slides]:     https://galaxyproject.github.io/dagobah-training/2019-pennstate/15-job-conf/job_conf.html
+[cluster-slides]:     https://galaxyproject.github.io/training-material/topics/admin/tutorials/connect-to-compute-cluster/slides.html
+[cluster-exercise]:   https://galaxyproject.github.io/training-material/topics/admin/tutorials/connect-to-compute-cluster/tutorial.html
+[storage-slides]:     https://galaxyproject.github.io/training-material/topics/admin/tutorials/object-store/slides.html
+[storage-exercise]:   https://galaxyproject.github.io/training-material/topics/admin/tutorials/object-store/tutorial.html
+[hetero-slides]:      https://galaxyproject.github.io/dagobah-training/2019-pennstate/17-heterogenous/heterogeneous.html
+[hetero-exercise]:    sessions/17-heterogenous/ex1-pulsar.md
 
 ### Thursday
 **31th January**
@@ -127,12 +125,12 @@ _Timetable with sessions and material will be continuously updated towards the w
 | 15:30    | monitoring & maintenance continued                                 |                                                                                                             |                |
 | 17:00    | Wrap up and close                                                  |                                                                                                             |                |
 
-[docker-slides]: https://galaxy.slides.com/bgruening/the-galaxy-docker-project
-[conda-slides]: http://galaxy.slides.com/bgruening/deck-7#/
-[docker-exercise]: https://github.com/apetkau/galaxy-hackathon-2014/tree/master/smalt
-[monitoring-slides]: http://galaxyproject.github.io/training-material/topics/admin/tutorials/monitoring-maintenance/slides.html
-[monitoring-ex1]: http://galaxyproject.github.io/training-material/topics/admin/tutorials/monitoring-maintenance/tutorial.html
-[monitoring-ex2]: sessions/22-troubleshooting/ex1-sentry.md
+[docker-slides]:       https://galaxy.slides.com/bgruening/the-galaxy-docker-project
+[conda-slides]:        http://galaxy.slides.com/bgruening/deck-7#/
+[docker-exercise]:     https://github.com/apetkau/galaxy-hackathon-2014/tree/master/smalt
+[monitoring-slides]:   https://galaxyproject.github.io/training-material/topics/admin/tutorials/monitoring-maintenance/slides.html
+[monitoring-ex1]:      https://galaxyproject.github.io/training-material/topics/admin/tutorials/monitoring-maintenance/tutorial.html
+[monitoring-ex2]:      sessions/22-troubleshooting/ex1-sentry.md
 
 
 ### Friday
