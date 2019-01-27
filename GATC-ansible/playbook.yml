@@ -1,74 +1,60 @@
-- name: Pre-configure
+---
 
+# sudo must be preinstalled if you are using become
+- name: Bootstrap python
   hosts: workshop-instances
-  
+  gather_facts: false
+  pre_tasks:
+
+    - name: Bootsrap Python2 for Ansible
+      raw: bash -c "test -e /usr/bin/python || (apt -qqy update && apt install -qqy python2.7 python)"
+      register: output
+      changed_when: output.stdout != ""
+
+- name: Pre-configure instances
+  hosts: workshop-instances
   tasks:
-    
-    #Set the ubuntu password
-    - name: Set the ubuntu password
-      user:
-        name: ubuntu
-        password: '$6$rounds=656000$FVCztO55xjNo/jO0$7EYyaFNeYMND8edk2BPnv6iDvMWFySZDgwnYNbarbSeD.jdlsE6yuOsDaRvw2LCv86fmk2eM7ZrjlXIWmjUw.0'
-      become: yes
-      become_user: root
-        
-    - name: Change the /etc/ssh/sshd_config file to allow password logins.
-      replace: dest="/etc/ssh/sshd_config" regexp="PasswordAuthentication no" replace="PasswordAuthentication yes"
-      become: yes
-      become_user: root
-    
-    - name: restart sshd
-      service: name=sshd state=restarted
-      become: yes
-      become_user: root
-    
-    #Oracle Java and the Atom repo
-    - name: Install oracle java and atom ppds
-      apt_repository: repo="{{ item }}" state=present
-      become: yes
-      become_user: root
-      with_items:
-        - ppa:webupd8team/atom
-        - ppa:webupd8team/java
-      
+
     - name: Update repos
       apt: update_cache=yes
-      become: yes
-      become_user: root
-      
-    - name: Install other packages
-      become: yes
-      apt: name="{{ item }}" state=latest
-      with_items:
-        - build-essential
-        - git
-        - nano
-        - vim
-        - emacs
-        - ansible
-        - python2.7
-        - virtualenv
-        - python-pip
-        - sendmail
-        - proftpd-basic
-        - atom
-        - postgresql
-        - zlib1g-dev
-      
-    - name: Accept Java 8 License
-      become: yes
-      debconf: name='oracle-java8-installer' question='shared/accepted-oracle-license-v1-1' value='true' vtype='select'
+      #become: yes
+      #become_user: root
 
-    - name: Install Oracle Java 8
-      become: yes
-      apt: name={{item}} state=latest
-      with_items:
-        - oracle-java8-installer
-        - ca-certificates
-        - oracle-java8-set-default
+    - name: Install other packages
+      package:
+        name:
+          - acl
+          - sudo
+          - make
+          - build-essential
+          - git
+          - nano
+          - vim
+          - vim-pathogen
+          - emacs
+          - ansible
+          #- python2.7
+          - virtualenv
+          - python-pip
+          #- sendmail
+          - zlib1g-dev
+        state: latest
+
+    #- name: Enable pathogen for all users
+    #  command: vim-addons -w install pathogen
+
+    - name: Add pathogen infect to global vimrc
+      copy:
+        content: "execute pathogen#infect()"
+        dest: "/etc/vim/vimrc.local"
+        mode: 0644
+
+    - name: Install pearofducks/ansible-vim for all users
+      git:
+        repo: https://github.com/pearofducks/ansible-vim
+        dest: /etc/vim/bundle/ansible-vim
   
-    - name: Install planemo
-      become: yes
-      pip: name="{{ item }}"
-      with_items:
-        - planemo
+    - name: Install pip packages
+      pip:
+        name:
+          - planemo
