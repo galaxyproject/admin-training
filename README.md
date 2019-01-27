@@ -71,7 +71,7 @@ _Timetable with sessions and material will be continuously updated towards the w
 | -------- | --------- | --------- | ----------- |
 | 09:00 | Welcome and questions | | |
 | 09:15 | Exploring the Galaxy job configuration file | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/15-job-conf/job_conf.html) | (J) |
-| 09:45 | Connecting Galaxy to a compute cluster | [Slides](http://galaxyproject.github.io/training-material/topics/admin/tutorials/connect-to-compute-cluster/slides.html), [Exercise](http://galaxyproject.github.io/training-material/topics/admin/tutorials/connect-to-compute-cluster/tutorial.html) | (N) |
+| 09:45 | Connecting Galaxy to a compute cluster | [Slides](http://galaxyproject.github.io/training-material/topics/admin/tutorials/connect-to-compute-cluster/slides.html), [Exercise](http://galaxyproject.github.io/training-material/topics/admin/tutorials/connect-to-compute-cluster/tutorial.html) | (N,H) |
 | 10:20 | Break (coffee & snacks) | | |
 | 10:40 | Compute cluster continued | | |
 | 12:00 | Lunch (on your own) | | |
