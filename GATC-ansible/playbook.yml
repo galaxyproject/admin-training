@@ -11,14 +11,23 @@
       register: output
       changed_when: output.stdout != ""
 
+
 - name: Pre-configure instances
   hosts: workshop-instances
+  tags: bootstrap
   tasks:
 
     - name: Update repos
-      apt: update_cache=yes
-      #become: yes
-      #become_user: root
+      apt:
+        update_cache: yes
+        cache_valid_time: 900
+
+    - name: Upgrade packages
+      apt:
+        upgrade: yes
+        autoremove: yes
+      notify:
+        - reboot
 
     - name: Install other packages
       package:
@@ -32,7 +41,7 @@
           - vim
           - vim-pathogen
           - emacs
-          - ansible
+          #- ansible
           #- python2.7
           - virtualenv
           - python-pip
@@ -57,4 +66,9 @@
     - name: Install pip packages
       pip:
         name:
+          - ansible
           - planemo
+
+  handlers:
+    - name: reboot
+      reboot:
