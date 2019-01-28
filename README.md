@@ -128,6 +128,7 @@ Helena (@erasche) might be going to [Mad Mex](https://goo.gl/maps/r2UqUVnmHyQ2) 
 | 15:15    | Break (coffee & snacks)                                                       |                                                                                                             |                |
 | 15:30    | Server monitoring and maintenance: DB queries, command line & scripts, backup |                                                                                                             |                |
 | 17:00    | Wrap up and close                                                             |                                                                                                             |                |
+
 [docker-slides]:       https://galaxyproject.github.io/training-material/topics/admin/tutorials/galaxy-docker/slides.html
 [monitoring-slides]:   https://galaxyproject.github.io/training-material/topics/admin/tutorials/monitoring-maintenance/slides.html
 [monitoring-ex1]:      https://galaxyproject.github.io/training-material/topics/admin/tutorials/monitoring-maintenance/tutorial.html
