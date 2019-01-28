@@ -20,7 +20,7 @@ Penn State University, State College, Pennsylvania, USA
 
 ## Training VM instances
 
-List of training instances is available in [TODO]. Please pick one instance and enter your name in the user column.
+List of training instances is available in https://bit.ly/gadminmachines. Please pick one instance and enter your name in the user column.
 
 We are using instances from the [Jetstream cloud](https://jetstream-cloud.org/) with 2 cores, 4 GiB memory, 20 GiB disk, running Ubuntu 18.04
 
