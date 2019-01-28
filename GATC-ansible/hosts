@@ -1,25 +1,37 @@
 [workshop-instances]
-115.146.91.6
-115.146.91.62
-115.146.89.9
-130.56.254.135
-115.146.89.94
-115.146.90.0
-115.146.90.124
-115.146.90.128
-115.146.90.135
-115.146.90.22
-115.146.90.234
-115.146.90.237
-115.146.90.28
-115.146.90.37
-115.146.90.61
-115.146.90.68
-115.146.90.70
-115.146.90.74
-115.146.90.77
+jan-2019-training-inst-0.training.galaxyproject.eu
+jan-2019-training-inst-1.training.galaxyproject.eu
+jan-2019-training-inst-2.training.galaxyproject.eu
+jan-2019-training-inst-3.training.galaxyproject.eu
+jan-2019-training-inst-4.training.galaxyproject.eu
+jan-2019-training-inst-5.training.galaxyproject.eu
+jan-2019-training-inst-6.training.galaxyproject.eu
+jan-2019-training-inst-7.training.galaxyproject.eu
+jan-2019-training-inst-8.training.galaxyproject.eu
+jan-2019-training-inst-9.training.galaxyproject.eu
+jan-2019-training-inst-10.training.galaxyproject.eu
+jan-2019-training-inst-11.training.galaxyproject.eu
+jan-2019-training-inst-12.training.galaxyproject.eu
+jan-2019-training-inst-13.training.galaxyproject.eu
+jan-2019-training-inst-14.training.galaxyproject.eu
+jan-2019-training-inst-15.training.galaxyproject.eu
+jan-2019-training-inst-16.training.galaxyproject.eu
+jan-2019-training-inst-17.training.galaxyproject.eu
+jan-2019-training-inst-18.training.galaxyproject.eu
+jan-2019-training-inst-19.training.galaxyproject.eu
+jan-2019-training-inst-20.training.galaxyproject.eu
+jan-2019-training-inst-21.training.galaxyproject.eu
+jan-2019-training-inst-22.training.galaxyproject.eu
+jan-2019-training-inst-23.training.galaxyproject.eu
+jan-2019-training-inst-24.training.galaxyproject.eu
+jan-2019-training-inst-25.training.galaxyproject.eu
+jan-2019-training-inst-26.training.galaxyproject.eu
+jan-2019-training-inst-27.training.galaxyproject.eu
+jan-2019-training-inst-28.training.galaxyproject.eu
+jan-2019-training-inst-29.training.galaxyproject.eu
 
 [workshop-instances:vars]
-ansible_host_key_checking=False
-ansible_ssh_user=ubuntu
-ansible_ssh_private_key_file=/Users/Simon/.ssh/cloudman_key_pair_RC.pem
+ansible_host_key_checking = false
+ansible_user = ubuntu
+ansible_become = true
+ansible_ssh_private_key_file = ~/admintraining.key
