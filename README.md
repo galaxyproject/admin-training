@@ -49,12 +49,12 @@ _Timetable with sessions and material will be continuously updated towards the w
 [deployment-slides]:   https://galaxyproject.github.io/training-material/topics/admin/tutorials/deployment-platforms-options/slides.html#1
 [ansible-slides]:      https://galaxyproject.github.io/training-material/topics/admin/tutorials/ansible/slides.html
 [ansible-exercise]:    https://galaxyproject.github.io/training-material/topics/admin/tutorials/ansible/tutorial.html#your-first-playbook-and-first-role
-[db-slides]:           https://galaxyproject.github.io/dagobah-training/2019-pennstate/03-production-basics/databases.html
+[db-slides]:           https://galaxyproject.github.io/training-material/topics/admin/tutorials/database/slides.html
 [ansible-galaxy]:      https://galaxyproject.github.io/training-material/topics/admin/tutorials/ansible-galaxy/tutorial.html
-[production-slides]:   https://galaxyproject.github.io/dagobah-training/2019-pennstate/03-production-basics/production.html
-[nginx-slides]:        https://galaxyproject.github.io/dagobah-training/2019-pennstate/03-production-basics/webservers.html
-[uwsgi-slides]:        https://galaxyproject.github.io/dagobah-training/2019-pennstate/10-uwsgi/uwsgi.html
-[supervisor-slides]:   https://galaxyproject.github.io/dagobah-training/2019-pennstate/11-systemd-supervisor/systemd-supervisor.html
+[production-slides]:   https://galaxyproject.github.io/training-material/topics/admin/tutorials/production/slides.html
+[nginx-slides]:        https://galaxyproject.github.io/training-material/topics/admin/tutorials/webservers/slides.html
+[uwsgi-slides]:        https://galaxyproject.github.io/training-material/topics/admin/tutorials/uwsgi/slides.html
+[supervisor-slides]:   https://galaxyproject.github.io/training-material/topics/admin/tutorials/systemd-supervisor/slides.html
 
 #### Evening Program
 
@@ -76,15 +76,15 @@ Helena (@erasche) might be going to [Mad Mex](https://goo.gl/maps/r2UqUVnmHyQ2) 
 | 16:15    | External authentication   | [Slides][pam-slides], [PAM Auth Exercise][pam-exercise], [Upstream Auth Exercise][upstream-auth-exercise] | H              |
 | 17:00    | Close Day 2               |                                                                                                           |                |
 
-[tool-slides]:              https://galaxyproject.github.io/dagobah-training/2019-pennstate/04-tool-shed/tool_installation.html
-[toolshed-slides]:          https://galaxyproject.github.io/dagobah-training/2019-pennstate/04-tool-shed/shed_intro.html
+[tool-slides]:              https://galaxyproject.github.io/training-material/topics/admin/tutorials/tool-install/slides.html
+[toolshed-slides]:          https://galaxyproject.github.io/training-material/topics/admin/tutorials/toolshed/slides.html
 [ephemeris-slides]:         https://galaxyproject.github.io/training-material/topics/admin/tutorials/tool-management/tutorial.html
 [ephemeris-exercise]:       https://galaxyproject.github.io/training-material/topics/admin/tutorials/tool-management/tutorial.html
 [users-groups-slides]:      https://galaxyproject.github.io/training-material/topics/admin/tutorials/users-groups-quotas/slides.html
-[ref-genomes-slides]:       https://galaxyproject.github.io/dagobah-training/2019-pennstate/05-reference-genomes/reference_genomes.html
+[ref-genomes-slides]:       https://galaxyproject.github.io/training-material/topics/admin/tutorials/reference-genomes/slides.html
 [ref-genome-exercise]:      sessions/05-reference-genomes/ex1-reference-genomes.md
 [cvmfs-exercise]:           https://galaxyproject.github.io/training-material/topics/admin/tutorials/cvmfs/tutorial.html
-[pam-slides]:               https://galaxyproject.github.io/dagobah-training/2019-pennstate/13-external-auth/external-auth.html
+[pam-slides]:               https://galaxyproject.github.io/training-material/topics/admin/tutorials/external-auth/slides.html
 [pam-exercise]:             sessions/13-external-auth/ex1-pam-auth.md
 [upstream-auth-exercise]:   sessions/13-external-auth/ex2-upstream-auth.md
 
@@ -105,29 +105,29 @@ Helena (@erasche) might be going to [Mad Mex](https://goo.gl/maps/r2UqUVnmHyQ2) 
 | 15:35    | compute resources continued                 |                                                        |                |
 | 17:00    | Close day 3                                 |                                                        |                |
 
-[jobconf-slides]:     https://galaxyproject.github.io/dagobah-training/2019-pennstate/15-job-conf/job_conf.html
+[jobconf-slides]:     https://galaxyproject.github.io/training-material/topics/admin/tutorials/job-conf/slides.html
 [cluster-slides]:     https://galaxyproject.github.io/training-material/topics/admin/tutorials/connect-to-compute-cluster/slides.html
 [cluster-exercise]:   https://galaxyproject.github.io/training-material/topics/admin/tutorials/connect-to-compute-cluster/tutorial.html
 [storage-slides]:     https://galaxyproject.github.io/training-material/topics/admin/tutorials/object-store/slides.html
 [storage-exercise]:   https://galaxyproject.github.io/training-material/topics/admin/tutorials/object-store/tutorial.html
-[hetero-slides]:      https://galaxyproject.github.io/dagobah-training/2019-pennstate/17-heterogenous/heterogeneous.html
-[hetero-exercise]:    sessions/17-heterogenous/ex1-pulsar.md
+[hetero-slides]:      https://galaxyproject.github.io/training-material/topics/admin/tutorials/heterogeneous-compute/slides.html
+[hetero-exercise]:    https://galaxyproject.github.io/training-material/topics/admin/tutorials/heterogeneous-compute/tutorial.html
 
 ### Thursday
 **31th January**
 
-| **Time** | **Topic**                                                                                     | **Links**                                                                                                   | **Instructor** |
-| -------- | ---------                                                                                     | ---------                                                                                                   | -----------    |
-| 09:00    | Welcome and questions                                                                         |                                                                                                             |                |
-| 09:15    | Containerize all the things: Galaxy in Docker and Docker in Galaxy                            | [Docker Slides][docker-slides], [Conda Slides][conda-slides], [Galaxy Docker tool example][docker-exercise] | J              |
-| 10:45    | Break (coffee & snacks)                                                                       |                                                                                                             |                |
-| 11:00    | Galaxy Interactive Environments                                                               |                                                                                                             | H              |
-| 12:00    | Lunch (catered)                                                                               |                                                                                                             |                |
-| 13:00    | Cloudbursting                                                                                 |                                                                                                             | S              |
-| 14:00    | Server Monitoring and Maintenance Part 1: Admin UI, Log Files                                 | [Slides][monitoring-slides], [Exercise 1][monitoring-ex1], [Exercise 2][monitoring-ex2]                     | M, H           |
-| 15:15    | Break (coffee & snacks)                                                                       |                                                                                                             |                |
-| 15:30    | Server monitoring and maintenance: DB queries, command line & scripts, what to backup and how |                                                                                                             |                |
-| 17:00    | Wrap up and close                                                                             |                                                                                                             |                |
+| **Time** | **Topic**                                                                     | **Links**                                                                                                   | **Instructor** |
+| -------- | ---------                                                                     | ---------                                                                                                   | -----------    |
+| 09:00    | Welcome and questions                                                         |                                                                                                             |                |
+| 09:15    | Containerize all the things: Galaxy in Docker and Docker in Galaxy            | [Docker Slides][docker-slides], [Conda Slides][conda-slides], [Galaxy Docker tool example][docker-exercise] | J              |
+| 10:45    | Break (coffee & snacks)                                                       |                                                                                                             |                |
+| 11:00    | Galaxy Interactive Environments                                               |                                                                                                             | H              |
+| 12:00    | Lunch (catered)                                                               |                                                                                                             |                |
+| 13:00    | Cloudbursting                                                                 |                                                                                                             | S              |
+| 14:00    | Server Monitoring and Maintenance Part 1: Admin UI, Log Files                 | [Slides][monitoring-slides], [Exercise 1][monitoring-ex1], [Exercise 2][monitoring-ex2]                     | M, H           |
+| 15:15    | Break (coffee & snacks)                                                       |                                                                                                             |                |
+| 15:30    | Server monitoring and maintenance: DB queries, command line & scripts, backup |                                                                                                             |                |
+| 17:00    | Wrap up and close                                                             |                                                                                                             |                |
 
 [docker-slides]:       https://galaxy.slides.com/bgruening/the-galaxy-docker-project
 [conda-slides]:        http://galaxy.slides.com/bgruening/deck-7#/
@@ -150,8 +150,8 @@ Helena (@erasche) might be going to [Mad Mex](https://goo.gl/maps/r2UqUVnmHyQ2) 
 | 13:00    | When things go wrong: Galaxy Server Troubleshooting | [Slides][troubleshooting-slides] | N              |
 | 15:00    | Wrap up and close                                   |                                  |                |
 
-[updating-slides]: https://galaxyproject.github.io/training-material/topics/admin/tutorials/upgrading/slides.html#1
-[troubleshooting-slides]: https://galaxyproject.github.io/dagobah-training/2019-pennstate/22-troubleshooting/troubleshooting.html
+[updating-slides]:        https://galaxyproject.github.io/training-material/topics/admin/tutorials/upgrading/slides.html#1
+[troubleshooting-slides]: https://galaxyproject.github.io/training-material/topics/admin/tutorials/troubleshooting/slides.html
 
 ### Instructors
 
