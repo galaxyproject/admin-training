@@ -5,7 +5,7 @@ class: inverse, top, large
 class: special
 # Using Heterogeneous compute resources
 
-slides by @natefoo
+slides by @natefoo, @slugger70
 
 .footnote[\#usegalaxy / @galaxyproject]
 
@@ -17,10 +17,16 @@ Differences in:
 - Users/groups
 - Data accessibility
 - Administrative control
+- Physical Location (i.e. Cities)
 
 Galaxy expects:
 - One OS, version (dependencies)
 - Shared filesystem w/ fixed paths
+
+---
+# Example - Australia
+
+![australia_locations.png](images/australia_locations.png)
 
 ---
 # Partial solution - CLI job runner
@@ -32,20 +38,27 @@ Still depends on shared FS
 ---
 # Pulsar
 
+![pulsar_logo.png](images/pulsar_logo.png)
+
 Galaxy's remote job management system
 
-Can run jobs on any(?) OS including Windows
+* Can run jobs on any(?) OS including Windows
 
-Multiple modes of operation for every environment
+* Multiple modes of operation for every environment
 
 ---
 # Pulsar - Architecture
 
-Pulsar server runs on remote resource (e.g. cluster head node)
+* Pulsar server runs on remote resource (e.g. cluster head node)
 
-Galaxy Pulsar job runner is Pulsar client
+* Galaxy Pulsar job runner is Pulsar client
 
-Transport is HTTP or AMQP, language is JSON
+* Transport is HTTP or AMQP, language is JSON
+
+---
+# Pulsar - Architecture
+
+![pulsar_schematic.png](images/pulsar_schematic.png)
 
 ---
 # Pulsar Transports - RESTful
@@ -95,10 +108,9 @@ AMQP is pull-only because Pulsar does not run HTTP server
 # Pulsar - Dependency management
 
 Pulsar does not provide Tool Shed tool dependency management. But:
-- It has its own dependency resolver config
-- It can auto-install conda dependencies
-- In many cases you can copy TS dependencies and adjust `env.sh` with `sed`
-  - If the Galaxy server OS <= remote OS
+- It has a similar dependency resolver config to Galaxy
+- It can auto-install **conda** dependencies
+- It can use containers too!
 
 ---
 # Pulsar - Job management
@@ -110,6 +122,21 @@ Pulsar "managers" provide job running interfaces:
 - `queued_condor`: Run on HTCondor
 
 ---
+# Pulsar Australia
+
+![pulsar_australia.png](images/pulsar_australia.png)
+
+---
 # Exercise
 
 [Running jobs on remote resources using Pulsar](https://github.com/galaxyproject/dagobah-training/blob/2018-oslo/sessions/17-heterogenous/ex1-pulsar.md)
+
+Resources:
+* Pulsar Read-the-docs
+    * [https://pulsar.readthedocs.io/en/latest/index.html](https://pulsar.readthedocs.io/en/latest/index.html)
+* Pulsar on galaxyproject.org
+    * [https://galaxyproject.org/admin/config/pulsar/](https://galaxyproject.org/admin/config/pulsar/)
+* Pulsar Github
+    * [https://github.com/galaxyproject/pulsar](https://github.com/galaxyproject/pulsar)
+* Pulsar Ansible
+    * [https://github.com/galaxyproject/ansible-pulsar](https://github.com/galaxyproject/ansible-pulsar)
