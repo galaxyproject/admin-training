@@ -119,7 +119,7 @@ Helena (@erasche) might be going to [Mad Mex](https://goo.gl/maps/r2UqUVnmHyQ2) 
 | **Time** | **Topic**                                                                     | **Links**                                                                                                   | **Instructor** |
 | -------- | ---------                                                                     | ---------                                                                                                   | -----------    |
 | 09:00    | Welcome and questions                                                         |                                                                                                             |                |
-| 09:15    | Containerize all the things: Galaxy in Docker and Docker in Galaxy            | [Docker Slides][docker-slides], [Conda Slides][conda-slides], [Galaxy Docker tool example][docker-exercise] | J              |
+| 09:15    | Containerize all the things: Galaxy in Docker and Docker in Galaxy            | [Docker Slides][docker-slides]  | J              |
 | 10:45    | Break (coffee & snacks)                                                       |                                                                                                             |                |
 | 11:00    | Galaxy Interactive Environments                                               |                                                                                                             | H              |
 | 12:00    | Lunch (catered)                                                               |                                                                                                             |                |
@@ -128,10 +128,7 @@ Helena (@erasche) might be going to [Mad Mex](https://goo.gl/maps/r2UqUVnmHyQ2) 
 | 15:15    | Break (coffee & snacks)                                                       |                                                                                                             |                |
 | 15:30    | Server monitoring and maintenance: DB queries, command line & scripts, backup |                                                                                                             |                |
 | 17:00    | Wrap up and close                                                             |                                                                                                             |                |
-
-[docker-slides]:       https://galaxy.slides.com/bgruening/the-galaxy-docker-project
-[conda-slides]:        http://galaxy.slides.com/bgruening/deck-7#/
-[docker-exercise]:     https://github.com/apetkau/galaxy-hackathon-2014/tree/master/smalt
+[docker-slides]:       https://galaxyproject.github.io/training-material/topics/admin/tutorials/galaxy-docker/slides.html
 [monitoring-slides]:   https://galaxyproject.github.io/training-material/topics/admin/tutorials/monitoring-maintenance/slides.html
 [monitoring-ex1]:      https://galaxyproject.github.io/training-material/topics/admin/tutorials/monitoring-maintenance/tutorial.html
 [monitoring-ex2]:      sessions/22-troubleshooting/ex1-sentry.md
