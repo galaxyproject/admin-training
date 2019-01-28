@@ -55,8 +55,7 @@ alias http://bit.ly/gadminchat
 
 The computing resources for this training have been provided by **Jetstream**
 
-Find the IP address for your instance [here](https://docs.google.com/spreadsheets/d/1sIoU4qpv4HdKNUNOtsAtW-XKKZvIsDfReAoS7uBbCZM/edit?usp=sharing) alias http://bit.ly/admin
-s. Put it somewhere easy to copy/paste.
+Find the IP address for your instance [here](https://docs.google.com/spreadsheets/d/1sIoU4qpv4HdKNUNOtsAtW-XKKZvIsDfReAoS7uBbCZM/edit?usp=sharing) alias https://bit.ly/gadminmachines. Put it somewhere easy to copy/paste.
 
 ---
 class: center
