@@ -26,7 +26,7 @@ We are using instances from the [Jetstream cloud](https://jetstream-cloud.org/) 
 
 ## Timetable
 
-_Timetable with sessions and material will be continuously updated towards the workshop._
+_Timetable with sessions and material is being continuously updated._
 
 ### Monday
 **28th January**
@@ -38,7 +38,7 @@ _Timetable with sessions and material will be continuously updated towards the w
 | 09:20    | Deployment and platform options          | [Slides][deployment-slides]                                                                        | M              |
 | 09:40    | Intro to Ansible                         | [Slides][ansible-slides], [Exercise][ansible-exercise]                                             | S              |
 | 10:30    | Break (coffee & snacks)                  |                                                                                                    |                |
-| 10:45    | Galaxy Server Part 1: Basic Install      | [Database Slides][db-slides], [Exercise][ansible-galaxy]                                           | H              |
+| 10:45    | Galaxy Server Part 1: Basic Install      | [Database Slides][db-slides], [MAIN Exercise][ansible-galaxy]                                           | H              |
 | 12:30    | Lunch (catered)                          |                                                                                                    |                |
 | 13:30    | Galaxy Server Part 2: Towards Production | [Production Slides][production-slides]                                                             | H              |
 | 15:30    | Break (coffee & snacks)                  |                                                                                                    |                |
