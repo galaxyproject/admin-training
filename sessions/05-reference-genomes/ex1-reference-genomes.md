@@ -92,7 +92,7 @@ Make sure you are logged in as an Admin user on your Galaxy server. Then, from t
 
 * View in the file system where the various elements land. Have a look in the configuration files located in config directory.
 
-*config/shed_data_manager_conf.xml*
+*/srv/galaxy/var/config/shed_data_manager_conf.xml*
 
 ``` xml
 <?xml version="1.0"?>
