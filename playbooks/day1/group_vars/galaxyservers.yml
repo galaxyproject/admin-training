@@ -1,0 +1,156 @@
+---
+
+# PostgreSQL
+postgresql_objects_users:
+  - name: galaxy
+postgresql_objects_databases:
+  - name: galaxy
+    owner: galaxy
+
+# Galaxy/uWSGI
+galaxy_create_user: true
+galaxy_separate_privileges: true
+galaxy_manage_paths: true
+galaxy_layout: root-dir
+galaxy_root: /srv/galaxy
+galaxy_file_path: /data
+galaxy_user:
+  name: galaxy
+  shell: /bin/bash
+galaxy_commit_id: release_18.09
+galaxy_config_style: yaml
+galaxy_force_checkout: true
+
+galaxy_config:
+  galaxy:
+    brand: "My Galaxy"
+    admin_users: admin@example.com
+    database_connection: "postgresql:///galaxy?host=/var/run/postgresql"
+    file_path: /data
+    check_migrate_tools: false
+    ftp_upload_dir: "{{ galaxy_ftp_upload_dir }}"
+    ftp_upload_site: "ftp://{{ hostname }}"
+  uwsgi:
+    # Default values
+    #http: 0.0.0.0:8080
+    socket: 127.0.0.1:8080
+    buffer-size: 16384
+    processes: 1
+    threads: 4
+    offload-threads: 2
+    static-map:
+      - /static/style={{ galaxy_server_dir }}/static/style/blue
+      - /static={{ galaxy_server_dir }}/static
+    master: true
+    virtualenv: "{{ galaxy_venv_dir }}"
+    pythonpath: "{{ galaxy_server_dir }}/lib"
+    module: galaxy.webapps.galaxy.buildapp:uwsgi_app()
+    thunder-lock: true
+    die-on-term: true
+    hook-master-start:
+      - unix_signal:2 gracefully_kill_them_all
+      - unix_signal:15 gracefully_kill_them_all
+    py-call-osafterfork: true
+    enable-threads: true
+    # Our additions
+    mule:
+      - lib/galaxy/main.py
+      - lib/galaxy/main.py
+    farm: job-handlers:1,2
+
+# Supervisor
+supervisor_programs:
+  - name: galaxy
+    state: present
+    command: uwsgi --yaml {{ galaxy_config_dir }}/galaxy.yml
+    configuration: |
+      autostart=true
+      autorestart=true
+      startretries=1
+      startsecs=10
+      user=galaxy
+      umask=022
+      directory={{ galaxy_server_dir }}
+      environment=HOME={{ galaxy_mutable_data_dir }},VIRTUAL_ENV={{ galaxy_venv_dir }},PATH={{ galaxy_venv_dir }}/bin:%(ENV_PATH)s
+
+supervisor_socket_user: galaxy
+supervisor_socket_chown: galaxy
+galaxy_restart_handler_name: Restart Galaxy
+
+# nginx
+hostname: "{{ ansible_hostname }}.training.galaxyproject.eu"
+
+nginx_package_name: nginx-full # nginx-galaxy on RHEL/CentOS
+nginx_remove_default_vhost: true
+nginx_server_names_hash_bucket_size: "128"
+
+nginx_vhosts:
+  - listen: "80"
+    server_name: "{{ hostname }}"
+    root: "/var/www/{{ hostname }}"
+    index: "index.html"
+    access_log: "/var/log/nginx/access.log"
+    error_log: "/var/log/nginx/error.log"
+    state: "present"
+    filename: "{{ hostname }}.conf"
+    extra_parameters: |
+        client_max_body_size 10G; # aka max upload size, defaults to 1M
+        uwsgi_read_timeout 2400;  # Wait up to 40 minutes for requests to timeout.
+
+        location / {
+            uwsgi_pass      "{{ galaxy_config.uwsgi.socket }}";    # Proxy our requests to port 8080, just like we defined in our Galaxy group variables for the uWSGI configuration
+            uwsgi_param UWSGI_SCHEME $scheme;  # Passes the scheme (http or https) to the uWSGI application. Used in generating links.
+            include         uwsgi_params;      # Include some default uwsgi settings
+        }
+
+        # Proxy any requests for static content directly to their folders on disk
+        location /static {
+                alias {{ galaxy_server_dir }}/static;
+                expires 24h;
+        }
+
+        location /static/style {
+                alias {{ galaxy_server_dir }}/static/style/blue;
+                expires 24h;
+        }
+
+        location /static/scripts {
+                alias {{ galaxy_server_dir }}/static/scripts;
+                expires 24h;
+        }
+
+        location /robots.txt {
+                alias {{ galaxy_server_dir }}/static/robots.txt;
+        }
+
+        location /favicon.ico {
+                alias {{ galaxy_server_dir }}/static/favicon.ico;
+        }
+
+        location /static/welcome.html {
+                alias {{ galaxy_server_dir }}/static/welcome.html.sample;
+        }
+
+# ProFTPD
+galaxy_ftp_upload_dir: "{{ galaxy_root }}/ftp"
+proftpd_create_ftp_upload_dir: yes
+proftpd_display_connect: |
+  Unauthorized access is prohibited
+proftpd_galaxy_auth: yes
+__galaxy_user_name: galaxy
+proftpd_options:
+  - User: galaxy
+  - Group: galaxy
+proftpd_sql_user: galaxy
+proftpd_sql_db: galaxy@/var/run/postgresql
+
+proftpd_virtualhosts:
+  - id: galaxy
+    address: "{{ hostname }}"
+    options:
+      - ServerAdmin: admin@example.com
+      - ServerName: Galaxy FTP
+      - TransferLog: /var/log/proftpd/xfer.log
+      - MaxLoginAttempts: 3
+      - RequireValidShell: no
+      - AllowOverwrite: yes
