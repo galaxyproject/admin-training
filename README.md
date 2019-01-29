@@ -22,7 +22,9 @@ Penn State University, State College, Pennsylvania, USA
 
 List of training instances is available in https://bit.ly/gadminmachines. Please pick one instance and enter your name in the user column.
 
-We are using instances from the [Jetstream cloud](https://jetstream-cloud.org/) with 2 cores, 4 GiB memory, 20 GiB disk, running Ubuntu 18.04
+We are using instances from the [Jetstream cloud](https://jetstream-cloud.org/) with 2 cores, 4 GiB memory, 20 GiB disk, running a minimal Ubuntu 18.04 image
+
+The instances have been bootstrapped with [a small Ansible playbook](/bootstrap-instances), which you may find useful for repeating the exercises at home using a VM, Docker image, etc.
 
 ## Timetable
 
