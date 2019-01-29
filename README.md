@@ -65,7 +65,7 @@ Helena (@erasche) might be going to [Mad Mex](https://goo.gl/maps/r2UqUVnmHyQ2) 
 ### Tuesday
 **29th January**
 
-| **Time** | **Topic**                 | **Links**                                         | **Exercises**                                                                       | **Instructor** |
+| **Time** | **Topic**                 | **Slides**                                         | **Exercises**                                                                       | **Instructor** |
 | -------- | ---------                 | ---------                                         | -----------                                                                         | -----------    |
 | 09:00    | Welcome and questions     |                                                   |                                                                                     |                |
 | 09:15    | Galaxy Tool Shed          | [Tools][tool-slides], [Toolshed][toolshed-slides] |                                                                                     | H, S, M        |
@@ -93,7 +93,7 @@ Helena (@erasche) might be going to [Mad Mex](https://goo.gl/maps/r2UqUVnmHyQ2) 
 ### Wednesday
 **30th January**
 
-| **Time** | **Topic**                                   | **Links**                | **Exercises**                | **Instructor** |
+| **Time** | **Topic**                                   | **Slides**                | **Exercises**                | **Instructor** |
 | -------- | ---------                                   | ---------                | -----------                  | -----------    |
 | 09:00    | Welcome and questions                       |                          |                              |                |
 | 09:15    | Exploring the Galaxy job configuration file | [Slides][jobconf-slides] |                              | J              |
@@ -118,7 +118,7 @@ Helena (@erasche) might be going to [Mad Mex](https://goo.gl/maps/r2UqUVnmHyQ2) 
 ### Thursday
 **31th January**
 
-| **Time** | **Topic**                                                          | **Links**                      | **Exercises**                                              | **Instructor** |
+| **Time** | **Topic**                                                          | **Slides**                      | **Exercises**                                              | **Instructor** |
 | -------- | ---------                                                          | ---------                      | -------------                                              | -----------    |
 | 09:00    | Welcome and questions                                              |                                |                                                            |                |
 | 09:15    | Containerize all the things: Galaxy in Docker and Docker in Galaxy | [Docker Slides][docker-slides] |                                                            | J              |
@@ -140,7 +140,7 @@ Helena (@erasche) might be going to [Mad Mex](https://goo.gl/maps/r2UqUVnmHyQ2) 
 ### Friday
 **1st February**
 
-| **Time** | **Topic**                                           | **Links**                        | **Instructor** |
+| **Time** | **Topic**                                           | **Slides**                        | **Instructor** |
 | -------- | ---------                                           | ---------                        | -----------    |
 | 09:00    | Welcome and questions                               |                                  |                |
 | 09:15    | Upgrading to a new Galaxy release                   | [Slides][updating-slides]        | M              |
