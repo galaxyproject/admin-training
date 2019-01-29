@@ -65,22 +65,22 @@ Helena (@erasche) might be going to [Mad Mex](https://goo.gl/maps/r2UqUVnmHyQ2) 
 ### Tuesday
 **29th January**
 
-| **Time** | **Topic**                 | **Slides**                                         | **Exercises**                                                                       | **Instructor** |
-| -------- | ---------                 | ---------                                         | -----------                                                                         | -----------    |
-| 09:00    | Welcome and questions     |                                                   |                                                                                     |                |
-| 09:15    | Galaxy Tool Shed          | [Tools][tool-slides], [Toolshed][toolshed-slides] |                                                                                     | H, S, M        |
-| 10:00    | Ephemeris                 | [Ephemeris][ephemeris-slides]                     | [Exercise][ephemeris-exercise]                                                      | J, M           |
-| 10:30    | Break (coffee & snacks)   |                                                   |                                                                                     |                |
-| 10:50    | Ephemeris: Continued      |                                                   |                                                                                     | M, H           |
-| 12:00    | Lunch (catered)           |                                                   |                                                                                     |                |
-| 13:00    | Users, Groups, and Quotas | [Slides][users-groups-slides]                     |                                                                                     | M              |
-| 14:00    | Reference Data            | [Slides][ref-genomes-slides]                      | [Exercise][ref-genome-exercise], [CMVFS Exercise][cvmfs-exercise]                   | S              |
-| 16:15    | External authentication   | [Slides][pam-slides]                              | [Upstream Auth Exercise][upstream-auth-exercise] | H              |
-| 17:00    | Close Day 2               |                                                   |                                                                                     |                |
+| **Time** | **Topic**                 | **Slides**                                        | **Exercises**                                                     | **Instructor** |
+| -------- | ---------                 | ---------                                         | -----------                                                       | -----------    |
+| 09:00    | Welcome and questions     |                                                   |                                                                   |                |
+| 09:15    | Galaxy Tool Shed          | [Tools][tool-slides], [Toolshed][toolshed-slides] |                                                                   | H, S, M        |
+| 10:00    | Ephemeris                 | [Ephemeris][ephemeris-slides]                     | [Exercise][ephemeris-exercise]                                    | J, M           |
+| 10:30    | Break (coffee & snacks)   |                                                   |                                                                   |                |
+| 10:50    | Ephemeris: Continued      |                                                   |                                                                   | M, H           |
+| 12:00    | Lunch (catered)           |                                                   |                                                                   |                |
+| 13:00    | Users, Groups, and Quotas | [Slides][users-groups-slides]                     |                                                                   | M              |
+| 14:00    | Reference Data            | [Slides][ref-genomes-slides]                      | [Exercise][ref-genome-exercise], [CMVFS Exercise][cvmfs-exercise] | S              |
+| 16:15    | External authentication   | [Slides][pam-slides]                              | [Upstream Auth Exercise][upstream-auth-exercise]                  | H              |
+| 17:00    | Close Day 2               |                                                   |                                                                   |                |
 
 [tool-slides]:              https://galaxyproject.github.io/training-material/topics/admin/tutorials/tool-install/slides.html
 [toolshed-slides]:          https://galaxyproject.github.io/training-material/topics/admin/tutorials/toolshed/slides.html
-[ephemeris-slides]:         https://galaxyproject.github.io/training-material/topics/admin/tutorials/tool-management/tutorial.html
+[ephemeris-slides]:         https://galaxyproject.github.io/training-material/topics/admin/tutorials/tool-management/slides.html
 [ephemeris-exercise]:       https://galaxyproject.github.io/training-material/topics/admin/tutorials/tool-management/tutorial.html
 [users-groups-slides]:      https://galaxyproject.github.io/training-material/topics/admin/tutorials/users-groups-quotas/slides.html
 [ref-genomes-slides]:       https://galaxyproject.github.io/training-material/topics/admin/tutorials/reference-genomes/slides.html

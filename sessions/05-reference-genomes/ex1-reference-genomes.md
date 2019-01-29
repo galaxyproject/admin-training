@@ -61,12 +61,12 @@ We need to tell Galaxy where to find the Data Managers and their configuration.
 In your *galaxy.yml* file the following settings exist in the `galaxy:` section:
 
 ```
-shed_tool_data_table_config: /srv/galaxy/config/shed_tool_data_table_conf.xml
+shed_tool_data_table_config: /srv/galaxy/var/config/shed_tool_data_table_conf.xml
 # Data manager configuration options
 enable_data_manager_user_view: true
-data_manager_config_file: /srv/galaxy/config/data_manager_conf.xml
-shed_data_manager_config_file: /srv/galaxy/config/shed_data_manager_conf.xml
-galaxy_data_manager_data_path: /srv/galaxy/tool-data
+data_manager_config_file: /srv/galaxy/server/config/data_manager_conf.xml.sample
+shed_data_manager_config_file: /srv/galaxy/var/config/shed_data_manager_conf.xml
+galaxy_data_manager_data_path: /srv/galaxy/var/tool-data
 ```
 
 Where:
@@ -92,7 +92,7 @@ Make sure you are logged in as an Admin user on your Galaxy server. Then, from t
 
 * View in the file system where the various elements land. Have a look in the configuration files located in config directory.
 
-*config/shed_data_manager_conf.xml*
+*/srv/galaxy/var/config/shed_data_manager_conf.xml*
 
 ``` xml
 <?xml version="1.0"?>
@@ -163,7 +163,7 @@ Make sure you are logged in as an Admin user on your Galaxy server. Then, from t
 
 **Part 2: Download and install a reference genome sequence**
 
-Use the Galaxy Admin page and the _data_manager_fetch_genome_all_fasta_dbkey_ to install some reference data. We will grab sacCer2 (version 2 of the Saccharomyces cerevisiae genome.)
+Use the Galaxy Admin page and the _data_manager_fetch_genome_dbkeys_all_fasta_ to install some reference data. We will grab sacCer2 (version 2 of the Saccharomyces cerevisiae genome.)
 
 From the Galaxy Admin page:
 
@@ -187,7 +187,7 @@ In your history, you will see a new dataset for the data manager run. When the j
 
 * Click on **all_fasta** under *View Tool Data Table Entries*
 
-You should see that _sacCer2_ has been added to _all_fasta_ list.
+You should see that _sacCer2_ has been added to _all_fasta_ list. If you do not, click the refresh button, and if you still do not, you may need to restart your Galaxy server (this is sometimes necessary after adding a new Data Manager).
 
 ![all_fasta.png](../../docs/05-reference-genomes/images/all_fasta.png)
 
@@ -220,7 +220,11 @@ S. cerevisiae sacCer2 should now appear in the list!
 
 Now we will run the BWA tool and check to see if the reference data is listed and the tool works with it!
 
-* Run the BWA tool on the 2 fast files we loaded earlier, using sacCer2 as the reference.
+* Upload the following 2 fastqsanger files to Galaxy:
+
+http://www.bx.psu.edu/~dan/examples/gcc2014/data_manager_workshop/fastq/SRR507778-10k_1.fastqsanger http://www.bx.psu.edu/~dan/examples/gcc2014/data_manager_workshop/fastq/SRR507778-10k_2.fastqsanger
+
+* Run the BWA tool with these 2 fastq files, using sacCer2 as the reference.
 
 How cool is that? No editing `.loc` files, no making sure you've got TABs instead of spaces. Fully auto!
 
