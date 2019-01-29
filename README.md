@@ -75,7 +75,7 @@ Helena (@erasche) might be going to [Mad Mex](https://goo.gl/maps/r2UqUVnmHyQ2) 
 | 12:00    | Lunch (catered)           |                                                   |                                                                                     |                |
 | 13:00    | Users, Groups, and Quotas | [Slides][users-groups-slides]                     |                                                                                     | M              |
 | 14:00    | Reference Data            | [Slides][ref-genomes-slides]                      | [Exercise][ref-genome-exercise], [CMVFS Exercise][cvmfs-exercise]                   | S              |
-| 16:15    | External authentication   | [Slides][pam-slides]                              | [PAM Auth Exercise][pam-exercise], [Upstream Auth Exercise][upstream-auth-exercise] | H              |
+| 16:15    | External authentication   | [Slides][pam-slides]                              | [Upstream Auth Exercise][upstream-auth-exercise] | H              |
 | 17:00    | Close Day 2               |                                                   |                                                                                     |                |
 
 [tool-slides]:              https://galaxyproject.github.io/training-material/topics/admin/tutorials/tool-install/slides.html
@@ -87,8 +87,7 @@ Helena (@erasche) might be going to [Mad Mex](https://goo.gl/maps/r2UqUVnmHyQ2) 
 [ref-genome-exercise]:      sessions/05-reference-genomes/ex1-reference-genomes.md
 [cvmfs-exercise]:           https://galaxyproject.github.io/training-material/topics/admin/tutorials/cvmfs/tutorial.html
 [pam-slides]:               https://galaxyproject.github.io/training-material/topics/admin/tutorials/external-auth/slides.html
-[pam-exercise]:             sessions/13-external-auth/ex1-pam-auth.md
-[upstream-auth-exercise]:   sessions/13-external-auth/ex2-upstream-auth.md
+[upstream-auth-exercise]:   https://galaxyproject.github.io/training-material/topics/admin/tutorials/upstream-auth/tutorial.html
 
 ### Wednesday
 **30th January**
