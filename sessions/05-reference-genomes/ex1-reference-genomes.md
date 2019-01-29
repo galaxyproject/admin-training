@@ -220,7 +220,11 @@ S. cerevisiae sacCer2 should now appear in the list!
 
 Now we will run the BWA tool and check to see if the reference data is listed and the tool works with it!
 
-* Run the BWA tool on the 2 fastq files we loaded earlier, using sacCer2 as the reference.
+* Upload the following 2 fastqsanger files to Galaxy:
+
+http://www.bx.psu.edu/~dan/examples/gcc2014/data_manager_workshop/fastq/SRR507778-10k_1.fastqsanger http://www.bx.psu.edu/~dan/examples/gcc2014/data_manager_workshop/fastq/SRR507778-10k_2.fastqsanger
+
+* Run the BWA tool with these 2 fastq files, using sacCer2 as the reference.
 
 How cool is that? No editing `.loc` files, no making sure you've got TABs instead of spaces. Fully auto!
 
