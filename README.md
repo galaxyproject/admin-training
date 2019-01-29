@@ -80,7 +80,7 @@ Helena (@erasche) might be going to [Mad Mex](https://goo.gl/maps/r2UqUVnmHyQ2) 
 
 [tool-slides]:              https://galaxyproject.github.io/training-material/topics/admin/tutorials/tool-install/slides.html
 [toolshed-slides]:          https://galaxyproject.github.io/training-material/topics/admin/tutorials/toolshed/slides.html
-[ephemeris-slides]:         https://galaxyproject.github.io/training-material/topics/admin/tutorials/tool-management/tutorial.html
+[ephemeris-slides]:         https://galaxyproject.github.io/training-material/topics/admin/tutorials/tool-management/slides.html
 [ephemeris-exercise]:       https://galaxyproject.github.io/training-material/topics/admin/tutorials/tool-management/tutorial.html
 [users-groups-slides]:      https://galaxyproject.github.io/training-material/topics/admin/tutorials/users-groups-quotas/slides.html
 [ref-genomes-slides]:       https://galaxyproject.github.io/training-material/topics/admin/tutorials/reference-genomes/slides.html
