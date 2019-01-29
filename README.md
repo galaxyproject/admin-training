@@ -33,19 +33,19 @@ _Timetable with sessions and material is being continuously updated._
 ### Monday
 **28th January**
 
-| **Time** | **Topic**                                | **Links**                                                                                          | **Instructor** |
-| -------- | ---------                                | ---------                                                                                          | -----------    |
-| 08:30    | Registration                             |                                                                                                    |                |
-| 09:00    | Welcome and introduction                 | [Slides][welcome-slides]                                                                           | All            |
-| 09:20    | Deployment and platform options          | [Slides][deployment-slides]                                                                        | M              |
-| 09:40    | Intro to Ansible                         | [Slides][ansible-slides], [Exercise][ansible-exercise]                                             | S              |
-| 10:30    | Break (coffee & snacks)                  |                                                                                                    |                |
-| 10:45    | Galaxy Server Part 1: Basic Install      | [Database Slides][db-slides], [MAIN Exercise][ansible-galaxy]                                           | H              |
-| 12:30    | Lunch (catered)                          |                                                                                                    |                |
-| 13:30    | Galaxy Server Part 2: Towards Production | [Production Slides][production-slides]                                                             | H              |
-| 15:30    | Break (coffee & snacks)                  |                                                                                                    |                |
-| 15:50    | Galaxy Server Part 3: Advanced Install   | [NGINX Slides][nginx-slides], [uWSGI Slides][uwsgi-slides], [Supervisor Slides][supervisor-slides] | H              |
-| 17:00    | Close Day 1                              |                                                                                                    |                |
+| **Time** | **Topic**                                | **Links**                                                                                  | **Instructor** |
+| -------- | ---------                                | ---------                                                                                  | -----------    |
+| 08:30    | Registration                             |                                                                                            |                |
+| 09:00    | Welcome and introduction                 | [Slides][welcome-slides]                                                                   | All            |
+| 09:20    | Deployment and platform options          | [Slides][deployment-slides]                                                                | M              |
+| 09:40    | Intro to Ansible                         | [Slides][ansible-slides], [Exercise][ansible-exercise]                                     | S              |
+| 10:30    | Break (coffee & snacks)                  |                                                                                            |                |
+| 10:45    | Galaxy Server Part 1: Basic Install      | [Database Slides][db-slides], [uWSGI Slides][uwsgi-slides], [**Exercise**][ansible-galaxy] | H              |
+| 12:30    | Lunch (catered)                          |                                                                                            |                |
+| 13:30    | Galaxy Server Part 2: Towards Production | [NGINX Slides][nginx-slides], [Supervisor Slides][supervisor-slides]                       | H              |
+| 15:30    | Break (coffee & snacks)                  |                                                                                            |                |
+| 15:50    | Galaxy Server Part 3: Advanced Install   | [Production Slides][production-slides]                                                     | H              |
+| 17:00    | Close Day 1                              |                                                                                            |                |
 
 [welcome-slides]:      https://galaxyproject.github.io/dagobah-training/2019-pennstate/00-intro/intro.html
 [deployment-slides]:   https://galaxyproject.github.io/training-material/topics/admin/tutorials/deployment-platforms-options/slides.html#1
