@@ -74,7 +74,7 @@ Helena (@erasche) might be going to [Mad Mex](https://goo.gl/maps/r2UqUVnmHyQ2) 
 | 10:50    | Ephemeris: Continued      |                                                   |                                                                                     | M, H           |
 | 12:00    | Lunch (catered)           |                                                   |                                                                                     |                |
 | 13:00    | Users, Groups, and Quotas | [Slides][users-groups-slides]                     |                                                                                     | M              |
-| 14:00    | Reference Data            | [Slides][https://galaxyproject.github.io/dagobah-training/2019-pennstate/05-reference-genomes/reference_genomes.html#1]                      | [Exercise][ref-genome-exercise], [CMVFS Exercise][cvmfs-exercise]                   | S              |
+| 14:00    | Reference Data            | [Slides](https://galaxyproject.github.io/dagobah-training/2019-pennstate/05-reference-genomes/reference_genomes.html#1)                      | [Exercise][ref-genome-exercise], [CMVFS Exercise][cvmfs-exercise]                   | S              |
 | 16:15    | External authentication   | [Slides][pam-slides]                              | [PAM Auth Exercise][pam-exercise], [Upstream Auth Exercise][upstream-auth-exercise] | H              |
 | 17:00    | Close Day 2               |                                                   |                                                                                     |                |
 
