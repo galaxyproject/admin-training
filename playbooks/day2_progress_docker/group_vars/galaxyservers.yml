@@ -39,6 +39,7 @@ galaxy_config:
     # for ephemeris installs
     master_api_key: deadbeef
     job_config_file: "{{ galaxy_config_dir }}/job_conf.xml"
+    enable_beta_mulled_containers: true
   uwsgi:
     # Default values
     #http: 0.0.0.0:8080
