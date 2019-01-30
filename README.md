@@ -97,8 +97,7 @@ _Timetable with sessions and material is being continuously updated._
 | 10:20    | Break (coffee & snacks)                     |                          |                              |                |
 | 10:40    | Compute cluster (continued)                 |                          |                              |                |
 | 12:00    | Lunch (on your own)                         |                          |                              |                |
-| 13:30    | Storage management                          | [Slides][storage-slides] | [Exercise][storage-exercise] | M, S           |
-| 14:15    | Using heterogeneous compute resources       | [Slides][hetero-slides]  | [Exercise][hetero-exercise]  | S, N           |
+| 13:30    | Using heterogeneous compute resources       | [Slides][hetero-slides]  | [Exercise][hetero-exercise]  | S, N           |
 | 15:15    | Break (coffee & snacks)                     |                          |                              |                |
 | 15:35    | compute resources continued                 |                          |                              |                |
 | 17:00    | Close day 3                                 |                          |                              |                |
@@ -106,8 +105,6 @@ _Timetable with sessions and material is being continuously updated._
 [jobconf-slides]:     https://galaxyproject.github.io/training-material/topics/admin/tutorials/job-conf/slides.html
 [cluster-slides]:     https://galaxyproject.github.io/training-material/topics/admin/tutorials/connect-to-compute-cluster/slides.html
 [cluster-exercise]:   https://galaxyproject.github.io/training-material/topics/admin/tutorials/connect-to-compute-cluster/tutorial.html
-[storage-slides]:     https://galaxyproject.github.io/training-material/topics/admin/tutorials/object-store/slides.html
-[storage-exercise]:   https://galaxyproject.github.io/training-material/topics/admin/tutorials/object-store/tutorial.html
 [hetero-slides]:      https://galaxyproject.github.io/training-material/topics/admin/tutorials/heterogeneous-compute/slides.html
 [hetero-exercise]:    https://galaxyproject.github.io/training-material/topics/admin/tutorials/heterogeneous-compute/tutorial.html
 
@@ -117,6 +114,7 @@ _Timetable with sessions and material is being continuously updated._
 | **Time** | **Topic**                                                          | **Slides**                      | **Exercises**                                              | **Instructor** |
 | -------- | ---------                                                          | ---------                      | -------------                                              | -----------    |
 | 09:00    | Welcome and questions                                              |                                |                                                            |                |
+| 13:30    | Storage management                          | [Slides][storage-slides] | [Exercise][storage-exercise] | M, S           |
 | 09:15    | Containerize all the things: Galaxy in Docker and Docker in Galaxy | [Docker Slides][docker-slides] |                                                            | J              |
 | 10:45    | Break (coffee & snacks)                                            |                                |                                                            |                |
 | 11:00    | Galaxy Interactive Environments                                    |                                |                                                            | H              |
@@ -131,7 +129,8 @@ _Timetable with sessions and material is being continuously updated._
 [monitoring-slides]:   https://galaxyproject.github.io/training-material/topics/admin/tutorials/monitoring-maintenance/slides.html
 [monitoring-ex1]:      https://galaxyproject.github.io/training-material/topics/admin/tutorials/monitoring-maintenance/tutorial.html
 [monitoring-ex2]:      sessions/22-troubleshooting/ex1-sentry.md
-
+[storage-slides]:     https://galaxyproject.github.io/training-material/topics/admin/tutorials/object-store/slides.html
+[storage-exercise]:   https://galaxyproject.github.io/training-material/topics/admin/tutorials/object-store/tutorial.html
 
 ### Friday
 **1st February**
