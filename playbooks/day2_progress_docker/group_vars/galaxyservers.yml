@@ -223,3 +223,7 @@ certbot_post_renewal: |
 cvmfs_role: client
 galaxy_cvmfs_repos_enabled: true
 cvmfs_quota_limit: 2000
+
+docker_users:
+  - ubuntu
+  - galaxy
