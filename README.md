@@ -111,19 +111,19 @@ _Timetable with sessions and material is being continuously updated._
 ### Thursday
 **31th January**
 
-| **Time** | **Topic**                                                          | **Slides**                      | **Exercises**                                              | **Instructor** |
-| -------- | ---------                                                          | ---------                      | -------------                                              | -----------    |
-| 09:00    | Welcome and questions                                              |                                |                                                            |                |
-| 13:30    | Storage management                          | [Slides][storage-slides] | [Exercise][storage-exercise] | M, S           |
-| 09:15    | Containerize all the things: Galaxy in Docker and Docker in Galaxy | [Docker Slides][docker-slides] |                                                            | J              |
-| 10:45    | Break (coffee & snacks)                                            |                                |                                                            |                |
-| 11:00    | Galaxy Interactive Environments                                    |                                |                                                            | H              |
-| 12:00    | Lunch (catered)                                                    |                                |                                                            |                |
-| 13:00    | Cloudbursting                                                      |                                |                                                            | S              |
-| 14:00    | Server Monitoring and Maintenance Part 1: Admin UI, Log Files      | [Slides][monitoring-slides]    | [Exercise 1][monitoring-ex1], [Exercise 2][monitoring-ex2] | M, H           |
-| 15:15    | Break (coffee & snacks)                                            |                                |                                                            |                |
-| 15:30    | S M&M Part 2: DB queries, command line & scripts, backup           |                                |                                                            |                |
-| 17:00    | Wrap up and close                                                  |                                |                                                            |                |
+| **Time** | **Topic**                                                                            | **Slides**                     | **Exercises**                                              | **Instructor** |
+| -------- | ---------                                                                            | ---------                      | -------------                                              | -----------    |
+| 09:00    | Welcome and questions                                                                |                                |                                                            |                |
+| 13:30    | Storage management                                                                   | [Slides][storage-slides]       | [Exercise][storage-exercise]                               | M, S           |
+| 09:15    | Containerize all the things: Galaxy in Docker and Docker in Galaxy                   | [Docker Slides][docker-slides] |                                                            | J              |
+| 10:45    | Break (coffee & snacks)                                                              |                                |                                                            |                |
+| 11:00    | Galaxy Interactive Environments                                                      |                                |                                                            | H              |
+| 12:00    | Lunch (catered)                                                                      |                                |                                                            |                |
+| 13:00    | Cloudbursting                                                                        |                                |                                                            | S              |
+| 14:00    | Server Monitoring and Maintenance Part 1: Admin UI, Log Files                        | [Slides][monitoring-slides]    | [Exercise 1][monitoring-ex1], [Exercise 2][monitoring-ex2] | M, H           |
+| 15:15    | Break (coffee & snacks)                                                              |                                |                                                            |                |
+| 15:30    | Server Monitoring and Maintenance Part 2: DB queries, command line & scripts, backup |                                |                                                            |                |
+| 17:00    | Wrap up and close                                                                    |                                |                                                            |                |
 
 [docker-slides]:       https://galaxyproject.github.io/training-material/topics/admin/tutorials/galaxy-docker/slides.html
 [monitoring-slides]:   https://galaxyproject.github.io/training-material/topics/admin/tutorials/monitoring-maintenance/slides.html
