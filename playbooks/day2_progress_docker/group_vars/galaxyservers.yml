@@ -21,6 +21,10 @@ galaxy_commit_id: release_18.09
 galaxy_config_style: yaml
 galaxy_force_checkout: true
 
+galaxy_config_files:
+  - src: files/galaxy/config/job_conf.xml
+    dest: "{{ galaxy_config.galaxy.job_config_file }}"
+
 galaxy_config:
   galaxy:
     brand: "{{ ansible_hostname }}"
@@ -34,6 +38,7 @@ galaxy_config:
     tool_data_table_config_path: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml,/cvmfs/data.galaxyproject.org/managed/location/tool_data_table_conf.xml
     # for ephemeris installs
     master_api_key: deadbeef
+    job_config_file: "{{ galaxy_config_dir }}/job_conf.xml"
   uwsgi:
     # Default values
     #http: 0.0.0.0:8080
@@ -75,7 +80,7 @@ supervisor_programs:
       user=galaxy
       umask=022
       directory={{ galaxy_server_dir }}
-      environment=HOME={{ galaxy_mutable_data_dir }},VIRTUAL_ENV={{ galaxy_venv_dir }},PATH={{ galaxy_venv_dir }}/bin:%(ENV_PATH)s
+      environment=HOME="{{ galaxy_mutable_data_dir }}",VIRTUAL_ENV="{{ galaxy_venv_dir }}",PATH="{{ galaxy_venv_dir }}/bin:%(ENV_PATH)s",DRMAA_LIBRARY_PATH="/usr/lib/slurm-drmaa/lib/libdrmaa.so.1"
 
 supervisor_socket_user: galaxy
 supervisor_socket_chown: galaxy

@@ -1,0 +1,10 @@
+<job_conf>
+    <plugins workers="4">
+        <plugin id="local" type="runner" load="galaxy.jobs.runners.local:LocalJobRunner"/>
+        <plugin id="slurm" type="runner" load="galaxy.jobs.runners.slurm:SlurmJobRunner"/>
+    </plugins>
+    <destinations default="slurm">
+      <destination id="slurm" runner="slurm"/>
+      <destination id="local" runner="local"/>
+    </destinations>
+</job_conf>

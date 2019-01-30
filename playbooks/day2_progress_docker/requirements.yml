@@ -16,3 +16,4 @@
   name: usegalaxy-eu.certbot
 - name: galaxyproject.cvmfs
   version: 0.1.2
+- galaxyproject.slurm
