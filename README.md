@@ -58,9 +58,6 @@ _Timetable with sessions and material is being continuously updated._
 [uwsgi-slides]:        https://galaxyproject.github.io/training-material/topics/admin/tutorials/uwsgi/slides.html
 [supervisor-slides]:   https://galaxyproject.github.io/training-material/topics/admin/tutorials/systemd-supervisor/slides.html
 
-#### Evening Program
-
-Helena (@erasche) might be going to [Mad Mex](https://goo.gl/maps/r2UqUVnmHyQ2) which seems to have $6 "all you can eat burritos". You're welcome to join her for further Galaxy admin discussion.
 
 ### Tuesday
 **29th January**
