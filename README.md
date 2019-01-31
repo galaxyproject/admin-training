@@ -131,7 +131,7 @@ _Timetable with sessions and material is being continuously updated._
 [storage-slides]:      https://galaxyproject.github.io/training-material/topics/admin/tutorials/object-store/slides.html
 [storage-exercise]:    https://galaxyproject.github.io/training-material/topics/admin/tutorials/object-store/tutorial.html
 [gxadmin-exercise]:    https://galaxyproject.github.io/training-material/topics/admin/tutorials/gxadmin/tutorial.html
-[monitoring-reports] . https://galaxyproject.github.io/training-material/topics/admin/tutorials/reports/tutorial.html
+[monitoring-reports]:  https://galaxyproject.github.io/training-material/topics/admin/tutorials/reports/tutorial.html
 
 ### Friday
 **1st February**
