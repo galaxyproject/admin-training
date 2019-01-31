@@ -1,0 +1,68 @@
+---
+
+- hosts: galaxyservers
+  roles:
+    - geerlingguy.nginx
+    # don't run the ProFTPD role until after certs are obtained
+    #- galaxyproject.proftpd
+  vars:
+    # these are set by the galaxy role and needed by other vars
+    galaxy_mutable_data_dir: /srv/galaxy/var
+    galaxy_server_dir: /srv/galaxy/server
+    galaxy_venv_dir: /srv/galaxy/venv
+    # override the end-of-day versions of these variables just for this playbook
+    nginx_vhosts:
+      - listen: "80"
+        server_name: "{{ hostname }}"
+        root: "/var/www/{{ hostname }}"
+        index: "index.html"
+        access_log: "/var/log/nginx/access.log"
+        error_log: "/var/log/nginx/error.log"
+        state: "present"
+        filename: "{{ hostname }}.conf"
+        extra_parameters: |
+            client_max_body_size 10G; # aka max upload size, defaults to 1M
+            uwsgi_read_timeout 2400;  # Wait up to 40 minutes for requests to timeout.
+
+            location /.well-known/ {
+                proxy_set_header           Host $host:$server_port;
+                proxy_set_header           X-Real-IP $remote_addr;
+                proxy_set_header           X-Forwarded-For $proxy_add_x_forwarded_for;
+                proxy_set_header           X-Forwarded-Proto $scheme;
+                proxy_pass                 http://127.0.0.1:8118;
+                proxy_pass_request_headers on;
+            }
+
+            location / {
+                uwsgi_pass      "{{ galaxy_config.uwsgi.socket }}";    # Proxy our requests to port 8080, just like we defined in our Galaxy group variables for the uWSGI configuration
+                uwsgi_param UWSGI_SCHEME $scheme;  # Passes the scheme (http or https) to the uWSGI application. Used in generating links.
+                include         uwsgi_params;      # Include some default uwsgi settings
+            }
+
+            # Proxy any requests for static content directly to their folders on disk
+            location /static {
+                    alias {{ galaxy_server_dir }}/static;
+                    expires 24h;
+            }
+
+            location /static/style {
+                    alias {{ galaxy_server_dir }}/static/style/blue;
+                    expires 24h;
+            }
+
+            location /static/scripts {
+                    alias {{ galaxy_server_dir }}/static/scripts;
+                    expires 24h;
+            }
+
+            location /robots.txt {
+                    alias {{ galaxy_server_dir }}/static/robots.txt;
+            }
+
+            location /favicon.ico {
+                    alias {{ galaxy_server_dir }}/static/favicon.ico;
+            }
+
+            location /static/welcome.html {
+                    alias {{ galaxy_server_dir }}/static/welcome.html.sample;
+            }

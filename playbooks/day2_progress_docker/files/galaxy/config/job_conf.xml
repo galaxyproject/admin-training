@@ -1,0 +1,21 @@
+<job_conf>
+    <plugins workers="4">
+        <plugin id="local" type="runner" load="galaxy.jobs.runners.local:LocalJobRunner"/>
+        <plugin id="slurm" type="runner" load="galaxy.jobs.runners.slurm:SlurmJobRunner"/>
+    </plugins>
+    <destinations default="slurm">
+      <destination id="slurm" runner="slurm"/>
+      <destination id="local" runner="local"/>
+      <destination id="slurm_docker" runner="slurm">
+        <param id="docker_enabled">true</param>
+        <param id="docker_sudo">false</param>
+      </destination>
+    </destinations>
+    <tools>
+      <!--
+      https://raw.githubusercontent.com/galaxyproject/tools-iuc/master/tools/pear/test-data/forward.fastq
+      https://raw.githubusercontent.com/galaxyproject/tools-iuc/master/tools/pear/test-data/reverse.fastq
+      -->
+      <tool id="iuc_pear" destination="slurm_docker" />
+    </tools>
+</job_conf>

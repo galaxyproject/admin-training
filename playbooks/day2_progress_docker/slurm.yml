@@ -1,0 +1,14 @@
+- hosts: galaxyservers
+  become: true
+  vars:
+    slurm_roles: ['controller', 'exec']
+    slurm_nodes:
+    - name: localhost
+      CPUs: 2
+  roles:
+    - galaxyproject.repos
+    - galaxyproject.slurm
+  post_tasks:
+    - name: Install slurm-drmaa
+      package:
+        name: slurm-drmaa1
