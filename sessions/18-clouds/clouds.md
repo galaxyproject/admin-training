@@ -7,7 +7,7 @@ class: special, center, middle
 ## It's positively meterological..
 
 .normal[
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject] ]
+.footnote[\#usegalaxy \#PennState2019 / @galaxyproject] ]
 ---
 class: left, middle, center
 
@@ -15,7 +15,7 @@ class: left, middle, center
 
 *We are here to answer questions!*
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#PennState2019 / @galaxyproject]
 
 ---
 # Overview
@@ -30,7 +30,7 @@ class: left, middle, center
 * Integration with the cloud: CloudBridge
 ]
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#PennState2019 / @galaxyproject]
 
 ---
 # Help!
@@ -43,7 +43,7 @@ class: left, middle, center
 What do you do now?
 ]
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#PennState2019 / @galaxyproject]
 
 ---
 # Help!
@@ -59,16 +59,17 @@ What do you do now?
 ]
 .center[![cloudman](images/cloudman_logo.png)]
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#PennState2019 / @galaxyproject]
 
 ---
 # Clouds?
 
 **Cloud computing** ... is a model for enabling ubiquitous, **on-demand** access to a **shared pool** of configurable **computing resources** ... which can be **rapidly provisioned and released** with minimal management effort. Cloud computing and storage ... may be located far from the user – ranging in distance from **across a city to across the world.** - Wikipedia, Cloud Computing.
 
-.center[![aws_logo.png](images/aws_logo.png) ![OpenStack_logo.png](images/OpenStack-logo.png) ![gce-logo.png](images/gce-logo.png)]
+.center[![aws_logo.png](images/aws_logo.png) ![OpenStack_logo.png](images/OpenStack-logo.png)
+<br /> ![gce-logo.png](images/gce-logo.png) ![azure-logo.png](images/Azure-logo.png)]
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#PennState2019 / @galaxyproject]
 
 ---
 # Available Clouds
@@ -84,7 +85,7 @@ What do you do now?
   * NeCTAR in Australia, Jetstream in USA, CLIMB in UK, lots of others
   * Some free for researchers (NeCTAR, CLIMB), some with project grants (Jetstream)
 ]
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#PennState2019 / @galaxyproject]
 
 ---
 # Why Clouds?
@@ -100,7 +101,7 @@ What do you do now?
   * Start compute there. Save on data transfer.
 ]
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#PennState2019 / @galaxyproject]
 
 ---
 # Galaxy on the Cloud
@@ -116,14 +117,14 @@ What do you do now?
   * An access key and a secret key or username and password with project details
   * They are obtained from the cloud account admin page you want to use
 ]
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#PennState2019 / @galaxyproject]
 
 ---
 # Taking it Further: Genomics Virtual Lab (GVL)
 
 ![GVL-evolution.png](images/GVL-evolution.png)
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#PennState2019 / @galaxyproject]
 
 ---
 # CloudLaunch
@@ -139,32 +140,19 @@ What do you do now?
   * It should only take 2-3 minutes for everything to be set up.
 ]
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#PennState2019 / @galaxyproject]
 
 ---
 # Launch Demo
 
 .large[
-1. **End-user** perspective
-2. Application **developer** perspective
-3. Application **deployer** perspective
+**End-user** perspective
+* Create your own machine with Galaxy in the cloud
 
 https://launch.usegalaxy.org/
 ]
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
-
----
-# CloudLaunch references
-
-.large[
-CloudLaunch server
-  * github.com/galaxyproject/cloudlaunch/
-  * github.com/CloudVE/djcloudbridge
-
-CloudLaunch	UI
-  * github.com/galaxyproject/cloudlaunch-ui/
-]
+.footnote[\#usegalaxy \#PennState2019 / @galaxyproject]
 
 ---
 # Cloud Manager
@@ -177,21 +165,21 @@ CloudLaunch	UI
 * Can mount filesystems, dynamically add/remove worker nodes, start/stop services
 ]
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#PennState2019 / @galaxyproject]
 
 ---
 # CloudMan
 
 .center[<img src='images/cloudman-main.png' width=85%>]
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#PennState2019 / @galaxyproject]
 
 ---
 # CloudMan Admin
 
 .center[<img src='images/cloudman-admin.png' width=80%>]
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#PennState2019 / @galaxyproject]
 
 ---
 # Cluster on the Cloud?
@@ -205,7 +193,7 @@ CloudLaunch	UI
   * Are registered in Slurm setup
   * A node will take ~2-3 minutes to start and configure.
 ]
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#PennState2019 / @galaxyproject]
 
 ---
 # Auto-Scaling
@@ -218,7 +206,7 @@ CloudLaunch	UI
 
 .center[<img src='images/cloudman-scaling.png' width=60%>]
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#PennState2019 / @galaxyproject]
 
 ---
 # CloudMan Galaxy
@@ -232,7 +220,7 @@ CloudLaunch	UI
   * Will be discussed in architecture section
 ]
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#PennState2019 / @galaxyproject]
 
 ---
 # CloudMan Galaxy
@@ -244,7 +232,7 @@ CloudLaunch	UI
 <img src='images/reference_data.png'/>
 ]
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#PennState2019 / @galaxyproject]
 
 ---
 # CloudMan Galaxy
@@ -275,14 +263,7 @@ NodeName=w2 NodeAddr=45.113.232.92 CPUs=8 RealMemory=32176 Weight=5 State=UNKNOW
 NodeName=w3 NodeAddr=45.113.232.93 CPUs=8 RealMemory=32176 Weight=5 State=UNKNOWN
 ```
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
-
----
-# CloudMan Architecture
-
-![architecture.png](images/architecture.png)
-
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#PennState2019 / @galaxyproject]
 
 ---
 # Persistence
@@ -295,52 +276,17 @@ NodeName=w3 NodeAddr=45.113.232.93 CPUs=8 RealMemory=32176 Weight=5 State=UNKNOW
 * CloudMan stores an instance's set up in an object store container for persistence
 ]
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
+.footnote[\#usegalaxy \#PennState2019 / @galaxyproject]
 
 ---
 # Looking to the future
 
 .large[
-* An all-new system is under development
-* We already saw the new CloudLaunch
-  * No longer Galaxy-only: any application and multiple clouds can be plugged in
-* It is powered by CloudBridge
-  * [http://cloudbridge.cloudve.org/](http://cloudbridge.cloudve.org/)
-  * An abstraction layer for mature clouds
-  * Will let the new version of CloudMan run on any cloud
-  * Therefore, we can use our Galaxy images on any cloud
-* New CloudMan is planned
-  * Container-based so no/minimal building necessary per cloud
-  * Powered by CloudBridge, so natively cross-cloud
+* Cloudlaunch has a Pulsar appliance
+* As of Galaxy version 19.01
+    * You can make dynamic rules to look for your pulsar appliances in the cloud
+    * Automatically connect to them
+    * Send jobs to them
 ]
 
-.footnote[\#usegalaxy \#Oslo2018 / @galaxyproject]
-
----
-# CloudBridge: a single API for multi-cloud computing
-
-.medium[
-1. Offer a uniform API irrespective of the underlying provider
-  * No special casing of application code
-  * Simpler code
-2. Provide a set of conformance tests for all supported clouds
-  * No need to test against each cloud
-  * Goal of “write-once-run-anywhere”
-3. Focus on mature clouds with a required minimal set of features
-  * Enables 1 and 2
-4. Be as thin as possible
-  * Keep the code-simple and reuse existing work ⟶ greater reliability, reduced development time
-]
-
----
-# CloudBridge design
-
-.large[
-API revolves around 3 concepts
-  * Providers
-    * An entry point for a service, encapsulating a connection
-  * Services
-    * Exposes provider functionality/feature sets
-  * Resources
-    * A remote cloud resource, such a Machine Instance, Volume etc.
-]
+.footnote[\#usegalaxy \#PennState2019 / @galaxyproject]
