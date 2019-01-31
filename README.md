@@ -127,10 +127,10 @@ _Timetable with sessions and material is being continuously updated._
 
 [docker-slides]:       https://galaxyproject.github.io/training-material/topics/admin/tutorials/galaxy-docker/slides.html
 [monitoring-slides]:   https://galaxyproject.github.io/training-material/topics/admin/tutorials/monitoring/slides.html
-[monitoring-exercise]:      https://galaxyproject.github.io/training-material/topics/admin/tutorials/monitoring/tutorial.html
-[storage-slides]:     https://galaxyproject.github.io/training-material/topics/admin/tutorials/object-store/slides.html
-[storage-exercise]:   https://galaxyproject.github.io/training-material/topics/admin/tutorials/object-store/tutorial.html
-[gxadmin-exercise]: https://galaxyproject.github.io/training-material/topics/admin/tutorials/gxadmin/tutorial.html
+[monitoring-exercise]: https://galaxyproject.github.io/training-material/topics/admin/tutorials/monitoring/tutorial.html
+[storage-slides]:      https://galaxyproject.github.io/training-material/topics/admin/tutorials/object-store/slides.html
+[storage-exercise]:    https://galaxyproject.github.io/training-material/topics/admin/tutorials/object-store/tutorial.html
+[gxadmin-exercise]:    https://galaxyproject.github.io/training-material/topics/admin/tutorials/gxadmin/tutorial.html
 
 ### Friday
 **1st February**
