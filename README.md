@@ -118,7 +118,7 @@ _Timetable with sessions and material is being continuously updated._
 | 10:45    | Break (coffee & snacks)                                                              |                                |                                 |                |
 | 11:00    | Containerize all the things: Galaxy in Docker and Docker in Galaxy                   | [Docker Slides][docker-slides] |                                 | J              |
 | 12:00    | Lunch (catered)                                                                      |                                |                                 |                |
-| 13:00    | Cloudbursting showcase                                                               |                                |                                 | S              |
+| 13:00    | Cloudbursting showcase                                                               | [Cloud slides][clouds-everywhere]                               |                                 | S              |
 | 13:30    | Storage management                                                                   | [Slides][storage-slides]       | [Exercise][storage-exercise]    | M, S           |
 | 14:30    | Server Monitoring and Maintenance Part 1: Telegraf, InfluxDB, Grafana                | [Slides][monitoring-slides]    | [Telegraf Exercise][monitoring-exercise] [Reports Exercise][monitoring-reports]| M, H           |
 | 15:15    | Break (coffee & snacks)                                                              |                                |                                 |                |
@@ -132,6 +132,7 @@ _Timetable with sessions and material is being continuously updated._
 [storage-exercise]:    https://galaxyproject.github.io/training-material/topics/admin/tutorials/object-store/tutorial.html
 [gxadmin-exercise]:    https://galaxyproject.github.io/training-material/topics/admin/tutorials/gxadmin/tutorial.html
 [monitoring-reports]:  https://galaxyproject.github.io/training-material/topics/admin/tutorials/reports/tutorial.html
+[clouds-everywhere]:   https://galaxyproject.github.io/dagobah-training/2019-pennstate/18-clouds/clouds.html#1
 
 ### Friday
 **1st February**
