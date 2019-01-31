@@ -120,7 +120,7 @@ _Timetable with sessions and material is being continuously updated._
 | 12:00    | Lunch (catered)                                                                      |                                |                                 |                |
 | 13:00    | Cloudbursting showcase                                                               |                                |                                 | S              |
 | 13:30    | Storage management                                                                   | [Slides][storage-slides]       | [Exercise][storage-exercise]    | M, S           |
-| 14:30    | Server Monitoring and Maintenance Part 1: Telegraf, InfluxDB, Grafana                | [Slides][monitoring-slides]    | [Exercise][monitoring-exercise] | M, H           |
+| 14:30    | Server Monitoring and Maintenance Part 1: Telegraf, InfluxDB, Grafana                | [Slides][monitoring-slides]    | [Telegraf Exercise][monitoring-exercise] [Reports Exercise][monitoring-reports]| M, H           |
 | 15:15    | Break (coffee & snacks)                                                              |                                |                                 |                |
 | 15:30    | Server Monitoring and Maintenance Part 2: DB queries, command line & scripts, backup |                                | [gxadmin][gxadmin-exercise]     |                |
 | 17:00    | Wrap up and close                                                                    |                                |                                 |                |
@@ -131,6 +131,7 @@ _Timetable with sessions and material is being continuously updated._
 [storage-slides]:      https://galaxyproject.github.io/training-material/topics/admin/tutorials/object-store/slides.html
 [storage-exercise]:    https://galaxyproject.github.io/training-material/topics/admin/tutorials/object-store/tutorial.html
 [gxadmin-exercise]:    https://galaxyproject.github.io/training-material/topics/admin/tutorials/gxadmin/tutorial.html
+[monitoring-reports] . https://galaxyproject.github.io/training-material/topics/admin/tutorials/reports/tutorial.html
 
 ### Friday
 **1st February**
