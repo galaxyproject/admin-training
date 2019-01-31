@@ -111,42 +111,46 @@ _Timetable with sessions and material is being continuously updated._
 ### Thursday
 **31th January**
 
-| **Time** | **Topic**                                                                            | **Slides**                     | **Exercises**                                              | **Instructor** |
-| -------- | ---------                                                                            | ---------                      | -------------                                              | -----------    |
-| 09:00    | Welcome and questions                                                                |                                |                                                            |                |
-| 09:15    | Compute Resources: Continued (Job Resources)                                         |                                |                                                            | N              |
-| 10:45    | Break (coffee & snacks)                                                              |                                |                                                            |                |
-| 11:00    | Containerize all the things: Galaxy in Docker and Docker in Galaxy                   | [Docker Slides][docker-slides] |                                                            | J              |
-| 12:00    | Lunch (catered)                                                                      |                                |                                                            |                |
-| 13:00    | Cloudbursting showcase                                                                        |                                |                                                            | S              |
-| 13:30    | Storage management                                                                   | [Slides][storage-slides]       | [Exercise][storage-exercise]                               | M, S           |
-| 14:30    | Server Monitoring and Maintenance Part 1: Admin UI, Log Files                        | [Slides][monitoring-slides]    | [Exercise 1][monitoring-ex1], [Exercise 2][monitoring-ex2] | M, H           |
-| 15:15    | Break (coffee & snacks)                                                              |                                |                                                            |                |
-| 15:30    | Server Monitoring and Maintenance Part 2: DB queries, command line & scripts, backup |                                |                                                            |                |
-| 17:00    | Wrap up and close                                                                    |                                |                                                            |                |
+| **Time** | **Topic**                                                                            | **Slides**                     | **Exercises**                   | **Instructor** |
+| -------- | ---------                                                                            | ---------                      | -------------                   | -----------    |
+| 09:00    | Welcome and questions                                                                |                                |                                 |                |
+| 09:15    | Compute Resources: Continued (Job Resources)                                         |                                |                                 | N              |
+| 10:45    | Break (coffee & snacks)                                                              |                                |                                 |                |
+| 11:00    | Containerize all the things: Galaxy in Docker and Docker in Galaxy                   | [Docker Slides][docker-slides] |                                 | J              |
+| 12:00    | Lunch (catered)                                                                      |                                |                                 |                |
+| 13:00    | Cloudbursting showcase                                                               |                                |                                 | S              |
+| 13:30    | Storage management                                                                   | [Slides][storage-slides]       | [Exercise][storage-exercise]    | M, S           |
+| 14:30    | Server Monitoring and Maintenance Part 1: Telegraf, InfluxDB, Grafana                | [Slides][monitoring-slides]    | [Exercise][monitoring-exercise] | M, H           |
+| 15:15    | Break (coffee & snacks)                                                              |                                |                                 |                |
+| 15:30    | Server Monitoring and Maintenance Part 2: DB queries, command line & scripts, backup |                                | [gxadmin][gxadmin-exercise]     |                |
+| 17:00    | Wrap up and close                                                                    |                                |                                 |                |
 
 [docker-slides]:       https://galaxyproject.github.io/training-material/topics/admin/tutorials/galaxy-docker/slides.html
-[monitoring-slides]:   https://galaxyproject.github.io/training-material/topics/admin/tutorials/monitoring-maintenance/slides.html
-[monitoring-ex1]:      https://galaxyproject.github.io/training-material/topics/admin/tutorials/monitoring-maintenance/tutorial.html
-[monitoring-ex2]:      sessions/22-troubleshooting/ex1-sentry.md
+[monitoring-slides]:   https://galaxyproject.github.io/training-material/topics/admin/tutorials/monitoring/slides.html
+[monitoring-exercise]:      https://galaxyproject.github.io/training-material/topics/admin/tutorials/monitoring/tutorial.html
 [storage-slides]:     https://galaxyproject.github.io/training-material/topics/admin/tutorials/object-store/slides.html
 [storage-exercise]:   https://galaxyproject.github.io/training-material/topics/admin/tutorials/object-store/tutorial.html
+[gxadmin-exercise]: https://galaxyproject.github.io/training-material/topics/admin/tutorials/gxadmin/tutorial.html
 
 ### Friday
 **1st February**
 
-| **Time** | **Topic**                                           | **Slides**                        | **Instructor** |
-| -------- | ---------                                           | ---------                        | -----------    |
-| 09:00    | Welcome and questions                               |                                  |                |
-| 09:15    | Upgrading to a new Galaxy release                   | [Slides][updating-slides]        | M              |
-| 10:00    | Break (coffee & snacks)                             |                                  |                |
-| 10:15    | What's newer than year?                             |                                  | N, J           |
-| 12:00    | Lunch (catered)                                     |                                  |                |
-| 13:00    | When things go wrong: Galaxy Server Troubleshooting | [Slides][troubleshooting-slides] | N              |
-| 15:00    | Wrap up and close                                   |                                  |                |
+| **Time** | **Topic**                                           | **Slides**                       | **Exercises**               | **Instructor** |
+| -------- | ---------                                           | ---------                        | -----------                 | -----------    |
+| 09:00    | Welcome and questions                               |                                  |                             |                |
+| 09:15    | Dockerizing a Galaxy Tool                           |                                  | [Exercise][docker-exercise] | J              |
+| 10:00    | Break (coffee & snacks)                             |                                  |                             |                |
+| 10:15    | What's newer than year?                             |                                  |                             | N, J           |
+| 10:30    | Empathy                                             | [Slides][empathy-slides]         |                             | H              |
+| 11:00    | ???????                                             | [Slides][empathy-slides]         |                             | H              |
+| 12:00    | Lunch (catered)                                     |                                  |                             |                |
+| 13:00    | When things go wrong: Galaxy Server Troubleshooting | [Slides][troubleshooting-slides] |                             | N              |
+| 15:00    | Wrap up and close                                   |                                  |                             |                |
 
 [updating-slides]:        https://galaxyproject.github.io/training-material/topics/admin/tutorials/upgrading/slides.html#1
 [troubleshooting-slides]: https://galaxyproject.github.io/training-material/topics/admin/tutorials/troubleshooting/slides.html
+[docker-exercise]:        https://galaxyproject.github.io/training-material/topics/admin/tutorials/docker/tutorial.html
+[empathy-slides]:         https://galaxyproject.github.io/training-material/topics/admin/tutorials/empathy/slides.html
 
 ### Instructors
 
