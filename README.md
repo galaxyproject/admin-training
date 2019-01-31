@@ -119,7 +119,7 @@ _Timetable with sessions and material is being continuously updated._
 | 11:00    | Containerize all the things: Galaxy in Docker and Docker in Galaxy                   | [Docker Slides][docker-slides] |                                                            | J              |
 | 12:00    | Lunch (catered)                                                                      |                                |                                                            |                |
 | 13:00    | Cloudbursting showcase                                                                        |                                |                                                            | S              |
-| 14:00    | Storage management                                                                   | [Slides][storage-slides]       | [Exercise][storage-exercise]                               | M, S           |
+| 13:30    | Storage management                                                                   | [Slides][storage-slides]       | [Exercise][storage-exercise]                               | M, S           |
 | 14:30    | Server Monitoring and Maintenance Part 1: Admin UI, Log Files                        | [Slides][monitoring-slides]    | [Exercise 1][monitoring-ex1], [Exercise 2][monitoring-ex2] | M, H           |
 | 15:15    | Break (coffee & snacks)                                                              |                                |                                                            |                |
 | 15:30    | Server Monitoring and Maintenance Part 2: DB queries, command line & scripts, backup |                                |                                                            |                |
