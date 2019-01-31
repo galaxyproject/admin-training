@@ -142,13 +142,14 @@ _Timetable with sessions and material is being continuously updated._
 | 09:00    | Welcome and questions                               |                                  |                             |                |
 | 09:15    | Dockerizing a Galaxy Tool                           |                                  | [Exercise][docker-exercise] | J              |
 | 10:00    | Break (coffee & snacks)                             |                                  |                             |                |
-| 10:15    | What's newer than year?                             |                                  |                             | N, J           |
+| 10:15    | What's new in Galaxy?                               | [Slides][whats-new]              |                             | N, J           |
 | 10:30    | Empathy                                             | [Slides][empathy-slides]         |                             | H              |
 | 11:00    | ???????                                             | [Slides][empathy-slides]         |                             | H              |
 | 12:00    | Lunch (catered)                                     |                                  |                             |                |
 | 13:00    | When things go wrong: Galaxy Server Troubleshooting | [Slides][troubleshooting-slides] |                             | N              |
 | 15:00    | Wrap up and close                                   |                                  |                             |                |
 
+[whats-new]:              http://bit.ly/gxwhatsnew2019
 [updating-slides]:        https://galaxyproject.github.io/training-material/topics/admin/tutorials/upgrading/slides.html#1
 [troubleshooting-slides]: https://galaxyproject.github.io/training-material/topics/admin/tutorials/troubleshooting/slides.html
 [docker-exercise]:        https://galaxyproject.github.io/training-material/topics/admin/tutorials/docker/tutorial.html
