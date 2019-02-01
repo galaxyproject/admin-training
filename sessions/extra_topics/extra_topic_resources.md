@@ -20,7 +20,7 @@ These slides contain resources for each topic listed.
 
 ---
 
-# Galaxy Integrated Environments
+# Galaxy Interactive Environments
 
 Documentation:
 
