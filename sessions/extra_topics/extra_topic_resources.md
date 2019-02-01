@@ -112,6 +112,14 @@ See Helena's playbooks at Galaxy Europes playbook git repo
 
 ---
 
+# Training VMs
+
+We will keep the machines up through Wednesday. 
+
+Please copy all your playbook folders and everything you care about by then.
+
+---
+
 # The Admins community!
 
 .larger[There is a large and active community of fellow Galaxy Admins.]
