@@ -149,6 +149,7 @@ _Timetable with sessions and material is being continuously updated._
 | 11:50    | Empathy                                             | [Slides][empathy-slides]         |                               | H              |
 | 12:00    | Lunch (catered)                                     |                                  |                               |                |
 | 13:00    | When things go wrong: Galaxy Server Troubleshooting | [Slides][troubleshooting-slides] |                               | N              |
+| Spare Time | Extra Topics | [Slides][extra_topics_slides] | S |
 | 15:00    | Wrap up and close                                   |                                  |                               |                |
 
 [whats-new]:              http://bit.ly/gxwhatsnew2019
@@ -159,6 +160,7 @@ _Timetable with sessions and material is being continuously updated._
 [telegraf-exercise]:      https://galaxyproject.github.io/training-material/topics/admin/tutorials/monitoring/tutorial.html
 [gxadmin-exercise]:       https://galaxyproject.github.io/training-material/topics/admin/tutorials/gxadmin/tutorial.html
 [upgrade]:                https://galaxyproject.github.io/training-material/topics/admin/tutorials/upgrading/slides.html
+[extra_topics_slides]:	  https://github.com/galaxyproject/dagobah-training/docs/extra_topics/extra_topics_slides.html
 ### Instructors
 
 * (S)imon Gladman - Melbourne Bioinformatics, University of Melbourne, Australia
