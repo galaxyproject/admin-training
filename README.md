@@ -154,7 +154,7 @@ _Timetable with sessions and material is being continuously updated._
 [whats-new]:              http://bit.ly/gxwhatsnew2019
 [updating-slides]:        https://galaxyproject.github.io/training-material/topics/admin/tutorials/upgrading/slides.html#1
 [troubleshooting-slides]: https://galaxyproject.github.io/training-material/topics/admin/tutorials/troubleshooting/slides.html
-[docker-exercise]:        https://galaxyproject.github.io/training-material/topics/admin/tutorials/docker/tutorial.html
+[docker-exercise]:        https://github.com/galaxyproject/dagobah-training/pull/84/commits/7c9722a2ceaf46d15ea859a16f77bb047c2f42c5
 [empathy-slides]:         https://galaxyproject.github.io/training-material/topics/admin/tutorials/empathy/slides.html
 [telegraf-exercise]:      https://galaxyproject.github.io/training-material/topics/admin/tutorials/monitoring/tutorial.html
 [gxadmin-exercise]:       https://galaxyproject.github.io/training-material/topics/admin/tutorials/gxadmin/tutorial.html
