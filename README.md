@@ -160,7 +160,7 @@ _Timetable with sessions and material is being continuously updated._
 [telegraf-exercise]:      https://galaxyproject.github.io/training-material/topics/admin/tutorials/monitoring/tutorial.html
 [gxadmin-exercise]:       https://galaxyproject.github.io/training-material/topics/admin/tutorials/gxadmin/tutorial.html
 [upgrade]:                https://galaxyproject.github.io/training-material/topics/admin/tutorials/upgrading/slides.html
-[extra_topics_slides]:	  https://github.com/galaxyproject/dagobah-training/docs/extra_topics/extra_topics_slides.html
+[extra_topics_slides]:	  https://galaxyproject.github.io/dagobah-training/2019-pennstate/extra_topics/extra_topic_resources.html#1
 ### Instructors
 
 * (S)imon Gladman - Melbourne Bioinformatics, University of Melbourne, Australia
