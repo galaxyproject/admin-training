@@ -118,9 +118,9 @@ _Timetable with sessions and material is being continuously updated._
 | 10:45    | Break (coffee & snacks)                                                              |                                |                                 |                |
 | 11:00    | Containerize all the things: Galaxy in Docker and Docker in Galaxy                   | [Docker Slides][docker-slides] |                                 | J              |
 | 12:00    | Lunch (catered)                                                                      |                                |                                 |                |
-| 13:00    | Cloudbursting showcase                                                               |                                |                                 | S              |
+| 13:00    | Cloudbursting showcase                                                               | [Cloud slides][clouds-everywhere]                               |                                 | S              |
 | 13:30    | Storage management                                                                   | [Slides][storage-slides]       | [Exercise][storage-exercise]    | M, S           |
-| 14:30    | Server Monitoring and Maintenance Part 1: Telegraf, InfluxDB, Grafana                | [Slides][monitoring-slides]    | [Exercise][monitoring-exercise] | M, H           |
+| 14:30    | Server Monitoring and Maintenance Part 1: Telegraf, InfluxDB, Grafana                | [Slides][monitoring-slides]    | [Telegraf Exercise][monitoring-exercise] [Reports Exercise][monitoring-reports]| M, H           |
 | 15:15    | Break (coffee & snacks)                                                              |                                |                                 |                |
 | 15:30    | Server Monitoring and Maintenance Part 2: DB queries, command line & scripts, backup |                                | [gxadmin][gxadmin-exercise]     |                |
 | 17:00    | Wrap up and close                                                                    |                                |                                 |                |
@@ -131,6 +131,8 @@ _Timetable with sessions and material is being continuously updated._
 [storage-slides]:      https://galaxyproject.github.io/training-material/topics/admin/tutorials/object-store/slides.html
 [storage-exercise]:    https://galaxyproject.github.io/training-material/topics/admin/tutorials/object-store/tutorial.html
 [gxadmin-exercise]:    https://galaxyproject.github.io/training-material/topics/admin/tutorials/gxadmin/tutorial.html
+[monitoring-reports]:  https://galaxyproject.github.io/training-material/topics/admin/tutorials/reports/tutorial.html
+[clouds-everywhere]:   https://galaxyproject.github.io/dagobah-training/2019-pennstate/18-clouds/clouds.html#1
 
 ### Friday
 **1st February**
@@ -140,7 +142,7 @@ _Timetable with sessions and material is being continuously updated._
 | 09:00    | Welcome and questions                               |                                  |                               |                |
 | 09:15    | Dockerizing a Galaxy Tool                           |                                  | [Exercise][docker-exercise]   | J              |
 | 10:00    | Break (coffee & snacks)                             |                                  |                               |                |
-| 10:15    | What's newer than year?                             |                                  |                               | N, J           |
+| 10:15    | What's new in Galaxy?                               | [Slides][whats-new]              |                             | N, J           |
 | 11:00    | Telegraf                                            |                                  | [Exercise][telegraf-exercise] | H              |
 | 11:30    | gxadmin                                             |                                  | [Exercise][gxadmin-exercise]  | H              |
 | 11:50    | Empathy                                             | [Slides][empathy-slides]         |                               | H              |
@@ -148,6 +150,7 @@ _Timetable with sessions and material is being continuously updated._
 | 13:00    | When things go wrong: Galaxy Server Troubleshooting | [Slides][troubleshooting-slides] |                               | N              |
 | 15:00    | Wrap up and close                                   |                                  |                               |                |
 
+[whats-new]:              http://bit.ly/gxwhatsnew2019
 [updating-slides]:        https://galaxyproject.github.io/training-material/topics/admin/tutorials/upgrading/slides.html#1
 [troubleshooting-slides]: https://galaxyproject.github.io/training-material/topics/admin/tutorials/troubleshooting/slides.html
 [docker-exercise]:        https://galaxyproject.github.io/training-material/topics/admin/tutorials/docker/tutorial.html
