@@ -135,22 +135,25 @@ _Timetable with sessions and material is being continuously updated._
 ### Friday
 **1st February**
 
-| **Time** | **Topic**                                           | **Slides**                       | **Exercises**               | **Instructor** |
-| -------- | ---------                                           | ---------                        | -----------                 | -----------    |
-| 09:00    | Welcome and questions                               |                                  |                             |                |
-| 09:15    | Dockerizing a Galaxy Tool                           |                                  | [Exercise][docker-exercise] | J              |
-| 10:00    | Break (coffee & snacks)                             |                                  |                             |                |
-| 10:15    | What's newer than year?                             |                                  |                             | N, J           |
-| 10:30    | Empathy                                             | [Slides][empathy-slides]         |                             | H              |
-| 11:00    | ???????                                             | [Slides][empathy-slides]         |                             | H              |
-| 12:00    | Lunch (catered)                                     |                                  |                             |                |
-| 13:00    | When things go wrong: Galaxy Server Troubleshooting | [Slides][troubleshooting-slides] |                             | N              |
-| 15:00    | Wrap up and close                                   |                                  |                             |                |
+| **Time** | **Topic**                                           | **Slides**                       | **Exercises**                 | **Instructor** |
+| -------- | ---------                                           | ---------                        | -----------                   | -----------    |
+| 09:00    | Welcome and questions                               |                                  |                               |                |
+| 09:15    | Dockerizing a Galaxy Tool                           |                                  | [Exercise][docker-exercise]   | J              |
+| 10:00    | Break (coffee & snacks)                             |                                  |                               |                |
+| 10:15    | What's newer than year?                             |                                  |                               | N, J           |
+| 11:00    | Telegraf                                            |                                  | [Exercise][telegraf-exercise] | H              |
+| 11:30    | gxadmin                                             |                                  | [Exercise][gxadmin-exercise]  | H              |
+| 11:50    | Empathy                                             | [Slides][empathy-slides]         |                               | H              |
+| 12:00    | Lunch (catered)                                     |                                  |                               |                |
+| 13:00    | When things go wrong: Galaxy Server Troubleshooting | [Slides][troubleshooting-slides] |                               | N              |
+| 15:00    | Wrap up and close                                   |                                  |                               |                |
 
 [updating-slides]:        https://galaxyproject.github.io/training-material/topics/admin/tutorials/upgrading/slides.html#1
 [troubleshooting-slides]: https://galaxyproject.github.io/training-material/topics/admin/tutorials/troubleshooting/slides.html
 [docker-exercise]:        https://galaxyproject.github.io/training-material/topics/admin/tutorials/docker/tutorial.html
 [empathy-slides]:         https://galaxyproject.github.io/training-material/topics/admin/tutorials/empathy/slides.html
+[telegraf-exercise]:      https://galaxyproject.github.io/training-material/topics/admin/tutorials/monitoring/tutorial.html
+[gxadmin-exercise]:       https://galaxyproject.github.io/training-material/topics/admin/tutorials/gxadmin/tutorial.html
 
 ### Instructors
 
