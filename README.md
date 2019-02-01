@@ -143,6 +143,7 @@ _Timetable with sessions and material is being continuously updated._
 | 09:15    | Dockerizing a Galaxy Tool                           |                                  | [Exercise][docker-exercise]   | J              |
 | 10:00    | Break (coffee & snacks)                             |                                  |                               |                |
 | 10:15    | What's new in Galaxy?                               | [Slides][whats-new]              |                             | N, J           |
+| 10:40    | Upgrading Galaxy                               | [Slides][upgrade]              |                             | M           |
 | 11:00    | Telegraf                                            |                                  | [Exercise][telegraf-exercise] | H              |
 | 11:30    | gxadmin                                             |                                  | [Exercise][gxadmin-exercise]  | H              |
 | 11:50    | Empathy                                             | [Slides][empathy-slides]         |                               | H              |
@@ -157,7 +158,7 @@ _Timetable with sessions and material is being continuously updated._
 [empathy-slides]:         https://galaxyproject.github.io/training-material/topics/admin/tutorials/empathy/slides.html
 [telegraf-exercise]:      https://galaxyproject.github.io/training-material/topics/admin/tutorials/monitoring/tutorial.html
 [gxadmin-exercise]:       https://galaxyproject.github.io/training-material/topics/admin/tutorials/gxadmin/tutorial.html
-
+[upgrade]:                https://galaxyproject.github.io/training-material/topics/admin/tutorials/upgrading/slides.html
 ### Instructors
 
 * (S)imon Gladman - Melbourne Bioinformatics, University of Melbourne, Australia
