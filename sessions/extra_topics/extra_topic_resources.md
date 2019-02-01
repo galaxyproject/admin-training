@@ -118,6 +118,7 @@ See Helena's playbooks at Galaxy Europes playbook git repo
 
 * We have a meeting every year at the Galaxy Community Conference
 * Occasional teleconference meetings/seminars
+    * Next online admin meetup is on February 28th ([details](https://galaxyproject.org/community/galaxy-admins/meetups/2019-02-28/)
 * A Gitter channel [https://gitter.im/galaxyproject/admins](https://gitter.im/galaxyproject/admins)
 * Training materials [https://training.galaxyproject.org](https://training.galaxyproject.org)
 
