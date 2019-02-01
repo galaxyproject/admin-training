@@ -34,5 +34,6 @@ generate-slides:
 	$(IN_VENV) python slideshow/build_slideshow.py 'Clouds' sessions/18-clouds/clouds.md 18-clouds
 	# $(IN_VENV) python slideshow/build_slideshow.py 'Galaxy Tool Basics' sessions/x01-tool-basics/tool-basics.md x01-tool-basics
 	# $(IN_VENV) python slideshow/build_slideshow.py 'Advanced Tool Wrapping' sessions/x02-tools-advanced/tools-advanced.md x02-tools-advanced
+	$(IN_VENV) python slideshow/build_slideshow.py 'Extra Topics' sessions/extra_topics/extra_topic_resources.md extra_topics
 
 	echo "</body></html>" >> docs/index.html
