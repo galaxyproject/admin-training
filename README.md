@@ -149,7 +149,7 @@ _Timetable with sessions and material is being continuously updated._
 | 11:50    | Empathy                                             | [Slides][empathy-slides]         |                               | H              |
 | 12:00    | Lunch (catered)                                     |                                  |                               |                |
 | 13:00    | When things go wrong: Galaxy Server Troubleshooting | [Slides][troubleshooting-slides] |                               | N              |
-| Spare Time | Extra Topics | [Slides][extra_topics_slides] | S |
+| Spare Time | Extra Topics | [Slides][extra_topics_slides] |  | S |
 | 15:00    | Wrap up and close                                   |                                  |                               |                |
 
 [whats-new]:              http://bit.ly/gxwhatsnew2019
