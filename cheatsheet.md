@@ -1,48 +1,32 @@
 ## Vocabulary
 
-Repository
-:   version controlled directory of files
-Tool Shed
-:   repository for tools used by Galaxy. [Main Tool Shed](https://toolshed.g2.bx.psu.edu/)
-Suite
-:   a single repository that 'depends' on many others
-Data Manager
-:   [allows for the creation](https://wiki.galaxyproject.org/Admin/Tools/DataManagers) of built-in (reference) data
-galaxy.yml
-:   [the main Galaxy configuration file](https://github.com/galaxyproject/galaxy/blob/dev/config/galaxy.yml.sample)
-data library
-:   A folder like structure of data that can be used for sharing data amongst many Galaxy users easily
-Job handler
-:   (JobHandler) watches the job and transitions job's state - common startup and finishing
-Job mapper
-:   (JobRunnerMapper) decides the "destination" for a job
-Job runner
-:   (e.g. DrammaJobRunner) actual runs the job and provides an interface for checking status
-Destinations
-:   how jobs should be run
-Handlers
-:   Define which job handler (Galaxy server) processes should handle a job
-Object Store
-:   A way of utilising multiple storage pools transparently within a single Galaxy instance
+Term         | Definition
+---          | ---
+Repository   | version controlled directory of files
+Tool Shed    | repository for tools used by Galaxy. [Main Tool Shed](https://toolshed.g2.bx.psu.edu/)
+Suite        | a single repository that 'depends' on many others
+Data Manager | [allows for the creation](https://wiki.galaxyproject.org/Admin/Tools/DataManagers) of built-in (reference) data
+galaxy.yml   | [the main Galaxy configuration file](https://github.com/galaxyproject/galaxy/blob/dev/config/galaxy.yml.sample)
+data library | A folder like structure of data that can be used for sharing data amongst many Galaxy users easily
+Job handler  | (JobHandler) watches the job and transitions job's state - common startup and finishing
+Job mapper   | (JobRunnerMapper) decides the "destination" for a job
+Job runner   | (e.g. DrammaJobRunner) actual runs the job and provides an interface for checking status
+Destinations | how jobs should be run
+Handlers     | Define which job handler (Galaxy server) processes should handle a job
+Object Store | A way of utilising multiple storage pools transparently within a single Galaxy instance
 
 And some important acronyms:
 
-MVC
-:    [Model view controller](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)
-WSGI
-:    [Web server gateway interface](https://wsgi.readthedocs.io/en/latest/what.html)
-API
-:    [Application programming interface](https://en.wikipedia.org/wiki/Application_programming_interface)
-ORM
-:    [Object relational mapping](https://en.wikipedia.org/wiki/Object-relational_mapping)
-GIL
-:    [Global Interpreter Lock; prevents multiple Python threads from running at once](https://wiki.python.org/moin/GlobalInterpreterLock)
-LDAP
-:    [Lightweight Directory Access Protocol](https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol)
-DRMAA
-:    [Distributed Resource Management Application API](https://www.drmaa.org/)
-SSH
-:    [Secure SHell, how you've been connecting to the server all week](https://en.wikipedia.org/wiki/Secure_Shell)
+Term  | Definition
+---   | ---
+MVC   | [Model view controller](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)
+WSGI  | [Web server gateway interface](https://wsgi.readthedocs.io/en/latest/what.html)
+API   | [Application programming interface](https://en.wikipedia.org/wiki/Application_programming_interface)
+ORM   | [Object relational mapping](https://en.wikipedia.org/wiki/Object-relational_mapping)
+GIL   | [Global Interpreter Lock; prevents multiple Python threads from running at once](https://wiki.python.org/moin/GlobalInterpreterLock)
+LDAP  | [Lightweight Directory Access Protocol](https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol)
+DRMAA | [Distributed Resource Management Application API](https://www.drmaa.org/)
+SSH   | [Secure SHell, how you've been connecting to the server all week](https://en.wikipedia.org/wiki/Secure_Shell)
 
 ## Deployment and Platform Options
 
