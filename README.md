@@ -47,7 +47,7 @@ _Timetable with sessions and material is being continuously updated._
 | 17:00    | Close Day 1                              |                                                        |                              |                |
 
 [welcome-slides]:      https://galaxyproject.github.io/dagobah-training/2019-pennstate/00-intro/intro.html
-[deployment-slides]:   https://galaxyproject.github.io/training-material/topics/admin/tutorials/deployment-platforms-options/slides.html#1
+[deployment-slides]:   https://galaxyproject.github.io/training-material/topics/admin/slides/introduction.html
 [ansible-slides]:      https://galaxyproject.github.io/training-material/topics/admin/tutorials/ansible/slides.html
 [ansible-exercise]:    https://galaxyproject.github.io/training-material/topics/admin/tutorials/ansible/tutorial.html#your-first-playbook-and-first-role
 [db-slides]:           https://galaxyproject.github.io/training-material/topics/admin/tutorials/database/slides.html
