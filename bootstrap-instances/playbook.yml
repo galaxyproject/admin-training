@@ -74,7 +74,7 @@
       git:
         repo: https://github.com/pearofducks/ansible-vim
         dest: /etc/vim/bundle/ansible-vim
-  
+
     - name: Install pip packages
       pip:
         name:
