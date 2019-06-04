@@ -4,13 +4,10 @@ class: inverse, middle, large
 ---
 class: special, center
 
-![2019-pennstate logo](../shared-images/gat_pennstate_logo_wtext.png)
-
 # Welcome
 
-Monday 1/28 - Friday 2/1
-
 \#usegalaxy / @galaxyproject
+
 ---
 # Your Instructors
 
@@ -23,15 +20,15 @@ Monday 1/28 - Friday 2/1
 * **John Chilton** @jmchilton
 * **Martin Čech** @martenson
     - Galaxy Project, Penn State University, USA
+* **Enis Afgan**
+* **Marius van den Beek**
 
 .footnote[\#usegalaxy / @galaxyproject]
 
 ---
 # Training Home
 
-https://github.com/galaxyproject/dagobah-training/
-
-alias http://bit.ly/galaxyadmin
+**http://bit.ly/galaxyadmin**
 
 * The homepage of this training is a repository at GitHub reachable by the link above.
 * Most materials are written in Markdown and we appreciate Pull Requests (even during the training!).
@@ -46,16 +43,14 @@ Almost all of this content is freshly revised, there may be sessions that are to
 ---
 # Communication channels
 
-* Web browser based chat at https://gitter.im/dagobah-training/Lobby
-
-alias http://bit.ly/gadminchat
+* Web browser based chat at **http://bit.ly/gadminchat**
 
 ---
 # Computing resources
 
-The computing resources for this training have been provided by **Jetstream**
+The computing resources for this training have been provided by **de.NBI**
 
-Find the IP address for your instance [here](https://docs.google.com/spreadsheets/d/1sIoU4qpv4HdKNUNOtsAtW-XKKZvIsDfReAoS7uBbCZM/edit?usp=sharing) alias https://bit.ly/gadminmachines. Put it somewhere easy to copy/paste.
+Find the IP address for your instance [here]() alias https://bit.ly/gadminmachines. Put it somewhere easy to copy/paste.
 
 ---
 class: center
@@ -109,7 +104,7 @@ Galaxy documentation and admin training materials are spread out. We are working
     - Older<sup>[2]</sup> and non-Galaxy-software (e.g. Cloud, CVMFS) documentation
 * https://training.galaxyproject.org/
     - Galaxy Training, includes some admin training materials
-* https://github.com/galaxyproject/dagobah-training/tree/2019-pennstate/
+* https://github.com/galaxyproject/dagobah-training/tree/2019-gcc/
     - Training materials for *this course*, static after the end of the course
 
 .footnote[<sup>[2]</sup> Previously in the Galaxy Wiki, Galaxy-software-specific docs are migrating to docs.galaxyproject.org]
@@ -141,14 +136,3 @@ After the training
 
 - **Dave Clements**
 - **Donna McMinn**
-
----
-# GCC 2019
-
-Date: **1-6 July 2019**
-
-Location: Freiburg, Germany
-
-Contact: **Björn Grüning**
-
-https://galaxyproject.org/events/gcc2019/
