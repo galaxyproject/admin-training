@@ -21,7 +21,7 @@ The instances have been bootstrapped with [a small Ansible playbook](/bootstrap-
 _Timetable with sessions and material is being continuously updated._
 
 ### Monday
-**28th January**
+**1st July**
 
 | **Time** | **Topic**                                | **Slides**                                             | **Exercises**                | **Instructor** |
 | -------- | ---------                                | ---------                                              | -----------                  | -----------    |
