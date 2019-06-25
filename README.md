@@ -32,7 +32,7 @@ _Timetable with sessions and material is being continuously updated._
 | 13:00    | Galaxy Server Part 2: Towards Production | [NGINX][nginx-slides], [Supervisor][supervisor-slides] |                              | M, S, H        |
 | 15:00    | Break (coffee & snacks)                  |                                                        |                              |                |
 | 15:30    | Galaxy Server Part 3: Advanced Install   | [Production][production-slides]                        |                              | M, H           |
-| 16:30    | Connecting Galaxy to a compute cluster   | [Slides][cluster-slides]                               | [Exercise][cluster-exercise] | N, N           |
+| 16:30    | Connecting Galaxy to a compute cluster   | [Slides][cluster-slides]                               | [Exercise][cluster-exercise] | N              |
 | 17:30    | Close Day 1                              |                                                        |                              |                |
 
 [welcome-slides]:      https://galaxyproject.github.io/dagobah-training/2019-gcc/00-intro/intro.html
