@@ -1,18 +1,16 @@
 # Intro to Galaxy Administration @ GCC2019
 
-- [Timetable](#timetable)
-	- [Monday](#monday)
 - [Join the Discussion](https://gitter.im/dagobah-training/Lobby)
 - [Galaxy Training Materials](https://training.galaxyproject.org/)
 
 ## Location
 
-TBD
+'Greece' meeting room
 Konzerthaus Freiburg
 
 ## Training VM instances
 
-We are using instances from the [de.NBI cloud](https://www.denbi.de/cloud) with X cores, Y GiB memory, 12 GiB disk, running a minimal Ubuntu 18.04 image
+We are using 'small' instances from the [JetStream] and [de.NBI](https://www.denbi.de/cloud) clouds with 2 cores, 4 GiB memory, 20 GiB disk, running a minimal Ubuntu 18.04 image
 
 The instances have been bootstrapped with [a small Ansible playbook](/bootstrap-instances), which you may find useful for repeating the exercises at home using a VM, Docker image, etc.
 
