@@ -10,13 +10,11 @@ Konzerthaus Freiburg
 
 ## Training VM instances
 
-We are using 'small' instances from the [JetStream] and [de.NBI](https://www.denbi.de/cloud) clouds with 2 cores, 4 GiB memory, 20 GiB disk, running a minimal Ubuntu 18.04 image
+We are using 'small' instances from the [XSEDE JetStream](https://portal.xsede.org/jetstream) and [de.NBI](https://www.denbi.de/cloud) clouds with 2 cores, 4 GiB memory, 20 GiB disk, running a minimal Ubuntu 18.04 image
 
 The instances have been bootstrapped with [a small Ansible playbook](/bootstrap-instances), which you may find useful for repeating the exercises at home using a VM, Docker image, etc.
 
 ## Timetable
-
-_Timetable with sessions and material is being continuously updated._
 
 ### Monday
 **1st July**
@@ -40,7 +38,7 @@ _Timetable with sessions and material is being continuously updated._
 [db-slides]:           https://galaxyproject.github.io/training-material/topics/admin/tutorials/database/slides.html
 [ansible-galaxy]:      https://galaxyproject.github.io/training-material/topics/admin/tutorials/ansible-galaxy/tutorial.html
 [production-slides]:   https://galaxyproject.github.io/training-material/topics/admin/tutorials/production/slides.html
-[nginx-slides]:        https://galaxyproject.github.io/training-material/topics/admin/tutorials/webservers/slides.html
+[nginx-slides]:        https://galaxyproject.github.io/dagobah-training/2019-gcc/03-production-basics/webservers.html#1
 [uwsgi-slides]:        https://galaxyproject.github.io/training-material/topics/admin/tutorials/uwsgi/slides.html
 [supervisor-slides]:   https://galaxyproject.github.io/training-material/topics/admin/tutorials/systemd-supervisor/slides.html
 [cluster-slides]:      https://galaxyproject.github.io/training-material/topics/admin/tutorials/connect-to-compute-cluster/slides.html

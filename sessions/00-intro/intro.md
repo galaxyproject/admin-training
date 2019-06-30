@@ -31,14 +31,12 @@ class: special, center
 **http://bit.ly/galaxyadmin**
 
 * The homepage of this training is a repository at GitHub reachable by the link above.
-* Most materials are written in Markdown and we appreciate Pull Requests (even during the training!).
+* Most materials are written in Markdown and we appreciate Pull Requests and creating Issues (even during the training!).
 
 ---
 # On Session Times
 
-We did our best to plan the session times for the expected content, and to build the content for the session time.
-
-Almost all of this content is freshly revised, there may be sessions that are too long or short - apologies in advance.
+We did our best to plan the session times for the expected content, and to build the content for the session time, but there may be sessions that are too long or short.
 
 ---
 # Communication channels
@@ -48,9 +46,9 @@ Almost all of this content is freshly revised, there may be sessions that are to
 ---
 # Computing resources
 
-The computing resources for this training have been provided by **de.NBI**
+The computing resources for this training have been provided by **de.NBI** and **XSEDE JetStream**
 
-Find the IP address for your instance [here]() alias https://bit.ly/gadminmachines. Put it somewhere easy to copy/paste.
+Find the IP address, username and password for ssh access for your instance at [http://bit.ly/gcc19vms](http://bit.ly/gcc19vms). Put it somewhere easy to copy/paste.
 
 ---
 class: center
@@ -71,16 +69,14 @@ It was sometimes difficult for students to catch up once behind.
 ---
 # Training philosophy
 
-This time we adapted our training to follow the *one true path*(c) - which is usually the one we use for **usegalaxy.* servers** - the most tested and stable path.
+We adapted our training to follow the *one true path*(c) - which is usually the one we use for **usegalaxy.* servers** - the most tested and stable path in our opinion.
 
 Galaxy has all the options and possibilities as before, but unless you are opinionated/locked in we recommend staying on the *one true path*(c). For other paths, Galaxy comes with documentation and a friendly community to help.
 
 ---
-# New methodology
+# Methodology
 
-For this training, materials have been reworked to utilize **Ansible** much more heavily *from the beginning*.
-
-We consider the use of config management tools (such as Ansible) to be essential to good system administration.
+We consider the use of config management tools (such as Ansible) to be essential to good system administration. We utilize **Ansible** from the beginning.
 
 ---
 # On Ansible
@@ -103,9 +99,9 @@ Galaxy documentation and admin training materials are spread out. We are working
 * https://galaxyproject.org/admin/
     - Older<sup>[2]</sup> and non-Galaxy-software (e.g. Cloud, CVMFS) documentation
 * https://training.galaxyproject.org/
-    - Galaxy Training, includes some admin training materials
+    - Galaxy Training, includes the majority of admin training materials
 * https://github.com/galaxyproject/dagobah-training/tree/2019-gcc/
-    - Training materials for *this course*, static after the end of the course
+    - Index for *this course*, static after the end of the course
 
 .footnote[<sup>[2]</sup> Previously in the Galaxy Wiki, Galaxy-software-specific docs are migrating to docs.galaxyproject.org]
 
@@ -126,7 +122,7 @@ After the training
 
 * http://bit.ly/galaxyadmin
     - Itinerary and landing page for this course
-* http://bit.ly/gadminmachines
+* http://bit.ly/gcc19vms
     - Spreadsheet for choosing your training VM
 * http://bit.ly/gadminchat
     - Chat for this course
@@ -134,5 +130,6 @@ After the training
 ---
 # Thanks
 
+- **Björn Grüning**
 - **Dave Clements**
-- **Donna McMinn**
+- **Alex Mahmoud**
