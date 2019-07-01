@@ -1,0 +1,57 @@
+[workshop-instances]
+gcc-0.training.galaxyproject.eu
+gcc-1.training.galaxyproject.eu
+gcc-2.training.galaxyproject.eu
+gcc-3.training.galaxyproject.eu
+gcc-4.training.galaxyproject.eu
+gcc-5.training.galaxyproject.eu
+gcc-6.training.galaxyproject.eu
+gcc-7.training.galaxyproject.eu
+gcc-8.training.galaxyproject.eu
+gcc-9.training.galaxyproject.eu
+gcc-10.training.galaxyproject.eu
+gcc-11.training.galaxyproject.eu
+gcc-12.training.galaxyproject.eu
+gcc-13.training.galaxyproject.eu
+gcc-14.training.galaxyproject.eu
+gcc-15.training.galaxyproject.eu
+gcc-16.training.galaxyproject.eu
+gcc-17.training.galaxyproject.eu
+gcc-18.training.galaxyproject.eu
+gcc-19.training.galaxyproject.eu
+gcc-20.training.galaxyproject.eu
+gcc-21.training.galaxyproject.eu
+gcc-22.training.galaxyproject.eu
+gcc-23.training.galaxyproject.eu
+gcc-24.training.galaxyproject.eu
+gcc-25.training.galaxyproject.eu
+gcc-26.training.galaxyproject.eu
+gcc-27.training.galaxyproject.eu
+gcc-28.training.galaxyproject.eu
+gcc-29.training.galaxyproject.eu
+gcc-30.training.galaxyproject.eu
+gcc-31.training.galaxyproject.eu
+gcc-32.training.galaxyproject.eu
+gcc-33.training.galaxyproject.eu
+gcc-34.training.galaxyproject.eu
+gcc-35.training.galaxyproject.eu
+gcc-36.training.galaxyproject.eu
+gcc-37.training.galaxyproject.eu
+gcc-38.training.galaxyproject.eu
+gcc-39.training.galaxyproject.eu
+gcc-40.training.galaxyproject.eu
+gcc-41.training.galaxyproject.eu
+gcc-42.training.galaxyproject.eu
+gcc-43.training.galaxyproject.eu
+gcc-44.training.galaxyproject.eu
+gcc-45.training.galaxyproject.eu
+gcc-46.training.galaxyproject.eu
+gcc-47.training.galaxyproject.eu
+gcc-48.training.galaxyproject.eu
+gcc-49.training.galaxyproject.eu
+
+[workshop-instances:vars]
+ansible_host_key_checking = false
+ansible_user = ubuntu
+ansible_become = true
+ansible_ssh_private_key_file = ~/admintraining.key
