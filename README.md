@@ -10,7 +10,7 @@ Konzerthaus Freiburg
 
 ## Training VM instances
 
-We are using 'small' instances from the [XSEDE JetStream](https://portal.xsede.org/jetstream) and [de.NBI](https://www.denbi.de/cloud) clouds with 2 cores, 4 GiB memory, 20 GiB disk, running a minimal Ubuntu 18.04 image
+We are using 'small' instances from the [XSEDE JetStream](https://portal.xsede.org/jetstream) and [de.NBI](https://www.denbi.de/cloud) and NECTAR clouds with 2 cores, 4 GiB memory, 20 GiB disk, running a minimal Ubuntu 18.04 image
 
 The instances have been bootstrapped with [a small Ansible playbook](/bootstrap-instances), which you may find useful for repeating the exercises at home using a VM, Docker image, etc.
 
