@@ -32,17 +32,17 @@ The instances have been bootstrapped with [a small Ansible playbook](/bootstrap-
 | 17:30    | Close Day 1                              |                                                        |                              |                |
 
 [welcome-slides]:      https://galaxyproject.github.io/dagobah-training/2019-gcc/00-intro/intro.html
-[deployment-slides]:   https://galaxyproject.github.io/training-material/topics/admin/slides/introduction.html
-[ansible-slides]:      https://galaxyproject.github.io/training-material/topics/admin/tutorials/ansible/slides.html
-[ansible-exercise]:    https://galaxyproject.github.io/training-material/topics/admin/tutorials/ansible/tutorial.html#your-first-playbook-and-first-role
-[db-slides]:           https://galaxyproject.github.io/training-material/topics/admin/tutorials/database/slides.html
-[ansible-galaxy]:      https://galaxyproject.github.io/training-material/topics/admin/tutorials/ansible-galaxy/tutorial.html
-[production-slides]:   https://galaxyproject.github.io/training-material/topics/admin/tutorials/production/slides.html
+[deployment-slides]:   https://training.galaxyproject.org/training-material/topics/admin/slides/introduction.html
+[ansible-slides]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/ansible/slides.html
+[ansible-exercise]:    https://training.galaxyproject.org/training-material/topics/admin/tutorials/ansible/tutorial.html#your-first-playbook-and-first-role
+[db-slides]:           https://training.galaxyproject.org/training-material/topics/admin/tutorials/database/slides.html
+[ansible-galaxy]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/ansible-galaxy/tutorial.html
+[production-slides]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/production/slides.html
 [nginx-slides]:        https://galaxyproject.github.io/dagobah-training/2019-gcc/03-production-basics/webservers.html#1
-[uwsgi-slides]:        https://galaxyproject.github.io/training-material/topics/admin/tutorials/uwsgi/slides.html
-[supervisor-slides]:   https://galaxyproject.github.io/training-material/topics/admin/tutorials/systemd-supervisor/slides.html
-[cluster-slides]:      https://galaxyproject.github.io/training-material/topics/admin/tutorials/connect-to-compute-cluster/slides.html
-[cluster-exercise]:    https://galaxyproject.github.io/training-material/topics/admin/tutorials/connect-to-compute-cluster/tutorial.html
+[uwsgi-slides]:        https://training.galaxyproject.org/training-material/topics/admin/tutorials/uwsgi/slides.html
+[supervisor-slides]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/systemd-supervisor/slides.html
+[cluster-slides]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/connect-to-compute-cluster/slides.html
+[cluster-exercise]:    https://training.galaxyproject.org/training-material/topics/admin/tutorials/connect-to-compute-cluster/tutorial.html
 
 
 ### Instructors
