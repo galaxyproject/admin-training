@@ -21,7 +21,9 @@ class: special, center
 * **Martin Čech** @martenson
     - Galaxy Project, Penn State University, USA
 * **Enis Afgan**
+    - Galaxy Project, Johns Hopkins University, Baltimore, USA
 * **Marius van den Beek**
+    - Institut Curie, 26 rue d’Ulm, F-75248 Paris, France
 
 .footnote[\#usegalaxy / @galaxyproject]
 
