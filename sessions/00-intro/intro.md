@@ -18,11 +18,12 @@ class: special, center
 * **Nate Coraor** @natefoo
     - Galaxy Project, Penn State University, USA
 * **John Chilton** @jmchilton
+    - Galaxy Project, Penn State University, USA
 * **Martin Čech** @martenson
     - Galaxy Project, Penn State University, USA
-* **Enis Afgan**
+* **Enis Afgan** @EnisAfgan
     - Galaxy Project, Johns Hopkins University, Baltimore, USA
-* **Marius van den Beek**
+* **Marius van den Beek** @mariusvdbeek
     - Institut Curie, 26 rue d’Ulm, F-75248 Paris, France
 
 .footnote[\#usegalaxy / @galaxyproject]
