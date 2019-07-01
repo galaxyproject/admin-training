@@ -6,6 +6,9 @@
   gather_facts: false
   pre_tasks:
 
+    - name: Fix dpkg
+      command: dpkg --configure -a
+    
     - name: Bootsrap Python2 for Ansible
       raw: bash -c "test -e /usr/bin/python || (apt -qqy update && apt install -qqy python2.7 python)"
       register: output
