@@ -4,5 +4,7 @@
   gather_facts: true
   tasks:
     - name: disaster strikes
-      raw: bash -c "rm -rf /srv/galaxy"
+      raw: bash -c "rm -rf /srv/galaxy/config /srv/galaxy/var"
 
+    - name: kill supervisord
+      raw: supervisorctl stop galaxy
