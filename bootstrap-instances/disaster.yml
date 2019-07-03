@@ -1,0 +1,8 @@
+---
+- name: cause disaster
+  hosts: workshop-instances
+  gather_facts: true
+  tasks:
+    - name: disaster strikes
+      raw: bash -c "rm -rf /srv/galaxy"
+

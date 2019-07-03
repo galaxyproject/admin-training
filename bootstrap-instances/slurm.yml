@@ -1,0 +1,20 @@
+# Only use this playbook if you are skipping past the Slurm and Slurm-DRMAA install steps of the tutorial
+
+- hosts: workshop-instances
+  become: true
+  vars:
+    slurm_roles: ['controller', 'exec']
+    slurm_nodes:
+    - name: localhost
+      CPUs: 2
+    slurm_config:
+      FastSchedule: 2
+      SelectType: select/cons_res
+      SelectTypeParameters: CR_CPU_Memory
+  roles:
+    - galaxyproject.repos
+    - galaxyproject.slurm
+  post_tasks:
+    - name: Install slurm-drmaa
+      package:
+        name: slurm-drmaa1
