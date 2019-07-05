@@ -54,11 +54,8 @@
           - vim
           - vim-pathogen
           - emacs
-          #- ansible
-          #- python2.7
           - virtualenv
           - python-pip
-          #- sendmail
           - zlib1g-dev
         state: latest
 
