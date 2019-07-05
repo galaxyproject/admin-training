@@ -1,0 +1,10 @@
+---
+- name: cause disaster (larger)
+  hosts: workshop-instances
+  gather_facts: true
+  tasks:
+    - name: disaster strikes
+      raw: bash -c "rm -rf /srv/galaxy"
+
+    - name: kill supervisord
+      raw: supervisorctl stop galaxy
