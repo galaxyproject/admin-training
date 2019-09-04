@@ -25,7 +25,7 @@ We are using 'small' instances from the [XSEDE JetStream](https://portal.xsede.o
 | 15:30    | Installing Tools                         | [tool-install][tool-slides]                            | N              |
 | 16:00    | Close                                    |                                                        |                |
 
-[welcome-slides]:      https://galaxyproject.github.io/dagobah-training/2019-colombo/00-intro/intro.html
+[welcome-slides]:      https://galaxyproject.github.io/dagobah-training/2019-colombo/00-intro/intro-k8s.html
 [deployment-slides]:   https://galaxyproject.github.io/dagobah-training/2019-colombo/01-deployment-options/deployment-k8s.html
 [install-slides]:      https://galaxyproject.github.io/dagobah-training/2019-colombo/02-basic-server/get-galaxy-k8s.html
 [admin-slides]:        https://galaxyproject.github.io/dagobah-training/2019-colombo/03-production-basics/production.html
