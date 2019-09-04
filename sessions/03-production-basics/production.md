@@ -10,79 +10,12 @@ slides by @natefoo @dblankenberg @abdulrahmanazab @martenson
 .footnote[\#usegalaxy / @galaxyproject]
 
 ---
-# Production server
-
-* Used by multiple people
-* Designed to be resilient, scalable
-* Designed to be easily managed
-
----
-# Major initial decisions
-
-* Where to install Galaxy
-* Where to store Galaxy datasets
-* Database location
-
----
-# Where to install Galaxy
-
-* Must be at same path on cluster - more on this in cluster sessions
-
----
-# Where to store Galaxy datasets
-
-* Must be at same path on cluster
-* Consider future scalability
-
----
-# Basic Best practices
-
-* Run as an **unprivileged user**
-* When possible, separate *code* from *data* and *configs*
-* Write protect code and configs
-
----
-# Configuring uWSGI
-
-* `uwsgi:` section contains basic internal HTTP server configuration
-  * `http: 127.0.0.1:8080` change to the port and to IP of listening network interface, or `0.0.0.0` for all network interfaces.
-  * `threads: 4` change the number of threads for each web server process.
-  * `offload-thread: 2` change the number of threads for serving static content.
-  * `master: false` "For all practical serving deployments it’s not really a good idea not to use master mode."
-* Note that all uwsgi defaults are built-in if you use the `run.sh`, no config is needed.
-
-.footnote[modifying the `galaxy.yml`]
-
----
-# Basics the Galaxy App
-
-* `galaxy:` section contains application configuration
-  * `database_connection` contains the SQLAlchemy connection string for database.
-  * make sure dev settings `debug: false` and `use_interactive: false` are disabled.
-  * `tool_config_file: 'config/tool_conf.xml,config/shed_tool_conf.xml'` specifies what tools to load.
-  * `tool_dependency_dir: database/dependencies` is a folder where tool dependencies (Conda packages) go.
-
-.footnote[modifying the `galaxy.yml`]
-
----
 # Authentication Options
 
 * `require_login: false` Force everyone to log in (disable anonymous access).
 * `allow_user_creation: true` Allow unregistered users to create new accounts (otherwise, they will have to be created by an admin).
 * `allow_user_deletion: false` Allow administrators to delete accounts.
 * `allow_user_impersonation: false` Allow administrators to log in as other users (useful for debugging)
-
-.footnote[modifying the `galaxy.yml`]
-
----
-# Securing your Object IDs
-
-* User facing object IDs
-  * Galaxy uses the Blowfish cipher to obscure integer IDs.
-  * Prevents guessing the hashes for various Galaxy objects.
-  * `id_secret` is used as the Blowfish key.
-  * Changing the default `id_secret` is a must.
-  * Changing `id_secret` will change & invalid existing URLs (e.g. datasets, histories, workflows, etc).
 
 .footnote[modifying the `galaxy.yml`]
 
@@ -112,53 +45,6 @@ slides by @natefoo @dblankenberg @abdulrahmanazab @martenson
 .footnote[modifying the `galaxy.yml`]
 
 ---
-# Update the welcome page
-
-Welcome page is `$GALAXY_ROOT/static/welcome.html` and is the first thing that
-users see. It is a good idea to extend it with things like:
-- Downtimes/Maintenance periods
-- New tools
-- Publications relating to your Galaxy
-
-No restarting is necessary.
-
----
-# Client Browser Security
-
-* `sanitize_all_html` by default, Galaxy sanitizes all "text/html" tool outputs. Setting to false potentially exposes users to XSS attacks.
-* `sanitize_whitelist_file` manually override html sanitization for listed tools. Can set in admin interface.
-* `serve_xss_vulnerable_mimetypes` certain filetypes (e.g. SVG) can contain JS that is vulnerable to XSS (Cross-site scripting) and are served as "plain/text" by default.
-* `allowed_origin_hostnames` Returns Access-Control-Allow-Origin response header that matches the Origin header of the request.
-
-.footnote[modifying the `galaxy.yml`]
-
----
-# Debugging
-
-This should never be enabled on a public site.
-
-* `debug: false` enable debug options, preserves cluster job data on disk
-* `use_profile: false` Python profiler on request
-* `use_printdebug: true` anything "print"ed within a Galaxy Web thread is exposed to user. Set to false in production.
-* `use_interactive: false` Enable live debugging in your browser.
-
-.footnote[modifying the `galaxy.yml`]
-
----
-# Configuring Data Library Path Uploads
-
-* Admins Only
-  * `library_import_dir: ''` browse and upload files from configured directory.
-  * `allow_path_paste: false` set to true to allow admins to paste any path to upload (e.g. `file://`), applies also to the general 'upload tool'.
-* Users
-  * `user_library_import_dir: ''` root directory containing sub-directories named by user emails. A nifty setup is that the value is the same as for `ftp_upload_dir` allowing users to upload files via FTP and then import them either in history or data library.
-  * `user_library_import_dir_auto_creation: false` create user's folder upon login
-  * `user_library_import_symlink_whitelist: ''` directories that users are allowed to symlink to.
-  * `user_library_import_check_permissions: false` if Galaxy usernames match system usernames enable this to use UNIX permissions.
-
-.footnote[modifying the `galaxy.yml`]
-
----
 # galaxy.yml full options
 
 a.k.a. Everything You Always Wanted to Know About `galaxy.yml`
@@ -166,25 +52,11 @@ a.k.a. Everything You Always Wanted to Know About `galaxy.yml`
 * [config sample](https://raw.githubusercontent.com/galaxyproject/galaxy/dev/config/galaxy.yml.sample)
 
 ---
-# Full Exercise
+# Exercise: Changing the brand and adding a message box
 
-[Galaxy production first steps - Exercise](https://github.com/galaxyproject/dagobah-training/blob/2019-pennstate/sessions/03-production-basics/ex1-first-steps.md)
-
----
-# Configuring FTP
-
-* `ftp_upload_dir` directory containing subdirectories matching users' identifier (defaults to e-mail)
-* `ftp_upload_site` hostname of your FTP server provided to users in the help text. Must set to enable FTP import.
-* `ftp_upload_dir_identifier` user attribute for subdirectory naming. 'email' (${user.email}) is default, but 'id' or 'username' are also common.
-* `ftp_upload_dir_template` Python string template used to determine a users FTP upload directory (${ftp_upload_dir}/${ftp_upload_dir_identifier})
-* `ftp_upload_purge` delete files after FTP import (true)
-
-.footnote[modifying the `galaxy.yml`]
-
----
-# Exercise
-
-* [Exercise - Configuring FTP](https://github.com/galaxyproject/dagobah-training/blob/2019-pennstate/sessions/06-extending-installation/ex1-proftpd.md)
+* Edit galaxy.yml again (see previous slide set for how)
+* Add the following entries to galaxy.yml
+  ![cm-change-messagebox](images/cm-change-messagebox.png)
 
 ---
 # Configuring SMTP
