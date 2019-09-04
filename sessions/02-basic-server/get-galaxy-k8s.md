@@ -59,6 +59,7 @@ $ sudo wget https://raw.githubusercontent.com/CloudVE/cloudman-boot/master/scrip
 $ sudo sh cm_boot_linux.sh `<your_ip>`
 
 ```
+.footnote[Use a public ip or 127.0.0.1 if running locally]
 
 ---
 # Requirements (Mac)
@@ -69,7 +70,7 @@ $ sudo sh cm_boot_linux.sh `<your_ip>`
 Run:
 ```shell
 $ sudo wget https://raw.githubusercontent.com/CloudVE/cloudman-boot/master/scripts/cm_boot_mac.sh
-$ sudo sh cm_boot_linux.sh `<your_ip>`
+$ sudo sh cm_boot_mac.sh
 
 ```
 
@@ -107,7 +108,7 @@ sudo sh cm_boot_linux.sh --use-public-ip
 2. Note down the password that is printed at the end.
 ![cloudman-password](images/cloudman-password.png)
 
-.footnote[Step 3 could take 10-15 minutes.]
+.footnote[Step 1 could take 10-15 minutes.]
 
 ---
 
