@@ -149,7 +149,7 @@ sudo sh cm_boot_linux.sh --use-public-ip
 
 * Click the edit icon next to Galaxy
 ![cm-edit-galaxy-config](images/cm-edit-galaxy-config.png)
-* Add the following entry: admin_users: `<your_username>`
+* Add the following entry in tab galaxy.yml: admin_users: `<your_username>`
 ![cm-change-admin-user](images/cm-change-admin-user.png)
 * Save changes and wait for Galaxy to restart <sup>[1]</sup>
 

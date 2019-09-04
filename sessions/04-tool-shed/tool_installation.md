@@ -15,7 +15,29 @@ class: larger
 
 ## Please Interrupt!
 
-We should be able to answer your questions.
+Happy to answer your questions.
+
+---
+
+Tool Shed is to Galaxy as App Store is to iPhone.
+
+It is a free service that hosts repositories containing Galaxy Tools.
+Installing from the Tool Shed takes care of
+  - dependencies
+  - reference data tables
+  - configuration files
+
+---
+Main Tool Shed (MTS) runs at http://toolshed.g2.bx.psu.edu and serves all Galaxies worldwide.
+
+Everybody can create a repository.
+
+Every repository is public including the whole history.
+
+Local sheds can be run e.g. for private or custom-licensed tools.
+
+???
+We discourage running local TS.
 
 ---
 # Galaxy Vocabulary
@@ -31,15 +53,6 @@ You can add tools to Galaxy either
 * Using Tool Shed
   * Through admin UI in Galaxy
   * Using scripts
-
----
-# How to add tools manually
-
-- By default Galaxy loads all tools in `tool_conf.xml.sample` into tool panel.
-- To add local tools you need:
-  - Make a copy `$ cp tool_conf.xml.sample tool_conf.xml`.
-  - Add your tool entries to the `tool_conf.xml`.
-  - Refresh the site
 
 ---
 # How to install a tool from Tool Shed
@@ -125,26 +138,3 @@ tool_help_boost = 0.5
 
 You can also manipulate the searchlimit with `tool_search_limit = 20` which will
 display more/less results of the search.
-
----
-# Dependency resolvers
-
-* We aim to make Galaxy resolver-independent.
-* What resolver is going to be used for the tool dependency is determined at runtime and prioritised in `config/dependency_resolvers_conf.xml`.
-
-```xml
-<dependency_resolvers>
-  <tool_shed_packages />
-  <galaxy_packages />
-  <conda />
-  <galaxy_packages versionless="true" />
-  <conda versionless="true" />
-</dependency_resolvers>
-```
-
----
-# Tool management with Ephemeris
-
-* usegalaxy.eu example
-
-https://github.com/usegalaxy-eu/usegalaxy-eu-tools
