@@ -32,14 +32,14 @@ _Timetable with sessions and material is being continuously updated._
 | -------- | ---------                                | ---------                                              | -----------                  | -----------    |
 | 08:30    | Registration                             |                                                        |                              |                |
 | 09:00    | Welcome and introduction                 | [Welcome][welcome-slides]                              |                              | All            |
-| 09:20    | Deployment and platform options          | [Deployment][deployment-slides]                        |                              | M              |
-| 09:40    | Intro to Ansible                         | [Ansible][ansible-slides]                              | [Exercise][ansible-exercise] | S              |
+| 09:20    | Deployment and platform options          | [Deployment][deployment-slides]                        |                              |                |
+| 09:40    | Intro to Ansible                         | [Ansible][ansible-slides]                              | [Exercise][ansible-exercise] |                |
 | 10:30    | Break (coffee & snacks)                  |                                                        |                              |                |
-| 10:45    | Galaxy Server Part 1: Basic Install      | [Database][db-slides], [uWSGI][uwsgi-slides]           | [Exercise][ansible-galaxy]   | H              |
+| 10:45    | Galaxy Server Part 1: Basic Install      | [Database][db-slides], [uWSGI][uwsgi-slides]           | [Exercise][ansible-galaxy]   |                |
 | 12:30    | Lunch (catered)                          |                                                        |                              |                |
-| 13:30    | Galaxy Server Part 2: Towards Production | [NGINX][nginx-slides], [Supervisor][supervisor-slides] |                              | H              |
+| 13:30    | Galaxy Server Part 2: Towards Production | [NGINX][nginx-slides], [Supervisor][supervisor-slides] |                              |                |
 | 15:30    | Break (coffee & snacks)                  |                                                        |                              |                |
-| 15:50    | Galaxy Server Part 3: Advanced Install   | [Production][production-slides]                        |                              | H              |
+| 15:50    | Galaxy Server Part 3: Advanced Install   | [Production][production-slides]                        |                              |                |
 | 17:00    | Close Day 1                              |                                                        |                              |                |
 
 [welcome-slides]:      https://galaxyproject.github.io/dagobah-training/2019-pennstate/00-intro/intro.html
@@ -60,14 +60,14 @@ _Timetable with sessions and material is being continuously updated._
 | **Time** | **Topic**                 | **Slides**                                        | **Exercises**                                                     | **Instructor** |
 | -------- | ---------                 | ---------                                         | -----------                                                       | -----------    |
 | 09:00    | Welcome and questions     |                                                   |                                                                   |                |
-| 09:15    | Galaxy Tool Shed          | [Tools][tool-slides], [Toolshed][toolshed-slides] |                                                                   | H, S, M        |
-| 10:00    | Ephemeris                 | [Ephemeris][ephemeris-slides]                     | [Exercise][ephemeris-exercise]                                    | J, M           |
+| 09:15    | Galaxy Tool Shed          | [Tools][tool-slides], [Toolshed][toolshed-slides] |                                                                   |                |
+| 10:00    | Ephemeris                 | [Ephemeris][ephemeris-slides]                     | [Exercise][ephemeris-exercise]                                    |                |
 | 10:30    | Break (coffee & snacks)   |                                                   |                                                                   |                |
-| 10:50    | Ephemeris: Continued      |                                                   |                                                                   | M, H           |
+| 10:50    | Ephemeris: Continued      |                                                   |                                                                   |                |
 | 12:00    | Lunch (catered)           |                                                   |                                                                   |                |
-| 13:00    | Users, Groups, and Quotas | [Slides][users-groups-slides]                     |                                                                   | M              |
-| 14:00    | Reference Data            | [Slides][ref-genomes-slides]                      | [Exercise][ref-genome-exercise], [CMVFS Exercise][cvmfs-exercise] | S              |
-| 16:15    | External authentication   | [Slides][pam-slides]                              | [Upstream Auth Exercise][upstream-auth-exercise]                  | H              |
+| 13:00    | Users, Groups, and Quotas | [Slides][users-groups-slides]                     |                                                                   |                |
+| 14:00    | Reference Data            | [Slides][ref-genomes-slides]                      | [Exercise][ref-genome-exercise], [CMVFS Exercise][cvmfs-exercise] |                |
+| 16:15    | External authentication   | [Slides][pam-slides]                              | [Upstream Auth Exercise][upstream-auth-exercise]                  |                |
 | 17:00    | Close Day 2               |                                                   |                                                                   |                |
 
 [tool-slides]:              https://galaxyproject.github.io/training-material/topics/admin/tutorials/tool-install/slides.html
@@ -84,15 +84,15 @@ _Timetable with sessions and material is being continuously updated._
 ### Wednesday
 **30th January**
 
-| **Time** | **Topic**                                   | **Slides**                | **Exercises**                | **Instructor** |
+| **Time** | **Topic**                                   | **Slides**               | **Exercises**                | **Instructor** |
 | -------- | ---------                                   | ---------                | -----------                  | -----------    |
 | 09:00    | Welcome and questions                       |                          |                              |                |
-| 09:15    | Exploring the Galaxy job configuration file | [Slides][jobconf-slides] |                              | J              |
-| 09:45    | Connecting Galaxy to a compute cluster      | [Slides][cluster-slides] | [Exercise][cluster-exercise] | N, H           |
+| 09:15    | Exploring the Galaxy job configuration file | [Slides][jobconf-slides] |                              |                |
+| 09:45    | Connecting Galaxy to a compute cluster      | [Slides][cluster-slides] | [Exercise][cluster-exercise] |                |
 | 10:20    | Break (coffee & snacks)                     |                          |                              |                |
 | 10:40    | Compute cluster (continued)                 |                          |                              |                |
 | 12:00    | Lunch (on your own)                         |                          |                              |                |
-| 13:30    | Using heterogeneous compute resources       | [Slides][hetero-slides]  | [Exercise][hetero-exercise]  | S, N           |
+| 13:30    | Using heterogeneous compute resources       | [Slides][hetero-slides]  | [Exercise][hetero-exercise]  |                |
 | 15:15    | Break (coffee & snacks)                     |                          |                              |                |
 | 15:35    | compute resources continued                 |                          |                              |                |
 | 17:00    | Close day 3                                 |                          |                              |                |
@@ -106,19 +106,19 @@ _Timetable with sessions and material is being continuously updated._
 ### Thursday
 **31th January**
 
-| **Time** | **Topic**                                                                            | **Slides**                     | **Exercises**                   | **Instructor** |
-| -------- | ---------                                                                            | ---------                      | -------------                   | -----------    |
-| 09:00    | Welcome and questions                                                                |                                |                                 |                |
-| 09:15    | Compute Resources: Continued (Job Resources)                                         |                                |                                 | N              |
-| 10:45    | Break (coffee & snacks)                                                              |                                |                                 |                |
-| 11:00    | Containerize all the things: Galaxy in Docker and Docker in Galaxy                   | [Docker Slides][docker-slides] |                                 | J              |
-| 12:00    | Lunch (catered)                                                                      |                                |                                 |                |
-| 13:00    | Cloudbursting showcase                                                               | [Cloud slides][clouds-everywhere]                               |                                 | S              |
-| 13:30    | Storage management                                                                   | [Slides][storage-slides]       | [Exercise][storage-exercise]    | M, S           |
-| 14:30    | Server Monitoring and Maintenance Part 1: Telegraf, InfluxDB, Grafana                | [Slides][monitoring-slides]    | [Telegraf Exercise][monitoring-exercise] [Reports Exercise][monitoring-reports]| M, H           |
-| 15:15    | Break (coffee & snacks)                                                              |                                |                                 |                |
-| 15:30    | Server Monitoring and Maintenance Part 2: DB queries, command line & scripts, backup |                                | [gxadmin][gxadmin-exercise]     |                |
-| 17:00    | Wrap up and close                                                                    |                                |                                 |                |
+| **Time** | **Topic**                                                                            | **Slides**                        | **Exercises**                                                                   | **Instructor** |
+| -------- | ---------                                                                            | ---------                         | -------------                                                                   | -----------    |
+| 09:00    | Welcome and questions                                                                |                                   |                                                                                 |                |
+| 09:15    | Compute Resources: Continued (Job Resources)                                         |                                   |                                                                                 |                |
+| 10:45    | Break (coffee & snacks)                                                              |                                   |                                                                                 |                |
+| 11:00    | Containerize all the things: Galaxy in Docker and Docker in Galaxy                   | [Docker Slides][docker-slides]    |                                                                                 |                |
+| 12:00    | Lunch (catered)                                                                      |                                   |                                                                                 |                |
+| 13:00    | Cloudbursting showcase                                                               | [Cloud slides][clouds-everywhere] |                                                                                 |                |
+| 13:30    | Storage management                                                                   | [Slides][storage-slides]          | [Exercise][storage-exercise]                                                    |                |
+| 14:30    | Server Monitoring and Maintenance Part 1: Telegraf, InfluxDB, Grafana                | [Slides][monitoring-slides]       | [Telegraf Exercise][monitoring-exercise] [Reports Exercise][monitoring-reports] |                |
+| 15:15    | Break (coffee & snacks)                                                              |                                   |                                                                                 |                |
+| 15:30    | Server Monitoring and Maintenance Part 2: DB queries, command line & scripts, backup |                                   | [gxadmin][gxadmin-exercise]                                                     |                |
+| 17:00    | Wrap up and close                                                                    |                                   |                                                                                 |                |
 
 [docker-slides]:       https://galaxyproject.github.io/training-material/topics/admin/tutorials/galaxy-docker/slides.html
 [monitoring-slides]:   https://galaxyproject.github.io/training-material/topics/admin/tutorials/monitoring/slides.html
@@ -135,16 +135,16 @@ _Timetable with sessions and material is being continuously updated._
 | **Time**   | **Topic**                                           | **Slides**                       | **Exercises**                 | **Instructor** |
 | --------   | ---------                                           | ---------                        | -----------                   | -----------    |
 | 09:00      | Welcome and questions                               |                                  |                               |                |
-| 09:15      | Dockerizing a Galaxy Tool                           |                                  | [Exercise][docker-exercise]   | J              |
+| 09:15      | Dockerizing a Galaxy Tool                           |                                  | [Exercise][docker-exercise]   |                |
 | 10:00      | Break (coffee & snacks)                             |                                  |                               |                |
-| 10:15      | What's new in Galaxy?                               | [Slides][whats-new]              |                               | N, J           |
-| 10:40      | Upgrading Galaxy                                    | [Slides][upgrade]                |                               | M              |
-| 11:00      | Telegraf                                            |                                  | [Exercise][telegraf-exercise] | H              |
-| 11:30      | gxadmin                                             |                                  | [Exercise][gxadmin-exercise]  | H              |
-| 11:50      | Empathy                                             | [Slides][empathy-slides]         |                               | H              |
+| 10:15      | What's new in Galaxy?                               | [Slides][whats-new]              |                               |                |
+| 10:40      | Upgrading Galaxy                                    | [Slides][upgrade]                |                               |                |
+| 11:00      | Telegraf                                            |                                  | [Exercise][telegraf-exercise] |                |
+| 11:30      | gxadmin                                             |                                  | [Exercise][gxadmin-exercise]  |                |
+| 11:50      | Empathy                                             | [Slides][empathy-slides]         |                               |                |
 | 12:00      | Lunch (catered)                                     |                                  |                               |                |
-| 13:00      | When things go wrong: Galaxy Server Troubleshooting | [Slides][troubleshooting-slides] |                               | N              |
-| Spare Time | Extra Topics                                        | [Slides][extra_topics_slides]    |                               | S              |
+| 13:00      | When things go wrong: Galaxy Server Troubleshooting | [Slides][troubleshooting-slides] |                               |                |
+| Spare Time | Extra Topics                                        | [Slides][extra_topics_slides]    |                               |                |
 | 15:00      | Wrap up and close                                   |                                  |                               |                |
 
 [whats-new]:              http://bit.ly/gxwhatsnew2019
