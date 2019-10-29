@@ -1,7 +1,6 @@
-![gat_pennstate_logo_wtext.png](docs/shared-images/gat_pennstate_logo_wtext.png)
-# Intro to Galaxy Administration @ Pennsylvania State University
+# Intro to Galaxy Administration @ Barcelona
 
-**Monday 1/28/2019 - Friday 2/1/2019**
+**2-6 March 2020**
 
 - [Timetable](#timetable)
 	- [Monday](#monday)
@@ -15,11 +14,8 @@
 
 ## Location
 
-**Room W306, Millennium Science Complex** - [map](https://goo.gl/maps/1WwT15jfi5y)
-Penn State University, State College, Pennsylvania, USA
 
 ## Training VM instances
-
 
 We are using instances from the [Jetstream cloud](https://jetstream-cloud.org/) with 2 cores, 4 GiB memory, 20 GiB disk, running a minimal Ubuntu 18.04 image
 
@@ -136,20 +132,20 @@ _Timetable with sessions and material is being continuously updated._
 ### Friday
 **1st February**
 
-| **Time** | **Topic**                                           | **Slides**                       | **Exercises**                 | **Instructor** |
-| -------- | ---------                                           | ---------                        | -----------                   | -----------    |
-| 09:00    | Welcome and questions                               |                                  |                               |                |
-| 09:15    | Dockerizing a Galaxy Tool                           |                                  | [Exercise][docker-exercise]   | J              |
-| 10:00    | Break (coffee & snacks)                             |                                  |                               |                |
-| 10:15    | What's new in Galaxy?                               | [Slides][whats-new]              |                             | N, J           |
-| 10:40    | Upgrading Galaxy                               | [Slides][upgrade]              |                             | M           |
-| 11:00    | Telegraf                                            |                                  | [Exercise][telegraf-exercise] | H              |
-| 11:30    | gxadmin                                             |                                  | [Exercise][gxadmin-exercise]  | H              |
-| 11:50    | Empathy                                             | [Slides][empathy-slides]         |                               | H              |
-| 12:00    | Lunch (catered)                                     |                                  |                               |                |
-| 13:00    | When things go wrong: Galaxy Server Troubleshooting | [Slides][troubleshooting-slides] |                               | N              |
-| Spare Time | Extra Topics | [Slides][extra_topics_slides] |  | S |
-| 15:00    | Wrap up and close                                   |                                  |                               |                |
+| **Time**   | **Topic**                                           | **Slides**                       | **Exercises**                 | **Instructor** |
+| --------   | ---------                                           | ---------                        | -----------                   | -----------    |
+| 09:00      | Welcome and questions                               |                                  |                               |                |
+| 09:15      | Dockerizing a Galaxy Tool                           |                                  | [Exercise][docker-exercise]   | J              |
+| 10:00      | Break (coffee & snacks)                             |                                  |                               |                |
+| 10:15      | What's new in Galaxy?                               | [Slides][whats-new]              |                               | N, J           |
+| 10:40      | Upgrading Galaxy                                    | [Slides][upgrade]                |                               | M              |
+| 11:00      | Telegraf                                            |                                  | [Exercise][telegraf-exercise] | H              |
+| 11:30      | gxadmin                                             |                                  | [Exercise][gxadmin-exercise]  | H              |
+| 11:50      | Empathy                                             | [Slides][empathy-slides]         |                               | H              |
+| 12:00      | Lunch (catered)                                     |                                  |                               |                |
+| 13:00      | When things go wrong: Galaxy Server Troubleshooting | [Slides][troubleshooting-slides] |                               | N              |
+| Spare Time | Extra Topics                                        | [Slides][extra_topics_slides]    |                               | S              |
+| 15:00      | Wrap up and close                                   |                                  |                               |                |
 
 [whats-new]:              http://bit.ly/gxwhatsnew2019
 [updating-slides]:        https://galaxyproject.github.io/training-material/topics/admin/tutorials/upgrading/slides.html#1
@@ -159,11 +155,11 @@ _Timetable with sessions and material is being continuously updated._
 [telegraf-exercise]:      https://galaxyproject.github.io/training-material/topics/admin/tutorials/monitoring/tutorial.html
 [gxadmin-exercise]:       https://galaxyproject.github.io/training-material/topics/admin/tutorials/gxadmin/tutorial.html
 [upgrade]:                https://galaxyproject.github.io/training-material/topics/admin/tutorials/upgrading/slides.html
-[extra_topics_slides]:	  https://galaxyproject.github.io/dagobah-training/2019-pennstate/extra_topics/extra_topic_resources.html#1
+[extra_topics_slides]:    https://galaxyproject.github.io/dagobah-training/2019-pennstate/extra_topics/extra_topic_resources.html#1
+
 ### Instructors
 
-* (S)imon Gladman - Melbourne Bioinformatics, University of Melbourne, Australia
-* (H)elena Rasche - ELIXIR Galaxy WG, Elixir Germany, de.NBI, University of Freiburg, Germany
+* (H)elena Rasche -
+* (S)askia Hiltemann -
 * (N)ate Coraor - Galaxy Project, Penn State University, USA
-* (J)ohn Chilton - Galaxy Project, Penn State University, USA
-* (M)artin Čech - Galaxy Project, Penn State University, USA
+* (M)arius van den Beek -
