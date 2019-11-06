@@ -19,18 +19,19 @@ The instances have been bootstrapped with [a small Ansible playbook](/bootstrap-
 ### Friday
 **15th November 2019**
 
-| **Time** | **Topic**                                | **Slides**                                             | **Exercises**                | **Instructor** |
-| -------- | ---------                                | ---------                                              | -----------                  | -----------    |
-| 09:00    | Welcome and introduction                 | [Welcome][welcome-slides]                              |                              | All            |
-| 09:20    | Intro to Ansible                         | [Ansible][ansible-slides]                              | [Exercise][ansible-exercise] | S, P           |
-| 10:00    | Galaxy Server Part 1: Basic Install      | [Database][db-slides], [uWSGI][uwsgi-slides]           | [Exercise][ansible-galaxy]   | S, P, T        |
-| 11:00    | Break                                    |                                                        |                              |                |
-| 11:30    | Galaxy Server Part 2: Towards Production | [NGINX][nginx-slides], [Supervisor][supervisor-slides] |                              | s, P, T        |
-| 13:00    | Lunch                                    |                                                        |                              |                |
-| 14:00    | Galaxy Server Part 3: Advanced Install   | [Production][production-slides]                        |                              | S, P           |
-| 15:00    | Break                                    |                                                        |                              |                |
-| 16:30    | Connecting Galaxy to a compute cluster   | [Slides][cluster-slides]                               | [Exercise][cluster-exercise] | S              |
-| 17:00    | Close                                    |                                                        |                              |                |
+| **Time** | **Topic**                                | **Slides**                                                      | **Exercises**                 | **Instructor** |
+| -------- | ---------                                | ---------                                                       | -----------                   | -----------    |
+| 09:00    | Welcome and introduction                 | [Welcome][welcome-slides]                                       |                               | All            |
+| 09:20    | Intro to Ansible                         | [Ansible][ansible-slides]                                       | [Exercise][ansible-exercise]  | S, P           |
+| 10:00    | Galaxy Server Part 1: Basic Install      | [Database][db-slides], [uWSGI][uwsgi-slides]                    | [Exercise][ansible-galaxy]    | S, P, T        |
+| 11:00    | Break                                    |                                                                 |                               |                |
+| 11:30    | Galaxy Server Part 2: Towards Production | [NGINX][nginx-slides], [Supervisor][supervisor-slides]          |                               | s, P, T        |
+| 13:00    | Lunch                                    |                                                                 |                               |                |
+| 14:00    | Galaxy Server Part 3: Advanced Install   | [Production][production-slides]                                 |                               | S, P           |
+| 15:00    | Break                                    |                                                                 |                               |                |
+| 15:30    | Connecting Galaxy to a compute cluster   | [Slides][cluster-slides]                                        | [Exercise][cluster-exercise]  | S              |
+| 16:15    | Flexible Topics (Tools, Data, other)     | [Tool Slides][tool-slides], [Reference Slides][reference-slides]| [Exercise][reference-exercise]| S              |
+| 17:00    | Close                                    |                                                                 |                               |                |
 
 [welcome-slides]:      https://galaxyproject.github.io/dagobah-training/2019-gcc/00-intro/intro.html
 [deployment-slides]:   https://training.galaxyproject.org/training-material/topics/admin/slides/introduction.html
@@ -44,7 +45,8 @@ The instances have been bootstrapped with [a small Ansible playbook](/bootstrap-
 [supervisor-slides]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/systemd-supervisor/slides.html
 [cluster-slides]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/connect-to-compute-cluster/slides.html
 [cluster-exercise]:    https://training.galaxyproject.org/training-material/topics/admin/tutorials/connect-to-compute-cluster/tutorial.html
-
+[tool-slides]:         https://training.galaxyproject.org/training-material/topics/admin/tutorials/tool-management/slides.html#1
+[reference-slides]:    https://training.galaxyproject.org/training-material/topics/admin/tutorials/reference-genomes/slides.html#1
 
 ### Instructors
 
