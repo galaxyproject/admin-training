@@ -1,35 +1,37 @@
-# Intro to Galaxy Administration @ GCC2019
+# Intro to Galaxy Administration @ Galaxy Africa 2019
 
 - [Join the Discussion](https://gitter.im/dagobah-training/Lobby)
 - [Galaxy Training Materials](https://training.galaxyproject.org/)
 
 ## Location
 
-'Greece' meeting room
-Konzerthaus Freiburg
+Telepresence Room, KNUST
+Kumasi, Ghana
 
 ## Training VM instances
 
-We are using 'small' instances from the [XSEDE JetStream](https://portal.xsede.org/jetstream) and [de.NBI](https://www.denbi.de/cloud) and NECTAR clouds with 2 cores, 4 GiB memory, 20 GiB disk, running a minimal Ubuntu 18.04 image
+We are using 'medium' instances from the [Nectar](https://nectar.rc.org.au) and [de.NBI](https://www.denbi.de/cloud) clouds with 2 cores, 6 GiB memory, 30 GiB disk, running a minimal Ubuntu 18.04 LTS image
 
 The instances have been bootstrapped with [a small Ansible playbook](/bootstrap-instances), which you may find useful for repeating the exercises at home using a VM, Docker image, etc.
 
 ## Timetable
 
-### Monday
-**1st July**
+### Friday
+**15th November 2019**
 
-| **Time** | **Topic**                                | **Slides**                                             | **Exercises**                | **Instructor** |
-| -------- | ---------                                | ---------                                              | -----------                  | -----------    |
-| 10:00    | Welcome and introduction                 | [Welcome][welcome-slides]                              |                              | All            |
-| 10:20    | Intro to Ansible                         | [Ansible][ansible-slides]                              | [Exercise][ansible-exercise] | S              |
-| 11:00    | Galaxy Server Part 1: Basic Install      | [Database][db-slides], [uWSGI][uwsgi-slides]           | [Exercise][ansible-galaxy]   | M, N, H        |
-| 12:00    | Lunch                                    |                                                        |                              |                |
-| 13:00    | Galaxy Server Part 2: Towards Production | [NGINX][nginx-slides], [Supervisor][supervisor-slides] |                              | M, S, H        |
-| 15:00    | Break (coffee & snacks)                  |                                                        |                              |                |
-| 15:30    | Galaxy Server Part 3: Advanced Install   | [Production][production-slides]                        |                              | M, H           |
-| 16:30    | Connecting Galaxy to a compute cluster   | [Slides][cluster-slides]                               | [Exercise][cluster-exercise] | N              |
-| 17:30    | Close Day 1                              |                                                        |                              |                |
+| **Time** | **Topic**                                | **Slides**                                                      | **Exercises**                 | **Instructor** |
+| -------- | ---------                                | ---------                                                       | -----------                   | -----------    |
+| 09:00    | Welcome and introduction                 | [Welcome][welcome-slides]                                       |                               | All            |
+| 09:20    | Intro to Ansible                         | [Ansible][ansible-slides]                                       | [Exercise][ansible-exercise]  | S, P           |
+| 10:00    | Galaxy Server Part 1: Basic Install      | [Database][db-slides], [uWSGI][uwsgi-slides]                    | [Exercise][ansible-galaxy]    | S, P, T        |
+| 11:00    | Break                                    |                                                                 |                               |                |
+| 11:30    | Galaxy Server Part 2: Towards Production | [NGINX][nginx-slides], [Supervisor][supervisor-slides]          |                               | s, P, T        |
+| 13:00    | Lunch                                    |                                                                 |                               |                |
+| 14:00    | Galaxy Server Part 3: Advanced Install   | [Production][production-slides]                                 |                               | S, P           |
+| 15:00    | Break                                    |                                                                 |                               |                |
+| 15:30    | Connecting Galaxy to a compute cluster   | [Slides][cluster-slides]                                        | [Exercise][cluster-exercise]  | S              |
+| 16:15    | Flexible Topics (Tools, Data, other)     | [Tool Slides][tool-slides], [Reference Slides][reference-slides]| [Exercise][reference-exercise]| S              |
+| 17:00    | Close                                    |                                                                 |                               |                |
 
 [welcome-slides]:      https://galaxyproject.github.io/dagobah-training/2019-gcc/00-intro/intro.html
 [deployment-slides]:   https://training.galaxyproject.org/training-material/topics/admin/slides/introduction.html
@@ -43,14 +45,11 @@ The instances have been bootstrapped with [a small Ansible playbook](/bootstrap-
 [supervisor-slides]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/systemd-supervisor/slides.html
 [cluster-slides]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/connect-to-compute-cluster/slides.html
 [cluster-exercise]:    https://training.galaxyproject.org/training-material/topics/admin/tutorials/connect-to-compute-cluster/tutorial.html
-
+[tool-slides]:         https://training.galaxyproject.org/training-material/topics/admin/tutorials/tool-management/slides.html#1
+[reference-slides]:    https://training.galaxyproject.org/training-material/topics/admin/tutorials/reference-genomes/slides.html#1
 
 ### Instructors
 
 * Simon Gladman - Galaxy Australia, Melbourne Bioinformatics, University of Melbourne, Australia
-* Helena Rasche - Galaxy Europe (ELIXIR Galaxy WG, Elixir Germany, de.NBI), University of Freiburg, Germany
-* Nate Coraor - Galaxy Project, Penn State University, USA
-* John Chilton - Galaxy Project, Penn State University, USA
-* Martin Čech - Galaxy Project, Penn State University, USA
-* Enis Afgan
-* Marius van den Beek
+* Peter van Heusden - South African National Bioinformatics Institute, Cape Town, South Africa
+* Thoba Lose - South African National Bioinformatics Institute, Cape Town, South Africa
