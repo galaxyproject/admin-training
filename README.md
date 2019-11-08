@@ -12,21 +12,22 @@
 - [Join the Discussion](https://gitter.im/dagobah-training/Lobby)
 - [Galaxy Training Materials](https://training.galaxyproject.org/)
 
-## Location
+## Location, Logistics, and Registration
 
+**This training will be offered 2-6 March at the [Barcelona Supercomputing Center](https://www.bsc.es/).**
+
+See the [workshop's Galaxy Community Hub page](https://galaxyproject.org/events/2020-03-admin/) for details on logistics and registration.
 
 ## Training VM instances
 
-We are using instances from the [Jetstream cloud](https://jetstream-cloud.org/) with 2 cores, 4 GiB memory, 20 GiB disk, running a minimal Ubuntu 18.04 image
-
-The instances have been bootstrapped with [a small Ansible playbook](/bootstrap-instances), which you may find useful for repeating the exercises at home using a VM, Docker image, etc.
+Galaxy training instances will be bootstrapped with [a small Ansible playbook](/bootstrap-instances), which you may find useful for repeating the exercises at home using a VM, Docker image, etc.
 
 ## Timetable
 
 _Timetable with sessions and material is being continuously updated._
 
 ### Monday
-**28th January**
+**2nd March**
 
 | **Time** | **Topic**                                | **Slides**                                             | **Exercises**                | **Instructor** |
 | -------- | ---------                                | ---------                                              | -----------                  | -----------    |
@@ -55,7 +56,7 @@ _Timetable with sessions and material is being continuously updated._
 
 
 ### Tuesday
-**29th January**
+**3rd March**
 
 | **Time** | **Topic**                 | **Slides**                                        | **Exercises**                                                     | **Instructor** |
 | -------- | ---------                 | ---------                                         | -----------                                                       | -----------    |
@@ -82,7 +83,7 @@ _Timetable with sessions and material is being continuously updated._
 [upstream-auth-exercise]:   https://galaxyproject.github.io/training-material/topics/admin/tutorials/upstream-auth/tutorial.html
 
 ### Wednesday
-**30th January**
+**4th March**
 
 | **Time** | **Topic**                                   | **Slides**               | **Exercises**                | **Instructor** |
 | -------- | ---------                                   | ---------                | -----------                  | -----------    |
@@ -104,7 +105,7 @@ _Timetable with sessions and material is being continuously updated._
 [hetero-exercise]:    https://galaxyproject.github.io/training-material/topics/admin/tutorials/heterogeneous-compute/tutorial.html
 
 ### Thursday
-**31th January**
+**5th March**
 
 | **Time** | **Topic**                                                                            | **Slides**                        | **Exercises**                                                                   | **Instructor** |
 | -------- | ---------                                                                            | ---------                         | -------------                                                                   | -----------    |
@@ -130,7 +131,7 @@ _Timetable with sessions and material is being continuously updated._
 [clouds-everywhere]:   https://galaxyproject.github.io/dagobah-training/2019-pennstate/18-clouds/clouds.html#1
 
 ### Friday
-**1st February**
+**6th MArch**
 
 | **Time**   | **Topic**                                           | **Slides**                       | **Exercises**                 | **Instructor** |
 | --------   | ---------                                           | ---------                        | -----------                   | -----------    |
@@ -161,5 +162,6 @@ _Timetable with sessions and material is being continuously updated._
 
 * (H)elena Rasche -
 * (S)askia Hiltemann -
-* (N)ate Coraor - Galaxy Project, Penn State University, USA
-* (M)arius van den Beek -
+* (Na)te Coraor - Galaxy Project, Penn State University, United States
+* (M)arius van den Beek - Galaxy Project, Penn State University, *Europe*
+* (Ni)cola Soranzo - Earlham Institute
