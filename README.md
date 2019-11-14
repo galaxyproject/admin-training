@@ -33,20 +33,21 @@ The instances have been bootstrapped with [a small Ansible playbook](/bootstrap-
 | 16:15    | Flexible Topics (Tools, Data, other)     | [Tool Slides][tool-slides], [Reference Slides][reference-slides]| [Exercise][reference-exercise]| S              |
 | 17:00    | Close                                    |                                                                 |                               |                |
 
-[welcome-slides]:      https://galaxyproject.github.io/dagobah-training/2019-gcc/00-intro/intro.html
+[welcome-slides]:      https://galaxyproject.github.io/dagobah-training/2019-kumasi/00-intro/intro.html
 [deployment-slides]:   https://training.galaxyproject.org/training-material/topics/admin/slides/introduction.html
 [ansible-slides]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/ansible/slides.html
 [ansible-exercise]:    https://training.galaxyproject.org/training-material/topics/admin/tutorials/ansible/tutorial.html#your-first-playbook-and-first-role
 [db-slides]:           https://training.galaxyproject.org/training-material/topics/admin/tutorials/database/slides.html
 [ansible-galaxy]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/ansible-galaxy/tutorial.html
 [production-slides]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/production/slides.html
-[nginx-slides]:        https://galaxyproject.github.io/dagobah-training/2019-gcc/03-production-basics/webservers.html#1
+[nginx-slides]:        https://galaxyproject.github.io/dagobah-training/2019-kumasi/03-production-basics/webservers.html#1
 [uwsgi-slides]:        https://training.galaxyproject.org/training-material/topics/admin/tutorials/uwsgi/slides.html
 [supervisor-slides]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/systemd-supervisor/slides.html
 [cluster-slides]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/connect-to-compute-cluster/slides.html
 [cluster-exercise]:    https://training.galaxyproject.org/training-material/topics/admin/tutorials/connect-to-compute-cluster/tutorial.html
 [tool-slides]:         https://training.galaxyproject.org/training-material/topics/admin/tutorials/tool-management/slides.html#1
 [reference-slides]:    https://training.galaxyproject.org/training-material/topics/admin/tutorials/reference-genomes/slides.html#1
+[reference-exercise]:  https://training.galaxyproject.org/training-material/topics/admin/tutorials/cvmfs/tutorial.html
 
 ### Instructors
 
