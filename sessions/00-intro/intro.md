@@ -123,4 +123,4 @@ After the training
 - **Pandam Salifu**
 - **Peter Amoako-Yirenkyi**
 - **Michael Thompson**
-- **Kwarme Nkrumah University of Science and Technology"
+- **Kwarme Nkrumah University of Science and Technology**
