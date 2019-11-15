@@ -21,7 +21,7 @@ The instances have been bootstrapped with [a small Ansible playbook](/bootstrap-
 
 | **Time** | **Topic**                                | **Slides**                                                      | **Exercises**                 | **Instructor** |
 | -------- | ---------                                | ---------                                                       | -----------                   | -----------    |
-| 09:00    | Welcome and introduction                 | [Welcome][welcome-slides]                                       |                               | All            |
+| 09:00    | Welcome and introduction                 | [Welcome][welcome-slides], [Introduction][deployment-slides]  |                               | All            |
 | 09:20    | Intro to Ansible                         | [Ansible][ansible-slides]                                       | [Exercise][ansible-exercise]  | S, P           |
 | 10:00    | Galaxy Server Part 1: Basic Install      | [Database][db-slides], [uWSGI][uwsgi-slides]                    | [Exercise][ansible-galaxy]    | S, P, T        |
 | 11:00    | Break                                    |                                                                 |                               |                |
