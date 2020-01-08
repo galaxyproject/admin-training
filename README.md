@@ -24,7 +24,7 @@ Galaxy training instances will be bootstrapped with [a small Ansible playbook](/
 
 ## Timetable
 
-_Timetable with sessions and material is being continuously updated._
+_Timetable with sessions and material is being continuously updated. **This is NOT final**._
 
 ### Monday
 **2nd March**
