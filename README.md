@@ -8,7 +8,7 @@
 	- [Wednesday](#wednesday)
 	- [Thursday](#thursday)
 	- [Friday](#friday)
-- [Slide Index](https://galaxyproject.github.io/dagobah-training/2019-pennstate/)
+- [Admin Training Materials](https://training.galaxyproject.org/training-material/topics/admin/)
 - [Join the Discussion](https://gitter.im/dagobah-training/Lobby)
 - [Galaxy Training Materials](https://training.galaxyproject.org/)
 
@@ -46,16 +46,16 @@ This day covers getting a Galaxy server setup with Ansible, a server you will de
 | 15:50    | Galaxy Server Part 3: Advanced Install   | [Production][production-slides]                  |                              | H, Na          |
 | 17:00    | Close Day 1                              |                                                  |                              |                |
 
-[welcome-slides]:      https://galaxyproject.github.io/dagobah-training/2019-pennstate/00-intro/intro.html
-[deployment-slides]:   https://galaxyproject.github.io/training-material/topics/admin/slides/introduction.html
-[ansible-slides]:      https://galaxyproject.github.io/training-material/topics/admin/tutorials/ansible/slides.html
-[ansible-exercise]:    https://galaxyproject.github.io/training-material/topics/admin/tutorials/ansible/tutorial.html#your-first-playbook-and-first-role
-[db-slides]:           https://galaxyproject.github.io/training-material/topics/admin/tutorials/database/slides.html
-[ansible-galaxy]:      https://galaxyproject.github.io/training-material/topics/admin/tutorials/ansible-galaxy/tutorial.html
-[production-slides]:   https://galaxyproject.github.io/training-material/topics/admin/tutorials/production/slides.html
-[nginx-slides]:        https://galaxyproject.github.io/training-material/topics/admin/tutorials/webservers/slides.html
-[uwsgi-slides]:        https://galaxyproject.github.io/training-material/topics/admin/tutorials/uwsgi/slides.html
-[supervisor-slides]:   https://galaxyproject.github.io/training-material/topics/admin/tutorials/systemd-supervisor/slides.html
+[welcome-slides]:      https://galaxyproject.github.io/dagobah-training/2020-barcelona/00-intro/intro.html
+[deployment-slides]:   https://training.galaxyproject.org/training-material/topics/admin/slides/introduction.html
+[ansible-slides]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/ansible/slides.html
+[ansible-exercise]:    https://training.galaxyproject.org/training-material/topics/admin/tutorials/ansible/tutorial.html#your-first-playbook-and-first-role
+[db-slides]:           https://training.galaxyproject.org/training-material/topics/admin/tutorials/database/slides.html
+[ansible-galaxy]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/ansible-galaxy/tutorial.html
+[production-slides]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/production/slides.html
+[nginx-slides]:        https://training.galaxyproject.org/training-material/topics/admin/tutorials/webservers/slides.html
+[uwsgi-slides]:        https://training.galaxyproject.org/training-material/topics/admin/tutorials/uwsgi/slides.html
+[supervisor-slides]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/systemd-supervisor/slides.html
 
 
 ### Tuesday
@@ -76,16 +76,16 @@ Today we pivot to focus on making that server useful: adding tools and data, con
 | 16:15    | External authentication   | [Slides][pam-slides]                              | [Upstream Auth Exercise][upstream-auth-exercise]                  | H              |
 | 17:00    | Close Day 2               |                                                   |                                                                   |                |
 
-[tool-slides]:              https://galaxyproject.github.io/training-material/topics/admin/tutorials/tool-install/slides.html
-[toolshed-slides]:          https://galaxyproject.github.io/training-material/topics/admin/tutorials/toolshed/slides.html
-[ephemeris-slides]:         https://galaxyproject.github.io/training-material/topics/admin/tutorials/tool-management/slides.html
-[ephemeris-exercise]:       https://galaxyproject.github.io/training-material/topics/admin/tutorials/tool-management/tutorial.html
-[users-groups-slides]:      https://galaxyproject.github.io/training-material/topics/admin/tutorials/users-groups-quotas/slides.html
-[ref-genomes-slides]:       https://galaxyproject.github.io/training-material/topics/admin/tutorials/reference-genomes/slides.html
+[tool-slides]:              https://training.galaxyproject.org/training-material/topics/admin/tutorials/tool-install/slides.html
+[toolshed-slides]:          https://training.galaxyproject.org/training-material/topics/admin/tutorials/toolshed/slides.html
+[ephemeris-slides]:         https://training.galaxyproject.org/training-material/topics/admin/tutorials/tool-management/slides.html
+[ephemeris-exercise]:       https://training.galaxyproject.org/training-material/topics/admin/tutorials/tool-management/tutorial.html
+[users-groups-slides]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/users-groups-quotas/slides.html
+[ref-genomes-slides]:       https://training.galaxyproject.org/training-material/topics/admin/tutorials/reference-genomes/slides.html
 [ref-genome-exercise]:      sessions/05-reference-genomes/ex1-reference-genomes.md
-[cvmfs-exercise]:           https://galaxyproject.github.io/training-material/topics/admin/tutorials/cvmfs/tutorial.html
-[pam-slides]:               https://galaxyproject.github.io/training-material/topics/admin/tutorials/external-auth/slides.html
-[upstream-auth-exercise]:   https://galaxyproject.github.io/training-material/topics/admin/tutorials/upstream-auth/tutorial.html
+[cvmfs-exercise]:           https://training.galaxyproject.org/training-material/topics/admin/tutorials/cvmfs/tutorial.html
+[pam-slides]:               https://training.galaxyproject.org/training-material/topics/admin/tutorials/external-auth/slides.html
+[upstream-auth-exercise]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/upstream-auth/tutorial.html
 
 ### Wednesday
 **4th March**
@@ -105,40 +105,39 @@ Now that your server has some [bells and whistles](https://en.wiktionary.org/wik
 | 15:35    | Pulsar                                      | [Slides][hetero-slides]  | [Exercise][hetero-exercise]  | H              |
 | 17:00    | Close day 3                                 |                          |                              |                |
 
-[jobconf-slides]:     https://galaxyproject.github.io/training-material/topics/admin/tutorials/job-conf/slides.html
-[cluster-slides]:     https://galaxyproject.github.io/training-material/topics/admin/tutorials/connect-to-compute-cluster/slides.html
-[cluster-exercise]:   https://galaxyproject.github.io/training-material/topics/admin/tutorials/connect-to-compute-cluster/tutorial.html
-[hetero-slides]:      https://galaxyproject.github.io/training-material/topics/admin/tutorials/heterogeneous-compute/slides.html
-[hetero-exercise]:    https://galaxyproject.github.io/training-material/topics/admin/tutorials/heterogeneous-compute/tutorial.html
+[jobconf-slides]:     https://training.galaxyproject.org/training-material/topics/admin/tutorials/job-conf/slides.html
+[cluster-slides]:     https://training.galaxyproject.org/training-material/topics/admin/tutorials/connect-to-compute-cluster/slides.html
+[cluster-exercise]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/connect-to-compute-cluster/tutorial.html
+[hetero-slides]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/heterogeneous-compute/slides.html
+[hetero-exercise]:    https://training.galaxyproject.org/training-material/topics/admin/tutorials/heterogeneous-compute/tutorial.html
 
 ### Thursday
 **5th March**
 
 Today is a bit of a [grab-bag](https://en.wiktionary.org/wiki/grab_bag), we'll cover stuff interactive tools, bioblend (galaxy API library), and then go back to admin focused issues of monitoring.
 
-| **Time** | **Topic**                                             | **Slides**                        | **Exercises**                                                                   | **Instructor** |
-| -------- | ---------                                             | ---------                         | -------------                                                                   | -----------    |
-| 09:00    | Welcome and questions                                 |                                   |                                                                                 |                |
-| 09:15    | Interactive Tools                                     |                                   |                                                                                 | H              |
-| 10:45    | Break (coffee & snacks)                               |                                   |                                                                                 |                |
-| 11:00    | Bioblend                                              |                                   |                                                                                 | Ni             |
-| 12:00    | Lunch (catered)                                       |                                   |                                                                                 |                |
-| 13:00    | Cloudbursting showcase (maybe)                        | [Cloud slides][clouds-everywhere] |                                                                                 | H              |
-| 13:30    | Storage management                                    | [Slides][storage-slides]          | [Exercise][storage-exercise]                                                    | Ni             |
-| 14:15    | Monitoring Part 1: Reports                            | [Slides][monitoring-slides]       | [Telegraf Exercise][monitoring-exercise] [Reports Exercise][monitoring-reports] | M              |
-| 14:35    | Monitoring Part 2: Telegraf, InfluxDB, Grafana        | [Slides][monitoring-slides]       | [Telegraf Exercise][monitoring-exercise] [Reports Exercise][monitoring-reports] | S              |
-| 15:15    | Break (coffee & snacks)                               |                                   |                                                                                 |                |
-| 15:30    | Monitoring Part 3: DB queries, command line & scripts |                                   | [gxadmin][gxadmin-exercise]                                                     | Na             |
-| 17:00    | Wrap up and close                                     |                                   |                                                                                 |                |
+| **Time** | **Topic**                                             | **Slides**                  | **Exercises**                                                                   | **Instructor** |
+| -------- | ---------                                             | ---------                   | -------------                                                                   | -----------    |
+| 09:00    | Welcome and questions                                 |                             |                                                                                 |                |
+| 09:15    | Interactive Tools                                     |                             |                                                                                 | H              |
+| 10:45    | Break (coffee & snacks)                               |                             |                                                                                 |                |
+| 11:00    | Bioblend                                              |                             |                                                                                 | Ni             |
+| 12:00    | Lunch (catered)                                       |                             |                                                                                 |                |
+| 13:00    | Storage management                                    | [Slides][storage-slides]    | [Exercise][storage-exercise]                                                    | Ni             |
+| 14:00    | Monitoring Part 1: Reports                            | [Slides][monitoring-slides] | [Telegraf Exercise][monitoring-exercise] [Reports Exercise][monitoring-reports] | M              |
+| 14:35    | Monitoring Part 2: Telegraf, InfluxDB, Grafana        | [Slides][monitoring-slides] | [Telegraf Exercise][monitoring-exercise] [Reports Exercise][monitoring-reports] | S              |
+| 15:15    | Break (coffee & snacks)                               |                             |                                                                                 |                |
+| 15:30    | Monitoring Part 3: DB queries, command line & scripts | [Slides][gxadmin-slides]    | [gxadmin][gxadmin-exercise]                                                     | Na             |
+| 17:00    | Wrap up and close                                     |                             |                                                                                 |                |
 
-[docker-slides]:       https://galaxyproject.github.io/training-material/topics/admin/tutorials/galaxy-docker/slides.html
-[monitoring-slides]:   https://galaxyproject.github.io/training-material/topics/admin/tutorials/monitoring/slides.html
-[monitoring-exercise]: https://galaxyproject.github.io/training-material/topics/admin/tutorials/monitoring/tutorial.html
-[storage-slides]:      https://galaxyproject.github.io/training-material/topics/admin/tutorials/object-store/slides.html
-[storage-exercise]:    https://galaxyproject.github.io/training-material/topics/admin/tutorials/object-store/tutorial.html
-[gxadmin-exercise]:    https://galaxyproject.github.io/training-material/topics/admin/tutorials/gxadmin/tutorial.html
-[monitoring-reports]:  https://galaxyproject.github.io/training-material/topics/admin/tutorials/reports/tutorial.html
-[clouds-everywhere]:   https://galaxyproject.github.io/dagobah-training/2019-pennstate/18-clouds/clouds.html#1
+[docker-slides]:       https://training.galaxyproject.org/training-material/topics/admin/tutorials/galaxy-docker/slides.html
+[monitoring-slides]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/monitoring/slides.html
+[monitoring-exercise]: https://training.galaxyproject.org/training-material/topics/admin/tutorials/monitoring/tutorial.html
+[storage-slides]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/object-store/slides.html
+[storage-exercise]:    https://training.galaxyproject.org/training-material/topics/admin/tutorials/object-store/tutorial.html
+[gxadmin-exercise]:    https://training.galaxyproject.org/training-material/topics/admin/tutorials/gxadmin/tutorial.html
+[gxadmin-slides]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/gxadmin/slides.html
+[monitoring-reports]:  https://training.galaxyproject.org/training-material/topics/admin/tutorials/reports/tutorial.html
 
 ### Friday
 **6th March**
@@ -148,24 +147,20 @@ The last day! We made it. Even more assorted topics
 | **Time**   | **Topic**                                           | **Slides**                       | **Exercises** | **Instructor** |
 | --------   | ---------                                           | ---------                        | -----------   | -----------    |
 | 09:00      | Welcome and questions                               |                                  |               |                |
-| 09:15      | TIaaS                                               |                                  |               | H              |
+| 09:15      | What's new in Galaxy?                               | [Slides][whats-new]              |               | M              |
 | 10:15      | Break (coffee & snacks)                             |                                  |               |                |
-| 10:30      | What's new in Galaxy?                               | [Slides][whats-new]              |               | M              |
+| 10:30      | TIaaS                                               |                                  |               | H & S          |
 | 11:30      | Upgrading Galaxy                                    | [Slides][upgrade]                |               | Ni             |
 | 12:00      | Lunch (catered)                                     |                                  |               |                |
 | 13:00      | When things go wrong: Galaxy Server Troubleshooting | [Slides][troubleshooting-slides] |               | Na             |
-| Spare Time | Extra Topics                                        | [Slides][extra_topics_slides]    |               |                |
+| Spare Time | Extra Topics                                        |                                  |               |                |
 | 15:00      | Wrap up and close                                   |                                  |               |                |
 
 [whats-new]:              http://bit.ly/gxwhatsnew2019
-[updating-slides]:        https://galaxyproject.github.io/training-material/topics/admin/tutorials/upgrading/slides.html#1
-[troubleshooting-slides]: https://galaxyproject.github.io/training-material/topics/admin/tutorials/troubleshooting/slides.html
-[docker-exercise]:        https://github.com/galaxyproject/dagobah-training/pull/84/commits/7c9722a2ceaf46d15ea859a16f77bb047c2f42c5
-[empathy-slides]:         https://galaxyproject.github.io/training-material/topics/admin/tutorials/empathy/slides.html
-[telegraf-exercise]:      https://galaxyproject.github.io/training-material/topics/admin/tutorials/monitoring/tutorial.html
-[gxadmin-exercise]:       https://galaxyproject.github.io/training-material/topics/admin/tutorials/gxadmin/tutorial.html
-[upgrade]:                https://galaxyproject.github.io/training-material/topics/admin/tutorials/upgrading/slides.html
-[extra_topics_slides]:    https://galaxyproject.github.io/dagobah-training/2019-pennstate/extra_topics/extra_topic_resources.html#1
+[updating-slides]:        https://training.galaxyproject.org/training-material/topics/admin/tutorials/upgrading/slides.html#1
+[troubleshooting-slides]: https://training.galaxyproject.org/training-material/topics/admin/tutorials/troubleshooting/slides.html
+[telegraf-exercise]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/monitoring/tutorial.html
+[upgrade]:                https://training.galaxyproject.org/training-material/topics/admin/tutorials/upgrading/slides.html
 
 ### Instructors
 
