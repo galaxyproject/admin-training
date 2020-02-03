@@ -63,18 +63,18 @@ This day covers getting a Galaxy server setup with Ansible, a server you will de
 
 Today we pivot to focus on making that server useful: adding tools and data, configuring quotas and authentication
 
-| **Time** | **Topic**                 | **Slides**                                        | **Exercises**                                                     | **Instructor** |
-| -------- | ---------                 | ---------                                         | -----------                                                       | -----------    |
-| 09:00    | Welcome and questions     |                                                   |                                                                   |                |
-| 09:15    | Galaxy Tool Shed          | [Tools][tool-slides], [Toolshed][toolshed-slides] |                                                                   | M              |
-| 10:00    | Ephemeris                 | [Ephemeris][ephemeris-slides]                     | [Exercise][ephemeris-exercise]                                    | Ni             |
-| 10:30    | Break (coffee & snacks)   |                                                   |                                                                   |                |
-| 10:50    | Ephemeris: Continued      |                                                   |                                                                   |                |
-| 12:00    | Users, Groups, and Quotas | [Slides][users-groups-slides]                     |                                                                   | S              |
-| 13:00    | Lunch (catered)           |                                                   |                                                                   |                |
-| 14:00    | Reference Data            | [Slides][ref-genomes-slides]                      | [Exercise][ref-genome-exercise], [CMVFS Exercise][cvmfs-exercise] | Na             |
-| 16:15    | External authentication   | [Slides][pam-slides]                              | [Upstream Auth Exercise][upstream-auth-exercise]                  | H              |
-| 17:00    | Close Day 2               |                                                   |                                                                   |                |
+| **Time** | **Topic**                 | **Slides**                                        | **Exercises**                                    | **Instructor** |
+| -------- | ---------                 | ---------                                         | -----------                                      | -----------    |
+| 09:00    | Welcome and questions     |                                                   |                                                  |                |
+| 09:15    | Galaxy Tool Shed          | [Tools][tool-slides], [Toolshed][toolshed-slides] |                                                  | M              |
+| 10:00    | Ephemeris                 | [Ephemeris][ephemeris-slides]                     | [Exercise][ephemeris-exercise]                   | Ni             |
+| 10:30    | Break (coffee & snacks)   |                                                   |                                                  |                |
+| 10:50    | Ephemeris: Continued      |                                                   |                                                  |                |
+| 12:00    | Users, Groups, and Quotas | [Slides][users-groups-slides]                     |                                                  | S              |
+| 13:00    | Lunch (catered)           |                                                   |                                                  |                |
+| 14:00    | Reference Data            | [Slides][ref-genomes-slides]                      | [CMVFS Exercise][cvmfs-exercise]                 | Na             |
+| 16:15    | External authentication   | [Slides][pam-slides]                              | [Upstream Auth Exercise][upstream-auth-exercise] | H              |
+| 17:00    | Close Day 2               |                                                   |                                                  |                |
 
 [tool-slides]:              https://training.galaxyproject.org/training-material/topics/admin/tutorials/tool-install/slides.html
 [toolshed-slides]:          https://training.galaxyproject.org/training-material/topics/admin/tutorials/toolshed/slides.html
@@ -82,7 +82,6 @@ Today we pivot to focus on making that server useful: adding tools and data, con
 [ephemeris-exercise]:       https://training.galaxyproject.org/training-material/topics/admin/tutorials/tool-management/tutorial.html
 [users-groups-slides]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/users-groups-quotas/slides.html
 [ref-genomes-slides]:       https://training.galaxyproject.org/training-material/topics/admin/tutorials/reference-genomes/slides.html
-[ref-genome-exercise]:      sessions/05-reference-genomes/ex1-reference-genomes.md
 [cvmfs-exercise]:           https://training.galaxyproject.org/training-material/topics/admin/tutorials/cvmfs/tutorial.html
 [pam-slides]:               https://training.galaxyproject.org/training-material/topics/admin/tutorials/external-auth/slides.html
 [upstream-auth-exercise]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/upstream-auth/tutorial.html
@@ -116,20 +115,21 @@ Now that your server has some [bells and whistles](https://en.wiktionary.org/wik
 
 Today is a bit of a [grab-bag](https://en.wiktionary.org/wiki/grab_bag), we'll cover stuff interactive tools, bioblend (galaxy API library), and then go back to admin focused issues of monitoring.
 
-| **Time** | **Topic**                                             | **Slides**                  | **Exercises**                                                                   | **Instructor** |
-| -------- | ---------                                             | ---------                   | -------------                                                                   | -----------    |
-| 09:00    | Welcome and questions                                 |                             |                                                                                 |                |
-| 09:15    | Interactive Tools                                     |                             |                                                                                 | H              |
-| 10:45    | Break (coffee & snacks)                               |                             |                                                                                 |                |
-| 11:00    | Bioblend                                              |                             |                                                                                 | Ni             |
-| 12:00    | Storage management                                    | [Slides][storage-slides]    | [Exercise][storage-exercise]                                                    | Ni             |
-| 13:00    | Lunch (catered)                                       |                             |                                                                                 |                |
-| 14:00    | Monitoring Part 1: Reports                            | [Slides][monitoring-slides] | [Telegraf Exercise][monitoring-exercise] [Reports Exercise][monitoring-reports] | M              |
-| 14:35    | Monitoring Part 2: Telegraf, InfluxDB, Grafana        | [Slides][monitoring-slides] | [Telegraf Exercise][monitoring-exercise] [Reports Exercise][monitoring-reports] | S              |
-| 15:15    | Break (coffee & snacks)                               |                             |                                                                                 |                |
-| 15:30    | Monitoring Part 3: DB queries, command line & scripts | [Slides][gxadmin-slides]    | [gxadmin][gxadmin-exercise]                                                     | Na             |
-| 17:00    | Wrap up and close                                     |                             |                                                                                 |                |
+| **Time** | **Topic**                                             | **Slides**                  | **Exercises**                            | **Instructor** |
+| -------- | ---------                                             | ---------                   | -------------                            | -----------    |
+| 09:00    | Welcome and questions                                 |                             |                                          |                |
+| 09:15    | Interactive Tools                                     |                             |                                          | Na             |
+| 10:45    | Break (coffee & snacks)                               |                             |                                          |                |
+| 11:00    | Bioblend                                              |                             |                                          | Ni             |
+| 12:00    | Storage management                                    | [Slides][storage-slides]    | [Exercise][storage-exercise]             | Ni             |
+| 13:00    | Lunch (catered)                                       |                             |                                          |                |
+| 14:00    | Monitoring Part 1: Reports                            | [Slides][monitoring-slides] | [Reports Exercise][monitoring-reports]   | M              |
+| 14:35    | Monitoring Part 2: Telegraf, InfluxDB, Grafana        | [Slides][monitoring-slides] | [Telegraf Exercise][monitoring-exercise] | S              |
+| 15:15    | Break (coffee & snacks)                               |                             |                                          |                |
+| 15:30    | Monitoring Part 3: DB queries, command line & scripts | [Slides][gxadmin-slides]    | [gxadmin][gxadmin-exercise]              | H              |
+| 17:00    | Wrap up and close                                     |                             |                                          |                |
 
+[interactive-tools]:   none
 [docker-slides]:       https://training.galaxyproject.org/training-material/topics/admin/tutorials/galaxy-docker/slides.html
 [monitoring-slides]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/monitoring/slides.html
 [monitoring-exercise]: https://training.galaxyproject.org/training-material/topics/admin/tutorials/monitoring/tutorial.html
