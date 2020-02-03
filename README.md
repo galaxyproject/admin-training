@@ -40,8 +40,8 @@ This day covers getting a Galaxy server setup with Ansible, a server you will de
 | 09:40    | Intro to Ansible                         | [Ansible][ansible-slides]                        | [Exercise][ansible-exercise] | Ni             |
 | 10:30    | Break (coffee & snacks)                  |                                                  |                              |                |
 | 10:45    | Galaxy Server Part 1: Basic Install      | [Database][db-slides], [uWSGI][uwsgi-slides]     | [Exercise][ansible-galaxy]   | H, M, Na       |
-| 12:30    | Lunch (catered)                          |                                                  |                              |                |
-| 13:30    | Galaxy Server Part 2: Towards Production | [NGINX][nginx-slides], [SystemD][systemd-slides] |                              | H, Na          |
+| 13:00    | Lunch (catered)                          |                                                  |                              |                |
+| 14:00    | Galaxy Server Part 2: Towards Production | [NGINX][nginx-slides], [SystemD][systemd-slides] |                              | H, Na          |
 | 15:30    | Break (coffee & snacks)                  |                                                  |                              |                |
 | 15:50    | Galaxy Server Part 3: Advanced Install   | [Production][production-slides]                  |                              | H, Na          |
 | 17:00    | Close Day 1                              |                                                  |                              |                |
@@ -70,8 +70,8 @@ Today we pivot to focus on making that server useful: adding tools and data, con
 | 10:00    | Ephemeris                 | [Ephemeris][ephemeris-slides]                     | [Exercise][ephemeris-exercise]                                    | Ni             |
 | 10:30    | Break (coffee & snacks)   |                                                   |                                                                   |                |
 | 10:50    | Ephemeris: Continued      |                                                   |                                                                   |                |
-| 12:00    | Lunch (catered)           |                                                   |                                                                   |                |
-| 13:00    | Users, Groups, and Quotas | [Slides][users-groups-slides]                     |                                                                   | S              |
+| 12:00    | Users, Groups, and Quotas | [Slides][users-groups-slides]                     |                                                                   | S              |
+| 13:00    | Lunch (catered)           |                                                   |                                                                   |                |
 | 14:00    | Reference Data            | [Slides][ref-genomes-slides]                      | [Exercise][ref-genome-exercise], [CMVFS Exercise][cvmfs-exercise] | Na             |
 | 16:15    | External authentication   | [Slides][pam-slides]                              | [Upstream Auth Exercise][upstream-auth-exercise]                  | H              |
 | 17:00    | Close Day 2               |                                                   |                                                                   |                |
@@ -99,8 +99,8 @@ Now that your server has some [bells and whistles](https://en.wiktionary.org/wik
 | 09:45    | Connecting Galaxy to a compute cluster      | [Slides][cluster-slides] | [Exercise][cluster-exercise] | Na             |
 | 10:20    | Break (coffee & snacks)                     |                          |                              |                |
 | 10:40    | Compute cluster (continued)                 |                          |                              |                |
-| 12:00    | Lunch (on your own)                         |                          |                              |                |
-| 13:00    | Compute Resources: Continued                |                          |                              | Na             |
+| 12:00    | Compute Resources: Continued                |                          |                              | Na             |
+| 13:00    | Lunch                                       |                          |                              |                |
 | 15:15    | Break (coffee & snacks)                     |                          |                              |                |
 | 15:35    | Pulsar                                      | [Slides][hetero-slides]  | [Exercise][hetero-exercise]  | H              |
 | 17:00    | Close day 3                                 |                          |                              |                |
@@ -122,8 +122,8 @@ Today is a bit of a [grab-bag](https://en.wiktionary.org/wiki/grab_bag), we'll c
 | 09:15    | Interactive Tools                                     |                             |                                                                                 | H              |
 | 10:45    | Break (coffee & snacks)                               |                             |                                                                                 |                |
 | 11:00    | Bioblend                                              |                             |                                                                                 | Ni             |
-| 12:00    | Lunch (catered)                                       |                             |                                                                                 |                |
-| 13:00    | Storage management                                    | [Slides][storage-slides]    | [Exercise][storage-exercise]                                                    | Ni             |
+| 12:00    | Storage management                                    | [Slides][storage-slides]    | [Exercise][storage-exercise]                                                    | Ni             |
+| 13:00    | Lunch (catered)                                       |                             |                                                                                 |                |
 | 14:00    | Monitoring Part 1: Reports                            | [Slides][monitoring-slides] | [Telegraf Exercise][monitoring-exercise] [Reports Exercise][monitoring-reports] | M              |
 | 14:35    | Monitoring Part 2: Telegraf, InfluxDB, Grafana        | [Slides][monitoring-slides] | [Telegraf Exercise][monitoring-exercise] [Reports Exercise][monitoring-reports] | S              |
 | 15:15    | Break (coffee & snacks)                               |                             |                                                                                 |                |
@@ -151,8 +151,8 @@ The last day! We made it. Even more assorted topics
 | 10:15      | Break (coffee & snacks)                             |                                  |               |                |
 | 10:30      | TIaaS                                               |                                  |               | H & S          |
 | 11:30      | Upgrading Galaxy                                    | [Slides][upgrade]                |               | Ni             |
-| 12:00      | Lunch (catered)                                     |                                  |               |                |
-| 13:00      | When things go wrong: Galaxy Server Troubleshooting | [Slides][troubleshooting-slides] |               | Na             |
+| 12:00      | When things go wrong: Galaxy Server Troubleshooting | [Slides][troubleshooting-slides] |               | Na             |
+| 13:00      | Lunch (catered)                                     |                                  |               |                |
 | Spare Time | Extra Topics                                        |                                  |               |                |
 | 15:00      | Wrap up and close                                   |                                  |               |                |
 
