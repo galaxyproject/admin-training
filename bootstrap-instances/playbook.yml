@@ -65,7 +65,9 @@
 
     - name: Add pathogen infect to global vimrc
       copy:
-        content: "execute pathogen#infect()"
+        content: |
+            execute pathogen#infect()
+            set paste
         dest: "/etc/vim/vimrc.local"
         mode: 0644
 
