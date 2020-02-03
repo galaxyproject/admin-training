@@ -32,19 +32,20 @@ This day covers getting a Galaxy server setup with Ansible, a server you will de
 
 **2nd March**
 
-| **Time** | **Topic**                                | **Slides**                                       | **Exercises**                | **Instructor** |
-| -------- | ---------                                | ---------                                        | -----------                  | -----------    |
-| 08:30    | Registration                             |                                                  |                              |                |
-| 09:00    | Welcome and introduction                 | [Welcome][welcome-slides]                        |                              | All            |
-| 09:20    | Deployment and platform options          | [Deployment][deployment-slides]                  |                              | M              |
-| 09:40    | Intro to Ansible                         | [Ansible][ansible-slides]                        | [Exercise][ansible-exercise] | Ni             |
-| 10:30    | Break (coffee & snacks)                  |                                                  |                              |                |
-| 10:45    | Galaxy Server Part 1: Basic Install      | [Database][db-slides], [uWSGI][uwsgi-slides]     | [Exercise][ansible-galaxy]   | H, M, Na       |
-| 13:00    | Lunch (catered)                          |                                                  |                              |                |
-| 14:00    | Galaxy Server Part 2: Towards Production | [NGINX][nginx-slides], [SystemD][systemd-slides] |                              | H, Na          |
-| 15:30    | Break (coffee & snacks)                  |                                                  |                              |                |
-| 15:50    | Galaxy Server Part 3: Advanced Install   | [Production][production-slides]                  |                              | H, Na          |
-| 17:00    | Close Day 1                              |                                                  |                              |                |
+| **Time** | **Topic**                                  | **Slides**                                       | **Exercises**                | **Instructor** |
+| -------- | ---------                                  | ---------                                        | -----------                  | -----------    |
+| 08:30    | Registration                               |                                                  |                              |                |
+| 09:00    | Welcome and introduction                   | [Welcome][welcome-slides]                        |                              | All            |
+| 09:20    | Deployment and platform options            | [Deployment][deployment-slides]                  |                              | M              |
+| 09:40    | Intro to Ansible                           | [Ansible][ansible-slides]                        | [Exercise][ansible-exercise] | Ni             |
+| 10:30    | Break (coffee & snacks)                    |                                                  |                              |                |
+| 10:45    | Galaxy Server Part 1: Basic Install        | [Database][db-slides], [uWSGI][uwsgi-slides]     | [Exercise][ansible-galaxy]   | H, M, Na       |
+| 13:00    | Lunch (catered)                            |                                                  |                              |                |
+| 14:00    | Galaxy Server Part 2: Towards Production   | [NGINX][nginx-slides], [SystemD][systemd-slides] |                              | H, Na          |
+| 15:30    | Break (coffee & snacks)                    |                                                  |                              |                |
+| 15:50    | Galaxy Server Part 3: Advanced Install     | [Production][production-slides]                  |                              | H, Na          |
+| 16:45    | Close Day 1                                |                                                  |                              |                |
+| 17:00    | Guided tour of the Supercomputing facility |                                                  |                              |                |
 
 [welcome-slides]:      https://galaxyproject.github.io/dagobah-training/2020-barcelona/00-intro/intro.html
 [deployment-slides]:   https://training.galaxyproject.org/training-material/topics/admin/slides/introduction.html
