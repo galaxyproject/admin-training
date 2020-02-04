@@ -15,7 +15,7 @@ You all will be arriving in Barcelona soon for the [Admin Training](https://gala
 
 You absolutely need a wifi enabled laptop, with an SSH client.
 
-We will provide VMs for you on which you will do everything during the week, so your don't need a super powerful laptop or anything. You do need to have an SSH client pre-installed, when we start on monday morning we will be starting immediately, don't want to anyone to fall behind :)
+We will provide VMs for you on which you will do everything during the week, so you don't need a super powerful laptop or anything. You do need to have an SSH client pre-installed. When we start on Monday morning we will be starting immediately, and we don't want anyone to fall behind :)
 
 For Linux & OSX: You should have an ssh client already installed. Try running the command 'ssh' in the terminal to check and as long as it doesn't say "command not found" you're probably ok.
 For Windows: Please install PuTTY, or equivalent: https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
