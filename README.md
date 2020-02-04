@@ -165,8 +165,8 @@ The last day! We made it. Even more assorted topics
 
 ### Instructors
 
-* (H)elena Rasche -
-* (S)askia Hiltemann -
+* (H)elena Rasche - Galaxy Europe
+* (S)askia Hiltemann - Erasmus Medical Center, the Netherlands
 * (Na)te Coraor - Galaxy Project, Penn State University, United States
 * (M)arius van den Beek - Galaxy Project, Penn State University, *Europe*
 * (Ni)cola Soranzo - Earlham Institute
