@@ -22,7 +22,7 @@ For Windows: Please install PuTTY, or equivalent: https://www.chiark.greenend.or
 
 **Educational Requirements**
 
-By the time of the workshop, you should be familiar with the *linux command line*. Everyone has a different background and if you haven't had to learn unix shell basics before that's ok! We recommend that you go through [these lessons](http://swcarpentry.github.io/shell-novice/) from The [Carpentries](**Community Requirements**).
+By the time of the workshop, you should be familiar with the *linux command line*. Everyone has a different background and if you haven't had to learn unix shell basics before that's ok! We recommend that you go through [these lessons](http://swcarpentry.github.io/shell-novice/) from The [Carpentries](https://software-carpentry.org/about/).
 
 Additionally you need to be comfortable with a command line text editor. If you have not had to use one before, then nano is recommended. If you have a preferred one (e.g. vim or emacs), you are welcome to use that.
 
