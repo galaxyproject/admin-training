@@ -145,22 +145,23 @@ Today is a bit of a [grab-bag](https://en.wiktionary.org/wiki/grab_bag), we'll c
 
 The last day! We made it. Even more assorted topics
 
-| **Time**   | **Topic**                                           | **Slides**                       | **Exercises** | **Instructor** |
-| --------   | ---------                                           | ---------                        | -----------   | -----------    |
-| 09:00      | Welcome and questions                               |                                  |               |                |
-| 09:15      | What's new in Galaxy?                               | [Slides][whats-new]              |               | M              |
-| 10:15      | Break (coffee & snacks)                             |                                  |               |                |
-| 10:30      | TIaaS                                               |                                  |               | H & S          |
-| 11:30      | Upgrading Galaxy                                    | [Slides][upgrade]                |               | Ni             |
-| 12:00      | When things go wrong: Galaxy Server Troubleshooting | [Slides][troubleshooting-slides] |               | Na             |
-| 13:00      | Lunch (catered)                                     |                                  |               |                |
-| Spare Time | Extra Topics                                        |                                  |               |                |
-| 15:00      | Wrap up and close                                   |                                  |               |                |
+| **Time**   | **Topic**                                           | **Slides**                       | **Exercises**                    | **Instructor** |
+| --------   | ---------                                           | ---------                        | -----------                      | -----------    |
+| 09:00      | Welcome and questions                               |                                  |                                  |                |
+| 09:15      | What's new in Galaxy?                               | [Slides][whats-new]              |                                  | M              |
+| 10:15      | Break (coffee & snacks)                             |                                  |                                  |                |
+| 10:30      | TIaaS                                               |                                  | [TIaaS Exercise][tiaas-exercise] | H & S          |
+| 11:30      | Upgrading Galaxy                                    | [Slides][upgrade]                |                                  | Ni             |
+| 12:00      | When things go wrong: Galaxy Server Troubleshooting | [Slides][troubleshooting-slides] |                                  | Na             |
+| 13:00      | Lunch (catered)                                     |                                  |                                  |                |
+| Spare Time | Extra Topics                                        |                                  |                                  |                |
+| 15:00      | Wrap up and close                                   |                                  |                                  |                |
 
 [whats-new]:              http://bit.ly/gxwhatsnew2019
 [updating-slides]:        https://training.galaxyproject.org/training-material/topics/admin/tutorials/upgrading/slides.html#1
 [troubleshooting-slides]: https://training.galaxyproject.org/training-material/topics/admin/tutorials/troubleshooting/slides.html
 [telegraf-exercise]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/monitoring/tutorial.html
+[tiaas-exercise]:         https://training.galaxyproject.org/training-material/topics/admin/tutorials/tiaas/tutorial.html
 [upgrade]:                https://training.galaxyproject.org/training-material/topics/admin/tutorials/upgrading/slides.html
 
 ### Instructors
