@@ -22,21 +22,21 @@ For Windows: Please install PuTTY, or equivalent: https://www.chiark.greenend.or
 
 **Educational Requirements**
 
-By the time of the workshop, you should be familiar with the *linux command line*. Everyone has a different background and if you haven't had to learn unix shell basics before that's ok! We recommend that you go through [these lessons](http://swcarpentry.github.io/shell-novice/) from The [Carpentries](https://software-carpentry.org/about/).
+By the time of the workshop, you should be familiar with the *Unix command line*. Everyone has a different background and if you haven't had to learn Unix shell basics before that's ok! We recommend that you go through the [The Unix Shell lesson](http://swcarpentry.github.io/shell-novice/) from [The Carpentries](https://carpentries.org/about/).
 
-Additionally you need to be comfortable with a command line text editor. If you have not had to use one before, then nano is recommended. If you have a preferred one (e.g. vim or emacs), you are welcome to use that.
+Additionally you need to be comfortable with a command-line text editor. If you have not had to use one before, then `nano` is recommended. If you have a preferred one (e.g. vim or emacs), you are welcome to use that.
 
 **Community Requirements**
 
-Everyone is expected to abide by the Code of Conduct that you signed before this training. We want this to be a welcoming and friendly environment for everyone! Please see the [CoC](https://github.com/galaxyproject/galaxy/blob/dev/CODE_OF_CONDUCT.md) for more information and the point of contact for any issues.
+Everyone is expected to abide by the Code of Conduct (CoC) that you signed before this training. We want this to be a welcoming and friendly environment for everyone! Please see the [CoC](https://github.com/galaxyproject/galaxy/blob/dev/CODE_OF_CONDUCT.md) for more information and the point of contact for any issues.
 
 **Training Materials**
 
-Everything we teach during the week will be found on the [Galaxy Training Materials](https://galaxyproject.github.io/training-material/topics/admin/). If you are worried about the teaching pace of the upcoming week, feel free to read through these materials ahead of time and familiarise yourself with the concepts. Our [preliminary schedule](https://github.com/galaxyproject/dagobah-training/) is available, but subject to change at any moment.
+Everything we teach during the week will be found on the [Galaxy Training Materials](https://galaxyproject.github.io/training-material/topics/admin/) website. If you are worried about the teaching pace of the upcoming week, feel free to read through these materials ahead of time and familiarise yourself with the concepts. Our [preliminary schedule](https://github.com/galaxyproject/dagobah-training/) is available, but subject to change at any moment.
 
 **Community**
 
-There is a special chat room just for these training events. Come and [introduce yourself](https://gitter.im/dagobah-training/Lobby) if you like! Even if you decide not to participate there, we will likely share URLs or snippets of code in that chat during the week, so it is important that you know where to find it.
+There is a public chat room just for these training events. Come and [introduce yourself](https://gitter.im/dagobah-training/Lobby) if you like! Even if you decide not to participate there, we will likely share URLs or snippets of code in that chat during the week, so it is important that you know where to find it.
 
 
 
