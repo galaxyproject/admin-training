@@ -58,6 +58,7 @@
           - python3-pip
           #- sendmail
           - zlib1g-dev
+          - tree
         state: latest
 
     #- name: Enable pathogen for all users
