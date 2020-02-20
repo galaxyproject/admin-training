@@ -52,11 +52,8 @@
           - vim
           - vim-pathogen
           - emacs
-          #- ansible
-          #- python2.7
-          - python3-virtualenv
+          - virtualenv
           - python3-pip
-          #- sendmail
           - zlib1g-dev
           - tree
         state: latest
