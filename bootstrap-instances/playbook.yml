@@ -80,6 +80,14 @@
           - ansible
           - planemo
 
+    - name: Download the "Fake LE Root X1" certificate
+      get_url:
+        url: https://letsencrypt.org/certs/fakelerootx1.pem
+        dest: /usr/local/share/ca-certificates/fakelerootx1.crt
+
+    - name: Update CA certificates
+      command: update-ca-certificates
+
   handlers:
     - name: reboot
       reboot:
