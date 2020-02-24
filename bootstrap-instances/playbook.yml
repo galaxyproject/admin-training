@@ -4,7 +4,6 @@
   hosts: all
   gather_facts: false
   pre_tasks:
-
     - name: Bootsrap Python3 for Ansible
       raw: bash -c "test -e /usr/bin/python3 || (apt -qqy update && apt install -qqy python3)"
       register: output
@@ -14,7 +13,6 @@
 - name: Pre-configure instances
   hosts: all
   tasks:
-
     - name: Update repos
       apt:
         update_cache: yes
@@ -57,6 +55,12 @@
           - zlib1g-dev
           - tree
         state: latest
+
+    - name: Ensure python2 is purged
+      package:
+        name:
+          - python
+        state: absent
 
     #- name: Enable pathogen for all users
     #  command: vim-addons -w install pathogen
