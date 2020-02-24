@@ -79,6 +79,7 @@
         name:
           - ansible
           - planemo
+        executable: pip3
 
     - name: Download the "Fake LE Root X1" certificate
       get_url:
