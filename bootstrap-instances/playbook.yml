@@ -1,7 +1,7 @@
 ---
 # sudo must be preinstalled if you are using become
 - name: Bootstrap python
-  hosts: workshop-instances
+  hosts: all
   gather_facts: false
   pre_tasks:
 
@@ -12,7 +12,7 @@
 
 
 - name: Pre-configure instances
-  hosts: workshop-instances
+  hosts: all
   tasks:
 
     - name: Update repos
