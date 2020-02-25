@@ -4,7 +4,7 @@
   hosts: all
   gather_facts: false
   pre_tasks:
-    - name: Bootsrap Python3 for Ansible
+    - name: Bootstrap Python3 for Ansible
       raw: bash -c "test -e /usr/bin/python3 || (apt -qqy update && apt install -qqy python3)"
       register: output
       changed_when: output.stdout != ""
