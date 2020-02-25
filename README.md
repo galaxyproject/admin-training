@@ -56,7 +56,7 @@ This day covers getting a Galaxy server setup with Ansible, a server you will de
 [production-slides]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/production/slides.html
 [nginx-slides]:        https://training.galaxyproject.org/training-material/topics/admin/tutorials/webservers/slides.html
 [uwsgi-slides]:        https://training.galaxyproject.org/training-material/topics/admin/tutorials/uwsgi/slides.html
-[supervisor-slides]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/systemd-supervisor/slides.html
+[systemd-slides]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/systemd-supervisor/slides.html
 
 
 ### Tuesday
@@ -73,7 +73,7 @@ Today we pivot to focus on making that server useful: adding tools and data, con
 | 10:50    | Ephemeris: Continued      |                                                   |                                                  |                |
 | 12:00    | Users, Groups, and Quotas | [Slides][users-groups-slides]                     |                                                  | S              |
 | 13:00    | Lunch (catered)           |                                                   |                                                  |                |
-| 14:00    | Reference Data            | [Slides][ref-genomes-slides]                      | [CMVFS Exercise][cvmfs-exercise]                 | Na             |
+| 14:00    | Reference Data            | [Slides][ref-genomes-slides]                      | [CVMFS Exercise][cvmfs-exercise]                 | Na             |
 | 16:15    | External authentication   | [Slides][pam-slides]                              | [Upstream Auth Exercise][upstream-auth-exercise] | H              |
 | 17:00    | Close Day 2               |                                                   |                                                  |                |
 
