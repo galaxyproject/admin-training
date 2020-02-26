@@ -39,7 +39,7 @@ This day covers getting a Galaxy server setup with Ansible, a server you will de
 | 09:20    | Deployment and platform options            | [Deployment][deployment-slides]                  |                              | M              |
 | 09:40    | Intro to Ansible                           | [Ansible][ansible-slides]                        | [Exercise][ansible-exercise] | Ni             |
 | 10:30    | Break (coffee & snacks)                    |                                                  |                              |                |
-| 10:45    | Galaxy Server Part 1: Basic Install        | [Database][db-slides], [uWSGI][uwsgi-slides]     | [Exercise][ansible-galaxy]   | H, M, Na       |
+| 10:45    | Galaxy Server Part 1: Basic Install        | [Galaxy Install][ansible-galaxy-slides], [Database][db-slides], [uWSGI][uwsgi-slides]     | [Exercise][ansible-galaxy]   | H, M, Na       |
 | 13:00    | Lunch (catered)                            |                                                  |                              |                |
 | 14:00    | Galaxy Server Part 2: Towards Production   | [NGINX][nginx-slides], [SystemD][systemd-slides] |                              | H, Na          |
 | 15:30    | Break (coffee & snacks)                    |                                                  |                              |                |
@@ -51,8 +51,9 @@ This day covers getting a Galaxy server setup with Ansible, a server you will de
 [deployment-slides]:   https://training.galaxyproject.org/training-material/topics/admin/slides/introduction.html
 [ansible-slides]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/ansible/slides.html
 [ansible-exercise]:    https://training.galaxyproject.org/training-material/topics/admin/tutorials/ansible/tutorial.html#your-first-playbook-and-first-role
-[db-slides]:           https://training.galaxyproject.org/training-material/topics/admin/tutorials/database/slides.html
+[ansible-galaxy-slides]: https://training.galaxyproject.org/training-material/topics/admin/tutorials/ansible-galaxy/slides.html
 [ansible-galaxy]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/ansible-galaxy/tutorial.html
+[db-slides]:           https://training.galaxyproject.org/training-material/topics/admin/tutorials/database/slides.html
 [production-slides]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/production/slides.html
 [nginx-slides]:        https://training.galaxyproject.org/training-material/topics/admin/tutorials/webservers/slides.html
 [uwsgi-slides]:        https://training.galaxyproject.org/training-material/topics/admin/tutorials/uwsgi/slides.html
