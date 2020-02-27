@@ -52,6 +52,7 @@
           - emacs
           - virtualenv
           - python3-pip
+          - jq
           - zlib1g-dev
           - tree
         state: latest
