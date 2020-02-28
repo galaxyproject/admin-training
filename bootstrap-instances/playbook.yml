@@ -10,6 +10,27 @@
       changed_when: output.stdout != ""
 
 
+- name: Configure workshop VMs
+  hosts: workshop-instances
+  tasks:
+    - name: Copy ssh key to training machines
+      copy:
+        src: id_rsa
+        dest: /home/ubuntu/.ssh/id_rsa
+        owner: ubuntu
+        group: ubuntu
+        mode: '0600'
+
+- name: Configure pulsar VMs
+  hosts: pulsar-instances
+  tasks:
+    - name: Set authorized key on pulsar machine
+      authorized_key:
+        user: ubuntu
+        state: present
+        key: "{{ lookup('file', 'id_rsa.pub') }}"
+
+
 - name: Pre-configure instances
   hosts: all
   tasks:
