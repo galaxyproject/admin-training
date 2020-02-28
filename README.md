@@ -91,20 +91,20 @@ Today we pivot to focus on making that server useful: adding tools and data, con
 
 Now that your server has some [bells and whistles](https://en.wiktionary.org/wiki/bells_and_whistles), let's connect it to a compute cluster, and learn about the job configuration file.
 
-| **Time** | **Topic**                                   | **Slides**               | **Exercises**                | **Instructor** |
-| -------- | ---------                                   | ---------                | -----------                  | -----------    |
-| 09:00    | Welcome and questions                       |                          |                              |                |
-| 09:15    | Exploring the Galaxy job configuration file | [Slides][jobconf-slides] |                              | M              |
-| 09:45    | Connecting Galaxy to a compute cluster      | [Slides][cluster-slides] | [Exercise][cluster-exercise] | Na             |
-| 10:20    | Break (coffee & snacks)                     |                          |                              |                |
-| 10:40    | Compute cluster (continued)                 |                          |                              |                |
-| 12:00    | Compute Resources: Continued                |                          |                              | Na             |
-| 13:00    | Lunch                                       |                          |                              |                |
-| 15:15    | Break (coffee & snacks)                     |                          |                              |                |
-| 15:35    | Pulsar                                      | [Slides][hetero-slides]  | [Exercise][hetero-exercise]  | H              |
-| 17:00    | Close day 3                                 |                          |                              |                |
+| **Time** | **Topic**                                   | **Slides**               | **Exercises**                  | **Instructor** |
+| -------- | ---------                                   | ---------                | -----------                    | -----------    |
+| 09:00    | Welcome and questions                       |                          |                                |                |
+| 09:15    | Exploring the Galaxy job configuration file | [Slides][cluster-slides] | [`job_conf.xml`][job-conf-xml] | M              |
+| 09:45    | Connecting Galaxy to a compute cluster      | [Slides][cluster-slides] | [Exercise][cluster-exercise]   | Na             |
+| 10:20    | Break (coffee & snacks)                     |                          |                                |                |
+| 10:40    | Compute cluster (continued)                 |                          |                                |                |
+| 12:00    | Compute Resources: Continued                |                          |                                | Na             |
+| 13:00    | Lunch                                       |                          |                                |                |
+| 15:15    | Break (coffee & snacks)                     |                          |                                |                |
+| 15:35    | Pulsar                                      | [Slides][hetero-slides]  | [Exercise][hetero-exercise]    | H              |
+| 17:00    | Close day 3                                 |                          |                                |                |
 
-[jobconf-slides]:     https://training.galaxyproject.org/training-material/topics/admin/tutorials/job-conf/slides.html
+[job-conf-xml]:       https://github.com/galaxyproject/galaxy/blob/dev/lib/galaxy/config/sample/job_conf.xml.sample_advanced
 [cluster-slides]:     https://training.galaxyproject.org/training-material/topics/admin/tutorials/connect-to-compute-cluster/slides.html
 [cluster-exercise]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/connect-to-compute-cluster/tutorial.html
 [hetero-slides]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/heterogeneous-compute/slides.html
