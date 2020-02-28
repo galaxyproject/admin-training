@@ -81,7 +81,7 @@ Today we pivot to focus on making that server useful: adding tools and data, con
 [ephemeris-slides]:         https://training.galaxyproject.org/training-material/topics/admin/tutorials/tool-management/slides.html
 [ephemeris-exercise]:       https://training.galaxyproject.org/training-material/topics/admin/tutorials/tool-management/tutorial.html
 [users-groups-slides]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/users-groups-quotas/slides.html
-[ref-genomes-slides]:       https://training.galaxyproject.org/training-material/topics/admin/tutorials/reference-genomes/slides.html
+[ref-genomes-slides]:       https://training.galaxyproject.org/training-material/topics/admin/tutorials/cvmfs/slides.html
 [cvmfs-exercise]:           https://training.galaxyproject.org/training-material/topics/admin/tutorials/cvmfs/tutorial.html
 [pam-slides]:               https://training.galaxyproject.org/training-material/topics/admin/tutorials/external-auth/slides.html
 [upstream-auth-exercise]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/upstream-auth/tutorial.html
