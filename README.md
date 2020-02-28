@@ -146,7 +146,7 @@ The last day! We made it. Even more assorted topics
 | **Time**   | **Topic**                                           | **Slides**                       | **Exercises**                    | **Instructor** |
 | --------   | ---------                                           | ---------                        | -----------                      | -----------    |
 | 09:00      | Welcome and questions                               |                                  |                                  |                |
-| 09:15      | What's new in Galaxy?                               | [Slides][whats-new]              |                                  | M              |
+| 09:15      | What's new in Galaxy? (2019 edition)                | [Slides][whats-new]              |                                  | M              |
 | 10:15      | Break (coffee & snacks)                             |                                  |                                  |                |
 | 10:30      | TIaaS                                               |                                  | [TIaaS Exercise][tiaas-exercise] | H & S          |
 | 11:30      | Upgrading Galaxy                                    | [Slides][upgrade]                |                                  | Ni             |

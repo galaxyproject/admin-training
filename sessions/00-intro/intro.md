@@ -4,34 +4,31 @@ class: inverse, middle, large
 ---
 class: special, center
 
-![2019-pennstate logo](../shared-images/gat_pennstate_logo_wtext.png)
-
 # Welcome
 
-Monday 1/28 - Friday 2/1
+Monday March 2nd - Friday March 6th
 
 \#usegalaxy / @galaxyproject
 ---
 # Your Instructors
 
-* **Simon Gladman** @SimonGladman1
-    - VLSCI, University of Melbourne, Australia
-* **Helena Rasche**
-    - ELIXIR Galaxy WG, Elixir Germany, de.NBI, University of Freiburg, Germany
+* **Helena Rasche** @hexylena
+    - Galaxy Project Europe
 * **Nate Coraor** @natefoo
     - Galaxy Project, Penn State University, USA
-* **John Chilton** @jmchilton
-* **Martin Čech** @martenson
-    - Galaxy Project, Penn State University, USA
+* **Saskia Hiltemann** @shiltemann
+    - ELIXIR Galaxy WG, CINECA, Erasmus MC, Rotterdam
+* **Marius van den Beek** @mariusvdbeek
+    - Galaxy Project, Penn State University
+* **Nicola Soranzo** @NicolaSoranzo
+    - Earlham Insitute
 
 .footnote[\#usegalaxy / @galaxyproject]
 
 ---
 # Training Home
 
-https://github.com/galaxyproject/dagobah-training/
-
-alias http://bit.ly/galaxyadmin
+**https://gxy.io/galaxyadmin**
 
 * The homepage of this training is a repository at GitHub reachable by the link above.
 * Most materials are written in Markdown and we appreciate Pull Requests (even during the training!).
@@ -39,23 +36,21 @@ alias http://bit.ly/galaxyadmin
 ---
 # On Session Times
 
-We did our best to plan the session times for the expected content, and to build the content for the session time.
+Day begin and end times are relatively fixed.
 
-Almost all of this content is freshly revised, there may be sessions that are too long or short - apologies in advance.
+Sessions may not keep precisely to the times in the schedule. We will break whenever the food and coffee is here.
 
 ---
 # Communication channels
 
-* Web browser based chat at https://gitter.im/dagobah-training/Lobby
-
-alias http://bit.ly/gadminchat
+* Web browser based chat at **https://gxy.io/gadminchat**
 
 ---
 # Computing resources
 
-The computing resources for this training have been provided by **Jetstream**
+The computing resources for this training have been provided by **de.NBI**
 
-Find the IP address for your instance [here](https://docs.google.com/spreadsheets/d/1sIoU4qpv4HdKNUNOtsAtW-XKKZvIsDfReAoS7uBbCZM/edit?usp=sharing) alias https://bit.ly/gadminmachines. Put it somewhere easy to copy/paste.
+Find the IP address for your instance [here](https://docs.google.com/spreadsheets/d/11nQKJmHHf7GWR_C36rdu2dVOHZZ0cXpv09b84txm_3A/edit?usp=sharing). Put it somewhere easy to copy/paste.
 
 ---
 class: center
@@ -76,9 +71,9 @@ It was sometimes difficult for students to catch up once behind.
 ---
 # Training philosophy
 
-This time we adapted our training to follow the *one true path*(c) - which is usually the one we use for **usegalaxy.* servers** - the most tested and stable path.
+We have now moved to teaching the *one true path*™ - which is usually the one we use for **usegalaxy.* servers** - the most tested and stable path.
 
-Galaxy has all the options and possibilities as before, but unless you are opinionated/locked in we recommend staying on the *one true path*(c). For other paths, Galaxy comes with documentation and a friendly community to help.
+Galaxy has all the options and possibilities as before, but unless you are opinionated/locked in we recommend staying on the *one true path*™. For other paths, Galaxy comes with documentation and a friendly community to help.
 
 ---
 # New methodology
@@ -129,26 +124,18 @@ After the training
 ---
 # Essential links (again)
 
-* http://bit.ly/galaxyadmin
+* **https://gxy.io/galaxyadmin**
     - Itinerary and landing page for this course
-* http://bit.ly/gadminmachines
+* **https://gxy.io/gadminmachines**
     - Spreadsheet for choosing your training VM
-* http://bit.ly/gadminchat
+* **https://gxy.io/gadminchat**
     - Chat for this course
 
 ---
-# Thanks
+# BCC 2020
 
-- **Dave Clements**
-- **Donna McMinn**
+Date: **18-21 July 2020**
 
----
-# GCC 2019
+Location: Toronto, Canada
 
-Date: **1-6 July 2019**
-
-Location: Freiburg, Germany
-
-Contact: **Björn Grüning**
-
-https://galaxyproject.org/events/gcc2019/
+https://bcc2020.github.io/
