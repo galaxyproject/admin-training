@@ -64,20 +64,19 @@ This day covers getting a Galaxy server setup with Ansible, a server you will de
 
 Today we pivot to focus on making that server useful: adding tools and data, configuring quotas and authentication
 
-| **Time** | **Topic**                 | **Slides**                                        | **Exercises**                                    | **Instructor** |
-| -------- | ---------                 | ---------                                         | -----------                                      | -----------    |
-| 09:00    | Welcome and questions     |                                                   |                                                  |                |
-| 09:15    | Galaxy Tool Shed          | [Tools][tool-slides], [Toolshed][toolshed-slides] |                                                  | M              |
-| 10:00    | Ephemeris                 | [Ephemeris][ephemeris-slides]                     | [Exercise][ephemeris-exercise]                   | Ni             |
-| 10:30    | Break (coffee & snacks)   |                                                   |                                                  |                |
-| 10:50    | Ephemeris: Continued      |                                                   |                                                  |                |
-| 12:00    | Users, Groups, and Quotas | [Slides][users-groups-slides]                     |                                                  | S              |
-| 13:00    | Lunch (catered)           |                                                   |                                                  |                |
-| 14:00    | Reference Data            | [Slides][ref-genomes-slides]                      | [CVMFS Exercise][cvmfs-exercise]                 | Na             |
-| 16:15    | External authentication   | [Slides][pam-slides]                              | [Upstream Auth Exercise][upstream-auth-exercise] | H              |
-| 17:00    | Close Day 2               |                                                   |                                                  |                |
+| **Time** | **Topic**                 | **Slides**                    | **Exercises**                                    | **Instructor** |
+| -------- | ---------                 | ---------                     | -----------                                      | -----------    |
+| 09:00    | Welcome and questions     |                               |                                                  |                |
+| 09:15    | Galaxy Tool Shed          | [Toolshed][toolshed-slides]   |                                                  | M              |
+| 10:00    | Ephemeris                 | [Ephemeris][ephemeris-slides] | [Exercise][ephemeris-exercise]                   | Ni             |
+| 10:30    | Break (coffee & snacks)   |                               |                                                  |                |
+| 10:50    | Ephemeris: Continued      |                               |                                                  |                |
+| 12:00    | Users, Groups, and Quotas | [Slides][users-groups-slides] |                                                  | S              |
+| 13:00    | Lunch (catered)           |                               |                                                  |                |
+| 14:00    | Reference Data            | [Slides][ref-genomes-slides]  | [CVMFS Exercise][cvmfs-exercise]                 | Na             |
+| 16:15    | External authentication   | [Slides][pam-slides]          | [Upstream Auth Exercise][upstream-auth-exercise] | H              |
+| 17:00    | Close Day 2               |                               |                                                  |                |
 
-[tool-slides]:              https://training.galaxyproject.org/training-material/topics/admin/tutorials/tool-install/slides.html
 [toolshed-slides]:          https://training.galaxyproject.org/training-material/topics/admin/tutorials/toolshed/slides.html
 [ephemeris-slides]:         https://training.galaxyproject.org/training-material/topics/admin/tutorials/tool-management/slides.html
 [ephemeris-exercise]:       https://training.galaxyproject.org/training-material/topics/admin/tutorials/tool-management/tutorial.html
@@ -119,7 +118,7 @@ Today is a bit of a [grab-bag](https://en.wiktionary.org/wiki/grab_bag), we'll c
 | **Time** | **Topic**                                             | **Slides**                  | **Exercises**                            | **Instructor** |
 | -------- | ---------                                             | ---------                   | -------------                            | -----------    |
 | 09:00    | Welcome and questions                                 |                             |                                          |                |
-| 09:15    | Interactive Tools                                     |                             |                                          | Na             |
+| 09:15    | Interactive Tools                                     |                             | [Exercise][interactive-tools]            | Na             |
 | 10:45    | Break (coffee & snacks)                               |                             |                                          |                |
 | 11:00    | Bioblend                                              |                             |                                          | Ni             |
 | 12:00    | Storage management                                    | [Slides][storage-slides]    | [Exercise][storage-exercise]             | Ni             |
