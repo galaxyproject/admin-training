@@ -47,16 +47,16 @@ This day covers getting a Galaxy server setup with Ansible, a server you will de
 | 16:45    | Close Day 1                                |                                                                                       |                              |                |
 | 17:00    | Guided tour of the Supercomputing facility |                                                                                       |                              |                |
 
-[welcome-slides]:      https://galaxyproject.github.io/dagobah-training/2020-barcelona/00-intro/intro.html
-[deployment-slides]:   https://training.galaxyproject.org/training-material/topics/admin/slides/introduction.html
-[ansible-slides]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/ansible/slides.html
-[ansible-exercise]:    https://training.galaxyproject.org/training-material/topics/admin/tutorials/ansible/tutorial.html#your-first-playbook-and-first-role
+[welcome-slides]:        https://galaxyproject.github.io/dagobah-training/2020-barcelona/00-intro/intro.html
+[deployment-slides]:     https://training.galaxyproject.org/training-material/topics/admin/slides/introduction.html
+[ansible-slides]:        https://training.galaxyproject.org/training-material/topics/admin/tutorials/ansible/slides.html
+[ansible-exercise]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/ansible/tutorial.html#your-first-playbook-and-first-role
 [ansible-galaxy-slides]: https://training.galaxyproject.org/training-material/topics/admin/tutorials/ansible-galaxy/slides.html
-[ansible-galaxy]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/ansible-galaxy/tutorial.html
-[db-slides]:           https://training.galaxyproject.org/training-material/topics/admin/tutorials/database/slides.html
-[production-slides]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/production/slides.html
-[uwsgi-slides]:        https://training.galaxyproject.org/training-material/topics/admin/tutorials/uwsgi/slides.html
-[systemd-slides]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/systemd-supervisor/slides.html
+[ansible-galaxy]:        https://training.galaxyproject.org/training-material/topics/admin/tutorials/ansible-galaxy/tutorial.html
+[db-slides]:             https://training.galaxyproject.org/training-material/topics/admin/tutorials/database/slides.html
+[production-slides]:     https://training.galaxyproject.org/training-material/topics/admin/tutorials/production/slides.html
+[uwsgi-slides]:          https://training.galaxyproject.org/training-material/topics/admin/tutorials/uwsgi/slides.html
+[systemd-slides]:        https://training.galaxyproject.org/training-material/topics/admin/tutorials/systemd-supervisor/slides.html
 
 
 ### Tuesday
@@ -130,8 +130,7 @@ Today is a bit of a [grab-bag](https://en.wiktionary.org/wiki/grab_bag), we'll c
 | 15:30    | Monitoring Part 3: DB queries, command line & scripts | [Slides][gxadmin-slides]    | [gxadmin][gxadmin-exercise]              | H              |
 | 17:00    | Wrap up and close                                     |                             |                                          |                |
 
-[interactive-tools]:   none
-[docker-slides]:       https://training.galaxyproject.org/training-material/topics/admin/tutorials/galaxy-docker/slides.html
+[interactive-tools]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/interactive-tools/tutorial.html
 [monitoring-slides]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/monitoring/slides.html
 [monitoring-exercise]: https://training.galaxyproject.org/training-material/topics/admin/tutorials/monitoring/tutorial.html
 [storage-slides]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/object-store/slides.html
