@@ -41,7 +41,7 @@ This day covers getting a Galaxy server setup with Ansible, a server you will de
 | 10:30    | Break (coffee & snacks)                    |                                                                                       |                              |                |
 | 10:45    | Galaxy Server Part 1: Basic Install        | [Galaxy Install][ansible-galaxy-slides], [Database][db-slides], [uWSGI][uwsgi-slides] | [Exercise][ansible-galaxy]   | H, M, Na       |
 | 13:00    | Lunch (catered)                            |                                                                                       |                              |                |
-| 14:00    | Galaxy Server Part 2: Towards Production   | [SystemD][systemd-slides]                                                             |                              | H, Na          |
+| 14:00    | Galaxy Server Part 2: Towards Production   | [systemd][systemd-slides]                                                             |                              | H, Na          |
 | 15:30    | Break (coffee & snacks)                    |                                                                                       |                              |                |
 | 15:50    | Galaxy Server Part 3: Advanced Install     | [Production][production-slides]                                                       |                              | H, Na          |
 | 16:45    | Close Day 1                                |                                                                                       |                              |                |
