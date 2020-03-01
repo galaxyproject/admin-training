@@ -19,9 +19,9 @@ We like questions.
 # Where can Galaxy run?
 * Cloud (SaaS)
   - usegalaxy.org|eu|org.au
-  - [Public Galaxy Servers](https://wiki.galaxyproject.org/PublicGalaxyServers)
-  - [Amazon EC2](https://wiki.galaxyproject.org/CloudMan)
-  - Semi-private cloud (e.g.: [Genomics Virtual Lab](https://www.genome.edu.au/), [Jetstream](http://jetstream-cloud.org/))
+  - [Public Galaxy Servers](https://galaxyproject.org/use/)
+  - [Amazon EC2](https://galaxyproject.org/cloudman/)
+  - Semi-private cloud (e.g.: [Genomics Virtual Lab](https://www.gvl.org.au/get/), [Jetstream](http://jetstream-cloud.org/))
 * Private cloud (build your own Galaxy SaaS)
 * Cloud (IaaS)
   - Any cloud
@@ -34,9 +34,7 @@ We like questions.
 # Software Requirements
 
 Required:
-  - Galaxy is written in Python and depends on **Python 2.7**
-  - All major distros in wide circulation have 2.7, *except* RHEL<sup>[1]</sup> 6
-    - See: Software Collections for [RHEL](https://access.redhat.com/solutions/472793), [CentOS](https://wiki.centos.org/AdditionalResources/Repositories/SCL), [Scientific Linux](http://linux.web.cern.ch/linux/scl/)
+  - Galaxy is written in Python and depends on **Python 3.5** or newer
 
 Optional (but not really):
   - [PostgreSQL](https://galaxyproject.github.io/dagobah-training/2018-oslo/03-production-basics/databases.html)
@@ -52,7 +50,7 @@ UNIX-like operating system:
 
 - **Linux (any distribution)**
 - **OS X / macOS**
-- Windows under MinGW (maybe?)
+- Windows using the Windows Subsystem for Linux (WSL)
 - Other architectures (maybe?)
 
 ---
@@ -75,7 +73,7 @@ Storage is the big variable since it, like compute, is **analysis** and **policy
 
 # Storage Requirements
 
-An "average" NGS analysis (by Anton): **66 GB**
+An "average" NGS analysis (by Anton Nekrutenko): **66 GB**
 
 10 users, 10 histories: **> 6 TB**
 
@@ -105,7 +103,7 @@ usegalaxy.org allocates from **8 GB/core** to **16 GB/core**
 
 - `git clone https://github.com/galaxyproject/galaxy.git`
 - *Framework dependencies* provided as Python "wheels", fetched at first startup with `pip`
-- *Tool dependencies* provided as Conda packages or legacy Tool Shed packages
+- *Tool dependencies* provided as Conda packages, Docker/Singualrity images or legacy Tool Shed packages
 
 ---
 # Making Plans
