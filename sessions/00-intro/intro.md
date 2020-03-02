@@ -28,7 +28,7 @@ Monday March 2nd - Friday March 6th
 ---
 # Training Home
 
-**https://gxy.io/galaxyadmin**
+**https://gxy.io/gat**
 
 * The homepage of this training is a repository at GitHub reachable by the link above.
 * Most materials are written in Markdown and we appreciate Pull Requests (even during the training!).
@@ -43,14 +43,14 @@ Sessions may not keep precisely to the times in the schedule. We will break when
 ---
 # Communication channels
 
-* Web browser based chat at **https://gxy.io/gadminchat**
+* Web browser based chat at **https://gxy.io/gatchat**
 
 ---
 # Computing resources
 
 The computing resources for this training have been provided by **de.NBI**
 
-Find the IP address for your instance [here](https://docs.google.com/spreadsheets/d/11nQKJmHHf7GWR_C36rdu2dVOHZZ0cXpv09b84txm_3A/edit?usp=sharing). Put it somewhere easy to copy/paste.
+Find the IP address for your instance at **https://gxy.io/gatmachines** [here](https://docs.google.com/spreadsheets/d/11nQKJmHHf7GWR_C36rdu2dVOHZZ0cXpv09b84txm_3A/edit?usp=sharing). Put it somewhere easy to copy/paste.
 
 ---
 class: center
@@ -124,11 +124,11 @@ After the training
 ---
 # Essential links (again)
 
-* **https://gxy.io/galaxyadmin**
+* **https://gxy.io/gat**
     - Itinerary and landing page for this course
-* **https://gxy.io/gadminmachines**
+* **https://gxy.io/gatmachines**
     - Spreadsheet for choosing your training VM
-* **https://gxy.io/gadminchat**
+* **https://gxy.io/gatchat**
     - Chat for this course
 
 ---
