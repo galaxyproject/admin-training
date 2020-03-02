@@ -93,6 +93,26 @@ When using Ansible in this course, we will inspect the changes made after each s
 
 .footnote[<sup>[1]</sup> Bonus: We have written an enormous amount of Ansible roles for community consumption. If you do not have a preference, Ansible is a good choice (at least for deploying Galaxy) for this reason.]
 
+
+---
+
+# Participant Chat
+
+We're trying something new this year! We have had success with it in
+bioinformatics trainings, and want to try here. Participants write questions to
+a Google Doc, and we can answer them in more depth than we could in person,
+with links and images.
+
+---
+
+# Sticky Notes
+
+You've received two sticky notes. One red one green. We will ask you to put these up at some steps, to let us know how far you've progressed, or if you have questions.
+
+**If you have an issue**: Red sticky note
+
+**If you're done**: Green sticky note
+
 ---
 # Documentation
 
