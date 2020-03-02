@@ -22,11 +22,11 @@ See the [workshop's Galaxy Community Hub page](https://galaxyproject.org/events/
 
 Galaxy training instances will be bootstrapped with [a small Ansible playbook](/bootstrap-instances), which you may find useful for repeating the exercises at home using a VM, Docker image, etc.
 
-VM spreadsheet: https://gxy.io/gatmachines
+## Important Links
 
-## Questions
-
-Use [this Google Doc](https://docs.google.com/document/d/1mmhZRpV4XQnMB5UoPGDw0qT8I3oF2DIEYPxvPH4tDz0/edit#) or the [dedicated chat](https://gitter.im/dagobah-training/Lobby).
+- [Q&A!](https://docs.google.com/document/d/1mmhZRpV4XQnMB5UoPGDw0qT8I3oF2DIEYPxvPH4tDz0/edit#)
+- [https://gxy.io/gatchat - Chat for this workshop](https://gxy.io/gatchat)
+- [https://gxy.io/gatmachines - VMs](https://gxy.io/gatmachines)
 
 ## Timetable
 
