@@ -22,6 +22,10 @@ See the [workshop's Galaxy Community Hub page](https://galaxyproject.org/events/
 
 Galaxy training instances will be bootstrapped with [a small Ansible playbook](/bootstrap-instances), which you may find useful for repeating the exercises at home using a VM, Docker image, etc.
 
+## Questions
+
+[Go here!](https://docs.google.com/document/d/1mmhZRpV4XQnMB5UoPGDw0qT8I3oF2DIEYPxvPH4tDz0/edit#)
+
 ## Timetable
 
 _Timetable with sessions and material is being continuously updated. **This is NOT final**._
