@@ -116,7 +116,6 @@ Today we pivot to focus on making that server useful: adding tools and data, con
 
 [hetero-slides]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/heterogeneous-compute/slides.html
 [hetero-exercise]:    https://training.galaxyproject.org/training-material/topics/admin/tutorials/heterogeneous-compute/tutorial.html
-[interactive-tools]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/interactive-tools/tutorial.html
 [bioblend-slides]:     https://training.galaxyproject.org/training-material/topics/dev/tutorials/bioblend-api/slides.html
 [monitoring-slides]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/monitoring/slides.html
 [monitoring-exercise]: https://training.galaxyproject.org/training-material/topics/admin/tutorials/monitoring/tutorial.html
@@ -134,9 +133,11 @@ TBD :)
 | **Time** | **Topic**                                             | **Slides**                  | **Exercises**                            | **Instructor** |
 | -------- | ---------                                             | ---------                   | -------------                            | -----------    |
 | 09:00    | Welcome and questions                                 |                             |                                          |                |
-| 09:15    | Interactive Tools                                     |                             | [Exercise][interactive-tools]            | Na             |
+| 09:15    | Interactive Tools                                     | [Slides][interactive-tools-slides] | [Exercise][interactive-tools]            | Na             |
 | 17:00    | Wrap up and close                                     |                             |                                          |                |
 
+[interactive-tools-slides]: https://training.galaxyproject.org/training-material/topics/admin/tutorials/interactive-tools/slides.html#1
+[interactive-tools]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/interactive-tools/tutorial.html
 
 ### Friday
 **6th March**
