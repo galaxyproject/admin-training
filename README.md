@@ -38,20 +38,21 @@ This day covers getting a Galaxy server setup with Ansible, a server you will de
 
 **2nd March**
 
-| **Time** | **Topic**                                  | **Slides**                                                                            | **Exercises**                | **Instructor** |
-| -------- | ---------                                  | ---------                                                                             | -----------                  | -----------    |
-| 08:30    | Registration                               |                                                                                       |                              |                |
-| 09:00    | Welcome and introduction                   | [Welcome][welcome-slides]                                                             |                              | All            |
-| 09:20    | Deployment and platform options            | [Deployment][deployment-slides]                                                       |                              | M              |
-| 09:40    | Intro to Ansible                           | [Ansible][ansible-slides]                                                             | [Exercise][ansible-exercise] | Ni             |
-| 10:30    | Break (coffee & snacks)                    |                                                                                       |                              |                |
-| 10:45    | Galaxy Server Part 1: Basic Install        | [Galaxy Install][ansible-galaxy-slides], [Database][db-slides], [uWSGI][uwsgi-slides] | [Exercise][ansible-galaxy]   | H, M, Na       |
-| 13:00    | Lunch (catered)                            |                                                                                       |                              |                |
-| 14:00    | Galaxy Server Part 2: Towards Production   | [systemd][systemd-slides]                                                             |                              | H, Na          |
-| 15:30    | Break (coffee & snacks)                    |                                                                                       |                              |                |
-| 15:50    | Galaxy Server Part 3: Advanced Install     | [Production][production-slides]                                                       |                              | H, Na          |
-| 16:45    | Close Day 1                                |                                                                                       |                              |                |
-| 17:00    | Guided tour of the Supercomputing facility |                                                                                       |                              |                |
+| **Time** | **Topic**                                  | **Slides**                                                                            | **Exercises**                  | **Instructor** |
+| -------- | ---------                                  | ---------                                                                             | -----------                    | -----------    |
+| 08:30    | Registration                               |                                                                                       |                                |                |
+| 09:00    | Welcome and introduction                   | [Welcome][welcome-slides]                                                             |                                | All            |
+| 09:20    | Deployment and platform options            | [Deployment][deployment-slides]                                                       |                                | M              |
+| 09:40    | Intro to Ansible                           | [Ansible][ansible-slides]                                                             | [Exercise][ansible-exercise]   | Ni             |
+| 10:30    | Break (coffee & snacks)                    |                                                                                       |                                |                |
+| 10:45    | Galaxy Server Part 1: Basic Install        | [Galaxy Install][ansible-galaxy-slides], [Database][db-slides], [uWSGI][uwsgi-slides] | [Exercise][ansible-galaxy]     | H, M, Na       |
+| 12:00    | Lunch (catered)                            |                                                                                       |                                |                |
+| 13:00    | Galaxy Server Part 2: Towards Production   | [systemd][systemd-slides]                                                             |                                | H, Na          |
+| 14:00    | Break (coffee & snacks)                    |                                                                                       |                                |                |
+| 15:15    | Galaxy Server Part 3: Advanced Install     | [Production][production-slides]                                                       |                                | H, Na          |
+| 15:45    | Galaxy Tool Shed                           | [Toolshed][toolshed-slides]                                                           |                                | M              |
+| 16:15    | Ephemeris                                  | [Ephemeris][ephemeris-slides]                                                         | [Exercise][ephemeris-exercise] | Ni             |
+| 17:00    | Guided tour of the Supercomputing facility |                                                                                       |                                |                |
 
 [welcome-slides]:        https://galaxyproject.github.io/dagobah-training/2020-barcelona/00-intro/intro.html
 [deployment-slides]:     https://training.galaxyproject.org/training-material/topics/admin/slides/introduction.html
@@ -63,6 +64,9 @@ This day covers getting a Galaxy server setup with Ansible, a server you will de
 [production-slides]:     https://training.galaxyproject.org/training-material/topics/admin/tutorials/production/slides.html
 [uwsgi-slides]:          https://training.galaxyproject.org/training-material/topics/admin/tutorials/uwsgi/slides.html
 [systemd-slides]:        https://training.galaxyproject.org/training-material/topics/admin/tutorials/systemd-supervisor/slides.html
+[toolshed-slides]:       https://training.galaxyproject.org/training-material/topics/admin/tutorials/toolshed/slides.html
+[ephemeris-slides]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/tool-management/slides.html
+[ephemeris-exercise]:    https://training.galaxyproject.org/training-material/topics/admin/tutorials/tool-management/tutorial.html
 
 
 ### Tuesday
@@ -70,62 +74,36 @@ This day covers getting a Galaxy server setup with Ansible, a server you will de
 
 Today we pivot to focus on making that server useful: adding tools and data, configuring quotas and authentication
 
-| **Time** | **Topic**                 | **Slides**                    | **Exercises**                                    | **Instructor** |
-| -------- | ---------                 | ---------                     | -----------                                      | -----------    |
-| 09:00    | Welcome and questions     |                               |                                                  |                |
-| 09:15    | Galaxy Tool Shed          | [Toolshed][toolshed-slides]   |                                                  | M              |
-| 10:00    | Ephemeris                 | [Ephemeris][ephemeris-slides] | [Exercise][ephemeris-exercise]                   | Ni             |
-| 10:30    | Break (coffee & snacks)   |                               |                                                  |                |
-| 10:50    | Ephemeris: Continued      |                               |                                                  |                |
-| 12:00    | Users, Groups, and Quotas | [Slides][users-groups-slides] |                                                  | S              |
-| 13:00    | Lunch (catered)           |                               |                                                  |                |
-| 14:00    | Reference Data            | [Slides][ref-genomes-slides]  | [CVMFS Exercise][cvmfs-exercise], [Data Manager Exercise][data-manager-exercise] | Na             |
-| 16:15    | External authentication   | [Slides][pam-slides]          | [Upstream Auth Exercise][upstream-auth-exercise] | H              |
-| 17:00    | Close Day 2               |                               |                                                  |                |
+| **Time** | **Topic**                                   | **Slides**                    | **Exercises**                                                                    | **Instructor** |
+| -------- | ---------                                   | ---------                     | -----------                                                                      | -----------    |
+| 09:00    | Welcome and questions                       |                               |                                                                                  |                |
+| 09:15    | Ephemeris: Continued                        |                               |                                                                                  |                |
+| 10:30    | Break (coffee & snacks)                     |                               |                                                                                  |                |
+| 10:45    | Users, Groups, and Quotas (+Demo)           | [Slides][users-groups-slides] |                                                                                  | S              |
+| 12:30    | External authentication                     | [Slides][pam-slides]          | [Upstream Auth Exercise][upstream-auth-exercise]                                 | H              |
+| 13:00    | Lunch (catered)                             |                               |                                                                                  |                |
+| 14:00    | Reference Data                              | [Slides][ref-genomes-slides]  | [CVMFS Exercise][cvmfs-exercise], [Data Manager Exercise][data-manager-exercise] | Na             |
+| 15:00    | Exploring the Galaxy job configuration file | [Slides][cluster-slides]      | [`job_conf.xml`][job-conf-xml]                                                   | M              |
+| 15:45    | Connecting Galaxy to a compute cluster      | [Slides][cluster-slides]      | [Exercise][cluster-exercise]                                                     | Na             |
+| 17:00    | Close Day 2                                 |                               |                                                                                  |                |
 
-[toolshed-slides]:          https://training.galaxyproject.org/training-material/topics/admin/tutorials/toolshed/slides.html
-[ephemeris-slides]:         https://training.galaxyproject.org/training-material/topics/admin/tutorials/tool-management/slides.html
-[ephemeris-exercise]:       https://training.galaxyproject.org/training-material/topics/admin/tutorials/tool-management/tutorial.html
 [users-groups-slides]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/users-groups-quotas/slides.html
 [ref-genomes-slides]:       https://training.galaxyproject.org/training-material/topics/admin/tutorials/cvmfs/slides.html
 [cvmfs-exercise]:           https://training.galaxyproject.org/training-material/topics/admin/tutorials/cvmfs/tutorial.html
 [data-manager-exercise]:    https://gist.github.com/natefoo/fba6465c1eccb95ffdcfa67d78d8d6b4
 [pam-slides]:               https://training.galaxyproject.org/training-material/topics/admin/tutorials/external-auth/slides.html
 [upstream-auth-exercise]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/external-auth/tutorial.html
+[job-conf-xml]:             https://github.com/galaxyproject/galaxy/blob/dev/lib/galaxy/config/sample/job_conf.xml.sample_advanced
+[cluster-slides]:           https://training.galaxyproject.org/training-material/topics/admin/tutorials/connect-to-compute-cluster/slides.html
+[cluster-exercise]:         https://training.galaxyproject.org/training-material/topics/admin/tutorials/connect-to-compute-cluster/tutorial.html
 
 ### Wednesday
 **4th March**
 
-Now that your server has some [bells and whistles](https://en.wiktionary.org/wiki/bells_and_whistles), let's connect it to a compute cluster, and learn about the job configuration file.
-
-| **Time** | **Topic**                                   | **Slides**               | **Exercises**                  | **Instructor** |
-| -------- | ---------                                   | ---------                | -----------                    | -----------    |
-| 09:00    | Welcome and questions                       |                          |                                |                |
-| 09:15    | Exploring the Galaxy job configuration file | [Slides][cluster-slides] | [`job_conf.xml`][job-conf-xml] | M              |
-| 09:45    | Connecting Galaxy to a compute cluster      | [Slides][cluster-slides] | [Exercise][cluster-exercise]   | Na             |
-| 10:20    | Break (coffee & snacks)                     |                          |                                |                |
-| 10:40    | Compute cluster (continued)                 |                          |                                |                |
-| 12:00    | Compute Resources: Continued                |                          |                                | Na             |
-| 13:00    | Lunch                                       |                          |                                |                |
-| 15:15    | Break (coffee & snacks)                     |                          |                                |                |
-| 15:35    | Pulsar                                      | [Slides][hetero-slides]  | [Exercise][hetero-exercise]    | H              |
-| 17:00    | Close day 3                                 |                          |                                |                |
-
-[job-conf-xml]:       https://github.com/galaxyproject/galaxy/blob/dev/lib/galaxy/config/sample/job_conf.xml.sample_advanced
-[cluster-slides]:     https://training.galaxyproject.org/training-material/topics/admin/tutorials/connect-to-compute-cluster/slides.html
-[cluster-exercise]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/connect-to-compute-cluster/tutorial.html
-[hetero-slides]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/heterogeneous-compute/slides.html
-[hetero-exercise]:    https://training.galaxyproject.org/training-material/topics/admin/tutorials/heterogeneous-compute/tutorial.html
-
-### Thursday
-**5th March**
-
-Today is a bit of a [grab-bag](https://en.wiktionary.org/wiki/grab_bag), we'll cover stuff interactive tools, BioBlend (galaxy API library), and then go back to admin focused issues of monitoring.
-
 | **Time** | **Topic**                                             | **Slides**                  | **Exercises**                            | **Instructor** |
-| -------- | ---------                                             | ---------                   | -------------                            | -----------    |
+| -------- | ---------                                             | ---------                   | -----------                              | -----------    |
 | 09:00    | Welcome and questions                                 |                             |                                          |                |
-| 09:15    | Interactive Tools                                     |                             | [Exercise][interactive-tools]            | Na             |
+| 09:15    | Pulsar                                                | [Slides][hetero-slides]     | [Exercise][hetero-exercise]              | H              |
 | 10:45    | Break (coffee & snacks)                               |                             |                                          |                |
 | 11:00    | BioBlend                                              | [Slides][bioblend-slides]   |                                          | Ni             |
 | 12:00    | Storage management                                    | [Slides][storage-slides]    | [Exercise][storage-exercise]             | Ni             |
@@ -134,8 +112,10 @@ Today is a bit of a [grab-bag](https://en.wiktionary.org/wiki/grab_bag), we'll c
 | 14:35    | Monitoring Part 2: Telegraf, InfluxDB, Grafana        | [Slides][monitoring-slides] | [Telegraf Exercise][monitoring-exercise] | S              |
 | 15:15    | Break (coffee & snacks)                               |                             |                                          |                |
 | 15:30    | Monitoring Part 3: DB queries, command line & scripts | [Slides][gxadmin-slides]    | [gxadmin][gxadmin-exercise]              | H              |
-| 17:00    | Wrap up and close                                     |                             |                                          |                |
+| 17:00    | Close day 3                                           |                             |                                          |                |
 
+[hetero-slides]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/heterogeneous-compute/slides.html
+[hetero-exercise]:    https://training.galaxyproject.org/training-material/topics/admin/tutorials/heterogeneous-compute/tutorial.html
 [interactive-tools]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/interactive-tools/tutorial.html
 [bioblend-slides]:     https://training.galaxyproject.org/training-material/topics/dev/tutorials/bioblend-api/slides.html
 [monitoring-slides]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/monitoring/slides.html
@@ -145,6 +125,18 @@ Today is a bit of a [grab-bag](https://en.wiktionary.org/wiki/grab_bag), we'll c
 [gxadmin-exercise]:    https://training.galaxyproject.org/training-material/topics/admin/tutorials/gxadmin/tutorial.html
 [gxadmin-slides]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/gxadmin/slides.html
 [monitoring-reports]:  https://training.galaxyproject.org/training-material/topics/admin/tutorials/reports/tutorial.html
+
+### Thursday
+**5th March**
+
+TBD :)
+
+| **Time** | **Topic**                                             | **Slides**                  | **Exercises**                            | **Instructor** |
+| -------- | ---------                                             | ---------                   | -------------                            | -----------    |
+| 09:00    | Welcome and questions                                 |                             |                                          |                |
+| 09:15    | Interactive Tools                                     |                             | [Exercise][interactive-tools]            | Na             |
+| 17:00    | Wrap up and close                                     |                             |                                          |                |
+
 
 ### Friday
 **6th March**
