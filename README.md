@@ -119,14 +119,14 @@ Now that your server has some [bells and whistles](https://en.wiktionary.org/wik
 ### Thursday
 **5th March**
 
-Today is a bit of a [grab-bag](https://en.wiktionary.org/wiki/grab_bag), we'll cover stuff interactive tools, bioblend (galaxy API library), and then go back to admin focused issues of monitoring.
+Today is a bit of a [grab-bag](https://en.wiktionary.org/wiki/grab_bag), we'll cover stuff interactive tools, BioBlend (galaxy API library), and then go back to admin focused issues of monitoring.
 
 | **Time** | **Topic**                                             | **Slides**                  | **Exercises**                            | **Instructor** |
 | -------- | ---------                                             | ---------                   | -------------                            | -----------    |
 | 09:00    | Welcome and questions                                 |                             |                                          |                |
 | 09:15    | Interactive Tools                                     |                             | [Exercise][interactive-tools]            | Na             |
 | 10:45    | Break (coffee & snacks)                               |                             |                                          |                |
-| 11:00    | Bioblend                                              | [Slides][bioblend-slides]   |                                          | Ni             |
+| 11:00    | BioBlend                                              | [Slides][bioblend-slides]   |                                          | Ni             |
 | 12:00    | Storage management                                    | [Slides][storage-slides]    | [Exercise][storage-exercise]             | Ni             |
 | 13:00    | Lunch (catered)                                       |                             |                                          |                |
 | 14:00    | Monitoring Part 1: Reports                            |                             | [Reports Exercise][monitoring-reports]   | M              |
