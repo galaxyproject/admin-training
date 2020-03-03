@@ -106,7 +106,7 @@ Today we pivot to focus on making that server useful: adding tools and data, con
 | 09:15    | Pulsar                                                | [Slides][hetero-slides]     | [Exercise][hetero-exercise]              | H              |
 | 10:45    | Break (coffee & snacks)                               |                             |                                          |                |
 | 11:00    | BioBlend                                              | [Slides][bioblend-slides]   |                                          | Ni             |
-| 12:00    | Storage management                                    | [Slides][storage-slides]    | [Exercise][storage-exercise]             | Ni             |
+| 12:00    | Storage management                                    | [Slides][storage-slides]    | [Exercise][storage-exercise]             | H              |
 | 13:00    | Lunch (catered)                                       |                             |                                          |                |
 | 14:00    | Monitoring Part 1: Reports                            |                             | [Reports Exercise][monitoring-reports]   | M              |
 | 14:35    | Monitoring Part 2: Telegraf, InfluxDB, Grafana        | [Slides][monitoring-slides] | [Telegraf Exercise][monitoring-exercise] | S              |
@@ -128,39 +128,31 @@ Today we pivot to focus on making that server useful: adding tools and data, con
 ### Thursday
 **5th March**
 
-TBD :)
+| **Time** | **Topic**               | **Slides**                         | **Exercises**                    | **Instructor** |
+| -------- | ---------               | ---------                          | -------------                    | -----------    |
+| 09:00    | Welcome and questions   |                                    |                                  |                |
+| 09:15    | Restoring Galaxy        | [Slides][restoring-galaxy]         |                                  | Na             |
+| 09:45    | TIaaS                   |                                    | [TIaaS Exercise][tiaas-exercise] | H & S          |
+| 10:45    | Break (coffee & snacks) |                                    |                                  |                |
+| 11:00    | Recording Job Metrics   |                                    | [Exercise][job-metrics-exercise] | Na             |
+| 11:30    | Interactive Tools       | [Slides][interactive-tools-slides] | [Exercise][interactive-tools]    | Na             |
+| 13:00    | Lunch                   |                                    |                                  |                |
+| 14:00    | Dev vs Prod             |                                    | (Conversation)                   | Na             |
+| 14:15    | Jenkins & Automation    |                                    | [Exercise][jenkins-exercise]     | H              |
+| 15:00    | Advanced Customisation  | [Slides][advanced-customisation]   |                                  | H              |
+| 15:45    | Break (coffee & snacks) |                                    |                                  |                |
+| 16:00    | Tool Development        | [Slides][tool-dev-slides]          | [Exercise][planemo]              | Ni             |
+| 17:00    | Wrap up and close       |                                    |                                  |                |
 
-| **Time** | **Topic**                                             | **Slides**                  | **Exercises**                            | **Instructor** |
-| -------- | ---------                                             | ---------                   | -------------                            | -----------    |
-| 09:00    | Welcome and questions                                 |                             |                                          |                |
-| 09:15    | Interactive Tools                                     | [Slides][interactive-tools-slides] | [Exercise][interactive-tools]            | Na             |
-| 17:00    | Wrap up and close                                     |                             |                                          |                |
 
-[interactive-tools-slides]: https://training.galaxyproject.org/training-material/topics/admin/tutorials/interactive-tools/slides.html#1
-[interactive-tools]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/interactive-tools/tutorial.html
-
-
-least admin-y at end.
-
-saskia
-- developing own training 1,5h
-
-nicola
-- conda packages   1h
-- tool development 1h
-
-nate
-- restoring galaxy 15 minutes (playbook, db backup, etc) https://training.galaxyproject.org/training-material/topics/admin/tutorials/maintenance/slides.html#10
-- recording job metrics 30 minutes
-- maintaining test/dev 15 minutes
-
-marius
-- dataset collections 45m https://training.galaxyproject.org/training-material/topics/galaxy-data-manipulation/tutorials/processing-many-samples-at-once/tutorial.html#20-using-collections
-https://training.galaxyproject.org/training-material/topics/galaxy-data-manipulation/tutorials/upload-rules/tutorial.html
-
-me
-- galaxy automation with jenkins 45 minutes
-- advanced customisation 60 minutes
+[advanced-customisation]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/advanced-galaxy-customisation/slides.html
+[jenkins-exercise]:         https://training.galaxyproject.org/training-material/topics/admin/tutorials/jenkins/tutorial.html
+[job-metrics-exercise]:     https://training.galaxyproject.org/training-material/topics/admin/tutorials/job-metrics/tutorial.html
+[restoring-galaxy]:         https://training.galaxyproject.org/training-material/topics/admin/tutorials/maintenance/slides.html
+[interactive-tools-slides]: https://training.galaxyproject.org/training-material/topics/admin/tutorials/interactive-tools/slides.html
+[interactive-tools]:        https://training.galaxyproject.org/training-material/topics/admin/tutorials/interactive-tools/tutorial.html
+[tool-dev-slides]:          https://training.galaxyproject.org/training-material/topics/dev/tutorials/tool-integration/slides.html
+[planemo]:                  https://planemo.readthedocs.io/en/latest/writing_standalone.html
 
 
 ### Friday
@@ -168,19 +160,28 @@ me
 
 The last day! We made it. Even more assorted topics
 
-| **Time**   | **Topic**                                           | **Slides**                       | **Exercises**                    | **Instructor** |
-| --------   | ---------                                           | ---------                        | -----------                      | -----------    |
-| 09:00      | Welcome and questions                               |                                  |                                  |                |
-| 09:15      | What's new in Galaxy? (2019 edition)                | [Slides][whats-new]              |                                  | M              |
-| 10:15      | Break (coffee & snacks)                             |                                  |                                  |                |
-| 10:30      | TIaaS                                               |                                  | [TIaaS Exercise][tiaas-exercise] | H & S          |
-| 11:30      | Upgrading Galaxy                                    | [Slides][upgrade]                |                                  | Ni             |
-| 12:00      | When things go wrong: Galaxy Server Troubleshooting | [Slides][troubleshooting-slides] |                                  | Na             |
-| 13:00      | Lunch (catered)                                     |                                  |                                  |                |
-| Spare Time | Extra Topics                                        |                                  |                                  |                |
-| 15:00      | Wrap up and close                                   |                                  |                                  |                |
+| **Time** | **Topic**                                           | **Slides**                       | **Exercises**                                                    | **Instructor** |
+| -------- | ---------                                           | ---------                        | -----------                                                      | -----------    |
+| 09:00    | Welcome and questions                               |                                  |                                                                  |                |
+| 09:15    | Conda Packages                                      | [Slides][conda-slides]           | [Exercise][conda-exercise]                                       | Ni             |
+| 10:15    | Break (coffee & snacks)                             |                                  |                                                                  |                |
+| 10:30    | Developing your own Training                        |                                  | [Setting up][training-jekyll], [Exercise][training-new-tutorial] | S              |
+| 11:30    | Upgrading Galaxy                                    | [Slides][upgrade]                |                                                                  | Ni             |
+| 12:00    | When things go wrong: Galaxy Server Troubleshooting | [Slides][troubleshooting-slides] |                                                                  | Na             |
+| 12:45    | What's new in Galaxy                                | [Slides][whats-new]              |                                                                  | M              |
+| 13:00    | Lunch (catered)                                     |                                  |                                                                  |                |
+| 14:00    | Dataset collections                                 |                                  | [DCs][dc] [Rule based][rb]                                       | M              |
+| 15:00    | Wrap up and close                                   |                                  |                                                                  |                |
 
-[whats-new]:              http://bit.ly/gxwhatsnew2019
+
+[whats-new]:
+[conda-slides]:           https://training.galaxyproject.org/training-material/topics/dev/tutorials/conda/slides.html
+[conda-exercise]:         https://training.galaxyproject.org/training-material/topics/dev/tutorials/conda/tutorial.html
+[training-jekyll]:        https://training.galaxyproject.org/training-material/topics/contributing/tutorials/running-jekyll/tutorial.html
+[training-new-tutorial]:  https://training.galaxyproject.org/training-material/topics/contributing/tutorials/create-new-tutorial/tutorial.html
+[dc]:                     https://training.galaxyproject.org/training-material/topics/galaxy-data-manipulation/tutorials/processing-many-samples-at-once/tutorial.html#20-using-collections
+[rb]:                     https://training.galaxyproject.org/training-material/topics/galaxy-data-manipulation/tutorials/upload-rules/tutorial.html
+[whats-new]:              https://bit.ly/gxwhatsnew2019
 [updating-slides]:        https://training.galaxyproject.org/training-material/topics/admin/tutorials/upgrading/slides.html#1
 [troubleshooting-slides]: https://training.galaxyproject.org/training-material/topics/admin/tutorials/troubleshooting/slides.html
 [telegraf-exercise]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/monitoring/tutorial.html
