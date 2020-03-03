@@ -171,7 +171,7 @@ The last day! We made it. Even more assorted topics
 | 12:45    | What's new in Galaxy                                | [Slides][whats-new]              |                                                                  | M              |
 | 13:00    | Lunch (catered)                                     |                                  |                                                                  |                |
 | 14:00    | Dataset collections                                 |                                  | [DCs][dc] [Rule based][rb]                                       | M              |
-| 15:00    | Wrap up and close                                   |                                  |                                                                  |                |
+| 15:00    | Wrap up and close and survey                        |                                  |                                                                  |                |
 
 
 [whats-new]:
