@@ -126,7 +126,7 @@ Today is a bit of a [grab-bag](https://en.wiktionary.org/wiki/grab_bag), we'll c
 | 09:00    | Welcome and questions                                 |                             |                                          |                |
 | 09:15    | Interactive Tools                                     |                             | [Exercise][interactive-tools]            | Na             |
 | 10:45    | Break (coffee & snacks)                               |                             |                                          |                |
-| 11:00    | Bioblend                                              |                             |                                          | Ni             |
+| 11:00    | Bioblend                                              | [Slides][bioblend-slides]   |                                          | Ni             |
 | 12:00    | Storage management                                    | [Slides][storage-slides]    | [Exercise][storage-exercise]             | Ni             |
 | 13:00    | Lunch (catered)                                       |                             |                                          |                |
 | 14:00    | Monitoring Part 1: Reports                            |                             | [Reports Exercise][monitoring-reports]   | M              |
@@ -136,6 +136,7 @@ Today is a bit of a [grab-bag](https://en.wiktionary.org/wiki/grab_bag), we'll c
 | 17:00    | Wrap up and close                                     |                             |                                          |                |
 
 [interactive-tools]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/interactive-tools/tutorial.html
+[bioblend-slides]:     https://training.galaxyproject.org/training-material/topics/dev/tutorials/bioblend-api/slides.html
 [monitoring-slides]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/monitoring/slides.html
 [monitoring-exercise]: https://training.galaxyproject.org/training-material/topics/admin/tutorials/monitoring/tutorial.html
 [storage-slides]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/object-store/slides.html
