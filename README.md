@@ -139,6 +139,30 @@ TBD :)
 [interactive-tools-slides]: https://training.galaxyproject.org/training-material/topics/admin/tutorials/interactive-tools/slides.html#1
 [interactive-tools]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/interactive-tools/tutorial.html
 
+
+least admin-y at end.
+
+saskia
+- developing own training 1,5h
+
+nicola
+- conda packages   1h
+- tool development 1h
+
+nate
+- restoring galaxy 15 minutes (playbook, db backup, etc) https://training.galaxyproject.org/training-material/topics/admin/tutorials/maintenance/slides.html#10
+- recording job metrics 30 minutes
+- maintaining test/dev 15 minutes
+
+marius
+- dataset collections 45m https://training.galaxyproject.org/training-material/topics/galaxy-data-manipulation/tutorials/processing-many-samples-at-once/tutorial.html#20-using-collections
+https://training.galaxyproject.org/training-material/topics/galaxy-data-manipulation/tutorials/upload-rules/tutorial.html
+
+me
+- galaxy automation with jenkins 45 minutes
+- advanced customisation 60 minutes
+
+
 ### Friday
 **6th March**
 
