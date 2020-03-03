@@ -90,7 +90,7 @@ Today we pivot to focus on making that server useful: adding tools and data, con
 [ref-genomes-slides]:       https://training.galaxyproject.org/training-material/topics/admin/tutorials/cvmfs/slides.html
 [cvmfs-exercise]:           https://training.galaxyproject.org/training-material/topics/admin/tutorials/cvmfs/tutorial.html
 [pam-slides]:               https://training.galaxyproject.org/training-material/topics/admin/tutorials/external-auth/slides.html
-[upstream-auth-exercise]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/upstream-auth/tutorial.html
+[upstream-auth-exercise]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/external-auth/tutorial.html
 
 ### Wednesday
 **4th March**
