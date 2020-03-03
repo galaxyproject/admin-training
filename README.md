@@ -109,10 +109,10 @@ Today we pivot to focus on making that server useful: adding tools and data, con
 | 12:00    | Storage management                                    | [Slides][storage-slides]    | [Exercise][storage-exercise]             | H              |
 | 13:00    | Lunch (catered)                                       |                             |                                          |                |
 | 14:00    | Monitoring Part 1: Reports                            |                             | [Reports Exercise][monitoring-reports]   | M              |
-| 14:35    | Monitoring Part 2: Telegraf, InfluxDB, Grafana        | [Slides][monitoring-slides] | [Telegraf Exercise][monitoring-exercise] | S              |
-| 15:15    | Break (coffee & snacks)                               |                             |                                          |                |
-| 15:30    | Monitoring Part 3: DB queries, command line & scripts | [Slides][gxadmin-slides]    | [gxadmin][gxadmin-exercise]              | H              |
-| 17:00    | Close day 3                                           |                             |                                          |                |
+| 14:30    | Monitoring Part2: DB queries, command line & scripts | [Slides][gxadmin-slides]    | [gxadmin][gxadmin-exercise]              | H              |
+| 15:00    | Break (coffee & snacks)                               |                             |                                          |                |
+| 15:15    | Monitoring Part 3: Telegraf, InfluxDB, Grafana        | [Slides][monitoring-slides] | [Telegraf Exercise][monitoring-exercise] | S              |
+ 17:00    | Close day 3                                           |                             |                                          |                |
 
 [hetero-slides]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/heterogeneous-compute/slides.html
 [hetero-exercise]:    https://training.galaxyproject.org/training-material/topics/admin/tutorials/heterogeneous-compute/tutorial.html
