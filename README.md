@@ -79,7 +79,7 @@ Today we pivot to focus on making that server useful: adding tools and data, con
 | 10:50    | Ephemeris: Continued      |                               |                                                  |                |
 | 12:00    | Users, Groups, and Quotas | [Slides][users-groups-slides] |                                                  | S              |
 | 13:00    | Lunch (catered)           |                               |                                                  |                |
-| 14:00    | Reference Data            | [Slides][ref-genomes-slides]  | [CVMFS Exercise][cvmfs-exercise] [Data Manager Exercise][data-manager-exercise] | Na             |
+| 14:00    | Reference Data            | [Slides][ref-genomes-slides]  | [CVMFS Exercise][cvmfs-exercise], [Data Manager Exercise][data-manager-exercise] | Na             |
 | 16:15    | External authentication   | [Slides][pam-slides]          | [Upstream Auth Exercise][upstream-auth-exercise] | H              |
 | 17:00    | Close Day 2               |                               |                                                  |                |
 
