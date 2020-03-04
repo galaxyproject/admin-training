@@ -117,7 +117,7 @@ Today we pivot to focus on making that server useful: adding tools and data, con
 [hetero-slides]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/heterogeneous-compute/slides.html
 [hetero-exercise]:    https://training.galaxyproject.org/training-material/topics/admin/tutorials/heterogeneous-compute/tutorial.html
 [bioblend-slides]:     https://training.galaxyproject.org/training-material/topics/dev/tutorials/bioblend-api/slides.html
-[bioblend-exercise]:   https://nbviewer.jupyter.org/github/nsoranzo/bioblend-tutorial/blob/master/bioblend_histories.ipynb
+[bioblend-exercise]:   https://mybinder.org/v2/gh/nsoranzo/bioblend-tutorial/master?filepath=bioblend_histories.ipynb
 [monitoring-slides]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/monitoring/slides.html
 [monitoring-exercise]: https://training.galaxyproject.org/training-material/topics/admin/tutorials/monitoring/tutorial.html
 [storage-slides]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/object-store/slides.html
