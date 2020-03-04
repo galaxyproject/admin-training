@@ -106,7 +106,7 @@ Today we pivot to focus on making that server useful: adding tools and data, con
 | 09:15    | Pulsar                                                | [Slides][hetero-slides]     | [Exercise][hetero-exercise]              | H              |
 | 10:45    | Break (coffee & snacks)                               |                             |                                          |                |
 | 11:00    | BioBlend                                              | [Slides][bioblend-slides]   | [Exercise][bioblend-exercise]             | Ni             |
-| 12:00    | Storage management                                    | [Slides][storage-slides]    | [Exercise][storage-exercise]             | H              |
+| 12:00    | Storage management                                    |                             | [Exercise][storage-exercise]             | H              |
 | 13:00    | Lunch (catered)                                       |                             |                                          |                |
 | 14:00    | Monitoring Part 1: Reports                            |                             | [Reports Exercise][monitoring-reports]   | M              |
 | 14:30    | Monitoring Part2: DB queries, command line & scripts | [Slides][gxadmin-slides]    | [gxadmin][gxadmin-exercise]              | H              |
@@ -120,7 +120,6 @@ Today we pivot to focus on making that server useful: adding tools and data, con
 [bioblend-exercise]:   https://mybinder.org/v2/gh/nsoranzo/bioblend-tutorial/master?filepath=bioblend_histories.ipynb
 [monitoring-slides]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/monitoring/slides.html
 [monitoring-exercise]: https://training.galaxyproject.org/training-material/topics/admin/tutorials/monitoring/tutorial.html
-[storage-slides]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/object-store/slides.html
 [storage-exercise]:    https://training.galaxyproject.org/training-material/topics/admin/tutorials/object-store/tutorial.html
 [gxadmin-exercise]:    https://training.galaxyproject.org/training-material/topics/admin/tutorials/gxadmin/tutorial.html
 [gxadmin-slides]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/gxadmin/slides.html
