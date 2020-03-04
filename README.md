@@ -105,7 +105,7 @@ Today we pivot to focus on making that server useful: adding tools and data, con
 | 09:00    | Welcome and questions                                 |                             |                                          |                |
 | 09:15    | Pulsar                                                | [Slides][hetero-slides]     | [Exercise][hetero-exercise]              | H              |
 | 10:45    | Break (coffee & snacks)                               |                             |                                          |                |
-| 11:00    | BioBlend                                              | [Slides][bioblend-slides]   |                                          | Ni             |
+| 11:00    | BioBlend                                              | [Slides][bioblend-slides]   | [Exercise][bioblend-exercise]             | Ni             |
 | 12:00    | Storage management                                    | [Slides][storage-slides]    | [Exercise][storage-exercise]             | H              |
 | 13:00    | Lunch (catered)                                       |                             |                                          |                |
 | 14:00    | Monitoring Part 1: Reports                            |                             | [Reports Exercise][monitoring-reports]   | M              |
@@ -117,6 +117,7 @@ Today we pivot to focus on making that server useful: adding tools and data, con
 [hetero-slides]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/heterogeneous-compute/slides.html
 [hetero-exercise]:    https://training.galaxyproject.org/training-material/topics/admin/tutorials/heterogeneous-compute/tutorial.html
 [bioblend-slides]:     https://training.galaxyproject.org/training-material/topics/dev/tutorials/bioblend-api/slides.html
+[bioblend-exercise]:   https://nbviewer.jupyter.org/github/nsoranzo/bioblend-tutorial/blob/master/bioblend_histories.ipynb
 [monitoring-slides]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/monitoring/slides.html
 [monitoring-exercise]: https://training.galaxyproject.org/training-material/topics/admin/tutorials/monitoring/tutorial.html
 [storage-slides]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/object-store/slides.html
