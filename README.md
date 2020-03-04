@@ -103,15 +103,17 @@ Today we pivot to focus on making that server useful: adding tools and data, con
 | **Time** | **Topic**                                             | **Slides**                  | **Exercises**                            | **Instructor** |
 | -------- | ---------                                             | ---------                   | -----------                              | -----------    |
 | 09:00    | Welcome and questions                                 |                             |                                          |                |
-| 09:15    | Pulsar                                                | [Slides][hetero-slides]     | [Exercise][hetero-exercise]              | H              |
+| 09:15    | Connecting Galaxy to a compute cluster (continued)    | [Slides][cluster-slides]      | [Exercise][cluster-exercise]                                                     | Na             |
 | 10:45    | Break (coffee & snacks)                               |                             |                                          |                |
 | 11:00    | BioBlend                                              | [Slides][bioblend-slides]   | [Exercise][bioblend-exercise]             | Ni             |
-| 12:00    | Storage management                                    |                             | [Exercise][storage-exercise]             | H              |
+| 12:00    | Pulsar                                                | [Slides][hetero-slides]     | [Exercise][hetero-exercise]              | H              |
 | 13:00    | Lunch (catered)                                       |                             |                                          |                |
-| 14:00    | Monitoring Part 1: Reports                            |                             | [Reports Exercise][monitoring-reports]   | M              |
-| 14:30    | Monitoring Part2: DB queries, command line & scripts | [Slides][gxadmin-slides]    | [gxadmin][gxadmin-exercise]              | H              |
-| 15:00    | Break (coffee & snacks)                               |                             |                                          |                |
-| 15:15    | Monitoring Part 3: Telegraf, InfluxDB, Grafana        | [Slides][monitoring-slides] | [Telegraf Exercise][monitoring-exercise] | S              |
+| 14:00    | Storage management                                    |                             | [Exercise][storage-exercise]             | H              |
+| 15:00    | Monitoring Part 1: Reports                            |                             | [Reports Exercise][monitoring-reports]   | M              |
+         |
+| 15:30    | Break (coffee & snacks)                               |                             |                                          |                |
+| 15:45    | Monitoring Part2: DB queries, command line & scripts | [Slides][gxadmin-slides]    | [gxadmin][gxadmin-exercise]              | H     
+| 16:15    | Monitoring Part 3: Telegraf, InfluxDB, Grafana        | [Slides][monitoring-slides] | [Telegraf Exercise][monitoring-exercise] | S              |
  17:00    | Close day 3                                           |                             |                                          |                |
 
 [hetero-slides]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/heterogeneous-compute/slides.html
@@ -131,8 +133,9 @@ Today we pivot to focus on making that server useful: adding tools and data, con
 | **Time** | **Topic**               | **Slides**                         | **Exercises**                    | **Instructor** |
 | -------- | ---------               | ---------                          | -------------                    | -----------    |
 | 09:00    | Welcome and questions   |                                    |                                  |                |
-| 09:15    | Maintenance, Backup and Restore | [Slides][maintenance]      |                                  | Na             |
-| 09:45    | TIaaS                   |                                    | [TIaaS Exercise][tiaas-exercise] | H & S          |
+| 09:15    | Monitoring Part 3: Telegraf, InfluxDB, Grafana (continued)   | [Slides][monitoring-slides] | [Telegraf Exercise][monitoring-exercise] | S              |
+| 09:45    | Maintenance, Backup and Restore | [Slides][maintenance]      |                                  | Na             |
+| 10:15    | TIaaS                   |                                    | [TIaaS Exercise][tiaas-exercise] | H & S          |
 | 10:45    | Break (coffee & snacks) |                                    |                                  |                |
 | 11:00    | Recording Job Metrics   |                                    | [Exercise][job-metrics-exercise] | Na             |
 | 11:30    | Interactive Tools       | [Slides][interactive-tools-slides] | [Exercise][interactive-tools]    | Na             |
