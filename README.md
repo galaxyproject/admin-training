@@ -131,7 +131,7 @@ Today we pivot to focus on making that server useful: adding tools and data, con
 | **Time** | **Topic**               | **Slides**                         | **Exercises**                    | **Instructor** |
 | -------- | ---------               | ---------                          | -------------                    | -----------    |
 | 09:00    | Welcome and questions   |                                    |                                  |                |
-| 09:15    | Restoring Galaxy        | [Slides][restoring-galaxy]         |                                  | Na             |
+| 09:15    | Maintenance, Backup and Restore | [Slides][maintenance]      |                                  | Na             |
 | 09:45    | TIaaS                   |                                    | [TIaaS Exercise][tiaas-exercise] | H & S          |
 | 10:45    | Break (coffee & snacks) |                                    |                                  |                |
 | 11:00    | Recording Job Metrics   |                                    | [Exercise][job-metrics-exercise] | Na             |
@@ -148,7 +148,7 @@ Today we pivot to focus on making that server useful: adding tools and data, con
 [advanced-customisation]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/advanced-galaxy-customisation/slides.html
 [jenkins-exercise]:         https://training.galaxyproject.org/training-material/topics/admin/tutorials/jenkins/tutorial.html
 [job-metrics-exercise]:     https://training.galaxyproject.org/training-material/topics/admin/tutorials/job-metrics/tutorial.html
-[restoring-galaxy]:         https://training.galaxyproject.org/training-material/topics/admin/tutorials/maintenance/slides.html
+[maintenance]:         https://training.galaxyproject.org/training-material/topics/admin/tutorials/maintenance/slides.html
 [interactive-tools-slides]: https://training.galaxyproject.org/training-material/topics/admin/tutorials/interactive-tools/slides.html
 [interactive-tools]:        https://training.galaxyproject.org/training-material/topics/admin/tutorials/interactive-tools/tutorial.html
 [tool-dev-slides]:          https://training.galaxyproject.org/training-material/topics/dev/tutorials/tool-integration/slides.html
