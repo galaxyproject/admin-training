@@ -110,7 +110,6 @@ Today we pivot to focus on making that server useful: adding tools and data, con
 | 13:00    | Lunch (catered)                                       |                             |                                          |                |
 | 14:00    | Storage management                                    |                             | [Exercise][storage-exercise]             | H              |
 | 15:00    | Monitoring Part 1: Reports                            |                             | [Reports Exercise][monitoring-reports]   | M              |
-         |
 | 15:30    | Break (coffee & snacks)                               |                             |                                          |                |
 | 15:45    | Monitoring Part2: DB queries, command line & scripts | [Slides][gxadmin-slides]    | [gxadmin][gxadmin-exercise]              | H     
 | 16:15    | Monitoring Part 3: Telegraf, InfluxDB, Grafana        | [Slides][monitoring-slides] | [Telegraf Exercise][monitoring-exercise] | S              |
