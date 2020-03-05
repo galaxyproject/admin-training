@@ -1,5 +1,0 @@
----
-
-- hosts: galaxyservers
-  roles:
-  - geerlingguy.docker
