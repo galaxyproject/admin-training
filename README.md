@@ -166,14 +166,15 @@ The last day! We made it. Even more assorted topics
 | **Time** | **Topic**                                           | **Slides**                       | **Exercises**                                                    | **Instructor** |
 | -------- | ---------                                           | ---------                        | -----------                                                      | -----------    |
 | 09:00    | Welcome and questions                               |                                  |                                                                  |                |
-| 09:15    | Conda Packages                                      | [Slides][conda-slides]           | [Exercise][conda-exercise]                                       | Ni             |
-| 10:15    | Break (coffee & snacks)                             |                                  |                                                                  |                |
-| 10:30    | Developing your own Training                        |                                  | [Setting up][training-jekyll], [Exercise][training-new-tutorial] | S              |
-| 11:30    | Upgrading Galaxy                                    | [Slides][upgrade]                |                                                                  | Ni             |
-| 12:00    | When things go wrong: Galaxy Server Troubleshooting | [Slides][troubleshooting-slides] |                                                                  | Na             |
-| 12:45    | What's new in Galaxy                                | [Slides][whats-new]              |                                                                  | M              |
+| 09:15    | Tool Development  (continued)       | [Slides][tool-dev-slides]          | [Exercise][planemo]              | Ni             |                                    | Ni             |
+| 10:30    | Break (coffee & snacks)                             |                                  |                                                                  |                |
+| 10:45    | Conda Packages                                      | [Slides][conda-slides]           | [Exercise][conda-exercise]   
+| 11:30    | Developing your own Training                        |                                  | [Setting up][training-jekyll], [Exercise][training-new-tutorial] | S              |
+| 12:00    | Upgrading Galaxy                                    | [Slides][upgrade]                |                                                                  | Ni             |
+| 12:30    | When things go wrong: Galaxy Server Troubleshooting | [Slides][troubleshooting-slides] |                                                                  | Na             |
 | 13:00    | Lunch (catered)                                     |                                  |                                                                  |                |
-| 14:00    | Dataset collections                                 |                                  | [DCs][dc], [Rule based][rb]                                       | M              |
+| 14:00    | What's new in Galaxy                                | [Slides][whats-new]              |                                                                  | M              |
+| 14:30    | Dataset collections                                 |                                  | [DCs][dc], [Rule based][rb]                                       | M              |
 | 15:00    | Wrap up and close and survey                        |                                  |                                                                  |                |
 
 
