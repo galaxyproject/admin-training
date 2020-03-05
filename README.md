@@ -111,7 +111,7 @@ Today we pivot to focus on making that server useful: adding tools and data, con
 | 14:00    | Storage management                                    |                             | [Exercise][storage-exercise]             | H              |
 | 15:00    | Monitoring Part 1: Reports                            |                             | [Reports Exercise][monitoring-reports]   | M              |
 | 15:30    | Break (coffee & snacks)                               |                             |                                          |                |
-| 15:45    | Monitoring Part2: DB queries, command line & scripts | [Slides][gxadmin-slides]    | [gxadmin][gxadmin-exercise]              | H     
+| 15:45    | Monitoring Part2: DB queries, command line & scripts | [Slides][gxadmin-slides]    | [gxadmin][gxadmin-exercise]              | H
 | 16:15    | Monitoring Part 3: Telegraf, InfluxDB, Grafana        | [Slides][monitoring-slides] | [Telegraf Exercise][monitoring-exercise] | S              |
  17:00    | Close day 3                                           |                             |                                          |                |
 
@@ -160,22 +160,20 @@ Today we pivot to focus on making that server useful: adding tools and data, con
 ### Friday
 **6th March**
 
-The last day! We made it. Today we have some additional topics, some of which are not admin related. Please feel free to leave at any point in the day and go enjoy Barcelona if the topics are maybe a bit less interesting for you. 
+The last day! We made it. Today we have some additional topics, some of which are not admin related. Please feel free to leave at any point in the day and go enjoy Barcelona if the topics are maybe a bit less interesting for you.
 
 | **Time** | **Topic**                                           | **Slides**                       | **Exercises**                                                    | **Instructor** |
 | -------- | ---------                                           | ---------                        | -----------                                                      | -----------    |
 | 09:00    | Welcome and questions                               |                                  |                                                                  |                |
 | 09:15    | Upgrading Galaxy                                    | [Slides][upgrade]                |                                                                  | Ni             |
 | 09:30    | When things go wrong: Galaxy Server Troubleshooting | [Slides][troubleshooting-slides] |                                                                  | Na             |
-| 10:15    | What's new in Galaxy                                | [Slides][whats-new]              |                                                                  | M        |
-| 10:45    | Break (coffee & snacks)                             |                                  |                                                                  
-|                |
-| 11:00    | Tool Development        | [Slides][tool-dev-slides]          | [Exercise][planemo]              | Ni             |      
-| 12:00    | Conda Packages                                      | [Slides][conda-slides]           | [Exercise][conda-exercise]   | Ni |
+| 10:15    | What's new in Galaxy                                | [Slides][whats-new]              |                                                                  | M              |
+| 10:45    | Break (coffee & snacks)                             |                                  |                                                                  |                |
+| 11:00    | Tool Development                                    | [Slides][tool-dev-slides]        | [Exercise][planemo]                                              | Ni             |
+| 12:00    | Conda Packages                                      | [Slides][conda-slides]           | [Exercise][conda-exercise]                                       | Ni             |
 | 13:00    | Lunch (catered)                                     |                                  |                                                                  |                |
-| 14:00    | Dataset collections                                 |                                  | [DCs][dc], [Rule based][rb]                                       | M              |
-| 14:30    | Developing your own Training                        |                                  | [Setting up][training-
-jekyll], [Exercise][training-new-tutorial] | S              |
+| 14:00    | Dataset collections                                 |                                  | [DCs][dc], [Rule based][rb]                                      | M              |
+| 14:30    | Developing your own Training                        |                                  | [Setting up][training-jekyll], [Exercise][training-new-tutorial] | S              |
 | 15:00    | Wrap up and close and survey                        |                                  |                                                                  |                |
 
 [whats-new]:               https://docs.google.com/presentation/d/1LP6BFRc5yxnc5JAkQDlxDN7guPvQPftIsHkNlqQwr-w/edit?usp=sharing
