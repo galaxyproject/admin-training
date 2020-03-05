@@ -160,24 +160,26 @@ Today we pivot to focus on making that server useful: adding tools and data, con
 ### Friday
 **6th March**
 
-The last day! We made it. Even more assorted topics
+The last day! We made it. Today we have some additional topics, some of which are not admin related. Please feel free to leave at any point in the day and go enjoy Barcelona if the topics are maybe a bit less interesting for you. 
 
 | **Time** | **Topic**                                           | **Slides**                       | **Exercises**                                                    | **Instructor** |
 | -------- | ---------                                           | ---------                        | -----------                                                      | -----------    |
 | 09:00    | Welcome and questions                               |                                  |                                                                  |                |
-| 09:15    | Tool Development        | [Slides][tool-dev-slides]          | [Exercise][planemo]              | Ni             |                                    | Ni             |
-| 10:45    | Break (coffee & snacks)                             |                                  |                                                                  |                |
-| 11:00    | Conda Packages                                      | [Slides][conda-slides]           | [Exercise][conda-exercise]   | Ni |
-| 11:30    | Developing your own Training                        |                                  | [Setting up][training-jekyll], [Exercise][training-new-tutorial] | S              |
-| 12:00    | Upgrading Galaxy                                    | [Slides][upgrade]                |                                                                  | Ni             |
-| 12:30    | When things go wrong: Galaxy Server Troubleshooting | [Slides][troubleshooting-slides] |                                                                  | Na             |
+| 09:15    | Upgrading Galaxy                                    | [Slides][upgrade]                |                                                                  | Ni             |
+| 09:30    | When things go wrong: Galaxy Server Troubleshooting | [Slides][troubleshooting-slides] |                                                                  | Na             |
+| 10:15    | What's new in Galaxy                                | [Slides][whats-new]              |                                                                  | M              |                              | Ni             |
+| 10:45    | Break (coffee & snacks)                             |                                  |                                                                  
+|                |
+| 11:00    | Tool Development        | [Slides][tool-dev-slides]          | [Exercise][planemo]              | Ni             |      
+| 12:00    | Conda Packages                                      | [Slides][conda-slides]           | [Exercise][conda-exercise]   | Ni |
 | 13:00    | Lunch (catered)                                     |                                  |                                                                  |                |
-| 14:00    | What's new in Galaxy                                | [Slides][whats-new]              |                                                                  | M              |
-| 14:30    | Dataset collections                                 |                                  | [DCs][dc], [Rule based][rb]                                       | M              |
+| 14:00    | Dataset collections                                 |                                  | [DCs][dc], [Rule based][rb]                                       | M              |
+| 14:30    | Developing your own Training                        |                                  | [Setting up][training-
+jekyll], [Exercise][training-new-tutorial] | S              |
 | 15:00    | Wrap up and close and survey                        |                                  |                                                                  |                |
 
 
-[whats-new]:              https://docs.google.com/presentation/d/1LP6BFRc5yxnc5JAkQDlxDN7guPvQPftIsHkNlqQwr-w/edit#slide=id.p
+[whats-new]:               https://docs.google.com/presentation/d/1LP6BFRc5yxnc5JAkQDlxDN7guPvQPftIsHkNlqQwr-w/edit?usp=sharing
 [conda-slides]:           https://training.galaxyproject.org/training-material/topics/dev/tutorials/conda/slides.html
 [conda-exercise]:         https://training.galaxyproject.org/training-material/topics/dev/tutorials/conda/tutorial.html
 [training-jekyll]:        https://training.galaxyproject.org/training-material/topics/contributing/tutorials/running-jekyll/tutorial.html
