@@ -165,8 +165,7 @@ The last day! We made it. Today we have some additional topics, some of which ar
 | **Time** | **Topic**                                           | **Slides**                       | **Exercises**                                                    | **Instructor** |
 | -------- | ---------                                           | ---------                        | -----------                                                      | -----------    |
 | 09:00    | Welcome and questions                               |                                  |                                                                  |                |
-| 09:15    | Upgrading Galaxy                                    | [Slides][upgrade]                |                                                                  | Ni             |
-| 09:30    | When things go wrong: Galaxy Server Troubleshooting | [Slides][troubleshooting-slides] |                                                                  | Na             |
+| 09:15    | When things go wrong: Galaxy Server Troubleshooting | [Slides][troubleshooting-slides] |                                                                  | Na             |
 | 10:15    | What's new in Galaxy                                | [Slides][whats-new]              |                                                                  | M              |
 | 10:45    | Break (coffee & snacks)                             |                                  |                                                                  |                |
 | 11:00    | Tool Development                                    | [Slides][tool-dev-slides]        | [Exercise][planemo]                                              | Ni             |
