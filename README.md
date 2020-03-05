@@ -173,7 +173,7 @@ The last day! We made it. Even more assorted topics
 | 12:00    | When things go wrong: Galaxy Server Troubleshooting | [Slides][troubleshooting-slides] |                                                                  | Na             |
 | 12:45    | What's new in Galaxy                                | [Slides][whats-new]              |                                                                  | M              |
 | 13:00    | Lunch (catered)                                     |                                  |                                                                  |                |
-| 14:00    | Dataset collections                                 |                                  | [DCs][dc] [Rule based][rb]                                       | M              |
+| 14:00    | Dataset collections                                 |                                  | [DCs][dc], [Rule based][rb]                                       | M              |
 | 15:00    | Wrap up and close and survey                        |                                  |                                                                  |                |
 
 
