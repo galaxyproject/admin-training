@@ -167,7 +167,7 @@ The last day! We made it. Today we have some additional topics, some of which ar
 | 09:00    | Welcome and questions                               |                                  |                                                                  |                |
 | 09:15    | Upgrading Galaxy                                    | [Slides][upgrade]                |                                                                  | Ni             |
 | 09:30    | When things go wrong: Galaxy Server Troubleshooting | [Slides][troubleshooting-slides] |                                                                  | Na             |
-| 10:15    | What's new in Galaxy                                | [Slides][whats-new]              |                                                                  | M              |                              | Ni             |
+| 10:15    | What's new in Galaxy                                | [Slides][whats-new]              |                                                                  | M        |
 | 10:45    | Break (coffee & snacks)                             |                                  |                                                                  
 |                |
 | 11:00    | Tool Development        | [Slides][tool-dev-slides]          | [Exercise][planemo]              | Ni             |      
@@ -177,7 +177,6 @@ The last day! We made it. Today we have some additional topics, some of which ar
 | 14:30    | Developing your own Training                        |                                  | [Setting up][training-
 jekyll], [Exercise][training-new-tutorial] | S              |
 | 15:00    | Wrap up and close and survey                        |                                  |                                                                  |                |
-
 
 [whats-new]:               https://docs.google.com/presentation/d/1LP6BFRc5yxnc5JAkQDlxDN7guPvQPftIsHkNlqQwr-w/edit?usp=sharing
 [conda-slides]:           https://training.galaxyproject.org/training-material/topics/dev/tutorials/conda/slides.html
