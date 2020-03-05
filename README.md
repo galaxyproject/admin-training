@@ -143,8 +143,7 @@ Today we pivot to focus on making that server useful: adding tools and data, con
 | 15:00    | Dev vs Prod             |                                    | (Conversation)                   | Na             |
 | 15:30    | Break (coffee & snacks) |                                    |                                  |                |
 | 15:45    | Jenkins & Automation    |                                    | [Exercise][jenkins-exercise]     | H              |
-| 16:15    | Advanced Customisation  | [Slides][advanced-customisation]   |                                  | H              |
-| 16:30    | Tool Development        | [Slides][tool-dev-slides]          | [Exercise][planemo]              | Ni             |
+| 16:35    | Advanced Customisation  | [Slides][advanced-customisation]   |                                  | H              |
 | 17:00    | Wrap up and close       |                                    |                                  |                |
 
 
@@ -166,9 +165,9 @@ The last day! We made it. Even more assorted topics
 | **Time** | **Topic**                                           | **Slides**                       | **Exercises**                                                    | **Instructor** |
 | -------- | ---------                                           | ---------                        | -----------                                                      | -----------    |
 | 09:00    | Welcome and questions                               |                                  |                                                                  |                |
-| 09:15    | Tool Development  (continued)       | [Slides][tool-dev-slides]          | [Exercise][planemo]              | Ni             |                                    | Ni             |
-| 10:30    | Break (coffee & snacks)                             |                                  |                                                                  |                |
-| 10:45    | Conda Packages                                      | [Slides][conda-slides]           | [Exercise][conda-exercise]   | Ni |
+| 09:15    | Tool Development        | [Slides][tool-dev-slides]          | [Exercise][planemo]              | Ni             |                                    | Ni             |
+| 10:45    | Break (coffee & snacks)                             |                                  |                                                                  |                |
+| 11:00    | Conda Packages                                      | [Slides][conda-slides]           | [Exercise][conda-exercise]   | Ni |
 | 11:30    | Developing your own Training                        |                                  | [Setting up][training-jekyll], [Exercise][training-new-tutorial] | S              |
 | 12:00    | Upgrading Galaxy                                    | [Slides][upgrade]                |                                                                  | Ni             |
 | 12:30    | When things go wrong: Galaxy Server Troubleshooting | [Slides][troubleshooting-slides] |                                                                  | Na             |
