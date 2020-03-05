@@ -140,11 +140,12 @@ Today we pivot to focus on making that server useful: adding tools and data, con
 | 12:45    | Interactive Tools       | [Slides][interactive-tools-slides] | [Exercise][interactive-tools]    | Na             |
 | 13:00    | Lunch                   |                                    |                                  |                |
 | 14:00    | Interactive Tools       | [Slides][interactive-tools-slides] | [Exercise][interactive-tools]    | Na             |
-| 14:30    | Dev vs Prod             |                                    | (Conversation)                   | Na             |
-| 14:45    | Jenkins & Automation    |                                    | [Exercise][jenkins-exercise]     | H              |
-| 15:15    | Advanced Customisation  | [Slides][advanced-customisation]   |                                  | H              |
-| 15:45    | Break (coffee & snacks) |                                    |                                  |                |
-| 16:00    | Tool Development        | [Slides][tool-dev-slides]          | [Exercise][planemo]              | Ni             |
+| 15:00    | Dev vs Prod             |                                    | (Conversation)                   | Na             |
+| 15:30    | Break (coffee & snacks) |                                    |                                  |                |
+| 15:45    | Jenkins & Automation    |                                    | [Exercise][jenkins-exercise]     | H              |
+| 16:15    | Advanced Customisation  | [Slides][advanced-customisation]   |                                  | H              |
+
+| 16:30    | Tool Development        | [Slides][tool-dev-slides]          | [Exercise][planemo]              | Ni             |
 | 17:00    | Wrap up and close       |                                    |                                  |                |
 
 
