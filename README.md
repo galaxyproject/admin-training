@@ -176,7 +176,7 @@ The last day! We made it. Even more assorted topics
 | 15:00    | Wrap up and close and survey                        |                                  |                                                                  |                |
 
 
-[whats-new]:              very-very-broken
+[whats-new]:              https://docs.google.com/presentation/d/1LP6BFRc5yxnc5JAkQDlxDN7guPvQPftIsHkNlqQwr-w/edit#slide=id.p
 [conda-slides]:           https://training.galaxyproject.org/training-material/topics/dev/tutorials/conda/slides.html
 [conda-exercise]:         https://training.galaxyproject.org/training-material/topics/dev/tutorials/conda/tutorial.html
 [training-jekyll]:        https://training.galaxyproject.org/training-material/topics/contributing/tutorials/running-jekyll/tutorial.html
