@@ -136,12 +136,13 @@ Today we pivot to focus on making that server useful: adding tools and data, con
 | 10:15    | Maintenance, Backup and Restore | [Slides][maintenance]      |                                  | Na             |
 | 10:45    | Break (coffee & snacks) |                                    |                                  |                |
 | 11:00    | TIaaS                   |                                    | [TIaaS Exercise][tiaas-exercise] | H & S          |
-| 11:30    | Recording Job Metrics   |                                    | [Exercise][job-metrics-exercise] | Na             |
-| 12:00    | Interactive Tools       | [Slides][interactive-tools-slides] | [Exercise][interactive-tools]    | Na             |
+| 12:30    | Recording Job Metrics   |                                    | [Exercise][job-metrics-exercise] | Na             |
+| 12:45    | Interactive Tools       | [Slides][interactive-tools-slides] | [Exercise][interactive-tools]    | Na             |
 | 13:00    | Lunch                   |                                    |                                  |                |
-| 14:00    | Dev vs Prod             |                                    | (Conversation)                   | Na             |
-| 14:15    | Jenkins & Automation    |                                    | [Exercise][jenkins-exercise]     | H              |
-| 15:00    | Advanced Customisation  | [Slides][advanced-customisation]   |                                  | H              |
+| 14:00    | Interactive Tools       | [Slides][interactive-tools-slides] | [Exercise][interactive-tools]    | Na             |
+| 14:30    | Dev vs Prod             |                                    | (Conversation)                   | Na             |
+| 14:45    | Jenkins & Automation    |                                    | [Exercise][jenkins-exercise]     | H              |
+| 15:15    | Advanced Customisation  | [Slides][advanced-customisation]   |                                  | H              |
 | 15:45    | Break (coffee & snacks) |                                    |                                  |                |
 | 16:00    | Tool Development        | [Slides][tool-dev-slides]          | [Exercise][planemo]              | Ni             |
 | 17:00    | Wrap up and close       |                                    |                                  |                |
