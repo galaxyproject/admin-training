@@ -144,7 +144,6 @@ Today we pivot to focus on making that server useful: adding tools and data, con
 | 15:30    | Break (coffee & snacks) |                                    |                                  |                |
 | 15:45    | Jenkins & Automation    |                                    | [Exercise][jenkins-exercise]     | H              |
 | 16:15    | Advanced Customisation  | [Slides][advanced-customisation]   |                                  | H              |
-
 | 16:30    | Tool Development        | [Slides][tool-dev-slides]          | [Exercise][planemo]              | Ni             |
 | 17:00    | Wrap up and close       |                                    |                                  |                |
 
