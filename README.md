@@ -133,11 +133,11 @@ Today we pivot to focus on making that server useful: adding tools and data, con
 | -------- | ---------               | ---------                          | -------------                    | -----------    |
 | 09:00    | Welcome and questions   |                                    |                                  |                |
 | 09:15    | Monitoring Part 3: Telegraf, InfluxDB, Grafana (continued)   | [Slides][monitoring-slides] | [Telegraf Exercise][monitoring-exercise] | S              |
-| 09:45    | Maintenance, Backup and Restore | [Slides][maintenance]      |                                  | Na             |
-| 10:15    | TIaaS                   |                                    | [TIaaS Exercise][tiaas-exercise] | H & S          |
+| 10:15    | Maintenance, Backup and Restore | [Slides][maintenance]      |                                  | Na             |
 | 10:45    | Break (coffee & snacks) |                                    |                                  |                |
-| 11:00    | Recording Job Metrics   |                                    | [Exercise][job-metrics-exercise] | Na             |
-| 11:30    | Interactive Tools       | [Slides][interactive-tools-slides] | [Exercise][interactive-tools]    | Na             |
+| 11:00    | TIaaS                   |                                    | [TIaaS Exercise][tiaas-exercise] | H & S          |
+| 11:30    | Recording Job Metrics   |                                    | [Exercise][job-metrics-exercise] | Na             |
+| 12:00    | Interactive Tools       | [Slides][interactive-tools-slides] | [Exercise][interactive-tools]    | Na             |
 | 13:00    | Lunch                   |                                    |                                  |                |
 | 14:00    | Dev vs Prod             |                                    | (Conversation)                   | Na             |
 | 14:15    | Jenkins & Automation    |                                    | [Exercise][jenkins-exercise]     | H              |
