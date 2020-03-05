@@ -168,7 +168,7 @@ The last day! We made it. Even more assorted topics
 | 09:00    | Welcome and questions                               |                                  |                                                                  |                |
 | 09:15    | Tool Development  (continued)       | [Slides][tool-dev-slides]          | [Exercise][planemo]              | Ni             |                                    | Ni             |
 | 10:30    | Break (coffee & snacks)                             |                                  |                                                                  |                |
-| 10:45    | Conda Packages                                      | [Slides][conda-slides]           | [Exercise][conda-exercise]   
+| 10:45    | Conda Packages                                      | [Slides][conda-slides]           | [Exercise][conda-exercise]   | Ni |
 | 11:30    | Developing your own Training                        |                                  | [Setting up][training-jekyll], [Exercise][training-new-tutorial] | S              |
 | 12:00    | Upgrading Galaxy                                    | [Slides][upgrade]                |                                                                  | Ni             |
 | 12:30    | When things go wrong: Galaxy Server Troubleshooting | [Slides][troubleshooting-slides] |                                                                  | Na             |
