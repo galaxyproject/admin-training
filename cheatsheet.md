@@ -107,7 +107,7 @@ $ sudo -iu galaxy
 - [Starforge: Galaxy dependencies](https://github.com/galaxyproject/starforge)
 - [Planemo: Galaxy tool development swiss knife](https://github.com/galaxyproject/planemo)
 - [Planemo Machine: Monitor and build docker images for dependencies](https://github.com/galaxyproject/planemo-machine)
-- [Bioblend: Galaxy API clietn library](https://github.com/galaxyproject/bioblend)
+- [Bioblend: Galaxy API client library](https://github.com/galaxyproject/bioblend)
 - [ansible-galaxy: Install Galaxy with Ansible](https://github.com/galaxyproject/ansible-galaxy)
 
 ## Other Resources
