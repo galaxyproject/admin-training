@@ -3,7 +3,7 @@ subject: Welcome to Galaxy Admin Training!
 ---
 
 Instructors: I suggest you send a welcome email with technical instructions, gitter, etc.
-Just a template. Consider updating the dagobah-training link with one to the right branch. Also replace GCC mention with some other admin event or next GCC.
+Just a template. Consider updating the admin-training link with one to the right branch. Also replace GCC mention with some other admin event or next GCC.
 
 ---
 
@@ -32,7 +32,7 @@ Everyone is expected to abide by the Code of Conduct (CoC) that you signed befor
 
 **Training Materials**
 
-Everything we teach during the week will be found on the [Galaxy Training Materials](https://galaxyproject.github.io/training-material/topics/admin/) website. If you are worried about the teaching pace of the upcoming week, feel free to read through these materials ahead of time and familiarise yourself with the concepts. Our [preliminary schedule](https://github.com/galaxyproject/dagobah-training/) is available, but subject to change at any moment.
+Everything we teach during the week will be found on the [Galaxy Training Materials](https://galaxyproject.github.io/training-material/topics/admin/) website. If you are worried about the teaching pace of the upcoming week, feel free to read through these materials ahead of time and familiarise yourself with the concepts. Our [preliminary schedule](https://github.com/galaxyproject/admin-training/) is available, but subject to change at any moment.
 
 **Community**
 

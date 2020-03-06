@@ -124,7 +124,7 @@ Galaxy documentation and admin training materials are spread out. We are working
     - Older<sup>[2]</sup> and non-Galaxy-software (e.g. Cloud, CVMFS) documentation
 * https://training.galaxyproject.org/
     - Galaxy Training, includes some admin training materials
-* https://github.com/galaxyproject/dagobah-training/tree/2020-barcelona/
+* https://github.com/galaxyproject/admin-training/tree/2020-barcelona/
     - Training materials for *this course*, static after the end of the course
 
 .footnote[<sup>[2]</sup> Previously in the Galaxy Wiki, Galaxy-software-specific docs are migrating to docs.galaxyproject.org]

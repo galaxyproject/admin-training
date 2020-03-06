@@ -1,7 +1,7 @@
 subject: Galaxy Admin Training Followup
 ---
 
-Just a template. Consider updating the dagobah-training link with one to the right branch. Also replace GCC mention with some other admin event or next GCC.
+Just a template. Consider updating the admin-training link with one to the right branch. Also replace GCC mention with some other admin event or next GCC.
 
 ---
 
@@ -11,7 +11,7 @@ Now that you're all home safely, we wanted to get in touch for a couple of diffe
 
 **Training Materials**
 
-Everything you were taught in the past few days can be found in the [dagobah-training](https://github.com/galaxyproject/dagobah-training/) repository, which mostly points to the [admin section](https://galaxyproject.github.io/training-material/topics/admin/) of the training materials site.
+Everything you were taught in the past few days can be found in the [admin-training](https://github.com/galaxyproject/admin-training/) repository, which mostly points to the [admin section](https://galaxyproject.github.io/training-material/topics/admin/) of the training materials site.
 
 For those of you who also need to do some Galaxy development, there is a [section of training materials](https://galaxyproject.github.io/training-material/topics/dev/) for those topics as well. There you can learn to integrate webhooks and tours, and learn about advanced tool development.
 

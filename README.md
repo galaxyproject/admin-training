@@ -54,7 +54,7 @@ This day covers getting a Galaxy server setup with Ansible, a server you will de
 | 16:15    | Ephemeris                                  | [Ephemeris][ephemeris-slides]                                                         | [Exercise][ephemeris-exercise] | Ni             |
 | 17:00    | Guided tour of the Supercomputing facility |                                                                                       |                                |                |
 
-[welcome-slides]:        https://galaxyproject.github.io/dagobah-training/2020-barcelona/00-intro/intro.html
+[welcome-slides]:        https://galaxyproject.github.io/admin-training/2020-barcelona/00-intro/intro.html
 [deployment-slides]:     https://training.galaxyproject.org/training-material/topics/admin/slides/introduction.html
 [ansible-slides]:        https://training.galaxyproject.org/training-material/topics/admin/tutorials/ansible/slides.html
 [ansible-exercise]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/ansible/tutorial.html#your-first-playbook-and-first-role
