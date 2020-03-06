@@ -55,7 +55,6 @@ SSH   | [Secure SHell, how you've been connecting to the server all week](https:
 - [CloudLaunch](https://github.com/galaxyproject/cloudlaunch): A web application to make it wasy to launch images on a cloud, drives, etc.
  - https://launch.usegalaxy.org
 - [Pulsar](github.com/galaxyproject/pulsar): Distributed job execution engine for Galaxy.
-- [mako](http://www.makotemplates.org/): Template library
 - [Nagios](https://www.nagios.org/): General purpose tool for monitoring systems and services
 - [Running Galaxy in a production environment](https://wiki.galaxyproject.org/Admin/Config/Performance/ProductionServer)
 - [systemd](https://www.freedesktop.org/wiki/Software/systemd/): Linux system and service manager
@@ -68,41 +67,16 @@ SSH   | [Secure SHell, how you've been connecting to the server all week](https:
  - [Exercise: Running Galaxy Jobs with Slurm](https://galaxyproject.github.io/training-material/topics/admin/tutorials/connect-to-compute-cluster/tutorial.html)
 
 
-
-## Other Tutorials
-
-- [Exercise: Tool Management](https://galaxyproject.github.io/training-material/topics/admin/tutorials/tool-management/tutorial.html)
-- [Exercise: Reference Genomes](https://galaxyproject.github.io/training-material/topics/admin/tutorials/cvmfs/tutorial.html)
-- [Exercise: Using Heterogeneous Compute Resources](https://galaxyproject.github.io/training-material/topics/admin/tutorials/heterogeneous-compute/tutorial.html)
-
-
 ## Ansible Playbooks
 
-https://galaxy.ansible.com/galaxyprojectdotorg/
+https://galaxy.ansible.com/galaxyproject/
 https://galaxy.ansible.com/natefoo/postgresql_objects/
-
-## Addresses and Locations
-
-```
-http://localhost:8080/api/version
-http://localhost:8080/
-http://127.0.0.1:8080
-http://localhost:8080/datasets/f2db41e1fa331b3e/display?to_ext=txt
-```
-
-- default SQLite `sqlite:///./database/universe.sqlite?isolation_level=IMMEDIATE`
-- Networked postgresql `postgres://<name>:<password>@localhost:5432/galaxy`
-- Socket postgresql `postgresql:///galaxy?host=/var/run/postgresql`
-
 
 ## Important Files
 
 Configuration File                         | Purpose
 ---                                        | ---
 `config/galaxy.yml`                        | Main Galaxy config file
-`/etc/supervisord/config.d/galaxy.ini`     | Main supervisord configuration file
-`server/static/welcome.html.sample`        | page displayed at the Galaxy home screen
-`server/run.sh`                            | script that starts Galaxy
 `tool_sheds_conf.xml`                      | list of available tool sheds
 `tool_conf.xml.sample`                     | tools to be added to side panel in Galaxy
 `mutable-config/integrated_tool_panel.xml` | manages tool panel appearance
@@ -115,20 +89,14 @@ Configuration File                         | Purpose
 ## Handy Commands
 
 ```
-# Notify supervisor of changes
-$ sudo supervisorctl update
+# check process status
+$ sudo systemctl status galaxy
 
-# check supervisor process status
-$ sudo supervisorctl status
-
-# restart all processes
-$ sudo supervisorctl restart all
-
-# restart Galaxy process only
-$ sudo supervisorctl restart gx:galaxy
+# restart Galaxy
+$ sudo systemctl restart galaxy
 
 # switch to Galaxy user
-$ sudo -H -u galaxy -s
+$ sudo -iu galaxy
 ```
 
 ## Repositories
@@ -151,15 +119,10 @@ $ sudo -H -u galaxy -s
 - [Documentation for Galaxy](https://docs.galaxyproject.org/en/master/index.html)
 - [Tool installation automation](https://github.com/galaxyproject/ephemeris)
 - [Galaxy Admin Wiki](https://wiki.galaxyproject.org/Admin/)
-- [Biostars Galaxy](https://biostar.usegalaxy.org/)
 - [Wiki: Support](https://wiki.galaxyproject.org/Support)
 - [IRC: #galaxyproject on Freenode](https://wiki.galaxyproject.org/Support/IRC)
 - [galaxy-dev Mailing list](http://dev.list.galaxyproject.org/)
 - [Contribution guidelines](http://bit.ly/gx-CONTRIBUTING-md)
 
-IRC: irc.freenode.net#galaxyproject
-
 GitHub: github.com/galaxyproject
-
 Twitter:: #usegalaxy, @galaxyproject
-
