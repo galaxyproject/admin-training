@@ -167,7 +167,7 @@ The last day! We made it. Today we have some additional topics, some of which ar
 | 09:00    | Welcome and questions                               |                                  |                                                                  |                |
 | 09:15    | When things go wrong: Galaxy Server Troubleshooting | [Slides][troubleshooting-slides] |                                                                  | Na             |
 | 10:00    | What's new in Galaxy                                | [Slides][whats-new]              |                                                                  | M              |
-| 10:30    | Python 2 to Python 3!                               |                                  |                                                                  | Ni             |
+| 10:30    | Python 2 to Python 3!                               | [Docs][py2to3]                   |                                                                  | Ni             |
 | 10:45    | Break (coffee & snacks & [survey][survey])          |                                  |                                                                  |                |
 | 11:00    | Tool Development                                    | [Slides][tool-dev-slides]        | [Exercise][planemo]                                              | Ni             |
 | 12:00    | Conda Packages                                      | [Slides][conda-slides]           | [Exercise][conda-exercise]                                       | Ni             |
@@ -178,6 +178,7 @@ The last day! We made it. Today we have some additional topics, some of which ar
 
 [survey]:                 https://bsc3.typeform.com/to/X5bqFf
 [whats-new]:              https://docs.google.com/presentation/d/1LP6BFRc5yxnc5JAkQDlxDN7guPvQPftIsHkNlqQwr-w/edit?usp=sharing
+[py2to3]:                 https://docs.galaxyproject.org/en/master/admin/python.html
 [conda-slides]:           https://training.galaxyproject.org/training-material/topics/dev/tutorials/conda/slides.html
 [conda-exercise]:         https://training.galaxyproject.org/training-material/topics/dev/tutorials/conda/tutorial.html
 [training-jekyll]:        https://training.galaxyproject.org/training-material/topics/contributing/tutorials/running-jekyll/tutorial.html
