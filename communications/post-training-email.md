@@ -9,6 +9,11 @@ Hi Galaxy Admins!
 
 Now that you're all home safely, we wanted to get in touch for a couple of different topics, but mostly reminders of ways you can stay in touch with the Galaxy Admin community and continue to get any help you need with Galaxy administration
 
+**Survey**
+
+If you didn't fill it out during the training [when we asked, do it now!!](https://bsc3.typeform.com/to/X5bqFf) We need this data to improve the admin training, and most importantly we need to know if we taught you things that were useful whenever the 6-month post-training survey comes out, so please help us :)
+
+
 **Training Materials**
 
 Everything you were taught in the past few days can be found in the [Galaxy Admin Training](https://github.com/galaxyproject/admin-training/) repository, which mostly points to the [admin section](https://training.galaxyproject.org/training-material/topics/admin/) of the Galaxy Training Materials.
