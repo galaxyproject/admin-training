@@ -23,7 +23,10 @@ function gat_overview() { # [Admin] Overview of reports in last minutes (default
 
 cmd="$1"; shift;
 if [[ "$cmd" == "" ]]; then
-	grep '^function' $0 | sed 's/().*#/\t/'
+	echo "Galaxy Admin Training (gat) tool:"
+	echo
+	grep '^function' $0 | sed "s/().*#/\t/;s/function gat_/  $0 /g;"
+	echo
 else
 	gat_$cmd $@
 fi
