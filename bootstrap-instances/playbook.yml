@@ -120,6 +120,14 @@
     - name: Enable byobu for users (forcing them into a Screen/TMUX session on login via ssh)
       command: sudo -i -u ubuntu byobu-launcher-install
 
+    - name: Add gat-cli command for users
+      copy:
+        src: gat-cli
+        dest: /usr/bin/gat-cli
+        owner: root
+        group: root
+        mode: 0755
+
   handlers:
     - name: reboot
       reboot:

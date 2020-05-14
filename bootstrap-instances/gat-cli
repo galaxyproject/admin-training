@@ -1,0 +1,29 @@
+#!/bin/bash
+HOST=gat-0.training.galaxyproject.eu
+#HOST=localhost
+PORT=6789
+
+function gat_help(){ # [User] submit help notice
+	echo "$(hostname) help" > /dev/tcp/$HOST/$PORT
+}
+
+function gat_done(){ # [User] submit done notice
+	echo "$(hostname) done" > /dev/tcp/$HOST/$PORT
+}
+
+function gat_listen(){ # [Admin] setup listening
+	nc -l -p $PORT -k | ts '%s' > /tmp/training &
+}
+
+function gat_overview() { # [Admin] Overview of reports in last minutes (default=5)
+	minutes=${1:-5}
+	seconds=$((minutes * 60))
+	tac /tmp/training | awk -v now=$(date +%s) '(now - $1 < '$seconds'){print $2" "$3}' | awk -F' ' '!_[$1]++'
+}
+
+cmd="$1"; shift;
+if [[ "$cmd" == "" ]]; then
+	grep '^function' $0 | sed 's/().*#/\t/'
+else
+	gat_$cmd $@
+fi
