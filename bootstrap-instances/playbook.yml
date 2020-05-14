@@ -76,6 +76,8 @@
           - jq
           - zlib1g-dev
           - tree
+          - byobu
+          - screen
         state: latest
 
     - name: Ensure python2 is purged
@@ -114,6 +116,9 @@
 
     - name: Update CA certificates
       command: update-ca-certificates
+
+    - name: Enable byobu for users (forcing them into a Screen/TMUX session on login via ssh)
+      command: sudo -i -u ubuntu byobu-launcher-install
 
   handlers:
     - name: reboot
