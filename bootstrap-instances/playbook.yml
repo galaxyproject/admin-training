@@ -4,21 +4,33 @@
   hosts: all
   gather_facts: false
   pre_tasks:
-    - name: Bootstrap Python3 for Ansible
+    - name: Bootstrap Python3 for Ansible (Debian)
       raw: bash -c "test -e /usr/bin/python3 || (apt -qqy update && apt install -qqy python3)"
       register: output
       changed_when: output.stdout != ""
+      when: ansible_user == "ubuntu"
 
+    - name: Bootstrap Python3 for Ansible (RedHat)
+      raw: bash -c "test -e /usr/bin/python3 || (yum install -y python3)"
+      register: output
+      changed_when: output.stdout != ""
+      when: ansible_user == "centos"
 
 - name: Configure workshop VMs
   hosts: workshop-instances
   tasks:
+    # Required for the copy task for some reason.
+    - name: Install libselinux-python3 for CentOS7
+      # Intentional
+      command: yum install -yq rpm-python libselinux-python # this is on py2 because reasons.
+      when: ansible_os_family == "RedHat" and ansible_distribution_major_version == "7"
+
     - name: Copy ssh key to training machines
       copy:
         src: id_rsa
-        dest: /home/ubuntu/.ssh/id_rsa
-        owner: ubuntu
-        group: ubuntu
+        dest: "/home/{{ ansible_user }}/.ssh/id_rsa"
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
         mode: '0600'
 
 - name: Configure pulsar VMs
@@ -26,7 +38,7 @@
   tasks:
     - name: Set authorized key on pulsar machine
       authorized_key:
-        user: ubuntu
+        user: "{{ ansible_user }}"
         state: present
         key: "{{ lookup('file', 'id_rsa.pub') }}"
 
@@ -38,11 +50,19 @@
       apt:
         update_cache: yes
         cache_valid_time: 900
+      when: ansible_os_family == "Debian"
 
-    - name: Upgrade packages
+    - name: Upgrade packages (Debian/Ubuntu)
       apt:
         upgrade: yes
         autoremove: yes
+      when: ansible_os_family == "Debian"
+      notify:
+        - reboot
+
+    - name: Upgrade packages (RedHat/CentOS)
+      command: yum upgrade -y
+      when: ansible_os_family == "RedHat"
       notify:
         - reboot
 
@@ -55,7 +75,7 @@
 
     - name: Restart sshd for config changes
       service:
-        name: ssh
+        name: sshd
         state: restarted
       when: __ssh_config_change is changed
 
@@ -65,26 +85,59 @@
           - acl
           - sudo
           - make
-          - build-essential
           - git
           - nano
           - vim
-          - vim-pathogen
           - emacs
-          - virtualenv
           - python3-pip
-          - jq
-          - zlib1g-dev
           - tree
-          - byobu
-          - screen
         state: latest
 
-    - name: Ensure python2 is purged
+    - name: Install Ubuntu specific
       package:
         name:
-          - python
-        state: absent
+          - virtualenv
+          - build-essential
+          - vim-pathogen
+          - zlib1g-dev
+          - byobu
+          - screen
+          - jq
+        state: latest
+      when: ansible_os_family == "Debian"
+
+    - name: Install RHEL build-essential equiv
+      command: yum groupinstall -y -q 'Development Tools'
+      when: ansible_os_family == "RedHat"
+
+    - name: Install RHEL specific
+      package:
+        name:
+          - python-virtualenv # centos7 only?
+          - python-devel
+          - zlib-devel
+          #- vim-pathogen
+          #- byobu
+        state: latest
+      when: ansible_os_family == "RedHat" and ansible_distribution_major_version == "7"
+
+    - name: Install RHEL specific
+      package:
+        name:
+          - python3-devel
+          - python3-virtualenv # centos8 only
+          - zlib-devel
+          #- vim-pathogen
+          #- byobu
+        state: latest
+      when: ansible_os_family == "RedHat" and ansible_distribution_major_version == "8"
+
+    #- name: Ensure python2 is purged
+      #package:
+        #name:
+          #- python
+        #state: absent
+        #when: ansible_os_family != "RedHat"
 
     #- name: Enable pathogen for all users
     #  command: vim-addons -w install pathogen
@@ -96,11 +149,13 @@
             set paste
         dest: "/etc/vim/vimrc.local"
         mode: 0644
+      when: ansible_os_family == "Debian"
 
     - name: Install pearofducks/ansible-vim for all users
       git:
         repo: https://github.com/pearofducks/ansible-vim
         dest: /etc/vim/bundle/ansible-vim
+      when: ansible_os_family == "Debian"
 
     - name: Install pip packages
       pip:
@@ -118,7 +173,8 @@
       command: update-ca-certificates
 
     - name: Enable byobu for users (forcing them into a Screen/TMUX session on login via ssh)
-      command: sudo -i -u ubuntu byobu-launcher-install
+      command: sudo -i -u "{{ ansible_user }}" byobu-launcher-install
+      when: ansible_os_family == "Debian"
 
     - name: Add gat-cli command for users
       copy:
