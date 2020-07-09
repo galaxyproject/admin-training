@@ -15,3 +15,6 @@ run-pulsar: id_rsa ## Run pulsar VM playbook
 
 remove-old-ssh-keys: ## Remove old SSH keys in your known hosts file
 	bash -c "for i in {0..80}; do ssh-keygen -f ~/.ssh/known_hosts -R gat-\$$i.training.galaxyproject.eu; done;"
+
+reset-passwords: ## Reset passwords for machines that don't have pre-specified ones
+	ansible-playbook reset-passwords.yml -f 20
