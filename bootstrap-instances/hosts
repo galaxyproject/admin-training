@@ -1,4 +1,9 @@
 [workshop-instances]
+[workshop-instances:children]
+workshop-oz
+workshop-eu
+
+[workshop-eu]
 gat-0.training.galaxyproject.eu
 gat-1.training.galaxyproject.eu
 gat-2.training.galaxyproject.eu
@@ -40,53 +45,47 @@ gat-37.training.galaxyproject.eu
 gat-38.training.galaxyproject.eu
 gat-39.training.galaxyproject.eu
 
-[pulsar-instances]
-115.146.92.27
-115.146.85.231
-115.146.85.164
-45.113.233.97
-115.146.85.129
-203.101.224.233
-115.146.92.70
-45.113.235.111
-115.146.92.41
-115.146.85.163
-115.146.92.11
-45.113.232.237
-115.146.92.74
-45.113.232.69
-115.146.85.85
-45.113.235.64
-45.113.235.19
-115.146.85.107
-115.146.94.116
-115.146.94.142
-115.146.94.136
-115.146.94.139
-115.146.94.130
-115.146.94.122
-115.146.94.128
-115.146.94.145
-115.146.94.100
-115.146.94.120
-115.146.94.151
-115.146.94.124
-115.146.94.143
-115.146.94.133
-115.146.94.149
-115.146.94.144
-115.146.94.121
-115.146.94.125
-115.146.94.129
-115.146.94.141
-45.113.234.6
-45.113.234.69
+[workshop-oz]
+115.146.84.35
+115.146.86.213
+115.146.84.36
+203.101.226.198
+203.101.229.77
+115.146.87.208
+130.216.217.226
+203.101.227.154
+203.101.229.186
+203.101.227.23
+203.101.227.81
+203.101.227.25
+115.146.84.122
+115.146.84.141
+115.146.86.132
+203.101.227.167
+203.101.224.175
+203.101.227.204
+115.146.87.210
+115.146.87.192
+115.146.87.145
+115.146.85.98
+203.101.229.39
+203.101.227.74
+203.101.228.98
 
-[workshop-instances:vars]
+
+[pulsar-instances]
+
+[workshop-eu:vars]
 ansible_host_key_checking = false
 ansible_user = ubuntu
 ansible_become = true
 ansible_ssh_private_key_file = ~/admintraining.key
+
+[workshop-oz:vars]
+ansible_host_key_checking = false
+ansible_user = ubuntu
+ansible_become = true
+ansible_ssh_private_key_file = ~/admintraining-oz.key
 
 [pulsar-instances:vars]
 ansible_host_key_checking = false
