@@ -78,6 +78,7 @@
           - tree
           - byobu
           - screen
+          - moreutils # for gat-cli
         state: latest
 
     - name: Ensure python2 is purged

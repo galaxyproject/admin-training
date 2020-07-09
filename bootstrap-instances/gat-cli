@@ -25,7 +25,7 @@ cmd="$1"; shift;
 if [[ "$cmd" == "" ]]; then
 	echo "Galaxy Admin Training (gat) tool:"
 	echo
-	grep '^function' $0 | sed "s/function gat_/  gat-cli /g;s/().*#/\t/;"
+	grep '^function' $0 | sed "s/function gat_/  gat /g;s/().*#/\t/;"
 	echo
 else
 	gat_$cmd $@
