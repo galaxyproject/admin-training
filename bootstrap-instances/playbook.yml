@@ -128,6 +128,18 @@
         group: root
         mode: 0755
 
+    # For some instances, they don't come pre-configured with a password, so we do that now.
+    - name: Set a password if requested
+      user:
+        name: ubuntu
+        password: "{{ lookup('password', '/dev/null length=16 chars=ascii_letters') | password_hash('sha512', 'gat2020bcc')  }}"
+      when: set_password|bool
+
+    - name: "Output password for admins"
+      debug:
+        msg: "{{ lookup('password', '/dev/null length=16 chars=ascii_letters')  }}"
+      when: set_password|bool
+
   handlers:
     - name: reboot
       reboot:
