@@ -1,8 +1,7 @@
 # Intro to Galaxy Administration @ BCC2020
 
-- [Timetable](#timetable)
+- [Join the Admin Discussion](https://gitter.im/galaxyproject/admins)
 - [Admin Training Materials](https://training.galaxyproject.org/training-material/topics/admin/)
-- [Join the Discussion](https://gitter.im/dagobah-training/Lobby)
 - [Galaxy Training Materials](https://training.galaxyproject.org/)
 
 ## Training VM instances
@@ -66,7 +65,7 @@ Galaxy training instances will be bootstrapped with [a small Ansible playbook](/
 
 * Nate Coraor
 * Helena Rasche
-* Marten Čech
+* Martin Čech
 * Nicola Soranzo
 * Sergey Golitsynskiy
 * Simon Gladman
