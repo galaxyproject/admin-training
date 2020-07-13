@@ -1,3 +1,5 @@
+![Galaxy Admin Training logo: GTN star over center of a galaxy background with the text Galaxy Admin Training](./logo.png)
+
 # Intro to Galaxy Administration @ BCC2020
 
 - [Join the Admin Discussion](https://gitter.im/galaxyproject/admins)
