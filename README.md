@@ -13,7 +13,7 @@ Galaxy training instances will be bootstrapped with [a small Ansible playbook](/
 
 ## Important Links
 
-- [Q&A!](https://docs.google.com/document/d/1mmhZRpV4XQnMB5UoPGDw0qT8I3oF2DIEYPxvPH4tDz0/edit#)
+- [https://gxy.io/gat-questions - Q&A!](https://gxy.io/gat-questions)
 - [https://gxy.io/gatmachines - VMs](https://gxy.io/gatmachines)
 
 #### Note: This workshop will be run twice. Once in the North American/European Timzones (WEST) and once in the Asian/Australian Timezones (EAST) - 12 hours apart. Please look at the timetable that suits your timezone.
