@@ -21,6 +21,12 @@
         group: ubuntu
         mode: '0600'
 
+    - name: Set authorized key on training machine
+      authorized_key:
+        user: ubuntu
+        state: present
+        key: "{{ lookup('file', 'admintraining.key.pub') }}"
+
 - name: Configure pulsar VMs
   hosts: pulsar-instances
   tasks:
