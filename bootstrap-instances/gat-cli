@@ -21,6 +21,52 @@ function gat_overview() { # [Admin] Overview of reports in last minutes (default
 	tac /tmp/training | awk -v now=$(date +%s) '(now - $1 < '$seconds'){print $2" "$3}' | awk -F' ' '!_[$1]++'
 }
 
+function gat_status() {
+	postgres_status=$(timeout 3 systemctl status postgresql 2>/dev/null | grep Active | awk '{print $2}')
+	if [[ "$postgres_status" == "" ]]; then
+		step0=✘;
+	else
+		step0=✔;
+	fi
+
+	postgres_gxydb=$(timeout 3 sudo -u postgres psql -l 2>/dev/null| grep galaxy | wc -l)
+	if (( postgres_gxydb > 0 )); then
+		step1=✔;
+	else
+		step1=✘;
+	fi
+
+	gxy_responding=$(timeout 3 curl --silent http://localhost:8080/api/version 2>/dev/null| wc -c)
+	if (( gxy_response > 0 )); then
+		step2=✔;
+	else
+		step2=✘;
+	fi
+
+	gxy_systemd=$(timeout 3 systemctl status galaxy 2>/dev/null | grep Active | awk '{print $2}')
+	if [[ "$gxy_systemd" == "" ]]; then
+		step3=✘;
+	else
+		step3=✔;
+	fi
+
+	nginx_systemd=$(timeout 3 systemctl status nginx 2>/dev/null | grep Active | awk '{print $2}')
+	if [[ "$nginx_systemd" == "" ]]; then
+		step4=✘;
+	else
+		step4=✔;
+	fi
+
+	gxy_responding2=$(timeout 3 curl --silent https://localhost:443/api/version -k 2>/dev/null| wc -c)
+	if (( gxy_responding2 > 0 )); then
+		step5=✔;
+	else
+		step5=✘;
+	fi
+
+	echo "$(hostname)| postgres $step0 $step1 galaxy(http) $step2 SysD-gxy $step3 SysD-nginx $step4 galaxy(ssl) $step5"
+}
+
 cmd="$1"; shift;
 if [[ "$cmd" == "" ]]; then
 	echo "Galaxy Admin Training (gat) tool:"
