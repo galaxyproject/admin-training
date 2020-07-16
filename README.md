@@ -30,8 +30,8 @@ Galaxy training instances will be bootstrapped with [a small Ansible playbook](/
 |                |                 |  Galaxy Server Part 2: Towards Production | [systemd][systemd-slides]                                                             |                                |
 | 14:45          | 20:45           |  Break                                    |                                                                                       |                                |
 | 15:30          | 21:30           |  Galaxy Server Part 3: Advanced Install   | [Production][production-slides]                                                       |                                |
-|                |                 |  Galaxy Tool Shed                         | [Toolshed][toolshed-slides]                                                           |                                |
-|                |                 |  Ephemeris                                | [Ephemeris][ephemeris-slides]                                                         | [Exercise][ephemeris-exercise] |
+|                |                 |  Galaxy Tool Shed (NS)                    | [Toolshed][toolshed-slides]                                                           |                                |
+|                |                 |  Ephemeris (NS)                           | [Ephemeris][ephemeris-slides]                                                         | [Exercise][ephemeris-exercise] |
 | 18:00          |                 |  Close                                    |                                                                                       |                                |
 
 ## Timetable - EAST - Saturday 18th July
@@ -69,7 +69,7 @@ Galaxy training instances will be bootstrapped with [a small Ansible playbook](/
 * Nate Coraor
 * Helena Rasche
 * Martin Čech
-* Nicola Soranzo
+* Nicola Soranzo (NS)
 * Sergey Golitsynskiy
 * Simon Gladman
 * Nicholas Rhodes
