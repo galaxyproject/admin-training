@@ -64,7 +64,7 @@ gat_status-galaxy() { # [Admin] Check status of ansible-galaxy training
 		step5=✘;
 	fi
 
-	echo "$(hostname)| postgres $step0 $step1 galaxy(http) $step2 SysD-gxy $step3 SysD-nginx $step4 galaxy(ssl) $step5"
+	echo "$(hostname)	postgres $step0 $step1 galaxy(http) $step2 SysD-gxy $step3 SysD-nginx $step4 galaxy(ssl) $step5"
 }
 
 gat_status-ansible() { # [Admin] Check status of ansible training
@@ -80,28 +80,28 @@ gat_status-ansible() { # [Admin] Check status of ansible training
 		fi
 	fi
 
-	step1status=$(grep '^server_name:' -R * | wc -l)
+	step1status=$(grep '^server_name:' -R * 2>/dev/null| wc -l)
 	if (( step1status > 0 )); then
 		step1=✔;
 	else
 		step1=✘;
 	fi
 
-	step2status=$(find -name roles -type d | wc -l)
+	step2status=$(find -name roles -type d  2>/dev/null| wc -l)
 	if (( step2status > 0 )); then
 		step2=✔;
 	else
 		step2=✘;
 	fi
 
-	step3status=$(find -name secret_group_vars -type d | wc -l)
+	step3status=$(find -name secret_group_vars -type d  2>/dev/null| wc -l)
 	if (( step3status > 0 )); then
 		step3=✔;
 	else
 		step3=✘;
 	fi
 
-	echo "$(hostname)| basic $step0 templae $step1 roles $step2 secrets $step3"
+	echo "$(hostname)	basic $step0 template $step1 roles $step2 secrets $step3"
 }
 
 cmd="$1"; shift;
