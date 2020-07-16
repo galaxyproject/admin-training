@@ -20,19 +20,19 @@ Galaxy training instances will be bootstrapped with [a small Ansible playbook](/
 
 ## Timetable - WEST - Friday 17th July
 
-| **Time** (CDT) | **Time** (CEST) |  **Topic**                                | **Slides**                                                                            | **Exercises**                  |
-| --------       | --------        |  ---------                                | ---------                                                                             | -----------                    |
-| 09:00          | 15:00           |  Welcome and Introduction                 | [Welcome][welcome-slides]                                                             |                                |
-| 09:15          | 15:15           |  Deployment and platform options          | [Deployment][deployment-slides]                                                       |                                |
-|                |                 |  Intro to Ansible                         | [Ansible][ansible-slides]                                                             | [Exercise][ansible-exercise]   |
-| 11:30          | 17:30           |  Break                                    |                                                                                       |                                |
-| 12:15          | 18:15           |  Galaxy Server Part 1: Basic Install      | [Galaxy Install][ansible-galaxy-slides], [Database][db-slides], [uWSGI][uwsgi-slides] | [Exercise][ansible-galaxy]     |
-|                |                 |  Galaxy Server Part 2: Towards Production | [systemd][systemd-slides]                                                             |                                |
-| 14:45          | 20:45           |  Break                                    |                                                                                       |                                |
-| 15:30          | 21:30           |  Galaxy Server Part 3: Advanced Install   | [Production][production-slides]                                                       |                                |
-|                |                 |  Galaxy Tool Shed (NS)                    | [Toolshed][toolshed-slides]                                                           |                                |
-|                |                 |  Ephemeris (NS)                           | [Ephemeris][ephemeris-slides]                                                         | [Exercise][ephemeris-exercise] |
-| 18:00          |                 |  Close                                    |                                                                                       |                                |
+| **Time** (CDT) | **Time** (CEST) | **Topic**                         | **Speaker** | **Slides**                                                                            | **Exercises**                  |
+| --------       | --------        | ---------                         | ----------- | ---------                                                                             | -----------                    |
+| 09:00          | 15:00           | Welcome and Introduction          | MC          | [Welcome][welcome-slides]                                                             |                                |
+| 09:15          | 15:15           | Deployment and platform options   | SG          | [Deployment][deployment-slides]                                                       |                                |
+|                |                 | Intro to Ansible                  |             | [Ansible][ansible-slides]                                                             | [Exercise][ansible-exercise]   |
+| 11:30          | 17:30           | Break                             |             |                                                                                       |                                |
+| 12:15          | 18:15           | Galaxy Part 1: Basic Install      | HR          | [Galaxy Install][ansible-galaxy-slides], [Database][db-slides], [uWSGI][uwsgi-slides] | [Exercise][ansible-galaxy]     |
+|                |                 | Galaxy Part 2: Towards Production | NC          | [systemd][systemd-slides]                                                             |                                |
+| 14:45          | 20:45           | Break                             |             |                                                                                       |                                |
+| 15:30          | 21:30           | Galaxy Part 3: Advanced Install   | NC          | [Production][production-slides]                                                       |                                |
+|                |                 | Galaxy Tool Shed                  | NS          | [Toolshed][toolshed-slides]                                                           |                                |
+|                |                 | Ephemeris                         | NS          | [Ephemeris][ephemeris-slides]                                                         | [Exercise][ephemeris-exercise] |
+| 18:00          |                 | Close                             |             |                                                                                       |                                |
 
 ## Timetable - EAST - Saturday 18th July
 
@@ -66,15 +66,15 @@ Galaxy training instances will be bootstrapped with [a small Ansible playbook](/
 
 ### Instructors
 
-* Nate Coraor
-* Helena Rasche
-* Martin Čech
+* Nate Coraor (NC)
+* Helena Rasche (HR)
+* Martin Čech (MC)
 * Nicola Soranzo (NS)
-* Sergey Golitsynskiy
-* Simon Gladman
-* Nicholas Rhodes
-* Kiran Telukunta
-* Catherine Bromhead
+* Sergey Golitsynskiy (SG)
+* Simon Gladman (SLG)
+* Nicholas Rhodes (NR)
+* Kiran Telukunta (KT)
+* Catherine Bromhead (CB)
 
 # After the Training
 
