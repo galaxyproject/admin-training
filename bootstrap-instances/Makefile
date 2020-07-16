@@ -8,10 +8,10 @@ id_rsa: ## Generate an SSH key which will be sent to the machines
 	ssh-keygen -t rsa -f id_rsa -N ''
 
 run-workshop: id_rsa ## Run workshop VM playbook
-	ansible-playbook playbook.yml -l workshop-instances -f 20
+	ansible-playbook playbook.yml -l workshop_instances -f 20
 
 run-pulsar: id_rsa ## Run pulsar VM playbook
-	ansible-playbook playbook.yml -l pulsar-instances -f 20
+	ansible-playbook playbook.yml -l pulsar_instances -f 20
 
 remove-old-ssh-keys: ## Remove old SSH keys in your known hosts file
 	bash -c "for i in {0..80}; do ssh-keygen -f ~/.ssh/known_hosts -R gat-\$$i.training.galaxyproject.eu; done;"

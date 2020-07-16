@@ -11,7 +11,7 @@
 
 
 - name: Configure workshop VMs
-  hosts: workshop-instances
+  hosts: workshop_instances
   tasks:
     - name: Copy ssh key to training machines
       copy:
@@ -28,7 +28,7 @@
         key: "{{ lookup('file', 'admintraining.key.pub') }}"
 
 - name: Configure pulsar VMs
-  hosts: pulsar-instances
+  hosts: pulsar_instances
   tasks:
     - name: Set authorized key on pulsar machine
       authorized_key:
