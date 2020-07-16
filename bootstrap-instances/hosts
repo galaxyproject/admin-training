@@ -1,32 +1,34 @@
+# Workshop instances is a super group of N pools of VMs
 [workshop_instances]
 [workshop_instances:children]
 workshop_oz
 workshop_eu
 
-[workshop_eu]
-gat-[0:39].training.galaxyproject.eu
-
+# Aussie provided machines
 [workshop_oz]
 gat-oz-[0:44].training.galaxyproject.eu
 
-[pulsar_instances]
+# EU provided machines
+[workshop_eu]
+gat-[0:39].training.galaxyproject.eu
+192.52.39.241
+192.52.37.23
+192.52.40.4
+192.52.33.191
+192.52.39.58
 
-[workshop_eu:vars]
+# Some variables apply to every member of the group
+[workshop_instances:vars]
 ansible_host_key_checking = false
 ansible_user = ubuntu
 ansible_become = true
+
+# While some need to be set per EU
+[workshop_eu:vars]
 ansible_ssh_private_key_file = ~/admintraining.key
 set_password = false
 
+# Or per Aussie VMs
 [workshop_oz:vars]
-ansible_host_key_checking = false
-ansible_user = ubuntu
-ansible_become = true
 ansible_ssh_private_key_file = ~/admintraining-oz.key
 set_password = true
-
-[pulsar_instances:vars]
-ansible_host_key_checking = false
-ansible_user = ubuntu
-ansible_become = true
-ansible_ssh_private_key_file = ~/admintraining-pulsar.key

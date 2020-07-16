@@ -11,7 +11,7 @@
 
 
 - name: Configure workshop VMs
-  hosts: workshop_instances
+  hosts: all
   tasks:
     - name: Copy ssh key to training machines
       copy:
@@ -27,19 +27,12 @@
         state: present
         key: "{{ lookup('file', 'admintraining.key.pub') }}"
 
-- name: Configure pulsar VMs
-  hosts: pulsar_instances
-  tasks:
-    - name: Set authorized key on pulsar machine
+    - name: Allow ssh to localhost
       authorized_key:
         user: ubuntu
         state: present
         key: "{{ lookup('file', 'id_rsa.pub') }}"
 
-
-- name: Pre-configure instances
-  hosts: all
-  tasks:
     - name: Update repos
       apt:
         update_cache: yes
