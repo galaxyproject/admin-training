@@ -3,25 +3,25 @@ HOST=gat-0.training.galaxyproject.eu
 #HOST=localhost
 PORT=6789
 
-function gat_help(){ # [User] submit help notice
+gat_help(){ # [User] submit help notice
 	echo "$(hostname) help" > /dev/tcp/$HOST/$PORT
 }
 
-function gat_done(){ # [User] submit done notice
+gat_done(){ # [User] submit done notice
 	echo "$(hostname) done" > /dev/tcp/$HOST/$PORT
 }
 
-function gat_listen(){ # [Admin] setup listening
+gat_listen(){ # [Admin] setup listening
 	nc -l -p $PORT -k | ts '%s' > /tmp/training &
 }
 
-function gat_overview() { # [Admin] Overview of reports in last minutes (default=5)
+gat_overview() { # [Admin] Overview of reports in last minutes (default=5)
 	minutes=${1:-5}
 	seconds=$((minutes * 60))
 	tac /tmp/training | awk -v now=$(date +%s) '(now - $1 < '$seconds'){print $2" "$3}' | awk -F' ' '!_[$1]++'
 }
 
-function gat_status() {
+gat_status-galaxy() { # [Admin] Check status of ansible-galaxy training
 	postgres_status=$(timeout 3 systemctl status postgresql 2>/dev/null | grep Active | awk '{print $2}')
 	if [[ "$postgres_status" == "" ]]; then
 		step0=✘;
@@ -67,11 +67,48 @@ function gat_status() {
 	echo "$(hostname)| postgres $step0 $step1 galaxy(http) $step2 SysD-gxy $step3 SysD-nginx $step4 galaxy(ssl) $step5"
 }
 
+gat_status-ansible() { # [Admin] Check status of ansible training
+	step0status=$(grep 'Copy a file to the' -iR . 2>/dev/null | wc -l)
+	if (( step0status > 0 )); then
+		step0=✔;
+	else
+		# Maybe they typo'd it? Test the output file.
+		if [[ -e /tmp/test.txt ]]; then
+			step0=✔;
+		else
+			step0=✘;
+		fi
+	fi
+
+	step1status=$(grep '^server_name:' -R * | wc -l)
+	if (( step1status > 0 )); then
+		step1=✔;
+	else
+		step1=✘;
+	fi
+
+	step2status=$(find -name roles -type d | wc -l)
+	if (( step2status > 0 )); then
+		step2=✔;
+	else
+		step2=✘;
+	fi
+
+	step3status=$(find -name secret_group_vars -type d | wc -l)
+	if (( step3status > 0 )); then
+		step3=✔;
+	else
+		step3=✘;
+	fi
+
+	echo "$(hostname)| basic $step0 templae $step1 roles $step2 secrets $step3"
+}
+
 cmd="$1"; shift;
 if [[ "$cmd" == "" ]]; then
 	echo "Galaxy Admin Training (gat) tool:"
 	echo
-	grep '^function' $0 | sed "s/function gat_/  gat /g;s/().*#/\t/;"
+	grep '^gat_.*()' $0 | sed "s/gat_/  gat /g;s/().*#/\t/;"
 	echo
 else
 	gat_$cmd $@
