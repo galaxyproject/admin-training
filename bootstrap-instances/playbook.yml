@@ -113,12 +113,16 @@
       get_url:
         url: https://letsencrypt.org/certs/fakelerootx1.pem
         dest: /usr/local/share/ca-certificates/fakelerootx1.crt
+      register: __fake_le_root
 
     - name: Update CA certificates
       command: update-ca-certificates
+      when: __fake_le_root is changed
 
     - name: Enable byobu for users (forcing them into a Screen/TMUX session on login via ssh)
-      command: sudo -i -u ubuntu byobu-launcher-install
+      command: byobu-launcher-install
+      become: true
+      become_user: ubuntu
 
     - name: Add gat-cli command for users
       copy:
