@@ -66,7 +66,7 @@ Throughout the training we will use the Remo Q&A capabilities to estimate your p
 
 The computing resources for this training have been provided by **de.NBI**
 
-Claim your VM and find its IP address at **https://gxy.io/gatmachines** [here](https://docs.google.com/spreadsheets/d/11nQKJmHHf7GWR_C36rdu2dVOHZZ0cXpv09b84txm_3A/edit?usp=sharing). Put it somewhere easy to copy/paste.
+Claim your VM and find its IP address at **https://gxy.io/gatmachines**. Put it somewhere easy to copy/paste.
 
 ---
 class: center
@@ -87,7 +87,7 @@ It was sometimes difficult for students to catch up once behind.
 ---
 # Training philosophy
 
-We now follow the best way to do things - which is usually the one we use for **usegalaxy.* servers** - the most tested and stable path.
+We now follow what we consider the best way to do things - usually the one we use for **usegalaxy.* servers**.
 
 Galaxy has all the options and possibilities as before, but unless you are opinionated/locked in we recommend staying on the recommended path.
 
@@ -96,14 +96,14 @@ For other paths, Galaxy comes with documentation and a friendly community to hel
 ---
 # New methodology
 
-For this training, materials have been reworked to utilize **Ansible** much more heavily *from the beginning*.
-
 We consider the use of config management tools (such as Ansible) to be essential to good system administration.
+
+For this training, materials have been reworked to utilize **Ansible** much more heavily *from the beginning*.
 
 ---
 # On Ansible
 
-Use of Ansible to install/admin Galaxy is in no way required, and some prefer other tools (e.g. Puppet, Chef, etc.).
+Use of Ansible to install/admin Galaxy is in no way required, and some prefer other tools (e.g. Puppet, Chef, etc.), or no tools at all.
 
 What we teach in Ansible can be used as the knowledge/reference base for implementation in your preferred config management system.<sup>[1]</sup>
 
@@ -120,7 +120,7 @@ When using Ansible in this course, we will inspect the changes made after each s
     - Older<sup>[2]</sup> and non-Galaxy-software (e.g. Cloud, CVMFS) documentation
 * https://training.galaxyproject.org/
     - Galaxy Training, includes some admin training materials
-* https://github.com/galaxyproject/admin-training/tree/2020-barcelona/
+* https://github.com/galaxyproject/admin-training/tree/2020-bcc/
     - Training materials for *this course*, static after the end of the course
 
 .footnote[<sup>[2]</sup> Previously in the Galaxy Wiki, Galaxy-software-specific docs are migrating to docs.galaxyproject.org]
@@ -138,10 +138,12 @@ After the training
     - Galaxy Help (Discourse)
 
 ---
-# Essential links (again)
+# Essential links for this course (again)
 
 * **https://gxy.io/gat**
-    - Itinerary and landing page for this course
+    - Schedule and landing page
 * **https://gxy.io/gatmachines**
     - Spreadsheet for choosing your training VM
+* **https://gxy.io/gat-questions**
+    - Shared document for asking questions
 

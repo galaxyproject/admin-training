@@ -22,7 +22,7 @@ Galaxy training instances will be bootstrapped with [a small Ansible playbook](/
 
 | **Time** (CDT) | **Time** (CEST) |  **Topic**                                | **Slides**                                                                            | **Exercises**                  |
 | --------       | --------        |  ---------                                | ---------                                                                             | -----------                    |
-| 09:00          | 15:00           |  Welcome and Introduction                 |                                                                                       |                                |
+| 09:00          | 15:00           |  Welcome and Introduction                 | [Welcome][welcome-slides]                                                             |                                |
 | 09:15          | 15:15           |  Deployment and platform options          | [Deployment][deployment-slides]                                                       |                                |
 |                |                 |  Intro to Ansible                         | [Ansible][ansible-slides]                                                             | [Exercise][ansible-exercise]   |
 | 11:30          | 17:30           |  Break                                    |                                                                                       |                                |
@@ -62,6 +62,7 @@ Galaxy training instances will be bootstrapped with [a small Ansible playbook](/
 [toolshed-slides]:       https://training.galaxyproject.org/training-material/topics/admin/tutorials/toolshed/slides.html
 [ephemeris-slides]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/tool-management/slides.html
 [ephemeris-exercise]:    https://training.galaxyproject.org/training-material/topics/admin/tutorials/tool-management/tutorial.html
+[welcome-slides]:        https://galaxyproject.github.io/admin-training/2020-bcc/00-intro/intro.html#1
 
 ### Instructors
 
