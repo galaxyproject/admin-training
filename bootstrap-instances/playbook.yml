@@ -135,6 +135,29 @@
         group: root
         mode: 0755
 
+    - name: Manage passwords
+      block:
+        - name: Install pwgen as needed
+          package:
+            name:
+              - pwgen
+
+        # For some instances, they don't come pre-configured with a password, so we do that now.
+        - name: Generate a host-specific password
+          command: /usr/bin/pwgen -H /etc/hostname 12 1
+          register: actual_pw
+
+        - name: Set a password if requested
+          user:
+            name: ubuntu
+            password: "{{ actual_pw.stdout | password_hash('sha512', 'gat2020bcc')  }}"
+
+        - name: "Output password for admins"
+          debug:
+            msg: "{{ actual_pw.stdout  }}"
+
+      when: set_password|bool
+
   handlers:
     - name: reboot
       reboot:
