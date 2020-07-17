@@ -20,7 +20,7 @@ Galaxy training instances will be bootstrapped with [a small Ansible playbook](/
 
 ## Timetable - WEST - Friday 17th July
 
-| **Time** (CDT) | **Time** (CEST) | **Topic**                         | **Speaker** | **Slides**                                                                            | **Exercises**                  |
+| **Time** (EDT) | **Time** (CEST) | **Topic**                         | **Speaker** | **Slides**                                                                            | **Exercises**                  |
 | --------       | --------        | ---------                         | ----------- | ---------                                                                             | -----------                    |
 | 09:00          | 15:00           | Welcome and Introduction          | MC          | [Welcome][welcome-slides]                                                             |                                |
 | 09:15          | 15:15           | Deployment and platform options   | MC          | [Deployment][deployment-slides]                                                       |                                |
