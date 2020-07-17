@@ -11,11 +11,8 @@ gat-oz-[0:44].training.galaxyproject.eu
 # EU provided machines
 [workshop_eu]
 gat-[0:39].training.galaxyproject.eu
-192.52.39.241
-192.52.37.23
-192.52.40.4
-192.52.33.191
-192.52.39.58
+192.52.34.185
+192.52.34.196
 
 # Some variables apply to every member of the group
 [workshop_instances:vars]
