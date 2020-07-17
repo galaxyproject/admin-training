@@ -104,12 +104,27 @@ gat_status-ansible() { # [Admin] Check status of ansible training
 	echo "$(hostname)	basic $step0 template $step1 roles $step2 secrets $step3"
 }
 
-cmd="$1"; shift;
-if [[ "$cmd" == "" ]]; then
+usage() {
 	echo "Galaxy Admin Training (gat) tool:"
 	echo
 	grep '^gat_.*()' $0 | sed "s/gat_/  gat /g;s/().*#/\t/;"
 	echo
+	exit 1;
+}
+
+cmd="$1"; shift;
+if [[ "$cmd" == "" ]]; then
+	usage
 else
+	# Check that FN exists
+	LC_ALL=C type "gat_$cmd" 2> /dev/null | grep -q 'function'
+	ec=$?
+
+	# If missing, exit with help
+	if (( ec != 0 )); then
+		echo "Unknown command!"
+		usage
+	fi
+
 	gat_$cmd $@
 fi
