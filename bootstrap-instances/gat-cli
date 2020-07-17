@@ -87,7 +87,7 @@ gat_status-ansible() { # [Admin] Check status of ansible training
 		step1=✘;
 	fi
 
-	step2status=$(find -name roles -type d  2>/dev/null| wc -l)
+	step2status=$(find -name geerlingguy.git -type d  2>/dev/null| wc -l)
 	if (( step2status > 0 )); then
 		step2=✔;
 	else
