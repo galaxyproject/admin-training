@@ -7,11 +7,17 @@ all: id_rsa ## Prepare all nodes.
 id_rsa: ## Generate an SSH key which will be sent to the machines
 	ssh-keygen -t rsa -f id_rsa -N ''
 
-check-ansible: ## Check ansible tutorial
-	ansible -a 'gat status-ansible' workshop_instances -f 80 | grep  -i basic
+check-ansible-eu: ## [EU] Check ansible tutorial
+	ansible -a 'gat status-ansible' workshop_eu -f 80 | grep  -i basic
 
-check-galaxy: ## Check galaxy tutorial
-	ansible -a 'gat status-galaxy' workshop_instances -f 80 | grep nginx -i
+check-galaxy-eu: ## [EU] Check galaxy tutorial
+	ansible -a 'gat status-galaxy' workshop_eu -f 80 | grep nginx -i
+
+check-ansible-oz: ## [OZ] Check ansible tutorial
+	ansible -a 'gat status-ansible' workshop_oz -f 80 | grep  -i basic
+
+check-galaxy-oz: ## [OZ] Check galaxy tutorial
+	ansible -a 'gat status-galaxy' workshop_oz -f 80 | grep nginx -i
 
 
 remove-old-ssh-keys: ## Remove old SSH keys in your known hosts file
