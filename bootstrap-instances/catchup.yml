@@ -1,0 +1,37 @@
+---
+- name: Configure Galaxy VMs
+  hosts: workshop_eu
+  handlers:
+    - name: deploy
+      command: /usr/local/bin/ansible galaxy.yml
+      args:
+        chdir: /home/ubuntu/ansible-galaxy/
+  tasks:
+    - name: Create dirs
+      file:
+        path: "/home/ubuntu/{{ item }}"
+        state: directory
+      loop:
+        - ansible-galaxy
+        - ansible-galaxy/group_vars
+        - ansible-galaxy/templates
+        - ansible-galaxy/templates/nginx
+
+    - name: Deploy templates
+      template:
+        src: "catchup/{{ item }}"
+        dest: "/home/ubuntu/ansible-galaxy/{{ item }}"
+      loop:
+        - hosts
+
+    - name: Deploy files
+      copy:
+        src: "catchup/{{ item }}"
+        dest: "/home/ubuntu/ansible-galaxy/{{ item }}"
+      loop:
+        - ansible.cfg
+        - galaxy.yml
+        - requirements.yml
+        - group_vars/galaxyservers.yml
+        - templates/nginx/galaxy.j2
+        - templates/nginx/redirect-ssl.j2
