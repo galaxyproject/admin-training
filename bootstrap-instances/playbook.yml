@@ -84,6 +84,7 @@
       package:
         name:
           - python
+          - fail2ban
         state: absent
 
     #- name: Enable pathogen for all users
