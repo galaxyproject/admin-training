@@ -22,12 +22,11 @@
         - ansible-galaxy/group_vars
         - ansible-galaxy/templates
         - ansible-galaxy/templates/nginx
-      changed_when: true
       notify:
         - yodawg
         - install-requirements
 
-    - name: yodawg templates
+    - name: Deploy templates
       template:
         src: "catchup/{{ item }}"
         dest: "/home/ubuntu/ansible-galaxy/{{ item }}"
@@ -37,7 +36,7 @@
         - yodawg
         - install-requirements
 
-    - name: yodawg files
+    - name: Deploy files
       copy:
         src: "catchup/{{ item }}"
         dest: "/home/ubuntu/ansible-galaxy/{{ item }}"
