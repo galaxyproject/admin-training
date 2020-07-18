@@ -32,6 +32,7 @@ galaxy_config:
     file_path: /data
     check_migrate_tools: false
     tool_data_path: "{{ galaxy_mutable_data_dir }}/tool-data"
+    master_api_key: iUwj0V1JGplYmqo28P
   uwsgi:
     #http: 0.0.0.0:8080
     socket: 127.0.0.1:8080
