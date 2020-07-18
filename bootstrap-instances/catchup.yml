@@ -1,9 +1,15 @@
 ---
 - name: Configure Galaxy VMs
   hosts: workshop_eu
+  become: true
+  become_user: ubuntu
   handlers:
-    - name: deploy
-      command: /usr/local/bin/ansible galaxy.yml
+    - name: install-requirements
+      command: /usr/local/bin/ansible-galaxy install -p roles -r requirements.yml
+      args:
+        chdir: /home/ubuntu/ansible-galaxy/
+    - name: yodawg # I heard you like ansible playbooks, so I ran a playbook in your playbook.
+      command: /usr/local/bin/ansible-playbook galaxy.yml
       args:
         chdir: /home/ubuntu/ansible-galaxy/
   tasks:
@@ -16,15 +22,22 @@
         - ansible-galaxy/group_vars
         - ansible-galaxy/templates
         - ansible-galaxy/templates/nginx
+      changed_when: true
+      notify:
+        - yodawg
+        - install-requirements
 
-    - name: Deploy templates
+    - name: yodawg templates
       template:
         src: "catchup/{{ item }}"
         dest: "/home/ubuntu/ansible-galaxy/{{ item }}"
       loop:
         - hosts
+      notify:
+        - yodawg
+        - install-requirements
 
-    - name: Deploy files
+    - name: yodawg files
       copy:
         src: "catchup/{{ item }}"
         dest: "/home/ubuntu/ansible-galaxy/{{ item }}"
@@ -35,3 +48,6 @@
         - group_vars/galaxyservers.yml
         - templates/nginx/galaxy.j2
         - templates/nginx/redirect-ssl.j2
+      notify:
+        - yodawg
+        - install-requirements
