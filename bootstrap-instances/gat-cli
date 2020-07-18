@@ -21,87 +21,117 @@ gat_overview() { # [Admin] Overview of reports in last minutes (default=5)
 	tac /tmp/training | awk -v now=$(date +%s) '(now - $1 < '$seconds'){print $2" "$3}' | awk -F' ' '!_[$1]++'
 }
 
+search_dir() {
+	q="$(find -name $1 -type d  2>/dev/null| wc -l)"
+	if (( q > 0 )); then
+		echo ✔
+	else
+		echo ✘
+	fi
+}
+
+dir_exists() {
+	if [[ -d "$1" ]]; then
+		echo ✔
+	else
+		echo ✘
+	fi
+}
+
+path_exists() {
+	if [[ -f "$1" ]]; then
+		echo ✔
+	else
+		echo ✘
+	fi
+}
+
+str_exists() {
+	location="${2:-*}"
+	q="$(grep "$1" -Ri $location 2>/dev/null| wc -l)"
+	if (( q > 0 )); then
+		echo ✔
+	else
+		echo ✘
+	fi
+}
+
+service_state() {
+	q=$(timeout 3 systemctl status $1 2>/dev/null | grep Active | awk '{print $2}')
+	if [[ "$q" == "" ]]; then
+		echo ✘;
+	else
+		echo ✔;
+	fi
+}
+
+db_exists() {
+	q=$(timeout 3 sudo -u postgres psql -l 2>/dev/null| grep $1 | wc -l)
+	if (( q > 0 )); then
+		echo ✔;
+	else
+		echo ✘;
+	fi
+}
+curl_responds() {
+	q=$(timeout 3 curl --silent -k $1 2>/dev/null| wc -c)
+	if (( q > 0 )); then
+		echo ✔;
+	else
+		echo ✘;
+	fi
+}
+
+gat_status-ansible() { # [Admin] Check status of ansible training
+	step0=$(str_exists 'Copy a file to the' .)
+	if [[ "$step0" == "✘" ]]; then
+		# Maybe they typo'd it? Test the output file.
+		step0=$(path_exists /tmp/test.txt)
+	fi
+
+	step1=$(str_exists '^server_name:')
+	step2=$(search_dir geerlingguy.git)
+	step3=$(search_dir secret_group_vars)
+	echo "$(hostname)	basic $step0 template $step1 roles $step2 secrets $step3"
+}
+
 gat_status-galaxy() { # [Admin] Check status of ansible-galaxy training
-	postgres_status=$(timeout 3 systemctl status postgresql 2>/dev/null | grep Active | awk '{print $2}')
-	if [[ "$postgres_status" == "" ]]; then
-		step0=✘;
-	else
-		step0=✔;
-	fi
-
-	postgres_gxydb=$(timeout 3 sudo -u postgres psql -l 2>/dev/null| grep galaxy | wc -l)
-	if (( postgres_gxydb > 0 )); then
-		step1=✔;
-	else
-		step1=✘;
-	fi
-
-	gxy_responding=$(timeout 3 curl --silent http://localhost:8080/api/version 2>/dev/null| wc -c)
-	if (( gxy_response > 0 )); then
-		step2=✔;
-	else
-		step2=✘;
-	fi
-
-	gxy_systemd=$(timeout 3 systemctl status galaxy 2>/dev/null | grep Active | awk '{print $2}')
-	if [[ "$gxy_systemd" == "" ]]; then
-		step3=✘;
-	else
-		step3=✔;
-	fi
-
-	nginx_systemd=$(timeout 3 systemctl status nginx 2>/dev/null | grep Active | awk '{print $2}')
-	if [[ "$nginx_systemd" == "" ]]; then
-		step4=✘;
-	else
-		step4=✔;
-	fi
-
-	gxy_responding2=$(timeout 3 curl --silent https://localhost:443/api/version -k 2>/dev/null| wc -c)
-	if (( gxy_responding2 > 0 )); then
-		step5=✔;
-	else
-		step5=✘;
-	fi
+	step0=$(service_state postgresql)
+	step1=$(db_exists galaxy)
+	step2=$(curl_responds http://localhost:8080/api/version)
+	step3=$(service_state galaxy)
+	step4=$(service_state nginx)
+	step5=$(curl_responds https://localhost:443/api/version)
 
 	echo "$(hostname)	postgres $step0 $step1 galaxy(http) $step2 SysD-gxy $step3 SysD-nginx $step4 galaxy(ssl) $step5"
 }
 
-gat_status-ansible() { # [Admin] Check status of ansible training
-	step0status=$(grep 'Copy a file to the' -iR . 2>/dev/null | wc -l)
-	if (( step0status > 0 )); then
-		step0=✔;
-	else
-		# Maybe they typo'd it? Test the output file.
-		if [[ -e /tmp/test.txt ]]; then
-			step0=✔;
-		else
-			step0=✘;
-		fi
-	fi
+gat_status-galaxy() { # [Admin] Check status of ansible-galaxy training
+	step0=$(service_state postgresql)
+	step1=$(db_exists galaxy)
+	step2=$(curl_responds http://localhost:8080/api/version)
+	step3=$(service_state galaxy)
+	step4=$(service_state nginx)
+	step5=$(curl_responds https://localhost:443/api/version)
 
-	step1status=$(grep '^server_name:' -R * 2>/dev/null| wc -l)
-	if (( step1status > 0 )); then
-		step1=✔;
-	else
-		step1=✘;
-	fi
+	echo "$(hostname)	postgres $step0 $step1 galaxy(http) $step2 SysD-gxy $step3 SysD-nginx $step4 galaxy(ssl) $step5"
+}
 
-	step2status=$(find -name geerlingguy.git -type d  2>/dev/null| wc -l)
-	if (( step2status > 0 )); then
-		step2=✔;
-	else
-		step2=✘;
-	fi
+gat_status-cvmfs() { # [Admin] Check status of cvmfs training
+	step0=$(search_dir galaxyproject.cvmfs)
+	step1=$(dir_exists /cvmfs/)
+	step2=$(str_exists /cvmfs/data.galaxyproject.org/managed/location/tool_data_table_conf.xml)
 
-	step3status=$(find -name secret_group_vars -type d  2>/dev/null| wc -l)
-	if (( step3status > 0 )); then
-		step3=✔;
-	else
-		step3=✘;
-	fi
+	echo "$(hostname)	reqs $step0 /cvmfs/ $step1 gxconf $step2"
+}
 
-	echo "$(hostname)	basic $step0 template $step1 roles $step2 secrets $step3"
+gat_status-pulsar() { # [Admin] Check status of pulsar training
+	step0=$(search_dir galaxyproject.pulsar)
+	step1=$(str_exists private_token) # group var
+	step2=$(str_exists libcurl4-openssl-dev)
+	step3=$(str_exists PulsarRESTJobRunner)
+
+	echo "$(hostname)	reqs $step0 groupvars $step1 playbook $step2 jobconf $step3"
 }
 
 usage() {
