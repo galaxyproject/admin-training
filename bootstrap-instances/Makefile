@@ -4,6 +4,9 @@ help:
 all: id_rsa ## Prepare all nodes.
 	ansible-playbook playbook.yml -f 20
 
+catchup: id_rsa ## Provision bare machines as if they've done ansible-galaxy
+	ansible-playbook catchup.yml -f 80
+
 id_rsa: ## Generate an SSH key which will be sent to the machines
 	ssh-keygen -t rsa -f id_rsa -N ''
 
