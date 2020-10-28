@@ -13,6 +13,7 @@
 - name: Configure workshop VMs
   hosts: all
   tasks:
+    # TODO: this is not generic enough for users named anything other than Ubuntu
     - name: Copy ssh key to training machines
       copy:
         src: id_rsa

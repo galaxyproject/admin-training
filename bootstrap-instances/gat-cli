@@ -3,19 +3,19 @@ HOST=gat-0.training.galaxyproject.eu
 #HOST=localhost
 PORT=6789
 
-gat_help(){ # [User] submit help notice
+gat_help(){ ## [User] submit help notice
 	echo "$(hostname) help" > /dev/tcp/$HOST/$PORT
 }
 
-gat_done(){ # [User] submit done notice
+gat_done(){ ## [User] submit done notice
 	echo "$(hostname) done" > /dev/tcp/$HOST/$PORT
 }
 
-gat_listen(){ # [Admin] setup listening
+gat_listen(){ ## [Admin] setup listening
 	nc -l -p $PORT -k | ts '%s' > /tmp/training &
 }
 
-gat_overview() { # [Admin] Overview of reports in last minutes (default=5)
+gat_overview() { ## [Admin] Overview of reports in last minutes (default=5)
 	minutes=${1:-5}
 	seconds=$((minutes * 60))
 	tac /tmp/training | awk -v now=$(date +%s) '(now - $1 < '$seconds'){print $2" "$3}' | awk -F' ' '!_[$1]++'
@@ -137,7 +137,7 @@ gat_status-pulsar() { # [Admin] Check status of pulsar training
 usage() {
 	echo "Galaxy Admin Training (gat) tool:"
 	echo
-	grep '^gat_.*()' $0 | sed "s/gat_/  gat /g;s/().*#/\t/;"
+	grep '^gat_.*()\s*{\s*# ' $0 | sed "s/gat_/  gat /g;s/().*#/\t/;"
 	echo
 	exit 1;
 }
