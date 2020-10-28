@@ -106,17 +106,6 @@ gat_status-galaxy() { # [Admin] Check status of ansible-galaxy training
 	echo "$(hostname)	postgres $step0 $step1 galaxy(http) $step2 SysD-gxy $step3 SysD-nginx $step4 galaxy(ssl) $step5"
 }
 
-gat_status-galaxy() { # [Admin] Check status of ansible-galaxy training
-	step0=$(service_state postgresql)
-	step1=$(db_exists galaxy)
-	step2=$(curl_responds http://localhost:8080/api/version)
-	step3=$(service_state galaxy)
-	step4=$(service_state nginx)
-	step5=$(curl_responds https://localhost:443/api/version)
-
-	echo "$(hostname)	postgres $step0 $step1 galaxy(http) $step2 SysD-gxy $step3 SysD-nginx $step4 galaxy(ssl) $step5"
-}
-
 gat_status-cvmfs() { # [Admin] Check status of cvmfs training
 	step0=$(search_dir galaxyproject.cvmfs)
 	step1=$(dir_exists /cvmfs/)
