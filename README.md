@@ -96,6 +96,7 @@ Today is a "Choose Your Own Adventure" day. Choose the content you're interested
 | Tool Development                                    | [Slides][tool-dev-slides]          | [Exercise][planemo]                                              |
 | Dataset collections                                 |                                    | [DCs][dc], [Rule based][rb]                                      |
 | Developing your own Training                        |                                    | [Setting up][training-jekyll], [Exercise][training-new-tutorial] |
+| Securing your Galaxy                                |  TBA                               |                                                                  |
 
 
 
