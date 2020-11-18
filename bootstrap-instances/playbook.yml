@@ -30,7 +30,7 @@
       authorized_key:
         user: ubuntu
         state: present
-        key: "{{ lookup('file', 'admintraining.key.pub') }}"
+        key: "{{ lookup('file', ansible_ssh_private_key_file + '.pub') }}"
 
     - name: Allow ssh to localhost
       authorized_key:
