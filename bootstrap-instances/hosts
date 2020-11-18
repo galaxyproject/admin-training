@@ -11,6 +11,9 @@ workshop_eu
 [workshop_oz]
 gat-oz-[0:44].training.galaxyproject.eu
 
+[workshop_fr]
+gat-[0:24].fr.training.galaxyproject.eu
+
 # EU provided machines
 [workshop_eu]
 gat-[0:39].training.galaxyproject.eu
@@ -30,3 +33,7 @@ set_password = false
 [workshop_oz:vars]
 ansible_ssh_private_key_file = ~/admintraining-oz.key
 set_password = true
+
+[workshop_fr:vars]
+ansible_ssh_private_key_file = ~/admintraining-fr.key
+set_password = false

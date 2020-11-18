@@ -1,7 +1,7 @@
 ---
 # sudo must be preinstalled if you are using become
 - name: Bootstrap python
-  hosts: all
+  hosts: workshop_instances
   gather_facts: false
   pre_tasks:
     - name: Bootstrap Python3 for Ansible
@@ -11,7 +11,7 @@
 
 
 - name: Configure workshop VMs
-  hosts: all
+  hosts: workshop_instances
   tasks:
     # TODO: this is not generic enough for users named anything other than Ubuntu
     - name: Copy ssh key to training machines
@@ -21,6 +21,10 @@
         owner: ubuntu
         group: ubuntu
         mode: '0600'
+
+    - name: Fix hostname
+      hostname:
+        name: "{{ inventory_hostname }}"
 
     - name: Set authorized key on training machine
       authorized_key:
