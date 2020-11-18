@@ -1,4 +1,7 @@
 # Workshop instances is a super group of N pools of VMs
+[local]
+localhost
+
 [workshop_instances]
 [workshop_instances:children]
 workshop_oz
