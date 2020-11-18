@@ -4,7 +4,8 @@ localhost
 
 [workshop_instances]
 [workshop_instances:children]
-workshop_oz
+workshop_fr
+#workshop_oz
 workshop_eu
 
 # Aussie provided machines
