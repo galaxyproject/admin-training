@@ -19,4 +19,10 @@
    - One video per top level section. (Works nicely to intersperse with slides videos.)
 
 
+## Alternatives
 
+- OBS for recording, kdenlive for editing.
+
+## Misc Comments
+
+- Zoom has boards or ways to draw on the presentation, sometimes buggy?
