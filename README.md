@@ -17,7 +17,7 @@ logo based on a [Hubble Image](https://hubblesite.org/contents/media/images/2018
 
 ## Location, Logistics, and Registration
 
-**This training will be offered Online, January 25-29**
+This training will be offered Online, January 25-29. [**Register here**](https://galaxyproject.org/events/2021-01-admin-training/)
 
 ## Training VM instances
 
