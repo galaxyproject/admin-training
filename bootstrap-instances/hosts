@@ -6,14 +6,14 @@ localhost
 [workshop_instances:children]
 workshop_fr
 #workshop_oz
-workshop_eu
+#workshop_eu
 
 # Aussie provided machines
 [workshop_oz]
 gat-oz-[0:44].training.galaxyproject.eu
 
 [workshop_fr]
-gat-[0:24].fr.training.galaxyproject.eu
+gat-[0:27].fr.training.galaxyproject.eu
 
 # EU provided machines
 [workshop_eu]
