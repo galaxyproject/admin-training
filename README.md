@@ -160,6 +160,8 @@ Name | Country | Affiliation(s)
 --- | --- | ---
 Helena Rasche | Netherlands | [Erasmus MC Bioinformatics Group](https://erasmusmc-bioinformatics.github.io/), [ATGM, Avans Hogeschool Breda](avans.nl)
 
+(others coming soon.)
+
 # After the Training
 
 Everything you were taught in the past few days can be found in the [Galaxy Admin Training](https://github.com/galaxyproject/admin-training/) repository, which mostly points to the [admin section](https://training.galaxyproject.org/training-material/topics/admin/) of the Galaxy Training Materials.
