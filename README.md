@@ -158,7 +158,8 @@ Today is a "Choose Your Own Adventure" day. Choose the content you're interested
 
 Name | Country | Affiliation(s)
 --- | --- | ---
-Helena Rasche | Netherlands | [Erasmus MC Bioinformatics Group](https://erasmusmc-bioinformatics.github.io/), [ATGM, Avans Hogeschool Breda](avans.nl)
+Helena Rasche | Netherlands | [Erasmus MC Bioinformatics Group](https://erasmusmc-bioinformatics.github.io/), [ATGM, Avans Hogeschool Breda](https://www.avans.nl)
+Nicola Soranzo | UK | [Earlham Institute](https://www.earlham.ac.uk)
 
 (others coming soon.)
 
