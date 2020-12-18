@@ -91,6 +91,8 @@
           - python
           - fail2ban
           - snapd
+          - emacs-lucid
+          - emacs-gtk
         state: absent
 
     #- name: Enable pathogen for all users
