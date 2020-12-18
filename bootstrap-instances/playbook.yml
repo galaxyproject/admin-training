@@ -72,9 +72,9 @@
           - build-essential
           - git
           - nano
-          - vim
+          - vim-nox
           - vim-pathogen
-          - emacs
+          - emacs-nox
           - virtualenv
           - python3-pip
           - jq
@@ -85,11 +85,12 @@
           - moreutils # for gat-cli
         state: latest
 
-    - name: Ensure python2 is purged
+    - name: Ensure unnecessary stuff is purged
       package:
         name:
           - python
           - fail2ban
+          - snapd
         state: absent
 
     #- name: Enable pathogen for all users
