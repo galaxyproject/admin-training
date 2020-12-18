@@ -6,6 +6,9 @@ help:
 all: id_rsa ## Prepare all nodes.
 	ansible-playbook playbook.yml -f $(THREADS)
 
+prep-%: id_rsa ## Prepare a region (prep-eu/oz/us/...)
+	ansible-playbook playbook.yml -f $(THREADS) --limit workshop_$(@:prep-%=%)
+
 catchup: id_rsa ## Provision bare machines as if they've done ansible-galaxy
 	ansible-playbook catchup.yml -f $(THREADS)
 
