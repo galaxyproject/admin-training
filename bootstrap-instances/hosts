@@ -9,20 +9,11 @@ workshop_eu
 
 # Aussie provided machines
 [workshop_oz]
-115.146.86.217
-115.146.84.219
-203.101.230.4
-115.146.84.63
-115.146.87.83
-115.146.85.50
-115.146.84.60
-115.146.85.177
-203.101.227.62
-115.146.85.98
+gat-[0:19].oz.training.galaxyproject.eu
 
 # EU provided machines
 [workshop_eu]
-gat-[0:39].training.galaxyproject.eu
+#gat-[0:9].eu.training.galaxyproject.eu
 
 # Some variables apply to every member of the group
 [workshop_instances:vars]
@@ -37,5 +28,5 @@ set_password = false
 
 # Or per Aussie VMs
 [workshop_oz:vars]
-ansible_ssh_private_key_file = ~/admintraining-oz.key
-#set_password = true
+ansible_ssh_private_key_file = ~/admintraining-oz2.key
+set_password = false
