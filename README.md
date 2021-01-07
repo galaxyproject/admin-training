@@ -190,3 +190,29 @@ If you're asked to provide training infrastructure for your users, but do not ha
 We are working on updating the training materials with feedback from the training, and looking into the possibility to develop some automated linting of configurations, to help make Galaxy deployment more error-proof.
 
 Let us know if you have any questions or feedback! Chat on Gitter, file issues on GitHub, let us know what features are interesting and important to the admin community.
+
+## Sponsors
+
+The 2021 Galaxy Admin Training is sponsored by a wide variety of organisations
+
+### EOSC Life
+
+This course has received funding from EOSC-Life Second Training Open Call. EOSC-Life has received funding from the European Union’s Horizon 2020 programme under grant agreement number 824087
+
+[![EOSC Life logo](https://www.eosc-life.eu/wp-content/themes/eosc-life-v2/assets/images/eosclogo.png)](https://www.eosc-life.eu/)
+
+### Galaxy Australia & Australian BioCommons
+
+Virtual Machines were provided by Galaxy Australia
+
+[![Australian BioCommons](https://images.squarespace-cdn.com/content/5d3a4213cf4f5b00014ea1db/1566885344365-8BAMFYV0071E8F8XLWI5/Australian-Biocommons-Logo-Horizontal-144dpi-Transparent.png?content-type=image%2Fpng)](https://www.biocommons.org.au/galaxy-australia)
+
+### de.NBI
+
+Virtual Machines were provided by the German Federal Ministry of Education and Research BMBF grant 031 A538A de.NBI-RBC.
+
+[![de.NBI Logo](https://usegalaxy-eu.github.io/assets/media/deNBI_Logo_rgb.png)](https://cloud.denbi.de/)
+
+
+
+
