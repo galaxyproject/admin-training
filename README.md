@@ -199,7 +199,7 @@ The 2021 Galaxy Admin Training is sponsored by a wide variety of organisations
 
 This course has received funding from EOSC-Life Second Training Open Call. EOSC-Life has received funding from the European Union’s Horizon 2020 programme under grant agreement number 824087
 
-[![EOSC Life logo](https://www.eosc-life.eu/wp-content/themes/eosc-life-v2/assets/images/eosclogo.png)](https://www.eosc-life.eu/)
+[![EOSC Life logo](eosclogo.png)](https://www.eosc-life.eu/)
 
 ### Galaxy Australia & Australian BioCommons
 
