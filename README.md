@@ -53,6 +53,7 @@ This day covers getting a Galaxy server setup with Ansible, a server you will de
 
 | **Topic**                         | **Slides**                    | **Exercises**                                                                    |
 | ---------                         | ---------                     | -----------                                                                      |
+| Rnuning jobs in Singularity       |                               | [Exercise][singularity-exercise]                                                 |
 | Galaxy Tool Shed                  | [Toolshed][toolshed-slides]   |                                                                                  |
 | Ephemeris                         | [Ephemeris][ephemeris-slides] | [Exercise][ephemeris-exercise]                                                   |
 | Users, Groups, and Quotas (+Demo) | [Slides][users-groups-slides] |                                                                                  |
@@ -134,6 +135,7 @@ Today is a "Choose Your Own Adventure" day. Choose the content you're interested
 [monitoring-reports]:       https://training.galaxyproject.org/training-material/topics/admin/tutorials/reports/tutorial.html
 [advanced-customisation]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/advanced-galaxy-customisation/slides.html
 [jenkins-exercise]:         https://training.galaxyproject.org/training-material/topics/admin/tutorials/jenkins/tutorial.html
+[singularity-exercise]:     https://training.galaxyproject.org/training-material/topics/admin/tutorials/singularity/tutorial.html
 [job-metrics-exercise]:     https://training.galaxyproject.org/training-material/topics/admin/tutorials/job-metrics/tutorial.html
 [maintenance]:              https://training.galaxyproject.org/training-material/topics/admin/tutorials/maintenance/slides.html
 [interactive-tools-slides]: https://training.galaxyproject.org/training-material/topics/admin/tutorials/interactive-tools/slides.html
