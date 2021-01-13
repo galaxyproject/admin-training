@@ -30,13 +30,18 @@ By the time of the workshop, you should be familiar with the *Unix command line*
 
 Additionally you need to be comfortable with a command-line text editor. If you have not had to use one before, then `nano` is recommended. If you have a preferred one (e.g. vim or emacs), you are welcome to use that.
 
+**Conversation**
+
+We have created a Slack for this event. You **must** join this slack, all important information will be communicated there. [Click here to join](https://join.slack.com/t/galaxyadmintraining/shared_invite/zt-kswf6j39-cgllk4JdyT6Vg98DH63lzw)
+
 **Training Materials**
 
 Everything we teach during the week will be found on the [Galaxy Training Materials](https://galaxyproject.github.io/training-material/topics/admin/) website. If you are worried about the teaching pace of the upcoming week, feel free to read through these materials ahead of time and familiarise yourself with the concepts. Our [preliminary schedule](https://github.com/galaxyproject/admin-training/) is available, but subject to change.
 
-**Community**
+**Virtual Machines**
 
-We have created a Slack for this event. You **must** join this slack, all important information will be communicated there. [Click here to join](https://join.slack.com/t/galaxyadmintraining/shared_invite/zt-kswf6j39-cgllk4JdyT6Vg98DH63lzw)
+We are providing the infrastructure this week, this will remain online until 5 business days following the conclusion of the event.
+
 
 We hope you are as excited as we are!
 
