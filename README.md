@@ -31,54 +31,86 @@ Galaxy training instances will be bootstrapped with [a small Ansible playbook](/
 
 ## Timetable
 
-_Timetable with sessions and material is being continuously updated. **This is NOT final**._
+The course is a mix of:
+
+1. video recorded by our instructor community
+2. video auto-generated from our slides
+3. tutorials without videos.
+
+We've done this to balance the significant effort required to produce videos
+for materials that are regularly updated with the potential benefits they will
+have for you, the students. As a result you'll find more videos for the
+extremely important, foundational topics where we wanted things to be
+completely clear for you.
+
+*If you do not like videos*: The videos are strictly supplementary to the
+training material and will show instructors going through the lessons. If you
+prefer video content, you can watch those. If you dislike video training, you
+can choose to just read the training materials for each topic.
+
+The schedule for each day is a suggestion of what we believe is approximately 5 hours of work.
+- If you're done with a day and want to do more, please feel free to continue!
+- If you can't complete everything at the same pace, that's also fine! The VMs will be available for a week after the event.
 
 ### Monday
 
 This day covers getting a Galaxy server setup with Ansible, a server you will develop for the rest of the week.
 
-| **Topic**                                  | **Slides**                                                                            | **Exercises**                  |
-| ---------                                  | ---------                                                                             | -----------                    |
-| Registration                               |                                                                                       |                                |
-| Welcome and introduction                   | [Welcome][welcome-slides]                                                             |                                |
-| Deployment and platform options            | [Deployment][deployment-slides]                                                       |                                |
-| Intro to Ansible                           | [Ansible][ansible-slides]                                                             | [Exercise][ansible-exercise]   |
-| Galaxy Server Part 1: Basic Install        | [Galaxy Install][ansible-galaxy-slides], [Database][db-slides], [uWSGI][uwsgi-slides] | [Exercise][ansible-galaxy]     |
-| Galaxy Server Part 2: Towards Production   | [systemd][systemd-slides]                                                             |                                |
-| Galaxy Server Part 3: Advanced Install     | [Production][production-slides]                                                       |                                |
+| **Topic**                       | **Video**  | **Slides / Materials**             |
+| ---------                       | ---------  | ----------------------             |
+| Welcome and introduction        |            | [Welcome][welcome-slides]          |
+| Deployment and platform options | [Video](#) | [Slides][deployment-slides]        |
+| Intro to Ansible                | [Video](#) | [Slides][ansible-slides]           |
+| Ansible                         | [Video](#) | [Tutorial][ansible-exercise]       |
+| Galaxy Ansible Introduction     | [Video](#) | [Slides][ansible-galaxy-slides]    |
+| Database                        | [Video](#) | [slides][db-slides]                |
+| uWSGI                           | [Video](#) | [sldies][uwsgi-slides]             |
+| Part 1: Basic Installation      | [Video](#) | [Tutorial][ansible-galaxy]         |
+| SystemD                         | [Video](#) | [Slides][systemd-slides]           |
+| Part 2: Towards Production      | [Video](#) | [Tutorial (cont.)][ansible-galaxy] |
+| Production                      | [Video](#) | [Production][production-slides]    |
+| Part 3: Advanced Install        | [Video](#) | [Tutorial (cont.)][ansible-galaxy] |
 
 
 ### Tuesday
 
 
-| **Topic**                         | **Slides**                    | **Exercises**                                                                    |
-| ---------                         | ---------                     | -----------                                                                      |
-| Rnuning jobs in Singularity       |                               | [Exercise][singularity-exercise]                                                 |
-| Galaxy Tool Shed                  | [Toolshed][toolshed-slides]   |                                                                                  |
-| Ephemeris                         | [Ephemeris][ephemeris-slides] | [Exercise][ephemeris-exercise]                                                   |
-| Users, Groups, and Quotas (+Demo) | [Slides][users-groups-slides] |                                                                                  |
-| Reference Data                    | [Slides][ref-genomes-slides]  | [CVMFS Exercise][cvmfs-exercise], [Data Manager Exercise][data-manager-exercise] |
-| BioBlend                          | [Slides][bioblend-slides]     | [Exercise][bioblend-exercise]                                                    |
+| **Topic**                   | **Video**  | **Slides / Materials**           |
+| ---------                   | ---------  | ----------------------           |
+| Running jobs in Singularity | [Video](#) | [Tutorial][singularity-exercise] |
+| Galaxy Tool Shed            | [Video](#) | [Slides][toolshed-slides]        |
+| Ephemeris (Intro)           | [Video](#) | [Slides][ephemeris-slides]       |
+| Ephemeris                   | [Video](#) | [Tutorial][ephemeris-exercise]   |
+| Users, Groups, and Quotas   | [Video](#) | [Slides][users-groups-slides]    |
+| Reference Data (Intro)      | [Video](#) | [Slides][ref-genomes-slides]     |
+| Reference Data              | [Video](#) | [Tutorial][cvmfs-exercise]       |
+| BioBlend (Intro)            | [Video](#) | [Slides][bioblend-slides]        |
+| BioBlend                    | [Video](#) | [Tutorial][bioblend-exercise]    |
+
 
 
 ### Wednesday
 
-| **Topic**                                   | **Slides**               | **Exercises**                    |
-| --------                                    | ---------                | ---------                        |
-| Exploring the Galaxy job configuration file | [Slides][cluster-slides] | [`job_conf.xml`][job-conf-xml]   |
-| Connecting Galaxy to a compute cluster      | [Slides][cluster-slides] | [Exercise][cluster-exercise]     |
-| Recording Job Metrics                       |                          | [Exercise][job-metrics-exercise] |
+| **Topic**                              | **Video**  | **Slides / Materials**           |
+| ---------                              | ---------  | ----------------------           |
+| Galaxy Cluster Computing (Intro)       | [Video](#) | [Slides][cluster-slides]         |
+| Connecting Galaxy to a compute cluster | [Video](#) | [Tutorial][cluster-exercise]     |
+| Mapping Jobs to Destinations           | [Video](#) | [Tutorial][job-mapping-exercise] |
+| Recording Job Metrics                  |            | [Tutorial][job-metrics-exercise] |
 
 
 ### Thursday
 
-| **Topic**                                             | **Slides**                  | **Exercises**                            |
-| ---------                                             | ---------                   | -------------                            |
-| Pulsar                                                | [Slides][hetero-slides]     | [Exercise][hetero-exercise]              |
-| Storage management                                    |                             | [Exercise][storage-exercise]             |
-| Monitoring Part 1: DB queries, command line & scripts | [Slides][gxadmin-slides]    | [gxadmin][gxadmin-exercise]              |
-| Monitoring Part 2: Telegraf, InfluxDB, Grafana        | [Slides][monitoring-slides] | [Telegraf Exercise][monitoring-exercise] |
-| Maintenance, Backup and Restore                       | [Slides][maintenance]       |                                          |
+| **Topic**                               | **Video**  | **Slides / Materials**                   |
+| ---------                               | ---------  | ----------------------                   |
+| Pulsar  (Intro)                         | [Video](#) | [Slides][hetero-slides]                  |
+| Pulsar                                  | [Video](#) | [Exercise][hetero-exercise]              |
+| Storage management                      |            | [Exercise][storage-exercise]             |
+| DB Query (Intro)                        | [Video](#) | [Slides][gxadmin-slides]                 |
+| DB queries, command line & scripts      |            | [gxadmin][gxadmin-exercise]              |
+| Monitoring (Intro)                      | [Video](#) | [Slides][monitoring-slides]              |
+| Monitoring: Telegraf, InfluxDB, Grafana | [Video](#) | [Telegraf Exercise][monitoring-exercise] |
+| Maintenance, Backup and Restore         | [Video](#) | [Slides][maintenance]                    |
 
 ### Friday
 
@@ -102,59 +134,60 @@ Today is a "Choose Your Own Adventure" day. Choose the content you're interested
 
 
 [welcome-slides]:           https://galaxyproject.github.io/admin-training/2020-barcelona/00-intro/intro.html
-[deployment-slides]:        https://training.galaxyproject.org/training-material/topics/admin/slides/introduction.html
-[ansible-slides]:           https://training.galaxyproject.org/training-material/topics/admin/tutorials/ansible/slides.html
+[advanced-customisation]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/advanced-galaxy-customisation/slides.html
 [ansible-exercise]:         https://training.galaxyproject.org/training-material/topics/admin/tutorials/ansible/tutorial.html#your-first-playbook-and-first-role
 [ansible-galaxy-slides]:    https://training.galaxyproject.org/training-material/topics/admin/tutorials/ansible-galaxy/slides.html
 [ansible-galaxy]:           https://training.galaxyproject.org/training-material/topics/admin/tutorials/ansible-galaxy/tutorial.html
-[db-slides]:                https://training.galaxyproject.org/training-material/topics/admin/tutorials/database/slides.html
-[production-slides]:        https://training.galaxyproject.org/training-material/topics/admin/tutorials/production/slides.html
-[uwsgi-slides]:             https://training.galaxyproject.org/training-material/topics/admin/tutorials/uwsgi/slides.html
-[systemd-slides]:           https://training.galaxyproject.org/training-material/topics/admin/tutorials/systemd-supervisor/slides.html
-[toolshed-slides]:          https://training.galaxyproject.org/training-material/topics/admin/tutorials/toolshed/slides.html
-[ephemeris-slides]:         https://training.galaxyproject.org/training-material/topics/admin/tutorials/tool-management/slides.html
-[ephemeris-exercise]:       https://training.galaxyproject.org/training-material/topics/admin/tutorials/tool-management/tutorial.html
-[users-groups-slides]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/users-groups-quotas/slides.html
-[ref-genomes-slides]:       https://training.galaxyproject.org/training-material/topics/admin/tutorials/cvmfs/slides.html
+[ansible-slides]:           https://training.galaxyproject.org/training-material/topics/admin/tutorials/ansible/slides.html
+[bioblend-exercise]:        https://mybinder.org/v2/gh/nsoranzo/bioblend-tutorial/master?filepath=bioblend_histories.ipynb
+[bioblend-slides]:          https://training.galaxyproject.org/training-material/topics/dev/tutorials/bioblend-api/slides.html
+[cluster-exercise]:         https://training.galaxyproject.org/training-material/topics/admin/tutorials/connect-to-compute-cluster/tutorial.html
+[cluster-slides]:           https://training.galaxyproject.org/training-material/topics/admin/tutorials/connect-to-compute-cluster/slides.html
 [cvmfs-exercise]:           https://training.galaxyproject.org/training-material/topics/admin/tutorials/cvmfs/tutorial.html
 [data-manager-exercise]:    https://gist.github.com/natefoo/fba6465c1eccb95ffdcfa67d78d8d6b4
-[pam-slides]:               https://training.galaxyproject.org/training-material/topics/admin/tutorials/external-auth/slides.html
-[upstream-auth-exercise]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/external-auth/tutorial.html
-[job-conf-xml]:             https://github.com/galaxyproject/galaxy/blob/dev/lib/galaxy/config/sample/job_conf.xml.sample_advanced
-[cluster-slides]:           https://training.galaxyproject.org/training-material/topics/admin/tutorials/connect-to-compute-cluster/slides.html
-[cluster-exercise]:         https://training.galaxyproject.org/training-material/topics/admin/tutorials/connect-to-compute-cluster/tutorial.html
-[hetero-slides]:            https://training.galaxyproject.org/training-material/topics/admin/tutorials/heterogeneous-compute/slides.html
-[hetero-exercise]:          https://training.galaxyproject.org/training-material/topics/admin/tutorials/heterogeneous-compute/tutorial.html
-[bioblend-slides]:          https://training.galaxyproject.org/training-material/topics/dev/tutorials/bioblend-api/slides.html
-[bioblend-exercise]:        https://mybinder.org/v2/gh/nsoranzo/bioblend-tutorial/master?filepath=bioblend_histories.ipynb
-[monitoring-slides]:        https://training.galaxyproject.org/training-material/topics/admin/tutorials/monitoring/slides.html
-[monitoring-exercise]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/monitoring/tutorial.html
-[storage-exercise]:         https://training.galaxyproject.org/training-material/topics/admin/tutorials/object-store/tutorial.html
+[db-slides]:                https://training.galaxyproject.org/training-material/topics/admin/tutorials/database/slides.html
+[dc]:                       https://training.galaxyproject.org/training-material/topics/galaxy-data-manipulation/tutorials/processing-many-samples-at-once/tutorial.html#20-using-collections
+[deployment-slides]:        https://training.galaxyproject.org/training-material/topics/admin/slides/introduction.html
+[ephemeris-exercise]:       https://training.galaxyproject.org/training-material/topics/admin/tutorials/tool-management/tutorial.html
+[ephemeris-slides]:         https://training.galaxyproject.org/training-material/topics/admin/tutorials/tool-management/slides.html
 [gxadmin-exercise]:         https://training.galaxyproject.org/training-material/topics/admin/tutorials/gxadmin/tutorial.html
 [gxadmin-slides]:           https://training.galaxyproject.org/training-material/topics/admin/tutorials/gxadmin/slides.html
-[monitoring-reports]:       https://training.galaxyproject.org/training-material/topics/admin/tutorials/reports/tutorial.html
-[advanced-customisation]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/advanced-galaxy-customisation/slides.html
-[jenkins-exercise]:         https://training.galaxyproject.org/training-material/topics/admin/tutorials/jenkins/tutorial.html
-[singularity-exercise]:     https://training.galaxyproject.org/training-material/topics/admin/tutorials/singularity/tutorial.html
-[job-metrics-exercise]:     https://training.galaxyproject.org/training-material/topics/admin/tutorials/job-metrics/tutorial.html
-[maintenance]:              https://training.galaxyproject.org/training-material/topics/admin/tutorials/maintenance/slides.html
+[hetero-exercise]:          https://training.galaxyproject.org/training-material/topics/admin/tutorials/heterogeneous-compute/tutorial.html
+[hetero-slides]:            https://training.galaxyproject.org/training-material/topics/admin/tutorials/heterogeneous-compute/slides.html
 [interactive-tools-slides]: https://training.galaxyproject.org/training-material/topics/admin/tutorials/interactive-tools/slides.html
 [interactive-tools]:        https://training.galaxyproject.org/training-material/topics/admin/tutorials/interactive-tools/tutorial.html
-[tool-dev-slides]:          https://training.galaxyproject.org/training-material/topics/dev/tutorials/tool-integration/slides.html
+[jenkins-exercise]:         https://training.galaxyproject.org/training-material/topics/admin/tutorials/jenkins/tutorial.html
+[job-conf-xml]:             https://github.com/galaxyproject/galaxy/blob/dev/lib/galaxy/config/sample/job_conf.xml.sample_advanced
+[job-mapping-exercise]:     https://training.galaxyproject.org/training-material/topics/admin/tutorials/job-destinations/tutorial.html
+[job-metrics-exercise]:     https://training.galaxyproject.org/training-material/topics/admin/tutorials/job-metrics/tutorial.html
+[maintenance]:              https://training.galaxyproject.org/training-material/topics/admin/tutorials/maintenance/slides.html
+[monitoring-exercise]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/monitoring/tutorial.html
+[monitoring-reports]:       https://training.galaxyproject.org/training-material/topics/admin/tutorials/reports/tutorial.html
+[monitoring-slides]:        https://training.galaxyproject.org/training-material/topics/admin/tutorials/monitoring/slides.html
+[pam-slides]:               https://training.galaxyproject.org/training-material/topics/admin/tutorials/external-auth/slides.html
 [planemo]:                  https://planemo.readthedocs.io/en/latest/writing_standalone.html
-[survey]:                   https://bsc3.typeform.com/to/X5bqFf
-[whats-new]:                https://docs.google.com/presentation/d/1LP6BFRc5yxnc5JAkQDlxDN7guPvQPftIsHkNlqQwr-w/edit?usp=sharing
+[production-slides]:        https://training.galaxyproject.org/training-material/topics/admin/tutorials/production/slides.html
 [py2to3]:                   https://docs.galaxyproject.org/en/master/admin/python.html
-[training-jekyll]:          https://training.galaxyproject.org/training-material/topics/contributing/tutorials/running-jekyll/tutorial.html
-[training-new-tutorial]:    https://training.galaxyproject.org/training-material/topics/contributing/tutorials/create-new-tutorial/tutorial.html
-[dc]:                       https://training.galaxyproject.org/training-material/topics/galaxy-data-manipulation/tutorials/processing-many-samples-at-once/tutorial.html#20-using-collections
 [rb]:                       https://training.galaxyproject.org/training-material/topics/galaxy-data-manipulation/tutorials/upload-rules/tutorial.html
-[whats-new]:                https://bit.ly/gxwhatsnew2019
-[updating-slides]:          https://training.galaxyproject.org/training-material/topics/admin/tutorials/upgrading/slides.html#1
-[troubleshooting-slides]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/troubleshooting/slides.html
+[ref-genomes-slides]:       https://training.galaxyproject.org/training-material/topics/admin/tutorials/cvmfs/slides.html
+[singularity-exercise]:     https://training.galaxyproject.org/training-material/topics/admin/tutorials/singularity/tutorial.html
+[singularity-exercise]:     https://training.galaxyproject.org/training-material/topics/admin/tutorials/singularity/tutorial.html
+[storage-exercise]:         https://training.galaxyproject.org/training-material/topics/admin/tutorials/object-store/tutorial.html
+[systemd-slides]:           https://training.galaxyproject.org/training-material/topics/admin/tutorials/systemd-supervisor/slides.html
 [telegraf-exercise]:        https://training.galaxyproject.org/training-material/topics/admin/tutorials/monitoring/tutorial.html
 [tiaas-exercise]:           https://training.galaxyproject.org/training-material/topics/admin/tutorials/tiaas/tutorial.html
+[tool-dev-slides]:          https://training.galaxyproject.org/training-material/topics/dev/tutorials/tool-integration/slides.html
+[toolshed-slides]:          https://training.galaxyproject.org/training-material/topics/admin/tutorials/toolshed/slides.html
+[training-jekyll]:          https://training.galaxyproject.org/training-material/topics/contributing/tutorials/running-jekyll/tutorial.html
+[training-new-tutorial]:    https://training.galaxyproject.org/training-material/topics/contributing/tutorials/create-new-tutorial/tutorial.html
+[troubleshooting-slides]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/troubleshooting/slides.html
+[updating-slides]:          https://training.galaxyproject.org/training-material/topics/admin/tutorials/upgrading/slides.html#1
 [upgrade]:                  https://training.galaxyproject.org/training-material/topics/admin/tutorials/upgrading/slides.html
+[upstream-auth-exercise]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/external-auth/tutorial.html
+[users-groups-slides]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/users-groups-quotas/slides.html
+[uwsgi-slides]:             https://training.galaxyproject.org/training-material/topics/admin/tutorials/uwsgi/slides.html
+[whats-new-2019]:           https://bit.ly/gxwhatsnew2019
+[whats-new-2020]:           https://docs.google.com/presentation/d/1LP6BFRc5yxnc5JAkQDlxDN7guPvQPftIsHkNlqQwr-w/edit?usp=sharing
 
 ### Instructors
 
@@ -214,7 +247,3 @@ Virtual Machines were provided by Galaxy Australia
 Virtual Machines were provided by the German Federal Ministry of Education and Research BMBF grant 031 A538A de.NBI-RBC.
 
 [![de.NBI Logo](https://usegalaxy-eu.github.io/assets/media/deNBI_Logo_rgb.png)](https://cloud.denbi.de/)
-
-
-
-
