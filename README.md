@@ -64,7 +64,7 @@ This day covers getting a Galaxy server setup with Ansible, a server you will de
 | Ansible                         | [Video](#) | [Tutorial][ansible-exercise]       |
 | Galaxy Ansible Introduction     | [Video](#) | [Slides][ansible-galaxy-slides]    |
 | Database                        | [Video](#) | [slides][db-slides]                |
-| uWSGI                           | [Video](#) | [sldies][uwsgi-slides]             |
+| uWSGI                           | [Video](#) | [slides][uwsgi-slides]             |
 | Part 1: Basic Installation      | [Video](#) | [Tutorial][ansible-galaxy]         |
 | SystemD                         | [Video](#) | [Slides][systemd-slides]           |
 | Part 2: Towards Production      | [Video](#) | [Tutorial (cont.)][ansible-galaxy] |
