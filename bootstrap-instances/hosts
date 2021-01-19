@@ -6,6 +6,7 @@ localhost
 [workshop_instances:children]
 workshop_oz
 workshop_eu
+workshop_us
 
 # Aussie provided machines
 [workshop_oz]
@@ -14,6 +15,13 @@ gat-[0:61].oz.training.galaxyproject.eu
 # EU provided machines
 [workshop_eu]
 gat-[0:79].eu.training.galaxyproject.eu
+
+# American machines
+[workshop_us]
+149.165.170.130
+149.165.171.173
+149.165.156.169
+149.165.171.202
 
 # Some variables apply to every member of the group
 [workshop_instances:vars]
@@ -29,3 +37,7 @@ ansible_ssh_private_key_file = ~/admintraining.key
 # Or per Aussie VMs
 [workshop_oz:vars]
 ansible_ssh_private_key_file = ~/admintraining-oz2.key
+
+[workshop_us:vars]
+ansible_ssh_private_key_file = admintraining-us.key
+set_password = false
