@@ -185,7 +185,7 @@
 
         - name: "Output password for admins"
           debug:
-            msg: "{{ actual_pw.stdout  }}"
+            msg: "password: {{ inventory_hostname }} {{ actual_pw.stdout  }}"
 
       when: set_password|bool
       tags:
