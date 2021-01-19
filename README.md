@@ -56,80 +56,80 @@ The schedule for each day is a suggestion of what we believe is approximately 5 
 
 This day covers getting a Galaxy server setup with Ansible, a server you will develop for the rest of the week.
 
-| **Topic**                       | **Video**  | **Slides / Materials**             |
-| ---------                       | ---------  | ----------------------             |
-| Welcome and introduction        |            | [Welcome][welcome-slides]          |
-| Deployment and platform options | [Video](#) | [Slides][deployment-slides]        |
-| Intro to Ansible                | [Video](#) | [Slides][ansible-slides]           |
-| Ansible                         | [Video](#) | [Tutorial][ansible-exercise]       |
-| Galaxy Ansible Introduction     | [Video](#) | [Slides][ansible-galaxy-slides]    |
-| Database                        | [Video](#) | [slides][db-slides]                |
-| uWSGI                           | [Video](#) | [slides][uwsgi-slides]             |
-| Part 1: Basic Installation      | [Video](#) | [Tutorial][ansible-galaxy]         |
-| SystemD                         | [Video](#) | [Slides][systemd-slides]           |
-| Part 2: Towards Production      | [Video](#) | [Tutorial (cont.)][ansible-galaxy] |
-| Production                      | [Video](#) | [Production][production-slides]    |
-| Part 3: Advanced Install        | [Video](#) | [Tutorial (cont.)][ansible-galaxy] |
+| **Topic**                   | **Video**                                       | **Slides / Materials**             |
+| ---------                   | ---------                                       | ----------------------             |
+| Welcome and introduction    | [Video](#)                                      |                                    |
+| Intro to Ansible            | [Video](https://youtu.be/KFpbfmN0OTE)           | [Slides][ansible-slides]           |
+| Ansible                     | [Video](https://youtu.be/2KdT0sYKUeE)           | [Tutorial][ansible-exercise]       |
+| Galaxy Ansible Introduction | [Video](https://youtu.be/JN-C5UbHthY)           | [Slides][ansible-galaxy-slides]    |
+| Part 0: Playbook Overview   | [Video](https://youtu.be/FVrgzP4F4Nw)\*         | [Tutorial][ansible-galaxy]         |
+| Part 1: Basic Installation  | [Video](https://youtu.be/FVrgzP4F4Nw&t=544s)\*  | [Tutorial (cont.)][ansible-galaxy] |
+| Database                    | [Video](https://youtu.be/FVrgzP4F4Nw&t=954s)\*  | [slides][db-slides]                |
+| SystemD                     | [Video](https://youtu.be/FVrgzP4F4Nw&t=3409s)\* | [Slides][systemd-slides]           |
+| Part 2: Towards Production  | [Video](https://youtu.be/FVrgzP4F4Nw&t=3750s)\* | [Tutorial (cont.)][ansible-galaxy] |
+| Production                  | [Video](https://youtu.be/FVrgzP4F4Nw&t=4151s)\* | [Production][production-slides]    |
+| Part 3: Advanced Install    | [Video](https://youtu.be/FVrgzP4F4Nw&t=4552s)\* | [Tutorial (cont.)][ansible-galaxy] |
+| uWSGI                       |                                                 | [slides][uwsgi-slides]             |
 
+\*: these are all specific timepoints within the same video.
 
 ### Tuesday
 
 
-| **Topic**                   | **Video**  | **Slides / Materials**           |
-| ---------                   | ---------  | ----------------------           |
-| Running jobs in Singularity | [Video](#) | [Tutorial][singularity-exercise] |
-| Galaxy Tool Shed            | [Video](#) | [Slides][toolshed-slides]        |
-| Ephemeris (Intro)           | [Video](#) | [Slides][ephemeris-slides]       |
-| Ephemeris                   | [Video](#) | [Tutorial][ephemeris-exercise]   |
-| Users, Groups, and Quotas   | [Video](#) | [Slides][users-groups-slides]    |
-| Reference Data (Intro)      | [Video](#) | [Slides][ref-genomes-slides]     |
-| Reference Data              | [Video](#) | [Tutorial][cvmfs-exercise]       |
-| BioBlend (Intro)            | [Video](#) | [Slides][bioblend-slides]        |
-| BioBlend                    | [Video](#) | [Tutorial][bioblend-exercise]    |
+| **Topic**                   | **Video**                                     | **Slides / Materials**           |
+| ---------                   | ---------                                     | ----------------------           |
+| Running jobs in Singularity | [Video](https://youtu.be/airzg4-ETEs)         | [Tutorial][singularity-exercise] |
+| Ephemeris (Intro)           | [Video](https://youtu.be/7Qqwrzn--YI&t=0s)    | [Slides][ephemeris-slides]       |
+| Ephemeris                   | [Video](https://youtu.be/7Qqwrzn--YI&t=1122s) | [Tutorial][ephemeris-exercise]   |
+| Users, Groups, and Quotas   | [Video](https://youtu.be/crywu31L8qg)         | [Slides][users-groups-slides]    |
+| Reference Data (Intro)      | [Video](https://youtu.be/g_cavAO-fBM)         | [Slides][ref-genomes-slides]     |
+| Reference Data              | [Video](https://youtu.be/X3iFMZP_fQ8)         | [Tutorial][cvmfs-exercise]       |
+| BioBlend (Intro)            | [Video](https://youtu.be/bOv5yNRc2hc)         | [Slides][bioblend-slides]        |
+| BioBlend                    |                                               | [Tutorial][bioblend-exercise]    |
 
 
 
 ### Wednesday
 
-| **Topic**                              | **Video**  | **Slides / Materials**           |
-| ---------                              | ---------  | ----------------------           |
-| Galaxy Cluster Computing (Intro)       | [Video](#) | [Slides][cluster-slides]         |
-| Connecting Galaxy to a compute cluster | [Video](#) | [Tutorial][cluster-exercise]     |
-| Mapping Jobs to Destinations           | [Video](#) | [Tutorial][job-mapping-exercise] |
-| Recording Job Metrics                  |            | [Tutorial][job-metrics-exercise] |
+| **Topic**                              | **Video**                                    | **Slides / Materials**           |
+| ---------                              | ---------                                    | ----------------------           |
+| Galaxy Cluster Computing (Intro)       | [Video](https://youtu.be/R0NbHscL3jA&t=0s)   | [Slides][cluster-slides]         |
+| Connecting Galaxy to a compute cluster | [Video](https://youtu.be/R0NbHscL3jA&t=940s) | [Tutorial][cluster-exercise]     |
+| Mapping Jobs to Destinations           | [Video](https://youtu.be/qX8GjTJwnAk)        | [Tutorial][job-mapping-exercise] |
+| Recording Job Metrics                  | [Video](https://youtu.be/7CYI5yw9MN8)        | [Tutorial][job-metrics-exercise] |
 
 
 ### Thursday
 
-| **Topic**                               | **Video**  | **Slides / Materials**                   |
-| ---------                               | ---------  | ----------------------                   |
-| Pulsar  (Intro)                         | [Video](#) | [Slides][hetero-slides]                  |
-| Pulsar                                  | [Video](#) | [Exercise][hetero-exercise]              |
-| Storage management                      |            | [Exercise][storage-exercise]             |
-| DB Query (Intro)                        | [Video](#) | [Slides][gxadmin-slides]                 |
-| DB queries, command line & scripts      |            | [gxadmin][gxadmin-exercise]              |
-| Monitoring (Intro)                      | [Video](#) | [Slides][monitoring-slides]              |
-| Monitoring: Telegraf, InfluxDB, Grafana | [Video](#) | [Telegraf Exercise][monitoring-exercise] |
-| Maintenance, Backup and Restore         | [Video](#) | [Slides][maintenance]                    |
+| **Topic**                               | **Video**                             | **Slides / Materials**                   |
+| ---------                               | ---------                             | ----------------------                   |
+| Pulsar  (Intro)                         | [Video](https://youtu.be/M1-Z_2tuQPI) | [Slides][hetero-slides]                  |
+| Pulsar                                  | [Video](https://youtu.be/a7fKJT4Fs9k) | [Exercise][hetero-exercise]              |
+| Storage management                      | TBA                                   | [Exercise][storage-exercise]             |
+| DB Query (Intro)                        | [Video](https://youtu.be/QFwOgDyFSSA) | [Slides][gxadmin-slides]                 |
+| DB queries, command line & scripts      | TBA                                   | [gxadmin][gxadmin-exercise]              |
+| Monitoring (Intro)                      | [Video](https://youtu.be/qcp9lEUxCGI) | [Slides][monitoring-slides]              |
+| Monitoring: Telegraf, InfluxDB, Grafana | TBA                                   | [Telegraf Exercise][monitoring-exercise] |
+| Maintenance, Backup and Restore         | [Video](https://youtu.be/41_3WHXZA-o) | [Slides][maintenance]                    |
 
 ### Friday
 
 Today is a "Choose Your Own Adventure" day. Choose the content you're interested in, and we'll be around to support you.
 
-| **Topic**                                           | **Slides**                         | **Exercises**                                                    |
-| ---------                                           | ---------                          | -------------                                                    |
-| Monitoring With Reports                             |                                    | [Reports Exercise][monitoring-reports]                           |
-| TIaaS                                               |                                    | [TIaaS Exercise][tiaas-exercise]                                 |
-| Interactive Tools                                   | [Slides][interactive-tools-slides] | [Exercise][interactive-tools]                                    |
-| Jenkins & Automation                                |                                    | [Exercise][jenkins-exercise]                                     |
-| Advanced Customisation                              | [Slides][advanced-customisation]   |                                                                  |
-| When things go wrong: Galaxy Server Troubleshooting | [Slides][troubleshooting-slides]   |                                                                  |
-| What's new in Galaxy                                | [Slides][whats-new]                |                                                                  |
-| Python 2 to Python 3!                               | [Docs][py2to3]                     |                                                                  |
-| Tool Development                                    | [Slides][tool-dev-slides]          | [Exercise][planemo]                                              |
-| Dataset collections                                 |                                    | [DCs][dc], [Rule based][rb]                                      |
-| Developing your own Training                        |                                    | [Setting up][training-jekyll], [Exercise][training-new-tutorial] |
-| Securing your Galaxy                                |  TBA                               |                                                                  |
+| **Topic**                                           | **Video**                             | **Slides / Materials**                                            |
+| ---------                                           | ---------                             | -------------                                                     |
+| What's new in Galaxy                                |                                       | Slides: [2019][whats-new-2019], [2020][whats-new-2020]            |
+| Training Infrastructure as a Service (TIaaS)        |                                       | [TIaaS Exercise][tiaas-exercise]                                  |
+| Monitoring With Reports                             |                                       | [Reports Exercise][monitoring-reports]                            |
+| Interactive Tools                                   | [Video](https://youtu.be/lACsIhnbTbE) | [Slides][interactive-tools-slides], [Exercise][interactive-tools] |
+| Jenkins & Automation                                |                                       | [Exercise][jenkins-exercise]                                      |
+| Advanced Customisation                              |                                       | [Slides][advanced-customisation]                                  |
+| When things go wrong: Galaxy Server Troubleshooting |                                       | [Slides][troubleshooting-slides]                                  |
+| Python 2 to Python 3!                               |                                       | [Docs][py2to3]                                                    |
+| Tool Development                                    |                                       | [Slides][tool-dev-slides], [Exercise][planemo]                    |
+| Dataset collections                                 |                                       | [DCs][dc], [Rule based][rb]                                       |
+| Developing your own Training                        |                                       | [Setting up][training-jekyll], [Exercise][training-new-tutorial]  |
+| Securing your Galaxy                                | [Video](https://youtu.be/CQLUap74DVA) | Their team is not releasing these until February 2.               |
 
 
 
