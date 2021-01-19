@@ -30,6 +30,8 @@ Every day to help encourage students to talk to one another the earliest awake r
 - Share something from nature that has awed you or brought you peace recently - perhaps a flower, a view, a photo, a scent, a potted plant, a bird that flew past…
 - Name a dream vacation location, if you could be anywhere in the world (or outside it?)
 
+We should reply in threads to student messages where possible to help encourage them to use threads.
+
 ### Touch Base Telcos
 
 We plan to have one touch-base telco per region, probably mid-afternoon (14[J (Juliett)](https://en.wikipedia.org/wiki/List_of_military_time_zones#cite_ref-Juliet_3-0)). Here we'll let people join a Zoom call and just chat / ask questions / etc. [Touch Base Telco Meeting URL](https://us02web.zoom.us/j/85107038451) (password is `GAT2021`).
