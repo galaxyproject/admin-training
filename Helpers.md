@@ -10,7 +10,7 @@ Region                      | Abbr | Coordinator
 ------                      | ---- | -----------
 Asia/Pacific, Oceania       | APO  | Catherine Bromhead
 Europe, Middle East, Africa | EMEA | Martin Cech
-Americas                    | Am   | Sergey Golitsynskiy
+Americas                    | Amer | Sergey Golitsynskiy
 
 ## Communications
 
@@ -20,13 +20,19 @@ All communication will occur on slack.
 
 We plan to have one touch-base telco per region, probably mid-afternoon (14[J (Juliett)](https://en.wikipedia.org/wiki/List_of_military_time_zones#cite_ref-Juliet_3-0)). Here we'll let people join a Zoom call and just chat / ask questions / etc. [Touch Base Telco Meeting URL](https://us02web.zoom.us/j/85107038451) (password is `GAT2021`).
 
-### Student Progress Polling
+### Student Progress Surveying
 
-At regular intervals we'll write a message like "Is everything going OK for everyone?" and the person posting it should select two reactions (:heavy_check_mark:, :x: are probably good options.) If people are responding negatively, then in that thread we can ping them and ask what's up.
+At regular intervals we'll write a message like "Is everything going without issue for everyone?" and the person posting it should select two reactions (:heavy_check_mark:, :x: (`:heavy_check_mark: :x:`) are probably good options and not so region/language/culture biased.) If people are responding negatively, then in that thread we can ping them and ask what's up.
+
+We should encourage students to write in the chat if they have issues or simply want to celebrate successfully completing a tutorial.
 
 ### Handover
 
-At the end of the day in a particular region we'll note that we're switching off to the next region, pinging the person you're handing over to. This should help students in between regions understand what's going on. We have a ~1h gap between APO/EMEA, 3-4h overlap between EMEA/Am, and 0 hour gap between Am/APO
+At the end of the day in a particular region we'll note that we're switching off to the next region, pinging the person you're handing over to. This should help students in between regions understand what's going on. We have a ~1h gap between APO/EMEA, 3-4h overlap between EMEA/Amer, and 0 hour gap between Amer/APO.
+
+E.g.
+
+> "I'm finishing up for the day in the EMEA region, @Sergey and Americas are online to answer your questions from here"
 
 ## VMs
 
@@ -36,7 +42,7 @@ Region                      | Abbr | VM Admins
 ------                      | ---- | -----------
 Asia/Pacific, Oceania       | APO  | Simon Gladmann / Catherine Bromhead
 Europe, Middle East, Africa | EMEA | Gianmauro Cuccuru
-Americas                    | Am   | Alexandru Mahmoud (via Martin Cech)
+Americas                    | Amer   | Alexandru Mahmoud (via Martin Cech)
 
 One of the region coordinators can run the playbook
 
