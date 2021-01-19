@@ -18,10 +18,7 @@ gat-[0:79].eu.training.galaxyproject.eu
 
 # American machines
 [workshop_us]
-149.165.170.130
-149.165.171.173
-149.165.156.169
-149.165.171.202
+gat-[0:3].us.training.galaxyproject.eu
 
 # Some variables apply to every member of the group
 [workshop_instances:vars]
