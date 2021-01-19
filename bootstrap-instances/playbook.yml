@@ -26,22 +26,43 @@
       hostname:
         name: "{{ inventory_hostname }}"
 
-    - name: Set authorized key on training machine
+    - name: "Add Region Key {{ ansible_ssh_private_key_file }}.pub to authorized keys"
       authorized_key:
         user: ubuntu
         state: present
         key: "{{ lookup('file', ansible_ssh_private_key_file + '.pub') }}"
 
-    - name: Allow ssh to localhost
+    - name: "Add remote id_rsa to authorized_keys (allows ssh to localhost)"
       authorized_key:
         user: ubuntu
         state: present
         key: "{{ lookup('file', 'id_rsa.pub') }}"
 
+    - name: "Add one key to rule them all to authorized keys"
+      authorized_key:
+        user: ubuntu
+        state: present
+        key: "{{ lookup('file', 'gat-one-key-to-rule-them-all.pub') }}"
+
+    #- name: Switch to kiwi update servers
+      #copy:
+        #content: |
+            #deb http://nz.archive.ubuntu.com/ubuntu/ focal main restricted universe multiverse
+            #deb http://nz.archive.ubuntu.com/ubuntu/ focal-updates main restricted universe multiverse
+            #deb http://nz.archive.ubuntu.com/ubuntu/ focal-backports main restricted universe multiverse
+            #deb http://nz.archive.ubuntu.com/ubuntu/ focal-security main restricted universe multiverse
+        #dest: /etc/apt/sources.list.d/au_archive_ubuntu_com_ubuntu.list
+        #mode: 0644
+      #when: "'workshop_oz' in {{ group_names }}"
+      #tags:
+        #- upgrades
+
     - name: Update repos
       apt:
         update_cache: yes
         cache_valid_time: 900
+      tags:
+        - upgrades
 
     - name: Upgrade packages
       apt:
@@ -49,6 +70,8 @@
         autoremove: yes
       notify:
         - reboot
+      tags:
+        - upgrades
 
     - name: Ensure sshd allows password auth
       replace:
