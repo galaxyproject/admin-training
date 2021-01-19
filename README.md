@@ -62,14 +62,14 @@ This day covers getting a Galaxy server setup with Ansible, a server you will de
 | Intro to Ansible            | [Video](https://youtu.be/KFpbfmN0OTE)           | [Slides][ansible-slides]           |
 | Ansible                     | [Video](https://youtu.be/2KdT0sYKUeE)           | [Tutorial][ansible-exercise]       |
 | Galaxy Ansible Introduction | [Video](https://youtu.be/JN-C5UbHthY)           | [Slides][ansible-galaxy-slides]    |
-| Part 0: Playbook Overview   | [Video](https://youtu.be/FVrgzP4F4Nw)\*         | [Tutorial][ansible-galaxy]         |
-| Part 1: Basic Installation  | [Video](https://youtu.be/FVrgzP4F4Nw&t=544s)\*  | [Tutorial (cont.)][ansible-galaxy] |
-| Database                    | [Video](https://youtu.be/FVrgzP4F4Nw&t=954s)\*  | [slides][db-slides]                |
+| Part 0: Playbook Overview   | [Video](https://youtu.be/FVrgzP4F4Nw)\*         | [Tutorial part 0][ansible-galaxy]         |
+| Part 1: Basic Installation  | [Video](https://youtu.be/FVrgzP4F4Nw&t=544s)\*  | [Tutorial part 1][ansible-galaxy] |
+| Database                    | [Video](https://youtu.be/FVrgzP4F4Nw&t=954s)\*  | [Slides][db-slides]                |
 | SystemD                     | [Video](https://youtu.be/FVrgzP4F4Nw&t=3409s)\* | [Slides][systemd-slides]           |
-| Part 2: Towards Production  | [Video](https://youtu.be/FVrgzP4F4Nw&t=3750s)\* | [Tutorial (cont.)][ansible-galaxy] |
+| Part 2: Towards Production  | [Video](https://youtu.be/FVrgzP4F4Nw&t=3750s)\* | [Tutorial part 2][ansible-galaxy] |
 | Production                  | [Video](https://youtu.be/FVrgzP4F4Nw&t=4151s)\* | [Production][production-slides]    |
-| Part 3: Advanced Install    | [Video](https://youtu.be/FVrgzP4F4Nw&t=4552s)\* | [Tutorial (cont.)][ansible-galaxy] |
-| uWSGI                       |                                                 | [slides][uwsgi-slides]             |
+| Part 3: Advanced Install    | [Video](https://youtu.be/FVrgzP4F4Nw&t=4552s)\* | [Tutorial part 3][ansible-galaxy] |
+| uWSGI                       |                                                 | [Slides][uwsgi-slides]             |
 
 \*: these are all specific timepoints within the same video.
 
@@ -107,7 +107,7 @@ This day covers getting a Galaxy server setup with Ansible, a server you will de
 | Pulsar                                  | [Video](https://youtu.be/a7fKJT4Fs9k) | [Exercise][hetero-exercise]              |
 | Storage management                      | TBA                                   | [Exercise][storage-exercise]             |
 | DB Query (Intro)                        | [Video](https://youtu.be/QFwOgDyFSSA) | [Slides][gxadmin-slides]                 |
-| DB queries, command line & scripts      | TBA                                   | [gxadmin][gxadmin-exercise]              |
+| DB queries, command line & scripts      | TBA                                   | [Exercise][gxadmin-exercise]              |
 | Monitoring (Intro)                      | [Video](https://youtu.be/qcp9lEUxCGI) | [Slides][monitoring-slides]              |
 | Monitoring: Telegraf, InfluxDB, Grafana | TBA                                   | [Telegraf Exercise][monitoring-exercise] |
 | Maintenance, Backup and Restore         | [Video](https://youtu.be/41_3WHXZA-o) | [Slides][maintenance]                    |
