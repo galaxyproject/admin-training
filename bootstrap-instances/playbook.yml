@@ -181,13 +181,15 @@
         - name: Set a password if requested
           user:
             name: ubuntu
-            password: "{{ actual_pw.stdout | password_hash('sha512', 'gat2020bcc')  }}"
+            password: "{{ actual_pw.stdout | password_hash('sha512', 'gatGATgat')  }}"
 
         - name: "Output password for admins"
           debug:
             msg: "{{ actual_pw.stdout  }}"
 
       when: set_password|bool
+      tags:
+        - password
 
   handlers:
     - name: reboot
