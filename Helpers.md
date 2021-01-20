@@ -87,3 +87,7 @@ We don't expect issues here but sometimes machines just get completely screwed u
 	1. To reassign them, change [the spreadsheet](https://gxy.io/gatmachines)
 	2. contact them on slack.
 2. and we'll rebuild spares in the background
+
+## Wrap Up
+
+- At the end we will offer completion certificates, if they can show they completed a survey.
