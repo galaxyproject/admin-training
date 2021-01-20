@@ -16,6 +16,20 @@ Americas                    | Amer | Sergey Golitsynskiy
 
 All communication will occur on slack.
 
+### FAQs
+
+So we've used google doc style FAQs a lot in the past, they work very nicely with distributed events. The idea is:
+
+1. students ask questions (in slack, just like gitter in the past)
+2. If we reasonably expect to see this Q again, we copy it to the FAQ as clearer writeups
+
+Students should check there first to see if their question is answered before
+asking. The FAQ will be especially valuable for Amer, as APO/EMEA will have
+answered most of the common questions.
+
+- [Read only link to provide to students](https://docs.google.com/document/d/e/2PACX-1vRkFTRRDzNdUjPMc4uZot8am94LyczINbAyJ3Lerj7fef0wiUF810SBaDOB2sy31hDc6SHz90qEHAlu/pub)
+- [Read-write link for you, the helper](https://docs.google.com/document/d/1mmhZRpV4XQnMB5UoPGDw0qT8I3oF2DIEYPxvPH4tDz0/edit?usp=sharing)
+
 ### Ice Breaker
 
 Every day to help encourage students to talk to one another the earliest awake region coordinator (i.e. APO region) will post an ice breaker. Here are some to choose from:
