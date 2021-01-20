@@ -204,6 +204,7 @@ Helena Rasche | Netherlands | [Erasmus MC Bioinformatics Group](https://erasmusm
 Nicola Soranzo | UK | [Earlham Institute](https://www.earlham.ac.uk)
 Martin Čech | CZ | [Elixir Czech Republic](https://www.elixir-czech.cz/), [RECETOX](https://www.recetox.muni.cz/en)
 Anthony Bretaudeau | FR | [GenOuest](https://www.genouest.org/), [BIPAA](https://bipaa.genouest.org/)
+Estelle Ancelet | FR | [INRAE](https://www.inrae.fr/en)
 
 (others coming soon.)
 
