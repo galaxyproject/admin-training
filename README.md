@@ -19,10 +19,6 @@ logo based on a [Hubble Image](https://hubblesite.org/contents/media/images/2018
 
 This training is offered Online, January 25-29. [**Register here**](https://galaxyproject.org/events/2021-01-admin-training/)
 
-## Training VM instances
-
-Galaxy training instances are be bootstrapped with [a small Ansible playbook](/bootstrap-instances), which you may find useful for repeating the exercises later using a VM, Docker image, etc.
-
 ## Important Links
 
 - [Slack for this workshop](https://join.slack.com/t/galaxyadmintraining/shared_invite/zt-kswf6j39-cgllk4JdyT6Vg98DH63lzw) - Chat & Call here. Use proper channels.
@@ -236,6 +232,10 @@ If you're asked to provide training infrastructure for your users, but do not ha
 We are working on updating the training materials with feedback from the training, and looking into the possibility to develop some automated linting of configurations, to help make Galaxy deployment more error-proof.
 
 Let us know if you have any questions or feedback! Chat on Gitter, file issues on GitHub, let us know what features are interesting and important to the admin community.
+
+## Training VM instances
+
+Galaxy training instances are be bootstrapped with [a small Ansible playbook](/bootstrap-instances), which you may find useful for repeating the exercises later using a VM, Docker image, etc.
 
 ## Sponsors
 
