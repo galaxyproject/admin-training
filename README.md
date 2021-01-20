@@ -12,12 +12,10 @@ logo based on a [Hubble Image](https://hubblesite.org/contents/media/images/2018
 	- [Thursday](#thursday)
 	- [Friday](#friday)
 - [Admin Training Materials](https://training.galaxyproject.org/training-material/topics/admin/)
-- [Join the Discussion](https://gxy.io/gatchat)
-- [Galaxy Training Materials](https://training.galaxyproject.org/)
 
-## Location, Logistics, and Registration
+## Location, Logistics
 
-This training is offered Online, January 25-29. [**Register here**](https://galaxyproject.org/events/2021-01-admin-training/)
+This training is offered Online, January 25-29, and is mostly asynchronous. Throughout the week you will always have access to trainers that are ready to help you with tasks or understanding. However the bulk of the work consist of **you working at your own pace** through the materials we prepared for you.
 
 ## Important Links
 
