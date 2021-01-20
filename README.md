@@ -203,6 +203,7 @@ Name | Country | Affiliation(s)
 Helena Rasche | Netherlands | [Erasmus MC Bioinformatics Group](https://erasmusmc-bioinformatics.github.io/), [ATGM, Avans Hogeschool Breda](https://www.avans.nl)
 Nicola Soranzo | UK | [Earlham Institute](https://www.earlham.ac.uk)
 Martin Čech | CZ | [Elixir Czech Republic](https://www.elixir-czech.cz/), [RECETOX](https://www.recetox.muni.cz/en)
+Anthony Bretaudeau | FR | [GenOuest](https://www.genouest.org/), [BIPAA](https://bipaa.genouest.org/)
 
 (others coming soon.)
 
