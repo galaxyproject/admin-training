@@ -206,6 +206,7 @@ Martin Čech | CZ | [Elixir Czech Republic](https://www.elixir-czech.cz/), [RECE
 Anthony Bretaudeau | FR | [GenOuest](https://www.genouest.org/), [BIPAA](https://bipaa.genouest.org/)
 Estelle Ancelet | FR | [INRAE](https://www.inrae.fr/en)
 Sergey Golitsynskiy | US | [Johns Hopkins University](https://jhu.edu)
+Gianmauro Cuccuru | DE | [Albert-Ludwigs-University Freiburg](https://galaxyproject.eu/freiburg/)
 
 (others coming soon.)
 
