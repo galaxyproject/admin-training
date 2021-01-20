@@ -25,9 +25,9 @@ Galaxy training instances are be bootstrapped with [a small Ansible playbook](/b
 
 ## Important Links
 
-- [https://gxy.io/gat-questions - Q&A!](https://gxy.io/gat-questions)
-- [Slack for this workshop - Chat&Call here](https://join.slack.com/t/galaxyadmintraining/shared_invite/zt-kswf6j39-cgllk4JdyT6Vg98DH63lzw)
-- [https://gxy.io/gatmachines - VMs](https://gxy.io/gatmachines)
+- [Slack for this workshop](https://join.slack.com/t/galaxyadmintraining/shared_invite/zt-kswf6j39-cgllk4JdyT6Vg98DH63lzw) - Chat & Call here. Use proper channels.
+- [gxy.io/gatmachines](https://gxy.io/gatmachines) - The addresses and passwords for VMs. Find the one assigned to you.
+- [gxy.io/gat-questions](https://gxy.io/gat-questions) - Document continuously filled with questions and answers that we all encounter and solve.
 
 ## Timetable
 
