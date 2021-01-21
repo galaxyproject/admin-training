@@ -48,9 +48,15 @@ The schedule for each day is a suggestion of what we believe is approximately 5 
 - If you're done with a day and want to do more, please feel free to continue!
 - If you can't complete everything at the same pace, that's also fine! The VMs will be available for a week after the event.
 
+### CoC
+
+Everyone is expected to abide by the [Galaxy Code of Conduct (CoC)](https://github.com/galaxyproject/galaxy/blob/dev/CODE_OF_CONDUCT.md). We want this to be a welcoming and friendly environment for everyone! Please see the CoC for more information and the point of contact for any issues.
+
 ### Monday
 
 This day covers getting a Galaxy server setup with Ansible, a server you will develop for the rest of the week.
+
+**Start** today by introducing yourself in the [#general][slack-general] channel in Slack! Tell us where you're from, and and one thing about your surroundings (e.g. it's snowing outside, there's a squirrel on my porch, my cat is on my keyboard)
 
 | **Topic**                   | **Video**                                       | **Slides / Materials**            | **Slack Channel**            |
 | --------------------------- | ----------------------------------------------- | --------------------------------- | ---------------------------- |
@@ -71,6 +77,7 @@ This day covers getting a Galaxy server setup with Ansible, a server you will de
 
 ### Tuesday
 
+**Start** today by sharing *how your 5-year-old self would have finished this sentence? “When I grow up, I want to be …”?* in the [#general][slack-general] channel in Slack!
 
 | **Topic**                   | **Video**                                     | **Slides / Materials**           | Slack Channel           |
 | --------------------------- | --------------------------------------------- | -------------------------------- | ----------------------- |
@@ -88,6 +95,8 @@ This day covers getting a Galaxy server setup with Ansible, a server you will de
 
 ### Wednesday
 
+**Start** today by sharing *what is your recent favorite tool or app or software* in the [#general][slack-general] channel in Slack.
+
 | **Topic**                              | **Video**                                    | **Slides / Materials**           | Slack Channel                 |
 | -------------------------------------- | -------------------------------------------- | -------------------------------- | ----------------------------- |
 | Galaxy Cluster Computing (Intro)       | [Video](https://youtu.be/R0NbHscL3jA&t=0s)   | [Slides][cluster-slides]         | [link][slack-compute-cluster] |
@@ -97,6 +106,8 @@ This day covers getting a Galaxy server setup with Ansible, a server you will de
 
 
 ### Thursday
+
+**Start** today by sharing *a dream vacation location, if you could be anywhere in the world (or outside it?)* in the [#general][slack-general] channel in Slack.
 
 | **Topic**                               | **Video**                             | **Slides / Materials**                   | Slack Channel            |
 | --------------------------------------- | ------------------------------------- | ---------------------------------------- | ------------------------ |
@@ -111,7 +122,9 @@ This day covers getting a Galaxy server setup with Ansible, a server you will de
 
 ### Friday
 
-Today is a "Choose Your Own Adventure" day. Choose the content you're interested in, and we'll be around to support you.
+**Start** today by sharing *What music/artist/audiobook have you been listening to these days?* in the [#general][slack-general] channel in Slack.
+
+Today is a ["Choose Your Own Adventure"](https://en.wikipedia.org/wiki/Choose_Your_Own_Adventure) day. Choose the content you're interested in, and we'll be around to support you.
 
 | **Topic**                                           | **Video**                             | **Slides / Materials**                                       | Slack Channel            |
 | --------------------------------------------------- | ------------------------------------- | ------------------------------------------------------------ | ------------------------ |

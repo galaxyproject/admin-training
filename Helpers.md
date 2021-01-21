@@ -30,22 +30,6 @@ answered most of the common questions.
 - [Read only link to provide to students](https://docs.google.com/document/d/e/2PACX-1vRkFTRRDzNdUjPMc4uZot8am94LyczINbAyJ3Lerj7fef0wiUF810SBaDOB2sy31hDc6SHz90qEHAlu/pub)
 - [Read-write link for you, the helper](https://docs.google.com/document/d/1mmhZRpV4XQnMB5UoPGDw0qT8I3oF2DIEYPxvPH4tDz0/edit?usp=sharing)
 
-### Ice Breaker
-
-Every day to help encourage students to talk to one another the earliest awake region coordinator (i.e. APO region) will post an ice breaker. Here are some to choose from:
-
-- What is the coolest, most mind blowing fact (nature/people/animal etc.) you know?
-- What did you think science was when you were at school?
-- How would your 5-year-old self have finished this sentence? “When I grow up, I want to be …”?
-- If you could meet one person from the past (before living memory, say the ~1930s or earlier), who would it be?
-- If you have to spend 2 months in a basic house on a small island, what 2-3 things would you bring along to take care of your physical and mental health?
-- What music/artist/audiobook have you been listening to these days?
-- What is your recent favorite tool or app or software?
-- Share something from nature that has awed you or brought you peace recently - perhaps a flower, a view, a photo, a scent, a potted plant, a bird that flew past…
-- Name a dream vacation location, if you could be anywhere in the world (or outside it?)
-
-We should reply in threads to student messages where possible to help encourage them to use threads.
-
 ### Touch Base Telcos
 
 We plan to have one touch-base telco per region, probably mid-afternoon (14[J (Juliett)](https://en.wikipedia.org/wiki/List_of_military_time_zones#cite_ref-Juliet_3-0)). Here we'll let people join a Zoom call and just chat / ask questions / etc. [Touch Base Telco Meeting URL](https://us02web.zoom.us/j/85107038451) (password is `GAT2021`).
