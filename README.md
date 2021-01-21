@@ -1,4 +1,4 @@
-![Galaxy Admin Training logo: GTN star over center of a galaxy background with the text Galaxy Admin Training](./logo.png)
+![Galaxy Admin Training logo: GTN star over center of a galaxy background with the text Galaxy Admin Training](./logos/gat.png)
 
 logo based on a [Hubble Image](https://hubblesite.org/contents/media/images/2018/48/4280-Image.html)
 
@@ -268,16 +268,22 @@ The 2021 Galaxy Admin Training is sponsored by a wide variety of organisations
 
 This course has received funding from EOSC-Life Second Training Open Call. EOSC-Life has received funding from the European Union’s Horizon 2020 programme under grant agreement number 824087
 
-[![EOSC Life logo](eosclogo.png)](https://www.eosc-life.eu/)
+[![EOSC Life logo](./logos/eosc.png)](https://www.eosc-life.eu/)
+
+### Jetstream
+
+We are grateful to Jetstream and the Galaxy Team for providing VMs from their allocation `TG-CCR160022` for this event.
+
+[![Jetstream logo, it's dark red lettering with a teal green wave in an affront to good design](./logos/jetstream.png)](https://jetstream-cloud.org/)
 
 ### Galaxy Australia & Australian BioCommons
 
-Virtual Machines were provided by Galaxy Australia
+A significant portion of our infrastructure was graciously provided by Galaxy Australia
 
-[![Australian BioCommons](https://images.squarespace-cdn.com/content/5d3a4213cf4f5b00014ea1db/1566885344365-8BAMFYV0071E8F8XLWI5/Australian-Biocommons-Logo-Horizontal-144dpi-Transparent.png?content-type=image%2Fpng)](https://www.biocommons.org.au/galaxy-australia)
+[![Australian BioCommons](logos/biocommons.png)](https://www.biocommons.org.au/galaxy-australia)
 
 ### de.NBI
 
 Virtual Machines were provided by the German Federal Ministry of Education and Research BMBF grant 031 A538A de.NBI-RBC.
 
-[![de.NBI Logo](https://usegalaxy-eu.github.io/assets/media/deNBI_Logo_rgb.png)](https://cloud.denbi.de/)
+[![de.NBI Logo](./logos/denbi.png)](https://cloud.denbi.de/)
