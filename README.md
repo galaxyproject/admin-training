@@ -80,6 +80,7 @@ This day covers getting a Galaxy server setup with Ansible, a server you will de
 | Users, Groups, and Quotas   | [Video](https://youtu.be/crywu31L8qg)         | [Slides][users-groups-slides]    | [link][slack-general]   |
 | Reference Data (Intro)      | [Video](https://youtu.be/g_cavAO-fBM)         | [Slides][ref-genomes-slides]     | [link][slack-cvmfs]     |
 | Reference Data              | [Video](https://youtu.be/X3iFMZP_fQ8)         | [Tutorial][cvmfs-exercise]       | [link][slack-cvmfs]     |
+| Data Libraries              | TBA                                           | [Tutorial]data-libraries]        | [link][slack-datalibs]  |
 | BioBlend (Intro)            | [Video](https://youtu.be/bOv5yNRc2hc)         | [Slides][bioblend-slides]        | [link][slack-bioblend]  |
 | BioBlend                    |                                               | [Tutorial][bioblend-exercise]    | [link][slack-bioblend]  |
 
@@ -129,62 +130,64 @@ Today is a "Choose Your Own Adventure" day. Choose the content you're interested
 
 
 
-[welcome-slides]:           https://galaxyproject.github.io/admin-training/2020-barcelona/00-intro/intro.html
-[advanced-customisation]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/advanced-galaxy-customisation/slides.html
-[ansible-exercise]:         https://training.galaxyproject.org/training-material/topics/admin/tutorials/ansible/tutorial.html#your-first-playbook-and-first-role
-[ansible-galaxy-slides]:    https://training.galaxyproject.org/training-material/topics/admin/tutorials/ansible-galaxy/slides.html
-[ansible-galaxy]:           https://training.galaxyproject.org/training-material/topics/admin/tutorials/ansible-galaxy/tutorial.html
-[ansible-slides]:           https://training.galaxyproject.org/training-material/topics/admin/tutorials/ansible/slides.html
-[bioblend-exercise]:        https://mybinder.org/v2/gh/nsoranzo/bioblend-tutorial/master?filepath=bioblend_histories.ipynb
-[bioblend-slides]:          https://training.galaxyproject.org/training-material/topics/dev/tutorials/bioblend-api/slides.html
-[cluster-exercise]:         https://training.galaxyproject.org/training-material/topics/admin/tutorials/connect-to-compute-cluster/tutorial.html
-[cluster-slides]:           https://training.galaxyproject.org/training-material/topics/admin/tutorials/connect-to-compute-cluster/slides.html
-[cvmfs-exercise]:           https://training.galaxyproject.org/training-material/topics/admin/tutorials/cvmfs/tutorial.html
-[data-manager-exercise]:    https://gist.github.com/natefoo/fba6465c1eccb95ffdcfa67d78d8d6b4
-[db-slides]:                https://training.galaxyproject.org/training-material/topics/admin/tutorials/database/slides.html
-[dc]:                       https://training.galaxyproject.org/training-material/topics/galaxy-data-manipulation/tutorials/processing-many-samples-at-once/tutorial.html#20-using-collections
+[advanced-customisation]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/advanced-galaxy-customisation/slides.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
+[ansible-exercise]:         https://training.galaxyproject.org/training-material/topics/admin/tutorials/ansible/tutorial.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021#your-first-playbook-and-first-role
+[ansible-galaxy-slides]:    https://training.galaxyproject.org/training-material/topics/admin/tutorials/ansible-galaxy/slides.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
+[ansible-galaxy]:           https://training.galaxyproject.org/training-material/topics/admin/tutorials/ansible-galaxy/tutorial.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
+[ansible-slides]:           https://training.galaxyproject.org/training-material/topics/admin/tutorials/ansible/slides.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
+[bioblend-slides]:          https://training.galaxyproject.org/training-material/topics/dev/tutorials/bioblend-api/slides.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
+[cluster-exercise]:         https://training.galaxyproject.org/training-material/topics/admin/tutorials/connect-to-compute-cluster/tutorial.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
+[cluster-slides]:           https://training.galaxyproject.org/training-material/topics/admin/tutorials/connect-to-compute-cluster/slides.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
+[cvmfs-exercise]:           https://training.galaxyproject.org/training-material/topics/admin/tutorials/cvmfs/tutorial.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
+[db-slides]:                https://training.galaxyproject.org/training-material/topics/admin/tutorials/database/slides.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
+[dc]:                       https://training.galaxyproject.org/training-material/topics/galaxy-data-manipulation/tutorials/processing-many-samples-at-once/tutorial.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021#20-using-collections
 [deployment-slides]:        https://training.galaxyproject.org/training-material/topics/admin/slides/introduction.html
-[ephemeris-exercise]:       https://training.galaxyproject.org/training-material/topics/admin/tutorials/tool-management/tutorial.html
-[ephemeris-slides]:         https://training.galaxyproject.org/training-material/topics/admin/tutorials/tool-management/slides.html
-[gxadmin-exercise]:         https://training.galaxyproject.org/training-material/topics/admin/tutorials/gxadmin/tutorial.html
-[gxadmin-slides]:           https://training.galaxyproject.org/training-material/topics/admin/tutorials/gxadmin/slides.html
-[hetero-exercise]:          https://training.galaxyproject.org/training-material/topics/admin/tutorials/heterogeneous-compute/tutorial.html
-[hetero-slides]:            https://training.galaxyproject.org/training-material/topics/admin/tutorials/heterogeneous-compute/slides.html
-[interactive-tools-slides]: https://training.galaxyproject.org/training-material/topics/admin/tutorials/interactive-tools/slides.html
-[interactive-tools]:        https://training.galaxyproject.org/training-material/topics/admin/tutorials/interactive-tools/tutorial.html
-[jenkins-exercise]:         https://training.galaxyproject.org/training-material/topics/admin/tutorials/jenkins/tutorial.html
+[ephemeris-exercise]:       https://training.galaxyproject.org/training-material/topics/admin/tutorials/tool-management/tutorial.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
+[ephemeris-slides]:         https://training.galaxyproject.org/training-material/topics/admin/tutorials/tool-management/slides.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
+[gxadmin-exercise]:         https://training.galaxyproject.org/training-material/topics/admin/tutorials/gxadmin/tutorial.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
+[gxadmin-slides]:           https://training.galaxyproject.org/training-material/topics/admin/tutorials/gxadmin/slides.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
+[hetero-exercise]:          https://training.galaxyproject.org/training-material/topics/admin/tutorials/heterogeneous-compute/tutorial.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
+[data-libraries]:           https://training.galaxyproject.org/training-material/topics/admin/tutorials/data-library/tutorial.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
+[hetero-slides]:            https://training.galaxyproject.org/training-material/topics/admin/tutorials/heterogeneous-compute/slides.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
+[interactive-tools-slides]: https://training.galaxyproject.org/training-material/topics/admin/tutorials/interactive-tools/slides.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
+[interactive-tools]:        https://training.galaxyproject.org/training-material/topics/admin/tutorials/interactive-tools/tutorial.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
+[jenkins-exercise]:         https://training.galaxyproject.org/training-material/topics/admin/tutorials/jenkins/tutorial.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
+[job-mapping-exercise]:     https://training.galaxyproject.org/training-material/topics/admin/tutorials/job-destinations/tutorial.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
+[job-metrics-exercise]:     https://training.galaxyproject.org/training-material/topics/admin/tutorials/job-metrics/tutorial.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
+[maintenance]:              https://training.galaxyproject.org/training-material/topics/admin/tutorials/maintenance/slides.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
+[monitoring-exercise]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/monitoring/tutorial.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
+[monitoring-reports]:       https://training.galaxyproject.org/training-material/topics/admin/tutorials/reports/tutorial.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
+[monitoring-slides]:        https://training.galaxyproject.org/training-material/topics/admin/tutorials/monitoring/slides.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
+[pam-slides]:               https://training.galaxyproject.org/training-material/topics/admin/tutorials/external-auth/slides.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
+[production-slides]:        https://training.galaxyproject.org/training-material/topics/admin/tutorials/production/slides.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
+[rb]:                       https://training.galaxyproject.org/training-material/topics/galaxy-data-manipulation/tutorials/upload-rules/tutorial.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
+[ref-genomes-slides]:       https://training.galaxyproject.org/training-material/topics/admin/tutorials/cvmfs/slides.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
+[singularity-exercise]:     https://training.galaxyproject.org/training-material/topics/admin/tutorials/singularity/tutorial.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
+[singularity-exercise]:     https://training.galaxyproject.org/training-material/topics/admin/tutorials/singularity/tutorial.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
+[storage-exercise]:         https://training.galaxyproject.org/training-material/topics/admin/tutorials/object-store/tutorial.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
+[systemd-slides]:           https://training.galaxyproject.org/training-material/topics/admin/tutorials/systemd-supervisor/slides.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
+[telegraf-exercise]:        https://training.galaxyproject.org/training-material/topics/admin/tutorials/monitoring/tutorial.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
+[tiaas-exercise]:           https://training.galaxyproject.org/training-material/topics/admin/tutorials/tiaas/tutorial.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
+[tool-dev-slides]:          https://training.galaxyproject.org/training-material/topics/dev/tutorials/tool-integration/slides.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
+[toolshed-slides]:          https://training.galaxyproject.org/training-material/topics/admin/tutorials/toolshed/slides.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
+[training-jekyll]:          https://training.galaxyproject.org/training-material/topics/contributing/tutorials/running-jekyll/tutorial.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
+[training-new-tutorial]:    https://training.galaxyproject.org/training-material/topics/contributing/tutorials/create-new-tutorial/tutorial.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
+[troubleshooting-slides]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/troubleshooting/slides.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
+[updating-slides]:          https://training.galaxyproject.org/training-material/topics/admin/tutorials/upgrading/slides.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021#1
+[upgrade]:                  https://training.galaxyproject.org/training-material/topics/admin/tutorials/upgrading/slides.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
+[upstream-auth-exercise]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/external-auth/tutorial.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
+[users-groups-slides]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/users-groups-quotas/slides.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
+[uwsgi-slides]:             https://training.galaxyproject.org/training-material/topics/admin/tutorials/uwsgi/slides.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
+
+[bioblend-exercise]:        https://mybinder.org/v2/gh/nsoranzo/bioblend-tutorial/master?filepath=bioblend_histories.ipynb
 [job-conf-xml]:             https://github.com/galaxyproject/galaxy/blob/dev/lib/galaxy/config/sample/job_conf.xml.sample_advanced
-[job-mapping-exercise]:     https://training.galaxyproject.org/training-material/topics/admin/tutorials/job-destinations/tutorial.html
-[job-metrics-exercise]:     https://training.galaxyproject.org/training-material/topics/admin/tutorials/job-metrics/tutorial.html
-[maintenance]:              https://training.galaxyproject.org/training-material/topics/admin/tutorials/maintenance/slides.html
-[monitoring-exercise]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/monitoring/tutorial.html
-[monitoring-reports]:       https://training.galaxyproject.org/training-material/topics/admin/tutorials/reports/tutorial.html
-[monitoring-slides]:        https://training.galaxyproject.org/training-material/topics/admin/tutorials/monitoring/slides.html
-[pam-slides]:               https://training.galaxyproject.org/training-material/topics/admin/tutorials/external-auth/slides.html
+[data-manager-exercise]:    https://gist.github.com/natefoo/fba6465c1eccb95ffdcfa67d78d8d6b4
 [planemo]:                  https://planemo.readthedocs.io/en/latest/writing_standalone.html
-[production-slides]:        https://training.galaxyproject.org/training-material/topics/admin/tutorials/production/slides.html
 [py2to3]:                   https://docs.galaxyproject.org/en/master/admin/python.html
-[rb]:                       https://training.galaxyproject.org/training-material/topics/galaxy-data-manipulation/tutorials/upload-rules/tutorial.html
-[ref-genomes-slides]:       https://training.galaxyproject.org/training-material/topics/admin/tutorials/cvmfs/slides.html
-[singularity-exercise]:     https://training.galaxyproject.org/training-material/topics/admin/tutorials/singularity/tutorial.html
-[singularity-exercise]:     https://training.galaxyproject.org/training-material/topics/admin/tutorials/singularity/tutorial.html
-[storage-exercise]:         https://training.galaxyproject.org/training-material/topics/admin/tutorials/object-store/tutorial.html
-[systemd-slides]:           https://training.galaxyproject.org/training-material/topics/admin/tutorials/systemd-supervisor/slides.html
-[telegraf-exercise]:        https://training.galaxyproject.org/training-material/topics/admin/tutorials/monitoring/tutorial.html
-[tiaas-exercise]:           https://training.galaxyproject.org/training-material/topics/admin/tutorials/tiaas/tutorial.html
-[tool-dev-slides]:          https://training.galaxyproject.org/training-material/topics/dev/tutorials/tool-integration/slides.html
-[toolshed-slides]:          https://training.galaxyproject.org/training-material/topics/admin/tutorials/toolshed/slides.html
-[training-jekyll]:          https://training.galaxyproject.org/training-material/topics/contributing/tutorials/running-jekyll/tutorial.html
-[training-new-tutorial]:    https://training.galaxyproject.org/training-material/topics/contributing/tutorials/create-new-tutorial/tutorial.html
-[troubleshooting-slides]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/troubleshooting/slides.html
-[updating-slides]:          https://training.galaxyproject.org/training-material/topics/admin/tutorials/upgrading/slides.html#1
-[upgrade]:                  https://training.galaxyproject.org/training-material/topics/admin/tutorials/upgrading/slides.html
-[upstream-auth-exercise]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/external-auth/tutorial.html
-[users-groups-slides]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/users-groups-quotas/slides.html
-[uwsgi-slides]:             https://training.galaxyproject.org/training-material/topics/admin/tutorials/uwsgi/slides.html
+
 [whats-new-2019]:           https://bit.ly/gxwhatsnew2019
 [whats-new-2020]:           https://docs.google.com/presentation/d/1LP6BFRc5yxnc5JAkQDlxDN7guPvQPftIsHkNlqQwr-w/edit?usp=sharing
-[slack-general]:              https://galaxyadmintraining.slack.com/archives/C01EYFM13DX
+[slack-general]:            https://galaxyadmintraining.slack.com/archives/C01EYFM13DX
 [slack-ansible]:            https://galaxyadmintraining.slack.com/archives/C01ED8Y8DV4
 [slack-ansible-galaxy]:     https://galaxyadmintraining.slack.com/archives/C01F9RU197S
 [slack-ephemeris]:          https://galaxyadmintraining.slack.com/archives/C01EGTWAUQM
@@ -198,15 +201,16 @@ Today is a "Choose Your Own Adventure" day. Choose the content you're interested
 
 ### Instructors
 
-Name | Country | Affiliation(s)
---- | --- | ---
-Helena Rasche | Netherlands | [Erasmus MC Bioinformatics Group](https://erasmusmc-bioinformatics.github.io/), [ATGM, Avans Hogeschool Breda](https://www.avans.nl)
-Nicola Soranzo | UK | [Earlham Institute](https://www.earlham.ac.uk)
-Martin Čech | CZ | [Elixir Czech Republic](https://www.elixir-czech.cz/), [RECETOX](https://www.recetox.muni.cz/en)
-Anthony Bretaudeau | FR | [GenOuest](https://www.genouest.org/), [BIPAA](https://bipaa.genouest.org/)
-Estelle Ancelet | FR | [INRAE](https://www.inrae.fr/en)
-Sergey Golitsynskiy | US | [Johns Hopkins University](https://jhu.edu)
-Gianmauro Cuccuru | DE | [Albert-Ludwigs-University Freiburg](https://galaxyproject.eu/freiburg/)
+Name                | Country | Affiliation(s)
+---                 | ---     | ---
+Helena Rasche       | NL      | [Erasmus MC Bioinformatics Group](https://erasmusmc-bioinformatics.github.io/), [ATGM, Avans Hogeschool Breda](https://www.avans.nl)
+Nicola Soranzo      | UK      | [Earlham Institute](https://www.earlham.ac.uk)
+Martin Čech         | CZ      | [Elixir Czech Republic](https://www.elixir-czech.cz/), [RECETOX](https://www.recetox.muni.cz/en)
+Anthony Bretaudeau  | FR      | [GenOuest](https://www.genouest.org/), [BIPAA](https://bipaa.genouest.org/)
+Estelle Ancelet     | FR      | [INRAE](https://www.inrae.fr/en)
+Sergey Golitsynskiy | US      | [Johns Hopkins University](https://jhu.edu)
+Gianmauro Cuccuru   | DE      | [Albert-Ludwigs-University Freiburg](https://galaxyproject.eu/freiburg/)
+Saskia Hiltemann    | NL      | [Erasmus MC Bioinformatics Group](https://erasmusmc-bioinformatics.github.io/)
 
 (others coming soon.)
 
