@@ -23,7 +23,7 @@ For the duration of this training (and a week after) you'll be granted access to
 
 - [Slack for this workshop](https://join.slack.com/t/galaxyadmintraining/shared_invite/zt-kswf6j39-cgllk4JdyT6Vg98DH63lzw) - Chat & Call here. Use proper channels.
 - [gxy.io/gatmachines](https://gxy.io/gatmachines) - The addresses and passwords for VMs. Find the one assigned to you.
-- [gxy.io/gat-questions](https://gxy.io/gat-questions) - Document continuously filled with questions and answers that we all encounter and solve.
+- [gxy.io/gat-questions](https://docs.google.com/document/d/e/2PACX-1vRkFTRRDzNdUjPMc4uZot8am94LyczINbAyJ3Lerj7fef0wiUF810SBaDOB2sy31hDc6SHz90qEHAlu/pub) - Document continuously filled with questions and answers that we all encounter and solve.
 
 ## Timetable
 
