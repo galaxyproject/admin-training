@@ -163,7 +163,6 @@ Today is a "Choose Your Own Adventure" day. Choose the content you're interested
 [rb]:                       https://training.galaxyproject.org/training-material/topics/galaxy-data-manipulation/tutorials/upload-rules/tutorial.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
 [ref-genomes-slides]:       https://training.galaxyproject.org/training-material/topics/admin/tutorials/cvmfs/slides.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
 [singularity-exercise]:     https://training.galaxyproject.org/training-material/topics/admin/tutorials/singularity/tutorial.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
-[singularity-exercise]:     https://training.galaxyproject.org/training-material/topics/admin/tutorials/singularity/tutorial.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
 [storage-exercise]:         https://training.galaxyproject.org/training-material/topics/admin/tutorials/object-store/tutorial.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
 [systemd-slides]:           https://training.galaxyproject.org/training-material/topics/admin/tutorials/systemd-supervisor/slides.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
 [telegraf-exercise]:        https://training.galaxyproject.org/training-material/topics/admin/tutorials/monitoring/tutorial.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
