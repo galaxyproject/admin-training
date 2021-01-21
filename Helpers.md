@@ -90,4 +90,4 @@ We don't expect issues here but sometimes machines just get completely screwed u
 
 ## Wrap Up
 
-- At the end we will offer completion certificates, if they can show they completed a survey.
+- At the end we will offer an attendance certificates, if they can show they completed a survey.
