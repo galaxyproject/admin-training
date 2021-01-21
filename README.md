@@ -210,6 +210,7 @@ Estelle Ancelet     | FR      | [INRAE](https://www.inrae.fr/en)
 Sergey Golitsynskiy | US      | [Johns Hopkins University](https://jhu.edu)
 Gianmauro Cuccuru   | DE      | [Albert-Ludwigs-University Freiburg](https://galaxyproject.eu/freiburg/)
 Saskia Hiltemann    | NL      | [Erasmus MC Bioinformatics Group](https://erasmusmc-bioinformatics.github.io/)
+Gildas Le Corguillé | FR      | [ABiMS](http://abims.sb-roscoff.fr/) - [Sorbonne Université](https://www.sorbonne-universite.fr/en)/[CNRS](https://www.cnrs.fr/en), [IFB/ELIXIR-FR](https://www.france-bioinformatique.fr/)
 
 (others coming soon.)
 
