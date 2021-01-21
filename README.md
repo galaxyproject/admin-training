@@ -79,17 +79,17 @@ This day covers getting a Galaxy server setup with Ansible, a server you will de
 
 **Start** today by sharing *how your 5-year-old self would have finished this sentence? “When I grow up, I want to be …”?* in the [#general][slack-general] channel in Slack!
 
-| **Topic**                   | **Video**                                     | **Slides / Materials**           | Slack Channel           |
-| --------------------------- | --------------------------------------------- | -------------------------------- | ----------------------- |
-| Running jobs in Singularity | [Video](https://youtu.be/airzg4-ETEs)         | [Tutorial][singularity-exercise] | [link][slack-general]   |
-| Ephemeris (Intro)           | [Video](https://youtu.be/7Qqwrzn--YI&t=0s)    | [Slides][ephemeris-slides]       | [link][slack-ephemeris] |
-| Ephemeris                   | [Video](https://youtu.be/7Qqwrzn--YI&t=1122s) | [Tutorial][ephemeris-exercise]   | [link][slack-ephemeris] |
-| Users, Groups, and Quotas   | [Video](https://youtu.be/crywu31L8qg)         | [Slides][users-groups-slides]    | [link][slack-general]   |
-| Reference Data (Intro)      | [Video](https://youtu.be/g_cavAO-fBM)         | [Slides][ref-genomes-slides]     | [link][slack-cvmfs]     |
-| Reference Data              | [Video](https://youtu.be/X3iFMZP_fQ8)         | [Tutorial][cvmfs-exercise]       | [link][slack-cvmfs]     |
-| Data Libraries              | TBA                                           | [Tutorial]data-libraries]        | [link][slack-datalibs]  |
-| BioBlend (Intro)            | [Video](https://youtu.be/bOv5yNRc2hc)         | [Slides][bioblend-slides]        | [link][slack-bioblend]  |
-| BioBlend                    |                                               | [Tutorial][bioblend-exercise]    | [link][slack-bioblend]  |
+| **Topic**                   | **Video**                                     | **Slides / Materials**           | Slack Channel                |
+| --------------------------- | --------------------------------------------- | -------------------------------- | ---------------------------- |
+| Running jobs in Singularity | [Video](https://youtu.be/airzg4-ETEs)         | [Tutorial][singularity-exercise] | [link][slack-general]        |
+| Ephemeris (Intro)           | [Video](https://youtu.be/7Qqwrzn--YI&t=0s)    | [Slides][ephemeris-slides]       | [link][slack-ephemeris]      |
+| Ephemeris                   | [Video](https://youtu.be/7Qqwrzn--YI&t=1122s) | [Tutorial][ephemeris-exercise]   | [link][slack-ephemeris]      |
+| Users, Groups, and Quotas   | [Video](https://youtu.be/crywu31L8qg)         | [Slides][users-groups-slides]    | [link][slack-general]        |
+| Reference Data (Intro)      | [Video](https://youtu.be/g_cavAO-fBM)         | [Slides][ref-genomes-slides]     | [link][slack-cvmfs]          |
+| Reference Data              | [Video](https://youtu.be/X3iFMZP_fQ8)         | [Tutorial][cvmfs-exercise]       | [link][slack-cvmfs]          |
+| Data Libraries              | TBA                                           | [Tutorial][data-libraries]       | [link][slack-data-libraries] |
+| BioBlend (Intro)            | [Video](https://youtu.be/bOv5yNRc2hc)         | [Slides][bioblend-slides]        | [link][slack-bioblend]       |
+| BioBlend                    |                                               | [Tutorial][bioblend-exercise]    | [link][slack-bioblend]       |
 
 
 
@@ -209,6 +209,7 @@ Today is a ["Choose Your Own Adventure"](https://en.wikipedia.org/wiki/Choose_Yo
 [slack-pulsar]:             https://galaxyadmintraining.slack.com/archives/C01EL7BHW03
 [slack-storage]:            https://galaxyadmintraining.slack.com/archives/C01EL195VB4
 [slack-monitoring]:         https://galaxyadmintraining.slack.com/archives/C01ED96FKFG
+[slack-data-libraries]: https://galaxyadmintraining.slack.com/archives/C01K8NKDV8E
 
 
 ### Instructors
