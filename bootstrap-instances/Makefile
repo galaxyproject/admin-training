@@ -13,6 +13,8 @@ catchup: id_rsa ## Provision bare machines as if they've done ansible-galaxy
 	ansible-playbook catchup.yml -f $(THREADS)
 
 obtain-passwords: ## Obtain passwords from machines
+	# This is easier tbh
+	# for i in {0..54}; do pwgen -H <( echo "gat-$i.us.training.galaxyproject.eu") 12 1 >> sdf; done;
 	ansible-playbook playbook.yml -t password -f 80 |grep password: | grep -o gat.* | sed 's/"//g;s/ /\t/'
 
 ketchup: catchup
