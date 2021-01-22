@@ -18,7 +18,7 @@ gat-[0:79].eu.training.galaxyproject.eu
 
 # American machines
 [workshop_us]
-gat-[0:3].us.training.galaxyproject.eu
+gat-[0:54].us.training.galaxyproject.eu
 
 # Some variables apply to every member of the group
 [workshop_instances:vars]
@@ -27,14 +27,11 @@ ansible_user = ubuntu
 ansible_become = true
 set_password = true
 
-# While some need to be set per EU
+# Here we set the keys we're given by the region
+# admin to use to login to the VMs.
 [workshop_eu:vars]
-ansible_ssh_private_key_file = ~/admintraining.key
-
-# Or per Aussie VMs
+ansible_ssh_private_key_file = admintraining-eu.key
 [workshop_oz:vars]
-ansible_ssh_private_key_file = ~/admintraining-oz2.key
-
+ansible_ssh_private_key_file = admintraining-oz2.key
 [workshop_us:vars]
 ansible_ssh_private_key_file = admintraining-us.key
-set_password = false
