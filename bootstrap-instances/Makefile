@@ -12,6 +12,9 @@ prep-%: id_rsa ## Prepare a region (prep-eu/oz/us/...)
 catchup: id_rsa ## Provision bare machines as if they've done ansible-galaxy
 	ansible-playbook catchup.yml -f $(THREADS)
 
+obtain-passwords: ## Obtain passwords from machines
+	ansible-playbook playbook.yml -t password -f 80 |grep password: | grep -o gat.* | sed 's/"//g;s/ /\t/'
+
 ketchup: catchup
 catsup: catchup
 
