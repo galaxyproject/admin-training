@@ -89,9 +89,9 @@ This day covers getting a Galaxy server setup with Ansible, a server you will de
 | Reference Data              | [Video](https://youtu.be/X3iFMZP_fQ8)         | [Tutorial][cvmfs-exercise]       | [#04-cvmfs][slack-cvmfs]                   |
 | Data Libraries              | TBA                                           | [Tutorial][data-libraries]       | [#05-data-libraries][slack-data-libraries] |
 | BioBlend (Intro)            | [Video](https://youtu.be/bOv5yNRc2hc)         | [Slides][bioblend-slides]        | [#06-bioblend][slack-bioblend]             |
-| BioBlend                    |                                               | [Tutorial][bioblend-exercise]    | [#06-bioblend][slack-bioblend]             |
+| BioBlend                    | [Video](https://vimeo.com/448664925#t=16m0s)\* | [Tutorial][bioblend-exercise]    | [#06-bioblend][slack-bioblend]             |
 
-
+\*: The BioBlend tutorial was recorded during BCC2020. It mentions "Remo" numerous times which was the platform for that conference. You can safely ignore these portions, but the demonstration of the notebooks is still valid and useful.
 
 ### Wednesday
 
