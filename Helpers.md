@@ -6,11 +6,11 @@ Who said they were available now? [Check the timezone heatmap!](https://hexylena
 
 We have three region coordinators. They're responsible for helpers, insuring VMs are working as expected, etc.
 
-Region                      | Abbr | Coordinator
-------                      | ---- | -----------
-Asia/Pacific, Oceania       | APO  | Catherine Bromhead
-Europe, Middle East, Africa | EMEA | Martin Cech
-Americas                    | Amer | Sergey Golitsynskiy
+Region                      | Abbr    | Coordinator
+------                      | ----    | -----------
+Asia/Pacific, Oceania       | 🌏 APO  | Catherine Bromhead
+Europe, Middle East, Africa | 🌍 EMEA | Martin Cech
+Americas                    | 🌎 Amer | Sergey Golitsynskiy
 
 ## Communications
 
