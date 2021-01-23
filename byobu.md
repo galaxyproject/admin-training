@@ -1,11 +1,13 @@
 ## byobu help
 
-GAT virtual machines use byobu.  Byobu has some useful features such as allowing a session to be split into multiple sessions within the same terminal window.  Some terminal behaviour may be different from what you are used to, particularly navigation through scrollback in the terminal.  Some key bindings are listed here including instructions for scrolling in the terminal.
+GAT virtual machines use byobu.
+
+Byobu has some useful features such as allowing a session to be split into multiple sessions within the same terminal window. Some terminal behaviour may be different from what you are used to, particularly navigation through scrollback in the terminal. Some key bindings are listed here including instructions for scrolling in the terminal.
 
 #### Scrolling
 ```
   F7                            Enter scroll mode
-  Enter                         Exit scroll mode
+  Enter, Ctrl-C                 Exit scroll mode
   Up/Down                       Scroll up/down one line while in scroll mode
   PgUp/PgDown                   Scroll up/down one page while in scroll mode
   Fn+Up/Down                    (Mac users) Scroll up/down one page while in scroll mode
@@ -27,15 +29,6 @@ More byobu keybindings (from https://github.com/dustinkirkland/byobu/blob/master
     Alt-Up/Down                  Move focus among sessions
     Shift-Left/Right/Up/Down     Move focus among splits
     Shift-F3/F4                  Move focus among splits
-    Ctrl-F3/F4                   Move a split
-    Ctrl-Shift-F3/F4             Move a window
-    Shift-Alt-Left/Right/Up/Down Resize a split
-
-  F5                             Reload profile, refresh status
-    Alt-F5                       Toggle UTF-8 support, refresh status
-    Shift-F5                     Toggle through status lines
-    Ctrl-F5                      Reconnect ssh/gpg/dbus sockets
-    Ctrl-Shift-F5                Change status bar's color randomly
 
   F6                             Detach session and then logout
     Shift-F6                     Detach session and do not logout
@@ -45,28 +38,6 @@ More byobu keybindings (from https://github.com/dustinkirkland/byobu/blob/master
   F7                             Enter scrollback history
     Alt-PageUp/PageDown          Enter and move through scrollback
     Shift-F7                     Save history to $BYOBU_RUN_DIR/printscreen
-
-  F8                             Rename the current window
-    Ctrl-F8                      Rename the current session
-    Shift-F8                     Toggle through split arrangements
-    Alt-Shift-F8                 Restore a split-pane layout
-    Ctrl-Shift-F8                Save the current split-pane layout
-
-  F9                             Launch byobu-config window
-    Ctrl-F9                      Enter command and run in all windows
-    Shift-F9                     Enter command and run in all splits
-    Alt-F9                       Toggle sending keyboard input to all splits
-
-  F10                            * Used by X11 *
-  F11                            * Used by X11 *
-    Alt-F11                      Expand split to a full window
-    Shift-F11                    Zoom into a split, zoom out of a split
-    Ctrl-F11                     Join window into a vertical split
-
-  F12                            Escape sequence
-    Shift-F12                    Toggle on/off Byobu's keybindings
-    Alt-F12                      Toggle on/off Byobu's mouse support
-    Ctrl-Shift-F12               Mondrian squares
 ```
 
 [<- back to main page](https://github.com/galaxyproject/admin-training)
