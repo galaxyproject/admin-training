@@ -6,10 +6,9 @@ GAT virtual machines use byobu.  Byobu has some useful features such as allowing
 ```
   F7                            Enter scroll mode
   Enter                         Exit scroll mode
-  Up                            Scroll up one line while in scroll mode
-  Down                          Scroll down one line while in scroll mode
-  Fn+Alt+Up/Down                (Mac users) Scroll up/down one page while in scroll mode
-  Alt+Up/Down                   (PC users) Scroll up/down one page while in scroll mode
+  Up/Down                       Scroll up/down one line while in scroll mode
+  PgUp/PgDown                   Scroll up/down one page while in scroll mode
+  Fn+Up/Down                    (Mac users) Scroll up/down one page while in scroll mode
 ```
 
 More byobu keybindings (from https://github.com/dustinkirkland/byobu/blob/master/usr/share/doc/byobu/help.tmux.txt)
