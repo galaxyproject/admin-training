@@ -58,20 +58,21 @@ This day covers getting a Galaxy server setup with Ansible, a server you will de
 
 **Start** today by introducing yourself in the [#general][slack-general] channel in Slack! Tell us where you're from, and and one thing about your surroundings (e.g. it's snowing outside, there's a squirrel on my porch, my cat is on my keyboard)
 
-| **Topic**                   | **Video**                                        | **Slides / Materials**            | **Slack Channel**                          |
-| --------------------------- | -----------------------------------------------  | --------------------------------- | ----------------------------               |
-| Welcome and introduction    | [Video](https://youtu.be/R-__JqlLCdM)            |                                   | [#general][slack-general]                  |
-| Intro to Ansible            | [Video](https://youtu.be/KFpbfmN0OTE)            | [Slides][ansible-slides]          | [#01-ansible][slack-ansible]               |
-| Ansible                     | [Video](https://youtu.be/2KdT0sYKUeE)            | [Tutorial][ansible-exercise]      | [#01-ansible][slack-ansible]               |
-| Galaxy Ansible Introduction | [Video](https://youtu.be/JN-C5UbHthY)            | [Slides][ansible-galaxy-slides]   | [#02-ansible-galaxy][slack-ansible-galaxy] |
-| Part 0: Playbook Overview   | [Video](https://youtu.be/il83uApg7Hc)[1]         | [Tutorial part 0][ansible-galaxy] | [#02-ansible-galaxy][slack-ansible-galaxy] |
-| Part 1: Basic Installation  | [Video](https://youtu.be/il83uApg7Hc&t=544s)[1]  | [Tutorial part 1][ansible-galaxy] | [#02-ansible-galaxy][slack-ansible-galaxy] |
-| Database                    | [Video](https://youtu.be/il83uApg7Hc&t=954s)[1]  | [Slides][db-slides]               | [#02-ansible-galaxy][slack-ansible-galaxy] |
-| SystemD                     | [Video](https://youtu.be/il83uApg7Hc&t=3409s)[1] | [Slides][systemd-slides]          | [#02-ansible-galaxy][slack-ansible-galaxy] |
-| Part 2: Towards Production  | [Video](https://youtu.be/il83uApg7Hc&t=3750s)[1] | [Tutorial part 2][ansible-galaxy] | [#02-ansible-galaxy][slack-ansible-galaxy] |
-| Production                  | [Video](https://youtu.be/il83uApg7Hc&t=4151s)[1] | [Production][production-slides]   | [#02-ansible-galaxy][slack-ansible-galaxy] |
-| Part 3: Advanced Install    | [Video](https://youtu.be/il83uApg7Hc&t=4552s)[1] | [Tutorial part 3][ansible-galaxy] | [#02-ansible-galaxy][slack-ansible-galaxy] |
-| uWSGI                       |                                                  | [Slides][uwsgi-slides]            | [#02-ansible-galaxy][slack-ansible-galaxy] |
+| **Topic**                      | **Video**                                        | **Slides / Materials**            | **Slack Channel**                          |
+| ---------------------------    | -----------------------------------------------  | --------------------------------- | ----------------------------               |
+| Welcome and introduction       | [Video](https://youtu.be/R-__JqlLCdM)            |                                   | [#general][slack-general]                  |
+| Intro to Ansible               | [Video](https://youtu.be/KFpbfmN0OTE)            | [Slides][ansible-slides]          | [#01-ansible][slack-ansible]               |
+| Ansible                        | [Video](https://youtu.be/2KdT0sYKUeE)            | [Tutorial][ansible-exercise]      | [#01-ansible][slack-ansible]               |
+| Galaxy Ansible Introduction    | [Video](https://youtu.be/JN-C5UbHthY)            | [Slides][ansible-galaxy-slides]   | [#02-ansible-galaxy][slack-ansible-galaxy] |
+| Part 0: Playbook Overview      | [Video](https://youtu.be/il83uApg7Hc)[1]         | [Tutorial part 0][ansible-galaxy] | [#02-ansible-galaxy][slack-ansible-galaxy] |
+| Part 1: Basic Installation     | [Video](https://youtu.be/il83uApg7Hc&t=544s)[1]  | [Tutorial part 1][ansible-galaxy] | [#02-ansible-galaxy][slack-ansible-galaxy] |
+| Database                       | [Video](https://youtu.be/il83uApg7Hc&t=954s)[1]  | [Slides][db-slides]               | [#02-ansible-galaxy][slack-ansible-galaxy] |
+| SystemD                        | [Video](https://youtu.be/il83uApg7Hc&t=3409s)[1] | [Slides][systemd-slides]          | [#02-ansible-galaxy][slack-ansible-galaxy] |
+| Part 2: Towards Production     | [Video](https://youtu.be/il83uApg7Hc&t=3750s)[1] | [Tutorial part 2][ansible-galaxy] | [#02-ansible-galaxy][slack-ansible-galaxy] |
+| Production                     | [Video](https://youtu.be/il83uApg7Hc&t=4151s)[1] | [Production][production-slides]   | [#02-ansible-galaxy][slack-ansible-galaxy] |
+| Part 3: Advanced Install       | [Video](https://youtu.be/il83uApg7Hc&t=4552s)[1] | [Tutorial part 3][ansible-galaxy] | [#02-ansible-galaxy][slack-ansible-galaxy] |
+| uWSGI                          |                                                  | [Slides][uwsgi-slides]            | [#02-ansible-galaxy][slack-ansible-galaxy] |
+| *Touch Base Telco* (See Slack) |                                                  |                                   |                                            |
 
 1. The same videos at different timepoints.
 
@@ -79,17 +80,18 @@ This day covers getting a Galaxy server setup with Ansible, a server you will de
 
 **Start** today by sharing *how your 5-year-old self would have finished this sentence? “When I grow up, I want to be …”?* in the [#general][slack-general] channel in Slack!
 
-| **Topic**                   | **Video**                                        | **Slides / Materials**           | Slack Channel                              |
-| --------------------------- | ---------------------------------------------    | -------------------------------- | ----------------------------               |
-| Running jobs in Singularity | [Video](https://youtu.be/airzg4-ETEs)            | [Tutorial][singularity-exercise] | [#general][slack-general]                  |
-| Ephemeris (Intro)           | [Video](https://youtu.be/7Qqwrzn--YI&t=0s)[1]    | [Slides][ephemeris-slides]       | [#03-ephemeris][slack-ephemeris]           |
-| Ephemeris                   | [Video](https://youtu.be/7Qqwrzn--YI&t=1122s)[1] | [Tutorial][ephemeris-exercise]   | [#03-ephemeris][slack-ephemeris]           |
-| Users, Groups, and Quotas   | [Video](https://youtu.be/crywu31L8qg)            | [Slides][users-groups-slides]    | [#general][slack-general]                  |
-| Reference Data (Intro)      | [Video](https://youtu.be/g_cavAO-fBM)            | [Slides][ref-genomes-slides]     | [#04-cvmfs][slack-cvmfs]                   |
-| Reference Data              | [Video](https://youtu.be/X3iFMZP_fQ8)            | [Tutorial][cvmfs-exercise]       | [#04-cvmfs][slack-cvmfs]                   |
-| Data Libraries              | [Video](https://youtu.be/8jvjTL49yPQ)            | [Tutorial][data-libraries]       | [#05-data-libraries][slack-data-libraries] |
-| BioBlend (Intro)            | [Video](https://youtu.be/bOv5yNRc2hc)            | [Slides][bioblend-slides]        | [#06-bioblend][slack-bioblend]             |
-| BioBlend                    | [Video](https://vimeo.com/448664925#t=16m0s)[2]  | [Tutorial][bioblend-exercise]    | [#06-bioblend][slack-bioblend]             |
+| **Topic**                      | **Video**                                        | **Slides / Materials**           | Slack Channel                              |
+| ---------------------------    | ---------------------------------------------    | -------------------------------- | ----------------------------               |
+| Running jobs in Singularity    | [Video](https://youtu.be/airzg4-ETEs)            | [Tutorial][singularity-exercise] | [#general][slack-general]                  |
+| Ephemeris (Intro)              | [Video](https://youtu.be/7Qqwrzn--YI&t=0s)[1]    | [Slides][ephemeris-slides]       | [#03-ephemeris][slack-ephemeris]           |
+| Ephemeris                      | [Video](https://youtu.be/7Qqwrzn--YI&t=1122s)[1] | [Tutorial][ephemeris-exercise]   | [#03-ephemeris][slack-ephemeris]           |
+| Users, Groups, and Quotas      | [Video](https://youtu.be/crywu31L8qg)            | [Slides][users-groups-slides]    | [#general][slack-general]                  |
+| Reference Data (Intro)         | [Video](https://youtu.be/g_cavAO-fBM)            | [Slides][ref-genomes-slides]     | [#04-cvmfs][slack-cvmfs]                   |
+| Reference Data                 | [Video](https://youtu.be/X3iFMZP_fQ8)            | [Tutorial][cvmfs-exercise]       | [#04-cvmfs][slack-cvmfs]                   |
+| Data Libraries                 | [Video](https://youtu.be/8jvjTL49yPQ)            | [Tutorial][data-libraries]       | [#05-data-libraries][slack-data-libraries] |
+| BioBlend (Intro)               | [Video](https://youtu.be/bOv5yNRc2hc)            | [Slides][bioblend-slides]        | [#06-bioblend][slack-bioblend]             |
+| BioBlend                       | [Video](https://vimeo.com/448664925#t=16m0s)[2]  | [Tutorial][bioblend-exercise]    | [#06-bioblend][slack-bioblend]             |
+| *Touch Base Telco* (See Slack) |                                                  |                                  |                                            |
 
 1. The same videos at different timepoints.
 2. The BioBlend tutorial was recorded during BCC2020. It mentions "Remo" numerous times which was the platform for that conference. You can safely ignore these portions, but the demonstration of the notebooks is still valid and useful.
@@ -104,6 +106,7 @@ This day covers getting a Galaxy server setup with Ansible, a server you will de
 | Connecting Galaxy to a compute cluster | [Video](https://youtu.be/R0NbHscL3jA&t=940s) | [Tutorial][cluster-exercise]     | [#07-compute-cluster][slack-compute-cluster] |
 | Mapping Jobs to Destinations           | [Video](https://youtu.be/qX8GjTJwnAk)        | [Tutorial][job-mapping-exercise] | [#07-compute-cluster][slack-compute-cluster] |
 | Recording Job Metrics                  | [Video](https://youtu.be/7CYI5yw9MN8)        | [Tutorial][job-metrics-exercise] | [#07-compute-cluster][slack-compute-cluster] |
+| *Touch Base Telco* (See Slack)         |                                              |                                  |                                              |
 
 
 ### Thursday
@@ -120,6 +123,7 @@ This day covers getting a Galaxy server setup with Ansible, a server you will de
 | Monitoring (Intro)                       | [Video](https://youtu.be/qcp9lEUxCGI) | [Slides][monitoring-slides]              | [#10-monitoring][slack-monitoring] |
 | Monitoring: Telegraf, InfluxDB, Grafana¶ | [Video](https://youtu.be/drUaYQtMBLY) | [Telegraf Exercise][monitoring-exercise] | [#10-monitoring][slack-monitoring] |
 | Maintenance, Backup and Restore          | [Video](https://youtu.be/41_3WHXZA-o) | [Slides][maintenance]                    | [#10-monitoring][slack-monitoring] |
+| *Touch Base Telco* (See Slack)           |                                       |                                          |                                    |
 
 [store1]: https://youtu.be/Hv2bvjk5sjE
 [store2]: https://youtu.be/UUe2ne0-WNY
@@ -144,6 +148,7 @@ Today is a ["Choose Your Own Adventure"](https://en.wikipedia.org/wiki/Choose_Yo
 | Dataset Collections                                 |                                       | [DCs][dc], [Rule based][rb]                                       | [#general][slack-general]          |
 | Developing your own Training                        |                                       | [Setting up][training-jekyll], [Exercise][training-new-tutorial]  | [#general][slack-general]          |
 | Securing your Galaxy¶                               | [Video](https://youtu.be/CQLUap74DVA) | Their team is not releasing these until February 2.               | [#general][slack-general]          |
+| *Touch Base Telco* (See Slack)                      |                                       |                                                                   |                                    |
 
 ¶: These videos do not currently have corrected captions, only automated ones.
 
