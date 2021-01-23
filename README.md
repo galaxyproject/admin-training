@@ -262,7 +262,7 @@ Let us know if you have any questions or feedback! Chat on Gitter, file issues o
 
 ## Training VM instances
 
-Galaxy training instances are be bootstrapped with [a small Ansible playbook](/bootstrap-instances), which you may find useful for repeating the exercises later using a VM, Docker image, etc.
+Galaxy training instances are bootstrapped with [a small Ansible playbook](/bootstrap-instances), which you may find useful for repeating the exercises later using a VM, Docker image, etc.
 
 ## Sponsors
 
