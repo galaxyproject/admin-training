@@ -100,7 +100,7 @@ This day covers getting a Galaxy server setup with Ansible, a server you will de
 
 | **Topic**                              | **Video**                                    | **Slides / Materials**           | Slack Channel                                |
 | -------------------------------------- | -------------------------------------------- | -------------------------------- | -----------------------------                |
-| Galaxy Cluster Computing (Intro)¶       | [Video](https://youtu.be/R0NbHscL3jA&t=0s)   | [Slides][cluster-slides]         | [#07-compute-cluster][slack-compute-cluster] |
+| Galaxy Cluster Computing (Intro)¶      | [Video](https://youtu.be/R0NbHscL3jA&t=0s)   | [Slides][cluster-slides]         | [#07-compute-cluster][slack-compute-cluster] |
 | Connecting Galaxy to a compute cluster | [Video](https://youtu.be/R0NbHscL3jA&t=940s) | [Tutorial][cluster-exercise]     | [#07-compute-cluster][slack-compute-cluster] |
 | Mapping Jobs to Destinations           | [Video](https://youtu.be/qX8GjTJwnAk)        | [Tutorial][job-mapping-exercise] | [#07-compute-cluster][slack-compute-cluster] |
 | Recording Job Metrics                  | [Video](https://youtu.be/7CYI5yw9MN8)        | [Tutorial][job-metrics-exercise] | [#07-compute-cluster][slack-compute-cluster] |
@@ -110,16 +110,16 @@ This day covers getting a Galaxy server setup with Ansible, a server you will de
 
 **Start** today by sharing *a dream vacation location, if you could be anywhere in the world (or outside it?)* in the [#general][slack-general] channel in Slack.
 
-| **Topic**                               | **Video**                             | **Slides / Materials**                   | Slack Channel                      |
-| --------------------------------------- | ------------------------------------- | ---------------------------------------- | ------------------------           |
-| Pulsar  (Intro)                         | [Video](https://youtu.be/M1-Z_2tuQPI) | [Slides][hetero-slides]                  | [#08-pulsar][slack-pulsar]         |
-| Pulsar                                  | [Video](https://youtu.be/a7fKJT4Fs9k) | [Exercise][hetero-exercise]              | [#08-pulsar][slack-pulsar]         |
-| Storage management                      | [Video 1][store1], [Video 2][store2]  | [Exercise][storage-exercise]             | [#09-storage][slack-storage]       |
-| DB Query (Intro)                        | [Video](https://youtu.be/QFwOgDyFSSA) | [Slides][gxadmin-slides]                 | [#09-storage][slack-storage]       |
-| DB queries, command line & scripts      |                                       | [Exercise][gxadmin-exercise]             | [#09-storage][slack-storage]       |
-| Monitoring (Intro)                      | [Video](https://youtu.be/qcp9lEUxCGI) | [Slides][monitoring-slides]              | [#10-monitoring][slack-monitoring] |
+| **Topic**                                | **Video**                             | **Slides / Materials**                   | Slack Channel                      |
+| ---------------------------------------  | ------------------------------------- | ---------------------------------------- | ------------------------           |
+| Pulsar  (Intro)                          | [Video](https://youtu.be/M1-Z_2tuQPI) | [Slides][hetero-slides]                  | [#08-pulsar][slack-pulsar]         |
+| Pulsar                                   | [Video](https://youtu.be/a7fKJT4Fs9k) | [Exercise][hetero-exercise]              | [#08-pulsar][slack-pulsar]         |
+| Storage management                       | [Video 1][store1], [Video 2][store2]  | [Exercise][storage-exercise]             | [#09-storage][slack-storage]       |
+| DB Query (Intro)                         | [Video](https://youtu.be/QFwOgDyFSSA) | [Slides][gxadmin-slides]                 | [#09-storage][slack-storage]       |
+| DB queries, command line & scripts       |                                       | [Exercise][gxadmin-exercise]             | [#09-storage][slack-storage]       |
+| Monitoring (Intro)                       | [Video](https://youtu.be/qcp9lEUxCGI) | [Slides][monitoring-slides]              | [#10-monitoring][slack-monitoring] |
 | Monitoring: Telegraf, InfluxDB, Grafana¶ | [Video](https://youtu.be/drUaYQtMBLY) | [Telegraf Exercise][monitoring-exercise] | [#10-monitoring][slack-monitoring] |
-| Maintenance, Backup and Restore         | [Video](https://youtu.be/41_3WHXZA-o) | [Slides][maintenance]                    | [#10-monitoring][slack-monitoring] |
+| Maintenance, Backup and Restore          | [Video](https://youtu.be/41_3WHXZA-o) | [Slides][maintenance]                    | [#10-monitoring][slack-monitoring] |
 
 [store1]: https://youtu.be/Hv2bvjk5sjE
 [store2]: https://youtu.be/UUe2ne0-WNY
