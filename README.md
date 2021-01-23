@@ -17,7 +17,7 @@ logo based on a [Hubble Image](https://hubblesite.org/contents/media/images/2018
 
 This training is offered Online, January 25-29, and is mostly asynchronous. Throughout the week you will always have access to trainers that are ready to help you with tasks or understanding. However the bulk of the work consist of **you working at your own pace** through the materials we prepared for you.
 
-For the duration of this training (and a week after) you'll be granted access to a virtual machine (VM) that will be exclusive to you. You will connect to it using `ssh ubuntu@address-of-your-machine` and perform all of training's tasks inside. The machine is configured in a way to allow trainers connect to your machine and see exactly what you see. For this it uses software called `byobu` that has many convenient features for working in terminal - you can check out its [cheat sheet](https://gist.github.com/devhero/7b9a7281db0ac4ba683f).
+For the duration of this training (and a week after) you'll be granted access to a virtual machine (VM) that will be exclusive to you. You will connect to it using `ssh ubuntu@address-of-your-machine` and perform all of training's tasks inside. The machine is configured in a way to allow trainers connect to your machine and see exactly what you see. For this it uses software called `byobu` that has many convenient features for working in terminal - you can check out our [byobu help](byobu.md) page.
 
 ## Important Links
 
