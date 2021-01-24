@@ -241,6 +241,7 @@ Gildas Le Corguillé | FR      | [ABiMS](http://abims.sb-roscoff.fr/) - [Sorbonn
 Simon Gladman       | AU      | [Melbourne Bioinformatics](https://melbournebioinformatics.org.au) - [Galaxy Australia](https://usegalaxy.org.au)
 Catherine Bromhead  | AU      | [Melbourne Bioinformatics](https://melbournebioinformatics.org.au) - [Galaxy Australia](https://usegalaxy.org.au)
 David Morais        | CA      | [GenAP](https://www.genap.ca/) & [Compute Canada](https://www.computecanada.ca/)
+Aaron Petkau        | CA      | [PHAC](https://www.canada.ca/en/public-health.html) & [University of Manitoba](https://umanitoba.ca/)
 
 
 (others coming soon.)
