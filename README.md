@@ -65,12 +65,12 @@ This day covers getting a Galaxy server setup with Ansible, a server you will de
 | Ansible                        | [Video](https://youtu.be/2KdT0sYKUeE)            | [Tutorial][ansible-exercise]      | [#01-ansible][slack-ansible]               |
 | Galaxy Ansible Introduction    | [Video](https://youtu.be/JN-C5UbHthY)            | [Slides][ansible-galaxy-slides]   | [#02-ansible-galaxy][slack-ansible-galaxy] |
 | Part 0: Playbook Overview      | [Video](https://youtu.be/il83uApg7Hc)[1]         | [Tutorial part 0][ansible-galaxy] | [#02-ansible-galaxy][slack-ansible-galaxy] |
-| Part 1: Basic Installation     | [Video](https://youtu.be/il83uApg7Hc&t=544s)[1]  | [Tutorial part 1][ansible-galaxy] | [#02-ansible-galaxy][slack-ansible-galaxy] |
+| Part 1: Basic Installation     | [Video](https://youtu.be/il83uApg7Hc&t=544s)[1]  | [Tutorial part 1][ansible-galaxy1] | [#02-ansible-galaxy][slack-ansible-galaxy] |
 | Database                       | [Video](https://youtu.be/il83uApg7Hc&t=954s)[1]  | [Slides][db-slides]               | [#02-ansible-galaxy][slack-ansible-galaxy] |
 | SystemD                        | [Video](https://youtu.be/il83uApg7Hc&t=3409s)[1] | [Slides][systemd-slides]          | [#02-ansible-galaxy][slack-ansible-galaxy] |
-| Part 2: Towards Production     | [Video](https://youtu.be/il83uApg7Hc&t=3750s)[1] | [Tutorial part 2][ansible-galaxy] | [#02-ansible-galaxy][slack-ansible-galaxy] |
+| Part 2: Towards Production     | [Video](https://youtu.be/il83uApg7Hc&t=3750s)[1] | [Tutorial part 2][ansible-galaxy2] | [#02-ansible-galaxy][slack-ansible-galaxy] |
 | Production                     | [Video](https://youtu.be/il83uApg7Hc&t=4151s)[1] | [Production][production-slides]   | [#02-ansible-galaxy][slack-ansible-galaxy] |
-| Part 3: Advanced Install       | [Video](https://youtu.be/il83uApg7Hc&t=4552s)[1] | [Tutorial part 3][ansible-galaxy] | [#02-ansible-galaxy][slack-ansible-galaxy] |
+| Part 3: Advanced Install       | [Video](https://youtu.be/il83uApg7Hc&t=4552s)[1] | [Tutorial part 3][ansible-galaxy3] | [#02-ansible-galaxy][slack-ansible-galaxy] |
 | uWSGI                          |                                                  | [Slides][uwsgi-slides]            | [#02-ansible-galaxy][slack-ansible-galaxy] |
 | *Touch Base Telco* (See Slack) |                                                  |                                   |                                            |
 
@@ -158,6 +158,9 @@ Today is a ["Choose Your Own Adventure"](https://en.wikipedia.org/wiki/Choose_Yo
 [ansible-exercise]:         https://training.galaxyproject.org/training-material/topics/admin/tutorials/ansible/tutorial.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021#your-first-playbook-and-first-role
 [ansible-galaxy-slides]:    https://training.galaxyproject.org/training-material/topics/admin/tutorials/ansible-galaxy/slides.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
 [ansible-galaxy]:           https://training.galaxyproject.org/training-material/topics/admin/tutorials/ansible-galaxy/tutorial.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
+[ansible-galaxy1]:           https://training.galaxyproject.org/training-material/topics/admin/tutorials/ansible-galaxy/tutorial.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021#installing-galaxy
+[ansible-galaxy2]:           https://training.galaxyproject.org/training-material/topics/admin/tutorials/ansible-galaxy/tutorial.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021#systemd
+[ansible-galaxy3]:           https://training.galaxyproject.org/training-material/topics/admin/tutorials/ansible-galaxy/tutorial.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021#nginx
 [ansible-slides]:           https://training.galaxyproject.org/training-material/topics/admin/tutorials/ansible/slides.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
 [bioblend-slides]:          https://training.galaxyproject.org/training-material/topics/dev/tutorials/bioblend-api/slides.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
 [cluster-exercise]:         https://training.galaxyproject.org/training-material/topics/admin/tutorials/connect-to-compute-cluster/tutorial.html?utm_source=gxygat&utm_medium=website&utm_campaign=gat2021
