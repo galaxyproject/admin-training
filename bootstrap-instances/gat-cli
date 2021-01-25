@@ -1,5 +1,5 @@
 #!/bin/bash
-# shellcheck disable=SC2207
+# shellcheck disable=SC2207,SC2155
 
 search_dir() {
 	q="$(find -name $1 -type d  2>/dev/null| wc -l)"
@@ -26,6 +26,7 @@ path_exists() {
 	fi
 }
 
+# Grep through user's files in their home directory for some string.
 str_exists() {
 	location="${2:-*}"
 	q="$(grep "$1" -Ri $location 2>/dev/null| wc -l)"
@@ -37,7 +38,7 @@ str_exists() {
 }
 
 service_state() {
-	q=$(timeout 3 systemctl status $1 2>/dev/null | grep Active | awk '{print $2}')
+	q=$(timeout 3 systemctl status "$1" 2>/dev/null | grep Active | awk '{print $2}')
 	if [[ "$q" == "" ]]; then
 		echo 0
 	else
@@ -46,7 +47,7 @@ service_state() {
 }
 
 db_exists() {
-	q=$(timeout 3 sudo -u postgres psql -l 2>/dev/null| grep $1 | wc -l)
+	q=$(timeout 3 sudo -u postgres psql -l 2>/dev/null| grep "$1" | wc -l)
 	if (( q > 0 )); then
 		echo 1
 	else
@@ -54,7 +55,7 @@ db_exists() {
 	fi
 }
 curl_responds() {
-	q=$(timeout 3 curl --silent -k $1 2>/dev/null| wc -c)
+	q=$(timeout 3 curl --silent -k "$1" 2>/dev/null| wc -c)
 	if (( q > 0 )); then
 		echo 1
 	else
@@ -62,8 +63,16 @@ curl_responds() {
 	fi
 }
 
+cmd_exists() {
+	if ! command -v "$1" &> /dev/null; then
+		echo 0
+	else
+		echo 1
+	fi
+}
+
 prettify() {
-	cat | sed 's/1/✔/g;s/0/✘/g;s/2/✅/g'
+	cat | sed 's/1/✔ /g;s/0/✘ /g;s/2/✅/g'
 }
 
 unified-progress() {
@@ -83,40 +92,92 @@ unified-progress() {
 	fi
 }
 
-_status-ansible() {
+_status-singularity() {
 	local -a r=()
-	r[0]=$(str_exists 'Copy a file to the' .)
-	if [[ "${r[0]}" == "0" ]]; then
-		# Maybe they typo'd it? Test the output file.
-		r[0]=$(path_exists /tmp/test.txt)
-	fi
+	r[0]=$(cmd_exists singularity)
+	echo "${r[@]}"
+}
 
-	r[1]=$(str_exists '^server_name:')
-	r[2]=$(search_dir geerlingguy.git)
-	r[3]=$(search_dir secret_group_vars)
+_status-ephemeris() {
+	local -a r=()
+	r[0]=$(dir_exists ~/ephemeris_venv)
+	echo "${r[@]}"
+}
+
+_status-datalibs() {
+	local -a r=()
+	r[0]=$(dir_exists /libraries/)
+	echo "${r[@]}"
+}
+
+_status-cluster() {
+	local -a r=()
+	r[0]=$(service_state munge)
+	r[1]=$(service_state slurmd)
+	r[2]=$(service_state slurmctld)
+	r[3]=$(str_exists slurm-drmaa1)
+	r[4]=$(str_exists DRMAA_LIBRARY_PATH)
+	echo "${r[@]}"
+}
+
+_status-mapping() {
+	local -a r=()
+	r[0]=$(str_exists cpus-per-task=2)
+	r[1]=$(str_exists dynamic_admin_only)
+	r[2]=$(str_exists dtd)
+	r[3]=$(str_exists resources)
+	echo "${r[@]}"
+}
+
+_status-metrics() {
+	local -a r=()
+	r[0]=$(str_exists job_metrics_conf.xml.j2)
+	echo "${r[@]}"
+}
+
+_status-storage() {
+	local -a r=()
+	r[0]=$(str_exists object_store_config_file)
+	r[1]=$(str_exists atosatto.minio)
+	r[2]=$(str_exists dropbox)
+	echo "${r[@]}"
+}
+
+_status-gxadmin() {
+	local -a r=()
+	r[0]=$(str_exists usegalaxy_eu.gxadmin)
+	r[1]=$(cmd_exists gxadmin)
+	echo "${r[@]}"
+}
+
+_status-monitoring() {
+	local -a r=()
+	r[0]=$(service_state influxdb)
+	r[1]=$(service_state grafana-server)
+	r[2]=$(service_state telegraf)
 	echo "${r[@]}"
 }
 
 gat_status() { # [Admin] Get an overview of ALL tutorials not just one.
 	# day 1
-	local ansible=($(_status-ansible | unified-progress | prettify))
-	local galaxy=($(_status-galaxy | unified-progress | prettify))
+	local ansible=$(_status-ansible | unified-progress)
+	local galaxy=$(_status-galaxy | unified-progress)
 	# day 2
-	local singularity
-	local ephemeris
-	local cvmfs=($(_status-cvmfs | unified-progress | prettify))
-	local datalibs
+	local singularity=$(_status-singularity | unified-progress)
+	local ephemeris=$(_status-ephemeris | unified-progress)
+	local cvmfs=$(_status-cvmfs | unified-progress)
+	local datalibs=$(_status-datalibs | unified-progress)
 	# day 3
-	local cluster
-	local mapping
-	local metrics
+	local cluster=$(_status-cluster | unified-progress)
+	local mapping=$(_status-mapping | unified-progress)
+	local metrics=$(_status-metrics | unified-progress)
 	# day 4
-	local pulsar=($(_status-pulsar | unified-progress | prettify))
-	local storage
-	local gxadmin
-	local monitoring
+	local pulsar=$(_status-pulsar | unified-progress)
+	local storage=$(_status-storage | unified-progress)
+	local gxadmin=$(_status-gxadmin | unified-progress)
+	local monitoring=$(_status-monitoring | unified-progress)
 
-	echo "1: $ansible$galaxy 2: $cvmfs $pulsar"
+	echo "M $ansible$galaxy T $singularity$ephemeris$cvmfs$datalibs W $cluster$mapping$metrics R $pulsar$storage$gxadmin$monitoring" | prettify
 }
 
 _status-ansible() {
