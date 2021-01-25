@@ -32,6 +32,9 @@ status: ## Check overall progress everywhere
 status-raw:
 	@ansible -a 'gat status-raw' galaxy_only -f $(THREADS) | grep --line-buffered --color=never "	"
 
+status-sum:
+	@ansible -a 'gat status-sum' galaxy_only -f $(THREADS) | grep --line-buffered --color=never "	"
+
 status-%: ## Check overall progress in region
 	@ansible -a 'gat status' workshop_$(@:status-%=%) -f $(THREADS) | grep --line-buffered --color=never "	"
 

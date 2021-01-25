@@ -90,6 +90,7 @@
       package:
         name:
           - acl
+          - bc
           - sudo
           - make
           - build-essential
@@ -107,6 +108,8 @@
           - screen
           - moreutils # for gat-cli
         state: latest
+      tags:
+           - packages
 
     - name: Ensure unnecessary stuff is purged
       package:
