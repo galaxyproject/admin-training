@@ -4,9 +4,17 @@ localhost
 
 [workshop_instances]
 [workshop_instances:children]
+galaxy_only
+pulsar_only
+
+[galaxy_only]
+[galaxy_only:children]
 workshop_oz
 workshop_eu
 workshop_us
+
+[pulsar_only]
+[pulsar_only:children]
 workshop_oz_pulsar
 workshop_eu_pulsar
 workshop_us_pulsar
@@ -25,9 +33,9 @@ gat-[0:39].eu.training.galaxyproject.eu
 gat-[40:79].eu.training.galaxyproject.eu
 
 # American machines
-[workshop_us_pulsar]
-gat-[0:44].us.training.galaxyproject.eu
 [workshop_us]
+gat-[0:44].us.training.galaxyproject.eu
+[workshop_us_pulsar]
 gat-[45:54].us.training.galaxyproject.eu
 
 # Some variables apply to every member of the group

@@ -26,11 +26,11 @@ catsup: catchup
 id_rsa: ## Generate an SSH key which will be sent to the machines
 	ssh-keygen -t rsa -f id_rsa -N ''
 
-status-%: ## Check overall progress everywhere
-	ansible -a 'gat status' workshop_instances -f $(THREADS) | grep --line-buffered --color=never "	"
+status: ## Check overall progress everywhere
+	@ansible -a 'gat status' galaxy_only -f $(THREADS) | grep --line-buffered --color=never "	"
 
 status-%: ## Check overall progress in region
-	ansible -a 'gat status' workshop_$(@:status-%=%) -f $(THREADS) | grep --line-buffered --color=never "	"
+	@ansible -a 'gat status' workshop_$(@:status-%=%) -f $(THREADS) | grep --line-buffered --color=never "	"
 
 check-ansible-%: ## Check ansible tutorial (check-ansible-eu/oz/us/...)
 	@ansible -a 'gat status-ansible' workshop_$(@:check-ansible-%=%) -f $(THREADS) | grep --color=never -i basic
