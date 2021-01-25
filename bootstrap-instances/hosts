@@ -10,7 +10,8 @@ workshop_us
 
 # Aussie provided machines
 [workshop_oz]
-gat-[0:61].oz.training.galaxyproject.eu
+gat-[0:17].oz.training.galaxyproject.eu
+gat-[19:61].oz.training.galaxyproject.eu
 
 # EU provided machines
 [workshop_eu]

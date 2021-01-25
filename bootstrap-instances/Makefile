@@ -1,10 +1,13 @@
 THREADS := 20
 
 help:
-	@egrep '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
+	@egrep '^[a-zA-Z_%-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
 
 all: id_rsa ## Prepare all nodes.
 	ansible-playbook playbook.yml -f $(THREADS)
+
+tag-%: id_rsa ## Run a specific tag (e.g. tag-gat-cli)
+	ansible-playbook playbook.yml -f $(THREADS) -t $(@:tag-%=%)
 
 prep-%: id_rsa ## Prepare a region (prep-eu/oz/us/...)
 	ansible-playbook playbook.yml -f $(THREADS) --limit workshop_$(@:prep-%=%)
@@ -24,7 +27,7 @@ id_rsa: ## Generate an SSH key which will be sent to the machines
 	ssh-keygen -t rsa -f id_rsa -N ''
 
 status-%: ## Check overall progress in region
-	@ansible -a 'gat status' workshop_$(@:check-ansible-%=%) -f $(THREADS) | grep M
+	ansible -a 'gat status' workshop_$(@:status-%=%) -f $(THREADS)
 
 check-ansible-%: ## Check ansible tutorial (check-ansible-eu/oz/us/...)
 	@ansible -a 'gat status-ansible' workshop_$(@:check-ansible-%=%) -f $(THREADS) | grep -i basic

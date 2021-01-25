@@ -124,8 +124,8 @@ _status-mapping() {
 	local -a r=()
 	r[0]=$(str_exists cpus-per-task=2)
 	r[1]=$(str_exists dynamic_admin_only)
-	r[2]=$(str_exists dtd)
-	r[3]=$(str_exists resources)
+	r[2]=$(str_exists 'upper_bound')
+	r[3]=$(str_exists '<resources>')
 	echo "${r[@]}"
 }
 
@@ -177,7 +177,8 @@ gat_status() { # [Admin] Get an overview of ALL tutorials not just one.
 	local gxadmin=$(_status-gxadmin | unified-progress)
 	local monitoring=$(_status-monitoring | unified-progress)
 
-	echo "M $ansible$galaxy T $singularity$ephemeris$cvmfs$datalibs W $cluster$mapping$metrics R $pulsar$storage$gxadmin$monitoring" | prettify
+	echo -n "$(hostname -f | cut -d. -f1-2)	"
+	echo "M $ansible$galaxy	T $singularity$ephemeris$cvmfs$datalibs	W $cluster$mapping$metrics	R $pulsar$storage$gxadmin$monitoring" | prettify
 }
 
 _status-ansible() {
