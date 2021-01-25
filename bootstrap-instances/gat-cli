@@ -181,6 +181,29 @@ gat_status() { # [Admin] Get an overview of ALL tutorials not just one.
 	echo "M $ansible$galaxy	T $singularity$ephemeris$cvmfs$datalibs	W $cluster$mapping$metrics	R $pulsar$storage$gxadmin$monitoring" | prettify
 }
 
+gat_status-raw() {
+	# day 1
+	local ansible=$(_status-ansible)
+	local galaxy=$(_status-galaxy)
+	# day 2
+	local singularity=$(_status-singularity)
+	local ephemeris=$(_status-ephemeris)
+	local cvmfs=$(_status-cvmfs)
+	local datalibs=$(_status-datalibs)
+	# day 3
+	local cluster=$(_status-cluster)
+	local mapping=$(_status-mapping)
+	local metrics=$(_status-metrics)
+	# day 4
+	local pulsar=$(_status-pulsar)
+	local storage=$(_status-storage)
+	local gxadmin=$(_status-gxadmin)
+	local monitoring=$(_status-monitoring)
+
+	echo -n "$(hostname -f | cut -d. -f1-2)	"
+	echo "M|$ansible|$galaxy	T|$singularity|$ephemeris|$cvmfs|$datalibs	W|$cluster|$mapping|$metrics	R|$pulsar|$storage|$gxadmin|$monitoring"
+}
+
 _status-ansible() {
 	local -a r=()
 	r[0]=$(str_exists 'Copy a file to the' .)
