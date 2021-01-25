@@ -23,6 +23,9 @@ catsup: catchup
 id_rsa: ## Generate an SSH key which will be sent to the machines
 	ssh-keygen -t rsa -f id_rsa -N ''
 
+status-%: ## Check overall progress in region
+	@ansible -a 'gat status' workshop_$(@:check-ansible-%=%) -f $(THREADS) | grep M
+
 check-ansible-%: ## Check ansible tutorial (check-ansible-eu/oz/us/...)
 	@ansible -a 'gat status-ansible' workshop_$(@:check-ansible-%=%) -f $(THREADS) | grep -i basic
 
