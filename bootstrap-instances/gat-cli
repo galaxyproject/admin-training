@@ -213,7 +213,7 @@ _status-ansible() {
 	fi
 
 	r[1]=$(str_exists '^server_name:')
-	r[2]=$(search_dir geerlingguy.git)
+	r[2]=$(search_dir geerlingguy.memcached)
 	r[3]=$(search_dir secret_group_vars)
 	echo "${r[@]}"
 }
@@ -227,16 +227,17 @@ _status-galaxy() {
 	local -a r=()
 	r[0]=$(service_state postgresql)
 	r[1]=$(db_exists galaxy)
-	r[2]=$(curl_responds http://localhost:8080/api/version)
-	r[3]=$(service_state galaxy)
-	r[4]=$(service_state nginx)
-	r[5]=$(curl_responds https://localhost:443/api/version)
+	# So this check works, then later reverts. Just disable it. It's more confusing than useful.
+	#r[2]=$(curl_responds http://localhost:8080/api/version)
+	r[2]=$(service_state galaxy)
+	r[3]=$(service_state nginx)
+	r[4]=$(curl_responds https://localhost:443/api/version)
 	echo "${r[@]}"
 }
 
 gat_status-galaxy() { # [Admin] Check status of ansible-galaxy training
 	local -a r=($(_status-galaxy | prettify))
-	echo "$(hostname)	postgres ${r[0]} ${r[1]} galaxy(http) ${r[2]} SysD-gxy ${r[3]} SysD-nginx ${r[4]} galaxy(ssl) ${r[5]}"
+	echo "$(hostname)	postgres ${r[0]} ${r[1]} SysD-gxy ${r[3]} SysD-nginx ${r[4]} galaxy(ssl) ${r[5]}"
 }
 
 _status-cvmfs() {
