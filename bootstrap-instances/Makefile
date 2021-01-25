@@ -26,30 +26,23 @@ catsup: catchup
 id_rsa: ## Generate an SSH key which will be sent to the machines
 	ssh-keygen -t rsa -f id_rsa -N ''
 
+status-%: ## Check overall progress everywhere
+	ansible -a 'gat status' workshop_instances -f $(THREADS) | grep --line-buffered --color=never "	"
+
 status-%: ## Check overall progress in region
-	ansible -a 'gat status' workshop_$(@:status-%=%) -f $(THREADS)
+	ansible -a 'gat status' workshop_$(@:status-%=%) -f $(THREADS) | grep --line-buffered --color=never "	"
 
 check-ansible-%: ## Check ansible tutorial (check-ansible-eu/oz/us/...)
-	@ansible -a 'gat status-ansible' workshop_$(@:check-ansible-%=%) -f $(THREADS) | grep -i basic
+	@ansible -a 'gat status-ansible' workshop_$(@:check-ansible-%=%) -f $(THREADS) | grep --color=never -i basic
 
-check-galaxy-eu: ## [EU] Check galaxy tutorial
-	@ansible -a 'gat status-galaxy'  workshop_eu -f $(THREADS) | grep -i nginx
+check-galaxy-%: ## Check galaxy tutorial (check-galaxy-eu/oz/us/...)
+	@ansible -a 'gat status-galaxy' workshop_$(@:check-galaxy-%=%) -f $(THREADS) | grep --color=never -i nginx
 
-check-galaxy-oz: ## [OZ] Check galaxy tutorial
-	@ansible -a 'gat status-galaxy'  workshop_oz -f $(THREADS) | grep -i nginx
+check-cvmfs-%: ## Check cvmfs tutorial (check-cvmfs-eu/oz/us/...)
+	@ansible -a 'gat status-cvmfs' workshop_$(@:check-cvmfs-%=%) -f $(THREADS) | grep --color=never -i reqs
 
-check-cvmfs-eu: ## [EU] Check cvmfs tutorial
-	@ansible -a 'gat status-cvmfs'   workshop_eu -f $(THREADS) | grep -i reqs
-
-check-cvmfs-oz: ## [OZ] Check cvmfs tutorial
-	@ansible -a 'gat status-cvmfs'   workshop_oz -f $(THREADS) | grep -i reqs
-
-check-pulsar-eu: ## [EU] Check pulsar tutorial
-	@ansible -a 'gat status-pulsar'  workshop_eu -f $(THREADS) | grep -i reqs
-
-check-pulsar-oz: ## [OZ] Check pulsar tutorial
-	@ansible -a 'gat status-pulsar'  workshop_oz -f $(THREADS) | grep -i reqs
-
+check-pulsar-%: ## Check pulsar tutorial (check-pulsar-eu/oz/us/...)
+	@ansible -a 'gat status-pulsar' workshop_$(@:check-pulsar-%=%) -f $(THREADS) | grep --color=never -i reqs
 
 remove-old-ssh-keys: ## Remove old SSH keys in your known hosts file
 	bash -c "for i in {0..80}; do ssh-keygen -f ~/.ssh/known_hosts -R gat-\$$i.training.galaxyproject.eu; done;"
