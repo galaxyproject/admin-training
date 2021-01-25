@@ -7,19 +7,28 @@ localhost
 workshop_oz
 workshop_eu
 workshop_us
+workshop_oz_pulsar
+workshop_eu_pulsar
+workshop_us_pulsar
 
 # Aussie provided machines
 [workshop_oz]
 gat-[0:17].oz.training.galaxyproject.eu
-gat-[19:61].oz.training.galaxyproject.eu
+gat-[19:21].oz.training.galaxyproject.eu
+[workshop_oz_pulsar]
+gat-[22:61].oz.training.galaxyproject.eu
 
 # EU provided machines
 [workshop_eu]
-gat-[0:79].eu.training.galaxyproject.eu
+gat-[0:39].eu.training.galaxyproject.eu
+[workshop_eu_pulsar]
+gat-[40:79].eu.training.galaxyproject.eu
 
 # American machines
+[workshop_us_pulsar]
+gat-[0:44].us.training.galaxyproject.eu
 [workshop_us]
-gat-[0:54].us.training.galaxyproject.eu
+gat-[45:54].us.training.galaxyproject.eu
 
 # Some variables apply to every member of the group
 [workshop_instances:vars]
@@ -35,4 +44,10 @@ ansible_ssh_private_key_file = admintraining-eu.key
 [workshop_oz:vars]
 ansible_ssh_private_key_file = admintraining-oz2.key
 [workshop_us:vars]
+ansible_ssh_private_key_file = admintraining-us.key
+[workshop_eu_pulsar:vars]
+ansible_ssh_private_key_file = admintraining-eu.key
+[workshop_oz_pulsar:vars]
+ansible_ssh_private_key_file = admintraining-oz2.key
+[workshop_us_pulsar:vars]
 ansible_ssh_private_key_file = admintraining-us.key
