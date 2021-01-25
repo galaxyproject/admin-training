@@ -10,7 +10,7 @@ tag-%: id_rsa ## Run a specific tag (e.g. tag-gat-cli)
 	ansible-playbook playbook.yml -f $(THREADS) -t $(@:tag-%=%)
 
 prep-%: id_rsa ## Prepare a region (prep-eu/oz/us/...)
-	ansible-playbook playbook.yml -f $(THREADS) --limit workshop_$(@:prep-%=%)
+	ansible-playbook playbook.yml -f $(THREADS) --limit workshop_$(@:prep-%=%),workshop_$(@:prep-%=%)_pulsar
 
 catchup: id_rsa ## Provision bare machines as if they've done ansible-galaxy
 	ansible-playbook catchup.yml -f $(THREADS)
