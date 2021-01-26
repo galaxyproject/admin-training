@@ -111,7 +111,7 @@ This day covers getting a Galaxy server setup with Ansible, a server you will de
 
 ### Thursday
 
-**Start** today by sharing *a dream vacation location, if you could be anywhere in the world (or outside it?)* in the [#general][slack-general] channel in Slack.
+**Start** today by sharing *What has been your favourite thing about the course so far?* in the [#general][slack-general] channel in Slack.
 
 | **Topic**                                | **Video**                             | **Slides / Materials**                   | Slack Channel                      |
 | ---------------------------------------  | ------------------------------------- | ---------------------------------------- | ------------------------           |
