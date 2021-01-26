@@ -82,7 +82,7 @@ This day covers getting a Galaxy server setup with Ansible, a server you will de
 
 | **Topic**                      | **Video**                                        | **Slides / Materials**           | Slack Channel                              |
 | ---------------------------    | ---------------------------------------------    | -------------------------------- | ----------------------------               |
-| Running jobs in Singularity    | [Video](https://youtu.be/airzg4-ETEs)            | [Tutorial][singularity-exercise] | [#general][slack-general]                  |
+| Running jobs in Singularity    | [Video](https://youtu.be/airzg4-ETEs)            | [Tutorial][singularity-exercise] | [#03-singularity][slack-singularity]       |
 | Ephemeris (Intro)              | [Video](https://youtu.be/7Qqwrzn--YI&t=0s)[1]    | [Slides][ephemeris-slides]       | [#03-ephemeris][slack-ephemeris]           |
 | Ephemeris                      | [Video](https://youtu.be/7Qqwrzn--YI&t=1122s)[1] | [Tutorial][ephemeris-exercise]   | [#03-ephemeris][slack-ephemeris]           |
 | Users, Groups, and Quotas      | [Video](https://youtu.be/crywu31L8qg)            | [Slides][users-groups-slides]    | [#general][slack-general]                  |
@@ -220,6 +220,7 @@ Today is a ["Choose Your Own Adventure"](https://en.wikipedia.org/wiki/Choose_Yo
 [slack-ephemeris]:       https://galaxyadmintraining.slack.com/archives/C01EGTWAUQM
 [slack-cvmfs]:           https://galaxyadmintraining.slack.com/archives/C01EYKNTVMF
 [slack-bioblend]:        https://galaxyadmintraining.slack.com/archives/C01ES5Z7VE0
+[slack-singularity]:     https://galaxyadmintraining.slack.com/archives/C01JELD626A
 [slack-compute-cluster]: https://galaxyadmintraining.slack.com/archives/C01EL17JWP4
 [slack-pulsar]:          https://galaxyadmintraining.slack.com/archives/C01EL7BHW03
 [slack-storage]:         https://galaxyadmintraining.slack.com/archives/C01EL195VB4
