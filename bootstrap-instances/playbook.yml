@@ -106,6 +106,7 @@
           - tree
           - byobu
           - screen
+          - cockpit # web console
           - moreutils # for gat-cli
         state: latest
       tags:
@@ -158,6 +159,17 @@
       command: byobu-launcher-install
       become: true
       become_user: ubuntu
+
+    - name: Configure Cockpit to listen on port 8080
+      copy:
+        content: |
+          [Socket]
+          ListenStream=
+          ListenStream=8080
+        dest: /etc/systemd/system/cockpit.socket.d/override.conf
+        owner: root
+        group: root
+        mode: 0755
 
     - name: Add gat-cli command for users
       copy:
