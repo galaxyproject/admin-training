@@ -88,7 +88,7 @@ This day covers getting a Galaxy server setup with Ansible, a server you will de
 | Users, Groups, and Quotas      | [Video](https://youtu.be/crywu31L8qg)            | [Slides][users-groups-slides]    | [#general][slack-general]                  |
 | Reference Data (Intro)         | [Video](https://youtu.be/g_cavAO-fBM)            | [Slides][ref-genomes-slides]     | [#04-cvmfs][slack-cvmfs]                   |
 | Reference Data                 | [Video](https://youtu.be/X3iFMZP_fQ8)            | [Tutorial][cvmfs-exercise]       | [#04-cvmfs][slack-cvmfs]                   |
-| Data Libraries                 | [Video](https://youtu.be/8jvjTL49yPQ)            | [Tutorial][data-libraries]       | [#05-data-libraries][slack-data-libraries] |
+| Data Libraries                 | [Video]( https://youtu.be/6BWu29Oiihw )            | [Tutorial][data-libraries]       | [#05-data-libraries][slack-data-libraries] |
 | BioBlend (Intro)               | [Video](https://youtu.be/bOv5yNRc2hc)            | [Slides][bioblend-slides]        | [#06-bioblend][slack-bioblend]             |
 | BioBlend                       | [Video](https://vimeo.com/448664925#t=16m0s)[2]  | [Tutorial][bioblend-exercise]    | [#06-bioblend][slack-bioblend]             |
 | *Touch Base Telco* (See Slack) |                                                  |                                  |                                            |
