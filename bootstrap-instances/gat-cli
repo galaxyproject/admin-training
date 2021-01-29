@@ -158,6 +158,12 @@ _status-monitoring() {
 	echo "${r[@]}"
 }
 
+_status-gxit() {
+	local -a r=()
+	r[0]=$(service_state galaxy-gie-proxy)
+	echo "${r[@]}"
+}
+
 gat_status() { # [Admin] Get an overview of ALL tutorials not just one.
 	# day 1
 	local ansible=$(_status-ansible | unified-progress)
@@ -176,9 +182,11 @@ gat_status() { # [Admin] Get an overview of ALL tutorials not just one.
 	local storage=$(_status-storage | unified-progress)
 	local gxadmin=$(_status-gxadmin | unified-progress)
 	local monitoring=$(_status-monitoring | unified-progress)
+	# day 5
+	local gxit=$(_status-gxit)
 
 	echo -n "$(hostname -f | cut -d. -f1-2)	"
-	echo "M $ansible$galaxy	T $singularity$ephemeris$cvmfs$datalibs	W $cluster$mapping$metrics	R $pulsar$storage$gxadmin$monitoring" | prettify
+	echo "M $ansible$galaxy	T $singularity$ephemeris$cvmfs$datalibs	W $cluster$mapping$metrics	R $pulsar$storage$gxadmin$monitoring	F $gxit" | prettify
 }
 
 gat_status-raw() {
@@ -199,9 +207,11 @@ gat_status-raw() {
 	local storage=$(_status-storage)
 	local gxadmin=$(_status-gxadmin)
 	local monitoring=$(_status-monitoring)
+	# day 5
+	local gxit=$(_status-gxit)
 
 	echo -n "$(hostname -f | cut -d. -f1-2)	"
-	echo "M|$ansible|$galaxy	T|$singularity|$ephemeris|$cvmfs|$datalibs	W|$cluster|$mapping|$metrics	R|$pulsar|$storage|$gxadmin|$monitoring"
+	echo "M|$ansible|$galaxy	T|$singularity|$ephemeris|$cvmfs|$datalibs	W|$cluster|$mapping|$metrics	R|$pulsar|$storage|$gxadmin|$monitoring	F|$gxit"
 }
 
 gat_status-sum() {
@@ -222,9 +232,11 @@ gat_status-sum() {
 	local storage=$(_status-storage)
 	local gxadmin=$(_status-gxadmin)
 	local monitoring=$(_status-monitoring)
+	# day 5
+	local gxit=$(_status-gxit)
 
 	echo -n "$(hostname -f | cut -d. -f1-2)	"
-	echo "$ansible $galaxy $singularity $ephemeris $cvmfs $datalibs $cluster $mapping $metrics $pulsar $storage $gxadmin $monitoring" | sed 's/ / + /g' | bc
+	echo "$ansible $galaxy $singularity $ephemeris $cvmfs $datalibs $cluster $mapping $metrics $pulsar $storage $gxadmin $monitoring $gxit" | sed 's/ / + /g' | bc
 }
 
 _status-ansible() {
