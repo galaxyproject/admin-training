@@ -136,18 +136,18 @@ Today is a ["Choose Your Own Adventure"](https://en.wikipedia.org/wiki/Choose_Yo
 
 | **Topic**                                           | **Video**                             | **Slides / Materials**                                            | Slack Channel                      |
 | --------------------------------------------------- | ------------------------------------- | ------------------------------------------------------------      | ------------------------           |
-| What's new in Galaxy                                |                                       | Slides: [2019][whats-new-2019], [2020][whats-new-2020]            | [#general][slack-general]          |
+| What's new in Galaxy                                |                                       | Slides: [2019][whats-new-2019], [2020][whats-new-2020]            | [#11-cyoa][slack-cyoa]             |
 | Training Infrastructure as a Service (TIaaS)¶       | [Video](https://youtu.be/tz0ZbK_8Vcc) | [TIaaS Exercise][tiaas-exercise]                                  | [#12-tiaas][slack-tiaas]           |
 | Monitoring With Reports                             |                                       | [Reports Exercise][monitoring-reports]                            | [#10-monitoring][slack-monitoring] |
-| Interactive Tools                                   | [Video](https://youtu.be/lACsIhnbTbE) | [Slides][interactive-tools-slides], [Exercise][interactive-tools] | [#general][slack-general]          |
-| Jenkins & Automation                                |                                       | [Exercise][jenkins-exercise]                                      | [#general][slack-general]          |
-| Advanced Customisation                              |                                       | [Slides][advanced-customisation]                                  | [#general][slack-general]          |
-| When things go wrong: Galaxy Server Troubleshooting |                                       | [Slides][troubleshooting-slides]                                  | [#general][slack-general]          |
-| Python 2 to Python 3!                               |                                       | [Docs][py2to3]                                                    | [#general][slack-general]          |
-| Tool Development                                    |                                       | [Slides][tool-dev-slides], [Exercise][planemo]                    | [#general][slack-general]          |
-| Dataset Collections                                 |                                       | [DCs][dc], [Rule based][rb]                                       | [#general][slack-general]          |
-| Developing your own Training                        |                                       | [Setting up][training-jekyll], [Exercise][training-new-tutorial]  | [#general][slack-general]          |
-| Securing your Galaxy¶                               | [Video](https://youtu.be/CQLUap74DVA) | Their team is not releasing these until February 2.               | [#general][slack-general]          |
+| Interactive Tools                                   | [Video](https://youtu.be/lACsIhnbTbE) | [Slides][interactive-tools-slides], [Exercise][interactive-tools] | [#11-cyoa][slack-cyoa]             |
+| Jenkins & Automation                                |                                       | [Exercise][jenkins-exercise]                                      | [#11-cyoa][slack-cyoa]             |
+| Advanced Customisation                              |                                       | [Slides][advanced-customisation]                                  | [#11-cyoa][slack-cyoa]             |
+| When things go wrong: Galaxy Server Troubleshooting |                                       | [Slides][troubleshooting-slides]                                  | [#11-cyoa][slack-cyoa]             |
+| Python 2 to Python 3!                               |                                       | [Docs][py2to3]                                                    | [#11-cyoa][slack-cyoa]             |
+| Tool Development                                    |                                       | [Slides][tool-dev-slides], [Exercise][planemo]                    | [#11-cyoa][slack-cyoa]             |
+| Dataset Collections                                 |                                       | [DCs][dc], [Rule based][rb]                                       | [#11-cyoa][slack-cyoa]             |
+| Developing your own Training                        |                                       | [Setting up][training-jekyll], [Exercise][training-new-tutorial]  | [#11-cyoa][slack-cyoa]             |
+| Securing your Galaxy¶                               | [Video](https://youtu.be/CQLUap74DVA) | Their team is not releasing these until February 2.               | [#11-cyoa][slack-cyoa]             |
 | *Touch Base Telco* (See Slack)                      |                                       |                                                                   |                                    |
 
 ¶: These videos do not currently have corrected captions, only automated ones.
@@ -227,6 +227,7 @@ Today is a ["Choose Your Own Adventure"](https://en.wikipedia.org/wiki/Choose_Yo
 [slack-monitoring]:      https://galaxyadmintraining.slack.com/archives/C01ED96FKFG
 [slack-data-libraries]:  https://galaxyadmintraining.slack.com/archives/C01K8NKDV8E
 [slack-tiaas]:           https://galaxyadmintraining.slack.com/archives/C01L5M887PA
+[slack-cyoa]:            https://galaxyadmintraining.slack.com/archives/C01F19R804B
 
 
 ### Instructors
