@@ -40,6 +40,19 @@ At regular intervals we'll write a message like "Is everything going without iss
 
 We should encourage students to write in the chat if they have issues or simply want to celebrate successfully completing a tutorial.
 
+### Student Monitoring with `gat-cli`
+
+We wrote a command line tool which permits surveying student progress. In the makefile are several commands for checking student progress (using ansible to run the `gat` command on each machine):
+
+Command                | Use
+----                   | ---
+`make check-ansible-%` | Check ansible tutorial (check-ansible-eu/oz/us/...)
+`make check-cvmfs-%`   | Check cvmfs tutorial (check-cvmfs-eu/oz/us/...)
+`make check-galaxy-%`  | Check galaxy tutorial (check-galaxy-eu/oz/us/...)
+`make check-pulsar-%`  | Check pulsar tutorial (check-pulsar-eu/oz/us/...)
+`make status`          | Check overall progress everywhere
+`make status-%`        | Check overall progress in region
+
 ### Handover
 
 At the end of the day in a particular region we'll note that we're switching off to the next region, pinging the person you're handing over to. This should help students in between regions understand what's going on. We have a ~1h gap between APO/EMEA, 3-4h overlap between EMEA/Amer, and 0 hour gap between Amer/APO.
