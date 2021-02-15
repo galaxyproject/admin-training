@@ -138,6 +138,11 @@
         repo: https://github.com/pearofducks/ansible-vim
         dest: /etc/vim/bundle/ansible-vim
 
+    - name: Correct editor selected
+      community.general.alternatives:
+        name: editor
+        path: /bin/nano
+
     - name: Install pip packages
       pip:
         name:
