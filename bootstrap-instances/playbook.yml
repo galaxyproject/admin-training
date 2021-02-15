@@ -100,6 +100,7 @@
           - vim-pathogen
           - emacs-nox
           - virtualenv
+          - cockpit
           - python3-pip
           - jq
           - zlib1g-dev
@@ -121,6 +122,20 @@
           - emacs-lucid
           - emacs-gtk
         state: absent
+
+    - name: Have cockpit listen on port 8080
+      copy:
+        content: |
+            [Socket]
+            ListenStream=
+            ListenStream=8080
+        dest: "/etc/systemd/system/cockpit.socket.d/override.conf"
+        mode: 0644
+
+    - ansible.builtin.systemd:
+        daemon_reload: yes
+        state: restarted
+        name: cockpit.socket
 
     #- name: Enable pathogen for all users
     #  command: vim-addons -w install pathogen
