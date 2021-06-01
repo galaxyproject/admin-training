@@ -1,2 +1,0 @@
-[galaxyservers]
-{{ inventory_hostname }} ansible_connection=local
