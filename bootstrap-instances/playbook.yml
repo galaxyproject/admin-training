@@ -100,7 +100,6 @@
           - vim-pathogen
           - emacs-nox
           - virtualenv
-          - cockpit
           - python3-pip
           - jq
           - zlib1g-dev
@@ -122,6 +121,12 @@
           - emacs-lucid
           - emacs-gtk
         state: absent
+
+    - name: Have cockpit listen on port 8080
+      file:
+        path: "/etc/systemd/system/cockpit.socket.d"
+        state: directory
+        mode: 0755
 
     - name: Have cockpit listen on port 8080
       copy:
@@ -150,11 +155,11 @@
 
     - name: Install pearofducks/ansible-vim for all users
       git:
-        repo: https://github.com/pearofducks/ansible-vim
+        repo: "https://github.com/pearofducks/ansible-vim"
         dest: /etc/vim/bundle/ansible-vim
 
     - name: Correct editor selected
-      community.general.alternatives:
+      alternatives:
         name: editor
         path: /bin/nano
 

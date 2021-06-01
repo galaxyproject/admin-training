@@ -12,16 +12,10 @@ tag-%: id_rsa ## Run a specific tag (e.g. tag-gat-cli)
 prep-%: id_rsa ## Prepare a region (prep-eu/oz/us/...)
 	ansible-playbook playbook.yml -f $(THREADS) --limit workshop_$(@:prep-%=%),workshop_$(@:prep-%=%)_pulsar
 
-catchup: id_rsa ## Provision bare machines as if they've done ansible-galaxy
-	ansible-playbook catchup.yml -f $(THREADS)
-
 obtain-passwords: ## Obtain passwords from machines
 	# This is easier tbh
 	# for i in {0..54}; do pwgen -H <( echo "gat-$i.$region.training.galaxyproject.eu") 12 1 >> sdf; done;
 	ansible-playbook playbook.yml -t password -f 80 |grep password: | grep -o gat.* | sed 's/"//g;s/ /\t/'
-
-ketchup: catchup
-catsup: catchup
 
 id_rsa: ## Generate an SSH key which will be sent to the machines
 	ssh-keygen -t rsa -f id_rsa -N ''

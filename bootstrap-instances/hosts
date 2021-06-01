@@ -11,26 +11,33 @@ pulsar_only
 [galaxy_only:children]
 workshop_oz
 workshop_eu
+workshop_be
 workshop_us
 
 [pulsar_only]
 [pulsar_only:children]
 workshop_oz_pulsar
 workshop_eu_pulsar
+workshop_be_pulsar
 workshop_us_pulsar
 
 # Aussie provided machines
 [workshop_oz]
-gat-[0:17].oz.training.galaxyproject.eu
-gat-[19:21].oz.training.galaxyproject.eu
+gat-[0:9].oz.training.galaxyproject.eu
 [workshop_oz_pulsar]
-gat-[22:61].oz.training.galaxyproject.eu
+#gat-[22:61].oz.training.galaxyproject.eu
 
 # EU provided machines
 [workshop_eu]
 gat-[0:39].eu.training.galaxyproject.eu
 [workshop_eu_pulsar]
 gat-[40:79].eu.training.galaxyproject.eu
+
+# BE provided machines
+[workshop_be]
+gat-[0:3].be.training.galaxyproject.eu
+[workshop_be_pulsar]
+gat-[4:5].be.training.galaxyproject.eu
 
 # American machines
 [workshop_us]
@@ -49,13 +56,17 @@ set_password = true
 # admin to use to login to the VMs.
 [workshop_eu:vars]
 ansible_ssh_private_key_file = admintraining-eu.key
+[workshop_be:vars]
+ansible_ssh_private_key_file = admintraining-be.key
 [workshop_oz:vars]
-ansible_ssh_private_key_file = admintraining-oz2.key
+ansible_ssh_private_key_file = admintraining-oz3.key
 [workshop_us:vars]
 ansible_ssh_private_key_file = admintraining-us.key
 [workshop_eu_pulsar:vars]
 ansible_ssh_private_key_file = admintraining-eu.key
 [workshop_oz_pulsar:vars]
-ansible_ssh_private_key_file = admintraining-oz2.key
+ansible_ssh_private_key_file = admintraining-oz3.key
 [workshop_us_pulsar:vars]
 ansible_ssh_private_key_file = admintraining-us.key
+[workshop_be_pulsar:vars]
+ansible_ssh_private_key_file = admintraining-be.key
