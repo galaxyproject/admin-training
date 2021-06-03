@@ -218,6 +218,16 @@
       tags:
         - gat-cli
 
+    - name: Add galaxy-create-user command for testing
+      copy:
+        src: galaxy-create-user.py
+        dest: /usr/bin/galaxy-create-user
+        owner: root
+        group: root
+        mode: 0755
+      tags:
+        - gat-cli
+
     - name: Manage passwords
       block:
         - name: Install pwgen as needed
