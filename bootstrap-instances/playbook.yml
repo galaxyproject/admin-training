@@ -44,18 +44,18 @@
         state: present
         key: "{{ lookup('file', 'gat-one-key-to-rule-them-all.pub') }}"
 
-    #- name: Switch to kiwi update servers
-      #copy:
-        #content: |
-            #deb http://nz.archive.ubuntu.com/ubuntu/ focal main restricted universe multiverse
-            #deb http://nz.archive.ubuntu.com/ubuntu/ focal-updates main restricted universe multiverse
-            #deb http://nz.archive.ubuntu.com/ubuntu/ focal-backports main restricted universe multiverse
-            #deb http://nz.archive.ubuntu.com/ubuntu/ focal-security main restricted universe multiverse
-        #dest: /etc/apt/sources.list.d/au_archive_ubuntu_com_ubuntu.list
-        #mode: 0644
-      #when: "'workshop_oz' in {{ group_names }}"
-      #tags:
-        #- upgrades
+    - name: Switch to kiwi update servers
+      copy:
+        content: |
+            deb http://nz.archive.ubuntu.com/ubuntu/ focal main restricted universe multiverse
+            deb http://nz.archive.ubuntu.com/ubuntu/ focal-updates main restricted universe multiverse
+            deb http://nz.archive.ubuntu.com/ubuntu/ focal-backports main restricted universe multiverse
+            deb http://nz.archive.ubuntu.com/ubuntu/ focal-security main restricted universe multiverse
+        dest: /etc/apt/sources.list.d/au_archive_ubuntu_com_ubuntu.list
+        mode: 0644
+      when: "'workshop_oz' in group_names"
+      tags:
+        - upgrades
 
     - name: Update repos
       apt:
