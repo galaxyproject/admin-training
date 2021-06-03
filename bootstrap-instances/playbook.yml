@@ -172,13 +172,25 @@
 
     - name: Download the "Fake LE Root X1" certificate
       get_url:
-        url: https://letsencrypt.org/certs/fakelerootx1.pem
+        url: https://letsencrypt.org/certs/staging/letsencrypt-stg-root-x1.pem
         dest: /usr/local/share/ca-certificates/fakelerootx1.crt
       register: __fake_le_root
+      tags:
+        - certbot
+
+    - name: Download the "Fake LE Root X2" certificate
+      get_url:
+        url: https://letsencrypt.org/certs/staging/letsencrypt-stg-root-x2.pem
+        dest: /usr/local/share/ca-certificates/fakelerootx2.crt
+      register: __fake_le_root2
+      tags:
+        - certbot
 
     - name: Update CA certificates
       command: update-ca-certificates
-      when: __fake_le_root is changed
+      when: __fake_le_root is changed or __fake_le_root2 is changed
+      tags:
+        - certbot
 
     - name: Enable byobu for users (forcing them into a Screen/TMUX session on login via ssh)
       command: byobu-launcher-install
