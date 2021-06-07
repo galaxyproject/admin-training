@@ -173,7 +173,7 @@
     - name: Download the "Fake LE Root X1" certificate
       get_url:
         url: https://letsencrypt.org/certs/staging/letsencrypt-stg-root-x1.pem
-        dest: /usr/local/share/ca-certificates/fakelerootx1.crt
+        dest: /usr/local/share/ca-certificates/fakeleroot-x1.crt
       register: __fake_le_root
       tags:
         - certbot
@@ -181,7 +181,7 @@
     - name: Download the "Fake LE Root X2" certificate
       get_url:
         url: https://letsencrypt.org/certs/staging/letsencrypt-stg-root-x2.pem
-        dest: /usr/local/share/ca-certificates/fakelerootx2.crt
+        dest: /usr/local/share/ca-certificates/fakeleroot-x2.crt
       register: __fake_le_root2
       tags:
         - certbot
@@ -189,6 +189,17 @@
     - name: Update CA certificates
       command: update-ca-certificates
       when: __fake_le_root is changed or __fake_le_root2 is changed
+      tags:
+        - certbot
+
+    - name: Ensure CA is used instead of certifi for requests bundle
+      copy:
+        content: |
+            export REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
+        dest: /home/ubuntu/.bash_aliases
+        owner: ubuntu
+        group: ubuntu
+        mode: 0750
       tags:
         - certbot
 
@@ -221,7 +232,7 @@
     - name: Add galaxy-create-user command for testing
       copy:
         src: galaxy-create-user.py
-        dest: /usr/bin/galaxy-create-user
+        dest: /usr/bin/gat-create-user
         owner: root
         group: root
         mode: 0755
