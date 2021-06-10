@@ -35,9 +35,12 @@ gat-[40:79].eu.training.galaxyproject.eu
 
 # BE provided machines
 [workshop_be]
-gat-[0:3].be.training.galaxyproject.eu
+gat-[0:79].be.training.galaxyproject.eu
 [workshop_be_pulsar]
-gat-[4:5].be.training.galaxyproject.eu
+#gat-[4:5].be.training.galaxyproject.eu
+
+[be_test]
+gat-[0:67].be.training.galaxyproject.eu
 
 # American machines
 [workshop_us]

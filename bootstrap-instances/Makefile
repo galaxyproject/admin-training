@@ -12,6 +12,9 @@ tag-%: id_rsa ## Run a specific tag (e.g. tag-gat-cli)
 prep-%: id_rsa ## Prepare a region (prep-eu/oz/us/...)
 	ansible-playbook playbook.yml -f $(THREADS) --limit workshop_$(@:prep-%=%),workshop_$(@:prep-%=%)_pulsar
 
+test-%: id_rsa ## Run GIT-GAT + tests for a region (test-eu/oz/us/...)
+	ansible-playbook test.yml -f $(THREADS) --limit workshop_$(@:prep-%=%),workshop_$(@:prep-%=%)_pulsar
+
 obtain-passwords: ## Obtain passwords from machines
 	# This is easier tbh
 	# for i in {0..54}; do pwgen -H <( echo "gat-$i.$region.training.galaxyproject.eu") 12 1 >> sdf; done;

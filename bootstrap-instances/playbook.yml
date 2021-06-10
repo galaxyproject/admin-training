@@ -232,7 +232,7 @@
     - name: Add galaxy-create-user command for testing
       copy:
         src: galaxy-create-user.py
-        dest: /usr/bin/gat-create-user
+        dest: /usr/bin/galaxy-create-user
         owner: root
         group: root
         mode: 0755

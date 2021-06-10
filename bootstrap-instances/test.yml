@@ -1,0 +1,63 @@
+---
+- name: Configure workshop VMs
+  hosts: workshop_instances
+  vars:
+      gitgat:
+          -  1-ansible-galaxy-run.sh
+          -  2-singularity-run.sh
+          -  3-tool-management-run.sh
+          -  4-cvmfs-run.sh
+          -  5-data-library-run.sh
+          -  6-connect-to-compute-cluster-run.sh
+          -  7-job-destinations-run.sh
+          -  8-pulsar-run.sh
+      steps:
+        '0': "{{ gitgat[:1] }}"
+        '1': "{{ gitgat[:2] }}"
+        '2': "{{ gitgat[:3] }}"
+        '3': "{{ gitgat[:4] }}"
+        '4': "{{ gitgat[:5] }}"
+        '5': "{{ gitgat[:6] }}"
+        '6': "{{ gitgat[:7] }}"
+        '7': "{{ gitgat[:8] }}"
+  tasks:
+      - name: Clone git gat
+        ansible.builtin.git:
+            repo: 'https://github.com/hexylena/git-gat'
+            dest: /home/ubuntu/git-gat/
+        become_user: ubuntu
+
+      - set_fact:
+          r: "{{ 8 | random(seed=inventory_hostname) | int }}"
+
+      - debug:
+          msg: "{{ inventory_hostname }} - {{ steps[r][-1] }}"
+
+      - name: Run assigned step(s)
+        shell: "bash .scripts/{{ item }} > /home/ubuntu/{{ item }}.log 2>&1"
+        args:
+          chdir: git-gat/
+        loop: "{{ steps[r] }}"
+        become_user: ubuntu
+
+      - name: Clone galaxy
+        ansible.builtin.git:
+            repo: '/srv/galaxy/server'
+            dest: /home/galaxy/server
+        become_user: galaxy
+
+      - name: Run assigned step(s)
+        shell: "REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt GALAXY_TEST_EXTERNAL=https://{{ inventory_hostname }} GALAXY_CONFIG_MASTER_API_KEY=adminkey ./run_tests.sh -api > /home/galaxy/test.log 2>&1"
+        args:
+          chdir: /home/galaxy/server/
+        become_user: galaxy
+
+      - name: Copy file back into tmp
+        ansible.builtin.fetch:
+          src: /home/galaxy/test.log
+          dest: "/tmp/galaxy-{{ inventory_hostname }}.log"
+
+      - name: Copy file back into tmp
+        ansible.builtin.fetch:
+          src: /home/galaxy/server/run_api_tests.html
+          dest: "/tmp/galaxy-{{ inventory_hostname }}.html"
