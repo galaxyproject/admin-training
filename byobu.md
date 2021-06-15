@@ -4,6 +4,8 @@ GAT virtual machines use byobu.
 
 Byobu has some useful features such as allowing a session to be split into multiple sessions within the same terminal window. Some terminal behaviour may be different from what you are used to, particularly navigation through scrollback in the terminal. Some key bindings are listed here including instructions for scrolling in the terminal.
 
+**Did your window freeze?**: Try Ctrl-Q, this freezes a terminal.
+
 #### Scrolling
 ```
   F7                            Enter scroll mode
