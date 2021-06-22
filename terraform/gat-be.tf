@@ -8,6 +8,7 @@ variable "gat-be-flavour" {
 
 data "openstack_images_image_v2" "gat-image-be" {
   name = "Ubuntu-20.04"
+  provider = openstack.vsc
 }
 
 # The VMs themselves.
@@ -26,6 +27,7 @@ resource "openstack_compute_instance_v2" "training-vm-be" {
   }
 
   count = var.gat-count-be
+  provider = openstack.vsc
 }
 
 # Outputs to be consumed by admins
@@ -128,6 +130,7 @@ variable "floatingips" {
 data "openstack_networking_floatingip_v2" "floatingips" {
   count   = var.gat-count-be
   address = element(var.floatingips, count.index)
+  provider = openstack.vsc
 }
 
 data "openstack_networking_port_v2" "ports" {
@@ -136,6 +139,7 @@ data "openstack_networking_port_v2" "ports" {
     count.index,
   )
   count = var.gat-count-be
+  provider = openstack.vsc
 }
 
 resource "openstack_networking_floatingip_associate_v2" "fip_1" {
@@ -146,6 +150,7 @@ resource "openstack_networking_floatingip_associate_v2" "fip_1" {
   port_id = element(data.openstack_networking_port_v2.ports.*.id, count.index)
 
   count = var.gat-count-be
+  provider = openstack.vsc
 }
 
 data "aws_route53_zone" "training-gxp-eu" {

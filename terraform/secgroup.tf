@@ -1,10 +1,12 @@
 resource "openstack_networking_secgroup_v2" "gat" {
+  provider = openstack.vsc
   name                 = "gat"
   description          = "[tf] Allow GAT port"
   delete_default_rules = "true"
 }
 
 resource "openstack_networking_secgroup_rule_v2" "gat-ping" {
+  provider = openstack.vsc
   direction         = "ingress"
   ethertype         = "IPv4"
   protocol          = "icmp"
@@ -12,12 +14,14 @@ resource "openstack_networking_secgroup_rule_v2" "gat-ping" {
 }
 
 variable "gat-ports" {
+  provider = openstack.vsc
   description = "GAT ports"
   type        = list(string)
   default     = ["22", "80", "443", "5671", "8080"]
 }
 
 resource "openstack_networking_secgroup_rule_v2" "gat-ports4" {
+  provider = openstack.vsc
   direction         = "ingress"
   ethertype         = "IPv4"
   protocol          = "tcp"
@@ -29,6 +33,7 @@ resource "openstack_networking_secgroup_rule_v2" "gat-ports4" {
 }
 
 resource "openstack_networking_secgroup_rule_v2" "gat-ports6" {
+  provider = openstack.vsc
   direction         = "ingress"
   ethertype         = "IPv6"
   protocol          = "tcp"
@@ -40,12 +45,14 @@ resource "openstack_networking_secgroup_rule_v2" "gat-ports6" {
 }
 
 resource "openstack_networking_secgroup_rule_v2" "gat-egress6" {
+  provider = openstack.vsc
   direction         = "egress"
   ethertype         = "IPv6"
   security_group_id = openstack_networking_secgroup_v2.gat.id
 }
 
 resource "openstack_networking_secgroup_rule_v2" "gat-egress4" {
+  provider = openstack.vsc
   direction         = "egress"
   ethertype         = "IPv4"
   security_group_id = openstack_networking_secgroup_v2.gat.id
