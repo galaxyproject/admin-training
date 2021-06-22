@@ -39,13 +39,10 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_EU_KEY }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_EU_SECRET }}
           AWS_DEFAULT_REGION: us-east-1
-          OS_AUTH_TYPE: "v3applicationcredential"
-          OS_AUTH_URL: ${{ secrets.OS_VSC_AUTH_URL }}
-          OS_IDENTITY_API_VERSION: "3"
-          OS_REGION_NAME: "regionOne"
-          OS_INTERFACE: "public"
-          OS_APPLICATION_CREDENTIAL_ID: ${{ secrets.OS_VSC_APPLICATION_CREDENTIAL_ID }}
-          OS_APPLICATION_CREDENTIAL_SECRET: ${{ secrets.OS_VSC_APPLICATION_CREDENTIAL_SECRET }}
+          TF_VAR_EU_OS_USERNAME=${{ secrets.OS_EU_USERNAME }}
+          TF_VAR_EU_OS_PASSWORD=${{ secrets.OS_EU_PASSWORD }}
+          TF_VAR_VSC_OS_APPLICATION_CREDENTIAL_ID=${{ secrets.OS_VSC_APPLICATION_CREDENTIAL_ID }}
+          TF_VAR_VSC_OS_APPLICATION_CREDENTIAL_SECRET=${{ secrets.OS_VSC_APPLICATION_CREDENTIAL_SECRET }}
 
       - name: Terraform Plan Status
         if: steps.plan.outcome == 'failure'
@@ -57,13 +54,10 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_EU_KEY }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_EU_SECRET }}
           AWS_DEFAULT_REGION: us-east-1
-          OS_AUTH_TYPE: "v3applicationcredential"
-          OS_AUTH_URL: ${{ secrets.OS_VSC_AUTH_URL }}
-          OS_IDENTITY_API_VERSION: "3"
-          OS_REGION_NAME: "regionOne"
-          OS_INTERFACE: "public"
-          OS_APPLICATION_CREDENTIAL_ID: ${{ secrets.OS_VSC_APPLICATION_CREDENTIAL_ID }}
-          OS_APPLICATION_CREDENTIAL_SECRET: ${{ secrets.OS_VSC_APPLICATION_CREDENTIAL_SECRET }}
+          TF_VAR_EU_OS_USERNAME=${{ secrets.OS_EU_USERNAME }}
+          TF_VAR_EU_OS_PASSWORD=${{ secrets.OS_EU_PASSWORD }}
+          TF_VAR_VSC_OS_APPLICATION_CREDENTIAL_ID=${{ secrets.OS_VSC_APPLICATION_CREDENTIAL_ID }}
+          TF_VAR_VSC_OS_APPLICATION_CREDENTIAL_SECRET=${{ secrets.OS_VSC_APPLICATION_CREDENTIAL_SECRET }}
 
       - name: Commit changed files back
         run: |
