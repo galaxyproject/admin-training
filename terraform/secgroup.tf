@@ -14,7 +14,6 @@ resource "openstack_networking_secgroup_rule_v2" "gat-ping" {
 }
 
 variable "gat-ports" {
-  provider = openstack.vsc
   description = "GAT ports"
   type        = list(string)
   default     = ["22", "80", "443", "5671", "8080"]
