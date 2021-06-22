@@ -47,15 +47,6 @@ jobs:
           OS_APPLICATION_CREDENTIAL_ID: ${{ secrets.OS_VSC_APPLICATION_CREDENTIAL_ID }}
           OS_APPLICATION_CREDENTIAL_SECRET: ${{ secrets.OS_VSC_APPLICATION_CREDENTIAL_SECRET }}
 
-      - name: Update Pull Request
-        env:
-          PLAN: "terraform\n${{ steps.plan.outputs.stdout }}"
-        run:
-            echo "Terraform Initialization ${{ steps.init.outcome }}"
-            echo "Terraform Plan ${{ steps.plan.outcome }}"
-            echo "Terraform Validate ${{ steps.validate.outputs.stdout }}"
-            echo "${process.env.PLAN}"
-
       - name: Terraform Plan Status
         if: steps.plan.outcome == 'failure'
         run: exit 1
