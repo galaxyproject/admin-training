@@ -27,12 +27,15 @@ jobs:
             echo "${{ secrets.GAT_US }}" > bootstrap-instances/admintraining-us.key
             echo "${{ secrets.THE_ONE_KEY }}" > bootstrap-instances/gat-one-key-to-rule-them-all
             echo "${{ secrets.THE_ONE_KEY_PUB }}" > bootstrap-instances/gat-one-key-to-rule-them-all.pub
+            mkdir -p ~/.ssh
+            chmod 600 ~/.ssh
             cat >> ~/.ssh/config <<-END
                 Host gat-*training.galaxyproject.eu
                     User ubuntu
                     UserKnownHostsFile /dev/null
                     StrictHostKeyChecking no
             END
+            chmod 640 ~/.ssh/config
 
       - name: Run the playbook
         run: |
