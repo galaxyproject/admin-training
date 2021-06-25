@@ -1,0 +1,32 @@
+name: Ansible Bootstrapping
+
+on:
+  workflow_dispatch:
+
+jobs:
+  setup:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+
+      - name: Install Ansible + deps
+        run: |
+            pip install -r bootstrap-instances/requirements.txt
+
+      - name: Setup SSH Keys
+        run: |
+            echo "${{ secrets.GAT_EU }}" > bootstrap-instances/admintraining-eu.key
+            echo "${{ secrets.GAT_BE }}" > bootstrap-instances/admintraining-be.key
+            echo "${{ secrets.GAT_OZ }}" > bootstrap-instances/admintraining-oz3.key
+            echo "${{ secrets.GAT_US }}" > bootstrap-instances/admintraining-us.key
+
+      - name: Run the playbook
+        run: |
+            cd bootstrap-instances
+            make prep

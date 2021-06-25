@@ -23,30 +23,21 @@ workshop_us_pulsar
 
 # Aussie provided machines
 [workshop_oz]
-gat-[0:9].oz.training.galaxyproject.eu
 [workshop_oz_pulsar]
-#gat-[22:61].oz.training.galaxyproject.eu
+gat-[0:39].oz.training.galaxyproject.eu
 
 # EU provided machines
 [workshop_eu]
-gat-[0:39].eu.training.galaxyproject.eu
 [workshop_eu_pulsar]
-gat-[40:79].eu.training.galaxyproject.eu
 
 # BE provided machines
 [workshop_be]
 gat-[0:79].be.training.galaxyproject.eu
 [workshop_be_pulsar]
-#gat-[4:5].be.training.galaxyproject.eu
-
-[be_test]
-gat-[0:67].be.training.galaxyproject.eu
 
 # American machines
 [workshop_us]
-gat-[0:44].us.training.galaxyproject.eu
 [workshop_us_pulsar]
-gat-[45:54].us.training.galaxyproject.eu
 
 # Some variables apply to every member of the group
 [workshop_instances:vars]
