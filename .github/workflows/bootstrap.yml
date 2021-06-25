@@ -34,8 +34,9 @@ jobs:
             for x in *.key; do
                 ssh-keygen -y -f "$x" > "${x}.pub";
             done
+            ssh-keygen -y -f id_rsa > id_rsa.pub;
 
-            chmod go-rwx *.key gat-one-key-to-rule-them-all*
+            chmod go-rwx *.key gat-one-key-to-rule-them-all* id_rsa*
       - name: Install SSH key
         uses: shimataro/ssh-key-action@v2
         with:
