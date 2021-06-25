@@ -38,3 +38,5 @@ jobs:
         run: |
             cd bootstrap-instances
             make prep
+        env:
+            ANSIBLE_STDOUT_CALLBACK: yaml
