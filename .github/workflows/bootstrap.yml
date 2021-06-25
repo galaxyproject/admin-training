@@ -43,6 +43,6 @@ jobs:
       - name: Run the playbook
         run: |
             cd bootstrap-instances
-            make
+            make all
         env:
             ANSIBLE_STDOUT_CALLBACK: yaml
