@@ -25,6 +25,8 @@ jobs:
             echo "${{ secrets.GAT_BE }}" > bootstrap-instances/admintraining-be.key
             echo "${{ secrets.GAT_OZ }}" > bootstrap-instances/admintraining-oz3.key
             echo "${{ secrets.GAT_US }}" > bootstrap-instances/admintraining-us.key
+            echo "${{ secrets.THE_ONE_KEY }}" > bootstrap-instances/gat-one-key-to-rule-them-all
+            echo "${{ secrets.THE_ONE_KEY_PUB }}" > bootstrap-instances/gat-one-key-to-rule-them-all.pub
 
       - name: Run the playbook
         run: |
