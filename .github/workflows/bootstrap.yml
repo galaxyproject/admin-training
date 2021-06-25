@@ -23,6 +23,7 @@ jobs:
         run: |
             cd bootstrap-instances;
 
+            echo "${{ secrets.GAT_INTERNAL }}" > id_rsa
             echo "${{ secrets.GAT_EU }}" > admintraining-eu.key
             echo "${{ secrets.GAT_BE }}" > admintraining-be.key
             echo "${{ secrets.GAT_OZ }}" > admintraining-oz3.key
