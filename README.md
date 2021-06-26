@@ -53,6 +53,7 @@ https://galaxyproject.org/events/gcc2021/training/admin-track
 Name                | Country | Affiliation(s)
 ---                 | ---     | ---
 Helena Rasche       | NL      | [Erasmus MC Bioinformatics Group](https://erasmusmc-bioinformatics.github.io/), [ATGM, Avans Hogeschool Breda](https://www.avans.nl)
+Nate Coraor         | US      | [Penn State University](https://www.huck.psu.edu/)
 Nicola Soranzo      | UK      | [Earlham Institute](https://www.earlham.ac.uk)
 Martin Čech         | CZ      | [Elixir Czech Republic](https://www.elixir-czech.cz/), [RECETOX](https://www.recetox.muni.cz/en)
 Anthony Bretaudeau  | FR      | [GenOuest](https://www.genouest.org/), [BIPAA](https://bipaa.genouest.org/)
@@ -115,4 +116,3 @@ Our galaxy VMs were provided by the conference host, [VSC](https://www.vscentrum
 A significant portion of our infrastructure was graciously provided by Galaxy Australia
 
 [![Australian BioCommons](logos/biocommons.png)](https://www.biocommons.org.au/galaxy-australia)
-	
