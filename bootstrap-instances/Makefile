@@ -50,5 +50,4 @@ check-pulsar-%: ## Check pulsar tutorial (check-pulsar-eu/oz/us/...)
 remove-old-ssh-keys: ## Remove old SSH keys in your known hosts file
 	bash -c "for i in {0..80}; do ssh-keygen -f ~/.ssh/known_hosts -R gat-\$$i.training.galaxyproject.eu; done;"
 
-
 .PHONY: all help catchup remove-old-ssh-keys
