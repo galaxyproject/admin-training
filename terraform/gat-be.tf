@@ -167,11 +167,11 @@ resource "aws_route53_record" "training-vm-be" {
 }
 
 # Only for the REAL gat.
-#resource "aws_route53_record" "training-vm-be-gxit-wildcard" {
-#zone_id = "${aws_route53_zone.training-gxp-be.zone_id}"
-#name    = "*.interactivetoolentrypoint.interactivetool.gat-${count.index}.be.training.galaxyproject.eu"
-#type    = "CNAME"
-#ttl     = "3600"
-#records = ["gat-${count.index}.be.training.galaxyproject.eu"]
-#count   = "${var.gat-count-be}"
-#}
+resource "aws_route53_record" "training-vm-be-gxit-wildcard" {
+  zone_id = aws_route53_zone.training-gxp-be.zone_id
+  name    = "*.interactivetoolentrypoint.interactivetool.gat-${count.index}.be.training.galaxyproject.eu"
+  type    = "CNAME"
+  ttl     = "3600"
+  records = ["gat-${count.index}.be.training.galaxyproject.eu"]
+  count   = var.gat-count-be
+}
