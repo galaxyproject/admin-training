@@ -1,5 +1,5 @@
 variable "gat-count-be" {
-  default = 80
+  default = 0
 }
 
 variable "gat-be-flavour" {
