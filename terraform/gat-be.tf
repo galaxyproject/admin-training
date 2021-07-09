@@ -168,7 +168,7 @@ resource "aws_route53_record" "training-vm-be" {
 
 # Only for the REAL gat.
 resource "aws_route53_record" "training-vm-be-gxit-wildcard" {
-  zone_id = aws_route53_zone.training-gxp-be.zone_id
+  zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
   name    = "*.interactivetoolentrypoint.interactivetool.gat-${count.index}.be.training.galaxyproject.eu"
   type    = "CNAME"
   ttl     = "3600"
