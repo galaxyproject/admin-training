@@ -108,6 +108,7 @@ jobs:
             make all
         env:
             ANSIBLE_STDOUT_CALLBACK: yaml
+        continue-on-error: true # We should always continue to the end where we tear down infra.
 
       - name: Tear down infrastructure
         id: validate
