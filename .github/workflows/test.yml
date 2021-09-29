@@ -97,9 +97,9 @@ jobs:
             cd bootstrap-instances
             cat > hosts <<-EOF
                 [workshop_instances]
-                129.114.16.211
-                129.114.16.161
-                129.114.16.172
+                gat-0.jetstream.training.galaxyproject.eu
+                gat-1.jetstream.training.galaxyproject.eu
+                gat-2.jetstream.training.galaxyproject.eu
 
                 [workshop_instances:vars]
                 ansible_user = ubuntu
