@@ -53,6 +53,7 @@ jobs:
                 129.114.16.172
 
                 [workshop_instances:vars]
+                ansible_user = ubuntu
                 ansible_ssh_private_key_file = id_rsa.key
             EOF
             make all
