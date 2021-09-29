@@ -1,0 +1,60 @@
+name: Release Testing
+
+on:
+  workflow_dispatch:
+
+jobs:
+  setup:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+
+      - name: Install Ansible + deps
+        run: |
+            pip install -r bootstrap-instances/requirements.txt
+
+      - name: Setup SSH Keys
+        run: |
+            cd bootstrap-instances;
+            echo "${{ secrets.GAT_JETSTREAM }}" > id_rsa.key
+            echo "${{ secrets.THE_ONE_KEY }}" > gat-one-key-to-rule-them-all
+
+            chmod go-rwx gat-one-key-to-rule-them-all* id_rsa*
+
+            for x in *.key; do
+                ssh-keygen -y -f "$x" > "${x}.pub";
+            done
+
+      - name: Install SSH key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.THE_ONE_KEY }}
+          known_hosts: "github.com,192.30.253.112 ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAq2A7hRGmdnm9tUDbO9IDSwBK6TbQa+PXYPCPy6rbTrTtw7PHkccKrpp0yVhp5HdEIcKr6pLlVDBfOLX9QUsyCOV0wzfjIJNlGEYsdlLJizHhbn2mUjvSAHQqZETYP81eFzLQNnPHt4EVVUh7VfDESU84KezmD5QlWpXLmvU31/yMf+Se8xhHTvKSCZIFImWwoG6mbUoWf9nzpIoaSjB+weqqUUmpaaasXVal72J+UX2B+2RPW3RcT0eOzQgqlJL3RKrTJvdsjE3JEAvGq3lGHSZXy28G3skua2SmVi/w4yCE6gbODqnTWlg7+wC604ydGXA8VJiS5ap43JXiUFFAaQ=="
+          config: |
+                Host gat-*training.galaxyproject.eu
+                    User ubuntu
+                    UserKnownHostsFile /dev/null
+                    StrictHostKeyChecking no
+          if_key_exists: replace # replace / ignore / fail; optional (defaults to fail)
+
+      - name: Run the playbook
+        run: |
+            cd bootstrap-instances
+            cat > hosts <<-EOF
+                [workshop_instances]
+                129.114.16.211
+                129.114.16.161
+                129.114.16.172
+
+                [workshop_instances:vars]
+                ansible_ssh_private_key_file = id_rsa.key
+            EOF
+            make all
+        env:
+            ANSIBLE_STDOUT_CALLBACK: yaml
