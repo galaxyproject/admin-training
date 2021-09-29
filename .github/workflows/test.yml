@@ -69,6 +69,7 @@ jobs:
             cd bootstrap-instances;
             echo "${{ secrets.GAT_JETSTREAM }}" > id_rsa.key
             echo "${{ secrets.THE_ONE_KEY }}" > gat-one-key-to-rule-them-all
+            echo "${{ secrets.THE_ONE_KEY_PUB }}" > gat-one-key-to-rule-them-all.pub
 
             chmod go-rwx gat-one-key-to-rule-them-all* id_rsa*
 
@@ -107,7 +108,7 @@ jobs:
         continue-on-error: true # We should always continue to the end where we tear down infra.
 
       - name: Tear down infrastructure
-        run: cd terraform-release && terraform destroy
+        run: cd terraform-release && terraform destroy -auto-approve
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_EU_KEY }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_EU_SECRET }}
