@@ -105,9 +105,20 @@ jobs:
                 ansible_become = true
                 set_password = true
             EOF
+            # Build the infra
             make all
+            # Run the testing playbooks
+            ansible-playbook -i hosts test.yml -e r=7
         env:
             ANSIBLE_STDOUT_CALLBACK: yaml
+        continue-on-error: true # We should always continue to the end where we tear down infra.
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: test-reports
+          path: |
+            /tmp/galaxy*.log
+            /tmp/galaxy*.html
         continue-on-error: true # We should always continue to the end where we tear down infra.
 
       - name: Tear down infrastructure
