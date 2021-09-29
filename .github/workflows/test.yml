@@ -108,7 +108,7 @@ jobs:
             # Build the infra
             make all
             # Run the testing playbooks
-            ansible-playbook -i hosts test.yml -e r=7
+            ansible-playbook -i hosts test.yml -e r=12
         env:
             ANSIBLE_STDOUT_CALLBACK: yaml
         continue-on-error: true # We should always continue to the end where we tear down infra.

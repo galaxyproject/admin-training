@@ -3,14 +3,20 @@
   hosts: workshop_instances
   vars:
       gitgat:
-          -  1-ansible-galaxy-run.sh
-          -  2-singularity-run.sh
-          -  3-tool-management-run.sh
-          -  4-cvmfs-run.sh
-          -  5-data-library-run.sh
-          -  6-connect-to-compute-cluster-run.sh
-          -  7-job-destinations-run.sh
-          -  8-pulsar-run.sh
+        - 10-ansible-galaxy-run.sh
+        - 11-singularity-run.sh
+        - 12-tool-management-run.sh
+        - 13-cvmfs-run.sh
+        - 14-data-library-run.sh
+        - 15-connect-to-compute-cluster-run.sh
+        - 16-job-destinations-run.sh
+        - 17-pulsar-run.sh
+        - 18-gxadmin-run.sh
+        - 19-monitoring-run.sh
+        - 20-tiaas-run.sh
+        - 21-reports-run.sh
+        - 22-ftp-run.sh
+
       steps:
         '0': "{{ gitgat[:1] }}"
         '1': "{{ gitgat[:2] }}"
@@ -20,6 +26,11 @@
         '5': "{{ gitgat[:6] }}"
         '6': "{{ gitgat[:7] }}"
         '7': "{{ gitgat[:8] }}"
+        '8': "{{ gitgat[:9] }}"
+        '9': "{{ gitgat[:10] }}"
+        '10': "{{ gitgat[:11] }}"
+        '11': "{{ gitgat[:12] }}"
+        '12': "{{ gitgat[:13] }}"
   tasks:
       - name: Clone git gat
         ansible.builtin.git:
@@ -28,7 +39,7 @@
         become_user: ubuntu
 
       - set_fact:
-          r: "{{ 8 | random(seed=inventory_hostname) | int }}"
+          r: "{{ 13 | random(seed=inventory_hostname) | int }}"
 
       - debug:
           msg: "{{ inventory_hostname }} - {{ steps[r][-1] }}"
@@ -39,6 +50,7 @@
           chdir: git-gat/
         loop: "{{ steps[r] }}"
         become_user: ubuntu
+        ignore_errors: yes
 
       - name: Clone galaxy
         ansible.builtin.git:
@@ -51,6 +63,7 @@
         args:
           chdir: /home/galaxy/server/
         become_user: galaxy
+        ignore_errors: yes
 
       - name: Copy file back into tmp
         ansible.builtin.fetch:
