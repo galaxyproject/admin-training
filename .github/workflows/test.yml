@@ -63,10 +63,6 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_EU_KEY }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_EU_SECRET }}
           AWS_DEFAULT_REGION: us-east-1
-          TF_VAR_EU_OS_USERNAME: ${{ secrets.OS_EU_USERNAME }}
-          TF_VAR_EU_OS_PASSWORD: ${{ secrets.OS_EU_PASSWORD }}
-          TF_VAR_VSC_OS_APPLICATION_CREDENTIAL_ID: ${{ secrets.OS_VSC_APPLICATION_CREDENTIAL_ID }}
-          TF_VAR_VSC_OS_APPLICATION_CREDENTIAL_SECRET: ${{ secrets.OS_VSC_APPLICATION_CREDENTIAL_SECRET }}
 
       - name: Setup SSH Keys
         run: |
@@ -112,3 +108,7 @@ jobs:
 
       - name: Tear down infrastructure
         run: cd terraform-release && terraform destroy
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_EU_KEY }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_EU_SECRET }}
+          AWS_DEFAULT_REGION: us-east-1
