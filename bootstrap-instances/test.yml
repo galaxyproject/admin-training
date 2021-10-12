@@ -45,7 +45,7 @@
           msg: "{{ inventory_hostname }} - {{ steps[r][-1] }}"
 
       - name: Run assigned step(s)
-        shell: "bash .scripts/{{ item }} > /home/ubuntu/{{ item }}.log 2>&1"
+        shell: "GALAXY_VERSION=21.09 bash .scripts/{{ item }} > /home/ubuntu/{{ item }}.log 2>&1"
         args:
           chdir: git-gat/
         loop: "{{ steps[r] }}"
