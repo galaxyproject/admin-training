@@ -10,7 +10,7 @@ variable "zone_usegalaxy_eu" {
 }
 
 data "aws_route53_zone" "training-gxp-eu" {
-  name         = "training.galaxyproject.eu."
+  name = "training.galaxyproject.eu."
 }
 
 
