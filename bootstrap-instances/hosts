@@ -51,7 +51,7 @@ ansible_ssh_private_key_file = admintraining-us.key
 [workshop_eu_pulsar:vars]
 ansible_ssh_private_key_file = admintraining-eu.key
 [workshop_oz_pulsar:vars]
-ansible_ssh_private_key_file = admintraining-oz4.key
+ansible_ssh_private_key_file = admintraining-oz3.key
 [workshop_us_pulsar:vars]
 ansible_ssh_private_key_file = admintraining-us.key
 [workshop_be_pulsar:vars]
