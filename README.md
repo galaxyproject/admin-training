@@ -4,11 +4,11 @@ logo based on a [Hubble Image](https://hubblesite.org/contents/media/images/2018
 
 # Galaxy Administration Training
 
-During GCC2021 We will be using the [GCC schedule](https://galaxyproject.org/events/gcc2021/training/admin-track) please see that page for all relevant information
+Full schedule is [in the GTN Tapas Website](https://gallantries.github.io/video-library/events/smorgasbord2/gat.html)
 
 ## Location, Logistics
 
-This training is offered Online, July28-June2, and is mostly asynchronous. Throughout the week you will always have access to trainers that are ready to help you with tasks or understanding. However the bulk of the work consist of **you working at your own pace** through the materials we prepared for you.
+This training is offered Online, and is asynchronous. Throughout the week you will always have access to trainers that are ready to help you with tasks or understanding. However the bulk of the work consist of **you working at your own pace** through the materials we prepared for you.
 
 For the duration of this training (and a week after) you'll be granted access to a virtual machine (VM) that will be exclusive to you. You will connect to it using `ssh ubuntu@address-of-your-machine` and perform all of training's tasks inside. The machine is configured in a way to allow trainers connect to your machine and see exactly what you see. For this it uses software called `byobu` that has many convenient features for working in terminal - you can check out our [byobu help](byobu.md) page.
 
@@ -42,11 +42,8 @@ The schedule for each day is a suggestion of what we believe is approximately 5 
 
 ### CoC
 
-Everyone is expected to abide by the [Galaxy Code of Conduct (CoC)](https://github.com/galaxyproject/galaxy/blob/dev/CODE_OF_CONDUCT.md). We want this to be a welcoming and friendly environment for everyone! Please see the CoC for more information and the point of contact for any issues.
+Everyone is expected to abide by the [Galaxy Code of Conduct (CoC)](https://galaxyproject.org/community/coc/#galaxy-project-code-of-conduct). We want this to be a welcoming and friendly environment for everyone! Please see the CoC for more information and the point of contact for any issues.
 
-### Schedule
-
-https://galaxyproject.org/events/gcc2021/training/admin-track
 
 ### Instructors
 
@@ -66,7 +63,6 @@ Simon Gladman       | AU      | [Melbourne Bioinformatics](https://melbournebioi
 Catherine Bromhead  | AU      | [Melbourne Bioinformatics](https://melbournebioinformatics.org.au) - [Galaxy Australia](https://usegalaxy.org.au)
 David Morais        | CA      | [GenAP](https://www.genap.ca/) & [Compute Canada](https://www.computecanada.ca/)
 Aaron Petkau        | CA      | [PHAC](https://www.canada.ca/en/public-health.html) & [University of Manitoba](https://umanitoba.ca/)
-
 
 (others coming soon.)
 
@@ -106,11 +102,6 @@ Galaxy training instances are bootstrapped with [a small Ansible playbook](/boot
 
 The GCC 2021 Galaxy Admin Training is sponsored by a wide variety of organisations
 
-### Vlaams Super Computer
-
-Our galaxy VMs were provided by the conference host, [VSC](https://www.vscentrum.be/)
-
-[![VSC Logo](https://static.wixstatic.com/media/5446c2_1c3815668d3645b7af8a7aabca8695af~mv2.png/v1/fill/w_260,h_70,al_c,q_85,usm_0.66_1.00_0.01/VSC%20-%20Combi%20logo-01.webp)](https://www.vscentrum.be/)
 ### Galaxy Australia & Australian BioCommons
 
 A significant portion of our infrastructure was graciously provided by Galaxy Australia
