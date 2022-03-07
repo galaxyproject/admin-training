@@ -4,7 +4,7 @@ resource "aws_route53_record" "training-vm-oz-0" {
   name    = "gat-0.oz.training.galaxyproject.eu"
   type    = "A"
   ttl     = "7200"
-  records = ["115.146.85.100"]
+  records = ["115.146.87.20"]
 }
 
 resource "aws_route53_record" "training-vm-oz-1" {
@@ -12,7 +12,7 @@ resource "aws_route53_record" "training-vm-oz-1" {
   name    = "gat-1.oz.training.galaxyproject.eu"
   type    = "A"
   ttl     = "7200"
-  records = ["115.146.87.180"]
+  records = ["115.146.84.170"]
 }
 
 resource "aws_route53_record" "training-vm-oz-2" {
@@ -20,7 +20,7 @@ resource "aws_route53_record" "training-vm-oz-2" {
   name    = "gat-2.oz.training.galaxyproject.eu"
   type    = "A"
   ttl     = "7200"
-  records = ["115.146.84.179"]
+  records = ["115.146.85.3"]
 }
 
 resource "aws_route53_record" "training-vm-oz-3" {
@@ -28,7 +28,7 @@ resource "aws_route53_record" "training-vm-oz-3" {
   name    = "gat-3.oz.training.galaxyproject.eu"
   type    = "A"
   ttl     = "7200"
-  records = ["118.138.235.117"]
+  records = ["115.146.84.134"]
 }
 
 resource "aws_route53_record" "training-vm-oz-4" {
@@ -36,7 +36,7 @@ resource "aws_route53_record" "training-vm-oz-4" {
   name    = "gat-4.oz.training.galaxyproject.eu"
   type    = "A"
   ttl     = "7200"
-  records = ["115.146.87.56"]
+  records = ["115.146.84.86"]
 }
 
 resource "aws_route53_record" "training-vm-oz-5" {
@@ -44,7 +44,7 @@ resource "aws_route53_record" "training-vm-oz-5" {
   name    = "gat-5.oz.training.galaxyproject.eu"
   type    = "A"
   ttl     = "7200"
-  records = ["115.146.86.89"]
+  records = ["115.146.85.111"]
 }
 
 resource "aws_route53_record" "training-vm-oz-6" {
@@ -52,7 +52,7 @@ resource "aws_route53_record" "training-vm-oz-6" {
   name    = "gat-6.oz.training.galaxyproject.eu"
   type    = "A"
   ttl     = "7200"
-  records = ["115.146.84.215"]
+  records = ["115.146.85.226"]
 }
 
 resource "aws_route53_record" "training-vm-oz-7" {
@@ -60,7 +60,7 @@ resource "aws_route53_record" "training-vm-oz-7" {
   name    = "gat-7.oz.training.galaxyproject.eu"
   type    = "A"
   ttl     = "7200"
-  records = ["115.146.86.231"]
+  records = ["115.146.85.61"]
 }
 
 resource "aws_route53_record" "training-vm-oz-8" {
@@ -68,7 +68,7 @@ resource "aws_route53_record" "training-vm-oz-8" {
   name    = "gat-8.oz.training.galaxyproject.eu"
   type    = "A"
   ttl     = "7200"
-  records = ["115.146.84.172"]
+  records = ["115.146.85.242"]
 }
 
 resource "aws_route53_record" "training-vm-oz-9" {
@@ -76,7 +76,7 @@ resource "aws_route53_record" "training-vm-oz-9" {
   name    = "gat-9.oz.training.galaxyproject.eu"
   type    = "A"
   ttl     = "7200"
-  records = ["115.146.85.33"]
+  records = ["115.146.84.119"]
 }
 
 resource "aws_route53_record" "training-vm-oz-10" {
@@ -84,7 +84,7 @@ resource "aws_route53_record" "training-vm-oz-10" {
   name    = "gat-10.oz.training.galaxyproject.eu"
   type    = "A"
   ttl     = "7200"
-  records = ["118.138.233.83"]
+  records = ["115.146.86.127"]
 }
 
 resource "aws_route53_record" "training-vm-oz-11" {
@@ -92,7 +92,7 @@ resource "aws_route53_record" "training-vm-oz-11" {
   name    = "gat-11.oz.training.galaxyproject.eu"
   type    = "A"
   ttl     = "7200"
-  records = ["115.146.86.205"]
+  records = ["115.146.86.74"]
 }
 
 resource "aws_route53_record" "training-vm-oz-12" {
@@ -100,7 +100,7 @@ resource "aws_route53_record" "training-vm-oz-12" {
   name    = "gat-12.oz.training.galaxyproject.eu"
   type    = "A"
   ttl     = "7200"
-  records = ["115.146.86.208"]
+  records = ["115.146.85.101"]
 }
 
 resource "aws_route53_record" "training-vm-oz-13" {
@@ -108,7 +108,7 @@ resource "aws_route53_record" "training-vm-oz-13" {
   name    = "gat-13.oz.training.galaxyproject.eu"
   type    = "A"
   ttl     = "7200"
-  records = ["115.146.85.215"]
+  records = ["115.146.87.247"]
 }
 
 resource "aws_route53_record" "training-vm-oz-14" {
@@ -116,7 +116,7 @@ resource "aws_route53_record" "training-vm-oz-14" {
   name    = "gat-14.oz.training.galaxyproject.eu"
   type    = "A"
   ttl     = "7200"
-  records = ["115.146.86.152"]
+  records = ["115.146.85.247"]
 }
 
 resource "aws_route53_record" "training-vm-oz-15" {
@@ -124,7 +124,7 @@ resource "aws_route53_record" "training-vm-oz-15" {
   name    = "gat-15.oz.training.galaxyproject.eu"
   type    = "A"
   ttl     = "7200"
-  records = ["115.146.84.210"]
+  records = ["115.146.87.191"]
 }
 
 resource "aws_route53_record" "training-vm-oz-16" {
@@ -132,7 +132,7 @@ resource "aws_route53_record" "training-vm-oz-16" {
   name    = "gat-16.oz.training.galaxyproject.eu"
   type    = "A"
   ttl     = "7200"
-  records = ["115.146.85.210"]
+  records = ["115.146.85.74"]
 }
 
 resource "aws_route53_record" "training-vm-oz-17" {
@@ -140,7 +140,7 @@ resource "aws_route53_record" "training-vm-oz-17" {
   name    = "gat-17.oz.training.galaxyproject.eu"
   type    = "A"
   ttl     = "7200"
-  records = ["115.146.85.23"]
+  records = ["115.146.85.29"]
 }
 
 resource "aws_route53_record" "training-vm-oz-18" {
@@ -148,7 +148,7 @@ resource "aws_route53_record" "training-vm-oz-18" {
   name    = "gat-18.oz.training.galaxyproject.eu"
   type    = "A"
   ttl     = "7200"
-  records = ["118.138.237.119"]
+  records = ["115.146.85.11"]
 }
 
 resource "aws_route53_record" "training-vm-oz-19" {
@@ -156,7 +156,7 @@ resource "aws_route53_record" "training-vm-oz-19" {
   name    = "gat-19.oz.training.galaxyproject.eu"
   type    = "A"
   ttl     = "7200"
-  records = ["115.146.87.68"]
+  records = ["115.146.85.124"]
 }
 
 resource "aws_route53_record" "training-vm-oz-20" {
@@ -164,7 +164,7 @@ resource "aws_route53_record" "training-vm-oz-20" {
   name    = "gat-20.oz.training.galaxyproject.eu"
   type    = "A"
   ttl     = "7200"
-  records = ["115.146.85.30"]
+  records = ["115.146.84.151"]
 }
 
 resource "aws_route53_record" "training-vm-oz-21" {
@@ -172,7 +172,7 @@ resource "aws_route53_record" "training-vm-oz-21" {
   name    = "gat-21.oz.training.galaxyproject.eu"
   type    = "A"
   ttl     = "7200"
-  records = ["115.146.87.15"]
+  records = ["115.146.86.223"]
 }
 
 resource "aws_route53_record" "training-vm-oz-22" {
@@ -180,7 +180,7 @@ resource "aws_route53_record" "training-vm-oz-22" {
   name    = "gat-22.oz.training.galaxyproject.eu"
   type    = "A"
   ttl     = "7200"
-  records = ["115.146.84.125"]
+  records = ["115.146.86.23"]
 }
 
 resource "aws_route53_record" "training-vm-oz-23" {
@@ -188,7 +188,7 @@ resource "aws_route53_record" "training-vm-oz-23" {
   name    = "gat-23.oz.training.galaxyproject.eu"
   type    = "A"
   ttl     = "7200"
-  records = ["115.146.86.87"]
+  records = ["115.146.87.137"]
 }
 
 resource "aws_route53_record" "training-vm-oz-24" {
@@ -196,7 +196,7 @@ resource "aws_route53_record" "training-vm-oz-24" {
   name    = "gat-24.oz.training.galaxyproject.eu"
   type    = "A"
   ttl     = "7200"
-  records = ["115.146.86.245"]
+  records = ["115.146.85.155"]
 }
 
 resource "aws_route53_record" "training-vm-oz-25" {
@@ -204,7 +204,7 @@ resource "aws_route53_record" "training-vm-oz-25" {
   name    = "gat-25.oz.training.galaxyproject.eu"
   type    = "A"
   ttl     = "7200"
-  records = ["115.146.84.197"]
+  records = ["115.146.84.198"]
 }
 
 resource "aws_route53_record" "training-vm-oz-26" {
@@ -212,7 +212,7 @@ resource "aws_route53_record" "training-vm-oz-26" {
   name    = "gat-26.oz.training.galaxyproject.eu"
   type    = "A"
   ttl     = "7200"
-  records = ["118.138.236.18"]
+  records = ["115.146.84.148"]
 }
 
 resource "aws_route53_record" "training-vm-oz-27" {
@@ -220,7 +220,7 @@ resource "aws_route53_record" "training-vm-oz-27" {
   name    = "gat-27.oz.training.galaxyproject.eu"
   type    = "A"
   ttl     = "7200"
-  records = ["115.146.85.218"]
+  records = ["115.146.87.178"]
 }
 
 resource "aws_route53_record" "training-vm-oz-28" {
@@ -228,7 +228,7 @@ resource "aws_route53_record" "training-vm-oz-28" {
   name    = "gat-28.oz.training.galaxyproject.eu"
   type    = "A"
   ttl     = "7200"
-  records = ["115.146.86.94"]
+  records = ["115.146.87.94"]
 }
 
 resource "aws_route53_record" "training-vm-oz-29" {
@@ -236,7 +236,7 @@ resource "aws_route53_record" "training-vm-oz-29" {
   name    = "gat-29.oz.training.galaxyproject.eu"
   type    = "A"
   ttl     = "7200"
-  records = ["115.146.86.156"]
+  records = ["115.146.86.71"]
 }
 
 resource "aws_route53_record" "training-vm-oz-30" {
@@ -244,7 +244,7 @@ resource "aws_route53_record" "training-vm-oz-30" {
   name    = "gat-30.oz.training.galaxyproject.eu"
   type    = "A"
   ttl     = "7200"
-  records = ["115.146.87.235"]
+  records = ["115.146.84.234"]
 }
 
 resource "aws_route53_record" "training-vm-oz-31" {
@@ -252,7 +252,7 @@ resource "aws_route53_record" "training-vm-oz-31" {
   name    = "gat-31.oz.training.galaxyproject.eu"
   type    = "A"
   ttl     = "7200"
-  records = ["115.146.87.11"]
+  records = ["115.146.85.138"]
 }
 
 resource "aws_route53_record" "training-vm-oz-32" {
@@ -260,7 +260,7 @@ resource "aws_route53_record" "training-vm-oz-32" {
   name    = "gat-32.oz.training.galaxyproject.eu"
   type    = "A"
   ttl     = "7200"
-  records = ["115.146.85.136"]
+  records = ["115.146.85.46"]
 }
 
 resource "aws_route53_record" "training-vm-oz-33" {
@@ -268,7 +268,7 @@ resource "aws_route53_record" "training-vm-oz-33" {
   name    = "gat-33.oz.training.galaxyproject.eu"
   type    = "A"
   ttl     = "7200"
-  records = ["115.146.87.207"]
+  records = ["115.146.84.201"]
 }
 
 resource "aws_route53_record" "training-vm-oz-34" {
@@ -276,46 +276,6 @@ resource "aws_route53_record" "training-vm-oz-34" {
   name    = "gat-34.oz.training.galaxyproject.eu"
   type    = "A"
   ttl     = "7200"
-  records = ["118.138.236.73"]
-}
-
-resource "aws_route53_record" "training-vm-oz-35" {
-  zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
-  name    = "gat-35.oz.training.galaxyproject.eu"
-  type    = "A"
-  ttl     = "7200"
-  records = ["118.138.238.44"]
-}
-
-resource "aws_route53_record" "training-vm-oz-36" {
-  zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
-  name    = "gat-36.oz.training.galaxyproject.eu"
-  type    = "A"
-  ttl     = "7200"
-  records = ["115.146.86.149"]
-}
-
-resource "aws_route53_record" "training-vm-oz-37" {
-  zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
-  name    = "gat-37.oz.training.galaxyproject.eu"
-  type    = "A"
-  ttl     = "7200"
-  records = ["115.146.87.191"]
-}
-
-resource "aws_route53_record" "training-vm-oz-38" {
-  zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
-  name    = "gat-38.oz.training.galaxyproject.eu"
-  type    = "A"
-  ttl     = "7200"
-  records = ["115.146.84.60"]
-}
-
-resource "aws_route53_record" "training-vm-oz-39" {
-  zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
-  name    = "gat-39.oz.training.galaxyproject.eu"
-  type    = "A"
-  ttl     = "7200"
-  records = ["115.146.86.85"]
+  records = ["115.146.84.36"]
 }
 
