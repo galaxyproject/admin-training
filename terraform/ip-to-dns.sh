@@ -13,6 +13,13 @@ for ip in $(cat /dev/stdin); do
 		  ttl     = "7200"
 		  records = ["${ip}"]
 		}
+		resource "aws_route53_record" "training-vm-$region-$idx-wildcard" {
+		  zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
+		  name    = "*.interactivetoolentrypoint.interactivetool.gat-${idx}.${region}.training.galaxyproject.eu"
+		  type    = "CNAME"
+		  ttl     = "7200"
+		  records = ["gat-${idx}.${region}.training.galaxyproject.eu"]
+		}
 
 	EOF
 	idx=$((idx + 1))

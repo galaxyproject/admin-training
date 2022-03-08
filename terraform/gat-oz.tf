@@ -6,6 +6,13 @@ resource "aws_route53_record" "training-vm-oz-0" {
   ttl     = "7200"
   records = ["115.146.87.20"]
 }
+resource "aws_route53_record" "training-vm-oz-0-wildcard" {
+  zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
+  name    = "*.interactivetoolentrypoint.interactivetool.gat-0.oz.training.galaxyproject.eu"
+  type    = "CNAME"
+  ttl     = "7200"
+  records = ["gat-0.oz.training.galaxyproject.eu"]
+}
 
 resource "aws_route53_record" "training-vm-oz-1" {
   zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
@@ -13,6 +20,13 @@ resource "aws_route53_record" "training-vm-oz-1" {
   type    = "A"
   ttl     = "7200"
   records = ["115.146.84.170"]
+}
+resource "aws_route53_record" "training-vm-oz-1-wildcard" {
+  zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
+  name    = "*.interactivetoolentrypoint.interactivetool.gat-1.oz.training.galaxyproject.eu"
+  type    = "CNAME"
+  ttl     = "7200"
+  records = ["gat-1.oz.training.galaxyproject.eu"]
 }
 
 resource "aws_route53_record" "training-vm-oz-2" {
@@ -22,6 +36,13 @@ resource "aws_route53_record" "training-vm-oz-2" {
   ttl     = "7200"
   records = ["115.146.85.3"]
 }
+resource "aws_route53_record" "training-vm-oz-2-wildcard" {
+  zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
+  name    = "*.interactivetoolentrypoint.interactivetool.gat-2.oz.training.galaxyproject.eu"
+  type    = "CNAME"
+  ttl     = "7200"
+  records = ["gat-2.oz.training.galaxyproject.eu"]
+}
 
 resource "aws_route53_record" "training-vm-oz-3" {
   zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
@@ -29,6 +50,13 @@ resource "aws_route53_record" "training-vm-oz-3" {
   type    = "A"
   ttl     = "7200"
   records = ["115.146.84.134"]
+}
+resource "aws_route53_record" "training-vm-oz-3-wildcard" {
+  zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
+  name    = "*.interactivetoolentrypoint.interactivetool.gat-3.oz.training.galaxyproject.eu"
+  type    = "CNAME"
+  ttl     = "7200"
+  records = ["gat-3.oz.training.galaxyproject.eu"]
 }
 
 resource "aws_route53_record" "training-vm-oz-4" {
@@ -38,6 +66,13 @@ resource "aws_route53_record" "training-vm-oz-4" {
   ttl     = "7200"
   records = ["115.146.84.86"]
 }
+resource "aws_route53_record" "training-vm-oz-4-wildcard" {
+  zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
+  name    = "*.interactivetoolentrypoint.interactivetool.gat-4.oz.training.galaxyproject.eu"
+  type    = "CNAME"
+  ttl     = "7200"
+  records = ["gat-4.oz.training.galaxyproject.eu"]
+}
 
 resource "aws_route53_record" "training-vm-oz-5" {
   zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
@@ -45,6 +80,13 @@ resource "aws_route53_record" "training-vm-oz-5" {
   type    = "A"
   ttl     = "7200"
   records = ["115.146.85.111"]
+}
+resource "aws_route53_record" "training-vm-oz-5-wildcard" {
+  zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
+  name    = "*.interactivetoolentrypoint.interactivetool.gat-5.oz.training.galaxyproject.eu"
+  type    = "CNAME"
+  ttl     = "7200"
+  records = ["gat-5.oz.training.galaxyproject.eu"]
 }
 
 resource "aws_route53_record" "training-vm-oz-6" {
@@ -54,6 +96,13 @@ resource "aws_route53_record" "training-vm-oz-6" {
   ttl     = "7200"
   records = ["115.146.85.226"]
 }
+resource "aws_route53_record" "training-vm-oz-6-wildcard" {
+  zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
+  name    = "*.interactivetoolentrypoint.interactivetool.gat-6.oz.training.galaxyproject.eu"
+  type    = "CNAME"
+  ttl     = "7200"
+  records = ["gat-6.oz.training.galaxyproject.eu"]
+}
 
 resource "aws_route53_record" "training-vm-oz-7" {
   zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
@@ -61,6 +110,13 @@ resource "aws_route53_record" "training-vm-oz-7" {
   type    = "A"
   ttl     = "7200"
   records = ["115.146.85.61"]
+}
+resource "aws_route53_record" "training-vm-oz-7-wildcard" {
+  zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
+  name    = "*.interactivetoolentrypoint.interactivetool.gat-7.oz.training.galaxyproject.eu"
+  type    = "CNAME"
+  ttl     = "7200"
+  records = ["gat-7.oz.training.galaxyproject.eu"]
 }
 
 resource "aws_route53_record" "training-vm-oz-8" {
@@ -70,6 +126,13 @@ resource "aws_route53_record" "training-vm-oz-8" {
   ttl     = "7200"
   records = ["115.146.85.242"]
 }
+resource "aws_route53_record" "training-vm-oz-8-wildcard" {
+  zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
+  name    = "*.interactivetoolentrypoint.interactivetool.gat-8.oz.training.galaxyproject.eu"
+  type    = "CNAME"
+  ttl     = "7200"
+  records = ["gat-8.oz.training.galaxyproject.eu"]
+}
 
 resource "aws_route53_record" "training-vm-oz-9" {
   zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
@@ -77,6 +140,13 @@ resource "aws_route53_record" "training-vm-oz-9" {
   type    = "A"
   ttl     = "7200"
   records = ["115.146.84.119"]
+}
+resource "aws_route53_record" "training-vm-oz-9-wildcard" {
+  zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
+  name    = "*.interactivetoolentrypoint.interactivetool.gat-9.oz.training.galaxyproject.eu"
+  type    = "CNAME"
+  ttl     = "7200"
+  records = ["gat-9.oz.training.galaxyproject.eu"]
 }
 
 resource "aws_route53_record" "training-vm-oz-10" {
@@ -86,6 +156,13 @@ resource "aws_route53_record" "training-vm-oz-10" {
   ttl     = "7200"
   records = ["115.146.86.127"]
 }
+resource "aws_route53_record" "training-vm-oz-10-wildcard" {
+  zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
+  name    = "*.interactivetoolentrypoint.interactivetool.gat-10.oz.training.galaxyproject.eu"
+  type    = "CNAME"
+  ttl     = "7200"
+  records = ["gat-10.oz.training.galaxyproject.eu"]
+}
 
 resource "aws_route53_record" "training-vm-oz-11" {
   zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
@@ -93,6 +170,13 @@ resource "aws_route53_record" "training-vm-oz-11" {
   type    = "A"
   ttl     = "7200"
   records = ["115.146.86.74"]
+}
+resource "aws_route53_record" "training-vm-oz-11-wildcard" {
+  zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
+  name    = "*.interactivetoolentrypoint.interactivetool.gat-11.oz.training.galaxyproject.eu"
+  type    = "CNAME"
+  ttl     = "7200"
+  records = ["gat-11.oz.training.galaxyproject.eu"]
 }
 
 resource "aws_route53_record" "training-vm-oz-12" {
@@ -102,6 +186,13 @@ resource "aws_route53_record" "training-vm-oz-12" {
   ttl     = "7200"
   records = ["115.146.85.101"]
 }
+resource "aws_route53_record" "training-vm-oz-12-wildcard" {
+  zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
+  name    = "*.interactivetoolentrypoint.interactivetool.gat-12.oz.training.galaxyproject.eu"
+  type    = "CNAME"
+  ttl     = "7200"
+  records = ["gat-12.oz.training.galaxyproject.eu"]
+}
 
 resource "aws_route53_record" "training-vm-oz-13" {
   zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
@@ -109,6 +200,13 @@ resource "aws_route53_record" "training-vm-oz-13" {
   type    = "A"
   ttl     = "7200"
   records = ["115.146.87.247"]
+}
+resource "aws_route53_record" "training-vm-oz-13-wildcard" {
+  zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
+  name    = "*.interactivetoolentrypoint.interactivetool.gat-13.oz.training.galaxyproject.eu"
+  type    = "CNAME"
+  ttl     = "7200"
+  records = ["gat-13.oz.training.galaxyproject.eu"]
 }
 
 resource "aws_route53_record" "training-vm-oz-14" {
@@ -118,6 +216,13 @@ resource "aws_route53_record" "training-vm-oz-14" {
   ttl     = "7200"
   records = ["115.146.85.247"]
 }
+resource "aws_route53_record" "training-vm-oz-14-wildcard" {
+  zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
+  name    = "*.interactivetoolentrypoint.interactivetool.gat-14.oz.training.galaxyproject.eu"
+  type    = "CNAME"
+  ttl     = "7200"
+  records = ["gat-14.oz.training.galaxyproject.eu"]
+}
 
 resource "aws_route53_record" "training-vm-oz-15" {
   zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
@@ -125,6 +230,13 @@ resource "aws_route53_record" "training-vm-oz-15" {
   type    = "A"
   ttl     = "7200"
   records = ["115.146.87.191"]
+}
+resource "aws_route53_record" "training-vm-oz-15-wildcard" {
+  zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
+  name    = "*.interactivetoolentrypoint.interactivetool.gat-15.oz.training.galaxyproject.eu"
+  type    = "CNAME"
+  ttl     = "7200"
+  records = ["gat-15.oz.training.galaxyproject.eu"]
 }
 
 resource "aws_route53_record" "training-vm-oz-16" {
@@ -134,6 +246,13 @@ resource "aws_route53_record" "training-vm-oz-16" {
   ttl     = "7200"
   records = ["115.146.85.74"]
 }
+resource "aws_route53_record" "training-vm-oz-16-wildcard" {
+  zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
+  name    = "*.interactivetoolentrypoint.interactivetool.gat-16.oz.training.galaxyproject.eu"
+  type    = "CNAME"
+  ttl     = "7200"
+  records = ["gat-16.oz.training.galaxyproject.eu"]
+}
 
 resource "aws_route53_record" "training-vm-oz-17" {
   zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
@@ -141,6 +260,13 @@ resource "aws_route53_record" "training-vm-oz-17" {
   type    = "A"
   ttl     = "7200"
   records = ["115.146.85.29"]
+}
+resource "aws_route53_record" "training-vm-oz-17-wildcard" {
+  zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
+  name    = "*.interactivetoolentrypoint.interactivetool.gat-17.oz.training.galaxyproject.eu"
+  type    = "CNAME"
+  ttl     = "7200"
+  records = ["gat-17.oz.training.galaxyproject.eu"]
 }
 
 resource "aws_route53_record" "training-vm-oz-18" {
@@ -150,6 +276,13 @@ resource "aws_route53_record" "training-vm-oz-18" {
   ttl     = "7200"
   records = ["115.146.85.11"]
 }
+resource "aws_route53_record" "training-vm-oz-18-wildcard" {
+  zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
+  name    = "*.interactivetoolentrypoint.interactivetool.gat-18.oz.training.galaxyproject.eu"
+  type    = "CNAME"
+  ttl     = "7200"
+  records = ["gat-18.oz.training.galaxyproject.eu"]
+}
 
 resource "aws_route53_record" "training-vm-oz-19" {
   zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
@@ -157,6 +290,13 @@ resource "aws_route53_record" "training-vm-oz-19" {
   type    = "A"
   ttl     = "7200"
   records = ["115.146.85.124"]
+}
+resource "aws_route53_record" "training-vm-oz-19-wildcard" {
+  zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
+  name    = "*.interactivetoolentrypoint.interactivetool.gat-19.oz.training.galaxyproject.eu"
+  type    = "CNAME"
+  ttl     = "7200"
+  records = ["gat-19.oz.training.galaxyproject.eu"]
 }
 
 resource "aws_route53_record" "training-vm-oz-20" {
@@ -166,6 +306,13 @@ resource "aws_route53_record" "training-vm-oz-20" {
   ttl     = "7200"
   records = ["115.146.84.151"]
 }
+resource "aws_route53_record" "training-vm-oz-20-wildcard" {
+  zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
+  name    = "*.interactivetoolentrypoint.interactivetool.gat-20.oz.training.galaxyproject.eu"
+  type    = "CNAME"
+  ttl     = "7200"
+  records = ["gat-20.oz.training.galaxyproject.eu"]
+}
 
 resource "aws_route53_record" "training-vm-oz-21" {
   zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
@@ -173,6 +320,13 @@ resource "aws_route53_record" "training-vm-oz-21" {
   type    = "A"
   ttl     = "7200"
   records = ["115.146.86.223"]
+}
+resource "aws_route53_record" "training-vm-oz-21-wildcard" {
+  zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
+  name    = "*.interactivetoolentrypoint.interactivetool.gat-21.oz.training.galaxyproject.eu"
+  type    = "CNAME"
+  ttl     = "7200"
+  records = ["gat-21.oz.training.galaxyproject.eu"]
 }
 
 resource "aws_route53_record" "training-vm-oz-22" {
@@ -182,6 +336,13 @@ resource "aws_route53_record" "training-vm-oz-22" {
   ttl     = "7200"
   records = ["115.146.86.23"]
 }
+resource "aws_route53_record" "training-vm-oz-22-wildcard" {
+  zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
+  name    = "*.interactivetoolentrypoint.interactivetool.gat-22.oz.training.galaxyproject.eu"
+  type    = "CNAME"
+  ttl     = "7200"
+  records = ["gat-22.oz.training.galaxyproject.eu"]
+}
 
 resource "aws_route53_record" "training-vm-oz-23" {
   zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
@@ -189,6 +350,13 @@ resource "aws_route53_record" "training-vm-oz-23" {
   type    = "A"
   ttl     = "7200"
   records = ["115.146.87.137"]
+}
+resource "aws_route53_record" "training-vm-oz-23-wildcard" {
+  zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
+  name    = "*.interactivetoolentrypoint.interactivetool.gat-23.oz.training.galaxyproject.eu"
+  type    = "CNAME"
+  ttl     = "7200"
+  records = ["gat-23.oz.training.galaxyproject.eu"]
 }
 
 resource "aws_route53_record" "training-vm-oz-24" {
@@ -198,6 +366,13 @@ resource "aws_route53_record" "training-vm-oz-24" {
   ttl     = "7200"
   records = ["115.146.85.155"]
 }
+resource "aws_route53_record" "training-vm-oz-24-wildcard" {
+  zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
+  name    = "*.interactivetoolentrypoint.interactivetool.gat-24.oz.training.galaxyproject.eu"
+  type    = "CNAME"
+  ttl     = "7200"
+  records = ["gat-24.oz.training.galaxyproject.eu"]
+}
 
 resource "aws_route53_record" "training-vm-oz-25" {
   zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
@@ -205,6 +380,13 @@ resource "aws_route53_record" "training-vm-oz-25" {
   type    = "A"
   ttl     = "7200"
   records = ["115.146.84.198"]
+}
+resource "aws_route53_record" "training-vm-oz-25-wildcard" {
+  zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
+  name    = "*.interactivetoolentrypoint.interactivetool.gat-25.oz.training.galaxyproject.eu"
+  type    = "CNAME"
+  ttl     = "7200"
+  records = ["gat-25.oz.training.galaxyproject.eu"]
 }
 
 resource "aws_route53_record" "training-vm-oz-26" {
@@ -214,6 +396,13 @@ resource "aws_route53_record" "training-vm-oz-26" {
   ttl     = "7200"
   records = ["115.146.84.148"]
 }
+resource "aws_route53_record" "training-vm-oz-26-wildcard" {
+  zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
+  name    = "*.interactivetoolentrypoint.interactivetool.gat-26.oz.training.galaxyproject.eu"
+  type    = "CNAME"
+  ttl     = "7200"
+  records = ["gat-26.oz.training.galaxyproject.eu"]
+}
 
 resource "aws_route53_record" "training-vm-oz-27" {
   zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
@@ -221,6 +410,13 @@ resource "aws_route53_record" "training-vm-oz-27" {
   type    = "A"
   ttl     = "7200"
   records = ["115.146.87.178"]
+}
+resource "aws_route53_record" "training-vm-oz-27-wildcard" {
+  zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
+  name    = "*.interactivetoolentrypoint.interactivetool.gat-27.oz.training.galaxyproject.eu"
+  type    = "CNAME"
+  ttl     = "7200"
+  records = ["gat-27.oz.training.galaxyproject.eu"]
 }
 
 resource "aws_route53_record" "training-vm-oz-28" {
@@ -230,6 +426,13 @@ resource "aws_route53_record" "training-vm-oz-28" {
   ttl     = "7200"
   records = ["115.146.87.94"]
 }
+resource "aws_route53_record" "training-vm-oz-28-wildcard" {
+  zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
+  name    = "*.interactivetoolentrypoint.interactivetool.gat-28.oz.training.galaxyproject.eu"
+  type    = "CNAME"
+  ttl     = "7200"
+  records = ["gat-28.oz.training.galaxyproject.eu"]
+}
 
 resource "aws_route53_record" "training-vm-oz-29" {
   zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
@@ -237,6 +440,13 @@ resource "aws_route53_record" "training-vm-oz-29" {
   type    = "A"
   ttl     = "7200"
   records = ["115.146.86.71"]
+}
+resource "aws_route53_record" "training-vm-oz-29-wildcard" {
+  zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
+  name    = "*.interactivetoolentrypoint.interactivetool.gat-29.oz.training.galaxyproject.eu"
+  type    = "CNAME"
+  ttl     = "7200"
+  records = ["gat-29.oz.training.galaxyproject.eu"]
 }
 
 resource "aws_route53_record" "training-vm-oz-30" {
@@ -246,6 +456,13 @@ resource "aws_route53_record" "training-vm-oz-30" {
   ttl     = "7200"
   records = ["115.146.84.234"]
 }
+resource "aws_route53_record" "training-vm-oz-30-wildcard" {
+  zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
+  name    = "*.interactivetoolentrypoint.interactivetool.gat-30.oz.training.galaxyproject.eu"
+  type    = "CNAME"
+  ttl     = "7200"
+  records = ["gat-30.oz.training.galaxyproject.eu"]
+}
 
 resource "aws_route53_record" "training-vm-oz-31" {
   zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
@@ -253,6 +470,13 @@ resource "aws_route53_record" "training-vm-oz-31" {
   type    = "A"
   ttl     = "7200"
   records = ["115.146.85.138"]
+}
+resource "aws_route53_record" "training-vm-oz-31-wildcard" {
+  zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
+  name    = "*.interactivetoolentrypoint.interactivetool.gat-31.oz.training.galaxyproject.eu"
+  type    = "CNAME"
+  ttl     = "7200"
+  records = ["gat-31.oz.training.galaxyproject.eu"]
 }
 
 resource "aws_route53_record" "training-vm-oz-32" {
@@ -262,6 +486,13 @@ resource "aws_route53_record" "training-vm-oz-32" {
   ttl     = "7200"
   records = ["115.146.85.46"]
 }
+resource "aws_route53_record" "training-vm-oz-32-wildcard" {
+  zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
+  name    = "*.interactivetoolentrypoint.interactivetool.gat-32.oz.training.galaxyproject.eu"
+  type    = "CNAME"
+  ttl     = "7200"
+  records = ["gat-32.oz.training.galaxyproject.eu"]
+}
 
 resource "aws_route53_record" "training-vm-oz-33" {
   zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
@@ -270,6 +501,13 @@ resource "aws_route53_record" "training-vm-oz-33" {
   ttl     = "7200"
   records = ["115.146.84.201"]
 }
+resource "aws_route53_record" "training-vm-oz-33-wildcard" {
+  zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
+  name    = "*.interactivetoolentrypoint.interactivetool.gat-33.oz.training.galaxyproject.eu"
+  type    = "CNAME"
+  ttl     = "7200"
+  records = ["gat-33.oz.training.galaxyproject.eu"]
+}
 
 resource "aws_route53_record" "training-vm-oz-34" {
   zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
@@ -277,5 +515,12 @@ resource "aws_route53_record" "training-vm-oz-34" {
   type    = "A"
   ttl     = "7200"
   records = ["115.146.84.36"]
+}
+resource "aws_route53_record" "training-vm-oz-34-wildcard" {
+  zone_id = data.aws_route53_zone.training-gxp-eu.zone_id
+  name    = "*.interactivetoolentrypoint.interactivetool.gat-34.oz.training.galaxyproject.eu"
+  type    = "CNAME"
+  ttl     = "7200"
+  records = ["gat-34.oz.training.galaxyproject.eu"]
 }
 
