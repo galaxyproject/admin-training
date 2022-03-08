@@ -36,8 +36,8 @@ jobs:
         run: cd terraform && terraform plan
         continue-on-error: true
         env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_EU_KEY }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_EU_SECRET }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_US_KEY }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_US_SECRET }}
           AWS_DEFAULT_REGION: us-east-1
           TF_VAR_EU_OS_USERNAME: ${{ secrets.OS_EU_USERNAME }}
           TF_VAR_EU_OS_PASSWORD: ${{ secrets.OS_EU_PASSWORD }}
@@ -52,8 +52,8 @@ jobs:
         run: cd terraform && terraform apply -auto-approve
         continue-on-error: true
         env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_EU_KEY }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_EU_SECRET }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_US_KEY }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_US_SECRET }}
           AWS_DEFAULT_REGION: us-east-1
           TF_VAR_EU_OS_USERNAME: ${{ secrets.OS_EU_USERNAME }}
           TF_VAR_EU_OS_PASSWORD: ${{ secrets.OS_EU_PASSWORD }}
