@@ -12,6 +12,7 @@ pulsar_only
 
 [pulsar_only]
 [pulsar_only:children]
+workshop_us
 workshop_oz_pulsar
 
 # Aussie provided machines
@@ -29,8 +30,8 @@ gat-[0:34].oz.galaxy.training
 
 # American machines
 [workshop_us]
-[workshop_us_pulsar]
 gat-[0:39].us.galaxy.training
+[workshop_us_pulsar]
 
 # Some variables apply to every member of the group
 [workshop_instances:vars]
