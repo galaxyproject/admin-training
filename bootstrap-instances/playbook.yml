@@ -256,9 +256,9 @@
             name: ubuntu
             password: "{{ actual_pw.stdout | password_hash('sha512', 'gatGATgat')  }}"
 
-        - name: "Output password for admins"
-          debug:
-            msg: "password: {{ inventory_hostname }} {{ actual_pw.stdout  }}"
+        #- name: "Output password for admins"
+          #debug:
+            #msg: "password: {{ inventory_hostname }} {{ actual_pw.stdout  }}"
 
       when: set_password|bool
       tags:
