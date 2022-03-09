@@ -30,7 +30,7 @@ gat-[0:34].oz.galaxy.training
 
 # American machines
 [workshop_us]
-gat-[0:39].us.galaxy.training
+gat-[0:44].us.galaxy.training
 [workshop_us_pulsar]
 
 # Some variables apply to every member of the group
