@@ -9,10 +9,10 @@ pulsar_only
 
 [galaxy_only]
 [galaxy_only:children]
+workshop_us
 
 [pulsar_only]
 [pulsar_only:children]
-workshop_us
 workshop_oz_pulsar
 
 # Aussie provided machines
