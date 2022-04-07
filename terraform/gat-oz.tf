@@ -6,7 +6,7 @@ resource "aws_route53_record" "training-vm-oz-0" {
   ttl     = "7200"
   records = ["115.146.86.5"]
 }
-resource "aws_route53_record" "training-vm-oz-0" {
+resource "aws_route53_record" "training-vm-oz-1" {
   zone_id = var.training-gxp-oz
   name    = "gat-1.oz.galaxy.training"
   type    = "A"
