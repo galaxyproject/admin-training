@@ -13,3 +13,11 @@ resource "aws_route53_record" "training-vm-oz-1" {
   ttl     = "7200"
   records = ["115.146.87.22"]
 }
+
+resource "aws_route53_record" "training-vm-oz-1" {
+  zone_id = var.training-gxp-oz
+  name    = "gat-avans.oz.galaxy.training"
+  type    = "A"
+  ttl     = "7200"
+  records = ["145.38.205.247"]
+}
