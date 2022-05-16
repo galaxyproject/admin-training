@@ -14,7 +14,7 @@ resource "aws_route53_record" "training-vm-oz-1" {
   records = ["115.146.87.22"]
 }
 
-resource "aws_route53_record" "training-vm-oz-1" {
+resource "aws_route53_record" "training-vm-oz-avasn" {
   zone_id = var.training-gxp-oz
   name    = "gat-avans.oz.galaxy.training"
   type    = "A"
