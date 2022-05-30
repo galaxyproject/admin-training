@@ -19,5 +19,5 @@ resource "aws_route53_record" "training-vm-oz-avasn" {
   name    = "gat-avans.oz.galaxy.training"
   type    = "A"
   ttl     = "7200"
-  records = ["145.38.205.247"]
+  records = ["145.38.206.76"]
 }
