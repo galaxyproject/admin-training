@@ -102,6 +102,7 @@
           - virtualenv
           - python3-pip
           - jq
+          - htop
           - zlib1g-dev
           - libbz2-dev # planemo -> samtools
           - liblzma-dev # planemo -> samtools
