@@ -4,9 +4,18 @@ logo based on a [Hubble Image](https://hubblesite.org/contents/media/images/2018
 
 # Galaxy Administration Training
 
-- [2022 GCC GAT (light)](https://gallantries.github.io/video-library/modules/gcc2022/gat-intro)
-- [2022 GAT (full)](https://gallantries.github.io/video-library/events/smorgasbord2/gat.html)
-- [2021 GCC GAT (full)](https://galaxyproject.org/events/gcc2021/training/admin-track)
+- [2022 GCC GAT (1-day)](https://gallantries.github.io/video-library/modules/gcc2022/gat-intro)
+- [2022 GAT](https://gallantries.github.io/video-library/events/smorgasbord2/gat.html)
+- [2021 GCC GAT](https://galaxyproject.org/events/gcc2021/training/admin-track)
+- [2021 GAT](https://github.com/galaxyproject/admin-training/tree/2021-online)
+- [2020 BCC](https://github.com/galaxyproject/admin-training/tree/2020-bcc)
+- [2020 Barcelona](https://github.com/galaxyproject/admin-training/tree/2020-barcelona)
+- [2019 Penn State](https://github.com/galaxyproject/admin-training/tree/2019-pennstate)
+- [2019 GCC](https://github.com/galaxyproject/admin-training/tree/2019-gcc)
+- [2018 GCC-BOSC](https://github.com/galaxyproject/admin-training/tree/2018-gccbosc)
+- [2017 Melbourne](https://github.com/galaxyproject/admin-training/tree/2017-melbourne)
+- [2016 Salt Lake City](https://github.com/galaxyproject/admin-training/tree/2016-saltlakecity)
+
 
 ### CoC
 
