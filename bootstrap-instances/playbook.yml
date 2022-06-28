@@ -103,6 +103,7 @@
           - python3-pip
           - jq
           - zlib1g-dev
+          - libbz2-dev
           - tree
           - byobu
           - screen
