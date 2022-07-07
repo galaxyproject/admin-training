@@ -21,7 +21,7 @@ Everyone is expected to abide by the Code of Conduct (CoC) that you signed befor
 
 - We will provide VMs for you on which you will do everything during the week, so you don't need a super powerful laptop or anything.
 - It is best if you have an SSH client pre-installed, but it is not strictly necessary. All VMs have a terminal available on port 8080.
-- Windows users can choose to install PuTTY or equivalent: chiark.greenend.org.uk/~sgtatham/putty/latest.html For Linux & OSX: You should have an ssh client already installed.
+- Windows users can choose to install [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) or equivalent. For Linux & OSX: You should have an ssh client already installed.
 
 **Educational Requirements**
 
