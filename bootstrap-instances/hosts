@@ -4,34 +4,24 @@ localhost
 
 [workshop_instances]
 [workshop_instances:children]
-galaxy_only
-pulsar_only
-
-[galaxy_only]
-[galaxy_only:children]
 workshop_us
+workshop_oz
+workshop_eu
 
-[pulsar_only]
-[pulsar_only:children]
-workshop_oz_pulsar
 
 # Aussie provided machines
 [workshop_oz]
-[workshop_oz_pulsar]
 gat-[0:1].oz.galaxy.training
 
 # EU provided machines
 [workshop_eu]
-[workshop_eu_pulsar]
 gat-[0:1].eu.training.galaxyproject.eu
 
 # BE provided machines
 [workshop_be]
-[workshop_be_pulsar]
 
 # American machines
 [workshop_us]
-[workshop_us_pulsar]
 gat-[0:9].us.galaxy.training
 
 # Some variables apply to every member of the group
@@ -50,15 +40,6 @@ ansible_ssh_private_key_file = admintraining-be.key
 [workshop_oz:vars]
 ansible_ssh_private_key_file = admintraining-oz3.key
 [workshop_us:vars]
-#ansible_ssh_private_key_file = admintraining-us.key
-ansible_ssh_private_key_file = admintraining-oz3.key
-
-[workshop_eu_pulsar:vars]
-ansible_ssh_private_key_file = admintraining-eu.key
-[workshop_oz_pulsar:vars]
-ansible_ssh_private_key_file = admintraining-oz3.key
-[workshop_us_pulsar:vars]
-#ansible_ssh_private_key_file = admintraining-us.key
-ansible_ssh_private_key_file = admintraining-oz3.key
-[workshop_be_pulsar:vars]
-ansible_ssh_private_key_file = admintraining-be.key
+ansible_ssh_private_key_file = admintraining-us.key
+#ansible_ssh_private_key_file = admintraining-oz3.key
+#ansible_ssh_private_key_file = admintraining-us3.key

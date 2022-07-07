@@ -4,7 +4,7 @@ resource "aws_route53_record" "training-vm-us-0" {
   name    = "gat-0.us.galaxy.training"
   type    = "A"
   ttl     = "7200"
-  records = ["149.165.155.82"]
+  records = ["149.165.154.146"]
 }
 resource "aws_route53_record" "training-vm-us-0-wildcard" {
   zone_id = var.training-gxp-us
@@ -19,7 +19,7 @@ resource "aws_route53_record" "training-vm-us-1" {
   name    = "gat-1.us.galaxy.training"
   type    = "A"
   ttl     = "7200"
-  records = ["149.165.155.235"]
+  records = ["149.165.155.5"]
 }
 resource "aws_route53_record" "training-vm-us-1-wildcard" {
   zone_id = var.training-gxp-us
@@ -34,7 +34,7 @@ resource "aws_route53_record" "training-vm-us-2" {
   name    = "gat-2.us.galaxy.training"
   type    = "A"
   ttl     = "7200"
-  records = ["149.165.153.231"]
+  records = ["149.165.153.230"]
 }
 resource "aws_route53_record" "training-vm-us-2-wildcard" {
   zone_id = var.training-gxp-us
@@ -49,7 +49,7 @@ resource "aws_route53_record" "training-vm-us-3" {
   name    = "gat-3.us.galaxy.training"
   type    = "A"
   ttl     = "7200"
-  records = ["149.165.152.120"]
+  records = ["149.165.152.252"]
 }
 resource "aws_route53_record" "training-vm-us-3-wildcard" {
   zone_id = var.training-gxp-us
@@ -64,7 +64,7 @@ resource "aws_route53_record" "training-vm-us-4" {
   name    = "gat-4.us.galaxy.training"
   type    = "A"
   ttl     = "7200"
-  records = ["149.165.152.15"]
+  records = ["149.165.154.48"]
 }
 resource "aws_route53_record" "training-vm-us-4-wildcard" {
   zone_id = var.training-gxp-us
@@ -79,7 +79,7 @@ resource "aws_route53_record" "training-vm-us-5" {
   name    = "gat-5.us.galaxy.training"
   type    = "A"
   ttl     = "7200"
-  records = ["149.165.155.169"]
+  records = ["149.165.152.239"]
 }
 resource "aws_route53_record" "training-vm-us-5-wildcard" {
   zone_id = var.training-gxp-us
@@ -94,7 +94,7 @@ resource "aws_route53_record" "training-vm-us-6" {
   name    = "gat-6.us.galaxy.training"
   type    = "A"
   ttl     = "7200"
-  records = ["149.165.154.245"]
+  records = ["149.165.152.30"]
 }
 resource "aws_route53_record" "training-vm-us-6-wildcard" {
   zone_id = var.training-gxp-us
@@ -109,7 +109,7 @@ resource "aws_route53_record" "training-vm-us-7" {
   name    = "gat-7.us.galaxy.training"
   type    = "A"
   ttl     = "7200"
-  records = ["149.165.154.201"]
+  records = ["149.165.155.235"]
 }
 resource "aws_route53_record" "training-vm-us-7-wildcard" {
   zone_id = var.training-gxp-us
@@ -124,7 +124,7 @@ resource "aws_route53_record" "training-vm-us-8" {
   name    = "gat-8.us.galaxy.training"
   type    = "A"
   ttl     = "7200"
-  records = ["149.165.152.67"]
+  records = ["149.165.154.18"]
 }
 resource "aws_route53_record" "training-vm-us-8-wildcard" {
   zone_id = var.training-gxp-us
@@ -139,7 +139,7 @@ resource "aws_route53_record" "training-vm-us-9" {
   name    = "gat-9.us.galaxy.training"
   type    = "A"
   ttl     = "7200"
-  records = ["149.165.154.68"]
+  records = ["149.165.154.248"]
 }
 resource "aws_route53_record" "training-vm-us-9-wildcard" {
   zone_id = var.training-gxp-us

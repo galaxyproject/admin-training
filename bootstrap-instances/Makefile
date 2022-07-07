@@ -10,10 +10,10 @@ tag-%: id_rsa ## Run a specific tag (e.g. tag-gat-cli)
 	ansible-playbook playbook.yml -f $(THREADS) -t $(@:tag-%=%)
 
 prep-%: id_rsa ## Prepare a region (prep-eu/oz/us/...)
-	ansible-playbook playbook.yml -f $(THREADS) --limit workshop_$(@:prep-%=%),workshop_$(@:prep-%=%)_pulsar
+	ansible-playbook playbook.yml -f $(THREADS) --limit workshop_$(@:prep-%=%)
 
 test-%: id_rsa ## Run GIT-GAT + tests for a region (test-eu/oz/us/...)
-	ansible-playbook test.yml -f $(THREADS) --limit workshop_$(@:prep-%=%),workshop_$(@:prep-%=%)_pulsar
+	ansible-playbook test.yml -f $(THREADS) --limit workshop_$(@:prep-%=%)
 
 obtain-passwords: ## Obtain passwords from machines
 	# This is easier tbh
