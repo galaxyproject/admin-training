@@ -32,6 +32,7 @@ gat-[0:1].eu.training.galaxyproject.eu
 # American machines
 [workshop_us]
 [workshop_us_pulsar]
+gat-[0:9].us.galaxy.training
 
 # Some variables apply to every member of the group
 [workshop_instances:vars]
