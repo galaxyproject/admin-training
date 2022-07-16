@@ -4,6 +4,9 @@
   vars:
     # 2022-03-30 # Before any changes, last step of step 4 # CVMFS = step-5
     git_gat_version: b4e777e9f64e05ab0beb05c5b2b1f4428f2c58d4
+    # For end-of-cvmfs, ready for DRM, use 
+    # -e git_gat_version=60813e9a7000f1715c6a378dd7d2caa02cf83658
+    # on the command line.
   tasks:
     - name: Git checkout
       ansible.builtin.git:
