@@ -27,11 +27,12 @@
         regexp: '  version: 0.2.13'
         line: '  version: 0.2.16'
 
-    - name: Wipe out CVMFS, period
-      command: sudo apt purge cvmfs
+    - name: Hackily disable config-repo and just use the specific CVMFS repos.
+      ansible.builtin.lineinfile:
+        path: galaxy/group_vars/all.yml
+        regexp: 'galaxy_cvmfs_repos_enabled:'
+        line: 'galaxy_cvmfs_repos_enabled: true'
 
-    - name: Wipe out CVMFS, period
-      command: rm -rf /etc/cvmfs/
     # END CVMFS Hacks
 
     - name: Install deps
