@@ -26,6 +26,12 @@
         path: galaxy/requirements.yml
         regexp: '  version: 0.2.13'
         line: '  version: 0.2.16'
+
+    - name: Wipe out CVMFS, period
+      command: sudo apt purge cvmfs
+
+    - name: Wipe out CVMFS, period
+      command: rm -rf /etc/cvmfs/
     # END CVMFS Hacks
 
     - name: Install deps
