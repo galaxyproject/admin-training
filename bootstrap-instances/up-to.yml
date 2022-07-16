@@ -1,0 +1,49 @@
+---
+- name: Bring machines up to specific point
+  hosts: workshop_instances
+  vars:
+    # 2022-03-30 # Before any changes, last step of step 4 # CVMFS = step-5
+    git_gat_version: b4e777e9f64e05ab0beb05c5b2b1f4428f2c58d4
+  tasks:
+    - name: Git checkout
+      ansible.builtin.git:
+        repo: 'https://github.com/hexylena/git-gat/'
+        dest: galaxy/
+        version: "{{ git_gat_version }}"
+        force: yes
+
+    - name: Fix ansible
+      command: pip install -U ansible
+
+    # BEGIN CVMFS Hacks
+    - name: Wipe out CVMFS
+      command: rm -rf roles/galaxyproject.cvmfs/
+      args:
+        chdir: galaxy/
+
+    - name: Hackily use latest version of CVMFS role.
+      ansible.builtin.lineinfile:
+        path: galaxy/requirements.yml
+        regexp: '  version: 0.2.13'
+        line: '  version: 0.2.16'
+    # END CVMFS Hacks
+
+    - name: Install deps
+      command: ansible-galaxy install -r requirements.yml -p roles
+      args:
+        chdir: galaxy/
+
+    - name: Setup hosts file
+      ansible.builtin.template:
+        src: templates/hosts
+        dest: galaxy/hosts
+
+    - name: Setup vault password
+      ansible.builtin.copy:
+        content: "password"
+        dest: galaxy/.vault-password.txt
+
+    - name: Setup Galaxy
+      command: ansible-playbook galaxy.yml
+      args:
+        chdir: galaxy/
