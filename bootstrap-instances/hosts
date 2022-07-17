@@ -11,6 +11,7 @@ workshop_eu
 
 # Aussie provided machines
 [workshop_oz]
+gat-[0:7].oz.galaxy.training
 
 # EU provided machines
 [workshop_eu]
