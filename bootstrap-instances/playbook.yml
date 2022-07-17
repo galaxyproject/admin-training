@@ -252,10 +252,8 @@
 
         # For some instances, they don't come pre-configured with a password, so we do that now.
         - name: Generate a host-specific password
-          # Here we use the echo/cat pattern in order to generate lightly salted versions.
-          # Mostly useful if you have one workshop, then another.
           command: |
-            /usr/bin/pwgen -H <(echo gat; cat /etc/hostname) 12 1
+            /usr/bin/pwgen -H /etc/hostname 10 1
           register: actual_pw
 
         - name: Set a password if requested
