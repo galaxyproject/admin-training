@@ -11,17 +11,18 @@ workshop_eu
 
 # Aussie provided machines
 [workshop_oz]
-gat-[0:7].oz.galaxy.training
+
 
 # EU provided machines
 [workshop_eu]
+gat-[0-1].eu.training.galaxproject.eu
 
 # BE provided machines
 [workshop_be]
 
 # American machines
 [workshop_us]
-gat-[0:29].us.galaxy.training
+
 
 # Some variables apply to every member of the group
 [workshop_instances:vars]
