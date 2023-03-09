@@ -194,14 +194,14 @@ The last day! We made it. Today we have some additional topics, some of which ar
 
 ### Instructors
 
-* (H)elena Rasche - Erasmus Medical Center, the Netherlands
-* (S)askia Hiltemann - Erasmus Medical Center, the Netherlands
-* (Na)te Coraor - Galaxy Project, Penn State University, United States
-* (M)arius van den Beek - Galaxy Project, Penn State University, *Europe*
-* (Ni)cola Soranzo - Earlham Institute
-* (Mi)ra Kuntz - Uni-Freiburg, Germany
-* (Sa)njay Srikakulam - Uni-Freiburg, Germany
-* (C)atherine Bromhead - Australian BioCommons, Australia
+* [(H)elena Rasche](https://github.com/hexylena) - Erasmus Medical Center, the Netherlands
+* [(S)askia Hiltemann](https://github.com/shiltemann) - Erasmus Medical Center, the Netherlands
+* [(Na)te Coraor](https://github.com/natefoo) - Galaxy Project, Penn State University, United States
+* [(M)arius van den Beek](https://github.com/mvdbeek) - Galaxy Project, Penn State University, *Europe*
+* [(Ni)cola Soranzo](https://github.com/nsoranzo) - Earlham Institute
+* [(Mi)ra Kuntz](https://github.com/mira-miracoli/) - Uni-Freiburg, Germany
+* [(Sa)njay Srikakulam](https://github.com/sanjaysrikakulam/) - Uni-Freiburg, Germany
+* [(C)atherine Bromhead](https://github.com/cat-bro) - Australian BioCommons, Australia
 
 
 ### CoC
