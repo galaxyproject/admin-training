@@ -17,7 +17,7 @@ logo based on a [Hubble Image](https://hubblesite.org/contents/media/images/2018
 
 ## Location, Logistics, and Registration
 
-**This training will be offered 2-6 March at the [Barcelona Supercomputing Center](https://www.bsc.es/).**
+**This training will be offered 17-21 April 2023 at [Monasterium PoortAckere](https://monasterium.be/en) - Monasterium in Belgium 🍻.**
 
 See the [workshop's Galaxy Community Hub page TODO](https://galaxyproject.org/events/2020-03-admin/) for details on logistics and registration.
 
@@ -29,7 +29,6 @@ Galaxy training instances will be bootstrapped with [a small Ansible playbook](/
 
 - [Q&A!](https://docs.google.com/document/d/1NBpJ3qj5XF5V6e87ihiTfPjembEc0Q0YcbYUY7B3tew/edit#)
 - [https://gxy.io/gatchat - Chat for this workshop](https://gxy.io/gatchat) TODO
-- [https://gxy.io/gatmachines - VMs](https://gxy.io/gatmachines) TODO
 
 ## Timetable
 
