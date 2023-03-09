@@ -4,6 +4,7 @@ logo based on a [Hubble Image](https://hubblesite.org/contents/media/images/2018
 
 # Galaxy Administration Training
 
+- [2023 Gent](https://github.com/galaxyproject/admin-training/tree/2023-gent)
 - [2022 GCC GAT (1-day)](https://gallantries.github.io/video-library/modules/gcc2022/gat-intro)
 - [2022 GAT](https://gallantries.github.io/video-library/events/smorgasbord2/gat.html)
 - [2021 GCC GAT](https://galaxyproject.org/events/gcc2021/training/admin-track)
