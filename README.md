@@ -44,16 +44,16 @@ This day covers getting a Galaxy server setup with Ansible, a server you will de
 | -------- | ---------                                  | ---------                                                                             | -----------                    | -----------    |
 | 08:30    | Registration                               |                                                                                       |                                |                |
 | 09:00    | Welcome and introduction                   | [Welcome][welcome-slides]                                                             |                                | All            |
-| 09:20    | Deployment and platform options            | [Deployment][deployment-slides]                                                       |                                | M              |
-| 09:40    | Intro to Ansible                           | [Ansible][ansible-slides]                                                             | [Exercise][ansible-exercise]   | Ni             |
+| 09:20    | Deployment and platform options            | [Deployment][deployment-slides]                                                       |                                |                |
+| 09:40    | Intro to Ansible                           | [Ansible][ansible-slides]                                                             | [Exercise][ansible-exercise]   |                |
 | 10:30    | Break (coffee & snacks)                    |                                                                                       |                                |                |
-| 10:45    | Galaxy Server Part 1: Basic Install        | [Galaxy Install][ansible-galaxy-slides], [Database][db-slides], [uWSGI][uwsgi-slides] | [Exercise][ansible-galaxy]     | H, M, Na       |
+| 10:45    | Galaxy Server Part 1: Basic Install        | [Galaxy Install][ansible-galaxy-slides], [Database][db-slides], [uWSGI][uwsgi-slides] | [Exercise][ansible-galaxy]     |                |
 | 12:00    | Lunch (catered)                            |                                                                                       |                                |                |
-| 13:00    | Galaxy Server Part 2: Towards Production   | [systemd][systemd-slides]                                                             |                                | H, Na          |
+| 13:00    | Galaxy Server Part 2: Towards Production   | [systemd][systemd-slides]                                                             |                                |                |
 | 14:00    | Break (coffee & snacks)                    |                                                                                       |                                |                |
-| 15:15    | Galaxy Server Part 3: Advanced Install     | [Production][production-slides]                                                       |                                | H, Na          |
-| 15:45    | Galaxy Tool Shed                           | [Toolshed][toolshed-slides]                                                           |                                | M              |
-| 16:15    | Ephemeris                                  | [Ephemeris][ephemeris-slides]                                                         | [Exercise][ephemeris-exercise] | Ni             |
+| 15:15    | Galaxy Server Part 3: Advanced Install     | [Production][production-slides]                                                       |                                |                |
+| 15:45    | Galaxy Tool Shed                           | [Toolshed][toolshed-slides]                                                           |                                |                |
+| 16:15    | Ephemeris                                  | [Ephemeris][ephemeris-slides]                                                         | [Exercise][ephemeris-exercise] |                |
 | 17:00    | Guided tour of the Supercomputing facility |                                                                                       |                                |                |
 
 [welcome-slides]:        https://galaxyproject.github.io/admin-training/2020-barcelona/00-intro/intro.html
@@ -81,12 +81,12 @@ Today we pivot to focus on making that server useful: adding tools and data, con
 | 09:00    | Welcome and questions                       |                               |                                                                                  |                |
 | 09:15    | Ephemeris: Continued                        |                               |                                                                                  |                |
 | 10:30    | Break (coffee & snacks)                     |                               |                                                                                  |                |
-| 10:45    | Users, Groups, and Quotas (+Demo)           | [Slides][users-groups-slides] |                                                                                  | S              |
-| 12:30    | External authentication                     | [Slides][pam-slides]          | [Upstream Auth Exercise][upstream-auth-exercise]                                 | H              |
+| 10:45    | Users, Groups, and Quotas (+Demo)           | [Slides][users-groups-slides] |                                                                                  |                |
+| 12:30    | External authentication                     | [Slides][pam-slides]          | [Upstream Auth Exercise][upstream-auth-exercise]                                 |                |
 | 13:00    | Lunch (catered)                             |                               |                                                                                  |                |
-| 14:00    | Reference Data                              | [Slides][ref-genomes-slides]  | [CVMFS Exercise][cvmfs-exercise], [Data Manager Exercise][data-manager-exercise] | Na             |
-| 15:00    | Exploring the Galaxy job configuration file | [Slides][cluster-slides]      | [`job_conf.xml`][job-conf-xml]                                                   | M              |
-| 15:45    | Connecting Galaxy to a compute cluster      | [Slides][cluster-slides]      | [Exercise][cluster-exercise]                                                     | Na             |
+| 14:00    | Reference Data                              | [Slides][ref-genomes-slides]  | [CVMFS Exercise][cvmfs-exercise], [Data Manager Exercise][data-manager-exercise] |                |
+| 15:00    | Exploring the Galaxy job configuration file | [Slides][cluster-slides]      | [`job_conf.xml`][job-conf-xml]                                                   |                |
+| 15:45    | Connecting Galaxy to a compute cluster      | [Slides][cluster-slides]      | [Exercise][cluster-exercise]                                                     |                |
 | 17:00    | Close Day 2                                 |                               |                                                                                  |                |
 
 [users-groups-slides]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/users-groups-quotas/slides.html
@@ -102,20 +102,19 @@ Today we pivot to focus on making that server useful: adding tools and data, con
 ### Wednesday
 **19th April**
 
-| **Time** | **Topic**                                             | **Slides**                  | **Exercises**                            | **Instructor** |
-| -------- | ---------                                             | ---------                   | -----------                              | -----------    |
-| 09:00    | Welcome and questions                                 |                             |                                          |                |
-| 09:15    | Connecting Galaxy to a compute cluster (continued)    | [Slides][cluster-slides]      | [Exercise][cluster-exercise]                                                     | Na             |
-| 10:45    | Break (coffee & snacks)                               |                             |                                          |                |
-| 11:00    | BioBlend                                              | [Slides][bioblend-slides]   | [Exercise][bioblend-exercise]             | Ni             |
-| 12:00    | Pulsar                                                | [Slides][hetero-slides]     | [Exercise][hetero-exercise]              | H              |
-| 13:00    | Lunch (catered)                                       |                             |                                          |                |
-| 14:00    | Storage management                                    |                             | [Exercise][storage-exercise]             | H              |
-| 15:00    | Monitoring Part 1: Reports                            |                             | [Reports Exercise][monitoring-reports]   | M              |
-| 15:30    | Break (coffee & snacks)                               |                             |                                          |                |
-| 15:45    | Monitoring Part2: DB queries, command line & scripts | [Slides][gxadmin-slides]    | [gxadmin][gxadmin-exercise]              | H
-| 16:15    | Monitoring Part 3: Telegraf, InfluxDB, Grafana        | [Slides][monitoring-slides] | [Telegraf Exercise][monitoring-exercise] | S              |
- 17:00    | Close day 3                                           |                             |                                          |                |
+| **Time** | **Topic**                                            | **Slides**                  | **Exercises**                            | **Instructor** |
+| -------- | ---------                                            | ---------                   | -----------                              | -----------    |
+| 09:00    | Welcome and questions                                |                             |                                          |                |
+| 09:15    | Connecting Galaxy to a compute cluster (continued)   | [Slides][cluster-slides]    | [Exercise][cluster-exercise]             |                |
+| 10:45    | Break (coffee & snacks)                              |                             |                                          |                |
+| 11:00    | BioBlend                                             | [Slides][bioblend-slides]   | [Exercise][bioblend-exercise]            |                |
+| 12:00    | Pulsar                                               | [Slides][hetero-slides]     | [Exercise][hetero-exercise]              |                |
+| 13:00    | Lunch (catered)                                      |                             |                                          |                |
+| 14:00    | Storage management                                   |                             | [Exercise][storage-exercise]             |                |
+| 15:00    | Monitoring Part 1: Reports                           |                             | [Reports Exercise][monitoring-reports]   |                |
+| 15:30    | Break (coffee & snacks)                              |                             |                                          |                |
+| 15:45    | Monitoring Part2: DB queries, command line & scripts | [Slides][gxadmin-slides]    | [gxadmin][gxadmin-exercise]              |                |
+| 16:15    | Monitoring Part 3: Telegraf, InfluxDB, Grafana       | [Slides][monitoring-slides] | [Telegraf Exercise][monitoring-exercise] |                |
 
 [hetero-slides]:      https://training.galaxyproject.org/training-material/topics/admin/tutorials/heterogeneous-compute/slides.html
 [hetero-exercise]:    https://training.galaxyproject.org/training-material/topics/admin/tutorials/heterogeneous-compute/tutorial.html
@@ -131,22 +130,22 @@ Today we pivot to focus on making that server useful: adding tools and data, con
 ### Thursday
 **20th April**
 
-| **Time** | **Topic**               | **Slides**                         | **Exercises**                    | **Instructor** |
-| -------- | ---------               | ---------                          | -------------                    | -----------    |
-| 09:00    | Welcome and questions   |                                    |                                  |                |
-| 09:15    | Monitoring Part 3: Telegraf, InfluxDB, Grafana (continued)   | [Slides][monitoring-slides] | [Telegraf Exercise][monitoring-exercise] | S              |
-| 10:15    | Maintenance, Backup and Restore | [Slides][maintenance]      |                                  | Na             |
-| 10:45    | Break (coffee & snacks) |                                    |                                  |                |
-| 11:00    | TIaaS                   |                                    | [TIaaS Exercise][tiaas-exercise] | H & S          |
-| 12:30    | Recording Job Metrics   |                                    | [Exercise][job-metrics-exercise] | Na             |
-| 12:45    | Interactive Tools       | [Slides][interactive-tools-slides] | [Exercise][interactive-tools]    | Na             |
-| 13:00    | Lunch                   |                                    |                                  |                |
-| 14:00    | Interactive Tools       | [Slides][interactive-tools-slides] | [Exercise][interactive-tools]    | Na             |
-| 15:00    | Dev vs Prod             |                                    | (Conversation)                   | Na             |
-| 15:30    | Break (coffee & snacks) |                                    |                                  |                |
-| 15:45    | Jenkins & Automation    |                                    | [Exercise][jenkins-exercise]     | H              |
-| 16:35    | Advanced Customisation  | [Slides][advanced-customisation]   |                                  | H              |
-| 17:00    | Wrap up and close       |                                    |                                  |                |
+| **Time** | **Topic**                                                  | **Slides**                         | **Exercises**                            | **Instructor** |
+| -------- | ---------                                                  | ---------                          | -------------                            | -----------    |
+| 09:00    | Welcome and questions                                      |                                    |                                          |                |
+| 09:15    | Monitoring Part 3: Telegraf, InfluxDB, Grafana (continued) | [Slides][monitoring-slides]        | [Telegraf Exercise][monitoring-exercise] |                |
+| 10:15    | Maintenance, Backup and Restore                            | [Slides][maintenance]              |                                          |                |
+| 10:45    | Break (coffee & snacks)                                    |                                    |                                          |                |
+| 11:00    | TIaaS                                                      |                                    | [TIaaS Exercise][tiaas-exercise]         |                |
+| 12:30    | Recording Job Metrics                                      |                                    | [Exercise][job-metrics-exercise]         |                |
+| 12:45    | Interactive Tools                                          | [Slides][interactive-tools-slides] | [Exercise][interactive-tools]            |                |
+| 13:00    | Lunch                                                      |                                    |                                          |                |
+| 14:00    | Interactive Tools                                          | [Slides][interactive-tools-slides] | [Exercise][interactive-tools]            |                |
+| 15:00    | Dev vs Prod                                                |                                    | (Conversation)                           |                |
+| 15:30    | Break (coffee & snacks)                                    |                                    |                                          |                |
+| 15:45    | Jenkins & Automation                                       |                                    | [Exercise][jenkins-exercise]             |                |
+| 16:35    | Advanced Customisation                                     | [Slides][advanced-customisation]   |                                          |                |
+| 17:00    | Wrap up and close                                          |                                    |                                          |                |
 
 
 [advanced-customisation]:   https://training.galaxyproject.org/training-material/topics/admin/tutorials/advanced-galaxy-customisation/slides.html
@@ -167,14 +166,14 @@ The last day! We made it. Today we have some additional topics, some of which ar
 | **Time** | **Topic**                                           | **Slides**                       | **Exercises**                                                    | **Instructor** |
 | -------- | ---------                                           | ---------                        | -----------                                                      | -----------    |
 | 09:00    | Welcome and questions                               |                                  |                                                                  |                |
-| 09:15    | When things go wrong: Galaxy Server Troubleshooting | [Slides][troubleshooting-slides] |                                                                  | Na             |
+| 09:15    | When things go wrong: Galaxy Server Troubleshooting | [Slides][troubleshooting-slides] |                                                                  |                |
 | 10:45    | Break (coffee & snacks & [survey][survey])          |                                  |                                                                  |                |
-| 11:00    | What's new in Galaxy                                | [Slides][whats-new]              |                                                                  | M              |
-| 11:45    | Python 2 to Python 3!                               | [Docs][py2to3]                   |                                                                  | Ni             |
-| 12:00    | Tool Development                                    | [Slides][tool-dev-slides]        | [Exercise][planemo]                                              | Ni             |
+| 11:00    | What's new in Galaxy                                | [Slides][whats-new]              |                                                                  |                |
+| 11:45    | Python 2 to Python 3!                               | [Docs][py2to3]                   |                                                                  |                |
+| 12:00    | Tool Development                                    | [Slides][tool-dev-slides]        | [Exercise][planemo]                                              |                |
 | 13:00    | Lunch (catered)                                     |                                  |                                                                  |                |
-| 14:00    | Dataset collections                                 |                                  | [DCs][dc], [Rule based][rb]                                      | M              |
-| 14:30    | Developing your own Training                        |                                  | [Setting up][training-jekyll], [Exercise][training-new-tutorial] | S              |
+| 14:00    | Dataset collections                                 |                                  | [DCs][dc], [Rule based][rb]                                      |                |
+| 14:30    | Developing your own Training                        |                                  | [Setting up][training-jekyll], [Exercise][training-new-tutorial] |                |
 | 15:00    | Wrap up and close                                   |                                  |                                                                  |                |
 
 [survey]:                 https://bsc3.typeform.com/to/X5bqFf
@@ -193,14 +192,14 @@ The last day! We made it. Today we have some additional topics, some of which ar
 
 ### Instructors
 
-* [(H)elena Rasche](https://github.com/hexylena) - Erasmus Medical Center, the Netherlands
-* [(S)askia Hiltemann](https://github.com/shiltemann) - Erasmus Medical Center, the Netherlands
-* [(Na)te Coraor](https://github.com/natefoo) - Galaxy Project, Penn State University, United States
-* [(M)arius van den Beek](https://github.com/mvdbeek) - Galaxy Project, Penn State University, *Europe*
-* [(Ni)cola Soranzo](https://github.com/nsoranzo) - Earlham Institute
-* [(Mi)ra Kuntz](https://github.com/mira-miracoli/) - Uni-Freiburg, Germany
-* [(Sa)njay Srikakulam](https://github.com/sanjaysrikakulam/) - Uni-Freiburg, Germany
-* [(C)atherine Bromhead](https://github.com/cat-bro) - Australian BioCommons, Australia
+* [Helena Rasche](https://github.com/hexylena) - Erasmus Medical Center, the Netherlands
+* [Saskia Hiltemann](https://github.com/shiltemann) - Erasmus Medical Center, the Netherlands
+* [Nate Coraor](https://github.com/natefoo) - Galaxy Project, Penn State University, United States
+* [Marius van den Beek](https://github.com/mvdbeek) - Galaxy Project, Penn State University, *Europe*
+* [Nicola Soranzo](https://github.com/nsoranzo) - Earlham Institute
+* [Mira Kuntz](https://github.com/mira-miracoli/) - Uni-Freiburg, Germany
+* [Sanjay Srikakulam](https://github.com/sanjaysrikakulam/) - Uni-Freiburg, Germany
+* [Catherine Bromhead](https://github.com/cat-bro) - Australian BioCommons, Australia
 
 
 ### CoC
