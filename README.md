@@ -19,7 +19,7 @@ logo based on a [Hubble Image](https://hubblesite.org/contents/media/images/2018
 
 **This training will be offered 17-21 April 2023 at [Monasterium PoortAckere](https://monasterium.be/en) - Monasterium in Belgium 🍻.**
 
-See the [workshop's Galaxy Community Hub page TODO](https://galaxyproject.org/events/2020-03-admin/) for details on logistics and registration.
+See the [workshop's Galaxy Community Hub page](https://galaxyproject.org/events/2023-admin-training/) for details on logistics and registration.
 
 ## Training VM instances
 
