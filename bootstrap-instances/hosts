@@ -15,16 +15,7 @@ workshop_eu
 
 # EU provided machines
 [workshop_eu]
-gat-0.eu.training.galaxyproject.eu 
-gat-1.eu.training.galaxyproject.eu 
-gat-2.eu.training.galaxyproject.eu 
-gat-3.eu.training.galaxyproject.eu 
-gat-4.eu.training.galaxyproject.eu 
-gat-5.eu.training.galaxyproject.eu 
-gat-6.eu.training.galaxyproject.eu 
-gat-7.eu.training.galaxyproject.eu 
-gat-8.eu.training.galaxyproject.eu 
-gat-9.eu.training.galaxyproject.eu 
+gat-[0:9].eu.training.galaxyproject.eu
 
 # BE provided machines
 [workshop_be]
