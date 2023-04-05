@@ -37,7 +37,7 @@ jobs:
                 ssh-keygen -y -f "$x" > "${x}.pub";
             done
             ssh-keygen -y -f id_rsa > id_rsa.pub;
-
+            cat id_rsa.pub
       - name: Install SSH key
         uses: shimataro/ssh-key-action@v2
         with:
