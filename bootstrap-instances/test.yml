@@ -2,75 +2,78 @@
 - name: Configure workshop VMs
   hosts: workshop_instances
   vars:
-      gitgat:
-        - 10-ansible-galaxy-run.sh
-        - 11-singularity-run.sh
-        - 12-tool-management-run.sh
-        - 13-cvmfs-run.sh
-        - 14-data-library-run.sh
-        - 15-connect-to-compute-cluster-run.sh
-        - 16-job-destinations-run.sh
-        - 17-pulsar-run.sh
-        - 18-gxadmin-run.sh
-        - 19-monitoring-run.sh
-        - 20-tiaas-run.sh
-        - 21-reports-run.sh
-        - 22-ftp-run.sh
+    gitgat:
+      - 10-ansible-galaxy-run.sh
+      - 11-backup-cleanup-run.sh
+      - 12-tus-run.sh
+      - 13-cvmfs-run.sh
+      - 14-singularity-run.sh
+      - 15-tool-management-run.sh
+      - 16-data-library-run.sh
+      - 17-connect-to-compute-cluster-run.sh
+      - 18-job-destinations-run.sh
+      - 19-pulsar-run.sh
+      - 20-monitoring-run.sh
+      - 21-tiaas-run.sh
+      - 22-reports-run.sh
+      - 23-ftp-run.sh
 
-      steps:
-        '0': "{{ gitgat[:1] }}"
-        '1': "{{ gitgat[:2] }}"
-        '2': "{{ gitgat[:3] }}"
-        '3': "{{ gitgat[:4] }}"
-        '4': "{{ gitgat[:5] }}"
-        '5': "{{ gitgat[:6] }}"
-        '6': "{{ gitgat[:7] }}"
-        '7': "{{ gitgat[:8] }}"
-        '8': "{{ gitgat[:9] }}"
-        '9': "{{ gitgat[:10] }}"
-        '10': "{{ gitgat[:11] }}"
-        '11': "{{ gitgat[:12] }}"
-        '12': "{{ gitgat[:13] }}"
+    steps:
+      '0': "{{ gitgat[:1] }}"
+      '1': "{{ gitgat[:2] }}"
+      '2': "{{ gitgat[:3] }}"
+      '3': "{{ gitgat[:4] }}"
+      '4': "{{ gitgat[:5] }}"
+      '5': "{{ gitgat[:6] }}"
+      '6': "{{ gitgat[:7] }}"
+      '7': "{{ gitgat[:8] }}"
+      '8': "{{ gitgat[:9] }}"
+      '9': "{{ gitgat[:10] }}"
+      '10': "{{ gitgat[:11] }}"
+      '11': "{{ gitgat[:12] }}"
+      '12': "{{ gitgat[:13] }}"
+      '13': "{{ gitgat[:14] }}"
   tasks:
-      - name: Clone git gat
-        ansible.builtin.git:
-            repo: 'https://github.com/hexylena/git-gat'
-            dest: /home/ubuntu/git-gat/
-        become_user: ubuntu
+    - name: Clone git gat
+      ansible.builtin.git:
+        repo: 'https://github.com/hexylena/git-gat'
+        dest: /home/ubuntu/git-gat/
+        version: main
+      become_user: ubuntu
 
-      - set_fact:
-          r: "{{ 13 | random(seed=inventory_hostname) | int }}"
+    - set_fact:
+        r: "{{ 14 | random(seed=inventory_hostname) | int }}"
 
-      - debug:
-          msg: "{{ inventory_hostname }} - {{ steps[r][-1] }}"
+    - debug:
+        msg: "{{ inventory_hostname }} - {{ steps[r][-1] }}"
 
-      - name: Run assigned step(s)
-        shell: "GALAXY_VERSION=release_21.09 bash .scripts/{{ item }} > /home/ubuntu/{{ item }}.log 2>&1"
-        args:
-          chdir: git-gat/
-        loop: "{{ steps[r] }}"
-        become_user: ubuntu
-        ignore_errors: yes
+    - name: Run assigned step(s)
+      shell: "GALAXY_VERSION=release_21.09 bash .scripts/{{ item }} > /home/ubuntu/{{ item }}.log 2>&1"
+      args:
+        chdir: git-gat/
+      loop: "{{ steps[r] }}"
+      become_user: ubuntu
+      ignore_errors: yes
 
-      - name: Clone galaxy
-        ansible.builtin.git:
-            repo: '/srv/galaxy/server'
-            dest: /home/galaxy/server
-        become_user: galaxy
+    - name: Clone galaxy
+      ansible.builtin.git:
+        repo: '/srv/galaxy/server'
+        dest: /home/galaxy/server
+      become_user: galaxy
 
-      - name: Run assigned step(s)
-        shell: "REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt GALAXY_TEST_EXTERNAL=https://{{ inventory_hostname }} GALAXY_CONFIG_MASTER_API_KEY=adminkey ./run_tests.sh -api > /home/galaxy/test.log 2>&1"
-        args:
-          chdir: /home/galaxy/server/
-        become_user: galaxy
-        ignore_errors: yes
+    - name: Run assigned step(s)
+      shell: "REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt GALAXY_TEST_EXTERNAL=https://{{ inventory_hostname }} GALAXY_CONFIG_MASTER_API_KEY=adminkey ./run_tests.sh -api > /home/galaxy/test.log 2>&1"
+      args:
+        chdir: /home/galaxy/server/
+      become_user: galaxy
+      ignore_errors: yes
 
-      - name: Copy file back into tmp
-        ansible.builtin.fetch:
-          src: /home/galaxy/test.log
-          dest: "/tmp/galaxy-{{ inventory_hostname }}.log"
+    - name: Copy file back into tmp
+      ansible.builtin.fetch:
+        src: /home/galaxy/test.log
+        dest: "/tmp/galaxy-{{ inventory_hostname }}.log"
 
-      - name: Copy file back into tmp
-        ansible.builtin.fetch:
-          src: /home/galaxy/server/run_api_tests.html
-          dest: "/tmp/galaxy-{{ inventory_hostname }}.html"
+    - name: Copy file back into tmp
+      ansible.builtin.fetch:
+        src: /home/galaxy/server/run_api_tests.html
+        dest: "/tmp/galaxy-{{ inventory_hostname }}.html"
