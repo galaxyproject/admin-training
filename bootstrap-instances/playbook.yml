@@ -111,6 +111,7 @@
           - screen
           - cockpit # web console
           - moreutils # for gat-cli
+          - silversearcher-ag # For @hexylena
         state: latest
       tags:
            - packages
