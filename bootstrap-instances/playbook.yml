@@ -44,6 +44,16 @@
         state: present
         key: "{{ lookup('file', 'gat-one-key-to-rule-them-all.pub') }}"
 
+    - name: Disable cgroupv2
+      copy:
+        content: |
+            GRUB_CMDLINE_LINUX_DEFAULT="$GRUB_CMDLINE_LINUX_DEFAULT systemd.unified_cgroup_hierarchy=0 systemd.legacy_systemd_cgroup_controller=1"
+        dest: /etc/default/grub.d/99-cgroupv1.cfg
+        mode: 0644
+      notify:
+        - update-grub
+        - reboot
+
     - name: Switch to kiwi update servers
       copy:
         content: |
@@ -271,5 +281,7 @@
         - password
 
   handlers:
+    - name: update-grub
+      command: /usr/sbin/update-grub
     - name: reboot
       reboot:
