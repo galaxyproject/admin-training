@@ -161,7 +161,7 @@ Today we pivot to focus on making that server useful: adding tools and data, con
 ### Friday
 **21st April**
 
-The last day! We made it. Today we have some additional topics, some of which are not admin related. Please feel free to leave at any point in the day and go enjoy Barcelona if the topics are maybe a bit less interesting for you.
+The last day! We made it. Today we have some additional topics, some of which are not admin related. Please feel free to leave at any point in the day and go enjoy Ghent if the topics are maybe a bit less interesting for you.
 
 | **Time** | **Topic**                                           | **Slides**                       | **Exercises**                                                    | **Instructor** |
 | -------- | ---------                                           | ---------                        | -----------                                                      | -----------    |
