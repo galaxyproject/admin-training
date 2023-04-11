@@ -15,7 +15,11 @@ The 2021 Galaxy Admin Training is beginning soon and we wanted to give you a cou
 
 **Community Requirements**
 
-Everyone is expected to abide by the Code of Conduct (CoC) that you signed before this training. We want this to be a welcoming and friendly environment for everyone! Please see the [VIB CoC](https://www.vibconferences.be/code-of-conduct) for more information and the point of contact for any issues.
+Everyone is expected to abide by the Code of Conduct (CoC) that you signed before this training. We want this to be a welcoming and friendly environment for everyone! Please see the [Galaxy Project CoC](https://galaxyproject.org/community/coc/) for more information and the point(s) of contact for any issues.
+
+**Mandatory Pre-Workshop Homework**
+
+This year we are adding the use of `git` to the Galaxy Admin Training learning path. You must be familiar with `git` before you attend the workshop. We suggest you follow [Version Control with Git](https://training.galaxyproject.org/training-material/topics/data-science/tutorials/bash-git/tutorial.html), as it covers all of the necessary concepts
 
 **Technical Requirements**
 
@@ -23,9 +27,9 @@ Everyone is expected to abide by the Code of Conduct (CoC) that you signed befor
 - It is best if you have an SSH client pre-installed, but it is not strictly necessary. All VMs have a terminal available on port 8080.
 - Windows users can choose to install [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) or equivalent. For Linux & OSX: You should have an ssh client already installed.
 
-**Educational Requirements**
+**Additional Educational Requirements**
 
-By the time of the workshop, you should be familiar with the Unix command line. Everyone has a different background and if you haven't had to learn Unix shell basics before that's ok! We recommend that you go through the The Unix Shell lesson from The Carpentries.
+By the time of the workshop, you should be familiar with the Unix command line. Everyone has a different background and if you haven't had to learn Unix shell basics before that's ok! We recommend that you go through [this CLI Basics](https://training.galaxyproject.org/training-material/topics/data-science/tutorials/cli-basics/tutorial.html) and [Advanced CLI](https://training.galaxyproject.org/training-material/topics/data-science/tutorials/cli-advanced/tutorial.html) tutorials if you need a refresher.
 
 Additionally you need to be comfortable with a command-line text editor. If you have not had to use one before, then nano is recommended. If you have a preferred one (e.g. vim or emacs), you are welcome to use that.
 
@@ -37,16 +41,11 @@ Slack (chat) will be used for communication and support throughout the week. Her
 
 **Training Materials**
 
-Everything we teach during the week will be found on the [Galaxy Training Materials](https://galaxyproject.github.io/training-material/topics/admin/) website. If you are worried about the teaching pace of the upcoming week, feel free to read through these materials ahead of time and familiarise yourself with the concepts. Our [preliminary schedule is available](https://galaxyproject.org/events/gcc2021/training/admin-track), but subject to change.
-
-**Format**
-This will be an asynchronous event. This means that all training sessions have been pre-recorded, and you can work through them at your own pace during the training week. A global community of instructors will be available on Slack 24/7 to answer any questions you may have.
-
-So when you are ready to start the training next week, just go to your track, and start from Day 1!
+Everything we teach during the week will be found on the [Galaxy Training Materials](https://galaxyproject.github.io/training-material/topics/admin/) website. If you are worried about the teaching pace of the upcoming week, feel free to read through these materials ahead of time and familiarise yourself with the concepts. Our [preliminary schedule is available](https://github.com/galaxyproject/admin-training/tree/2023-gent), but subject to change.
 
 **Certificates**
 
-Certificates of attendance will be available upon request after the training week. More information about this can be found on the training website, but in order to qualify for a certificate, please make sure to work on the VM, actively participate on Slack throughout the week, join all the training channels, answer the daily icebreaker questions, ask lots and lots of questions, give us feedback on each session after you've finished (what did you like? what would you like to see added in the future, etc)!
+Certificates of attendance will be available upon request after the training week. 
 
 
 We hope you are as excited as we are!
