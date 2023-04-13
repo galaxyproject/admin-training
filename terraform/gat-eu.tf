@@ -34,7 +34,7 @@ resource "aws_route53_record" "training-vm-eu-2" {
   name    = "gat-2.eu.galaxy.training"
   type    = "A"
   ttl     = "7200"
-  records = ["192.52.42.4"]
+  records = ["10.5.68.141"]
 }
 resource "aws_route53_record" "training-vm-eu-2-wildcard" {
   zone_id = var.training-gxp-eu
