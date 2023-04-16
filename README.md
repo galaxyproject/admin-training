@@ -5,12 +5,7 @@ logo based on a [Hubble Image](https://hubblesite.org/contents/media/images/2018
 
 **17-21 April 2023**
 
-- [Timetable](#timetable)
-	- [Monday](#monday)
-	- [Tuesday](#tuesday)
-	- [Wednesday](#wednesday)
-	- [Thursday](#thursday)
-	- [Friday](#friday)
+- [Timetable](#schedule-new)
 - [Admin Training Materials](https://training.galaxyproject.org/training-material/topics/admin/)
 - [Join the Discussion](https://gitter.im/dagobah-training/Lobby)
 - [Galaxy Training Materials](https://training.galaxyproject.org/)
