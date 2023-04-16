@@ -15,7 +15,7 @@ workshop_eu
 
 # EU provided machines
 [workshop_eu]
-gat-[0:9].eu.training.galaxyproject.eu
+gat-[9:39].eu.training.galaxyproject.eu
 
 # BE provided machines
 [workshop_be]
