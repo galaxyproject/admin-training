@@ -23,20 +23,11 @@ jobs:
         run: |
             cd bootstrap-instances;
 
-            echo "${{ secrets.GAT_INTERNAL }}" > id_rsa
-            echo "${{ secrets.GAT_EU }}" > admintraining-eu.key
-            echo "${{ secrets.GAT_BE }}" > admintraining-be.key
-            echo "${{ secrets.GAT_OZ }}" > admintraining-oz3.key
-            echo "${{ secrets.GAT_US }}" > admintraining-us.key
             echo "${{ secrets.THE_ONE_KEY }}" > gat-one-key-to-rule-them-all
             echo "${{ secrets.THE_ONE_KEY_PUB }}" > gat-one-key-to-rule-them-all.pub
 
-            chmod go-rwx *.key gat-one-key-to-rule-them-all* id_rsa*
+            chmod go-rwx gat-one-key-to-rule-them-all*
 
-            for x in *.key; do
-                ssh-keygen -y -f "$x" > "${x}.pub";
-                cat "${x}.pub"
-            done
             ssh-keygen -y -f id_rsa > id_rsa.pub;
       - name: Install SSH key
         uses: shimataro/ssh-key-action@v2
