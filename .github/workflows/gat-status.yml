@@ -14,7 +14,7 @@ on:
         
 jobs:
   setup:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
         with:
@@ -31,21 +31,18 @@ jobs:
       - name: Setup SSH Keys
         run: |
             cd bootstrap-instances;
-
             echo "${{ secrets.THE_ONE_KEY }}" > gat-one-key-to-rule-them-all
             echo "${{ secrets.THE_ONE_KEY_PUB }}" > gat-one-key-to-rule-them-all.pub
-
             chmod go-rwx gat-one-key-to-rule-them-all*
-
-            ssh-keygen -y -f id_rsa > id_rsa.pub;
       - name: Install SSH key
         uses: shimataro/ssh-key-action@v2
         with:
           key: ${{ secrets.THE_ONE_KEY }}
           known_hosts: "github.com,192.30.253.112 ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAq2A7hRGmdnm9tUDbO9IDSwBK6TbQa+PXYPCPy6rbTrTtw7PHkccKrpp0yVhp5HdEIcKr6pLlVDBfOLX9QUsyCOV0wzfjIJNlGEYsdlLJizHhbn2mUjvSAHQqZETYP81eFzLQNnPHt4EVVUh7VfDESU84KezmD5QlWpXLmvU31/yMf+Se8xhHTvKSCZIFImWwoG6mbUoWf9nzpIoaSjB+weqqUUmpaaasXVal72J+UX2B+2RPW3RcT0eOzQgqlJL3RKrTJvdsjE3JEAvGq3lGHSZXy28G3skua2SmVi/w4yCE6gbODqnTWlg7+wC604ydGXA8VJiS5ap43JXiUFFAaQ=="
           config: |
-                Host gat-*training.galaxyproject.eu
+                Host gat-*.galaxy.training
                     User ubuntu
+                    HostName %h
                     UserKnownHostsFile /dev/null
                     StrictHostKeyChecking no
           if_key_exists: replace # replace / ignore / fail; optional (defaults to fail)
