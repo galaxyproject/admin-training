@@ -11,7 +11,7 @@ on:
         - workshop_oz
         - workshop_us
         required: true
-        
+
 jobs:
   setup:
     runs-on: ubuntu-latest
@@ -49,6 +49,6 @@ jobs:
 
       - run: |
           cd bootstrap-instances
-          ansible -a 'gat status' ${{ github.event.inputs.tags }}" -f 20 -vv > $GITHUB_STEP_SUMMARY
+          ansible -a 'gat status' "${{ github.event.inputs.name }}" -f 20 -vv > $GITHUB_STEP_SUMMARY
         env:
             ANSIBLE_STDOUT_CALLBACK: yaml
