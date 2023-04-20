@@ -1,8 +1,17 @@
-name: Ansible Bootstrapping
+name: GAT Status
 
 on:
   workflow_dispatch:
-
+    inputs:
+      name:
+        type: choice
+        description: Target machines
+        options: 
+        - workshop_eu
+        - workshop_oz
+        - workshop_us
+        required: true
+        
 jobs:
   setup:
     runs-on: ubuntu-20.04
