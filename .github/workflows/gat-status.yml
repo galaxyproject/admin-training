@@ -10,5 +10,46 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 1
+
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+
+      - name: Install Ansible + deps
+        run: |
+            pip install -r bootstrap-instances/requirements.txt
+
+      - name: Setup SSH Keys
+        run: |
+            cd bootstrap-instances;
+
+            echo "${{ secrets.GAT_INTERNAL }}" > id_rsa
+            echo "${{ secrets.GAT_EU }}" > admintraining-eu.key
+            echo "${{ secrets.GAT_BE }}" > admintraining-be.key
+            echo "${{ secrets.GAT_OZ }}" > admintraining-oz3.key
+            echo "${{ secrets.GAT_US }}" > admintraining-us.key
+            echo "${{ secrets.THE_ONE_KEY }}" > gat-one-key-to-rule-them-all
+            echo "${{ secrets.THE_ONE_KEY_PUB }}" > gat-one-key-to-rule-them-all.pub
+
+            chmod go-rwx *.key gat-one-key-to-rule-them-all* id_rsa*
+
+            for x in *.key; do
+                ssh-keygen -y -f "$x" > "${x}.pub";
+                cat "${x}.pub"
+            done
+            ssh-keygen -y -f id_rsa > id_rsa.pub;
+      - name: Install SSH key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.THE_ONE_KEY }}
+          known_hosts: "github.com,192.30.253.112 ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAq2A7hRGmdnm9tUDbO9IDSwBK6TbQa+PXYPCPy6rbTrTtw7PHkccKrpp0yVhp5HdEIcKr6pLlVDBfOLX9QUsyCOV0wzfjIJNlGEYsdlLJizHhbn2mUjvSAHQqZETYP81eFzLQNnPHt4EVVUh7VfDESU84KezmD5QlWpXLmvU31/yMf+Se8xhHTvKSCZIFImWwoG6mbUoWf9nzpIoaSjB+weqqUUmpaaasXVal72J+UX2B+2RPW3RcT0eOzQgqlJL3RKrTJvdsjE3JEAvGq3lGHSZXy28G3skua2SmVi/w4yCE6gbODqnTWlg7+wC604ydGXA8VJiS5ap43JXiUFFAaQ=="
+          config: |
+                Host gat-*training.galaxyproject.eu
+                    User ubuntu
+                    UserKnownHostsFile /dev/null
+                    StrictHostKeyChecking no
+          if_key_exists: replace # replace / ignore / fail; optional (defaults to fail)
+
       - run: |
+          cd bootstrap-instances
           ansible -a 'gat status' ${{ github.event.inputs.tags }}" -f 20 -vv > $GITHUB_STEP_SUMMARY
