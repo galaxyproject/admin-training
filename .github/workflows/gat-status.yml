@@ -53,3 +53,5 @@ jobs:
       - run: |
           cd bootstrap-instances
           ansible -a 'gat status' ${{ github.event.inputs.tags }}" -f 20 -vv > $GITHUB_STEP_SUMMARY
+        env:
+            ANSIBLE_STDOUT_CALLBACK: yaml
