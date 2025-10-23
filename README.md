@@ -19,7 +19,7 @@ Galaxy training instances will be bootstrapped with [a small Ansible playbook](/
 
 ## Schedule
 
-A tentative schedule is now available [here](https://github.com/orgs/galaxyproject/projects/73). Get a sneak peek at the topics that will be covered during this intensive training program. _Timetable with sessions and material is being continuously updated. **This is NOT final**._
+A tentative schedule is now available [here](https://github.com/orgs/galaxyproject/projects/73). Get a sneak peek at the topics that will be covered during this intensive training program. _Timetable with sessions and material is being continuously adjusted._
 
 ### Instructors
 
