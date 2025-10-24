@@ -29,7 +29,7 @@ gat-[0:39].eu.galaxy.training
 ansible_host_key_checking = false
 ansible_user = ubuntu
 ansible_become = true
-set_password = true
+set_password = false
 
 # Here we set the keys we're given by the region
 # admin to use to login to the VMs.

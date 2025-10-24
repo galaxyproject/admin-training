@@ -38,11 +38,11 @@
         state: present
         key: "{{ lookup('file', 'id_rsa.pub') }}"
 
-    - name: "Add one key to rule them all to authorized keys"
-      authorized_key:
-        user: ubuntu
-        state: present
-        key: "{{ lookup('file', 'gat-one-key-to-rule-them-all.pub') }}"
+    # - name: "Add one key to rule them all to authorized keys"
+    #   authorized_key:
+    #     user: ubuntu
+    #     state: present
+    #     key: "{{ lookup('file', 'gat-one-key-to-rule-them-all.pub') }}"
 
     - name: Disable cgroupv2
       copy:
@@ -109,8 +109,9 @@
           - vim-nox
           - vim-pathogen
           - emacs-nox
-          - virtualenv
+          # - virtualenv
           - python3-pip
+          - python3-venv
           - jq
           - htop
           - zlib1g-dev
@@ -177,13 +178,24 @@
         name: editor
         path: /bin/nano
 
-    - name: Install pip packages
-      pip:
+    - name: Create virtual environment for Ansible
+      ansible.builtin.command:
+        cmd: python3 -m venv /opt/gat-venv
+        creates: /opt/gat-venv/bin/activate
+
+    - name: Upgrade pip in venv
+      ansible.builtin.pip:
+        name: pip
+        state: latest
+        virtualenv: /opt/gat-venv
+
+    - name: Install packages in virtual environment
+      ansible.builtin.pip:
         name:
+          - ansible-core
           - ansible
           - planemo
-        executable: pip3
-        state: latest
+        virtualenv: /opt/gat-venv
 
     - name: Download the "Fake LE Root X1" certificate
       get_url:
@@ -276,7 +288,7 @@
           #debug:
             #msg: "password: {{ inventory_hostname }} {{ actual_pw.stdout  }}"
 
-      when: set_password|bool
+      when: set_password is true
       tags:
         - password
 

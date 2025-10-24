@@ -4,3 +4,4 @@ bootstrap-instances/id_rsa
 bootstrap-instances/id_rsa.pub
 bootstrap-instances/gat-one-key-to-rule-them-all
 bootstrap-instances/gat-one-key-to-rule-them-all.pub
+.venv
