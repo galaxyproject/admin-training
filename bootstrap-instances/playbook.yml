@@ -109,7 +109,6 @@
           - vim-nox
           - vim-pathogen
           - emacs-nox
-          # - virtualenv
           - python3-pip
           - python3-venv
           - jq
