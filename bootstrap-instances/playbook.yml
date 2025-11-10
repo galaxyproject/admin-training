@@ -44,16 +44,6 @@
         state: present
         key: "{{ lookup('file', 'gat-one-key-to-rule-them-all.pub') }}"
 
-    - name: Disable cgroupv2
-      copy:
-        content: |
-            GRUB_CMDLINE_LINUX_DEFAULT="$GRUB_CMDLINE_LINUX_DEFAULT systemd.unified_cgroup_hierarchy=0 systemd.legacy_systemd_cgroup_controller=1"
-        dest: /etc/default/grub.d/99-cgroupv1.cfg
-        mode: 0644
-      notify:
-        - update-grub
-        - reboot
-
     - name: Switch to kiwi update servers
       copy:
         content: |
@@ -121,7 +111,7 @@
           - screen
           - cockpit # web console
           - moreutils # for gat-cli
-          - silversearcher-ag # For @hexylena
+          - ansible
         state: latest
       tags:
            - packages
@@ -178,12 +168,16 @@
         path: /bin/nano
 
     - name: Install pip packages
-      pip:
+      ansible.builtin.pip:
+        extra_args: --user
+        break_system_packages: true
         name:
-          - ansible
           - planemo
+          - uv
         executable: pip3
         state: latest
+      become: true
+      become_user: ubuntu
 
     - name: Download the "Fake LE Root X1" certificate
       get_url:
@@ -260,6 +254,7 @@
           package:
             name:
               - pwgen
+              - python3-passlib
 
         # For some instances, they don't come pre-configured with a password, so we do that now.
         - name: Generate a host-specific password
@@ -281,7 +276,5 @@
         - password
 
   handlers:
-    - name: update-grub
-      command: /usr/sbin/update-grub
     - name: reboot
       reboot:
