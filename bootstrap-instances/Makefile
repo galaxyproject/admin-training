@@ -23,6 +23,9 @@ obtain-passwords: ## Obtain passwords from machines
 id_rsa: ## Generate an SSH key which will be sent to the machines
 	ssh-keygen -t rsa -f id_rsa -N ''
 
+gat-one-key-to-rule-them-all: ## Generate an SSH key which will be sent to the machines
+	ssh-keygen -t rsa -f gat-one-key-to-rule-them-all -N ''
+
 status: ## Check overall progress everywhere
 	@ansible -a 'gat status' galaxy_only -f $(THREADS) | grep --line-buffered --color=never "	"
 
