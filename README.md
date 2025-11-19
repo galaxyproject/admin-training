@@ -23,7 +23,6 @@ A tentative schedule is now available [here](https://github.com/orgs/galaxyproje
 
 ### Instructors
 
-* [Nate Coraor](https://github.com/natefoo) - Galaxy Project, Penn State University, United States
 * [Marius van den Beek](https://github.com/mvdbeek) - Galaxy Project, Penn State University, *Europe*
 * [Mira Kuntz](https://github.com/mira-miracoli/) - Uni-Freiburg, Germany
 * [Bjoern Gruening](https://github.com/bgruening) - Uni-Freiburg, Germany
@@ -43,9 +42,8 @@ For those of you who also need to do some Galaxy development, there is a [dev se
 
 **Community**
 
-Chat with us on the [Galaxy Matrix Space](https://matrix.to/#/#galaxyproject:matrix.org)
-
- - [Galaxy admins](https://matrix.to/#/#galaxyproject_admins:gitter.im)
- - [Galaxy dev](https://matrix.to/#/#galaxyproject_dev:gitter.im)
- - [General Galaxy topics](https://matrix.to/#/#galaxyproject_Lobby:gitter.im)
+ - [Galaxy Project Matrix Space](https://matrix.to/#/#galaxyproject:matrix.org)
+ - [Galaxy admins channel](https://matrix.to/#/#galaxyproject_admins:gitter.im)
+ - [Galaxy dev channel](https://matrix.to/#/#galaxyproject_dev:gitter.im)
+ - [General Galaxy channe;](https://matrix.to/#/#galaxyproject_Lobby:gitter.im)
  
