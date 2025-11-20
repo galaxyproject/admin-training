@@ -13,7 +13,6 @@ Galaxy training instances will be bootstrapped with [a small Ansible playbook](/
 
 ## Important Links
 
-- [Q&A!](https://docs.google.com/document/d/1NBpJ3qj5XF5V6e87ihiTfPjembEc0Q0YcbYUY7B3tew/edit#)
 - [Chat for this workshop](https://matrix.to/#/!HrmvAdKQgDTQDCGksC:matrix.org?via=matrix.org&via=gitter.im)
 - [Admin Training Materials](https://training.galaxyproject.org/training-material/topics/admin/)
 
